@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-18T23:50:02Z",
+ "generated_at": "2026-10-18T23:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 41,
+    "count": 40,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 8,
+    "count": 9,
     "unit": "awaiting merge",
     "active": true,
     "detail": "82 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0a08512c",
     "task": "offline_learning: flag challenger selected on the preregistered grid edge (root cause of…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_a7281688",
+    "task": "a build task",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -100,7 +100,7 @@
     "family": "Zhipu",
     "task_id": "t_f3c6a213",
     "task": "a build task",
-    "elapsed_min": 4
+    "elapsed_min": 9
    }
   ],
   "qa": {
@@ -119,43 +119,44 @@
    "merges_24h": 82,
    "commits_24h": 82,
    "built_24h": 58,
-   "build_failed_24h": 9,
+   "build_failed_24h": 8,
    "reviews_passed_24h": 84,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     2,
-    2,
-    7,
+    4,
     5,
     6,
+    5,
     0,
     5,
     3,
     1,
-    3,
     4,
-    5,
-    1,
-    3,
+    4,
+    4,
+    2,
+    2,
     4,
     0,
     10,
     3,
     4,
     2,
-    2,
-    4,
+    3,
+    3,
     1,
     5
    ],
    "merge_holds": [
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 29,
     "building": 1,
-    "in_review": 41,
-    "awaiting_merge": 8,
+    "in_review": 40,
+    "awaiting_merge": 9,
     "merged": 252,
     "parked": 99
    }
@@ -214,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-18T23:50:01Z",
+    "last_check_at": "2026-10-18T23:54:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,12 +228,12 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-18T23:40:02Z",
+    "last_check_at": "2026-10-18T23:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 58,
-    "runs_total": 118,
+    "runs_total": 119,
     "last_run_at": "2026-10-18T23:40:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -249,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-18T23:54:07Z",
+    "kind": "review",
+    "text": "MiniMax M3 review ended: review unresolved inconclusive bad…"
+   },
+   {
+    "at": "2026-10-18T23:51:19Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “New evidence-only merge/NegRisk-conversion screen over normalized…”: passed"
+   },
    {
     "at": "2026-10-18T23:50:00Z",
     "kind": "merge",
@@ -348,16 +359,6 @@
     "at": "2026-10-18T23:22:11Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “LIVE-15 Stop a refused cancellation trigger from blocking later…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T23:21:12Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “PAPER-07 Bind already-committed source receipts when a pump cycle is…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T23:09:22Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “Spec 6A safety modes step 3: owner panel commands”: passed"
    }
   ]
  },
@@ -368,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-18T23:50:01Z",
-   "heartbeat_at": "2026-10-18T23:50:01Z",
+   "status_at": "2026-10-18T23:55:02Z",
+   "heartbeat_at": "2026-10-18T23:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -378,7 +379,7 @@
     "weather_events": 341,
     "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-18T23:47:32Z",
+    "last_scan_at": "2026-10-18T23:53:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-18T23:47:32Z",
+    "updated_at": "2026-10-18T23:53:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-18T23:48:07Z",
+    "updated_at": "2026-10-18T23:54:10Z",
     "detail": "observations retained"
    },
    {
