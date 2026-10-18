@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alpha Factory — live</title>
+<meta name="description" content="A live view of an AI-run software factory building Alpha, an unfunded weather prediction-market bot. Paper trading only.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#070b10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070b10'/%3E%3Cpath d='M9 23 16 8l7 15M11.8 17.5h8.4' stroke='%2338bdf8' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>
+  (function () { try { var t = localStorage.getItem("af-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor" opacity=".08"/><path d="M9 23 16 8l7 15M11.8 17.5h8.4" stroke="var(--accent)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Alpha Factory</span><small>live</small>
+    </div>
+    <div class="spacer"></div>
+    <div id="live" class="livepill" role="status" aria-live="polite"><span class="dot"></span><span class="word">CONNECTING</span><span class="age"></span></div>
+    <button id="theme" class="theme-btn" type="button" aria-label="Switch colour theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <span class="lbl">Auto</span>
+    </button>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Live event ticker">
+  <div class="wrap">
+    <span class="label">Live</span>
+    <div class="viewport"><div class="track" id="ticker"><span class="item muted">Waiting for the first reading…</span></div></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>An AI <span class="grad">software factory</span>, running live.</h1>
+    <p>AI models plan, build, cross-review, merge and test code around the clock to build <b>Alpha</b>, a bot that forecasts the weather and studies Polymarket weather prediction markets. Every number here is read from the real factory and refreshed every few minutes.</p>
+    <div class="pills">
+      <span class="pill safe">Paper trading only — no money</span>
+      <span class="pill safe">Unfunded</span>
+      <span class="pill">Builders and reviewers from different AI families</span>
+      <span class="pill" id="gen-at">Snapshot —</span>
+    </div>
+    <div class="err" id="err"></div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <section class="block" id="factory">
+    <div class="sec-head"><span class="tag">01 · Factory floor</span><h2>The production line</h2>
+      <p>Each square is one real task card sitting at its stage right now. Stations glow when an AI or a test run is actively working there.</p></div>
+    <div class="line-wrap"><div class="belt"></div><div class="stations" id="stations"></div></div>
+    <div class="workers" id="workers"></div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="panel">
+        <h3>Code landed per hour <span class="hint">last 24 hours</span></h3>
+        <div id="throughput"></div>
+        <div class="mini" id="flowmini"></div>
+      </div>
+      <div class="panel">
+        <h3>Recently merged <span class="hint" id="merge-hold"></span></h3>
+        <ul class="list" id="merges"></ul>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:26px"><span class="tag">Self-healing</span><h2>Who watches the factory</h2>
+      <p>Three independent layers check the pipeline, raise incidents and repair stuck work without waiting for a human.</p></div>
+    <div class="grid3 heal" id="heal"></div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="panel">
+        <h3>Event log <span class="hint">newest first</span></h3>
+        <ul class="list events" id="events"></ul>
+      </div>
+      <div class="stack">
+        <div class="panel">
+          <h3>AI models in use</h3>
+          <div class="chips" id="providers"></div>
+          <p class="note">Code written by one family is reviewed by a model from a different family before it can merge.</p>
+        </div>
+        <div class="panel">
+          <h3>Full test suite</h3>
+          <div id="qa"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="alpha">
+    <div class="sec-head"><span class="tag">02 · Control room</span><h2>Alpha, the product</h2>
+      <p>What the factory is building: a weather-forecasting brain and a paper-trading “Shadow” that watches Polymarket weather markets without risking money.</p></div>
+
+    <div class="shadow-hero">
+      <div class="panel" id="shadow"></div>
+      <div class="panel">
+        <h3>Paper decisions <span class="hint">current release</span></h3>
+        <div class="decisions" id="decisions"></div>
+        <p class="note" id="decision-note"></p>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:14px">
+      <h3>Sensor feeds <span class="hint">weather and market inputs</span></h3>
+      <div class="key" id="feedkey"></div>
+      <div class="feeds" id="feeds"></div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="panel">
+        <h3>Brain accuracy <span class="hint" id="brain-n"></span></h3>
+        <div class="legend" id="brain-legend"></div>
+        <div id="brain-chart"></div>
+        <div id="brain-verdict"></div>
+        <div class="mini" id="brain-mini"></div>
+      </div>
+      <div class="panel">
+        <h3>Brain funding bar <span class="hint">all three must be met</span></h3>
+        <div id="fundbar"></div>
+        <h3 style="margin-top:20px">New skills merged</h3>
+        <ul class="list" id="skills"></ul>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:14px">
+      <h3>Readiness map <span class="hint" id="ready-sum"></span></h3>
+      <div class="key">
+        <span><i class="accepted"></i>Accepted by an independent reviewer</span>
+        <span><i class="owner"></i>Decided by the owner</span>
+        <span><i class="pending"></i>Still open</span>
+      </div>
+      <div class="ready-groups" id="ready"></div>
+      <div class="cell-detail" id="cell-detail">Tap a square to see what it checks.</div>
+    </div>
+
+    <div class="panel" style="margin-top:14px">
+      <h3>Path to funding <span class="hint" id="fund-verdict"></span></h3>
+      <ol class="path" id="path"></ol>
+    </div>
+  </section>
+
+  <footer>
+    <p><b>What this is.</b> A public, read-only window into a private build pipeline. A small script on the factory host publishes an allowlisted set of counts, model names and cleaned-up task titles every 5 minutes; a leak scanner checks every update before it is pushed. No keys, wallets, balances or trading rules are ever published.</p>
+    <p><b>No money.</b> Alpha is unfunded. The Shadow makes paper decisions only; the trading executor is locked.</p>
+    <p class="mono" id="foot-src"></p>
+  </footer>
+</main>
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="app.js"></script>
+</body>
+</html>
