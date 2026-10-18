@@ -1,37 +1,37 @@
 {
  "schema": 1,
- "generated_at": "2026-10-18T23:45:02Z",
+ "generated_at": "2026-10-18T23:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 30,
+    "count": 29,
     "unit": "queued",
     "active": false,
-    "detail": "19 ready to build"
+    "detail": "21 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "58 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 39,
+    "count": 41,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 10,
+    "count": 8,
     "unit": "awaiting merge",
     "active": true,
     "detail": "82 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_0a08512c",
+    "task": "offline_learning: flag challenger selected on the preregistered grid edge (root cause of…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_f3c6a213",
+    "task": "a build task",
+    "elapsed_min": 4
    }
   ],
   "qa": {
@@ -123,39 +123,41 @@
    "reviews_passed_24h": 84,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    3,
-    0,
-    8,
-    5,
-    7,
-    0,
-    5,
-    3,
-    0,
-    4,
-    4,
-    4,
     2,
+    2,
+    7,
+    5,
+    6,
+    0,
+    5,
+    3,
+    1,
+    3,
+    4,
+    5,
+    1,
     3,
     4,
     0,
     10,
     3,
-    3,
-    3,
+    4,
+    2,
     2,
     4,
     1,
-    4
+    5
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "targeted tests failed"
+   ],
    "stage_totals": {
-    "queued": 30,
+    "queued": 29,
     "building": 1,
-    "in_review": 39,
-    "awaiting_merge": 10,
-    "merged": 251,
-    "parked": 98
+    "in_review": 41,
+    "awaiting_merge": 8,
+    "merged": 252,
+    "parked": 99
    }
   },
   "architect": {
@@ -165,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-18T23:50:00Z",
+    "title": "Same-day observed-so-far conditioned forecast evaluation for station (new tool)",
+    "area": "Forecast brain"
+   },
    {
     "at": "2026-10-18T23:44:17Z",
     "title": "Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with dependence-group weights (new…",
@@ -199,20 +206,15 @@
     "at": "2026-10-18T21:19:09Z",
     "title": "Add Polymarket exchange heartbeat dead-man switch",
     "area": "Live safety"
-   },
-   {
-    "at": "2026-10-18T21:07:12Z",
-    "title": "PAPER-07 Close reserved source-host schedules with backoff when the collector cycle aborts",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
     "active": 1,
-    "alerts_24h": 13,
+    "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-18T23:44:02Z",
+    "last_check_at": "2026-10-18T23:50:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -247,6 +249,26 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-18T23:50:00Z",
+    "kind": "merge",
+    "text": "Merged “Same-day observed-so-far conditioned forecast evaluation for station…” into the main build"
+   },
+   {
+    "at": "2026-10-18T23:48:20Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-18T23:48:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Guardian custody namespace fixture must classify Ubuntu AppArmor…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-18T23:45:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “New evidence-only merge/NegRisk-conversion screen over normalized…” → sent to independent review"
+   },
    {
     "at": "2026-10-18T23:44:17Z",
     "kind": "merge",
@@ -336,26 +358,6 @@
     "at": "2026-10-18T23:09:22Z",
     "kind": "review",
     "text": "GLM 5.2 reviewed “Spec 6A safety modes step 3: owner panel commands”: passed"
-   },
-   {
-    "at": "2026-10-18T23:04:20Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL”: passed"
-   },
-   {
-    "at": "2026-10-18T23:02:13Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “Spec 6A safety modes step 3: owner panel commands” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:59:24Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Station-bias + pooled-spread research learner (new module, -10%…”: passed"
-   },
-   {
-    "at": "2026-10-18T22:59:11Z",
-    "kind": "build",
-    "text": "Claude Opus built “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL” → sent to independent review"
    }
   ]
  },
@@ -366,8 +368,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-18T23:45:01Z",
-   "heartbeat_at": "2026-10-18T23:45:01Z",
+   "status_at": "2026-10-18T23:50:01Z",
+   "heartbeat_at": "2026-10-18T23:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -376,7 +378,7 @@
     "weather_events": 341,
     "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-18T23:41:53Z",
+    "last_scan_at": "2026-10-18T23:47:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-18T23:41:53Z",
+    "updated_at": "2026-10-18T23:47:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-18T23:44:06Z",
+    "updated_at": "2026-10-18T23:48:07Z",
     "detail": "observations retained"
    },
    {
@@ -531,6 +533,11 @@
   },
   "skills": [
    {
+    "title": "Same-day observed-so-far conditioned forecast evaluation for station (new tool)",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-18T23:50:00Z"
+   },
+   {
     "title": "Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with dependence-group weights (new…",
     "area": "Forecast brain",
     "merged_at": "2026-10-18T23:44:17Z"
@@ -574,11 +581,6 @@
     "title": "Durable operator acknowledgement replies for V11 Telegram safety commands (requested vs…",
     "area": "Pre-funding checks",
     "merged_at": "2026-10-18T19:38:11Z"
-   },
-   {
-    "title": "Spec 6A scoped safety modes in the production operator control protocol",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T19:02:10Z"
    }
   ],
   "readiness": {
