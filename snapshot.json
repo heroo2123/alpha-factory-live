@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-18T23:34:58Z",
+ "generated_at": "2026-10-18T23:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 29,
+    "count": 30,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "58 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 40,
+    "count": 39,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder"
@@ -31,18 +31,18 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 12,
+    "count": 14,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "79 merged in 24h"
+    "detail": "78 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 93,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_bd7af86f",
-    "task": "PAPER-07 Record committed census source receipts on CENSUS_INTERRUPTED and on…",
-    "elapsed_min": 13
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 93,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-18T16:09:12Z",
    "last_passed": 12957,
    "last_failed": 0,
@@ -116,48 +116,48 @@
   },
   "tests_passing": 12957,
   "flow": {
-   "merges_24h": 79,
-   "commits_24h": 79,
+   "merges_24h": 78,
+   "commits_24h": 78,
    "built_24h": 58,
-   "build_failed_24h": 8,
-   "reviews_passed_24h": 85,
+   "build_failed_24h": 9,
+   "reviews_passed_24h": 84,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    4,
+    3,
     0,
     8,
     4,
-    7,
-    1,
+    8,
+    0,
     5,
     3,
     0,
     4,
-    2,
-    6,
+    3,
+    5,
     1,
     4,
+    4,
+    0,
+    10,
     3,
-    1,
-    9,
+    2,
     4,
     2,
-    3,
-    3,
-    3,
-    2,
+    4,
+    1,
     0
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 29,
-    "building": 1,
-    "in_review": 40,
-    "awaiting_merge": 12,
+    "queued": 30,
+    "building": 0,
+    "in_review": 39,
+    "awaiting_merge": 14,
     "merged": 247,
-    "parked": 99
+    "parked": 98
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-18T23:34:01Z",
+    "last_check_at": "2026-10-18T23:39:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,9 +231,9 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 56,
-    "runs_total": 117,
-    "last_run_at": "2026-10-18T22:45:02Z",
+    "runs_24h": 58,
+    "runs_total": 118,
+    "last_run_at": "2026-10-18T23:40:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
     "running": false,
@@ -249,6 +249,41 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-18T23:40:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-18T23:39:20Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “PAPER-07 Record committed census source receipts on…”: passed"
+   },
+   {
+    "at": "2026-10-18T23:39:07Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-18T23:38:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-18T23:37:11Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “PAPER-07 Record committed census source receipts on…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-18T23:36:22Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “LIVE-15 Stop a refused cancellation trigger from blocking later…”: passed"
+   },
+   {
+    "at": "2026-10-18T23:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: routine"
+   },
    {
     "at": "2026-10-18T23:25:22Z",
     "kind": "review",
@@ -323,41 +358,6 @@
     "at": "2026-10-18T22:34:11Z",
     "kind": "build",
     "text": "Claude Opus built “Same-day observed-so-far conditioned forecast evaluation for station…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:32:18Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Wire the governed learning worker to forward captures and labels (no…”: passed"
-   },
-   {
-    "at": "2026-10-18T22:27:28Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with…”: passed"
-   },
-   {
-    "at": "2026-10-18T22:27:14Z",
-    "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “Wire the governed learning worker to forward captures and labels (no…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:25:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:24:18Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Model-vs-market edge evaluator after Polymarket weather fees…”: passed"
-   },
-   {
-    "at": "2026-10-18T22:20:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “Model-vs-market edge evaluator after Polymarket weather fees…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:16:33Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “Station-bias + pooled-spread research learner (new module, -10%…”: passed"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-18T23:34:45Z",
-   "heartbeat_at": "2026-10-18T23:34:58Z",
+   "status_at": "2026-10-18T23:40:00Z",
+   "heartbeat_at": "2026-10-18T23:40:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -378,7 +378,7 @@
     "weather_events": 341,
     "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-18T23:30:05Z",
+    "last_scan_at": "2026-10-18T23:36:07Z",
     "mode": "silent paper scan"
    }
   },
@@ -394,21 +394,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-18T22:37:02Z",
+    "updated_at": "2026-10-18T23:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-18T23:30:05Z",
+    "updated_at": "2026-10-18T23:36:07Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-18T23:34:02Z",
+    "updated_at": "2026-10-18T23:38:04Z",
     "detail": "observations retained"
    },
    {
@@ -709,7 +709,7 @@
      "status": "pending",
      "detail": "re-check inconclusive",
      "merged_tasks": 4,
-     "open_tasks": 2
+     "open_tasks": 3
     },
     {
      "id": "PAPER-08",
