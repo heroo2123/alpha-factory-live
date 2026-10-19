@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T19:55:01Z",
+ "generated_at": "2026-10-19T20:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 8,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "34 merged in 24h"
+    "detail": "36 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_7afd35f9",
     "task": "CODE-01 Flag backward source timestamps as risk revisions",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_9863bd21",
     "task": "CODE-01 Resolve tied observation revisions by archive sequence",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Reviewer 1",
@@ -106,18 +106,18 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-19T15:59:46Z",
-   "last_passed": 13602,
+   "last_finished_at": "2026-10-19T19:54:56Z",
+   "last_passed": 13617,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-19T15:59:46Z",
+   "last_green_at": "2026-10-19T19:54:56Z",
    "last_minutes": 84
   },
-  "tests_passing": 13602,
+  "tests_passing": 13617,
   "flow": {
-   "merges_24h": 34,
-   "commits_24h": 34,
+   "merges_24h": 36,
+   "commits_24h": 36,
    "built_24h": 46,
    "build_failed_24h": 27,
    "reviews_passed_24h": 59,
@@ -126,8 +126,8 @@
     3,
     3,
     1,
-    5,
-    8,
+    6,
+    7,
     2,
     3,
     0,
@@ -146,17 +146,15 @@
     0,
     0,
     2,
-    0
+    2
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 25,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 8,
-    "merged": 274,
+    "awaiting_merge": 6,
+    "merged": 276,
     "parked": 161
    }
   },
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T19:55:02Z",
+    "last_check_at": "2026-10-19T20:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +230,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 170,
+    "runs_total": 171,
     "last_run_at": "2026-10-19T19:50:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance stalled",
@@ -249,6 +247,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T19:54:56Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 13617 passed, 0 failed"
+   },
    {
     "at": "2026-10-19T19:54:17Z",
     "kind": "warn",
@@ -353,11 +356,6 @@
     "at": "2026-10-19T18:56:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
-    "at": "2026-10-19T18:50:08Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -368,8 +366,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T19:54:54Z",
-   "heartbeat_at": "2026-10-19T19:55:01Z",
+   "status_at": "2026-10-19T19:59:53Z",
+   "heartbeat_at": "2026-10-19T20:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -378,7 +376,7 @@
     "weather_events": 356,
     "markets": 3461,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T19:52:37Z",
+    "last_scan_at": "2026-10-19T19:58:29Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T19:52:37Z",
+    "updated_at": "2026-10-19T19:58:29Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T19:54:47Z",
+    "updated_at": "2026-10-19T19:58:49Z",
     "detail": "observations retained"
    },
    {
