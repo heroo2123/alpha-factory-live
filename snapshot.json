@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T21:00:03Z",
+ "generated_at": "2026-10-19T21:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 4,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_6f734af1",
-    "task": "PAPER-09 Validate complete and distinct PWS learning-pair children",
-    "elapsed_min": 25
+    "task_id": "t_8c171b81",
+    "task": "PAPER-09 Separate PWS score comparisons by label evidence class",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -78,14 +78,14 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_18c78e28",
-    "task": "PAPER-09 Expire cached PWS quality when supporting history ages out",
-    "elapsed_min": 26
+    "task_id": "t_5065cd2a",
+    "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -123,14 +123,21 @@
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
-    3,
-    1,
+    4,
+    0,
     6,
-    7,
+    8,
     2,
-    3,
+    2,
     0,
     3,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
     0,
     1,
     0,
@@ -138,21 +145,14 @@
     0,
     0,
     2,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    2,
-    2,
-    11
+    4,
+    9
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 24,
+    "queued": 22,
     "building": 2,
-    "in_review": 2,
+    "in_review": 4,
     "awaiting_merge": 0,
     "merged": 287,
     "parked": 159
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T21:00:03Z",
+    "last_check_at": "2026-10-19T21:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,7 +226,7 @@
      "flow shadow frozen authority drift",
      "flow acceptance stalled"
     ],
-    "last_check_at": "2026-10-19T20:50:02Z",
+    "last_check_at": "2026-10-19T21:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -246,6 +246,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T21:01:17Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “PAPER-09 Expire cached PWS quality when supporting history ages out” → sent to independent review"
+   },
+   {
+    "at": "2026-10-19T21:01:11Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “PAPER-09 Validate complete and distinct PWS learning-pair children” → sent to independent review"
+   },
    {
     "at": "2026-10-19T21:00:03Z",
     "kind": "heal",
@@ -345,16 +355,6 @@
     "at": "2026-10-19T20:10:04Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Reject public physical inputs with synthetic ancestry” into the main build"
-   },
-   {
-    "at": "2026-10-19T20:09:31Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-09 Bound consecutive PWS QC retries so one event cannot starve…” into the main build"
-   },
-   {
-    "at": "2026-10-19T20:09:11Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-08 Make candidate ranking independent of ambient Decimal…” → sent to independent review"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T20:59:58Z",
-   "heartbeat_at": "2026-10-19T21:00:03Z",
+   "status_at": "2026-10-19T21:04:59Z",
+   "heartbeat_at": "2026-10-19T21:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,7 +375,7 @@
     "weather_events": 350,
     "markets": 3397,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T20:57:39Z",
+    "last_scan_at": "2026-10-19T21:03:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T20:57:39Z",
+    "updated_at": "2026-10-19T21:03:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T20:59:13Z",
+    "updated_at": "2026-10-19T21:03:15Z",
     "detail": "observations retained"
    },
    {
