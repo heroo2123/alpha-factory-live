@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T10:40:02Z",
+ "generated_at": "2026-10-19T10:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "48 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "62 merged in 24h"
+    "detail": "61 merged in 24h"
    },
    {
     "key": "qa",
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
-    "detail": "current release 70c90ca"
+    "active": true,
+    "detail": ""
    },
    {
     "key": "shadow",
@@ -70,17 +70,17 @@
     "family": "DeepSeek",
     "task_id": "t_053b3f26",
     "task": "Wire the governed learning worker to forward captures and labels (no caller today)",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_6462a548",
-    "task": "New main SHA dbc0e40b5d51 Alpha V11 FLEX code task t_82efc8e2 opencode_go",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -116,28 +116,28 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 62,
-   "commits_24h": 62,
-   "built_24h": 48,
+   "merges_24h": 61,
+   "commits_24h": 61,
+   "built_24h": 49,
    "build_failed_24h": 24,
-   "reviews_passed_24h": 77,
+   "reviews_passed_24h": 76,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    5,
-    1,
     4,
+    2,
+    3,
     4,
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9,
-    5,
+    4,
+    7,
+    3,
     4,
     0,
     3,
@@ -151,8 +151,8 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 17,
-    "building": 2,
-    "in_review": 0,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 269,
     "parked": 152
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T10:40:02Z",
+    "last_check_at": "2026-10-19T10:44:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,12 +226,12 @@
      "flow worker exception repeat",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T10:30:02Z",
+    "last_check_at": "2026-10-19T10:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 57,
-    "runs_total": 146,
+    "runs_total": 147,
     "last_run_at": "2026-10-19T09:10:01Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -249,6 +249,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T10:44:12Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “New main SHA dbc0e40b5d51 Alpha V11 FLEX code task t_82efc8e2…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T10:30:10Z",
     "kind": "warn",
@@ -353,24 +358,19 @@
     "at": "2026-10-19T04:21:09Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-19T04:18:12Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": "70c90ca",
+   "release": null,
    "commissioned_at": "2026-10-18T13:40:02Z",
-   "day": "2026-10-19",
-   "state": "census service",
-   "status_at": "2026-10-19T10:39:58Z",
-   "heartbeat_at": "2026-10-19T10:40:01Z",
-   "real_orders_sent": false,
+   "day": null,
+   "state": "",
+   "status_at": null,
+   "heartbeat_at": null,
+   "real_orders_sent": null,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
@@ -378,15 +378,15 @@
     "weather_events": 368,
     "markets": 3574,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T10:37:34Z",
+    "last_scan_at": "2026-10-19T10:43:01Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 0,
-   "research_accept": 0,
-   "reject": 0,
-   "gated": 0,
+   "total": null,
+   "research_accept": null,
+   "reject": null,
+   "gated": null,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T10:37:34Z",
+    "updated_at": "2026-10-19T10:43:01Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T10:40:00Z",
+    "updated_at": "2026-10-19T10:44:03Z",
     "detail": "observations retained"
    },
    {
