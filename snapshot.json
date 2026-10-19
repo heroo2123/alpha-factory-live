@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T11:55:02Z",
+ "generated_at": "2026-10-19T12:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "50 built in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_679e4055",
+    "task": "PAPER-09 Add the spec's PWS-lead exit trigger reasons",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_dfef0e61",
     "task": "PAPER-08 Reconcile SELL exit fills in the paper risk observation",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_ab128c9c",
     "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
-    "elapsed_min": 6
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -120,22 +120,22 @@
    "commits_24h": 58,
    "built_24h": 50,
    "build_failed_24h": 23,
-   "reviews_passed_24h": 76,
+   "reviews_passed_24h": 75,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
     2,
     4,
     0,
-    10,
-    3,
+    11,
+    2,
     4,
     2,
     3,
     3,
     1,
-    5,
-    8,
+    6,
+    7,
     2,
     3,
     0,
@@ -150,12 +150,12 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 22,
-    "building": 1,
+    "queued": 20,
+    "building": 2,
     "in_review": 2,
     "awaiting_merge": 0,
     "merged": 271,
-    "parked": 148
+    "parked": 149
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T11:54:02Z",
+    "last_check_at": "2026-10-19T12:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,11 +230,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 58,
     "runs_total": 151,
-    "last_run_at": "2026-10-19T11:45:01Z",
+    "last_run_at": "2026-10-19T12:00:02Z",
     "last_ok": true,
-    "last_kind": "flow reviewed work quarantined",
+    "last_kind": "routine",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T12:00:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: routine"
+   },
+   {
+    "at": "2026-10-19T11:57:10Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
+   },
    {
     "at": "2026-10-19T11:54:08Z",
     "kind": "warn",
@@ -348,16 +358,6 @@
     "at": "2026-10-19T10:21:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-19T10:18:05Z",
-    "kind": "warn",
-    "text": "GLM 5.3 build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-19T10:07:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    }
   ]
  },
@@ -378,7 +378,7 @@
     "weather_events": 372,
     "markets": 3621,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T11:51:08Z",
+    "last_scan_at": "2026-10-19T11:57:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T11:51:08Z",
+    "updated_at": "2026-10-19T11:57:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T11:54:29Z",
+    "updated_at": "2026-10-19T11:58:30Z",
     "detail": "observations retained"
    },
    {
