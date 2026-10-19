@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T18:00:02Z",
+ "generated_at": "2026-10-19T18:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 26,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "47 built in 24h"
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_d29b7235",
     "task": "PAPER-08 Preserve decimal distinctions when ranking capital competitors",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ad80ea86",
+    "task": "FLEX candidate t_daf9ad49 292fc8cfdf42",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
@@ -123,24 +123,24 @@
    "reviews_passed_24h": 62,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
+    5,
+    1,
+    3,
     4,
-    2,
-    3,
-    3,
-    1,
+    0,
     6,
-    7,
+    8,
     2,
-    3,
+    2,
     0,
     3,
-    0,
     1,
     0,
     0,
     0,
     0,
-    2,
+    1,
+    1,
     0,
     1,
     0,
@@ -153,12 +153,12 @@
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 26,
-    "building": 1,
+    "queued": 24,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 6,
     "merged": 272,
-    "parked": 157
+    "parked": 158
    }
   },
   "architect": {
@@ -211,25 +211,26 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T18:00:02Z",
+    "last_check_at": "2026-10-19T18:04:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 0
+     "P2": 1
     },
     "codes": [
      "flow second review waiting for capacity",
-     "flow shadow frozen authority drift"
+     "flow shadow frozen authority drift",
+     "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T17:50:02Z",
+    "last_check_at": "2026-10-19T18:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +253,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T18:02:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-19T18:02:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code delivered awaiting protected second review"
+   },
    {
     "at": "2026-10-19T17:57:24Z",
     "kind": "review",
@@ -351,16 +362,6 @@
     "at": "2026-10-19T16:28:18Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Station-bias + pooled-spread research learner (new module, -10%…”: changes required"
-   },
-   {
-    "at": "2026-10-19T16:27:09Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra)'s build of “Perpetual brain preparer must follow the commissioned Shadow release…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T16:25:19Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_dc8a8fac 33df0b0168be”: passed"
    }
   ]
  },
@@ -371,8 +372,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T17:59:52Z",
-   "heartbeat_at": "2026-10-19T18:00:03Z",
+   "status_at": "2026-10-19T18:04:52Z",
+   "heartbeat_at": "2026-10-19T18:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -381,7 +382,7 @@
     "weather_events": 373,
     "markets": 3646,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T17:55:03Z",
+    "last_scan_at": "2026-10-19T18:01:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T17:55:03Z",
+    "updated_at": "2026-10-19T18:01:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T17:58:03Z",
+    "updated_at": "2026-10-19T18:04:07Z",
     "detail": "observations retained"
    },
    {
@@ -712,7 +713,7 @@
      "status": "pending",
      "detail": "re-check inconclusive",
      "merged_tasks": 6,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "PAPER-08",
