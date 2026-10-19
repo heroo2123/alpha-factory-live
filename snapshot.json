@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T13:05:02Z",
+ "generated_at": "2026-10-19T13:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "49 built in 24h"
+    "detail": "50 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "GLM 5.3",
     "family": "Zhipu",
-    "task_id": "t_f13ccb14",
-    "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
-    "elapsed_min": 42
+    "task_id": "t_8843a19c",
+    "task": "Hash-bound adversarial verification runner for cancel-only guardian",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_f13ccb14",
+    "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 56,
    "commits_24h": 56,
-   "built_24h": 49,
+   "built_24h": 50,
    "build_failed_24h": 23,
-   "reviews_passed_24h": 74,
+   "reviews_passed_24h": 73,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     3,
@@ -130,22 +130,22 @@
     1,
     5,
     1,
-    3,
     4,
+    3,
     0,
     6,
     8,
     2,
     2,
-    0,
     3,
-    1,
-    0,
-    0,
-    0,
     0,
     1,
-    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
     0
    ],
    "merge_holds": [
@@ -153,9 +153,9 @@
     "protected requires two distinct families"
    ],
    "stage_totals": {
-    "queued": 20,
+    "queued": 19,
     "building": 1,
-    "in_review": 2,
+    "in_review": 3,
     "awaiting_merge": 2,
     "merged": 271,
     "parked": 148
@@ -211,33 +211,32 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T13:05:03Z",
+    "last_check_at": "2026-10-19T13:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 1,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 1
+     "P2": 0
     },
     "codes": [
-     "flow shadow census churn",
-     "flow review answer lost"
+     "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T13:00:02Z",
+    "last_check_at": "2026-10-19T13:05:54Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 58,
     "runs_total": 153,
-    "last_run_at": "2026-10-19T12:30:02Z",
+    "last_run_at": "2026-10-19T13:10:02Z",
     "last_ok": true,
-    "last_kind": "flow worker exception repeat",
+    "last_kind": "flow review answer lost",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +251,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T13:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow review answer lost"
+   },
+   {
+    "at": "2026-10-19T13:07:13Z",
+    "kind": "build",
+    "text": "GLM 5.3 built “PAPER-09 Record the market-book repricing lead in PWS receipt scoring” → sent to independent review"
+   },
    {
     "at": "2026-10-19T12:34:21Z",
     "kind": "review",
@@ -351,16 +360,6 @@
     "at": "2026-10-19T11:04:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-19T11:02:20Z",
-    "kind": "merge",
-    "text": "Merged “Wire the governed learning worker to forward captures and labels (no…” into the main build"
-   },
-   {
-    "at": "2026-10-19T11:00:29Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Wire the governed learning worker to forward captures and labels (no…”: passed"
    }
   ]
  },
@@ -378,10 +377,10 @@
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 378,
-    "markets": 3701,
+    "weather_events": 382,
+    "markets": 3745,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T13:01:04Z",
+    "last_scan_at": "2026-10-19T13:07:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T13:01:04Z",
+    "updated_at": "2026-10-19T13:07:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T13:04:54Z",
+    "updated_at": "2026-10-19T13:08:56Z",
     "detail": "observations retained"
    },
    {
