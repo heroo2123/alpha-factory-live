@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T17:45:02Z",
+ "generated_at": "2026-10-19T17:50:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 26,
+    "count": 23,
     "unit": "queued",
     "active": false,
     "detail": "13 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "47 built in 24h"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,39 +68,39 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_198dd669",
-    "task": "CODE-01 Capture rejected-trade counterfactual markouts",
-    "elapsed_min": 25
+    "task_id": "t_b76fe4d8",
+    "task": "Correct Owner read-only authentication with pinned SDK evidence and policy updates",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_5065cd2a",
+    "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_198dd669",
+    "task": "CODE-01 Capture rejected-trade counterfactual markouts",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_1c5aaedb",
+    "task": "LIVE-15 Retry uncertain guardian checks with the same request identity",
+    "elapsed_min": 1
    }
   ],
   "qa": {
@@ -123,13 +123,13 @@
    "reviews_passed_24h": 62,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
-    3,
-    3,
+    4,
+    2,
     2,
     4,
     1,
-    4,
-    7,
+    5,
+    6,
     3,
     4,
     0,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 26,
-    "building": 1,
-    "in_review": 0,
+    "queued": 23,
+    "building": 2,
+    "in_review": 2,
     "awaiting_merge": 4,
     "merged": 272,
     "parked": 156
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T17:44:02Z",
+    "last_check_at": "2026-10-19T17:50:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 58,
     "runs_total": 163,
-    "last_run_at": "2026-10-19T17:40:02Z",
+    "last_run_at": "2026-10-19T17:50:02Z",
     "last_ok": true,
-    "last_kind": "no verified code delivery 2h",
+    "last_kind": "flow shadow frozen authority drift",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T17:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow frozen authority drift"
+   },
+   {
+    "at": "2026-10-19T17:48:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “LIVE-15 Retry uncertain guardian checks with the same request identity” → sent to independent review"
+   },
+   {
+    "at": "2026-10-19T17:46:11Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “CODE-01 Capture rejected-trade counterfactual markouts” → sent to independent review"
+   },
    {
     "at": "2026-10-19T17:40:02Z",
     "kind": "warn",
@@ -345,21 +360,6 @@
     "at": "2026-10-19T15:59:46Z",
     "kind": "qa",
     "text": "Full test suite finished: 13602 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-19T15:58:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_dfef0e61 5a6f9f1bfb66”: changes required"
-   },
-   {
-    "at": "2026-10-19T15:57:07Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra)'s build of “PAPER-09 Verify the complete retained PWS score population” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T15:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T17:44:58Z",
-   "heartbeat_at": "2026-10-19T17:45:02Z",
+   "status_at": "2026-10-19T17:49:55Z",
+   "heartbeat_at": "2026-10-19T17:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -380,7 +380,7 @@
     "weather_events": 373,
     "markets": 3646,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T17:42:09Z",
+    "last_scan_at": "2026-10-19T17:48:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T17:42:09Z",
+    "updated_at": "2026-10-19T17:48:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T17:43:58Z",
+    "updated_at": "2026-10-19T17:50:00Z",
     "detail": "observations retained"
    },
    {
