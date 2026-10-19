@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T21:50:02Z",
+ "generated_at": "2026-10-19T21:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "8 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "51 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_51e45c22",
     "task": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_8b133f43",
-    "task": "Render-only hardened systemd units for distinct-principal guardian broker/client",
-    "elapsed_min": 4
+    "task_id": "t_a2c65d79",
+    "task": "PAPER-09 Expire trajectory features when their supporting history leaves the window",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -118,16 +118,16 @@
   "flow": {
    "merges_24h": 47,
    "commits_24h": 47,
-   "built_24h": 50,
-   "build_failed_24h": 25,
+   "built_24h": 51,
+   "build_failed_24h": 24,
    "reviews_passed_24h": 58,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
     1,
     5,
-    6,
+    8,
+    2,
     3,
-    4,
     0,
     3,
     0,
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 22,
     "building": 2,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 293,
     "parked": 160
@@ -160,7 +160,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T20:30:16Z",
+   "last_run_at": "2026-10-19T21:50:12Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T21:50:02Z",
+    "last_check_at": "2026-10-19T21:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,12 +226,12 @@
      "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-19T21:40:02Z",
+    "last_check_at": "2026-10-19T21:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 177,
+    "runs_total": 178,
     "last_run_at": "2026-10-19T21:45:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -246,6 +246,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T21:52:11Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “Render-only hardened systemd units for distinct-principal guardian…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-19T21:50:12Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-19T21:45:02Z",
     "kind": "heal",
@@ -345,16 +355,6 @@
     "at": "2026-10-19T21:01:17Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “PAPER-09 Expire cached PWS quality when supporting history ages out” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T21:01:11Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-09 Validate complete and distinct PWS learning-pair children” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T21:00:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T21:49:58Z",
-   "heartbeat_at": "2026-10-19T21:50:02Z",
+   "status_at": "2026-10-19T21:54:59Z",
+   "heartbeat_at": "2026-10-19T21:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,7 +375,7 @@
     "weather_events": 349,
     "markets": 3386,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T21:47:52Z",
+    "last_scan_at": "2026-10-19T21:53:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T21:47:52Z",
+    "updated_at": "2026-10-19T21:53:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T21:49:31Z",
+    "updated_at": "2026-10-19T21:53:33Z",
     "detail": "observations retained"
    },
    {
@@ -724,7 +724,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 20,
-     "open_tasks": 1
+     "open_tasks": 4
     },
     {
      "id": "PAPER-10",
