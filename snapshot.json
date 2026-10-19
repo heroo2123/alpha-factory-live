@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T03:15:02Z",
+ "generated_at": "2026-10-19T03:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "51 built in 24h"
+    "detail": "52 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 46,
+    "count": 48,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,27 +70,27 @@
     "family": "MiniMax",
     "task_id": "t_bb48a7f0",
     "task": "PAPER-07 Record STALE, MALFORMED and COOLDOWN source outcomes as distinct states",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4.1 Flash",
-    "family": "DeepSeek",
-    "task_id": "t_3e32c01d",
-    "task": "Fix 1 failure in : register blend_learning (0cc90fac) + station_bias_learning (port…",
-    "elapsed_min": 2
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_3e32c01d",
+    "task": "Fix 1 failure in : register blend_learning (0cc90fac) + station_bias_learning (port…",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 46,
+   "progress_pct": 48,
    "last_finished_at": "2026-10-18T23:36:00Z",
    "last_passed": 13326,
    "last_failed": 11,
@@ -118,30 +118,30 @@
   "flow": {
    "merges_24h": 82,
    "commits_24h": 82,
-   "built_24h": 51,
+   "built_24h": 52,
    "build_failed_24h": 18,
-   "reviews_passed_24h": 83,
+   "reviews_passed_24h": 82,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     7,
     2,
-    2,
-    6,
+    4,
+    4,
     0,
     3,
     2,
     6,
     2,
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7,
     7,
@@ -154,8 +154,8 @@
    ],
    "stage_totals": {
     "queued": 18,
-    "building": 2,
-    "in_review": 0,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 265,
     "parked": 148
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T03:14:01Z",
+    "last_check_at": "2026-10-19T03:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
+    "runs_24h": 60,
     "runs_total": 132,
-    "last_run_at": "2026-10-19T03:05:01Z",
+    "last_run_at": "2026-10-19T03:20:03Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T03:20:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-19T03:15:59Z",
+    "kind": "build",
+    "text": "DeepSeek V4.1 Flash built “Fix 1 failure in : register blend_learning (0cc90fac) +…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T03:09:07Z",
     "kind": "warn",
@@ -347,19 +357,9 @@
     "text": "GLM 5.2 reviewed “New main SHA a52e899dd6d2 Alpha V11 FLEX code task t_93211659…”: passed"
    },
    {
-    "at": "2026-10-19T02:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-19T02:09:55Z",
     "kind": "review",
     "text": "GLM 5.2 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T02:07:11Z",
-    "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “New main SHA a52e899dd6d2 Alpha V11 FLEX code task t_93211659…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T03:14:49Z",
-   "heartbeat_at": "2026-10-19T03:15:02Z",
+   "status_at": "2026-10-19T03:19:49Z",
+   "heartbeat_at": "2026-10-19T03:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T03:13:23Z",
+    "updated_at": "2026-10-19T03:19:26Z",
     "detail": "observations retained"
    },
    {
@@ -508,7 +508,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T02:17:02Z",
+   "updated_at": "2026-10-19T03:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
