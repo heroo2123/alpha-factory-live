@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T03:20:02Z",
+ "generated_at": "2026-10-19T03:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "6 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "52 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,12 +34,12 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "82 merged in 24h"
+    "detail": "81 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 48,
+    "count": 54,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_bb48a7f0",
-    "task": "PAPER-07 Record STALE, MALFORMED and COOLDOWN source outcomes as distinct states",
-    "elapsed_min": 7
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_3e32c01d",
-    "task": "Fix 1 failure in : register blend_learning (0cc90fac) + station_bias_learning (port…",
-    "elapsed_min": 4
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 48,
+   "progress_pct": 54,
    "last_finished_at": "2026-10-18T23:36:00Z",
    "last_passed": 13326,
    "last_failed": 11,
@@ -116,45 +116,44 @@
   },
   "tests_passing": 13326,
   "flow": {
-   "merges_24h": 82,
-   "commits_24h": 82,
+   "merges_24h": 81,
+   "commits_24h": 81,
    "built_24h": 52,
-   "build_failed_24h": 18,
-   "reviews_passed_24h": 82,
+   "build_failed_24h": 19,
+   "reviews_passed_24h": 81,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    7,
+    6,
     2,
     4,
     4,
     0,
     3,
-    2,
-    6,
+    3,
+    5,
     2,
     3,
     3,
     2,
-    7,
-    6,
-    1,
-    4,
+    8,
+    5,
+    2,
+    3,
     2,
     4,
     2,
     0,
-    7,
-    7,
-    2,
-    2
+    8,
+    6,
+    3,
+    1
    ],
    "merge_holds": [
-    "waiting for the full test run to finish",
-    "protected code: waiting for a second review"
+    "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 18,
-    "building": 1,
+    "queued": 19,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 2,
     "merged": 265,
@@ -211,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T03:19:01Z",
+    "last_check_at": "2026-10-19T03:24:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +227,7 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T03:10:02Z",
+    "last_check_at": "2026-10-19T03:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T03:23:07Z",
+    "kind": "warn",
+    "text": "MiniMax M3's build of “PAPER-07 Record STALE, MALFORMED and COOLDOWN source outcomes as…” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-19T03:20:03Z",
     "kind": "heal",
@@ -355,11 +359,6 @@
     "at": "2026-10-19T02:17:18Z",
     "kind": "review",
     "text": "GLM 5.2 reviewed “New main SHA a52e899dd6d2 Alpha V11 FLEX code task t_93211659…”: passed"
-   },
-   {
-    "at": "2026-10-19T02:09:55Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “a task”: passed"
    }
   ]
  },
@@ -370,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T03:19:49Z",
-   "heartbeat_at": "2026-10-19T03:20:03Z",
+   "status_at": "2026-10-19T03:24:50Z",
+   "heartbeat_at": "2026-10-19T03:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -380,7 +379,7 @@
     "weather_events": 316,
     "markets": 3007,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T03:14:31Z",
+    "last_scan_at": "2026-10-19T03:20:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T03:14:31Z",
+    "updated_at": "2026-10-19T03:20:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T03:19:26Z",
+    "updated_at": "2026-10-19T03:23:27Z",
     "detail": "observations retained"
    },
    {
