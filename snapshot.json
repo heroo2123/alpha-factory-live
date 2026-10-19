@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T17:50:03Z",
+ "generated_at": "2026-10-19T17:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 25,
     "unit": "queued",
     "active": false,
     "detail": "13 ready to build"
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "47 built in 24h"
+    "detail": "48 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
     "detail": "38 merged in 24h"
@@ -68,19 +68,19 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_b76fe4d8",
-    "task": "Correct Owner read-only authentication with pinned SDK evidence and policy updates",
-    "elapsed_min": 1
+    "task_id": "t_d29b7235",
+    "task": "PAPER-08 Preserve decimal distinctions when ranking capital competitors",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5065cd2a",
-    "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -88,19 +88,19 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_198dd669",
-    "task": "CODE-01 Capture rejected-trade counterfactual markouts",
-    "elapsed_min": 3
+    "task_id": "t_b76fe4d8",
+    "task": "Correct Owner read-only authentication with pinned SDK evidence and policy updates",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_1c5aaedb",
-    "task": "LIVE-15 Retry uncertain guardian checks with the same request identity",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -118,20 +118,20 @@
   "flow": {
    "merges_24h": 38,
    "commits_24h": 38,
-   "built_24h": 47,
-   "build_failed_24h": 28,
+   "built_24h": 48,
+   "build_failed_24h": 27,
    "reviews_passed_24h": 62,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
     4,
     2,
-    2,
-    4,
+    3,
+    3,
     1,
     5,
-    6,
+    8,
+    2,
     3,
-    4,
     0,
     3,
     0,
@@ -152,17 +152,17 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 23,
+    "queued": 25,
     "building": 2,
-    "in_review": 2,
-    "awaiting_merge": 4,
+    "in_review": 1,
+    "awaiting_merge": 5,
     "merged": 272,
-    "parked": 156
+    "parked": 157
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T13:40:13Z",
+   "last_run_at": "2026-10-19T17:50:10Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T17:50:03Z",
+    "last_check_at": "2026-10-19T17:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow second review waiting for capacity",
      "flow shadow frozen authority drift"
     ],
-    "last_check_at": "2026-10-19T17:40:02Z",
+    "last_check_at": "2026-10-19T17:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,26 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T17:54:19Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Retry uncertain guardian checks with the same request identity”: passed"
+   },
+   {
+    "at": "2026-10-19T17:52:20Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Capture rejected-trade counterfactual markouts”: changes required"
+   },
+   {
+    "at": "2026-10-19T17:52:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Correct Owner read-only authentication with pinned SDK evidence and…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-19T17:50:10Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-19T17:50:02Z",
     "kind": "heal",
@@ -340,26 +360,6 @@
     "at": "2026-10-19T16:18:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “FLEX candidate t_dfef0e61 5a6f9f1bfb66” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T16:14:14Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “Perpetual brain preparer must follow the commissioned Shadow release…”: changes required"
-   },
-   {
-    "at": "2026-10-19T16:06:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Perpetual brain preparer must follow the commissioned Shadow release…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T16:00:25Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Record the market-book repricing lead in PWS receipt scoring”: changes required"
-   },
-   {
-    "at": "2026-10-19T15:59:46Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 13602 passed, 0 failed"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T17:49:55Z",
-   "heartbeat_at": "2026-10-19T17:50:02Z",
+   "status_at": "2026-10-19T17:54:54Z",
+   "heartbeat_at": "2026-10-19T17:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T17:50:00Z",
+    "updated_at": "2026-10-19T17:54:02Z",
     "detail": "observations retained"
    },
    {
@@ -630,7 +630,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 17,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "CODE-02",
@@ -720,7 +720,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 8,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-09",
@@ -1008,7 +1008,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 4,
-     "open_tasks": 5
+     "open_tasks": 6
     },
     {
      "id": "LIVE-16",
