@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T21:05:01Z",
+ "generated_at": "2026-10-19T21:10:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 3,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_8c171b81",
     "task": "PAPER-09 Separate PWS score comparisons by label evidence class",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "DeepSeek",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -123,21 +123,13 @@
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
-    4,
+    3,
     0,
     6,
     8,
     2,
     2,
-    0,
     3,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
     0,
     1,
     0,
@@ -145,16 +137,24 @@
     0,
     0,
     2,
-    4,
-    9
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    7,
+    7
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 22,
     "building": 2,
-    "in_review": 4,
+    "in_review": 3,
     "awaiting_merge": 0,
-    "merged": 287,
+    "merged": 288,
     "parked": 159
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T21:08:08Z",
+    "title": "PAPER-09 Validate complete and distinct PWS learning-pair children",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-19T20:20:52Z",
     "title": "LIVE-15 Retain bounded guardian check receipt provenance",
@@ -199,11 +204,6 @@
     "at": "2026-10-19T20:09:31Z",
     "title": "PAPER-09 Bound consecutive PWS QC retries so one event cannot starve its peers",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T20:05:56Z",
-    "title": "PAPER-08 Preserve decimal distinctions when ranking capital competitors",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,26 +212,26 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T21:05:01Z",
+    "last_check_at": "2026-10-19T21:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
     "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
-     "P2": 1
+     "P1": 0,
+     "P2": 2
     },
     "codes": [
-     "flow shadow frozen authority drift",
-     "flow acceptance stalled"
+     "flow acceptance stalled",
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-19T21:00:03Z",
+    "last_check_at": "2026-10-19T21:07:35Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 174,
+    "runs_total": 175,
     "last_run_at": "2026-10-19T21:00:03Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -246,6 +246,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T21:08:08Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Validate complete and distinct PWS learning-pair children” into the main build"
+   },
+   {
+    "at": "2026-10-19T21:05:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Validate complete and distinct PWS learning-pair children”: passed"
+   },
    {
     "at": "2026-10-19T21:01:17Z",
     "kind": "build",
@@ -345,16 +355,6 @@
     "at": "2026-10-19T20:10:23Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)”: passed"
-   },
-   {
-    "at": "2026-10-19T20:10:15Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Resolve tied observation revisions by archive sequence” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T20:10:04Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Reject public physical inputs with synthetic ancestry” into the main build"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T21:04:59Z",
-   "heartbeat_at": "2026-10-19T21:05:02Z",
+   "status_at": "2026-10-19T21:10:00Z",
+   "heartbeat_at": "2026-10-19T21:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,7 +375,7 @@
     "weather_events": 350,
     "markets": 3397,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T21:03:22Z",
+    "last_scan_at": "2026-10-19T21:09:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T21:03:22Z",
+    "updated_at": "2026-10-19T21:09:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T21:03:15Z",
+    "updated_at": "2026-10-19T21:09:17Z",
     "detail": "observations retained"
    },
    {
@@ -723,8 +723,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 17,
-     "open_tasks": 4
+     "merged_tasks": 18,
+     "open_tasks": 3
     },
     {
      "id": "PAPER-10",
