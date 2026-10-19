@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T12:40:02Z",
+ "generated_at": "2026-10-19T12:45:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "58 merged in 24h"
+    "detail": "57 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Zhipu",
     "task_id": "t_f13ccb14",
     "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Builder 2",
@@ -116,26 +116,26 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 58,
-   "commits_24h": 58,
+   "merges_24h": 57,
+   "commits_24h": 57,
    "built_24h": 49,
    "build_failed_24h": 23,
    "reviews_passed_24h": 74,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    4,
+    3,
     4,
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9,
-    5,
+    4,
+    7,
+    3,
     4,
     0,
     3,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T12:39:01Z",
+    "last_check_at": "2026-10-19T12:44:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,11 +229,11 @@
      "flow shadow census churn",
      "flow review answer lost"
     ],
-    "last_check_at": "2026-10-19T12:30:02Z",
+    "last_check_at": "2026-10-19T12:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
+    "runs_24h": 58,
     "runs_total": 152,
     "last_run_at": "2026-10-19T12:30:02Z",
     "last_ok": true,
@@ -381,7 +381,7 @@
     "weather_events": 377,
     "markets": 3690,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T12:37:55Z",
+    "last_scan_at": "2026-10-19T12:43:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T12:37:55Z",
+    "updated_at": "2026-10-19T12:43:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T12:38:44Z",
+    "updated_at": "2026-10-19T12:44:47Z",
     "detail": "observations retained"
    },
    {
