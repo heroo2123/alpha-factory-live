@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:50:02Z",
+ "generated_at": "2026-10-19T01:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "87 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "MiniMax",
     "task_id": "t_d61ef242",
     "task": "Fix 1 failure in : re-pin writer inventory on current head",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_703bf662",
     "task": "New main SHA 7ce78d7cea8b Alpha V11 FLEX code task t_edb133c8 claude",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 1",
@@ -117,47 +117,46 @@
   "tests_passing": 13326,
   "flow": {
    "merges_24h": 87,
-   "commits_24h": 87,
+   "commits_24h": 86,
    "built_24h": 52,
    "build_failed_24h": 14,
    "reviews_passed_24h": 84,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    7,
     5,
     6,
+    5,
     0,
     5,
     3,
     1,
-    3,
     4,
-    5,
-    1,
-    3,
+    4,
+    4,
+    2,
+    2,
     4,
     0,
     10,
     3,
     4,
     2,
-    2,
-    4,
+    3,
+    3,
     1,
     5,
-    6,
-    3
+    8,
+    2
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
-    "protected code: waiting for a second review"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
     "queued": 20,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 261,
+    "awaiting_merge": 1,
+    "merged": 262,
     "parked": 147
    }
   },
@@ -215,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T01:50:02Z",
+    "last_check_at": "2026-10-19T01:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +228,7 @@
      "flow brain capture missed",
      "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T01:40:01Z",
+    "last_check_at": "2026-10-19T01:50:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -371,17 +370,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T01:49:56Z",
-   "heartbeat_at": "2026-10-19T01:50:01Z",
+   "status_at": "2026-10-19T01:54:57Z",
+   "heartbeat_at": "2026-10-19T01:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 321,
-    "markets": 3076,
+    "weather_events": 319,
+    "markets": 3054,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T01:44:59Z",
+    "last_scan_at": "2026-10-19T01:50:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T01:44:59Z",
+    "updated_at": "2026-10-19T01:50:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T01:48:49Z",
+    "updated_at": "2026-10-19T01:54:51Z",
     "detail": "observations retained"
    },
    {
