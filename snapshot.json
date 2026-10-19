@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T22:30:02Z",
+ "generated_at": "2026-10-19T22:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_7938c016",
+    "task": "LIVE-15 Record which trigger caused each guardian cancel and add adversarial trigger tests",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_bfe0ef62",
     "task": "PAPER-09 Report PWS score comparisons separately by settlement station",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
@@ -120,14 +120,14 @@
    "commits_24h": 47,
    "built_24h": 53,
    "build_failed_24h": 23,
-   "reviews_passed_24h": 57,
-   "reviews_changes_24h": 14,
+   "reviews_passed_24h": 56,
+   "reviews_changes_24h": 15,
    "commits_by_hour": [
     0,
-    8,
-    6,
-    3,
-    1,
+    9,
+    5,
+    4,
+    0,
     3,
     0,
     1,
@@ -145,8 +145,8 @@
     2,
     0,
     12,
-    3,
-    5
+    6,
+    2
    ],
    "merge_holds": [],
    "stage_totals": {
@@ -155,7 +155,7 @@
     "in_review": 3,
     "awaiting_merge": 0,
     "merged": 294,
-    "parked": 160
+    "parked": 161
    }
   },
   "architect": {
@@ -212,30 +212,29 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T22:29:01Z",
+    "last_check_at": "2026-10-19T22:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 0,
      "P2": 2
     },
     "codes": [
      "flow qa resource blocked",
-     "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-19T22:20:02Z",
+    "last_check_at": "2026-10-19T22:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 179,
-    "last_run_at": "2026-10-19T22:05:02Z",
+    "runs_total": 180,
+    "last_run_at": "2026-10-19T22:35:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -247,6 +246,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T22:35:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-19T22:33:59Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Bound physical-model provenance traversal”: changes required"
+   },
+   {
+    "at": "2026-10-19T22:30:23Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “PAPER-09 Bound physical-model provenance traversal” → sent to independent review"
+   },
    {
     "at": "2026-10-19T22:20:22Z",
     "kind": "build",
@@ -341,21 +355,6 @@
     "at": "2026-10-19T21:30:03Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: routine"
-   },
-   {
-    "at": "2026-10-19T21:29:42Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-09 Separate PWS score comparisons by label evidence class” into the main build"
-   },
-   {
-    "at": "2026-10-19T21:28:35Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Expire cached PWS quality when supporting history ages out”: passed"
-   },
-   {
-    "at": "2026-10-19T21:28:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Separate PWS score comparisons by label evidence class”: passed"
    }
   ]
  },
@@ -366,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T22:29:50Z",
-   "heartbeat_at": "2026-10-19T22:30:02Z",
+   "status_at": "2026-10-19T22:34:55Z",
+   "heartbeat_at": "2026-10-19T22:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -376,7 +375,7 @@
     "weather_events": 334,
     "markets": 3221,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T22:26:52Z",
+    "last_scan_at": "2026-10-19T22:32:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T22:26:52Z",
+    "updated_at": "2026-10-19T22:32:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T22:29:45Z",
+    "updated_at": "2026-10-19T22:33:47Z",
     "detail": "observations retained"
    },
    {
@@ -725,7 +724,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 20,
-     "open_tasks": 4
+     "open_tasks": 3
     },
     {
      "id": "PAPER-10",
