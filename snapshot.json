@@ -1,24 +1,24 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T13:40:01Z",
+ "generated_at": "2026-10-19T13:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
-    "active": true,
-    "detail": "48 built in 24h"
+    "active": false,
+    "detail": "47 built in 24h"
    },
    {
     "key": "review",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "GLM 5.3",
-    "family": "Zhipu",
-    "task_id": "t_8843a19c",
-    "task": "Hash-bound adversarial verification runner for cancel-only guardian",
-    "elapsed_min": 32
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 55,
    "commits_24h": 55,
-   "built_24h": 48,
-   "build_failed_24h": 23,
+   "built_24h": 47,
+   "build_failed_24h": 24,
    "reviews_passed_24h": 73,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
@@ -127,14 +127,14 @@
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9,
-    5,
+    4,
+    7,
+    3,
     4,
     0,
     3,
@@ -153,8 +153,8 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 20,
-    "building": 2,
+    "queued": 25,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 272,
@@ -163,9 +163,9 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T12:30:02Z",
-   "last_planned": 0,
-   "model": "Kimi K3"
+   "last_run_at": "2026-10-19T13:40:13Z",
+   "last_planned": 6,
+   "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
    {
@@ -211,24 +211,25 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T13:40:02Z",
+    "last_check_at": "2026-10-19T13:45:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 1,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 0
+     "P2": 1
     },
     "codes": [
-     "flow shadow census churn"
+     "flow shadow census churn",
+     "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T13:30:02Z",
+    "last_check_at": "2026-10-19T13:40:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +252,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T13:40:13Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
+   {
+    "at": "2026-10-19T13:40:10Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro build attempt ended: no code change"
+   },
    {
     "at": "2026-10-19T13:40:01Z",
     "kind": "heal",
@@ -350,16 +361,6 @@
     "at": "2026-10-19T11:57:10Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
-   },
-   {
-    "at": "2026-10-19T11:54:08Z",
-    "kind": "warn",
-    "text": "GLM 5.3's build of “Render-only hardened systemd units for distinct-principal guardian…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T11:45:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow reviewed work quarantined"
    }
   ]
  },
@@ -377,10 +378,10 @@
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 382,
-    "markets": 3745,
+    "weather_events": 381,
+    "markets": 3734,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T13:36:32Z",
+    "last_scan_at": "2026-10-19T13:42:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T13:36:32Z",
+    "updated_at": "2026-10-19T13:42:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T13:39:09Z",
+    "updated_at": "2026-10-19T13:43:11Z",
     "detail": "observations retained"
    },
    {
@@ -729,7 +730,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 14,
-     "open_tasks": 1
+     "open_tasks": 3
     },
     {
      "id": "PAPER-10",
@@ -1008,7 +1009,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 4,
-     "open_tasks": 3
+     "open_tasks": 5
     },
     {
      "id": "LIVE-16",
