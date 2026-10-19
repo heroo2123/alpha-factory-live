@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:05:02Z",
+ "generated_at": "2026-10-19T01:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 30,
+    "count": 29,
     "unit": "queued",
     "active": false,
-    "detail": "18 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 38,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder"
    },
    {
@@ -80,17 +80,17 @@
     "family": "MiniMax",
     "task_id": "t_51e45c22",
     "task": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_81a65460",
+    "task": "a build task",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -123,17 +123,17 @@
    "reviews_passed_24h": 85,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    6,
-    5,
-    5,
+    7,
     4,
-    0,
     6,
-    2,
+    3,
+    1,
+    6,
+    1,
     2,
     3,
-    4,
-    4,
+    5,
+    3,
     2,
     3,
     3,
@@ -142,22 +142,22 @@
     1,
     5,
     1,
-    3,
     4,
+    3,
     0,
     6,
     8
    ],
    "merge_holds": [
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 30,
+    "queued": 29,
     "building": 1,
     "in_review": 38,
     "awaiting_merge": 2,
     "merged": 261,
-    "parked": 100
+    "parked": 101
    }
   },
   "architect": {
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T01:04:02Z",
+    "last_check_at": "2026-10-19T01:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -369,17 +369,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T01:04:53Z",
-   "heartbeat_at": "2026-10-19T01:05:01Z",
+   "status_at": "2026-10-19T01:09:53Z",
+   "heartbeat_at": "2026-10-19T01:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 327,
-    "markets": 3142,
+    "weather_events": 325,
+    "markets": 3120,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T01:00:59Z",
+    "last_scan_at": "2026-10-19T01:06:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T01:00:59Z",
+    "updated_at": "2026-10-19T01:06:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T01:04:34Z",
+    "updated_at": "2026-10-19T01:08:36Z",
     "detail": "observations retained"
    },
    {
