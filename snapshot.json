@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T18:15:02Z",
+ "generated_at": "2026-10-19T18:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
     "detail": "37 merged in 24h"
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_ad80ea86",
     "task": "FLEX candidate t_daf9ad49 292fc8cfdf42",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_d29b7235",
-    "task": "PAPER-08 Preserve decimal distinctions when ranking capital competitors",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -119,14 +119,14 @@
    "merges_24h": 37,
    "commits_24h": 37,
    "built_24h": 48,
-   "build_failed_24h": 28,
-   "reviews_passed_24h": 62,
+   "build_failed_24h": 27,
+   "reviews_passed_24h": 63,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     4,
     2,
-    3,
-    3,
+    4,
+    2,
     0,
     7,
     7,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 24,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 6,
+    "in_review": 0,
+    "awaiting_merge": 7,
     "merged": 272,
     "parked": 158
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
+    "state": "healthy",
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T18:14:02Z",
+    "last_check_at": "2026-10-19T18:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,11 +233,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
-    "runs_total": 164,
-    "last_run_at": "2026-10-19T17:50:02Z",
+    "runs_24h": 59,
+    "runs_total": 165,
+    "last_run_at": "2026-10-19T18:20:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow frozen authority drift",
+    "last_kind": "routine",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +252,26 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T18:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: routine"
+   },
+   {
+    "at": "2026-10-19T18:19:17Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Preserve decimal distinctions when ranking capital…”: passed"
+   },
+   {
+    "at": "2026-10-19T18:17:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code delivered awaiting protected second review"
+   },
+   {
+    "at": "2026-10-19T18:17:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-19T18:14:12Z",
     "kind": "build",
@@ -341,26 +361,6 @@
     "at": "2026-10-19T17:24:18Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Verify the complete retained PWS score population”: passed"
-   },
-   {
-    "at": "2026-10-19T17:19:11Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-09 Verify the complete retained PWS score population” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T17:01:18Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_f13ccb14 76fd3fe4d47d”: passed"
-   },
-   {
-    "at": "2026-10-19T16:55:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-09 Record the market-book repricing lead in PWS receipt scoring” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T16:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
    }
   ]
  },
@@ -371,8 +371,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T18:14:59Z",
-   "heartbeat_at": "2026-10-19T18:15:01Z",
+   "status_at": "2026-10-19T18:19:57Z",
+   "heartbeat_at": "2026-10-19T18:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -381,7 +381,7 @@
     "weather_events": 369,
     "markets": 3604,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T18:13:25Z",
+    "last_scan_at": "2026-10-19T18:19:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T18:13:25Z",
+    "updated_at": "2026-10-19T18:19:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T18:14:11Z",
+    "updated_at": "2026-10-19T18:18:12Z",
     "detail": "observations retained"
    },
    {
@@ -509,7 +509,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T17:17:02Z",
+   "updated_at": "2026-10-19T18:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
