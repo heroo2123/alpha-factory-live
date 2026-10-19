@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T06:10:02Z",
+ "generated_at": "2026-10-19T06:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "8 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "50 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "76 merged in 24h"
+    "detail": "75 merged in 24h"
    },
    {
     "key": "qa",
@@ -75,17 +75,17 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_54f1927a",
-    "task": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
-    "elapsed_min": 17
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,32 +116,32 @@
   },
   "tests_passing": 13520,
   "flow": {
-   "merges_24h": 76,
-   "commits_24h": 76,
+   "merges_24h": 75,
+   "commits_24h": 75,
    "built_24h": 50,
-   "build_failed_24h": 21,
-   "reviews_passed_24h": 78,
+   "build_failed_24h": 22,
+   "reviews_passed_24h": 77,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     6,
-    1,
-    2,
-    3,
-    5,
+    0,
     3,
     2,
-    3,
-    3,
-    0,
-    12,
-    1,
-    5,
-    1,
-    4,
-    3,
-    0,
     6,
-    8,
+    2,
+    2,
+    4,
+    2,
+    2,
+    10,
+    2,
+    4,
+    2,
+    3,
+    3,
+    0,
+    7,
+    7,
     2,
     2,
     3,
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 19,
-    "building": 1,
-    "in_review": 1,
+    "queued": 20,
+    "building": 0,
+    "in_review": 0,
     "awaiting_merge": 0,
     "merged": 269,
     "parked": 151
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T06:10:02Z",
+    "last_check_at": "2026-10-19T06:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
     "codes": [
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T06:00:02Z",
+    "last_check_at": "2026-10-19T06:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -248,6 +248,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T06:12:07Z",
+    "kind": "warn",
+    "text": "MiniMax M3's build of “Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)” failed its tests; it will be retried"
+   },
+   {
+    "at": "2026-10-19T06:10:12Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-19T06:10:03Z",
     "kind": "heal",
@@ -347,16 +357,6 @@
     "at": "2026-10-19T04:02:38Z",
     "kind": "warn",
     "text": "Full test suite finished: 13520 passed, 1 failed"
-   },
-   {
-    "at": "2026-10-19T04:00:03Z",
-    "kind": "plan",
-    "text": "Architect (Kimi K3) planned 0 new tasks"
-   },
-   {
-    "at": "2026-10-19T03:54:18Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “InventoryTransform observer: strict nested artifact schema (close…”: passed"
    }
   ]
  },
@@ -366,9 +366,9 @@
    "release": "70c90ca",
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
-   "state": "making paper decisions",
-   "status_at": "2026-10-19T06:06:45Z",
-   "heartbeat_at": "2026-10-19T06:10:03Z",
+   "state": "census service",
+   "status_at": "2026-10-19T06:15:01Z",
+   "heartbeat_at": "2026-10-19T06:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -377,7 +377,7 @@
     "weather_events": 377,
     "markets": 3673,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T06:06:11Z",
+    "last_scan_at": "2026-10-19T06:11:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T06:06:11Z",
+    "updated_at": "2026-10-19T06:11:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T06:08:24Z",
+    "updated_at": "2026-10-19T06:14:26Z",
     "detail": "observations retained"
    },
    {
