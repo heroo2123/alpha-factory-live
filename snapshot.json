@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T16:25:02Z",
+ "generated_at": "2026-10-19T16:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 26,
+    "count": 29,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "47 built in 24h"
+    "active": false,
+    "detail": "46 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "43 merged in 24h"
+    "detail": "42 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_a0935754",
-    "task": "Perpetual brain preparer must follow the commissioned Shadow release (8 station forward…",
-    "elapsed_min": 6
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,18 +116,18 @@
   },
   "tests_passing": 13602,
   "flow": {
-   "merges_24h": 43,
-   "commits_24h": 43,
-   "built_24h": 47,
+   "merges_24h": 42,
+   "commits_24h": 42,
+   "built_24h": 46,
    "build_failed_24h": 28,
    "reviews_passed_24h": 63,
-   "reviews_changes_24h": 11,
+   "reviews_changes_24h": 12,
    "commits_by_hour": [
-    5,
+    4,
     2,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     0,
     8,
@@ -143,8 +143,8 @@
     0,
     2,
     0,
-    0,
     1,
+    0,
     0,
     0
    ],
@@ -152,10 +152,10 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 26,
-    "building": 1,
-    "in_review": 2,
-    "awaiting_merge": 1,
+    "queued": 29,
+    "building": 0,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 272,
     "parked": 155
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T16:25:02Z",
+    "last_check_at": "2026-10-19T16:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T16:28:18Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Station-bias + pooled-spread research learner (new module, -10%…”: changes required"
+   },
+   {
+    "at": "2026-10-19T16:27:09Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra)'s build of “Perpetual brain preparer must follow the commissioned Shadow release…” failed its tests; it will be retried"
+   },
+   {
+    "at": "2026-10-19T16:25:19Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_dc8a8fac 33df0b0168be”: passed"
+   },
    {
     "at": "2026-10-19T16:24:05Z",
     "kind": "review",
@@ -344,21 +359,6 @@
     "at": "2026-10-19T14:22:23Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Recheck worker identity before accepting a guardian lease”: passed"
-   },
-   {
-    "at": "2026-10-19T14:21:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “FLEX candidate t_e895e8a4 00093f4a499a” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T14:18:15Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “LIVE-15 Recheck worker identity before accepting a guardian lease” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T13:55:03Z",
-    "kind": "release",
-    "text": "New Shadow release c107c9c went live (paper only)"
    }
   ]
  },
@@ -368,9 +368,9 @@
    "release": "c107c9c",
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
-   "state": "making paper decisions",
-   "status_at": "2026-10-19T16:23:09Z",
-   "heartbeat_at": "2026-10-19T16:25:01Z",
+   "state": "census service",
+   "status_at": "2026-10-19T16:30:00Z",
+   "heartbeat_at": "2026-10-19T16:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T16:23:30Z",
+    "updated_at": "2026-10-19T16:29:32Z",
     "detail": "observations retained"
    },
    {
@@ -728,7 +728,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 14,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "PAPER-10",
