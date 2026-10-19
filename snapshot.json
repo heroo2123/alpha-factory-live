@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T12:30:01Z",
+ "generated_at": "2026-10-19T12:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "58 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "Zhipu",
     "task_id": "t_f13ccb14",
     "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_ab128c9c",
-    "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
-    "elapsed_min": 5
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -123,8 +123,8 @@
    "reviews_passed_24h": 74,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    3,
     4,
+    3,
     1,
     9,
     4,
@@ -134,10 +134,10 @@
     3,
     2,
     0,
-    8,
-    6,
-    3,
-    1,
+    9,
+    5,
+    4,
+    0,
     3,
     0,
     1,
@@ -149,22 +149,23 @@
     0
    ],
    "merge_holds": [
-    "protected code: waiting for a second review"
+    "protected code: waiting for a second review",
+    "protected requires two distinct families"
    ],
    "stage_totals": {
     "queued": 20,
     "building": 1,
-    "in_review": 3,
-    "awaiting_merge": 1,
+    "in_review": 2,
+    "awaiting_merge": 2,
     "merged": 271,
     "parked": 148
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T11:40:13Z",
-   "last_planned": 6,
-   "model": "GLM 5.2"
+   "last_run_at": "2026-10-19T12:30:02Z",
+   "last_planned": 0,
+   "model": "Kimi K3"
   },
   "recent_merges": [
    {
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T12:29:01Z",
+    "last_check_at": "2026-10-19T12:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,10 +226,10 @@
      "P2": 1
     },
     "codes": [
-     "flow worker exception repeat",
-     "flow shadow census churn"
+     "flow shadow census churn",
+     "flow review answer lost"
     ],
-    "last_check_at": "2026-10-19T12:20:02Z",
+    "last_check_at": "2026-10-19T12:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,9 +253,19 @@
   ],
   "events": [
    {
+    "at": "2026-10-19T12:34:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “Station-bias + pooled-spread research learner (new module, -10%…”: passed"
+   },
+   {
     "at": "2026-10-19T12:30:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow worker exception repeat"
+   },
+   {
+    "at": "2026-10-19T12:30:02Z",
+    "kind": "plan",
+    "text": "Architect (Kimi K3) planned 0 new tasks"
    },
    {
     "at": "2026-10-19T12:27:19Z",
@@ -350,16 +361,6 @@
     "at": "2026-10-19T11:00:29Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “Wire the governed learning worker to forward captures and labels (no…”: passed"
-   },
-   {
-    "at": "2026-10-19T11:00:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-19T10:58:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    }
   ]
  },
@@ -377,10 +378,10 @@
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 373,
-    "markets": 3646,
+    "weather_events": 374,
+    "markets": 3657,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T12:25:44Z",
+    "last_scan_at": "2026-10-19T12:31:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T12:25:44Z",
+    "updated_at": "2026-10-19T12:31:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T12:28:41Z",
+    "updated_at": "2026-10-19T12:34:43Z",
     "detail": "observations retained"
    },
    {
