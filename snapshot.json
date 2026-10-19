@@ -1,37 +1,37 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T00:55:02Z",
+ "generated_at": "2026-10-19T01:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 31,
+    "count": 30,
     "unit": "queued",
     "active": false,
-    "detail": "19 ready to build"
+    "detail": "18 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "54 built in 24h"
+    "active": true,
+    "detail": "53 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 38,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "88 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_a0935754",
+    "task": "Perpetual brain preparer must follow the commissioned Shadow release (8 station forward…",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_e7972d78",
+    "task": "a build task",
+    "elapsed_min": 4
    }
   ],
   "qa": {
@@ -118,14 +118,14 @@
   "flow": {
    "merges_24h": 88,
    "commits_24h": 88,
-   "built_24h": 54,
+   "built_24h": 53,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 84,
+   "reviews_passed_24h": 86,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    4,
     5,
     6,
+    4,
     5,
     0,
     5,
@@ -138,24 +138,24 @@
     2,
     4,
     0,
-    10,
-    3,
+    11,
+    2,
     4,
     2,
     3,
     3,
     1,
-    5,
-    8
+    6,
+    7
    ],
    "merge_holds": [
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 31,
+    "queued": 30,
     "building": 1,
     "in_review": 38,
-    "awaiting_merge": 2,
+    "awaiting_merge": 3,
     "merged": 260,
     "parked": 100
    }
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:54:01Z",
+    "last_check_at": "2026-10-19T00:59:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +231,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 60,
+    "runs_24h": 59,
     "runs_total": 123,
     "last_run_at": "2026-10-19T00:50:02Z",
     "last_ok": true,
@@ -250,6 +250,26 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T00:59:17Z",
+    "kind": "review",
+    "text": "DeepSeek V4.1 Flash reviewed “New main SHA 763e0c8837ad Alpha V11 FLEX code task t_1a6cb85d claude”: passed"
+   },
+   {
+    "at": "2026-10-19T00:57:09Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-19T00:55:19Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-19T00:55:16Z",
+    "kind": "build",
+    "text": "MiniMax M3 built “New main SHA 763e0c8837ad Alpha V11 FLEX code task t_1a6cb85d claude” → sent to independent review"
+   },
    {
     "at": "2026-10-19T00:55:00Z",
     "kind": "merge",
@@ -339,26 +359,6 @@
     "at": "2026-10-19T00:20:02Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 0 new tasks"
-   },
-   {
-    "at": "2026-10-19T00:18:10Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T00:15:19Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “Guardian custody namespace fixture must classify Ubuntu AppArmor…”: passed"
-   },
-   {
-    "at": "2026-10-19T00:13:08Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-07 Bind already-committed source receipts when a pump cycle is…” into the main build"
-   },
-   {
-    "at": "2026-10-19T00:13:06Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:54:52Z",
-   "heartbeat_at": "2026-10-19T00:55:00Z",
+   "status_at": "2026-10-19T00:59:52Z",
+   "heartbeat_at": "2026-10-19T01:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -379,7 +379,7 @@
     "weather_events": 327,
     "markets": 3142,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T00:49:35Z",
+    "last_scan_at": "2026-10-19T00:55:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T00:49:35Z",
+    "updated_at": "2026-10-19T00:55:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:54:31Z",
+    "updated_at": "2026-10-19T00:58:32Z",
     "detail": "observations retained"
    },
    {
