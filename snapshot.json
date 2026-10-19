@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T04:35:01Z",
+ "generated_at": "2026-10-19T04:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "77 merged in 24h"
+    "detail": "76 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,31 +116,31 @@
   },
   "tests_passing": 13520,
   "flow": {
-   "merges_24h": 77,
-   "commits_24h": 77,
+   "merges_24h": 76,
+   "commits_24h": 76,
    "built_24h": 50,
    "build_failed_24h": 21,
    "reviews_passed_24h": 78,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    1,
+    0,
     5,
     3,
     0,
     4,
-    2,
-    6,
+    3,
+    5,
     1,
     4,
+    4,
+    0,
+    10,
     3,
-    1,
-    9,
+    2,
     4,
     2,
-    3,
-    3,
-    3,
-    2,
+    4,
+    1,
     0,
     9,
     5,
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T04:34:01Z",
+    "last_check_at": "2026-10-19T04:39:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,10 +231,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 135,
-    "last_run_at": "2026-10-19T04:35:01Z",
+    "runs_total": 136,
+    "last_run_at": "2026-10-19T04:40:02Z",
     "last_ok": true,
-    "last_kind": "full suite not green",
+    "last_kind": "code queue idle with capacity",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T04:40:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: code queue idle with capacity"
+   },
+   {
+    "at": "2026-10-19T04:35:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
    {
     "at": "2026-10-19T04:35:01Z",
     "kind": "heal",
@@ -348,16 +358,6 @@
     "at": "2026-10-19T03:23:07Z",
     "kind": "warn",
     "text": "MiniMax M3's build of “PAPER-07 Record STALE, MALFORMED and COOLDOWN source outcomes as…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T03:20:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-19T03:15:59Z",
-    "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “Fix 1 failure in : register blend_learning (0cc90fac) as a…” → sent to independent review"
    }
   ]
  },
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
    "state": "census service",
-   "status_at": "2026-10-19T04:35:01Z",
-   "heartbeat_at": "2026-10-19T04:35:02Z",
+   "status_at": "2026-10-19T04:40:02Z",
+   "heartbeat_at": "2026-10-19T04:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 319,
-    "markets": 3035,
+    "weather_events": 347,
+    "markets": 3343,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T04:32:30Z",
+    "last_scan_at": "2026-10-19T04:38:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -394,21 +394,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-19T03:37:02Z",
+    "updated_at": "2026-10-19T04:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T04:32:30Z",
+    "updated_at": "2026-10-19T04:38:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T04:33:51Z",
+    "updated_at": "2026-10-19T04:39:53Z",
     "detail": "observations retained"
    },
    {
