@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T00:20:01Z",
+ "generated_at": "2026-10-19T00:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 9,
+    "count": 8,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "82 merged in 24h"
+    "detail": "83 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 13326,
   "flow": {
-   "merges_24h": 82,
-   "commits_24h": 82,
+   "merges_24h": 83,
+   "commits_24h": 83,
    "built_24h": 54,
    "build_failed_24h": 11,
    "reviews_passed_24h": 84,
@@ -125,49 +125,53 @@
    "commits_by_hour": [
     0,
     7,
-    4,
-    7,
+    5,
+    6,
     2,
     4,
     4,
     0,
     3,
-    2,
-    6,
+    3,
+    5,
     2,
     3,
     3,
     2,
-    7,
-    6,
-    1,
-    4,
+    8,
+    5,
+    2,
+    3,
     2,
     4,
     2,
     0,
-    7
+    8
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 29,
     "building": 0,
     "in_review": 39,
-    "awaiting_merge": 9,
-    "merged": 254,
+    "awaiting_merge": 8,
+    "merged": 255,
     "parked": 99
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-18T20:20:17Z",
-   "last_planned": 6,
-   "model": "Claude Opus"
+   "last_run_at": "2026-10-19T00:20:02Z",
+   "last_planned": 0,
+   "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T00:22:11Z",
+    "title": "LIVE-15 Stop a refused cancellation trigger from blocking later triggers on its channel",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-19T00:13:08Z",
     "title": "PAPER-07 Bind already-committed source receipts when a pump cycle is interrupted",
@@ -202,11 +206,6 @@
     "at": "2026-10-18T23:43:11Z",
     "title": "InventoryTransform start guard: bind import-deny hook at install (close N1 rebinding)…",
     "area": "Position management"
-   },
-   {
-    "at": "2026-10-18T22:04:38Z",
-    "title": "PAPER-02 Periodic census must reuse a still-fresh completed GEFS model census instead of…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:19:01Z",
+    "last_check_at": "2026-10-19T00:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,12 +228,12 @@
      "flow brain capture missed",
      "flow pin guard scope missing"
     ],
-    "last_check_at": "2026-10-19T00:10:02Z",
+    "last_check_at": "2026-10-19T00:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 56,
-    "runs_total": 119,
+    "runs_total": 120,
     "last_run_at": "2026-10-19T00:20:02Z",
     "last_ok": true,
     "last_kind": "full suite not green",
@@ -252,9 +251,19 @@
   ],
   "events": [
    {
+    "at": "2026-10-19T00:22:11Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Stop a refused cancellation trigger from blocking later…” into the main build"
+   },
+   {
     "at": "2026-10-19T00:20:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: full suite not green"
+   },
+   {
+    "at": "2026-10-19T00:20:02Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 0 new tasks"
    },
    {
     "at": "2026-10-19T00:18:10Z",
@@ -350,16 +359,6 @@
     "at": "2026-10-18T23:48:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Guardian custody namespace fixture must classify Ubuntu AppArmor…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T23:45:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “New evidence-only merge/NegRisk-conversion screen over normalized…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T23:44:17Z",
-    "kind": "merge",
-    "text": "Merged “Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with…” into the main build"
    }
   ]
  },
@@ -370,17 +369,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:19:49Z",
-   "heartbeat_at": "2026-10-19T00:20:01Z",
+   "status_at": "2026-10-19T00:24:49Z",
+   "heartbeat_at": "2026-10-19T00:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 332,
-    "markets": 3197,
+    "weather_events": 331,
+    "markets": 3186,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T00:15:31Z",
+    "last_scan_at": "2026-10-19T00:21:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T00:15:31Z",
+    "updated_at": "2026-10-19T00:21:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:18:18Z",
+    "updated_at": "2026-10-19T00:24:20Z",
     "detail": "observations retained"
    },
    {
@@ -1007,8 +1006,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 3,
-     "open_tasks": 3
+     "merged_tasks": 4,
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
