@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T02:40:03Z",
+ "generated_at": "2026-10-19T02:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "13 ready to build"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "85 merged in 24h"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "MiniMax",
     "task_id": "t_d61ef242",
     "task": "Fix 1 failure in : re-pin writer inventory on current head",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Reviewer 1",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-18T23:36:00Z",
    "last_passed": 13326,
@@ -123,42 +123,41 @@
    "reviews_passed_24h": 88,
    "reviews_changes_24h": 3,
    "commits_by_hour": [
-    4,
-    8,
+    5,
+    7,
     0,
     5,
     3,
     0,
     4,
-    3,
-    5,
-    1,
     4,
+    4,
+    2,
+    3,
     4,
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9,
-    5,
+    4,
+    7,
+    3,
     4
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
-    "protected code: waiting for a second review"
+    "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 19,
+    "queued": 20,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 2,
+    "awaiting_merge": 1,
     "merged": 265,
-    "parked": 144
+    "parked": 145
    }
   },
   "architect": {
@@ -211,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T02:40:03Z",
+    "last_check_at": "2026-10-19T02:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +227,7 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T02:30:02Z",
+    "last_check_at": "2026-10-19T02:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T02:42:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: full suite not green"
+   },
    {
     "at": "2026-10-19T02:35:01Z",
     "kind": "heal",
@@ -355,11 +359,6 @@
     "at": "2026-10-19T01:39:06Z",
     "kind": "warn",
     "text": "DeepSeek V4.1 Flash's build of “LIVE-10 Check a certification scope's horizon against the event…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T01:19:05Z",
-    "kind": "warn",
-    "text": "MiniMax M3's build of “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL” failed its tests; it will be retried"
    }
   ]
  },
@@ -370,17 +369,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T02:40:00Z",
-   "heartbeat_at": "2026-10-19T02:40:02Z",
+   "status_at": "2026-10-19T02:45:01Z",
+   "heartbeat_at": "2026-10-19T02:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 318,
-    "markets": 3043,
+    "weather_events": 317,
+    "markets": 3032,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T02:35:14Z",
+    "last_scan_at": "2026-10-19T02:40:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T02:35:14Z",
+    "updated_at": "2026-10-19T02:40:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T02:39:11Z",
+    "updated_at": "2026-10-19T02:43:12Z",
     "detail": "observations retained"
    },
    {
