@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T10:45:02Z",
+ "generated_at": "2026-10-19T10:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,12 +10,12 @@
     "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "6 ready to build"
+    "detail": "7 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "49 built in 24h"
@@ -70,17 +70,17 @@
     "family": "DeepSeek",
     "task_id": "t_053b3f26",
     "task": "Wire the governed learning worker to forward captures and labels (no caller today)",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_e895e8a4",
+    "task": "CODE-01 Add weekly station/strategy review and demotion-candidate section to audit reports",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -123,20 +123,20 @@
    "reviews_passed_24h": 76,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    4,
-    2,
+    5,
+    1,
     3,
     4,
     0,
     10,
     3,
-    3,
-    3,
+    4,
+    2,
     2,
     4,
     1,
-    4,
-    7,
+    5,
+    6,
     3,
     4,
     0,
@@ -151,11 +151,11 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 17,
-    "building": 1,
+    "building": 2,
     "in_review": 1,
     "awaiting_merge": 0,
     "merged": 269,
-    "parked": 152
+    "parked": 151
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T10:44:02Z",
+    "last_check_at": "2026-10-19T10:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,11 +230,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 58,
     "runs_total": 147,
-    "last_run_at": "2026-10-19T09:10:01Z",
+    "last_run_at": "2026-10-19T10:50:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow worker exception repeat",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T10:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow worker exception repeat"
+   },
    {
     "at": "2026-10-19T10:44:12Z",
     "kind": "build",
@@ -325,11 +330,6 @@
     "text": "Guardian raised an alert: full suite not green"
    },
    {
-    "at": "2026-10-19T06:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: full suite not green"
-   },
-   {
     "at": "2026-10-19T06:01:55Z",
     "kind": "merge",
     "text": "Merged “Fix 1 failure in : register blend_learning (0cc90fac) as a…” into the main build"
@@ -378,7 +378,7 @@
     "weather_events": 368,
     "markets": 3574,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T10:43:01Z",
+    "last_scan_at": "2026-10-19T10:48:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T10:43:01Z",
+    "updated_at": "2026-10-19T10:48:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T10:44:03Z",
+    "updated_at": "2026-10-19T10:48:04Z",
     "detail": "observations retained"
    },
    {
