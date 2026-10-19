@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T16:05:02Z",
+ "generated_at": "2026-10-19T16:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 26,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "45 built in 24h"
+    "detail": "46 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_a0935754",
-    "task": "Perpetual brain preparer must follow the commissioned Shadow release (8 station forward…",
-    "elapsed_min": 4
+    "task_id": "t_dc8a8fac",
+    "task": "FLEX candidate t_dfef0e61 5a6f9f1bfb66",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_a0935754",
+    "task": "Perpetual brain preparer must follow the commissioned Shadow release (8 station forward…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -118,31 +118,31 @@
   "flow": {
    "merges_24h": 51,
    "commits_24h": 51,
-   "built_24h": 45,
+   "built_24h": 46,
    "build_failed_24h": 28,
-   "reviews_passed_24h": 66,
+   "reviews_passed_24h": 65,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     12,
     1,
     5,
     1,
-    3,
     4,
+    3,
     0,
     6,
     8,
     2,
     2,
-    0,
     3,
-    1,
-    0,
-    0,
-    0,
     0,
     1,
-    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
     0,
     1,
     0,
@@ -154,10 +154,10 @@
    "stage_totals": {
     "queued": 26,
     "building": 1,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 1,
     "merged": 272,
-    "parked": 155
+    "parked": 154
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T16:05:02Z",
+    "last_check_at": "2026-10-19T16:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -248,6 +248,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T16:06:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Perpetual brain preparer must follow the commissioned Shadow release…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T16:00:25Z",
     "kind": "warn",
@@ -352,11 +357,6 @@
     "at": "2026-10-19T13:48:07Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra)'s build of “PAPER-08 Reconcile SELL exit fills in the paper risk observation” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T13:45:10Z",
-    "kind": "warn",
-    "text": "GLM 5.3 build attempt ended: quota hold"
    }
   ]
  },
@@ -367,17 +367,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T16:04:47Z",
-   "heartbeat_at": "2026-10-19T16:05:01Z",
+   "status_at": "2026-10-19T16:10:03Z",
+   "heartbeat_at": "2026-10-19T16:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 380,
-    "markets": 3723,
+    "weather_events": 379,
+    "markets": 3712,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T16:00:52Z",
+    "last_scan_at": "2026-10-19T16:06:56Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T16:00:52Z",
+    "updated_at": "2026-10-19T16:06:56Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T16:03:23Z",
+    "updated_at": "2026-10-19T16:09:25Z",
     "detail": "observations retained"
    },
    {
