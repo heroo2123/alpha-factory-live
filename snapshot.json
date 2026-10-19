@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T20:00:02Z",
+ "generated_at": "2026-10-19T20:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 25,
+    "count": 24,
     "unit": "queued",
     "active": false,
     "detail": "13 ready to build"
@@ -23,18 +23,18 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "36 merged in 24h"
+    "detail": "37 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_7afd35f9",
-    "task": "CODE-01 Flag backward source timestamps as risk revisions",
-    "elapsed_min": 5
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_9863bd21",
     "task": "CODE-01 Resolve tied observation revisions by archive sequence",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_7afd35f9",
+    "task": "CODE-01 Flag backward source timestamps as risk revisions",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -116,22 +116,29 @@
   },
   "tests_passing": 13617,
   "flow": {
-   "merges_24h": 36,
-   "commits_24h": 36,
+   "merges_24h": 37,
+   "commits_24h": 37,
    "built_24h": 46,
    "build_failed_24h": 27,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
     3,
-    3,
-    1,
+    4,
+    0,
     6,
-    7,
+    8,
     2,
-    3,
+    2,
     0,
     3,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
     0,
     1,
     0,
@@ -139,22 +146,15 @@
     0,
     0,
     2,
-    0,
-    1,
-    0,
-    0,
-    0,
-    0,
-    2,
-    2
+    3
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 25,
+    "queued": 24,
     "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 6,
-    "merged": 276,
+    "in_review": 1,
+    "awaiting_merge": 5,
+    "merged": 277,
     "parked": 161
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T20:02:05Z",
+    "title": "LIVE-15 Retry uncertain guardian checks with the same request identity",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-19T18:26:17Z",
     "title": "LIVE-15 Recheck worker identity before accepting a guardian lease",
@@ -199,11 +204,6 @@
     "at": "2026-10-19T00:55:00Z",
     "title": "Brain forward supervisor scorer must use the live Shadow release code, not the frozen…",
     "area": "Forecast brain"
-   },
-   {
-    "at": "2026-10-19T00:51:57Z",
-    "title": "Guardian custody namespace fixture must classify Ubuntu AppArmor userns restriction as…",
-    "area": "Test repairs"
    }
   ],
   "self_healing": {
@@ -212,28 +212,29 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T20:00:02Z",
+    "last_check_at": "2026-10-19T20:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 1,
+    "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
+     "P1": 1,
      "P2": 1
     },
     "codes": [
+     "flow shadow frozen authority drift",
      "flow acceptance stalled"
     ],
-    "last_check_at": "2026-10-19T19:50:02Z",
+    "last_check_at": "2026-10-19T20:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 171,
-    "last_run_at": "2026-10-19T19:50:02Z",
+    "last_run_at": "2026-10-19T20:05:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance stalled",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -247,6 +248,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T20:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-19T20:04:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “CODE-01 Flag backward source timestamps as risk revisions” → sent to independent review"
+   },
+   {
+    "at": "2026-10-19T20:02:05Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Retry uncertain guardian checks with the same request identity” into the main build"
+   },
    {
     "at": "2026-10-19T19:54:56Z",
     "kind": "qa",
@@ -341,21 +357,6 @@
     "at": "2026-10-19T19:00:17Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 7 new tasks"
-   },
-   {
-    "at": "2026-10-19T19:00:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-19T18:58:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-19T18:56:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    }
   ]
  },
@@ -366,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T19:59:53Z",
-   "heartbeat_at": "2026-10-19T20:00:03Z",
+   "status_at": "2026-10-19T20:04:54Z",
+   "heartbeat_at": "2026-10-19T20:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,8 +376,8 @@
    "scanner": {
     "weather_events": 356,
     "markets": 3461,
-    "opportunities": 0,
-    "last_scan_at": "2026-10-19T19:58:29Z",
+    "opportunities": 1,
+    "last_scan_at": "2026-10-19T20:04:27Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T19:58:29Z",
+    "updated_at": "2026-10-19T20:04:27Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T19:58:49Z",
+    "updated_at": "2026-10-19T20:04:51Z",
     "detail": "observations retained"
    },
    {
@@ -1003,8 +1004,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 5,
-     "open_tasks": 5
+     "merged_tasks": 6,
+     "open_tasks": 4
     },
     {
      "id": "LIVE-16",
