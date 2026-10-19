@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T09:15:02Z",
+ "generated_at": "2026-10-19T09:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -126,16 +126,16 @@
     2,
     6,
     2,
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7,
     7,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T09:15:02Z",
+    "last_check_at": "2026-10-19T09:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -366,9 +366,9 @@
    "release": "70c90ca",
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
-   "state": "making paper decisions",
-   "status_at": "2026-10-19T09:10:01Z",
-   "heartbeat_at": "2026-10-19T09:15:01Z",
+   "state": "census service",
+   "status_at": "2026-10-19T09:20:00Z",
+   "heartbeat_at": "2026-10-19T09:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -407,7 +407,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T09:13:31Z",
+    "updated_at": "2026-10-19T09:19:33Z",
     "detail": "observations retained"
    },
    {
@@ -505,7 +505,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T08:17:02Z",
+   "updated_at": "2026-10-19T09:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
