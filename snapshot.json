@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T00:15:02Z",
+ "generated_at": "2026-10-19T00:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "55 built in 24h"
+    "detail": "54 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 40,
+    "count": 39,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 8,
+    "count": 9,
     "unit": "awaiting merge",
     "active": true,
     "detail": "82 merged in 24h"
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 82,
    "commits_24h": 82,
-   "built_24h": 55,
+   "built_24h": 54,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 83,
+   "reviews_passed_24h": 84,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     0,
@@ -128,34 +128,35 @@
     4,
     7,
     2,
-    2,
-    6,
+    4,
+    4,
     0,
     3,
     2,
     6,
     2,
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7
    ],
    "merge_holds": [
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 29,
     "building": 0,
-    "in_review": 40,
-    "awaiting_merge": 8,
+    "in_review": 39,
+    "awaiting_merge": 9,
     "merged": 254,
     "parked": 99
    }
@@ -214,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:14:02Z",
+    "last_check_at": "2026-10-19T00:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +233,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 55,
+    "runs_24h": 56,
     "runs_total": 119,
-    "last_run_at": "2026-10-18T23:40:02Z",
+    "last_run_at": "2026-10-19T00:20:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "full suite not green",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +251,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T00:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: full suite not green"
+   },
+   {
+    "at": "2026-10-19T00:18:10Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-19T00:15:19Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “Guardian custody namespace fixture must classify Ubuntu AppArmor…”: passed"
+   },
    {
     "at": "2026-10-19T00:13:08Z",
     "kind": "merge",
@@ -344,21 +360,6 @@
     "at": "2026-10-18T23:44:17Z",
     "kind": "merge",
     "text": "Merged “Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with…” into the main build"
-   },
-   {
-    "at": "2026-10-18T23:44:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-18T23:43:53Z",
-    "kind": "merge",
-    "text": "Merged “Model-vs-market edge evaluator after Polymarket weather fees…” into the main build"
-   },
-   {
-    "at": "2026-10-18T23:43:32Z",
-    "kind": "merge",
-    "text": "Merged “Forward label score: shadow-score research challenger and pre-day…” into the main build"
    }
   ]
  },
@@ -369,17 +370,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:14:49Z",
-   "heartbeat_at": "2026-10-19T00:15:00Z",
+   "status_at": "2026-10-19T00:19:49Z",
+   "heartbeat_at": "2026-10-19T00:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 338,
-    "markets": 3263,
+    "weather_events": 332,
+    "markets": 3197,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T00:10:05Z",
+    "last_scan_at": "2026-10-19T00:15:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T00:10:05Z",
+    "updated_at": "2026-10-19T00:15:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:14:17Z",
+    "updated_at": "2026-10-19T00:18:18Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +508,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-18T23:17:03Z",
+   "updated_at": "2026-10-19T00:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
