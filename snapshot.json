@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T13:55:02Z",
+ "generated_at": "2026-10-19T14:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "47 built in 24h"
    },
    {
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
-    "detail": ""
+    "active": false,
+    "detail": "current release c107c9c"
    },
    {
     "key": "shadow",
@@ -75,12 +75,12 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_daf9ad49",
+    "task": "FLEX candidate t_e895e8a4 00093f4a499a",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -125,15 +125,15 @@
    "commits_by_hour": [
     4,
     0,
-    10,
-    3,
+    11,
+    2,
     4,
     2,
     3,
     3,
     1,
-    5,
-    8,
+    6,
+    7,
     2,
     3,
     0,
@@ -153,12 +153,12 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 24,
-    "building": 0,
+    "queued": 22,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 272,
-    "parked": 152
+    "parked": 153
    }
   },
   "architect": {
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T13:55:02Z",
+    "last_check_at": "2026-10-19T14:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T13:55:03Z",
+    "kind": "release",
+    "text": "New Shadow release c107c9c went live (paper only)"
+   },
    {
     "at": "2026-10-19T13:54:07Z",
     "kind": "warn",
@@ -355,24 +360,19 @@
     "at": "2026-10-19T12:25:11Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
-   },
-   {
-    "at": "2026-10-19T12:22:19Z",
-    "kind": "build",
-    "text": "GLM 5.3 built “PAPER-09 Add the spec's PWS-lead exit trigger reasons” → sent to independent review"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": null,
-   "commissioned_at": "2026-10-18T13:40:02Z",
-   "day": null,
-   "state": "",
-   "status_at": null,
-   "heartbeat_at": null,
-   "real_orders_sent": null,
+   "release": "c107c9c",
+   "commissioned_at": "2026-10-19T13:50:02Z",
+   "day": "2026-10-19",
+   "state": "waiting for today's protected review before paper decisions start",
+   "status_at": "2026-10-19T13:59:54Z",
+   "heartbeat_at": "2026-10-19T14:00:02Z",
+   "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
@@ -385,10 +385,10 @@
    }
   },
   "decisions": {
-   "total": null,
-   "research_accept": null,
-   "reject": null,
-   "gated": null,
+   "total": 0,
+   "research_accept": 0,
+   "reject": 0,
+   "gated": 0,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T13:53:14Z",
+    "updated_at": "2026-10-19T13:59:16Z",
     "detail": "observations retained"
    },
    {
@@ -729,7 +729,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 14,
-     "open_tasks": 3
+     "open_tasks": 2
     },
     {
      "id": "PAPER-10",
