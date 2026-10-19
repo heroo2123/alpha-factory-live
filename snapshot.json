@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T05:55:02Z",
+ "generated_at": "2026-10-19T06:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "76 merged in 24h"
@@ -80,17 +80,17 @@
     "family": "MiniMax",
     "task_id": "t_54f1927a",
     "task": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_3e32c01d",
-    "task": "Fix 1 failure in : register blend_learning (0cc90fac) as a training-plane learner…",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -133,27 +133,29 @@
     2,
     4,
     0,
-    10,
-    3,
+    11,
+    2,
     4,
     2,
     3,
     3,
     1,
-    5,
-    8,
+    6,
+    7,
     2,
     3,
     0,
     3,
     0
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
     "queued": 19,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 0,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 268,
     "parked": 151
    }
@@ -212,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T05:54:01Z",
+    "last_check_at": "2026-10-19T05:59:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -220,20 +222,20 @@
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 1
+     "P2": 0
     },
     "codes": [
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T05:50:02Z",
+    "last_check_at": "2026-10-19T05:58:39Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 141,
-    "last_run_at": "2026-10-19T05:55:02Z",
+    "runs_total": 142,
+    "last_run_at": "2026-10-19T06:00:02Z",
     "last_ok": true,
-    "last_kind": "routine",
+    "last_kind": "flow shadow census churn",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T06:00:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow census churn"
+   },
+   {
+    "at": "2026-10-19T05:57:19Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “Fix 1 failure in : register blend_learning (0cc90fac) as a…”: passed"
+   },
    {
     "at": "2026-10-19T05:55:02Z",
     "kind": "heal",
@@ -272,11 +284,6 @@
     "at": "2026-10-19T05:10:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow builders idle"
-   },
-   {
-    "at": "2026-10-19T04:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow task repeat loop"
    },
    {
     "at": "2026-10-19T04:40:02Z",
@@ -352,11 +359,6 @@
     "at": "2026-10-19T03:48:05Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-19T03:47:05Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
    }
   ]
  },
@@ -367,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
    "state": "census service",
-   "status_at": "2026-10-19T05:55:00Z",
-   "heartbeat_at": "2026-10-19T05:55:01Z",
+   "status_at": "2026-10-19T06:00:00Z",
+   "heartbeat_at": "2026-10-19T06:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -407,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T05:54:20Z",
+    "updated_at": "2026-10-19T05:58:21Z",
     "detail": "observations retained"
    },
    {
