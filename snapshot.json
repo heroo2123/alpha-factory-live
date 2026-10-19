@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:15:08Z",
+ "generated_at": "2026-10-19T01:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,8 +17,8 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "53 built in 24h"
+    "active": false,
+    "detail": "52 built in 24h"
    },
    {
     "key": "review",
@@ -75,12 +75,12 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_51e45c22",
-    "task": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
-    "elapsed_min": 11
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 89,
    "commits_24h": 89,
-   "built_24h": 53,
-   "build_failed_24h": 12,
+   "built_24h": 52,
+   "build_failed_24h": 13,
    "reviews_passed_24h": 85,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
@@ -127,8 +127,8 @@
     4,
     7,
     2,
-    3,
-    5,
+    4,
+    4,
     0,
     3,
     2,
@@ -137,13 +137,13 @@
     3,
     3,
     2,
-    2,
-    10,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    3,
-    3,
     0,
     7,
     7
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T01:15:02Z",
+    "last_check_at": "2026-10-19T01:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 123,
+    "runs_total": 124,
     "last_run_at": "2026-10-19T00:50:02Z",
     "last_ok": true,
     "last_kind": "full suite not green",
@@ -250,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T01:19:05Z",
+    "kind": "warn",
+    "text": "MiniMax M3's build of “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-19T01:14:10Z",
     "kind": "review",
@@ -354,11 +359,6 @@
     "at": "2026-10-19T00:30:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-19T00:30:02Z",
-    "kind": "plan",
-    "text": "Architect (Kimi K3) planned 0 new tasks"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T01:14:54Z",
-   "heartbeat_at": "2026-10-19T01:15:08Z",
+   "status_at": "2026-10-19T01:19:54Z",
+   "heartbeat_at": "2026-10-19T01:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -379,7 +379,7 @@
     "weather_events": 325,
     "markets": 3120,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T01:12:18Z",
+    "last_scan_at": "2026-10-19T01:17:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T01:12:18Z",
+    "updated_at": "2026-10-19T01:17:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T01:14:38Z",
+    "updated_at": "2026-10-19T01:18:39Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +507,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T00:17:02Z",
+   "updated_at": "2026-10-19T01:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
