@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T02:05:01Z",
+ "generated_at": "2026-10-19T02:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "10 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "51 built in 24h"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,27 +70,27 @@
     "family": "MiniMax",
     "task_id": "t_ed582e3d",
     "task": "PAPER-05 Show capability-proof failures and unknowns in the daily/weekly audit station…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4.1 Flash",
-    "family": "DeepSeek",
-    "task_id": "t_3545d844",
-    "task": "New main SHA a52e899dd6d2 Alpha V11 FLEX code task t_93211659 claude_api",
-    "elapsed_min": 0
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_3545d844",
+    "task": "New main SHA a52e899dd6d2 Alpha V11 FLEX code task t_93211659 claude_api",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -117,22 +117,22 @@
   "tests_passing": 13326,
   "flow": {
    "merges_24h": 85,
-   "commits_24h": 85,
+   "commits_24h": 84,
    "built_24h": 51,
    "build_failed_24h": 15,
    "reviews_passed_24h": 85,
    "reviews_changes_24h": 3,
    "commits_by_hour": [
-    5,
-    5,
     4,
-    0,
     6,
-    2,
+    3,
+    1,
+    6,
+    1,
     2,
     3,
-    4,
-    4,
+    5,
+    3,
     2,
     3,
     3,
@@ -141,23 +141,23 @@
     1,
     5,
     1,
-    3,
     4,
+    3,
     0,
     6,
     8,
     2
    ],
    "merge_holds": [
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 19,
-    "building": 2,
-    "in_review": 0,
+    "queued": 20,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 263,
-    "parked": 147
+    "parked": 146
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T02:05:02Z",
+    "last_check_at": "2026-10-19T02:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,12 +228,12 @@
      "flow brain capture missed",
      "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T02:00:02Z",
+    "last_check_at": "2026-10-19T02:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 60,
-    "runs_total": 126,
+    "runs_24h": 59,
+    "runs_total": 127,
     "last_run_at": "2026-10-19T01:45:01Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -251,6 +251,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T02:09:55Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-19T02:07:11Z",
+    "kind": "build",
+    "text": "DeepSeek V4.1 Flash built “New main SHA a52e899dd6d2 Alpha V11 FLEX code task t_93211659…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T02:04:15Z",
     "kind": "review",
@@ -350,16 +360,6 @@
     "at": "2026-10-19T00:55:00Z",
     "kind": "merge",
     "text": "Merged “Brain forward supervisor scorer must use the live Shadow release…” into the main build"
-   },
-   {
-    "at": "2026-10-19T00:54:10Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T00:51:57Z",
-    "kind": "merge",
-    "text": "Merged “Guardian custody namespace fixture must classify Ubuntu AppArmor…” into the main build"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T02:04:57Z",
-   "heartbeat_at": "2026-10-19T02:05:01Z",
+   "status_at": "2026-10-19T02:09:58Z",
+   "heartbeat_at": "2026-10-19T02:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -380,7 +380,7 @@
     "weather_events": 319,
     "markets": 3054,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T02:01:26Z",
+    "last_scan_at": "2026-10-19T02:06:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T02:01:26Z",
+    "updated_at": "2026-10-19T02:06:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T02:04:55Z",
+    "updated_at": "2026-10-19T02:08:56Z",
     "detail": "observations retained"
    },
    {
