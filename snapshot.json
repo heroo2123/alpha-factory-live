@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:40:02Z",
+ "generated_at": "2026-10-19T01:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "17 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "51 built in 24h"
+    "detail": "52 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_9fbc33b3",
-    "task": "LEARNING-05 no-lookahead and train/holdout leakage tests pass",
-    "elapsed_min": 15
+    "task_id": "t_d61ef242",
+    "task": "Fix 1 failure in : re-pin writer inventory on current head",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,46 +118,46 @@
   "flow": {
    "merges_24h": 89,
    "commits_24h": 89,
-   "built_24h": 51,
+   "built_24h": 52,
    "build_failed_24h": 14,
-   "reviews_passed_24h": 85,
+   "reviews_passed_24h": 84,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     8,
-    4,
-    8,
+    5,
+    7,
     0,
     5,
     3,
     0,
     4,
-    3,
-    5,
-    1,
     4,
+    4,
+    2,
+    3,
     4,
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9,
-    5
+    4,
+    7,
+    3
    ],
    "merge_holds": [
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 22,
+    "queued": 20,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 261,
-    "parked": 147
+    "parked": 148
    }
   },
   "architect": {
@@ -214,28 +214,29 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T01:39:01Z",
+    "last_check_at": "2026-10-19T01:44:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 1,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 0
+     "P2": 1
     },
     "codes": [
-     "flow brain capture missed"
+     "flow brain capture missed",
+     "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T01:30:02Z",
+    "last_check_at": "2026-10-19T01:40:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 126,
-    "last_run_at": "2026-10-19T01:40:01Z",
+    "last_run_at": "2026-10-19T01:45:01Z",
     "last_ok": true,
-    "last_kind": "full suite not green",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +251,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T01:45:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-19T01:43:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-10-19T01:41:10Z",
+    "kind": "build",
+    "text": "MiniMax M3 built “LEARNING-05 no-lookahead and train/holdout leakage tests pass” → sent to independent review"
+   },
    {
     "at": "2026-10-19T01:40:01Z",
     "kind": "heal",
@@ -344,21 +360,6 @@
     "at": "2026-10-19T00:42:01Z",
     "kind": "merge",
     "text": "Merged “New evidence-only merge/NegRisk-conversion screen over normalized…” into the main build"
-   },
-   {
-    "at": "2026-10-19T00:37:24Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “Brain forward supervisor scorer must use the live Shadow release…”: passed"
-   },
-   {
-    "at": "2026-10-19T00:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
-   },
-   {
-    "at": "2026-10-19T00:32:10Z",
-    "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “Brain forward supervisor scorer must use the live Shadow release…” → sent to independent review"
    }
   ]
  },
@@ -369,17 +370,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T01:39:55Z",
-   "heartbeat_at": "2026-10-19T01:40:00Z",
+   "status_at": "2026-10-19T01:44:56Z",
+   "heartbeat_at": "2026-10-19T01:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 325,
-    "markets": 3120,
+    "weather_events": 321,
+    "markets": 3076,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T01:39:27Z",
+    "last_scan_at": "2026-10-19T01:44:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T01:39:27Z",
+    "updated_at": "2026-10-19T01:44:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T01:38:45Z",
+    "updated_at": "2026-10-19T01:44:47Z",
     "detail": "observations retained"
    },
    {
