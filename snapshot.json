@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T14:20:02Z",
+ "generated_at": "2026-10-19T14:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -25,13 +25,13 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "53 merged in 24h"
@@ -70,27 +70,27 @@
     "family": "DeepSeek",
     "task_id": "t_dfef0e61",
     "task": "PAPER-08 Reconcile SELL exit fills in the paper risk observation",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
     "role": "build",
     "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_daf9ad49",
-    "task": "FLEX candidate t_e895e8a4 00093f4a499a",
-    "elapsed_min": 22
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_f13ccb14",
+    "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ad80ea86",
+    "task": "FLEX candidate t_daf9ad49 292fc8cfdf42",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -124,18 +124,18 @@
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     2,
-    7,
-    6,
-    1,
-    4,
+    8,
+    5,
+    2,
+    3,
     2,
     4,
     2,
     0,
-    7,
-    7,
-    2,
-    2,
+    8,
+    6,
+    3,
+    1,
     3,
     0,
     1,
@@ -149,15 +149,16 @@
     1
    ],
    "merge_holds": [
-    "protected requires two distinct families"
+    "protected requires two distinct families",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 24,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 1,
+    "awaiting_merge": 2,
     "merged": 272,
-    "parked": 152
+    "parked": 151
    }
   },
   "architect": {
@@ -214,20 +215,22 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T14:20:02Z",
+    "last_check_at": "2026-10-19T14:24:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 1,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 1
+     "P2": 2
     },
     "codes": [
+     "flow shadow census churn",
+     "flow code drift frozen copy",
      "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T14:10:02Z",
+    "last_check_at": "2026-10-19T14:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +253,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T14:22:23Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Recheck worker identity before accepting a guardian lease”: passed"
+   },
+   {
+    "at": "2026-10-19T14:21:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “FLEX candidate t_e895e8a4 00093f4a499a” → sent to independent review"
+   },
    {
     "at": "2026-10-19T14:18:15Z",
     "kind": "build",
@@ -349,16 +362,6 @@
     "at": "2026-10-19T12:30:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow worker exception repeat"
-   },
-   {
-    "at": "2026-10-19T12:30:02Z",
-    "kind": "plan",
-    "text": "Architect (Kimi K3) planned 0 new tasks"
-   },
-   {
-    "at": "2026-10-19T12:27:19Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Add the spec's PWS-lead exit trigger reasons”: passed"
    }
   ]
  },
@@ -379,7 +382,7 @@
     "weather_events": 380,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T14:18:38Z",
+    "last_scan_at": "2026-10-19T14:24:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T14:18:38Z",
+    "updated_at": "2026-10-19T14:24:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T14:19:07Z",
+    "updated_at": "2026-10-19T14:23:09Z",
     "detail": "observations retained"
    },
    {
@@ -728,7 +731,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 14,
-     "open_tasks": 2
+     "open_tasks": 3
     },
     {
      "id": "PAPER-10",
