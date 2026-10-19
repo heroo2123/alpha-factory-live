@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T14:35:02Z",
+ "generated_at": "2026-10-19T14:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -34,15 +34,15 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "52 merged in 24h"
+    "detail": "51 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_dfef0e61",
     "task": "PAPER-08 Reconcile SELL exit fills in the paper risk observation",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_f13ccb14",
     "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Reviewer 1",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-19T08:34:24Z",
    "last_passed": 13576,
@@ -116,21 +116,21 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 52,
-   "commits_24h": 52,
+   "merges_24h": 51,
+   "commits_24h": 51,
    "built_24h": 46,
    "build_failed_24h": 27,
    "reviews_passed_24h": 70,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
-    1,
-    9,
+    0,
+    10,
+    3,
+    2,
     4,
     2,
-    3,
-    3,
-    3,
-    2,
+    4,
+    1,
     0,
     9,
     5,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T14:34:01Z",
+    "last_check_at": "2026-10-19T14:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -382,7 +382,7 @@
     "weather_events": 380,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T14:30:33Z",
+    "last_scan_at": "2026-10-19T14:36:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-19T13:37:03Z",
+    "updated_at": "2026-10-19T14:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T14:30:33Z",
+    "updated_at": "2026-10-19T14:36:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T14:33:12Z",
+    "updated_at": "2026-10-19T14:39:04Z",
     "detail": "observations retained"
    },
    {
