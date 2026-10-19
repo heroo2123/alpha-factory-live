@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T11:30:02Z",
+ "generated_at": "2026-10-19T11:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "6 ready to build"
@@ -17,13 +17,13 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "49 built in 24h"
+    "active": true,
+    "detail": "50 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "60 merged in 24h"
+    "detail": "59 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_8b133f43",
+    "task": "Render-only hardened systemd units for distinct-principal guardian broker/client",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -116,16 +116,16 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 60,
-   "commits_24h": 60,
-   "built_24h": 49,
+   "merges_24h": 59,
+   "commits_24h": 59,
+   "built_24h": 50,
    "build_failed_24h": 22,
-   "reviews_passed_24h": 78,
+   "reviews_passed_24h": 77,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    2,
-    3,
+    1,
     4,
+    3,
     1,
     9,
     4,
@@ -135,10 +135,10 @@
     3,
     2,
     0,
-    8,
-    6,
-    3,
-    1,
+    9,
+    5,
+    4,
+    0,
     3,
     0,
     1,
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 17,
+    "queued": 16,
     "building": 1,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 271,
     "parked": 150
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T11:30:02Z",
+    "last_check_at": "2026-10-19T11:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,15 +227,15 @@
      "flow worker exception repeat",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T11:20:02Z",
+    "last_check_at": "2026-10-19T11:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
-    "runs_total": 149,
-    "last_run_at": "2026-10-19T11:00:02Z",
+    "runs_24h": 58,
+    "runs_total": 150,
+    "last_run_at": "2026-10-19T11:35:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow worker exception repeat",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T11:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow worker exception repeat"
+   },
+   {
+    "at": "2026-10-19T11:30:18Z",
+    "kind": "build",
+    "text": "DeepSeek V4.1 Flash built “Station-bias + pooled-spread research learner (new module, -10%…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T11:26:14Z",
     "kind": "build",
@@ -349,16 +359,6 @@
     "at": "2026-10-19T08:34:24Z",
     "kind": "qa",
     "text": "Full test suite finished: 13576 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-19T07:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: full suite not green"
-   },
-   {
-    "at": "2026-10-19T07:08:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: full suite not green"
    }
   ]
  },
@@ -379,7 +379,7 @@
     "weather_events": 372,
     "markets": 3621,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T11:28:46Z",
+    "last_scan_at": "2026-10-19T11:34:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T11:28:46Z",
+    "updated_at": "2026-10-19T11:34:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T11:28:19Z",
+    "updated_at": "2026-10-19T11:34:22Z",
     "detail": "observations retained"
    },
    {
