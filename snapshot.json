@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T21:45:02Z",
+ "generated_at": "2026-10-19T21:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "8 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "50 built in 24h"
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_51e45c22",
     "task": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_8b133f43",
+    "task": "Render-only hardened systemd units for distinct-principal guardian broker/client",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
@@ -124,8 +124,8 @@
    "reviews_changes_24h": 14,
    "commits_by_hour": [
     1,
-    4,
-    7,
+    5,
+    6,
     3,
     4,
     0,
@@ -150,8 +150,8 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 21,
-    "building": 1,
+    "queued": 20,
+    "building": 2,
     "in_review": 1,
     "awaiting_merge": 0,
     "merged": 293,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T21:45:02Z",
+    "last_check_at": "2026-10-19T21:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T21:44:58Z",
-   "heartbeat_at": "2026-10-19T21:45:02Z",
+   "status_at": "2026-10-19T21:49:58Z",
+   "heartbeat_at": "2026-10-19T21:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,7 +375,7 @@
     "weather_events": 349,
     "markets": 3386,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T21:42:31Z",
+    "last_scan_at": "2026-10-19T21:47:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T21:42:31Z",
+    "updated_at": "2026-10-19T21:47:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T21:43:29Z",
+    "updated_at": "2026-10-19T21:49:31Z",
     "detail": "observations retained"
    },
    {
