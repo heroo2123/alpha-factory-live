@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T20:20:03Z",
+ "generated_at": "2026-10-19T20:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "44 merged in 24h"
+    "detail": "45 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_86509a0d",
     "task": "FLEX candidate t_ad80ea86 fe8b1590494b",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_8843a19c",
     "task": "Hash-bound adversarial verification runner for cancel-only guardian",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 13617,
   "flow": {
-   "merges_24h": 44,
-   "commits_24h": 44,
+   "merges_24h": 45,
+   "commits_24h": 45,
    "built_24h": 46,
    "build_failed_24h": 27,
    "reviews_passed_24h": 59,
@@ -126,10 +126,10 @@
     4,
     2,
     0,
-    7,
-    7,
-    2,
-    2,
+    8,
+    6,
+    3,
+    1,
     3,
     0,
     1,
@@ -146,16 +146,16 @@
     0,
     0,
     2,
-    11
+    12
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 21,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 1,
-    "merged": 285,
-    "parked": 161
+    "awaiting_merge": 0,
+    "merged": 286,
+    "parked": 160
    }
   },
   "architect": {
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T20:20:52Z",
+    "title": "LIVE-15 Retain bounded guardian check receipt provenance",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-19T20:20:00Z",
     "title": "PAPER-08 Make candidate ranking independent of ambient Decimal precision",
@@ -199,11 +204,6 @@
     "at": "2026-10-19T20:05:56Z",
     "title": "PAPER-08 Preserve decimal distinctions when ranking capital competitors",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T20:05:23Z",
-    "title": "Correct Owner read-only authentication with pinned SDK evidence and policy updates",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,22 +212,21 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T20:20:02Z",
+    "last_check_at": "2026-10-19T20:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 0,
      "P2": 2
     },
     "codes": [
      "flow reviewed work quarantined",
-     "flow shadow frozen authority drift",
      "flow acceptance stalled"
     ],
-    "last_check_at": "2026-10-19T20:10:03Z",
+    "last_check_at": "2026-10-19T20:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +248,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T20:20:52Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Retain bounded guardian check receipt provenance” into the main build"
+   },
    {
     "at": "2026-10-19T20:20:00Z",
     "kind": "merge",
@@ -353,11 +357,6 @@
     "at": "2026-10-19T19:54:56Z",
     "kind": "qa",
     "text": "Full test suite finished: 13617 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-19T19:54:17Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_ad80ea86 fe8b1590494b”: changes required"
    }
   ]
  },
@@ -368,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T20:19:53Z",
-   "heartbeat_at": "2026-10-19T20:20:03Z",
+   "status_at": "2026-10-19T20:24:55Z",
+   "heartbeat_at": "2026-10-19T20:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -378,7 +377,7 @@
     "weather_events": 354,
     "markets": 3441,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T20:16:15Z",
+    "last_scan_at": "2026-10-19T20:22:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T20:16:15Z",
+    "updated_at": "2026-10-19T20:22:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T20:18:56Z",
+    "updated_at": "2026-10-19T20:24:59Z",
     "detail": "observations retained"
    },
    {
@@ -1005,8 +1004,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 6,
-     "open_tasks": 4
+     "merged_tasks": 7,
+     "open_tasks": 3
     },
     {
      "id": "LIVE-16",
