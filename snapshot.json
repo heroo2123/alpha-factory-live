@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T14:00:02Z",
+ "generated_at": "2026-10-19T14:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "47 built in 24h"
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "55 merged in 24h"
+    "detail": "54 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_d167f477",
+    "task": "LIVE-15 Recheck worker identity before accepting a guardian lease",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_daf9ad49",
     "task": "FLEX candidate t_e895e8a4 00093f4a499a",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
@@ -116,35 +116,35 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 55,
-   "commits_24h": 55,
+   "merges_24h": 54,
+   "commits_24h": 54,
    "built_24h": 47,
    "build_failed_24h": 27,
    "reviews_passed_24h": 70,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
+    3,
+    0,
+    12,
+    1,
+    5,
+    1,
+    3,
     4,
     0,
-    11,
-    2,
-    4,
-    2,
-    3,
-    3,
-    1,
     6,
-    7,
+    8,
     2,
-    3,
+    2,
     0,
     3,
-    0,
     1,
     0,
     0,
     0,
     0,
-    2,
+    1,
+    1,
     0,
     1
    ],
@@ -153,8 +153,8 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 22,
-    "building": 1,
+    "queued": 21,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 272,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T14:00:03Z",
+    "last_check_at": "2026-10-19T14:04:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
     "codes": [
      "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T13:50:01Z",
+    "last_check_at": "2026-10-19T14:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T13:59:54Z",
-   "heartbeat_at": "2026-10-19T14:00:02Z",
+   "status_at": "2026-10-19T14:04:54Z",
+   "heartbeat_at": "2026-10-19T14:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -380,7 +380,7 @@
     "weather_events": 381,
     "markets": 3734,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T13:54:19Z",
+    "last_scan_at": "2026-10-19T14:00:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T13:54:19Z",
+    "updated_at": "2026-10-19T14:00:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T13:59:16Z",
+    "updated_at": "2026-10-19T14:03:17Z",
     "detail": "observations retained"
    },
    {
