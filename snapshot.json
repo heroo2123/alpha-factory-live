@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:00:02Z",
+ "generated_at": "2026-10-19T01:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,16 +25,16 @@
     "name": "Independent review",
     "count": 38,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "88 merged in 24h"
+    "detail": "89 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,22 +65,22 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4.1 Flash",
-    "family": "DeepSeek",
-    "task_id": "t_a0935754",
-    "task": "Perpetual brain preparer must follow the commissioned Shadow release (8 station forward…",
-    "elapsed_min": 0
-   },
-   {
-    "slot": "Builder 2",
-    "role": "build",
     "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Builder 2",
+    "role": "build",
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_51e45c22",
+    "task": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_e7972d78",
-    "task": "a build task",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -116,47 +116,47 @@
   },
   "tests_passing": 13326,
   "flow": {
-   "merges_24h": 88,
-   "commits_24h": 88,
+   "merges_24h": 89,
+   "commits_24h": 89,
    "built_24h": 53,
-   "build_failed_24h": 11,
-   "reviews_passed_24h": 86,
+   "build_failed_24h": 12,
+   "reviews_passed_24h": 85,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    5,
     6,
-    4,
     5,
-    0,
     5,
-    3,
-    1,
-    4,
-    4,
-    4,
-    2,
-    2,
     4,
     0,
-    11,
+    6,
     2,
+    2,
+    3,
+    4,
     4,
     2,
     3,
     3,
+    0,
+    12,
     1,
+    5,
+    1,
+    3,
+    4,
+    0,
     6,
-    7
+    8
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff"
+    "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 30,
     "building": 1,
     "in_review": 38,
-    "awaiting_merge": 3,
-    "merged": 260,
+    "awaiting_merge": 2,
+    "merged": 261,
     "parked": 100
    }
   },
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:59:01Z",
+    "last_check_at": "2026-10-19T01:04:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,7 +227,7 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T00:50:02Z",
+    "last_check_at": "2026-10-19T01:00:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T01:04:13Z",
+    "kind": "warn",
+    "text": "DeepSeek V4.1 Flash's build of “Perpetual brain preparer must follow the commissioned Shadow release…” failed its tests; it will be retried"
+   },
+   {
+    "at": "2026-10-19T01:03:10Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-19T00:59:17Z",
     "kind": "review",
@@ -349,16 +359,6 @@
     "at": "2026-10-19T00:22:11Z",
     "kind": "merge",
     "text": "Merged “LIVE-15 Stop a refused cancellation trigger from blocking later…” into the main build"
-   },
-   {
-    "at": "2026-10-19T00:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: full suite not green"
-   },
-   {
-    "at": "2026-10-19T00:20:02Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 0 new tasks"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:59:52Z",
-   "heartbeat_at": "2026-10-19T01:00:03Z",
+   "status_at": "2026-10-19T01:04:53Z",
+   "heartbeat_at": "2026-10-19T01:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -379,7 +379,7 @@
     "weather_events": 327,
     "markets": 3142,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T00:55:16Z",
+    "last_scan_at": "2026-10-19T01:00:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T00:55:16Z",
+    "updated_at": "2026-10-19T01:00:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:58:32Z",
+    "updated_at": "2026-10-19T01:04:34Z",
     "detail": "observations retained"
    },
    {
