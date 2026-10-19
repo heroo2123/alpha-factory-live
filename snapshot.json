@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T12:15:02Z",
+ "generated_at": "2026-10-19T12:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Zhipu",
     "task_id": "t_679e4055",
     "task": "PAPER-09 Add the spec's PWS-lead exit trigger reasons",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Builder 2",
@@ -123,16 +123,16 @@
    "reviews_passed_24h": 74,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7,
     7,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T12:15:02Z",
+    "last_check_at": "2026-10-19T12:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +231,7 @@
    },
    "operator": {
     "runs_24h": 58,
-    "runs_total": 151,
+    "runs_total": 152,
     "last_run_at": "2026-10-19T12:00:02Z",
     "last_ok": true,
     "last_kind": "routine",
@@ -375,10 +375,10 @@
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 372,
-    "markets": 3621,
+    "weather_events": 373,
+    "markets": 3646,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T12:14:15Z",
+    "last_scan_at": "2026-10-19T12:19:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T12:14:15Z",
+    "updated_at": "2026-10-19T12:19:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T12:14:36Z",
+    "updated_at": "2026-10-19T12:18:37Z",
     "detail": "observations retained"
    },
    {
@@ -506,7 +506,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T11:17:02Z",
+   "updated_at": "2026-10-19T12:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
