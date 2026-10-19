@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T18:50:02Z",
+ "generated_at": "2026-10-19T18:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "48 built in 24h"
    },
    {
@@ -34,12 +34,12 @@
     "count": 5,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "37 merged in 24h"
+    "detail": "36 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 25,
+    "count": 30,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_d23c390a",
+    "task": "PAPER-09 Bound consecutive PWS QC retries so one event cannot starve its peers",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 25,
+   "progress_pct": 30,
    "last_finished_at": "2026-10-19T15:59:46Z",
    "last_passed": 13602,
    "last_failed": 0,
@@ -116,7 +116,7 @@
   },
   "tests_passing": 13602,
   "flow": {
-   "merges_24h": 37,
+   "merges_24h": 36,
    "commits_24h": 36,
    "built_24h": 48,
    "build_failed_24h": 26,
@@ -124,13 +124,13 @@
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     2,
-    2,
-    4,
+    3,
+    3,
     1,
     5,
-    6,
+    8,
+    2,
     3,
-    4,
     0,
     3,
     0,
@@ -152,8 +152,8 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 24,
-    "building": 0,
+    "queued": 25,
+    "building": 1,
     "in_review": 3,
     "awaiting_merge": 5,
     "merged": 274,
@@ -162,7 +162,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T17:50:10Z",
+   "last_run_at": "2026-10-19T18:50:08Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T18:50:02Z",
+    "last_check_at": "2026-10-19T18:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
      "P2": 0
     },
     "codes": [],
-    "last_check_at": "2026-10-19T18:40:02Z",
+    "last_check_at": "2026-10-19T18:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -244,10 +244,14 @@
    "Codex",
    "DeepSeek",
    "GLM",
-   "Kimi",
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T18:50:08Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-19T18:42:02Z",
     "kind": "warn",
@@ -352,11 +356,6 @@
     "at": "2026-10-19T17:54:19Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “LIVE-15 Retry uncertain guardian checks with the same request identity”: passed"
-   },
-   {
-    "at": "2026-10-19T17:52:20Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Capture rejected-trade counterfactual markouts”: changes required"
    }
   ]
  },
@@ -367,17 +366,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T18:49:51Z",
-   "heartbeat_at": "2026-10-19T18:50:02Z",
+   "status_at": "2026-10-19T18:54:51Z",
+   "heartbeat_at": "2026-10-19T18:55:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 367,
-    "markets": 3582,
+    "weather_events": 363,
+    "markets": 3538,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T18:44:13Z",
+    "last_scan_at": "2026-10-19T18:50:23Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T18:44:13Z",
+    "updated_at": "2026-10-19T18:50:23Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T18:48:22Z",
+    "updated_at": "2026-10-19T18:54:24Z",
     "detail": "observations retained"
    },
    {
@@ -717,7 +716,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 8,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "PAPER-09",
@@ -726,7 +725,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 15,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "PAPER-10",
