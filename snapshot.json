@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T04:15:02Z",
+ "generated_at": "2026-10-19T04:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "7 ready to build"
@@ -18,12 +18,12 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "52 built in 24h"
+    "detail": "51 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "79 merged in 24h"
+    "detail": "78 merged in 24h"
    },
    {
     "key": "qa",
@@ -88,14 +88,14 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_c9fcf152",
+    "task_id": "t_4063e628",
     "task": "a build task",
-    "elapsed_min": 4
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,31 +116,31 @@
   },
   "tests_passing": 13520,
   "flow": {
-   "merges_24h": 79,
+   "merges_24h": 78,
    "commits_24h": 78,
-   "built_24h": 52,
+   "built_24h": 51,
    "build_failed_24h": 21,
-   "reviews_passed_24h": 79,
+   "reviews_passed_24h": 78,
    "reviews_changes_24h": 5,
    "commits_by_hour": [
     2,
-    2,
-    6,
+    4,
+    4,
     0,
     3,
     2,
     6,
     2,
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7,
     7,
@@ -148,16 +148,14 @@
     2,
     3
    ],
-   "merge_holds": [
-    "protected code: second review asked for changes"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 19,
+    "queued": 20,
     "building": 0,
-    "in_review": 2,
-    "awaiting_merge": 1,
+    "in_review": 1,
+    "awaiting_merge": 0,
     "merged": 268,
-    "parked": 150
+    "parked": 151
    }
   },
   "architect": {
@@ -214,7 +212,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T04:15:02Z",
+    "last_check_at": "2026-10-19T04:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +228,7 @@
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 133,
+    "runs_total": 134,
     "last_run_at": "2026-10-19T03:55:02Z",
     "last_ok": true,
     "last_kind": "flow brain capture missed",
@@ -248,6 +246,26 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T04:18:12Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
+   },
+   {
+    "at": "2026-10-19T04:18:10Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-19T04:16:15Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-19T04:15:15Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
+   },
    {
     "at": "2026-10-19T04:13:13Z",
     "kind": "review",
@@ -337,26 +355,6 @@
     "at": "2026-10-19T03:08:18Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “New main SHA 57d9d632489f Alpha V11 FLEX code task t_4c3f28e0…”: passed"
-   },
-   {
-    "at": "2026-10-19T03:05:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
-   },
-   {
-    "at": "2026-10-19T03:03:11Z",
-    "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “New main SHA 57d9d632489f Alpha V11 FLEX code task t_4c3f28e0…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T03:02:07Z",
-    "kind": "warn",
-    "text": "MiniMax M3's build of “InventoryTransform observer: strict nested artifact schema (close…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T02:54:13Z",
-    "kind": "warn",
-    "text": "GLM 5.2 reviewed “Fix 1 failure in : re-pin writer inventory on current head”: changes required"
    }
   ]
  },
@@ -366,18 +364,18 @@
    "release": "70c90ca",
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
-   "state": "census service",
-   "status_at": "2026-10-19T04:15:00Z",
-   "heartbeat_at": "2026-10-19T04:15:02Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-19T04:17:50Z",
+   "heartbeat_at": "2026-10-19T04:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
-   "days_with_market_data": 2,
+   "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 316,
-    "markets": 3007,
+    "weather_events": 317,
+    "markets": 3013,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T04:09:55Z",
+    "last_scan_at": "2026-10-19T04:15:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T04:09:55Z",
+    "updated_at": "2026-10-19T04:15:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T04:13:44Z",
+    "updated_at": "2026-10-19T04:19:46Z",
     "detail": "observations retained"
    },
    {
@@ -505,7 +503,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T03:17:03Z",
+   "updated_at": "2026-10-19T04:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
