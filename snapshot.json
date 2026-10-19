@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T12:25:02Z",
+ "generated_at": "2026-10-19T12:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 3,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "58 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "Zhipu",
     "task_id": "t_f13ccb14",
     "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -100,7 +100,7 @@
     "family": "DeepSeek",
     "task_id": "t_ab128c9c",
     "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
-    "elapsed_min": 0
+    "elapsed_min": 5
    }
   ],
   "qa": {
@@ -118,20 +118,20 @@
   "flow": {
    "merges_24h": 58,
    "commits_24h": 58,
-   "built_24h": 50,
+   "built_24h": 49,
    "build_failed_24h": 23,
    "reviews_passed_24h": 74,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     3,
-    3,
-    2,
-    8,
-    5,
-    2,
-    3,
-    2,
     4,
+    1,
+    9,
+    4,
+    2,
+    3,
+    3,
+    3,
     2,
     0,
     8,
@@ -148,12 +148,14 @@
     2,
     0
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
     "queued": 20,
     "building": 1,
-    "in_review": 4,
-    "awaiting_merge": 0,
+    "in_review": 3,
+    "awaiting_merge": 1,
     "merged": 271,
     "parked": 148
    }
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T12:24:01Z",
+    "last_check_at": "2026-10-19T12:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
+    "runs_24h": 59,
     "runs_total": 152,
-    "last_run_at": "2026-10-19T12:00:02Z",
+    "last_run_at": "2026-10-19T12:30:02Z",
     "last_ok": true,
-    "last_kind": "routine",
+    "last_kind": "flow worker exception repeat",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +251,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T12:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow worker exception repeat"
+   },
+   {
+    "at": "2026-10-19T12:27:19Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Add the spec's PWS-lead exit trigger reasons”: passed"
+   },
+   {
+    "at": "2026-10-19T12:25:11Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
+   },
    {
     "at": "2026-10-19T12:22:19Z",
     "kind": "build",
@@ -343,21 +360,6 @@
     "at": "2026-10-19T10:58:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-19T10:56:26Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “New main SHA dbc0e40b5d51 Alpha V11 FLEX code task t_82efc8e2…”: passed"
-   },
-   {
-    "at": "2026-10-19T10:56:12Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “Wire the governed learning worker to forward captures and labels (no…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T10:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow worker exception repeat"
    }
   ]
  },
@@ -378,7 +380,7 @@
     "weather_events": 373,
     "markets": 3646,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T12:19:45Z",
+    "last_scan_at": "2026-10-19T12:25:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T12:19:45Z",
+    "updated_at": "2026-10-19T12:25:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T12:24:40Z",
+    "updated_at": "2026-10-19T12:28:41Z",
     "detail": "observations retained"
    },
    {
