@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T19:15:01Z",
+ "generated_at": "2026-10-19T19:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 28,
+    "count": 27,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "48 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 54,
+    "count": 62,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_d23c390a",
-    "task": "PAPER-09 Bound consecutive PWS QC retries so one event cannot starve its peers",
-    "elapsed_min": 20
+    "task_id": "t_0615ec4b",
+    "task": "CODE-01 Reject public physical inputs with synthetic ancestry",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,22 +80,22 @@
     "family": "DeepSeek",
     "task_id": "t_5a0771e1",
     "task": "PAPER-09 Deduplicate repeated PWS comparisons by prediction and label",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_8ce2b04a",
+    "task": "Refresh stale same-day protected Shadow proofs for the current release",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 54,
+   "progress_pct": 62,
    "last_finished_at": "2026-10-19T15:59:46Z",
    "last_passed": 13602,
    "last_failed": 0,
@@ -118,14 +118,14 @@
   "flow": {
    "merges_24h": 35,
    "commits_24h": 35,
-   "built_24h": 48,
+   "built_24h": 49,
    "build_failed_24h": 26,
-   "reviews_passed_24h": 62,
+   "reviews_passed_24h": 61,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     2,
-    3,
-    3,
+    4,
+    2,
     0,
     7,
     7,
@@ -152,9 +152,9 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 28,
+    "queued": 27,
     "building": 2,
-    "in_review": 2,
+    "in_review": 3,
     "awaiting_merge": 5,
     "merged": 274,
     "parked": 157
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T19:15:02Z",
+    "state": "p1",
+    "active": 1,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-19T19:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T19:19:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-19T19:17:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “PAPER-09 Bound consecutive PWS QC retries so one event cannot starve…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T19:15:02Z",
     "kind": "heal",
@@ -350,16 +360,6 @@
     "at": "2026-10-19T18:19:17Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-08 Preserve decimal distinctions when ranking capital…”: passed"
-   },
-   {
-    "at": "2026-10-19T18:17:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-19T18:14:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-08 Preserve decimal distinctions when ranking capital…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T19:14:56Z",
-   "heartbeat_at": "2026-10-19T19:15:01Z",
+   "status_at": "2026-10-19T19:19:57Z",
+   "heartbeat_at": "2026-10-19T19:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -380,7 +380,7 @@
     "weather_events": 358,
     "markets": 3483,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T19:09:26Z",
+    "last_scan_at": "2026-10-19T19:15:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T19:09:26Z",
+    "updated_at": "2026-10-19T19:15:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T19:14:31Z",
+    "updated_at": "2026-10-19T19:18:32Z",
     "detail": "observations retained"
    },
    {
@@ -508,7 +508,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T18:17:02Z",
+   "updated_at": "2026-10-19T19:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
