@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T13:15:02Z",
+ "generated_at": "2026-10-19T13:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "56 merged in 24h"
+    "detail": "55 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Zhipu",
     "task_id": "t_8843a19c",
     "task": "Hash-bound adversarial verification runner for cancel-only guardian",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -116,22 +116,22 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 56,
-   "commits_24h": 56,
+   "merges_24h": 55,
+   "commits_24h": 55,
    "built_24h": 50,
    "build_failed_24h": 23,
    "reviews_passed_24h": 73,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
+    3,
+    2,
+    7,
+    6,
+    1,
     4,
     2,
-    2,
-    10,
-    2,
     4,
     2,
-    3,
-    3,
     0,
     7,
     7,
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T13:15:02Z",
+    "last_check_at": "2026-10-19T13:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -380,7 +380,7 @@
     "weather_events": 382,
     "markets": 3745,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T13:12:58Z",
+    "last_scan_at": "2026-10-19T13:18:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T13:12:58Z",
+    "updated_at": "2026-10-19T13:18:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T13:14:58Z",
+    "updated_at": "2026-10-19T13:18:59Z",
     "detail": "observations retained"
    },
    {
@@ -501,14 +501,14 @@
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
    "labelled_city_days": 21,
-   "waiting_city_days": 11,
+   "waiting_city_days": 22,
    "labelled_days": 6,
    "captured_days_waiting": 3,
    "stations": 10,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T12:17:03Z",
+   "updated_at": "2026-10-19T13:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
