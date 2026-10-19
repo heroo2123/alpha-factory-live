@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T12:00:02Z",
+ "generated_at": "2026-10-19T12:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "50 built in 24h"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,17 +70,17 @@
     "family": "Zhipu",
     "task_id": "t_679e4055",
     "task": "PAPER-09 Add the spec's PWS-lead exit trigger reasons",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_dfef0e61",
-    "task": "PAPER-08 Reconcile SELL exit fills in the paper risk observation",
-    "elapsed_min": 17
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_ab128c9c",
     "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 2",
@@ -124,35 +124,35 @@
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
-    2,
+    3,
+    3,
+    0,
+    12,
+    1,
+    5,
+    1,
+    3,
     4,
     0,
-    11,
-    2,
-    4,
-    2,
-    3,
-    3,
-    1,
     6,
-    7,
+    8,
     2,
-    3,
+    2,
     0,
     3,
-    0,
     1,
     0,
     0,
     0,
     0,
-    2
+    1,
+    1
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 20,
-    "building": 2,
-    "in_review": 2,
+    "building": 1,
+    "in_review": 3,
     "awaiting_merge": 0,
     "merged": 271,
     "parked": 149
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T12:00:02Z",
+    "last_check_at": "2026-10-19T12:04:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,7 +226,7 @@
      "flow worker exception repeat",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T11:50:02Z",
+    "last_check_at": "2026-10-19T12:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T12:04:12Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “PAPER-08 Reconcile SELL exit fills in the paper risk observation” → sent to independent review"
+   },
    {
     "at": "2026-10-19T12:00:02Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-19T10:30:10Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro's build of “Station-bias + pooled-spread research learner (new module, -10%…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T10:21:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    }
   ]
  },
@@ -378,7 +378,7 @@
     "weather_events": 372,
     "markets": 3621,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T11:57:13Z",
+    "last_scan_at": "2026-10-19T12:03:04Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T11:57:13Z",
+    "updated_at": "2026-10-19T12:03:04Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T11:58:30Z",
+    "updated_at": "2026-10-19T12:04:32Z",
     "detail": "observations retained"
    },
    {
