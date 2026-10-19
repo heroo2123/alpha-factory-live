@@ -1,31 +1,31 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T16:55:01Z",
+ "generated_at": "2026-10-19T17:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 28,
+    "count": 27,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "46 built in 24h"
+    "active": true,
+    "detail": "47 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "41 merged in 24h"
+    "detail": "40 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_ca45b352",
+    "task": "PAPER-09 Verify the complete retained PWS score population",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_03a5d618",
+    "task": "FLEX candidate t_f13ccb14 76fd3fe4d47d",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
@@ -116,21 +116,21 @@
   },
   "tests_passing": 13602,
   "flow": {
-   "merges_24h": 41,
-   "commits_24h": 41,
-   "built_24h": 46,
+   "merges_24h": 40,
+   "commits_24h": 40,
+   "built_24h": 47,
    "build_failed_24h": 28,
-   "reviews_passed_24h": 63,
+   "reviews_passed_24h": 62,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
-    3,
+    2,
     4,
     2,
     3,
     3,
     1,
-    5,
-    8,
+    6,
+    7,
     2,
     3,
     0,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 28,
+    "queued": 27,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 272,
     "parked": 156
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T16:54:02Z",
+    "last_check_at": "2026-10-19T17:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +231,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 56,
     "runs_total": 159,
     "last_run_at": "2026-10-19T16:45:02Z",
     "last_ok": true,
@@ -250,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T16:55:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “PAPER-09 Record the market-book repricing lead in PWS receipt scoring” → sent to independent review"
+   },
    {
     "at": "2026-10-19T16:45:02Z",
     "kind": "heal",
@@ -354,11 +359,6 @@
     "at": "2026-10-19T14:46:17Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “PAPER-08 Reconcile SELL exit fills in the paper risk observation” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T14:31:15Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_daf9ad49 292fc8cfdf42”: changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T16:55:00Z",
-   "heartbeat_at": "2026-10-19T16:55:01Z",
+   "status_at": "2026-10-19T16:59:57Z",
+   "heartbeat_at": "2026-10-19T17:00:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -379,7 +379,7 @@
     "weather_events": 376,
     "markets": 3679,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T16:53:42Z",
+    "last_scan_at": "2026-10-19T16:59:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T16:53:42Z",
+    "updated_at": "2026-10-19T16:59:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T16:53:40Z",
+    "updated_at": "2026-10-19T16:59:42Z",
     "detail": "observations retained"
    },
    {
