@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T00:25:02Z",
+ "generated_at": "2026-10-19T00:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -128,27 +128,28 @@
     5,
     6,
     2,
-    4,
-    4,
+    5,
+    3,
     0,
     3,
     3,
     5,
     2,
     3,
-    3,
-    2,
-    8,
-    5,
-    2,
-    3,
-    2,
     4,
+    1,
+    9,
+    4,
+    2,
+    3,
+    3,
+    3,
     2,
     0,
     8
    ],
    "merge_holds": [
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
@@ -214,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:24:02Z",
+    "last_check_at": "2026-10-19T00:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +233,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 56,
-    "runs_total": 120,
-    "last_run_at": "2026-10-19T00:20:02Z",
+    "runs_24h": 57,
+    "runs_total": 121,
+    "last_run_at": "2026-10-19T00:30:02Z",
     "last_ok": true,
-    "last_kind": "full suite not green",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +251,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T00:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
    {
     "at": "2026-10-19T00:22:11Z",
     "kind": "merge",
@@ -354,11 +360,6 @@
     "at": "2026-10-18T23:48:20Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-18T23:48:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Guardian custody namespace fixture must classify Ubuntu AppArmor…” → sent to independent review"
    }
   ]
  },
@@ -369,17 +370,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:24:49Z",
-   "heartbeat_at": "2026-10-19T00:25:01Z",
+   "status_at": "2026-10-19T00:29:50Z",
+   "heartbeat_at": "2026-10-19T00:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 331,
-    "markets": 3186,
+    "weather_events": 330,
+    "markets": 3175,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T00:21:00Z",
+    "last_scan_at": "2026-10-19T00:26:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T00:21:00Z",
+    "updated_at": "2026-10-19T00:26:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:24:20Z",
+    "updated_at": "2026-10-19T00:28:21Z",
     "detail": "observations retained"
    },
    {
