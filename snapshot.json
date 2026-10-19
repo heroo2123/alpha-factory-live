@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T06:00:02Z",
+ "generated_at": "2026-10-19T06:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "76 merged in 24h"
+    "detail": "77 merged in 24h"
    },
    {
     "key": "qa",
@@ -80,7 +80,7 @@
     "family": "MiniMax",
     "task_id": "t_54f1927a",
     "task": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 1",
@@ -116,47 +116,45 @@
   },
   "tests_passing": 13520,
   "flow": {
-   "merges_24h": 76,
-   "commits_24h": 76,
+   "merges_24h": 77,
+   "commits_24h": 77,
    "built_24h": 50,
    "build_failed_24h": 21,
    "reviews_passed_24h": 78,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    5,
-    3,
-    1,
-    4,
-    4,
-    4,
-    2,
-    2,
-    4,
-    0,
-    11,
-    2,
-    4,
-    2,
-    3,
-    3,
-    1,
     6,
-    7,
+    2,
     2,
     3,
+    4,
+    4,
+    2,
+    3,
+    3,
+    0,
+    12,
+    1,
+    5,
+    1,
+    3,
+    4,
+    0,
+    6,
+    8,
+    2,
+    2,
     0,
     3,
-    0
+    1
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 19,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 268,
+    "awaiting_merge": 0,
+    "merged": 269,
     "parked": 151
    }
   },
@@ -167,6 +165,11 @@
    "model": "Kimi K3"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T06:01:55Z",
+    "title": "Fix 1 failure in : register blend_learning (0cc90fac) as a training-plane learner…",
+    "area": "Test repairs"
+   },
    {
     "at": "2026-10-19T04:08:06Z",
     "title": "InventoryTransform observer: strict nested artifact schema (close residual L2 forged…",
@@ -201,11 +204,6 @@
     "at": "2026-10-19T00:22:11Z",
     "title": "LIVE-15 Stop a refused cancellation trigger from blocking later triggers on its channel",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T00:13:08Z",
-    "title": "PAPER-07 Bind already-committed source receipts when a pump cycle is interrupted",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T05:59:01Z",
+    "last_check_at": "2026-10-19T06:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,15 +225,15 @@
     "codes": [
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T05:58:39Z",
+    "last_check_at": "2026-10-19T06:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 142,
-    "last_run_at": "2026-10-19T06:00:02Z",
+    "runs_total": 143,
+    "last_run_at": "2026-10-19T06:05:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow census churn",
+    "last_kind": "full suite not green",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +248,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T06:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: full suite not green"
+   },
+   {
+    "at": "2026-10-19T06:01:55Z",
+    "kind": "merge",
+    "text": "Merged “Fix 1 failure in : register blend_learning (0cc90fac) as a…” into the main build"
+   },
    {
     "at": "2026-10-19T06:00:02Z",
     "kind": "heal",
@@ -279,11 +287,6 @@
     "at": "2026-10-19T05:15:01Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: full suite not green"
-   },
-   {
-    "at": "2026-10-19T05:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow builders idle"
    },
    {
     "at": "2026-10-19T04:40:02Z",
@@ -354,11 +357,6 @@
     "at": "2026-10-19T03:48:59Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “Cross-ledger daily/weekly audit rollup over closed rolling-day…”: changes required"
-   },
-   {
-    "at": "2026-10-19T03:48:05Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
    }
   ]
  },
@@ -369,8 +367,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
    "state": "census service",
-   "status_at": "2026-10-19T06:00:00Z",
-   "heartbeat_at": "2026-10-19T06:00:02Z",
+   "status_at": "2026-10-19T06:04:59Z",
+   "heartbeat_at": "2026-10-19T06:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -379,7 +377,7 @@
     "weather_events": 377,
     "markets": 3673,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T05:54:48Z",
+    "last_scan_at": "2026-10-19T06:00:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T05:54:48Z",
+    "updated_at": "2026-10-19T06:00:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T05:58:21Z",
+    "updated_at": "2026-10-19T06:04:23Z",
     "detail": "observations retained"
    },
    {
