@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T10:15:02Z",
+ "generated_at": "2026-10-19T10:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 18,
     "unit": "queued",
     "active": false,
     "detail": "5 ready to build"
@@ -15,10 +15,10 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "50 built in 24h"
+    "active": true,
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
@@ -75,12 +75,12 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ab128c9c",
+    "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -118,23 +118,23 @@
   "flow": {
    "merges_24h": 64,
    "commits_24h": 64,
-   "built_24h": 50,
-   "build_failed_24h": 22,
+   "built_24h": 49,
+   "build_failed_24h": 23,
    "reviews_passed_24h": 77,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     6,
     2,
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7,
     7,
@@ -150,8 +150,8 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 19,
-    "building": 0,
+    "queued": 18,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 0,
     "merged": 269,
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T10:15:02Z",
+    "last_check_at": "2026-10-19T10:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T10:18:05Z",
+    "kind": "warn",
+    "text": "GLM 5.3 build attempt ended: quota hold"
+   },
    {
     "at": "2026-10-19T10:07:01Z",
     "kind": "warn",
@@ -353,11 +358,6 @@
     "at": "2026-10-19T04:16:15Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T04:15:15Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
    "state": "census service",
-   "status_at": "2026-10-19T10:14:59Z",
-   "heartbeat_at": "2026-10-19T10:15:01Z",
+   "status_at": "2026-10-19T10:19:59Z",
+   "heartbeat_at": "2026-10-19T10:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -378,7 +378,7 @@
     "weather_events": 367,
     "markets": 3563,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T10:10:09Z",
+    "last_scan_at": "2026-10-19T10:15:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T10:10:09Z",
+    "updated_at": "2026-10-19T10:15:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T10:13:51Z",
+    "updated_at": "2026-10-19T10:19:53Z",
     "detail": "observations retained"
    },
    {
@@ -506,7 +506,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T09:17:02Z",
+   "updated_at": "2026-10-19T10:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
