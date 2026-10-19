@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T03:45:02Z",
+ "generated_at": "2026-10-19T03:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "8 ready to build"
+    "detail": "7 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "53 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,12 +34,12 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "80 merged in 24h"
+    "detail": "79 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 73,
+    "count": 80,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_54f1927a",
-    "task": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_be6cc217",
-    "task": "Cross-ledger daily/weekly audit rollup over closed rolling-day Shadow ledgers",
-    "elapsed_min": 5
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -100,12 +100,12 @@
     "family": "DeepSeek",
     "task_id": "t_8ecb3d04",
     "task": "InventoryTransform observer: strict nested artifact schema (close residual L2 forged…",
-    "elapsed_min": 2
+    "elapsed_min": 7
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 73,
+   "progress_pct": 80,
    "last_finished_at": "2026-10-18T23:36:00Z",
    "last_passed": 13326,
    "last_failed": 11,
@@ -116,34 +116,34 @@
   },
   "tests_passing": 13326,
   "flow": {
-   "merges_24h": 80,
-   "commits_24h": 80,
+   "merges_24h": 79,
+   "commits_24h": 79,
    "built_24h": 53,
-   "build_failed_24h": 19,
-   "reviews_passed_24h": 80,
-   "reviews_changes_24h": 4,
+   "build_failed_24h": 21,
+   "reviews_passed_24h": 79,
+   "reviews_changes_24h": 5,
    "commits_by_hour": [
-    7,
+    6,
     0,
     5,
     3,
-    0,
+    1,
+    3,
     4,
-    4,
-    4,
-    2,
+    5,
+    1,
     3,
     4,
     0,
     10,
     3,
-    3,
-    3,
+    4,
+    2,
     2,
     4,
     1,
-    4,
-    7,
+    5,
+    6,
     3,
     4,
     0
@@ -153,12 +153,12 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 16,
-    "building": 1,
-    "in_review": 2,
+    "queued": 18,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 265,
-    "parked": 148
+    "parked": 149
    }
   },
   "architect": {
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T03:44:01Z",
+    "last_check_at": "2026-10-19T03:49:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 132,
+    "runs_total": 133,
     "last_run_at": "2026-10-19T03:20:03Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -251,6 +251,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T03:48:59Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “Cross-ledger daily/weekly audit rollup over closed rolling-day…”: changes required"
+   },
+   {
+    "at": "2026-10-19T03:48:05Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
+   },
+   {
+    "at": "2026-10-19T03:47:05Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
+   },
    {
     "at": "2026-10-19T03:42:10Z",
     "kind": "build",
@@ -345,21 +360,6 @@
     "at": "2026-10-19T02:34:21Z",
     "kind": "review",
     "text": "GLM 5.2 reviewed “FLEX candidate t_ed582e3d 97104a1a145c”: passed"
-   },
-   {
-    "at": "2026-10-19T02:30:20Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T02:26:24Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “FLEX candidate t_0fffbbf1 a7eb7c7aae90”: passed"
-   },
-   {
-    "at": "2026-10-19T02:26:11Z",
-    "kind": "build",
-    "text": "MiniMax M3 built “PAPER-05 Show capability-proof failures and unknowns in the…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T03:44:51Z",
-   "heartbeat_at": "2026-10-19T03:45:01Z",
+   "status_at": "2026-10-19T03:49:52Z",
+   "heartbeat_at": "2026-10-19T03:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -380,7 +380,7 @@
     "weather_events": 316,
     "markets": 3007,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T03:42:23Z",
+    "last_scan_at": "2026-10-19T03:47:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T03:42:23Z",
+    "updated_at": "2026-10-19T03:47:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T03:43:33Z",
+    "updated_at": "2026-10-19T03:49:36Z",
     "detail": "observations retained"
    },
    {
