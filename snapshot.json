@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T04:40:02Z",
+ "generated_at": "2026-10-19T04:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -128,22 +128,22 @@
     3,
     0,
     4,
-    3,
-    5,
-    1,
     4,
+    4,
+    2,
+    3,
     4,
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9,
-    5,
+    4,
+    7,
+    3,
     4,
     0,
     3
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T04:39:01Z",
+    "last_check_at": "2026-10-19T04:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,15 +226,15 @@
      "flow task repeat loop",
      "flow builders idle"
     ],
-    "last_check_at": "2026-10-19T04:30:03Z",
+    "last_check_at": "2026-10-19T04:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 136,
-    "last_run_at": "2026-10-19T04:40:02Z",
+    "last_run_at": "2026-10-19T04:45:02Z",
     "last_ok": true,
-    "last_kind": "code queue idle with capacity",
+    "last_kind": "flow task repeat loop",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T04:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow task repeat loop"
+   },
+   {
+    "at": "2026-10-19T04:40:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code queue idle with capacity"
+   },
    {
     "at": "2026-10-19T04:40:02Z",
     "kind": "heal",
@@ -348,16 +358,6 @@
     "at": "2026-10-19T03:39:10Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Cross-ledger daily/weekly audit rollup over closed rolling-day…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T03:25:03Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “Fix 1 failure in : register blend_learning (0cc90fac) as a…”: passed"
-   },
-   {
-    "at": "2026-10-19T03:23:07Z",
-    "kind": "warn",
-    "text": "MiniMax M3's build of “PAPER-07 Record STALE, MALFORMED and COOLDOWN source outcomes as…” failed its tests; it will be retried"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
    "state": "census service",
-   "status_at": "2026-10-19T04:40:02Z",
-   "heartbeat_at": "2026-10-19T04:40:02Z",
+   "status_at": "2026-10-19T04:45:01Z",
+   "heartbeat_at": "2026-10-19T04:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -378,7 +378,7 @@
     "weather_events": 347,
     "markets": 3343,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T04:38:12Z",
+    "last_scan_at": "2026-10-19T04:43:47Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T04:38:12Z",
+    "updated_at": "2026-10-19T04:43:47Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T04:39:53Z",
+    "updated_at": "2026-10-19T04:43:54Z",
     "detail": "observations retained"
    },
    {
