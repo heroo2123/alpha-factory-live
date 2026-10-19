@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T21:15:01Z",
+ "generated_at": "2026-10-19T21:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "44 merged in 24h"
+    "detail": "43 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_8c171b81",
     "task": "PAPER-09 Separate PWS score comparisons by label evidence class",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Reviewer 1",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 13617,
   "flow": {
-   "merges_24h": 44,
-   "commits_24h": 44,
+   "merges_24h": 43,
+   "commits_24h": 43,
    "built_24h": 47,
    "build_failed_24h": 26,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
-    3,
+    2,
     0,
     7,
     7,
@@ -145,8 +145,8 @@
     0,
     0,
     2,
-    8,
-    6
+    11,
+    3
    ],
    "merge_holds": [],
    "stage_totals": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T21:15:02Z",
+    "last_check_at": "2026-10-19T21:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,10 +230,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 175,
-    "last_run_at": "2026-10-19T21:00:03Z",
+    "runs_total": 176,
+    "last_run_at": "2026-10-19T21:20:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -245,6 +245,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T21:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-19T21:08:08Z",
     "kind": "merge",
@@ -349,11 +354,6 @@
     "at": "2026-10-19T20:12:18Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-08 Make candidate ranking independent of ambient Decimal…”: passed"
-   },
-   {
-    "at": "2026-10-19T20:10:23Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)”: passed"
    }
   ]
  },
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T21:14:53Z",
-   "heartbeat_at": "2026-10-19T21:15:01Z",
+   "status_at": "2026-10-19T21:19:53Z",
+   "heartbeat_at": "2026-10-19T21:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T21:13:19Z",
+    "updated_at": "2026-10-19T21:19:21Z",
     "detail": "observations retained"
    },
    {
@@ -502,7 +502,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T20:17:03Z",
+   "updated_at": "2026-10-19T21:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
