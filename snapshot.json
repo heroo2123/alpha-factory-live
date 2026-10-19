@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T02:10:02Z",
+ "generated_at": "2026-10-19T02:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "85 merged in 24h"
+    "detail": "84 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "MiniMax",
     "task_id": "t_ed582e3d",
     "task": "PAPER-05 Show capability-proof failures and unknowns in the daily/weekly audit station…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -90,7 +90,7 @@
     "family": "Zhipu",
     "task_id": "t_3545d844",
     "task": "New main SHA a52e899dd6d2 Alpha V11 FLEX code task t_93211659 claude_api",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 2",
@@ -116,7 +116,7 @@
   },
   "tests_passing": 13326,
   "flow": {
-   "merges_24h": 85,
+   "merges_24h": 84,
    "commits_24h": 84,
    "built_24h": 51,
    "build_failed_24h": 15,
@@ -124,28 +124,28 @@
    "reviews_changes_24h": 3,
    "commits_by_hour": [
     4,
-    6,
-    3,
-    1,
-    6,
-    1,
+    7,
     2,
-    3,
-    5,
-    3,
     2,
-    3,
-    3,
+    6,
     0,
-    12,
-    1,
-    5,
-    1,
+    3,
+    2,
+    6,
+    2,
+    2,
     4,
+    2,
+    2,
+    10,
+    2,
+    4,
+    2,
+    3,
     3,
     0,
-    6,
-    8,
+    7,
+    7,
     2
    ],
    "merge_holds": [
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T02:10:02Z",
+    "last_check_at": "2026-10-19T02:14:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,10 +233,10 @@
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 127,
-    "last_run_at": "2026-10-19T01:45:01Z",
+    "runs_total": 128,
+    "last_run_at": "2026-10-19T02:15:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T02:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
+   },
    {
     "at": "2026-10-19T02:09:55Z",
     "kind": "review",
@@ -355,11 +360,6 @@
     "at": "2026-10-19T00:55:16Z",
     "kind": "build",
     "text": "MiniMax M3 built “New main SHA 763e0c8837ad Alpha V11 FLEX code task t_1a6cb85d claude” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T00:55:00Z",
-    "kind": "merge",
-    "text": "Merged “Brain forward supervisor scorer must use the live Shadow release…” into the main build"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T02:09:58Z",
-   "heartbeat_at": "2026-10-19T02:10:03Z",
+   "status_at": "2026-10-19T02:14:58Z",
+   "heartbeat_at": "2026-10-19T02:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -380,7 +380,7 @@
     "weather_events": 319,
     "markets": 3054,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T02:06:53Z",
+    "last_scan_at": "2026-10-19T02:12:25Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T02:06:53Z",
+    "updated_at": "2026-10-19T02:12:25Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T02:08:56Z",
+    "updated_at": "2026-10-19T02:14:58Z",
     "detail": "observations retained"
    },
    {
