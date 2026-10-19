@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T17:00:02Z",
+ "generated_at": "2026-10-19T17:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 27,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -18,23 +18,23 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "47 built in 24h"
+    "detail": "46 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_ca45b352",
     "task": "PAPER-09 Verify the complete retained PWS score population",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_03a5d618",
-    "task": "FLEX candidate t_f13ccb14 76fd3fe4d47d",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,32 +116,32 @@
   },
   "tests_passing": 13602,
   "flow": {
-   "merges_24h": 40,
-   "commits_24h": 40,
-   "built_24h": 47,
+   "merges_24h": 39,
+   "commits_24h": 39,
+   "built_24h": 46,
    "build_failed_24h": 28,
-   "reviews_passed_24h": 62,
+   "reviews_passed_24h": 63,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
-    2,
+    1,
+    5,
+    1,
+    3,
     4,
-    2,
-    3,
-    3,
-    1,
+    0,
     6,
-    7,
+    8,
     2,
-    3,
+    2,
     0,
     3,
-    0,
     1,
     0,
     0,
     0,
     0,
-    2,
+    1,
+    1,
     0,
     1,
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 27,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 3,
     "merged": 272,
     "parked": 156
    }
@@ -214,20 +214,21 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T17:00:02Z",
+    "last_check_at": "2026-10-19T17:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 1,
+    "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
+     "P1": 1,
      "P2": 1
     },
     "codes": [
-     "flow unmergeable reviewed work"
+     "flow unmergeable reviewed work",
+     "flow shadow frozen authority drift"
     ],
-    "last_check_at": "2026-10-19T16:50:02Z",
+    "last_check_at": "2026-10-19T17:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +251,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T17:01:18Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_f13ccb14 76fd3fe4d47d”: passed"
+   },
    {
     "at": "2026-10-19T16:55:12Z",
     "kind": "build",
@@ -354,11 +360,6 @@
     "at": "2026-10-19T14:54:13Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “PAPER-09 Record the market-book repricing lead in PWS receipt scoring” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T14:46:17Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “PAPER-08 Reconcile SELL exit fills in the paper risk observation” → sent to independent review"
    }
   ]
  },
@@ -369,8 +370,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T16:59:57Z",
-   "heartbeat_at": "2026-10-19T17:00:01Z",
+   "status_at": "2026-10-19T17:04:54Z",
+   "heartbeat_at": "2026-10-19T17:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -409,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T16:59:42Z",
+    "updated_at": "2026-10-19T17:03:44Z",
     "detail": "observations retained"
    },
    {
