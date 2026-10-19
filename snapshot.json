@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T23:05:01Z",
+ "generated_at": "2026-10-19T23:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 23,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "56 built in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 20,
+    "count": 28,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_16a6e91b",
     "task": "PAPER-08 Revalidate sizing factors at the calculation boundary",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_abe39836",
+    "task": "PAPER-09 Reject unsafe PWS worker lock files before blocking",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 20,
+   "progress_pct": 28,
    "last_finished_at": "2026-10-19T19:54:56Z",
    "last_passed": 13617,
    "last_failed": 0,
@@ -127,15 +127,7 @@
     8,
     2,
     2,
-    0,
     3,
-    1,
-    0,
-    0,
-    0,
-    0,
-    1,
-    1,
     0,
     1,
     0,
@@ -143,17 +135,25 @@
     0,
     0,
     2,
-    4,
-    9,
-    6,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    7,
+    7,
+    5,
     1
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 24,
-    "building": 1,
+    "queued": 23,
+    "building": 2,
     "in_review": 5,
     "awaiting_merge": 2,
     "merged": 294,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T23:04:02Z",
+    "last_check_at": "2026-10-19T23:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T23:04:51Z",
-   "heartbeat_at": "2026-10-19T23:05:02Z",
+   "status_at": "2026-10-19T23:09:55Z",
+   "heartbeat_at": "2026-10-19T23:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -377,7 +377,7 @@
     "weather_events": 334,
     "markets": 3221,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T22:59:59Z",
+    "last_scan_at": "2026-10-19T23:05:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T22:59:59Z",
+    "updated_at": "2026-10-19T23:05:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T23:03:58Z",
+    "updated_at": "2026-10-19T23:10:00Z",
     "detail": "observations retained"
    },
    {
