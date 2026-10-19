@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T10:30:02Z",
+ "generated_at": "2026-10-19T10:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,8 +17,8 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "49 built in 24h"
+    "active": true,
+    "detail": "48 built in 24h"
    },
    {
     "key": "review",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_053b3f26",
+    "task": "Wire the governed learning worker to forward captures and labels (no caller today)",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -118,15 +118,15 @@
   "flow": {
    "merges_24h": 63,
    "commits_24h": 63,
-   "built_24h": 49,
-   "build_failed_24h": 23,
+   "built_24h": 48,
+   "build_failed_24h": 24,
    "reviews_passed_24h": 77,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    5,
-    2,
-    3,
+    6,
+    1,
     4,
+    3,
     1,
     9,
     4,
@@ -136,10 +136,10 @@
     3,
     2,
     0,
-    8,
-    6,
-    3,
-    1,
+    9,
+    5,
+    4,
+    0,
     3,
     0,
     1,
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T10:30:02Z",
+    "last_check_at": "2026-10-19T10:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,7 +226,7 @@
      "flow worker exception repeat",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T10:20:02Z",
+    "last_check_at": "2026-10-19T10:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T10:30:10Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro's build of “Station-bias + pooled-spread research learner (new module, -10%…” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-19T10:21:02Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-19T04:18:12Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
-   },
-   {
-    "at": "2026-10-19T04:18:10Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
    }
   ]
  },
@@ -367,18 +367,18 @@
    "release": "70c90ca",
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
-   "state": "census service",
-   "status_at": "2026-10-19T10:29:58Z",
-   "heartbeat_at": "2026-10-19T10:30:02Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-19T10:30:39Z",
+   "heartbeat_at": "2026-10-19T10:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 365,
-    "markets": 3541,
+    "weather_events": 368,
+    "markets": 3574,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T10:26:39Z",
+    "last_scan_at": "2026-10-19T10:32:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T10:26:39Z",
+    "updated_at": "2026-10-19T10:32:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T10:29:56Z",
+    "updated_at": "2026-10-19T10:33:58Z",
     "detail": "observations retained"
    },
    {
