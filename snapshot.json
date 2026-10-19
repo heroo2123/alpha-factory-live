@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T16:10:02Z",
+ "generated_at": "2026-10-19T16:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 26,
+    "count": 27,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "51 merged in 24h"
+    "detail": "49 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_dc8a8fac",
     "task": "FLEX candidate t_dfef0e61 5a6f9f1bfb66",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_a0935754",
-    "task": "Perpetual brain preparer must follow the commissioned Shadow release (8 station forward…",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,22 +116,22 @@
   },
   "tests_passing": 13602,
   "flow": {
-   "merges_24h": 51,
-   "commits_24h": 51,
+   "merges_24h": 49,
+   "commits_24h": 49,
    "built_24h": 46,
    "build_failed_24h": 28,
-   "reviews_passed_24h": 65,
-   "reviews_changes_24h": 11,
+   "reviews_passed_24h": 64,
+   "reviews_changes_24h": 12,
    "commits_by_hour": [
-    12,
-    1,
-    5,
-    1,
+    10,
+    2,
     4,
+    2,
+    3,
     3,
     0,
-    6,
-    8,
+    7,
+    7,
     2,
     2,
     3,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 26,
+    "queued": 27,
     "building": 1,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 272,
-    "parked": 154
+    "parked": 155
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T16:09:01Z",
+    "last_check_at": "2026-10-19T16:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
      "P2": 0
     },
     "codes": [],
-    "last_check_at": "2026-10-19T16:00:03Z",
+    "last_check_at": "2026-10-19T16:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -248,6 +248,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T16:14:14Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “Perpetual brain preparer must follow the commissioned Shadow release…”: changes required"
+   },
    {
     "at": "2026-10-19T16:06:16Z",
     "kind": "build",
@@ -352,11 +357,6 @@
     "at": "2026-10-19T13:50:02Z",
     "kind": "release",
     "text": "Release c107c9c installed by the release manager"
-   },
-   {
-    "at": "2026-10-19T13:48:07Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra)'s build of “PAPER-08 Reconcile SELL exit fills in the paper risk observation” failed its tests; it will be retried"
    }
   ]
  },
@@ -367,17 +367,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T16:10:03Z",
-   "heartbeat_at": "2026-10-19T16:10:01Z",
+   "status_at": "2026-10-19T16:14:48Z",
+   "heartbeat_at": "2026-10-19T16:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 379,
-    "markets": 3712,
+    "weather_events": 378,
+    "markets": 3701,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T16:06:56Z",
+    "last_scan_at": "2026-10-19T16:12:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T16:06:56Z",
+    "updated_at": "2026-10-19T16:12:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T16:09:25Z",
+    "updated_at": "2026-10-19T16:13:26Z",
     "detail": "observations retained"
    },
    {
