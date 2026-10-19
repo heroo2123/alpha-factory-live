@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T06:15:01Z",
+ "generated_at": "2026-10-19T06:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "8 ready to build"
+    "detail": "6 ready to build"
    },
    {
     "key": "build",
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "75 merged in 24h"
+    "detail": "73 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,29 +116,29 @@
   },
   "tests_passing": 13520,
   "flow": {
-   "merges_24h": 75,
-   "commits_24h": 75,
+   "merges_24h": 73,
+   "commits_24h": 73,
    "built_24h": 50,
    "build_failed_24h": 22,
    "reviews_passed_24h": 77,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    6,
+    4,
     0,
     3,
     2,
     6,
     2,
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7,
     7,
@@ -150,12 +150,12 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 19,
     "building": 0,
     "in_review": 0,
     "awaiting_merge": 0,
     "merged": 269,
-    "parked": 151
+    "parked": 152
    }
   },
   "architect": {
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T06:14:01Z",
+    "last_check_at": "2026-10-19T06:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
    "state": "census service",
-   "status_at": "2026-10-19T06:15:01Z",
-   "heartbeat_at": "2026-10-19T06:15:01Z",
+   "status_at": "2026-10-19T06:19:59Z",
+   "heartbeat_at": "2026-10-19T06:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -377,7 +377,7 @@
     "weather_events": 377,
     "markets": 3673,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T06:11:48Z",
+    "last_scan_at": "2026-10-19T06:17:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T06:11:48Z",
+    "updated_at": "2026-10-19T06:17:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T06:14:26Z",
+    "updated_at": "2026-10-19T06:18:28Z",
     "detail": "observations retained"
    },
    {
@@ -505,7 +505,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T05:17:02Z",
+   "updated_at": "2026-10-19T06:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
