@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T13:50:02Z",
+ "generated_at": "2026-10-19T13:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 25,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
@@ -119,8 +119,8 @@
    "merges_24h": 55,
    "commits_24h": 55,
    "built_24h": 47,
-   "build_failed_24h": 26,
-   "reviews_passed_24h": 71,
+   "build_failed_24h": 27,
+   "reviews_passed_24h": 70,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     4,
@@ -129,13 +129,13 @@
     3,
     4,
     2,
-    2,
-    4,
+    3,
+    3,
     1,
     5,
-    6,
+    8,
+    2,
     3,
-    4,
     0,
     3,
     0,
@@ -153,12 +153,12 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 25,
+    "queued": 24,
     "building": 0,
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 272,
-    "parked": 151
+    "parked": 152
    }
   },
   "architect": {
@@ -215,21 +215,20 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T13:50:02Z",
+    "last_check_at": "2026-10-19T13:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 1,
     "by_severity": {
      "P0": 0,
      "P1": 0,
      "P2": 1
     },
     "codes": [
-     "flow shadow census churn",
      "flow scope split stuck"
     ],
-    "last_check_at": "2026-10-19T13:40:01Z",
+    "last_check_at": "2026-10-19T13:50:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +251,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T13:54:07Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra)'s build of “PAPER-09 Verify the complete retained PWS score population” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-19T13:50:02Z",
     "kind": "release",
@@ -356,11 +360,6 @@
     "at": "2026-10-19T12:22:19Z",
     "kind": "build",
     "text": "GLM 5.3 built “PAPER-09 Add the spec's PWS-lead exit trigger reasons” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T12:09:10Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro review ended: review retry budget spent unapproved"
    }
   ]
  },
@@ -381,7 +380,7 @@
     "weather_events": 381,
     "markets": 3734,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T13:48:20Z",
+    "last_scan_at": "2026-10-19T13:54:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T13:48:20Z",
+    "updated_at": "2026-10-19T13:54:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T13:49:13Z",
+    "updated_at": "2026-10-19T13:53:14Z",
     "detail": "observations retained"
    },
    {
