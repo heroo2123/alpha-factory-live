@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:20:02Z",
+ "generated_at": "2026-10-19T01:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 2,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "52 built in 24h"
    },
    {
@@ -65,22 +65,22 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_9fbc33b3",
+    "task": "LEARNING-05 no-lookahead and train/holdout leakage tests pass",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_0173dbbe",
+    "task": "LIVE-10 Check a certification scope's horizon against the event being admitted",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -124,40 +124,40 @@
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     7,
-    4,
-    7,
+    5,
+    6,
     2,
     4,
     4,
     0,
     3,
-    2,
-    6,
+    3,
+    5,
     2,
     3,
     3,
     2,
-    7,
-    6,
-    1,
-    4,
+    8,
+    5,
+    2,
+    3,
     2,
     4,
     2,
     0,
-    7,
-    7
+    8,
+    6
    ],
    "merge_holds": [
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 24,
-    "building": 0,
+    "queued": 21,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 261,
-    "parked": 146
+    "parked": 147
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T01:19:01Z",
+    "last_check_at": "2026-10-19T01:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,15 +227,15 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T01:10:01Z",
+    "last_check_at": "2026-10-19T01:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
+    "runs_24h": 60,
     "runs_total": 124,
-    "last_run_at": "2026-10-19T00:50:02Z",
+    "last_run_at": "2026-10-19T01:25:02Z",
     "last_ok": true,
-    "last_kind": "full suite not green",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T01:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
+   },
    {
     "at": "2026-10-19T01:19:05Z",
     "kind": "warn",
@@ -354,11 +359,6 @@
     "at": "2026-10-19T00:30:12Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T00:30:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T01:19:54Z",
-   "heartbeat_at": "2026-10-19T01:20:01Z",
+   "status_at": "2026-10-19T01:24:54Z",
+   "heartbeat_at": "2026-10-19T01:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -379,7 +379,7 @@
     "weather_events": 325,
     "markets": 3120,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T01:17:43Z",
+    "last_scan_at": "2026-10-19T01:23:09Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T01:17:43Z",
+    "updated_at": "2026-10-19T01:23:09Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T01:18:39Z",
+    "updated_at": "2026-10-19T01:24:41Z",
     "detail": "observations retained"
    },
    {
@@ -1007,7 +1007,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 4,
-     "open_tasks": 3
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
