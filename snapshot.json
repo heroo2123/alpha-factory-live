@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T14:15:02Z",
+ "generated_at": "2026-10-19T14:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_d167f477",
-    "task": "LIVE-15 Recheck worker identity before accepting a guardian lease",
-    "elapsed_min": 14
+    "task_id": "t_dfef0e61",
+    "task": "PAPER-08 Reconcile SELL exit fills in the paper risk observation",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_daf9ad49",
     "task": "FLEX candidate t_e895e8a4 00093f4a499a",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Reviewer 1",
@@ -124,13 +124,13 @@
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     2,
-    2,
-    10,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    3,
-    3,
     0,
     7,
     7,
@@ -154,10 +154,10 @@
    "stage_totals": {
     "queued": 24,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 272,
-    "parked": 153
+    "parked": 152
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T14:14:02Z",
+    "last_check_at": "2026-10-19T14:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T14:18:15Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “LIVE-15 Recheck worker identity before accepting a guardian lease” → sent to independent review"
+   },
    {
     "at": "2026-10-19T13:55:03Z",
     "kind": "release",
@@ -354,11 +359,6 @@
     "at": "2026-10-19T12:27:19Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Add the spec's PWS-lead exit trigger reasons”: passed"
-   },
-   {
-    "at": "2026-10-19T12:25:11Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive bad…"
    }
   ]
  },
@@ -379,7 +379,7 @@
     "weather_events": 380,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T14:12:36Z",
+    "last_scan_at": "2026-10-19T14:18:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T14:12:36Z",
+    "updated_at": "2026-10-19T14:18:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T14:13:04Z",
+    "updated_at": "2026-10-19T14:19:07Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +507,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T13:17:03Z",
+   "updated_at": "2026-10-19T14:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
