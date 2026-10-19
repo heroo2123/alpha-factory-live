@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T10:55:02Z",
+ "generated_at": "2026-10-19T11:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,23 +15,23 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "49 built in 24h"
+    "detail": "50 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "60 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_053b3f26",
-    "task": "Wire the governed learning worker to forward captures and labels (no caller today)",
-    "elapsed_min": 21
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_e895e8a4",
     "task": "CODE-01 Add weekly station/strategy review and demotion-candidate section to audit reports",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_6462a548",
-    "task": "New main SHA dbc0e40b5d51 Alpha V11 FLEX code task t_82efc8e2 opencode_go",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 60,
    "commits_24h": 60,
-   "built_24h": 49,
-   "build_failed_24h": 24,
+   "built_24h": 50,
+   "build_failed_24h": 23,
    "reviews_passed_24h": 76,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
@@ -128,15 +128,15 @@
     2,
     4,
     0,
-    10,
-    3,
+    11,
+    2,
     4,
     2,
     3,
     3,
     1,
-    5,
-    8,
+    6,
+    7,
     2,
     3,
     0,
@@ -148,12 +148,14 @@
     0,
     0
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
     "queued": 17,
-    "building": 2,
+    "building": 1,
     "in_review": 1,
-    "awaiting_merge": 0,
+    "awaiting_merge": 1,
     "merged": 269,
     "parked": 151
    }
@@ -208,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T10:55:02Z",
+    "last_check_at": "2026-10-19T10:59:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 58,
     "runs_total": 148,
-    "last_run_at": "2026-10-19T10:50:02Z",
+    "last_run_at": "2026-10-19T11:00:02Z",
     "last_ok": true,
-    "last_kind": "flow worker exception repeat",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +251,26 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T11:00:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-19T10:58:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-19T10:56:26Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “New main SHA dbc0e40b5d51 Alpha V11 FLEX code task t_82efc8e2…”: passed"
+   },
+   {
+    "at": "2026-10-19T10:56:12Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “Wire the governed learning worker to forward captures and labels (no…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T10:50:02Z",
     "kind": "heal",
@@ -320,11 +342,6 @@
     "text": "GLM 5.2 reviewed “a task”: passed"
    },
    {
-    "at": "2026-10-19T06:10:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-19T06:08:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: full suite not green"
@@ -343,21 +360,6 @@
     "at": "2026-10-19T05:53:11Z",
     "kind": "build",
     "text": "DeepSeek V4.1 Flash built “Fix 1 failure in : register blend_learning (0cc90fac) as a…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T04:40:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-19T04:35:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-19T04:21:09Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “a task”: changes required"
    }
   ]
  },
@@ -408,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T10:54:07Z",
+    "updated_at": "2026-10-19T10:58:08Z",
     "detail": "observations retained"
    },
    {
