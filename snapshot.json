@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T04:05:02Z",
+ "generated_at": "2026-10-19T04:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "77 merged in 24h"
+    "detail": "79 merged in 24h"
    },
    {
     "key": "qa",
@@ -106,31 +106,31 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-18T23:36:00Z",
-   "last_passed": 13326,
-   "last_failed": 11,
-   "last_skipped": 40,
+   "last_finished_at": "2026-10-19T04:02:38Z",
+   "last_passed": 13520,
+   "last_failed": 1,
+   "last_skipped": 51,
    "last_green": false,
    "last_green_at": "2026-10-18T16:09:12Z",
-   "last_minutes": 85
+   "last_minutes": 82
   },
-  "tests_passing": 13326,
+  "tests_passing": 13520,
   "flow": {
-   "merges_24h": 77,
-   "commits_24h": 77,
+   "merges_24h": 79,
+   "commits_24h": 79,
    "built_24h": 53,
    "build_failed_24h": 21,
    "reviews_passed_24h": 79,
    "reviews_changes_24h": 5,
    "commits_by_hour": [
-    4,
-    0,
+    3,
+    1,
     6,
-    2,
+    1,
     2,
     3,
-    4,
-    4,
+    5,
+    3,
     2,
     3,
     3,
@@ -139,26 +139,22 @@
     1,
     5,
     1,
-    3,
     4,
+    3,
     0,
     6,
     8,
     2,
     2,
-    0
+    3
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish",
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 19,
     "building": 0,
     "in_review": 0,
-    "awaiting_merge": 4,
-    "merged": 265,
+    "awaiting_merge": 1,
+    "merged": 268,
     "parked": 150
    }
   },
@@ -169,6 +165,11 @@
    "model": "Kimi K3"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T04:08:06Z",
+    "title": "InventoryTransform observer: strict nested artifact schema (close residual L2 forged…",
+    "area": "Position management"
+   },
    {
     "at": "2026-10-19T00:55:00Z",
     "title": "Brain forward supervisor scorer must use the live Shadow release code, not the frozen…",
@@ -203,20 +204,15 @@
     "at": "2026-10-19T00:13:08Z",
     "title": "PAPER-07 Bind already-committed source receipts when a pump cycle is interrupted",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T00:00:36Z",
-    "title": "Spec 6A safety modes step 3: owner panel commands",
-    "area": "Pre-funding checks"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T04:04:02Z",
+    "active": 2,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-19T04:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +249,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T04:08:06Z",
+    "kind": "merge",
+    "text": "Merged “InventoryTransform observer: strict nested artifact schema (close…” into the main build"
+   },
+   {
+    "at": "2026-10-19T04:08:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-10-19T04:02:38Z",
+    "kind": "warn",
+    "text": "Full test suite finished: 13520 passed, 1 failed"
+   },
    {
     "at": "2026-10-19T04:00:03Z",
     "kind": "plan",
@@ -347,21 +358,6 @@
     "at": "2026-10-19T02:51:12Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T02:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: routine"
-   },
-   {
-    "at": "2026-10-19T02:48:14Z",
-    "kind": "warn",
-    "text": "DeepSeek V4.1 Flash's build of “PAPER-07 Record malformed or refused public payloads per source…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T02:48:12Z",
-    "kind": "build",
-    "text": "MiniMax M3 built “Fix 1 failure in : re-pin writer inventory on current head” → sent to independent review"
    }
   ]
  },
@@ -371,9 +367,9 @@
    "release": "70c90ca",
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
-   "state": "making paper decisions",
-   "status_at": "2026-10-19T04:00:17Z",
-   "heartbeat_at": "2026-10-19T04:05:01Z",
+   "state": "census service",
+   "status_at": "2026-10-19T04:10:01Z",
+   "heartbeat_at": "2026-10-19T04:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -382,7 +378,7 @@
     "weather_events": 316,
     "markets": 3007,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T04:04:23Z",
+    "last_scan_at": "2026-10-19T04:09:55Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T04:04:23Z",
+    "updated_at": "2026-10-19T04:09:55Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T04:03:41Z",
+    "updated_at": "2026-10-19T04:09:42Z",
     "detail": "observations retained"
    },
    {
@@ -537,6 +533,11 @@
   },
   "skills": [
    {
+    "title": "InventoryTransform observer: strict nested artifact schema (close residual L2 forged…",
+    "area": "Position management",
+    "merged_at": "2026-10-19T04:08:06Z"
+   },
+   {
     "title": "Brain forward supervisor scorer must use the live Shadow release code, not the frozen…",
     "area": "Forecast brain",
     "merged_at": "2026-10-19T00:55:00Z"
@@ -580,11 +581,6 @@
     "title": "InventoryTransform start guard: bind import-deny hook at install (close N1 rebinding)…",
     "area": "Position management",
     "merged_at": "2026-10-18T23:43:11Z"
-   },
-   {
-    "title": "Spec 6A safety modes step 2: executor enforces scoped reductions",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T21:37:11Z"
    }
   ],
   "readiness": {
