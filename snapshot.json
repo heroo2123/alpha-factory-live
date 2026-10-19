@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T04:20:02Z",
+ "generated_at": "2026-10-19T04:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "7 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "51 built in 24h"
+    "detail": "50 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_4063e628",
-    "task": "a build task",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -118,44 +118,44 @@
   "flow": {
    "merges_24h": 78,
    "commits_24h": 78,
-   "built_24h": 51,
+   "built_24h": 50,
    "build_failed_24h": 21,
    "reviews_passed_24h": 78,
-   "reviews_changes_24h": 5,
+   "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
     4,
     4,
     0,
     3,
-    2,
-    6,
+    3,
+    5,
     2,
     3,
     3,
     2,
-    7,
-    6,
-    1,
-    4,
+    8,
+    5,
+    2,
+    3,
     2,
     4,
     2,
     0,
-    7,
-    7,
-    2,
-    2,
+    8,
+    6,
+    3,
+    1,
     3
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 21,
     "building": 0,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 0,
     "merged": 268,
-    "parked": 151
+    "parked": 150
    }
   },
   "architect": {
@@ -209,21 +209,24 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T04:20:02Z",
+    "last_check_at": "2026-10-19T04:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 0,
+    "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
-     "P2": 0
+     "P1": 1,
+     "P2": 1
     },
-    "codes": [],
-    "last_check_at": "2026-10-19T04:10:02Z",
+    "codes": [
+     "flow task repeat loop",
+     "flow builders idle"
+    ],
+    "last_check_at": "2026-10-19T04:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -246,6 +249,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T04:21:09Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “a task”: changes required"
+   },
    {
     "at": "2026-10-19T04:18:12Z",
     "kind": "review",
@@ -329,7 +337,7 @@
    {
     "at": "2026-10-19T03:25:03Z",
     "kind": "review",
-    "text": "GLM 5.2 reviewed “Fix 1 failure in : register blend_learning (0cc90fac) +…”: passed"
+    "text": "GLM 5.2 reviewed “Fix 1 failure in : register blend_learning (0cc90fac) as a…”: passed"
    },
    {
     "at": "2026-10-19T03:23:07Z",
@@ -344,17 +352,12 @@
    {
     "at": "2026-10-19T03:15:59Z",
     "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “Fix 1 failure in : register blend_learning (0cc90fac) +…” → sent to independent review"
+    "text": "DeepSeek V4.1 Flash built “Fix 1 failure in : register blend_learning (0cc90fac) as a…” → sent to independent review"
    },
    {
     "at": "2026-10-19T03:09:07Z",
     "kind": "warn",
     "text": "DeepSeek V4.1 Flash's build of “LIVE-10 Check a certification scope's horizon against the event…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T03:08:18Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “New main SHA 57d9d632489f Alpha V11 FLEX code task t_4c3f28e0…”: passed"
    }
   ]
  },
@@ -364,9 +367,9 @@
    "release": "70c90ca",
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
-   "state": "making paper decisions",
-   "status_at": "2026-10-19T04:17:50Z",
-   "heartbeat_at": "2026-10-19T04:20:02Z",
+   "state": "census service",
+   "status_at": "2026-10-19T04:25:01Z",
+   "heartbeat_at": "2026-10-19T04:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,7 +378,7 @@
     "weather_events": 317,
     "markets": 3013,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T04:15:37Z",
+    "last_scan_at": "2026-10-19T04:21:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T04:15:37Z",
+    "updated_at": "2026-10-19T04:21:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T04:19:46Z",
+    "updated_at": "2026-10-19T04:23:48Z",
     "detail": "observations retained"
    },
    {
