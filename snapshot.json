@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T19:05:01Z",
+ "generated_at": "2026-10-19T19:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 47,
+    "count": 50,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_d23c390a",
     "task": "PAPER-09 Bound consecutive PWS QC retries so one event cannot starve its peers",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_5a0771e1",
     "task": "PAPER-09 Deduplicate repeated PWS comparisons by prediction and label",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 47,
+   "progress_pct": 50,
    "last_finished_at": "2026-10-19T15:59:46Z",
    "last_passed": 13602,
    "last_failed": 0,
@@ -124,22 +124,22 @@
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     1,
-    3,
     4,
+    3,
     0,
     6,
     8,
     2,
     2,
-    0,
     3,
-    1,
-    0,
-    0,
-    0,
     0,
     1,
-    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
     0,
     1,
     0,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T19:04:02Z",
+    "last_check_at": "2026-10-19T19:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 167,
+    "runs_total": 168,
     "last_run_at": "2026-10-19T19:00:02Z",
     "last_ok": true,
     "last_kind": "hermes job failed flexible provider router",
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T19:04:55Z",
-   "heartbeat_at": "2026-10-19T19:05:01Z",
+   "status_at": "2026-10-19T19:09:56Z",
+   "heartbeat_at": "2026-10-19T19:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 360,
-    "markets": 3505,
+    "weather_events": 358,
+    "markets": 3483,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T19:03:02Z",
+    "last_scan_at": "2026-10-19T19:09:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T19:03:02Z",
+    "updated_at": "2026-10-19T19:09:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T19:04:27Z",
+    "updated_at": "2026-10-19T19:08:29Z",
     "detail": "observations retained"
    },
    {
