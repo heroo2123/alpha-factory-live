@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T06:30:03Z",
+ "generated_at": "2026-10-19T06:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -125,12 +125,12 @@
    "commits_by_hour": [
     3,
     0,
-    3,
-    3,
-    5,
-    2,
-    3,
     4,
+    2,
+    6,
+    1,
+    4,
+    3,
     1,
     9,
     4,
@@ -140,10 +140,10 @@
     3,
     2,
     0,
-    8,
-    6,
-    3,
-    1,
+    9,
+    5,
+    4,
+    0,
     3,
     0,
     1
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T06:30:03Z",
+    "last_check_at": "2026-10-19T06:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
     "codes": [
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T06:20:02Z",
+    "last_check_at": "2026-10-19T06:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
    "state": "census service",
-   "status_at": "2026-10-19T06:30:00Z",
-   "heartbeat_at": "2026-10-19T06:30:03Z",
+   "status_at": "2026-10-19T06:34:59Z",
+   "heartbeat_at": "2026-10-19T06:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -377,7 +377,7 @@
     "weather_events": 374,
     "markets": 3640,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T06:28:20Z",
+    "last_scan_at": "2026-10-19T06:33:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T06:28:20Z",
+    "updated_at": "2026-10-19T06:33:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T06:28:31Z",
+    "updated_at": "2026-10-19T06:34:33Z",
     "detail": "observations retained"
    },
    {
