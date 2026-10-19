@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T22:10:02Z",
+ "generated_at": "2026-10-19T22:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "46 merged in 24h"
+    "detail": "47 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c8de42c4",
     "task": "PAPER-09 Bound physical-model provenance traversal",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_a2c65d79",
     "task": "PAPER-09 Expire trajectory features when their supporting history leaves the window",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_51e45c22",
-    "task": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,16 +116,16 @@
   },
   "tests_passing": 13617,
   "flow": {
-   "merges_24h": 46,
-   "commits_24h": 46,
+   "merges_24h": 47,
+   "commits_24h": 47,
    "built_24h": 52,
    "build_failed_24h": 23,
    "reviews_passed_24h": 58,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
     0,
-    6,
-    8,
+    7,
+    7,
     2,
     2,
     3,
@@ -144,17 +144,17 @@
     0,
     0,
     2,
-    7,
-    7,
-    5
+    8,
+    6,
+    6
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 21,
     "building": 2,
-    "in_review": 3,
+    "in_review": 2,
     "awaiting_merge": 0,
-    "merged": 293,
+    "merged": 294,
     "parked": 160
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T22:13:38Z",
+    "title": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-19T21:33:52Z",
     "title": "LIVE-15 Reject guardian-client completion after the absolute deadline",
@@ -199,11 +204,6 @@
     "at": "2026-10-19T20:20:00Z",
     "title": "PAPER-08 Make candidate ranking independent of ambient Decimal precision",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T20:16:52Z",
-    "title": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
-    "area": "Forecast brain"
    }
   ],
   "self_healing": {
@@ -212,22 +212,21 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T22:10:02Z",
+    "last_check_at": "2026-10-19T22:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 0,
      "P2": 2
     },
     "codes": [
      "flow qa resource blocked",
-     "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-19T22:00:02Z",
+    "last_check_at": "2026-10-19T22:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -247,6 +246,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T22:13:38Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL” into the main build"
+   },
+   {
+    "at": "2026-10-19T22:12:20Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL”: passed"
+   },
    {
     "at": "2026-10-19T22:06:57Z",
     "kind": "build",
@@ -346,16 +355,6 @@
     "at": "2026-10-19T21:27:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “LIVE-15 Reject guardian-client completion after the absolute deadline” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T21:25:18Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-09 Separate PWS score comparisons by label evidence class” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T21:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -366,17 +365,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T22:10:02Z",
-   "heartbeat_at": "2026-10-19T22:10:02Z",
+   "status_at": "2026-10-19T22:14:54Z",
+   "heartbeat_at": "2026-10-19T22:15:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 349,
-    "markets": 3386,
+    "weather_events": 348,
+    "markets": 3375,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T22:04:42Z",
+    "last_scan_at": "2026-10-19T22:10:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T22:04:42Z",
+    "updated_at": "2026-10-19T22:10:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T22:09:38Z",
+    "updated_at": "2026-10-19T22:13:40Z",
     "detail": "observations retained"
    },
    {
@@ -1003,8 +1002,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 8,
-     "open_tasks": 3
+     "merged_tasks": 9,
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
