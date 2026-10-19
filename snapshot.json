@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T20:50:02Z",
+ "generated_at": "2026-10-19T20:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "45 merged in 24h"
+    "detail": "44 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_6f734af1",
     "task": "PAPER-09 Validate complete and distinct PWS learning-pair children",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_18c78e28",
     "task": "PAPER-09 Expire cached PWS quality when supporting history ages out",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Reviewer 1",
@@ -116,19 +116,19 @@
   },
   "tests_passing": 13617,
   "flow": {
-   "merges_24h": 45,
-   "commits_24h": 45,
+   "merges_24h": 44,
+   "commits_24h": 44,
    "built_24h": 47,
    "build_failed_24h": 26,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
-    4,
+    3,
     1,
     5,
-    6,
+    8,
+    2,
     3,
-    4,
     0,
     3,
     0,
@@ -212,42 +212,50 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T20:50:02Z",
+    "last_check_at": "2026-10-19T20:54:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 2
+     "P2": 1
     },
     "codes": [
-     "flow reviewed work quarantined",
      "flow shadow frozen authority drift",
      "flow acceptance stalled"
     ],
-    "last_check_at": "2026-10-19T20:40:02Z",
+    "last_check_at": "2026-10-19T20:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
-    "runs_total": 173,
-    "last_run_at": "2026-10-19T20:32:59Z",
+    "runs_24h": 60,
+    "runs_total": 174,
+    "last_run_at": "2026-10-19T20:55:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance stalled",
+    "last_kind": "flow reviewed work quarantined",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
   "providers": [
-   "Claude",
    "Codex",
    "DeepSeek",
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T20:55:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow reviewed work quarantined"
+   },
+   {
+    "at": "2026-10-19T20:52:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: engineering regression selftest failed"
+   },
    {
     "at": "2026-10-19T20:49:01Z",
     "kind": "warn",
@@ -347,16 +355,6 @@
     "at": "2026-10-19T20:08:11Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “LIVE-15 Retain bounded guardian check receipt provenance” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T20:06:18Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Flag backward source timestamps as risk revisions”: passed"
-   },
-   {
-    "at": "2026-10-19T20:05:56Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 Preserve decimal distinctions when ranking capital…” into the main build"
    }
   ]
  },
@@ -367,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T20:49:59Z",
-   "heartbeat_at": "2026-10-19T20:50:02Z",
+   "status_at": "2026-10-19T20:54:59Z",
+   "heartbeat_at": "2026-10-19T20:55:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -377,7 +375,7 @@
     "weather_events": 350,
     "markets": 3397,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T20:45:49Z",
+    "last_scan_at": "2026-10-19T20:51:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T20:45:49Z",
+    "updated_at": "2026-10-19T20:51:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T20:49:10Z",
+    "updated_at": "2026-10-19T20:53:11Z",
     "detail": "observations retained"
    },
    {
