@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T19:45:02Z",
+ "generated_at": "2026-10-19T19:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
     "detail": "34 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 82,
+    "count": 85,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_8ce2b04a",
     "task": "Refresh stale same-day protected Shadow proofs for the current release",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_9863bd21",
     "task": "CODE-01 Resolve tied observation revisions by archive sequence",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_0615ec4b",
-    "task": "CODE-01 Reject public physical inputs with synthetic ancestry",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 82,
+   "progress_pct": 85,
    "last_finished_at": "2026-10-19T15:59:46Z",
    "last_passed": 13602,
    "last_failed": 0,
@@ -126,8 +126,8 @@
     2,
     4,
     1,
-    4,
-    7,
+    5,
+    6,
     3,
     4,
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 25,
     "building": 2,
-    "in_review": 3,
-    "awaiting_merge": 6,
+    "in_review": 2,
+    "awaiting_merge": 7,
     "merged": 274,
     "parked": 159
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T19:45:02Z",
+    "last_check_at": "2026-10-19T19:49:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
+    "runs_24h": 60,
     "runs_total": 170,
-    "last_run_at": "2026-10-19T19:35:03Z",
+    "last_run_at": "2026-10-19T19:50:02Z",
     "last_ok": true,
-    "last_kind": "engineering regression selftest failed",
+    "last_kind": "flow acceptance stalled",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T19:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance stalled"
+   },
+   {
+    "at": "2026-10-19T19:46:20Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject public physical inputs with synthetic ancestry”: passed"
+   },
    {
     "at": "2026-10-19T19:42:15Z",
     "kind": "build",
@@ -349,16 +359,6 @@
     "at": "2026-10-19T18:39:09Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T18:39:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-19T18:36:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Refresh stale same-day protected Shadow proofs for the current release” → sent to independent review"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T19:44:51Z",
-   "heartbeat_at": "2026-10-19T19:45:02Z",
+   "status_at": "2026-10-19T19:49:52Z",
+   "heartbeat_at": "2026-10-19T19:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -379,7 +379,7 @@
     "weather_events": 356,
     "markets": 3461,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T19:40:25Z",
+    "last_scan_at": "2026-10-19T19:46:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T19:40:25Z",
+    "updated_at": "2026-10-19T19:46:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T19:44:43Z",
+    "updated_at": "2026-10-19T19:48:45Z",
     "detail": "observations retained"
    },
    {
