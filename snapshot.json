@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T10:35:01Z",
+ "generated_at": "2026-10-19T10:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "5 ready to build"
+    "detail": "6 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "48 built in 24h"
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "63 merged in 24h"
+    "detail": "62 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,17 +70,17 @@
     "family": "DeepSeek",
     "task_id": "t_053b3f26",
     "task": "Wire the governed learning worker to forward captures and labels (no caller today)",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_6462a548",
+    "task": "New main SHA dbc0e40b5d51 Alpha V11 FLEX code task t_82efc8e2 opencode_go",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
@@ -116,25 +116,25 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 63,
-   "commits_24h": 63,
+   "merges_24h": 62,
+   "commits_24h": 62,
    "built_24h": 48,
    "build_failed_24h": 24,
    "reviews_passed_24h": 77,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    6,
+    5,
     1,
     4,
+    4,
+    0,
+    10,
     3,
-    1,
-    9,
+    2,
     4,
     2,
-    3,
-    3,
-    3,
-    2,
+    4,
+    1,
     0,
     9,
     5,
@@ -150,8 +150,8 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 18,
-    "building": 1,
+    "queued": 17,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 0,
     "merged": 269,
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T10:34:01Z",
+    "last_check_at": "2026-10-19T10:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -367,9 +367,9 @@
    "release": "70c90ca",
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-19",
-   "state": "making paper decisions",
-   "status_at": "2026-10-19T10:30:39Z",
-   "heartbeat_at": "2026-10-19T10:35:01Z",
+   "state": "census service",
+   "status_at": "2026-10-19T10:39:58Z",
+   "heartbeat_at": "2026-10-19T10:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -378,7 +378,7 @@
     "weather_events": 368,
     "markets": 3574,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T10:32:03Z",
+    "last_scan_at": "2026-10-19T10:37:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -394,21 +394,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-19T09:37:02Z",
+    "updated_at": "2026-10-19T10:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T10:32:03Z",
+    "updated_at": "2026-10-19T10:37:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T10:33:58Z",
+    "updated_at": "2026-10-19T10:40:00Z",
     "detail": "observations retained"
    },
    {
