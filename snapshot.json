@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T02:25:02Z",
+ "generated_at": "2026-10-19T02:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "51 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "85 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_ed582e3d",
-    "task": "PAPER-05 Show capability-proof failures and unknowns in the daily/weekly audit station…",
-    "elapsed_min": 24
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -86,21 +86,21 @@
     "slot": "Reviewer 1",
     "role": "review",
     "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_7ef43a80",
-    "task": "FLEX candidate t_0fffbbf1 a7eb7c7aae90",
-    "elapsed_min": 4
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_3785cb6e",
+    "task": "a build task",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_01b8da0c",
+    "task": "FLEX candidate t_ed582e3d 97104a1a145c",
+    "elapsed_min": 3
    }
   ],
   "qa": {
@@ -120,28 +120,28 @@
    "commits_24h": 85,
    "built_24h": 51,
    "build_failed_24h": 15,
-   "reviews_passed_24h": 85,
+   "reviews_passed_24h": 86,
    "reviews_changes_24h": 3,
    "commits_by_hour": [
     5,
     6,
     2,
-    4,
-    4,
+    5,
+    3,
     0,
     3,
     3,
     5,
     2,
     3,
-    3,
-    2,
-    8,
-    5,
-    2,
-    3,
-    2,
     4,
+    1,
+    9,
+    4,
+    2,
+    3,
+    3,
+    3,
     2,
     0,
     8,
@@ -153,12 +153,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 20,
-    "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 1,
+    "queued": 21,
+    "building": 0,
+    "in_review": 2,
+    "awaiting_merge": 2,
     "merged": 264,
-    "parked": 145
+    "parked": 144
    }
   },
   "architect": {
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T02:25:02Z",
+    "last_check_at": "2026-10-19T02:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T02:26:24Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “FLEX candidate t_0fffbbf1 a7eb7c7aae90”: passed"
+   },
+   {
+    "at": "2026-10-19T02:26:11Z",
+    "kind": "build",
+    "text": "MiniMax M3 built “PAPER-05 Show capability-proof failures and unknowns in the…” → sent to independent review"
+   },
    {
     "at": "2026-10-19T02:25:01Z",
     "kind": "heal",
@@ -350,16 +360,6 @@
     "at": "2026-10-19T01:04:13Z",
     "kind": "warn",
     "text": "DeepSeek V4.1 Flash's build of “Perpetual brain preparer must follow the commissioned Shadow release…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T01:03:10Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T00:59:17Z",
-    "kind": "review",
-    "text": "DeepSeek V4.1 Flash reviewed “New main SHA 763e0c8837ad Alpha V11 FLEX code task t_1a6cb85d claude”: passed"
    }
   ]
  },
@@ -370,17 +370,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T02:24:59Z",
-   "heartbeat_at": "2026-10-19T02:25:01Z",
+   "status_at": "2026-10-19T02:29:59Z",
+   "heartbeat_at": "2026-10-19T02:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 319,
-    "markets": 3054,
+    "weather_events": 318,
+    "markets": 3043,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T02:23:58Z",
+    "last_scan_at": "2026-10-19T02:29:36Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T02:23:58Z",
+    "updated_at": "2026-10-19T02:29:36Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T02:23:04Z",
+    "updated_at": "2026-10-19T02:29:07Z",
     "detail": "observations retained"
    },
    {
