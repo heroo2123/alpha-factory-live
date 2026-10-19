@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T21:30:02Z",
+ "generated_at": "2026-10-19T21:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,26 +15,26 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "49 built in 24h"
+    "detail": "48 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "44 merged in 24h"
+    "detail": "47 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_068d96ad",
+    "task": "Restore frozen Shadow authority with complete writer inventory",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "DeepSeek",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 28
+    "elapsed_min": 33
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_709e990e",
-    "task": "LIVE-15 Reject guardian-client completion after the absolute deadline",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -116,19 +116,19 @@
   },
   "tests_passing": 13617,
   "flow": {
-   "merges_24h": 44,
-   "commits_24h": 44,
-   "built_24h": 49,
-   "build_failed_24h": 26,
-   "reviews_passed_24h": 59,
-   "reviews_changes_24h": 13,
+   "merges_24h": 47,
+   "commits_24h": 47,
+   "built_24h": 48,
+   "build_failed_24h": 25,
+   "reviews_passed_24h": 60,
+   "reviews_changes_24h": 14,
    "commits_by_hour": [
     2,
     0,
-    8,
-    6,
-    3,
-    1,
+    9,
+    5,
+    4,
+    0,
     3,
     0,
     1,
@@ -146,16 +146,16 @@
     2,
     0,
     12,
-    3
+    6
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 21,
-    "building": 1,
-    "in_review": 3,
-    "awaiting_merge": 1,
-    "merged": 289,
-    "parked": 159
+    "building": 2,
+    "in_review": 0,
+    "awaiting_merge": 0,
+    "merged": 292,
+    "parked": 160
    }
   },
   "architect": {
@@ -165,6 +165,21 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T21:33:52Z",
+    "title": "LIVE-15 Reject guardian-client completion after the absolute deadline",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-19T21:32:50Z",
+    "title": "CODE-01 Resolve tied observation revisions by archive sequence",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-19T21:32:20Z",
+    "title": "PAPER-09 Expire cached PWS quality when supporting history ages out",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-19T21:29:42Z",
     "title": "PAPER-09 Separate PWS score comparisons by label evidence class",
@@ -189,21 +204,6 @@
     "at": "2026-10-19T20:16:52Z",
     "title": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
     "area": "Forecast brain"
-   },
-   {
-    "at": "2026-10-19T20:16:29Z",
-    "title": "CODE-01 Flag backward source timestamps as risk revisions",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T20:13:40Z",
-    "title": "PAPER-09 Deduplicate repeated PWS comparisons by prediction and label",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T20:10:04Z",
-    "title": "CODE-01 Reject public physical inputs with synthetic ancestry",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T21:30:03Z",
+    "last_check_at": "2026-10-19T21:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,7 +226,7 @@
      "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-19T21:20:02Z",
+    "last_check_at": "2026-10-19T21:33:23Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -246,6 +246,36 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T21:33:52Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Reject guardian-client completion after the absolute deadline” into the main build"
+   },
+   {
+    "at": "2026-10-19T21:33:14Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Hash-bound adversarial verification runner for cancel-only guardian”: changes required"
+   },
+   {
+    "at": "2026-10-19T21:32:50Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Resolve tied observation revisions by archive sequence” into the main build"
+   },
+   {
+    "at": "2026-10-19T21:32:20Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Expire cached PWS quality when supporting history ages out” into the main build"
+   },
+   {
+    "at": "2026-10-19T21:31:24Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Reject guardian-client completion after the absolute deadline”: passed"
+   },
+   {
+    "at": "2026-10-19T21:30:24Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “CODE-01 Resolve tied observation revisions by archive sequence”: passed"
+   },
    {
     "at": "2026-10-19T21:30:03Z",
     "kind": "heal",
@@ -325,36 +355,6 @@
     "at": "2026-10-19T20:37:25Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_86509a0d faf78ed7ee97”: passed"
-   },
-   {
-    "at": "2026-10-19T20:34:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “FLEX candidate t_ad80ea86 fe8b1590494b” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T20:33:13Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “Hash-bound adversarial verification runner for cancel-only guardian” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T20:32:59Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance stalled"
-   },
-   {
-    "at": "2026-10-19T20:30:16Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-19T20:20:52Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Retain bounded guardian check receipt provenance” into the main build"
-   },
-   {
-    "at": "2026-10-19T20:20:00Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 Make candidate ranking independent of ambient Decimal…” into the main build"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T21:29:55Z",
-   "heartbeat_at": "2026-10-19T21:30:02Z",
+   "status_at": "2026-10-19T21:34:59Z",
+   "heartbeat_at": "2026-10-19T21:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,7 +375,7 @@
     "weather_events": 349,
     "markets": 3386,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T21:25:50Z",
+    "last_scan_at": "2026-10-19T21:31:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T21:25:50Z",
+    "updated_at": "2026-10-19T21:31:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T21:29:24Z",
+    "updated_at": "2026-10-19T21:33:26Z",
     "detail": "observations retained"
    },
    {
@@ -624,8 +624,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 19,
-     "open_tasks": 1
+     "merged_tasks": 20,
+     "open_tasks": 0
     },
     {
      "id": "CODE-02",
@@ -723,8 +723,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 19,
-     "open_tasks": 2
+     "merged_tasks": 20,
+     "open_tasks": 1
     },
     {
      "id": "PAPER-10",
@@ -1002,8 +1002,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 7,
-     "open_tasks": 4
+     "merged_tasks": 8,
+     "open_tasks": 3
     },
     {
      "id": "LIVE-16",
