@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T11:15:02Z",
+ "generated_at": "2026-10-19T11:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 17,
     "unit": "queued",
     "active": false,
     "detail": "7 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "50 built in 24h"
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_ab128c9c",
+    "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_e895e8a4",
     "task": "CODE-01 Add weekly station/strategy review and demotion-candidate section to audit reports",
-    "elapsed_min": 26
+    "elapsed_min": 31
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_866d5a7b",
+    "task": "a build task",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -124,16 +124,16 @@
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
+    3,
+    3,
+    2,
+    7,
+    6,
+    1,
+    4,
     2,
     4,
     2,
-    2,
-    10,
-    2,
-    4,
-    2,
-    3,
-    3,
     0,
     7,
     7,
@@ -150,8 +150,8 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 18,
-    "building": 1,
+    "queued": 17,
+    "building": 2,
     "in_review": 2,
     "awaiting_merge": 0,
     "merged": 271,
@@ -160,7 +160,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T06:50:02Z",
+   "last_run_at": "2026-10-19T11:20:02Z",
    "last_planned": 0,
    "model": "Kimi K3"
   },
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T11:14:02Z",
+    "last_check_at": "2026-10-19T11:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T11:20:02Z",
+    "kind": "plan",
+    "text": "Architect (Kimi K3) planned 0 new tasks"
+   },
    {
     "at": "2026-10-19T11:04:02Z",
     "kind": "heal",
@@ -354,11 +359,6 @@
     "at": "2026-10-19T06:10:12Z",
     "kind": "review",
     "text": "GLM 5.2 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T06:08:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
    }
   ]
  },
@@ -376,10 +376,10 @@
    "days_with_market_data": 3,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 371,
-    "markets": 3607,
+    "weather_events": 372,
+    "markets": 3621,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T11:11:27Z",
+    "last_scan_at": "2026-10-19T11:17:04Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T11:11:27Z",
+    "updated_at": "2026-10-19T11:17:04Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T11:14:14Z",
+    "updated_at": "2026-10-19T11:18:15Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +507,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T10:17:02Z",
+   "updated_at": "2026-10-19T11:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
