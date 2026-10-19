@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T19:20:02Z",
+ "generated_at": "2026-10-19T19:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "49 built in 24h"
+    "detail": "48 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
     "detail": "35 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 62,
+    "count": 66,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0615ec4b",
     "task": "CODE-01 Reject public physical inputs with synthetic ancestry",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_5a0771e1",
     "task": "PAPER-09 Deduplicate repeated PWS comparisons by prediction and label",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Reviewer 1",
@@ -90,12 +90,12 @@
     "family": "DeepSeek",
     "task_id": "t_8ce2b04a",
     "task": "Refresh stale same-day protected Shadow proofs for the current release",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 62,
+   "progress_pct": 66,
    "last_finished_at": "2026-10-19T15:59:46Z",
    "last_passed": 13602,
    "last_failed": 0,
@@ -118,19 +118,19 @@
   "flow": {
    "merges_24h": 35,
    "commits_24h": 35,
-   "built_24h": 49,
+   "built_24h": 48,
    "build_failed_24h": 26,
-   "reviews_passed_24h": 61,
+   "reviews_passed_24h": 62,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     2,
     4,
     2,
     0,
-    7,
-    7,
-    2,
-    2,
+    8,
+    6,
+    3,
+    1,
     3,
     0,
     1,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 27,
     "building": 2,
-    "in_review": 3,
-    "awaiting_merge": 5,
+    "in_review": 2,
+    "awaiting_merge": 6,
     "merged": 274,
     "parked": 157
    }
@@ -214,26 +214,25 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T19:20:02Z",
+    "last_check_at": "2026-10-19T19:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 2
+     "P2": 1
     },
     "codes": [
      "flow shadow frozen authority drift",
-     "flow acceptance stalled",
-     "flow review oversized"
+     "flow acceptance stalled"
     ],
-    "last_check_at": "2026-10-19T19:10:02Z",
+    "last_check_at": "2026-10-19T19:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 60,
+    "runs_24h": 59,
     "runs_total": 168,
     "last_run_at": "2026-10-19T19:15:02Z",
     "last_ok": true,
@@ -251,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T19:21:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Bound consecutive PWS QC retries so one event cannot starve…”: passed"
+   },
    {
     "at": "2026-10-19T19:19:01Z",
     "kind": "warn",
@@ -355,11 +359,6 @@
     "at": "2026-10-19T18:20:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: routine"
-   },
-   {
-    "at": "2026-10-19T18:19:17Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Preserve decimal distinctions when ranking capital…”: passed"
    }
   ]
  },
@@ -370,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T19:19:57Z",
-   "heartbeat_at": "2026-10-19T19:20:01Z",
+   "status_at": "2026-10-19T19:24:57Z",
+   "heartbeat_at": "2026-10-19T19:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -380,7 +379,7 @@
     "weather_events": 358,
     "markets": 3483,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T19:15:44Z",
+    "last_scan_at": "2026-10-19T19:21:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T19:15:44Z",
+    "updated_at": "2026-10-19T19:21:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T19:18:32Z",
+    "updated_at": "2026-10-19T19:24:35Z",
     "detail": "observations retained"
    },
    {
