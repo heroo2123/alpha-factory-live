@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T12:50:03Z",
+ "generated_at": "2026-10-19T12:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "57 merged in 24h"
+    "detail": "56 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Zhipu",
     "task_id": "t_f13ccb14",
     "task": "PAPER-09 Record the market-book repricing lead in PWS receipt scoring",
-    "elapsed_min": 27
+    "elapsed_min": 32
    },
    {
     "slot": "Builder 2",
@@ -116,27 +116,27 @@
   },
   "tests_passing": 13576,
   "flow": {
-   "merges_24h": 57,
-   "commits_24h": 57,
+   "merges_24h": 56,
+   "commits_24h": 56,
    "built_24h": 49,
    "build_failed_24h": 23,
    "reviews_passed_24h": 74,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    3,
+    2,
     4,
     0,
     10,
     3,
     4,
     2,
-    2,
-    4,
+    3,
+    3,
     1,
     5,
-    6,
+    8,
+    2,
     3,
-    4,
     0,
     3,
     0,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T12:50:03Z",
+    "last_check_at": "2026-10-19T12:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow shadow census churn",
      "flow review answer lost"
     ],
-    "last_check_at": "2026-10-19T12:40:02Z",
+    "last_check_at": "2026-10-19T12:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -411,7 +411,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T12:48:48Z",
+    "updated_at": "2026-10-19T12:54:51Z",
     "detail": "observations retained"
    },
    {
