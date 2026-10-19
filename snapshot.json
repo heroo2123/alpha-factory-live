@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T11:40:02Z",
+ "generated_at": "2026-10-19T11:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "6 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "50 built in 24h"
@@ -70,17 +70,17 @@
     "family": "Zhipu",
     "task_id": "t_8b133f43",
     "task": "Render-only hardened systemd units for distinct-principal guardian broker/client",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_dfef0e61",
+    "task": "PAPER-08 Reconcile SELL exit fills in the paper risk observation",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -123,20 +123,20 @@
    "reviews_passed_24h": 77,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    1,
-    4,
+    2,
+    3,
     4,
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9,
-    5,
+    4,
+    7,
+    3,
     4,
     0,
     3,
@@ -150,19 +150,19 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 16,
-    "building": 1,
+    "queued": 21,
+    "building": 2,
     "in_review": 2,
     "awaiting_merge": 0,
     "merged": 271,
-    "parked": 150
+    "parked": 148
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T11:20:02Z",
-   "last_planned": 0,
-   "model": "Kimi K3"
+   "last_run_at": "2026-10-19T11:40:13Z",
+   "last_planned": 6,
+   "model": "GLM 5.2"
   },
   "recent_merges": [
    {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T11:39:01Z",
+    "last_check_at": "2026-10-19T11:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,15 +227,15 @@
      "flow worker exception repeat",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T11:30:02Z",
+    "last_check_at": "2026-10-19T11:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 58,
     "runs_total": 150,
-    "last_run_at": "2026-10-19T11:35:02Z",
+    "last_run_at": "2026-10-19T11:45:01Z",
     "last_ok": true,
-    "last_kind": "flow worker exception repeat",
+    "last_kind": "flow reviewed work quarantined",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T11:45:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow reviewed work quarantined"
+   },
+   {
+    "at": "2026-10-19T11:40:13Z",
+    "kind": "plan",
+    "text": "Architect (GLM 5.2) planned 6 new tasks"
+   },
    {
     "at": "2026-10-19T11:35:02Z",
     "kind": "heal",
@@ -349,16 +359,6 @@
     "at": "2026-10-19T09:10:01Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-19T08:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: routine"
-   },
-   {
-    "at": "2026-10-19T08:34:24Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 13576 passed, 0 failed"
    }
   ]
  },
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T11:38:23Z",
+    "updated_at": "2026-10-19T11:44:25Z",
     "detail": "observations retained"
    },
    {
@@ -629,7 +629,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 17,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "CODE-02",
@@ -710,7 +710,7 @@
      "status": "pending",
      "detail": "re-check inconclusive",
      "merged_tasks": 6,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-08",
@@ -719,7 +719,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 8,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-09",
@@ -728,7 +728,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 13,
-     "open_tasks": 0
+     "open_tasks": 2
     },
     {
      "id": "PAPER-10",
@@ -1007,7 +1007,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 4,
-     "open_tasks": 2
+     "open_tasks": 3
     },
     {
      "id": "LIVE-16",
