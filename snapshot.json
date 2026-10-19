@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T11:20:02Z",
+ "generated_at": "2026-10-19T11:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_ab128c9c",
     "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_e895e8a4",
     "task": "CODE-01 Add weekly station/strategy review and demotion-candidate section to audit reports",
-    "elapsed_min": 31
+    "elapsed_min": 36
    },
    {
     "slot": "Reviewer 1",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_866d5a7b",
+    "task_id": "t_d3d2f1fb",
     "task": "a build task",
-    "elapsed_min": 0
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -118,27 +118,27 @@
   "flow": {
    "merges_24h": 60,
    "commits_24h": 60,
-   "built_24h": 50,
+   "built_24h": 49,
    "build_failed_24h": 22,
-   "reviews_passed_24h": 77,
+   "reviews_passed_24h": 78,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
     3,
     3,
     2,
-    7,
-    6,
-    1,
-    4,
+    8,
+    5,
+    2,
+    3,
     2,
     4,
     2,
     0,
-    7,
-    7,
-    2,
-    2,
+    8,
+    6,
+    3,
+    1,
     3,
     0,
     1,
@@ -152,7 +152,7 @@
    "stage_totals": {
     "queued": 17,
     "building": 2,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 271,
     "parked": 150
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T11:19:01Z",
+    "last_check_at": "2026-10-19T11:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,7 +227,7 @@
      "flow worker exception repeat",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-19T11:10:02Z",
+    "last_check_at": "2026-10-19T11:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T11:22:12Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-19T11:20:02Z",
     "kind": "plan",
@@ -354,11 +359,6 @@
     "at": "2026-10-19T06:12:07Z",
     "kind": "warn",
     "text": "MiniMax M3's build of “Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T06:10:12Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “a task”: passed"
    }
   ]
  },
@@ -379,7 +379,7 @@
     "weather_events": 372,
     "markets": 3621,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T11:17:04Z",
+    "last_scan_at": "2026-10-19T11:23:09Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T11:17:04Z",
+    "updated_at": "2026-10-19T11:23:09Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T11:18:15Z",
+    "updated_at": "2026-10-19T11:24:18Z",
     "detail": "observations retained"
    },
    {
