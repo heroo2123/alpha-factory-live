@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T02:30:02Z",
+ "generated_at": "2026-10-19T02:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "13 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 2,
     "unit": "building",
-    "active": false,
-    "detail": "51 built in 24h"
+    "active": true,
+    "detail": "50 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,17 +65,27 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_d61ef242",
+    "task": "Fix 1 failure in : re-pin writer inventory on current head",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_5065cd2a",
+    "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
+    "elapsed_min": 0
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -83,24 +93,14 @@
     "elapsed_min": null
    },
    {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_3785cb6e",
-    "task": "a build task",
-    "elapsed_min": 3
-   },
-   {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_01b8da0c",
-    "task": "FLEX candidate t_ed582e3d 97104a1a145c",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -118,23 +118,23 @@
   "flow": {
    "merges_24h": 85,
    "commits_24h": 85,
-   "built_24h": 51,
+   "built_24h": 50,
    "build_failed_24h": 15,
-   "reviews_passed_24h": 86,
+   "reviews_passed_24h": 88,
    "reviews_changes_24h": 3,
    "commits_by_hour": [
-    5,
-    6,
-    2,
+    4,
+    7,
+    1,
     5,
     3,
     0,
-    3,
-    3,
-    5,
-    2,
-    3,
     4,
+    2,
+    6,
+    1,
+    4,
+    3,
     1,
     9,
     4,
@@ -144,20 +144,19 @@
     3,
     2,
     0,
-    8,
-    6,
-    3
+    9,
+    5,
+    4
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
-    "protected code: waiting for a second review"
+    "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 21,
-    "building": 0,
-    "in_review": 2,
+    "queued": 19,
+    "building": 2,
+    "in_review": 0,
     "awaiting_merge": 2,
-    "merged": 264,
+    "merged": 265,
     "parked": 144
    }
   },
@@ -215,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T02:29:01Z",
+    "last_check_at": "2026-10-19T02:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,15 +227,15 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T02:20:02Z",
+    "last_check_at": "2026-10-19T02:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
-    "runs_total": 129,
-    "last_run_at": "2026-10-19T02:25:01Z",
+    "runs_24h": 60,
+    "runs_total": 130,
+    "last_run_at": "2026-10-19T02:35:01Z",
     "last_ok": true,
-    "last_kind": "flow scope split stuck",
+    "last_kind": "full suite not green",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +250,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T02:35:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: full suite not green"
+   },
+   {
+    "at": "2026-10-19T02:34:21Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “FLEX candidate t_ed582e3d 97104a1a145c”: passed"
+   },
+   {
+    "at": "2026-10-19T02:30:20Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-19T02:26:24Z",
     "kind": "review",
@@ -342,24 +356,9 @@
     "text": "DeepSeek V4.1 Flash's build of “LIVE-10 Check a certification scope's horizon against the event…” failed its tests; it will be retried"
    },
    {
-    "at": "2026-10-19T01:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-19T01:19:05Z",
     "kind": "warn",
     "text": "MiniMax M3's build of “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-19T01:14:10Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T01:04:13Z",
-    "kind": "warn",
-    "text": "DeepSeek V4.1 Flash's build of “Perpetual brain preparer must follow the commissioned Shadow release…” failed its tests; it will be retried"
    }
   ]
  },
@@ -370,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T02:29:59Z",
-   "heartbeat_at": "2026-10-19T02:30:01Z",
+   "status_at": "2026-10-19T02:35:00Z",
+   "heartbeat_at": "2026-10-19T02:35:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -410,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T02:29:07Z",
+    "updated_at": "2026-10-19T02:33:09Z",
     "detail": "observations retained"
    },
    {
