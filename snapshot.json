@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T00:40:02Z",
+ "generated_at": "2026-10-19T00:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 30,
+    "count": 31,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 39,
+    "count": 38,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "84 merged in 24h"
+    "detail": "85 merged in 24h"
    },
    {
     "key": "qa",
@@ -80,7 +80,7 @@
     "family": "MiniMax",
     "task_id": "t_74a32a4b",
     "task": "New main SHA 763e0c8837ad Alpha V11 FLEX code task t_1a6cb85d claude",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "Zhipu",
     "task_id": "t_12225c43",
     "task": "a build task",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 13326,
   "flow": {
-   "merges_24h": 84,
-   "commits_24h": 84,
+   "merges_24h": 85,
+   "commits_24h": 85,
    "built_24h": 54,
    "build_failed_24h": 11,
    "reviews_passed_24h": 84,
@@ -125,38 +125,38 @@
    "commits_by_hour": [
     0,
     8,
-    4,
-    8,
+    5,
+    7,
     0,
     5,
     3,
     0,
     4,
-    3,
-    5,
-    1,
     4,
+    4,
+    2,
+    3,
     4,
     0,
     10,
     3,
-    2,
-    4,
+    3,
+    3,
     2,
     4,
     1,
-    0,
-    9
+    4,
+    6
    ],
    "merge_holds": [
     "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 30,
+    "queued": 31,
     "building": 1,
-    "in_review": 39,
-    "awaiting_merge": 6,
-    "merged": 256,
+    "in_review": 38,
+    "awaiting_merge": 5,
+    "merged": 257,
     "parked": 100
    }
   },
@@ -167,6 +167,11 @@
    "model": "Kimi K3"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T00:42:01Z",
+    "title": "New evidence-only merge/NegRisk-conversion screen over normalized public books",
+    "area": "Position management"
+   },
    {
     "at": "2026-10-19T00:31:32Z",
     "title": "PAPER-07 Record committed census source receipts on CENSUS_INTERRUPTED and on…",
@@ -201,11 +206,6 @@
     "at": "2026-10-18T23:43:53Z",
     "title": "Model-vs-market edge evaluator after Polymarket weather fees (funding gate metric)",
     "area": "Forecast brain"
-   },
-   {
-    "at": "2026-10-18T23:43:32Z",
-    "title": "Forward label score: shadow-score research challenger and pre-day market price next to…",
-    "area": "Forecast brain"
    }
   ],
   "self_healing": {
@@ -214,29 +214,28 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:39:01Z",
+    "last_check_at": "2026-10-19T00:44:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 1,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 1
+     "P2": 0
     },
     "codes": [
-     "flow brain capture missed",
-     "flow pin guard scope missing"
+     "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T00:30:02Z",
+    "last_check_at": "2026-10-19T00:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
-    "runs_total": 122,
-    "last_run_at": "2026-10-19T00:35:02Z",
+    "runs_24h": 59,
+    "runs_total": 123,
+    "last_run_at": "2026-10-19T00:45:02Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "flow pin guard scope missing",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T00:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow pin guard scope missing"
+   },
+   {
+    "at": "2026-10-19T00:42:01Z",
+    "kind": "merge",
+    "text": "Merged “New evidence-only merge/NegRisk-conversion screen over normalized…” into the main build"
+   },
    {
     "at": "2026-10-19T00:37:24Z",
     "kind": "review",
@@ -350,16 +359,6 @@
     "at": "2026-10-19T00:03:15Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T00:03:11Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “offline_learning: flag challenger selected on the preregistered grid…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T00:00:42Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “a task”: passed"
    }
   ]
  },
@@ -370,17 +369,17 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:39:51Z",
-   "heartbeat_at": "2026-10-19T00:40:03Z",
+   "status_at": "2026-10-19T00:44:51Z",
+   "heartbeat_at": "2026-10-19T00:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 330,
-    "markets": 3175,
+    "weather_events": 329,
+    "markets": 3164,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T00:38:06Z",
+    "last_scan_at": "2026-10-19T00:43:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T00:38:06Z",
+    "updated_at": "2026-10-19T00:43:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:38:25Z",
+    "updated_at": "2026-10-19T00:44:27Z",
     "detail": "observations retained"
    },
    {
@@ -535,6 +534,11 @@
   },
   "skills": [
    {
+    "title": "New evidence-only merge/NegRisk-conversion screen over normalized public books",
+    "area": "Position management",
+    "merged_at": "2026-10-19T00:42:01Z"
+   },
+   {
     "title": "Spec 6A safety modes step 3: owner panel commands",
     "area": "Pre-funding checks",
     "merged_at": "2026-10-19T00:00:36Z"
@@ -578,11 +582,6 @@
     "title": "Wire authenticated Telegram operator safety commands into the assembled Shadow/PAPER…",
     "area": "Pre-funding checks",
     "merged_at": "2026-10-18T20:52:27Z"
-   },
-   {
-    "title": "Read-only V11 operator /status rendering (flags, account, cancel requested vs confirmed)",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T20:26:04Z"
    }
   ],
   "readiness": {
