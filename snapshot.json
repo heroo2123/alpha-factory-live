@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T19:30:02Z",
+ "generated_at": "2026-10-19T19:35:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 28,
+    "count": 27,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 69,
+    "count": 72,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,42 +70,42 @@
     "family": "OpenAI",
     "task_id": "t_0615ec4b",
     "task": "CODE-01 Reject public physical inputs with synthetic ancestry",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_a0935754",
+    "task": "Perpetual brain preparer must follow the commissioned Shadow release (8 station forward…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_5a0771e1",
+    "task": "PAPER-09 Deduplicate repeated PWS comparisons by prediction and label",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_86509a0d",
+    "task": "FLEX candidate t_ad80ea86 fe8b1590494b",
+    "elapsed_min": 0
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 69,
+   "progress_pct": 72,
    "last_finished_at": "2026-10-19T15:59:46Z",
    "last_passed": 13602,
    "last_failed": 0,
@@ -127,10 +127,10 @@
     3,
     2,
     0,
-    8,
-    6,
-    3,
-    1,
+    9,
+    5,
+    4,
+    0,
     3,
     0,
     1,
@@ -152,9 +152,9 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 28,
+    "queued": 27,
     "building": 2,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 6,
     "merged": 274,
     "parked": 158
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-19T19:29:02Z",
+    "last_check_at": "2026-10-19T19:34:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,17 +228,17 @@
      "flow shadow frozen authority drift",
      "flow acceptance stalled"
     ],
-    "last_check_at": "2026-10-19T19:20:02Z",
+    "last_check_at": "2026-10-19T19:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 59,
     "runs_total": 169,
-    "last_run_at": "2026-10-19T19:15:02Z",
+    "last_run_at": "2026-10-19T19:35:03Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "engineering regression selftest failed",
     "running": false,
-    "model": "Claude Opus",
+    "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -250,6 +250,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T19:35:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-19T19:30:18Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “PAPER-09 Deduplicate repeated PWS comparisons by prediction and label” → sent to independent review"
+   },
    {
     "at": "2026-10-19T19:27:16Z",
     "kind": "warn",
@@ -349,16 +359,6 @@
     "at": "2026-10-19T18:26:17Z",
     "kind": "merge",
     "text": "Merged “LIVE-15 Recheck worker identity before accepting a guardian lease” into the main build"
-   },
-   {
-    "at": "2026-10-19T18:25:47Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-09 Verify the complete retained PWS score population” into the main build"
-   },
-   {
-    "at": "2026-10-19T18:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T19:29:57Z",
-   "heartbeat_at": "2026-10-19T19:30:02Z",
+   "status_at": "2026-10-19T19:34:59Z",
+   "heartbeat_at": "2026-10-19T19:35:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -379,7 +379,7 @@
     "weather_events": 358,
     "markets": 3483,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T19:27:55Z",
+    "last_scan_at": "2026-10-19T19:34:05Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T19:27:55Z",
+    "updated_at": "2026-10-19T19:34:05Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T19:28:36Z",
+    "updated_at": "2026-10-19T19:34:39Z",
     "detail": "observations retained"
    },
    {
