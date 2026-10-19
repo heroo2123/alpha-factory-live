@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T00:50:02Z",
+ "generated_at": "2026-10-19T00:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "54 built in 24h"
    },
    {
@@ -25,16 +25,16 @@
     "name": "Independent review",
     "count": 38,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "86 merged in 24h"
+    "detail": "88 merged in 24h"
    },
    {
     "key": "qa",
@@ -75,22 +75,22 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_74a32a4b",
-    "task": "New main SHA 763e0c8837ad Alpha V11 FLEX code task t_1a6cb85d claude",
-    "elapsed_min": 19
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_22037e5a",
-    "task": "a build task",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,37 +116,37 @@
   },
   "tests_passing": 13326,
   "flow": {
-   "merges_24h": 86,
-   "commits_24h": 86,
+   "merges_24h": 88,
+   "commits_24h": 88,
    "built_24h": 54,
    "build_failed_24h": 11,
    "reviews_passed_24h": 84,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    2,
-    7,
+    4,
     5,
     6,
+    5,
     0,
     5,
     3,
     1,
-    3,
     4,
-    5,
-    1,
-    3,
+    4,
+    4,
+    2,
+    2,
     4,
     0,
     10,
     3,
     4,
     2,
-    2,
-    4,
+    3,
+    3,
     1,
     5,
-    6
+    8
    ],
    "merge_holds": [
     "targeted tests failed"
@@ -155,8 +155,8 @@
     "queued": 31,
     "building": 1,
     "in_review": 38,
-    "awaiting_merge": 4,
-    "merged": 258,
+    "awaiting_merge": 2,
+    "merged": 260,
     "parked": 100
    }
   },
@@ -167,6 +167,16 @@
    "model": "Kimi K3"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-19T00:55:00Z",
+    "title": "Brain forward supervisor scorer must use the live Shadow release code, not the frozen…",
+    "area": "Forecast brain"
+   },
+   {
+    "at": "2026-10-19T00:51:57Z",
+    "title": "Guardian custody namespace fixture must classify Ubuntu AppArmor userns restriction as…",
+    "area": "Test repairs"
+   },
    {
     "at": "2026-10-19T00:46:09Z",
     "title": "offline_learning: flag challenger selected on the preregistered grid edge (root cause of…",
@@ -196,16 +206,6 @@
     "at": "2026-10-19T00:00:36Z",
     "title": "Spec 6A safety modes step 3: owner panel commands",
     "area": "Pre-funding checks"
-   },
-   {
-    "at": "2026-10-18T23:50:00Z",
-    "title": "Same-day observed-so-far conditioned forecast evaluation for station (new tool)",
-    "area": "Forecast brain"
-   },
-   {
-    "at": "2026-10-18T23:44:17Z",
-    "title": "Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with dependence-group weights (new…",
-    "area": "Forecast brain"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:49:02Z",
+    "last_check_at": "2026-10-19T00:54:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,7 +227,7 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T00:40:02Z",
+    "last_check_at": "2026-10-19T00:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,21 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T00:55:00Z",
+    "kind": "merge",
+    "text": "Merged “Brain forward supervisor scorer must use the live Shadow release…” into the main build"
+   },
+   {
+    "at": "2026-10-19T00:54:10Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-19T00:51:57Z",
+    "kind": "merge",
+    "text": "Merged “Guardian custody namespace fixture must classify Ubuntu AppArmor…” into the main build"
+   },
    {
     "at": "2026-10-19T00:50:02Z",
     "kind": "heal",
@@ -344,21 +359,6 @@
     "at": "2026-10-19T00:13:06Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-19T00:12:05Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-19T00:10:08Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T00:09:14Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “a task”: passed"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:49:52Z",
-   "heartbeat_at": "2026-10-19T00:50:02Z",
+   "status_at": "2026-10-19T00:54:52Z",
+   "heartbeat_at": "2026-10-19T00:55:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:48:29Z",
+    "updated_at": "2026-10-19T00:54:31Z",
     "detail": "observations retained"
    },
    {
@@ -534,6 +534,11 @@
   },
   "skills": [
    {
+    "title": "Brain forward supervisor scorer must use the live Shadow release code, not the frozen…",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-19T00:55:00Z"
+   },
+   {
     "title": "offline_learning: flag challenger selected on the preregistered grid edge (root cause of…",
     "area": "Forecast brain",
     "merged_at": "2026-10-19T00:46:09Z"
@@ -577,11 +582,6 @@
     "title": "Spec 6A safety modes step 2: executor enforces scoped reductions",
     "area": "Pre-funding checks",
     "merged_at": "2026-10-18T21:37:11Z"
-   },
-   {
-    "title": "Add Polymarket exchange heartbeat dead-man switch",
-    "area": "Live safety",
-    "merged_at": "2026-10-18T21:19:09Z"
    }
   ],
   "readiness": {
