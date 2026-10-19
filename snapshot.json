@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:14:59Z",
+ "generated_at": "2026-10-19T01:15:08Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 24,
     "unit": "queued",
     "active": false,
     "detail": "14 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
     "active": true,
     "detail": "53 built in 24h"
@@ -127,15 +127,15 @@
     4,
     7,
     2,
-    2,
-    6,
+    3,
+    5,
     0,
     3,
     2,
     6,
     2,
-    2,
-    4,
+    3,
+    3,
     2,
     2,
     10,
@@ -152,8 +152,8 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 23,
-    "building": 1,
+    "queued": 24,
+    "building": 0,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 261,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T01:14:01Z",
+    "last_check_at": "2026-10-19T01:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -370,7 +370,7 @@
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
    "status_at": "2026-10-19T01:14:54Z",
-   "heartbeat_at": "2026-10-19T01:14:58Z",
+   "heartbeat_at": "2026-10-19T01:15:08Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
