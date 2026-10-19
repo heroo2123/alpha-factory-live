@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T20:35:02Z",
+ "generated_at": "2026-10-19T20:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 23,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "44 merged in 24h"
+    "detail": "45 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_6f734af1",
     "task": "PAPER-09 Validate complete and distinct PWS learning-pair children",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_18c78e28",
     "task": "PAPER-09 Expire cached PWS quality when supporting history ages out",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_7a33d7ad",
-    "task": "FLEX candidate t_86509a0d faf78ed7ee97",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,15 +116,15 @@
   },
   "tests_passing": 13617,
   "flow": {
-   "merges_24h": 44,
-   "commits_24h": 44,
+   "merges_24h": 45,
+   "commits_24h": 45,
    "built_24h": 47,
    "build_failed_24h": 26,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
-    3,
-    2,
+    4,
+    1,
     0,
     9,
     5,
@@ -146,15 +146,15 @@
     0,
     2,
     0,
-    12
+    13
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 23,
     "building": 2,
-    "in_review": 3,
+    "in_review": 2,
     "awaiting_merge": 0,
-    "merged": 286,
+    "merged": 287,
     "parked": 160
    }
   },
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T20:34:02Z",
+    "last_check_at": "2026-10-19T20:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -245,10 +245,14 @@
    "Claude",
    "Codex",
    "DeepSeek",
-   "GLM",
-   "MiniMax"
+   "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T20:37:25Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_86509a0d faf78ed7ee97”: passed"
+   },
    {
     "at": "2026-10-19T20:34:13Z",
     "kind": "build",
@@ -353,11 +357,6 @@
     "at": "2026-10-19T20:05:23Z",
     "kind": "merge",
     "text": "Merged “Correct Owner read-only authentication with pinned SDK evidence and…” into the main build"
-   },
-   {
-    "at": "2026-10-19T20:05:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)” → sent to independent review"
    }
   ]
  },
@@ -368,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T20:34:57Z",
-   "heartbeat_at": "2026-10-19T20:35:03Z",
+   "status_at": "2026-10-19T20:39:58Z",
+   "heartbeat_at": "2026-10-19T20:40:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -378,7 +377,7 @@
     "weather_events": 350,
     "markets": 3397,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T20:33:56Z",
+    "last_scan_at": "2026-10-19T20:39:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -394,21 +393,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-19T19:37:03Z",
+    "updated_at": "2026-10-19T20:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T20:33:56Z",
+    "updated_at": "2026-10-19T20:39:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T20:33:02Z",
+    "updated_at": "2026-10-19T20:39:05Z",
     "detail": "observations retained"
    },
    {
