@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T01:10:02Z",
+ "generated_at": "2026-10-19T01:14:59Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 29,
+    "count": 23,
     "unit": "queued",
     "active": false,
     "detail": "14 ready to build"
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 38,
+    "count": 0,
     "unit": "in review",
-    "active": true,
-    "detail": "different model family from the builder"
+    "active": false,
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "89 merged in 24h"
@@ -80,17 +80,17 @@
     "family": "MiniMax",
     "task_id": "t_51e45c22",
     "task": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_81a65460",
-    "task": "a build task",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -125,39 +125,39 @@
    "commits_by_hour": [
     7,
     4,
-    6,
-    3,
-    1,
-    6,
-    1,
+    7,
     2,
-    3,
-    5,
-    3,
     2,
-    3,
-    3,
+    6,
     0,
-    12,
-    1,
-    5,
-    1,
+    3,
+    2,
+    6,
+    2,
+    2,
     4,
+    2,
+    2,
+    10,
+    2,
+    4,
+    2,
+    3,
     3,
     0,
-    6,
-    8
+    7,
+    7
    ],
    "merge_holds": [
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 29,
+    "queued": 23,
     "building": 1,
-    "in_review": 38,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 261,
-    "parked": 101
+    "parked": 146
    }
   },
   "architect": {
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T01:09:01Z",
+    "last_check_at": "2026-10-19T01:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,7 +227,7 @@
     "codes": [
      "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-19T01:00:04Z",
+    "last_check_at": "2026-10-19T01:10:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T01:14:10Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-19T01:04:13Z",
     "kind": "warn",
@@ -354,11 +359,6 @@
     "at": "2026-10-19T00:30:02Z",
     "kind": "plan",
     "text": "Architect (Kimi K3) planned 0 new tasks"
-   },
-   {
-    "at": "2026-10-19T00:22:11Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Stop a refused cancellation trigger from blocking later…” into the main build"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T01:09:53Z",
-   "heartbeat_at": "2026-10-19T01:10:02Z",
+   "status_at": "2026-10-19T01:14:54Z",
+   "heartbeat_at": "2026-10-19T01:14:58Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -379,7 +379,7 @@
     "weather_events": 325,
     "markets": 3120,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T01:06:40Z",
+    "last_scan_at": "2026-10-19T01:12:18Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T01:06:40Z",
+    "updated_at": "2026-10-19T01:12:18Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T01:08:36Z",
+    "updated_at": "2026-10-19T01:14:38Z",
     "detail": "observations retained"
    },
    {
@@ -450,16 +450,16 @@
    {
     "name": "HRRR",
     "role": "hourly same-day model",
-    "health": "building",
+    "health": "configured",
     "updated_at": null,
-    "detail": "adapter in review"
+    "detail": "adapter parked (not in a live queue)"
    },
    {
     "name": "NWS LAMP",
     "role": "hourly station guidance",
-    "health": "building",
+    "health": "configured",
     "updated_at": null,
-    "detail": "adapter in review"
+    "detail": "adapter parked (not in a live queue)"
    },
    {
     "name": "IEM",
@@ -629,7 +629,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 17,
-     "open_tasks": 4
+     "open_tasks": 0
     },
     {
      "id": "CODE-02",
@@ -638,7 +638,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 2,
-     "open_tasks": 5
+     "open_tasks": 4
     },
     {
      "id": "CODE-03",
@@ -692,7 +692,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 1,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "PAPER-06",
@@ -728,7 +728,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 13,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "PAPER-10",
@@ -782,7 +782,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 5,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-05",
@@ -791,7 +791,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 7,
-     "open_tasks": 5
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-06",
@@ -800,7 +800,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 4,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-07",
@@ -818,7 +818,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 5,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-09",
@@ -845,7 +845,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 3,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-12",
@@ -854,7 +854,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 1,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-13",
@@ -863,7 +863,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 2,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-14",
@@ -872,7 +872,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 3,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-01",
@@ -926,7 +926,7 @@
      "status": "owner",
      "detail": "accepted by the owner",
      "merged_tasks": 3,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-07",
@@ -944,7 +944,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 1,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LIVE-09",
@@ -953,7 +953,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 5,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-10",
@@ -962,7 +962,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 7,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LIVE-11",
@@ -971,7 +971,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 7,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-12",
@@ -1025,7 +1025,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 4,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-18",
@@ -1052,7 +1052,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 2,
-     "open_tasks": 1
+     "open_tasks": 0
     }
    ]
   },
