@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T00:35:02Z",
+ "generated_at": "2026-10-19T00:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 27,
+    "count": 30,
     "unit": "queued",
     "active": false,
-    "detail": "18 ready to build"
+    "detail": "19 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 40,
+    "count": 39,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
     "detail": "84 merged in 24h"
@@ -80,17 +80,17 @@
     "family": "MiniMax",
     "task_id": "t_74a32a4b",
     "task": "New main SHA 763e0c8837ad Alpha V11 FLEX code task t_1a6cb85d claude",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_12225c43",
+    "task": "a build task",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -126,25 +126,25 @@
     0,
     8,
     4,
-    7,
-    1,
+    8,
+    0,
     5,
     3,
     0,
     4,
-    2,
-    6,
+    3,
+    5,
     1,
     4,
+    4,
+    0,
+    10,
     3,
-    1,
-    9,
+    2,
     4,
     2,
-    3,
-    3,
-    3,
-    2,
+    4,
+    1,
     0,
     9
    ],
@@ -152,12 +152,12 @@
     "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 27,
+    "queued": 30,
     "building": 1,
-    "in_review": 40,
-    "awaiting_merge": 7,
+    "in_review": 39,
+    "awaiting_merge": 6,
     "merged": 256,
-    "parked": 99
+    "parked": 100
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T00:35:02Z",
+    "last_check_at": "2026-10-19T00:39:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-19T00:37:24Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “Brain forward supervisor scorer must use the live Shadow release…”: passed"
+   },
    {
     "at": "2026-10-19T00:35:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-19T00:00:42Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-19T00:00:36Z",
-    "kind": "merge",
-    "text": "Merged “Spec 6A safety modes step 3: owner panel commands” into the main build"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-18T13:40:02Z",
    "day": "2026-10-18",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-19T00:34:50Z",
-   "heartbeat_at": "2026-10-19T00:35:02Z",
+   "status_at": "2026-10-19T00:39:51Z",
+   "heartbeat_at": "2026-10-19T00:40:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 2,
@@ -380,7 +380,7 @@
     "weather_events": 330,
     "markets": 3175,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T00:32:30Z",
+    "last_scan_at": "2026-10-19T00:38:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -396,21 +396,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-18T23:37:02Z",
+    "updated_at": "2026-10-19T00:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T00:32:30Z",
+    "updated_at": "2026-10-19T00:38:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T00:34:24Z",
+    "updated_at": "2026-10-19T00:38:25Z",
     "detail": "observations retained"
    },
    {
@@ -1008,7 +1008,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 4,
-     "open_tasks": 2
+     "open_tasks": 3
     },
     {
      "id": "LIVE-16",
