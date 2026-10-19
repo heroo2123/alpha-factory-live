@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-19T22:40:02Z",
+ "generated_at": "2026-10-19T22:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 23,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_7938c016",
-    "task": "LIVE-15 Record which trigger caused each guardian cancel and add adversarial trigger tests",
-    "elapsed_min": 9
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_bfe0ef62",
     "task": "PAPER-09 Report PWS score comparisons separately by settlement station",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Reviewer 1",
@@ -123,9 +123,9 @@
    "reviews_passed_24h": 56,
    "reviews_changes_24h": 15,
    "commits_by_hour": [
-    0,
-    9,
-    5,
+    4,
+    7,
+    3,
     4,
     0,
     3,
@@ -145,12 +145,12 @@
     2,
     0,
     13,
-    5,
-    2
+    6,
+    1
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 23,
     "building": 2,
     "in_review": 3,
     "awaiting_merge": 0,
@@ -160,7 +160,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-19T22:00:02Z",
+   "last_run_at": "2026-10-19T22:40:13Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -212,21 +212,22 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-19T22:40:02Z",
+    "last_check_at": "2026-10-19T22:44:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 3,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
+     "P1": 1,
      "P2": 2
     },
     "codes": [
      "flow qa resource blocked",
+     "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-19T22:30:02Z",
+    "last_check_at": "2026-10-19T22:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -246,6 +247,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-19T22:40:13Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-19T22:35:01Z",
     "kind": "heal",
@@ -350,11 +356,6 @@
     "at": "2026-10-19T21:30:24Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “CODE-01 Resolve tied observation revisions by archive sequence”: passed"
-   },
-   {
-    "at": "2026-10-19T21:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: routine"
    }
   ]
  },
@@ -365,8 +366,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-19T22:39:57Z",
-   "heartbeat_at": "2026-10-19T22:40:01Z",
+   "status_at": "2026-10-19T22:44:58Z",
+   "heartbeat_at": "2026-10-19T22:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -375,7 +376,7 @@
     "weather_events": 334,
     "markets": 3221,
     "opportunities": 0,
-    "last_scan_at": "2026-10-19T22:38:02Z",
+    "last_scan_at": "2026-10-19T22:43:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-19T22:38:02Z",
+    "updated_at": "2026-10-19T22:43:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-19T22:39:49Z",
+    "updated_at": "2026-10-19T22:43:51Z",
     "detail": "observations retained"
    },
    {
@@ -715,7 +716,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 10,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-09",
@@ -724,7 +725,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 20,
-     "open_tasks": 3
+     "open_tasks": 4
     },
     {
      "id": "PAPER-10",
@@ -1003,7 +1004,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 9,
-     "open_tasks": 2
+     "open_tasks": 3
     },
     {
      "id": "LIVE-16",
