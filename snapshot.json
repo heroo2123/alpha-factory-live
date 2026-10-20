@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T11:15:02Z",
+ "generated_at": "2026-10-20T11:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "45 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_5074770e",
     "task": "LIVE-15 Bind transaction leases to the opening account policy",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_95d71bc6",
-    "task": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -131,12 +131,12 @@
     0,
     0,
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
-    0,
-    5,
+    3,
+    2,
     0,
     0,
     0,
@@ -145,15 +145,15 @@
     4,
     2,
     2,
-    3,
-    6
+    5,
+    4
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 21,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 0,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 316,
     "parked": 170
    }
@@ -212,29 +212,28 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T11:14:01Z",
+    "last_check_at": "2026-10-20T11:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 1,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 0,
      "P2": 1
     },
     "codes": [
-     "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T11:10:02Z",
+    "last_check_at": "2026-10-20T11:17:45Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
+    "runs_24h": 59,
     "runs_total": 207,
-    "last_run_at": "2026-10-20T11:00:03Z",
+    "last_run_at": "2026-10-20T11:20:03Z",
     "last_ok": true,
-    "last_kind": "flow shadow frozen authority drift",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -246,6 +245,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T11:20:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-20T11:19:20Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Run guardian safety checks despite continuous rejected…”: passed"
+   },
    {
     "at": "2026-10-20T11:12:12Z",
     "kind": "build",
@@ -345,16 +354,6 @@
     "at": "2026-10-20T10:09:02Z",
     "kind": "merge",
     "text": "Merged “LIVE-15 Prevent failed cancellation retries from starving later…” into the main build"
-   },
-   {
-    "at": "2026-10-20T10:08:25Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 Fence execution-health publication to its exact archive…” into the main build"
-   },
-   {
-    "at": "2026-10-20T10:05:19Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 14043 passed, 0 failed"
    }
   ]
  },
@@ -364,9 +363,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "making paper decisions",
-   "status_at": "2026-10-20T11:11:40Z",
-   "heartbeat_at": "2026-10-20T11:15:02Z",
+   "state": "census service",
+   "status_at": "2026-10-20T11:20:00Z",
+   "heartbeat_at": "2026-10-20T11:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -375,7 +374,7 @@
     "weather_events": 394,
     "markets": 3862,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T11:11:31Z",
+    "last_scan_at": "2026-10-20T11:17:41Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T11:11:31Z",
+    "updated_at": "2026-10-20T11:17:41Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T11:13:33Z",
+    "updated_at": "2026-10-20T11:19:35Z",
     "detail": "observations retained"
    },
    {
@@ -470,20 +469,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9509,
-     "city_days": 27
+     "brier": 0.9594,
+     "city_days": 29
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.872,
-     "city_days": 27
+     "brier": 0.8754,
+     "city_days": 29
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.7816,
-     "city_days": 27
+     "brier": 0.764,
+     "city_days": 29
     },
     {
      "key": "equal",
@@ -495,19 +494,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 28,
-   "waiting_city_days": 15,
+   "labelled_city_days": 30,
+   "waiting_city_days": 13,
    "labelled_days": 7,
    "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T10:17:03Z",
+   "updated_at": "2026-10-20T11:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 7,
+     "have": 9,
      "need": 50,
      "done": false,
      "detail": ""
@@ -1076,7 +1075,7 @@
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "7 of 50 untouched city-days collected"
+    "detail": "9 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
