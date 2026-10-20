@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T00:15:02Z",
+ "generated_at": "2026-10-20T00:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "42 merged in 24h"
    },
    {
     "key": "qa",
@@ -106,18 +106,18 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-19T19:54:56Z",
-   "last_passed": 13617,
-   "last_failed": 0,
+   "last_finished_at": "2026-10-20T00:12:29Z",
+   "last_passed": 13864,
+   "last_failed": 1,
    "last_skipped": 51,
-   "last_green": true,
+   "last_green": false,
    "last_green_at": "2026-10-19T19:54:56Z",
-   "last_minutes": 84
+   "last_minutes": 87
   },
-  "tests_passing": 13617,
+  "tests_passing": 13864,
   "flow": {
-   "merges_24h": 40,
-   "commits_24h": 40,
+   "merges_24h": 42,
+   "commits_24h": 42,
    "built_24h": 58,
    "build_failed_24h": 20,
    "reviews_passed_24h": 52,
@@ -142,21 +142,19 @@
     0,
     0,
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
-    0
+    2
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 22,
     "building": 0,
     "in_review": 5,
-    "awaiting_merge": 5,
-    "merged": 294,
+    "awaiting_merge": 3,
+    "merged": 296,
     "parked": 161
    }
   },
@@ -167,6 +165,16 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T00:16:46Z",
+    "title": "PAPER-08 Surface newly introduced model channels as risk events",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-20T00:16:09Z",
+    "title": "LIVE-15 Record which trigger caused each guardian cancel and add adversarial trigger tests",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-19T22:13:38Z",
     "title": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
@@ -196,25 +204,15 @@
     "at": "2026-10-19T21:08:08Z",
     "title": "PAPER-09 Validate complete and distinct PWS learning-pair children",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T20:20:52Z",
-    "title": "LIVE-15 Retain bounded guardian check receipt provenance",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T20:20:00Z",
-    "title": "PAPER-08 Make candidate ranking independent of ambient Decimal precision",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T00:15:02Z",
+    "last_check_at": "2026-10-20T00:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -248,6 +246,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T00:18:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-10-20T00:16:46Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 Surface newly introduced model channels as risk events” into the main build"
+   },
+   {
+    "at": "2026-10-20T00:16:09Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Record which trigger caused each guardian cancel and add…” into the main build"
+   },
+   {
+    "at": "2026-10-20T00:12:29Z",
+    "kind": "warn",
+    "text": "Full test suite finished: 13864 passed, 1 failed"
+   },
    {
     "at": "2026-10-19T23:44:11Z",
     "kind": "build",
@@ -337,26 +355,6 @@
     "at": "2026-10-19T22:45:15Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “LIVE-15 Record which trigger caused each guardian cancel and add…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T22:40:13Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-19T22:35:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-19T22:33:59Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Bound physical-model provenance traversal”: changes required"
-   },
-   {
-    "at": "2026-10-19T22:30:23Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-09 Bound physical-model provenance traversal” → sent to independent review"
    }
   ]
  },
@@ -367,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-20T00:14:56Z",
-   "heartbeat_at": "2026-10-20T00:15:03Z",
+   "status_at": "2026-10-20T00:19:57Z",
+   "heartbeat_at": "2026-10-20T00:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -377,7 +375,7 @@
     "weather_events": 334,
     "markets": 3221,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T00:12:37Z",
+    "last_scan_at": "2026-10-20T00:18:02Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T00:12:37Z",
+    "updated_at": "2026-10-20T00:18:02Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T00:14:26Z",
+    "updated_at": "2026-10-20T00:18:27Z",
     "detail": "observations retained"
    },
    {
@@ -505,7 +503,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-19T23:17:03Z",
+   "updated_at": "2026-10-20T00:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
@@ -716,8 +714,8 @@
      "name": "Scenario-risk accounting",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 10,
-     "open_tasks": 3
+     "merged_tasks": 11,
+     "open_tasks": 2
     },
     {
      "id": "PAPER-09",
@@ -1004,8 +1002,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 9,
-     "open_tasks": 5
+     "merged_tasks": 10,
+     "open_tasks": 4
     },
     {
      "id": "LIVE-16",
