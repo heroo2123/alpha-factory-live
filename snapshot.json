@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T07:10:02Z",
+ "generated_at": "2026-10-20T07:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 27,
+    "count": 30,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "52 built in 24h"
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_6c03328c",
     "task": "PAPER-08 Fence execution-health publication to its exact archive prefix",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_069aff65",
+    "task": "PAPER-09 Report PWS ablation metrics by station and horizon",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -135,10 +135,10 @@
     0,
     0,
     2,
-    7,
-    7,
-    5,
-    1,
+    8,
+    6,
+    6,
+    0,
     0,
     5,
     0,
@@ -150,8 +150,8 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 27,
-    "building": 1,
+    "queued": 30,
+    "building": 2,
     "in_review": 1,
     "awaiting_merge": 0,
     "merged": 303,
@@ -160,7 +160,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-20T07:00:19Z",
+   "last_run_at": "2026-10-20T07:10:15Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T07:10:02Z",
+    "last_check_at": "2026-10-20T07:14:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,18 +225,18 @@
     "codes": [
      "flow shadow frozen authority drift",
      "flow acceptance stalled",
-     "flow review no distinct family",
+     "flow dispatched scope unmergeable",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T07:00:02Z",
+    "last_check_at": "2026-10-20T07:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 40,
-    "runs_total": 185,
-    "last_run_at": "2026-10-20T07:05:02Z",
+    "runs_24h": 41,
+    "runs_total": 186,
+    "last_run_at": "2026-10-20T07:15:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow acceptance stalled",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +248,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T07:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance stalled"
+   },
+   {
+    "at": "2026-10-20T07:10:15Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-20T07:09:16Z",
     "kind": "build",
@@ -347,16 +357,6 @@
     "at": "2026-10-20T06:41:12Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “LIVE-15 Recheck guardian deadlines immediately before dispatch” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T06:40:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-20T01:44:32Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 13972 passed, 0 failed"
    }
   ]
  },
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T07:09:57Z",
-   "heartbeat_at": "2026-10-20T07:10:02Z",
+   "status_at": "2026-10-20T07:14:54Z",
+   "heartbeat_at": "2026-10-20T07:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -377,7 +377,7 @@
     "weather_events": 392,
     "markets": 3840,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T07:09:11Z",
+    "last_scan_at": "2026-10-20T07:15:02Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T07:09:11Z",
+    "updated_at": "2026-10-20T07:15:02Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T07:08:45Z",
+    "updated_at": "2026-10-20T07:14:46Z",
     "detail": "observations retained"
    },
    {
@@ -627,7 +627,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 20,
-     "open_tasks": 0
+     "open_tasks": 3
     },
     {
      "id": "CODE-02",
@@ -726,7 +726,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 22,
-     "open_tasks": 2
+     "open_tasks": 3
     },
     {
      "id": "PAPER-10",
@@ -1005,7 +1005,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 12,
-     "open_tasks": 3
+     "open_tasks": 4
     },
     {
      "id": "LIVE-16",
