@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T18:10:01Z",
+ "generated_at": "2026-10-20T18:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "60 built in 24h"
+    "detail": "59 built in 24h"
    },
    {
     "key": "review",
@@ -118,16 +118,16 @@
   "flow": {
    "merges_24h": 55,
    "commits_24h": 55,
-   "built_24h": 60,
+   "built_24h": 59,
    "build_failed_24h": 5,
    "reviews_passed_24h": 51,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
     2,
-    7,
-    7,
-    5,
-    1,
+    8,
+    6,
+    6,
+    0,
     0,
     5,
     0,
@@ -138,11 +138,11 @@
     4,
     2,
     2,
-    2,
-    7,
     3,
-    2,
+    6,
     3,
+    4,
+    1,
     0,
     0,
     3,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-20T18:10:02Z",
+    "last_check_at": "2026-10-20T18:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,7 +227,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T18:00:03Z",
+    "last_check_at": "2026-10-20T18:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -406,7 +406,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T18:08:09Z",
+    "updated_at": "2026-10-20T18:14:11Z",
     "detail": "observations retained"
    },
    {
