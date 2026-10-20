@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T13:15:02Z",
+ "generated_at": "2026-10-20T13:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "51 merged in 24h"
+    "detail": "52 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_46b346b1",
     "task": "Recover bounded GEFS worker progress after completed model constituent supersession",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 51,
-   "commits_24h": 51,
+   "merges_24h": 52,
+   "commits_24h": 52,
    "built_24h": 67,
    "build_failed_24h": 11,
    "reviews_passed_24h": 54,
@@ -129,12 +129,12 @@
     0,
     0,
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
-    0,
-    5,
+    3,
+    2,
     0,
     0,
     0,
@@ -143,9 +143,9 @@
     4,
     2,
     2,
-    3,
-    6,
-    3,
+    5,
+    4,
+    4,
     3
    ],
    "merge_holds": [],
@@ -153,8 +153,8 @@
     "queued": 21,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 322,
+    "awaiting_merge": 0,
+    "merged": 323,
     "parked": 171
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T13:15:22Z",
+    "title": "Size bounded station source fan-in for the actual registered book tokens",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T13:14:33Z",
     "title": "Let fresh external census reach evaluation before redundant periodic census",
@@ -199,11 +204,6 @@
     "at": "2026-10-20T10:17:22Z",
     "title": "LIVE-15 Bind transaction-time guardian checks to the opening account policy",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T10:14:12Z",
-    "title": "LIVE-15 Process PAPER safety cancellations while the broker is idle",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T13:15:02Z",
+    "last_check_at": "2026-10-20T13:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T13:15:22Z",
+    "kind": "merge",
+    "text": "Merged “Size bounded station source fan-in for the actual registered book…” into the main build"
+   },
    {
     "at": "2026-10-20T13:15:02Z",
     "kind": "heal",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T11:34:19Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_5074770e a71daa4148b3”: passed"
-   },
-   {
-    "at": "2026-10-20T11:30:15Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T13:15:00Z",
-   "heartbeat_at": "2026-10-20T13:15:02Z",
+   "status_at": "2026-10-20T13:20:03Z",
+   "heartbeat_at": "2026-10-20T13:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -375,7 +375,7 @@
     "weather_events": 401,
     "markets": 3956,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T13:12:38Z",
+    "last_scan_at": "2026-10-20T13:18:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T13:12:38Z",
+    "updated_at": "2026-10-20T13:18:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T13:14:19Z",
+    "updated_at": "2026-10-20T13:18:21Z",
     "detail": "observations retained"
    },
    {
@@ -496,14 +496,14 @@
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
    "labelled_city_days": 31,
-   "waiting_city_days": 12,
+   "waiting_city_days": 23,
    "labelled_days": 7,
    "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T12:17:03Z",
+   "updated_at": "2026-10-20T13:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
