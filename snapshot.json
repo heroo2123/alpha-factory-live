@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T19:35:01Z",
+ "generated_at": "2026-10-20T19:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -119,12 +119,12 @@
    "merges_24h": 53,
    "commits_24h": 53,
    "built_24h": 55,
-   "build_failed_24h": 5,
+   "build_failed_24h": 4,
    "reviews_passed_24h": 48,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
-    12,
-    6,
+    13,
+    5,
     2,
     0,
     5,
@@ -138,10 +138,10 @@
     4,
     0,
     7,
-    3,
-    3,
-    3,
-    1,
+    4,
+    2,
+    4,
+    0,
     0,
     0,
     3,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T19:34:01Z",
+    "last_check_at": "2026-10-20T19:39:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
+    "runs_24h": 58,
     "runs_total": 227,
     "last_run_at": "2026-10-20T15:50:02Z",
     "last_ok": true,
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-20T19:35:01Z",
-   "heartbeat_at": "2026-10-20T19:35:01Z",
+   "status_at": "2026-10-20T19:40:01Z",
+   "heartbeat_at": "2026-10-20T19:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -390,7 +390,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-20T18:37:02Z",
+    "updated_at": "2026-10-20T19:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T19:34:36Z",
+    "updated_at": "2026-10-20T19:39:02Z",
     "detail": "observations retained"
    },
    {
