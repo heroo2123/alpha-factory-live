@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T14:55:02Z",
+ "generated_at": "2026-10-20T15:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_f9e1ba34",
     "task": "CODE-01 Validate the archived envelope before reusing a forecast slice",
-    "elapsed_min": 57
+    "elapsed_min": 62
    },
    {
     "slot": "Builder 2",
@@ -127,8 +127,8 @@
     0,
     0,
     2,
-    0,
-    13,
+    2,
+    11,
     6,
     1,
     0,
@@ -138,8 +138,8 @@
     0,
     0,
     0,
-    0,
-    5,
+    2,
+    3,
     3,
     0,
     7,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
-    "alerts_24h": 10,
+    "active": 2,
+    "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T14:54:06Z",
+    "last_check_at": "2026-10-20T14:59:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,10 +233,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 219,
-    "last_run_at": "2026-10-20T14:40:02Z",
+    "runs_total": 220,
+    "last_run_at": "2026-10-20T15:00:03Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +248,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T15:00:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-20T14:55:03Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes dashboard down"
+   },
    {
     "at": "2026-10-20T14:40:02Z",
     "kind": "heal",
@@ -277,11 +287,6 @@
     "at": "2026-10-20T13:55:01Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-20T13:45:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: routine"
    },
    {
     "at": "2026-10-20T13:42:12Z",
@@ -352,11 +357,6 @@
     "at": "2026-10-20T12:37:19Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “PAPER-09 Bind each learning-pair child to its original lead prediction” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T12:17:45Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 Compare basket scenario inputs with the historical account” into the main build"
    }
   ]
  },
@@ -366,9 +366,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "census service",
-   "status_at": "2026-10-20T14:55:00Z",
-   "heartbeat_at": "2026-10-20T14:55:01Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-20T14:59:20Z",
+   "heartbeat_at": "2026-10-20T15:00:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -377,7 +377,7 @@
     "weather_events": 401,
     "markets": 3956,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T14:49:57Z",
+    "last_scan_at": "2026-10-20T14:59:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T14:49:57Z",
+    "updated_at": "2026-10-20T14:59:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T14:54:59Z",
+    "updated_at": "2026-10-20T14:59:01Z",
     "detail": "observations retained"
    },
    {
