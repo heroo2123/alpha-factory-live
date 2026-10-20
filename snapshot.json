@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T20:15:01Z",
+ "generated_at": "2026-10-20T20:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "45 merged in 24h"
+    "detail": "42 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,30 +116,30 @@
   },
   "tests_passing": 14212,
   "flow": {
-   "merges_24h": 45,
-   "commits_24h": 45,
+   "merges_24h": 42,
+   "commits_24h": 42,
    "built_24h": 49,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 42,
+   "reviews_passed_24h": 41,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
-    6,
+    3,
     6,
     0,
+    3,
+    2,
     0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    2,
+    2,
     5,
-    0,
-    0,
-    0,
-    0,
-    0,
-    4,
-    2,
-    2,
+    5,
     3,
-    6,
     3,
-    4,
     1,
     0,
     0,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T20:15:01Z",
+    "last_check_at": "2026-10-20T20:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -364,17 +364,17 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-20T20:14:49Z",
-   "heartbeat_at": "2026-10-20T20:15:01Z",
+   "status_at": "2026-10-20T20:19:49Z",
+   "heartbeat_at": "2026-10-20T20:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 398,
-    "markets": 3923,
-    "opportunities": 0,
-    "last_scan_at": "2026-10-20T20:09:59Z",
+    "weather_events": 396,
+    "markets": 3903,
+    "opportunities": 2,
+    "last_scan_at": "2026-10-20T20:17:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T20:09:59Z",
+    "updated_at": "2026-10-20T20:17:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T20:13:14Z",
+    "updated_at": "2026-10-20T20:19:16Z",
     "detail": "observations retained"
    },
    {
@@ -502,7 +502,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T19:17:02Z",
+   "updated_at": "2026-10-20T20:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
