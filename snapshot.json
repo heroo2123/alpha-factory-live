@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T08:40:02Z",
+ "generated_at": "2026-10-20T08:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 25,
+    "count": 24,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "58 built in 24h"
+    "detail": "59 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 7,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_9e877389",
-    "task": "LIVE-15 Prevent failed cancellation retries from starving later targets",
-    "elapsed_min": 18
+    "task_id": "t_4dec6a81",
+    "task": "LIVE-15 Process PAPER safety cancellations while the broker is idle",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_9e877389",
+    "task": "LIVE-15 Prevent failed cancellation retries from starving later targets",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 7,
    "last_finished_at": "2026-10-20T01:44:32Z",
    "last_passed": 13972,
    "last_failed": 0,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 38,
    "commits_24h": 38,
-   "built_24h": 58,
+   "built_24h": 59,
    "build_failed_24h": 12,
    "reviews_passed_24h": 46,
    "reviews_changes_24h": 16,
@@ -135,8 +135,8 @@
     2,
     0,
     13,
-    5,
-    2,
+    6,
+    1,
     0,
     5,
     0,
@@ -152,9 +152,9 @@
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 25,
+    "queued": 24,
     "building": 1,
-    "in_review": 2,
+    "in_review": 3,
     "awaiting_merge": 1,
     "merged": 307,
     "parked": 166
@@ -210,35 +210,34 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T08:40:02Z",
+    "last_check_at": "2026-10-20T08:44:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 3
+     "P2": 2
     },
     "codes": [
-     "flow qa resource blocked",
      "flow shadow frozen authority drift",
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T08:30:05Z",
+    "last_check_at": "2026-10-20T08:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 49,
-    "runs_total": 194,
-    "last_run_at": "2026-10-20T08:25:02Z",
+    "runs_24h": 50,
+    "runs_total": 195,
+    "last_run_at": "2026-10-20T08:45:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow frozen authority drift",
+    "last_kind": "flow qa resource blocked",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T08:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow qa resource blocked"
+   },
+   {
+    "at": "2026-10-20T08:44:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “LIVE-15 Prevent failed cancellation retries from starving later…” → sent to independent review"
+   },
    {
     "at": "2026-10-20T08:29:19Z",
     "kind": "merge",
@@ -316,11 +325,6 @@
     "text": "Codex (GPT-6 Astra) built “CODE-01 Validate boot and monotonic freshness before maker telemetry” → sent to independent review"
    },
    {
-    "at": "2026-10-20T07:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-20T07:50:20Z",
     "kind": "merge",
     "text": "Merged “PAPER-09 Recheck completed PWS commands after acquiring the worker…” into the main build"
@@ -354,11 +358,6 @@
     "at": "2026-10-20T07:10:15Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-20T07:09:16Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “PAPER-08 Feed cumulative liquidity collapse into event risk” → sent to independent review"
    }
   ]
  },
@@ -369,8 +368,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T08:40:00Z",
-   "heartbeat_at": "2026-10-20T08:40:02Z",
+   "status_at": "2026-10-20T08:44:58Z",
+   "heartbeat_at": "2026-10-20T08:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -409,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T08:39:21Z",
+    "updated_at": "2026-10-20T08:43:23Z",
     "detail": "observations retained"
    },
    {
@@ -501,8 +500,8 @@
    "verdict_tone": "bad",
    "labelled_city_days": 23,
    "waiting_city_days": 20,
-   "labelled_days": 6,
-   "captured_days_waiting": 4,
+   "labelled_days": 7,
+   "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
