@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T22:30:02Z",
+ "generated_at": "2026-10-20T22:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "38 built in 24h"
+    "detail": "37 built in 24h"
    },
    {
     "key": "review",
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 33,
    "commits_24h": 33,
-   "built_24h": 38,
+   "built_24h": 37,
    "build_failed_24h": 3,
    "reviews_passed_24h": 33,
-   "reviews_changes_24h": 9,
+   "reviews_changes_24h": 8,
    "commits_by_hour": [
     0,
     5,
@@ -134,8 +134,8 @@
     4,
     4,
     0,
-    6,
-    4,
+    7,
+    3,
     3,
     3,
     1,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-20T22:30:02Z",
+    "last_check_at": "2026-10-20T22:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,11 +225,11 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T22:20:02Z",
+    "last_check_at": "2026-10-20T22:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 49,
+    "runs_24h": 48,
     "runs_total": 227,
     "last_run_at": "2026-10-20T15:50:02Z",
     "last_ok": true,
@@ -363,9 +363,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
-   "state": "making paper decisions",
-   "status_at": "2026-10-20T22:28:48Z",
-   "heartbeat_at": "2026-10-20T22:30:03Z",
+   "state": "census service",
+   "status_at": "2026-10-20T22:35:01Z",
+   "heartbeat_at": "2026-10-20T22:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T22:29:56Z",
+    "updated_at": "2026-10-20T22:33:57Z",
     "detail": "observations retained"
    },
    {
