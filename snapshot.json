@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T19:25:01Z",
+ "generated_at": "2026-10-20T19:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
-    "detail": ""
+    "active": false,
+    "detail": "current release 4e4ffc6"
    },
    {
     "key": "shadow",
@@ -121,11 +121,11 @@
    "built_24h": 56,
    "build_failed_24h": 5,
    "reviews_passed_24h": 48,
-   "reviews_changes_24h": 12,
+   "reviews_changes_24h": 11,
    "commits_by_hour": [
     12,
-    2,
-    6,
+    3,
+    5,
     0,
     5,
     0,
@@ -135,8 +135,8 @@
     0,
     0,
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T19:25:01Z",
+    "last_check_at": "2026-10-20T19:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T19:28:09Z",
+    "kind": "release",
+    "text": "New Shadow release 4e4ffc6 went live (paper only)"
+   },
    {
     "at": "2026-10-20T19:25:01Z",
     "kind": "release",
@@ -350,24 +355,19 @@
     "at": "2026-10-20T15:11:09Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra)'s build of “CODE-01 Validate the archived envelope before reusing a forecast slice” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-20T14:00:28Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Distinguish official revisions from capture-envelope changes”: passed"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": null,
-   "commissioned_at": "2026-10-20T11:10:39Z",
-   "day": null,
-   "state": "",
-   "status_at": null,
-   "heartbeat_at": null,
-   "real_orders_sent": null,
+   "release": "4e4ffc6",
+   "commissioned_at": "2026-10-20T19:25:01Z",
+   "day": "2026-10-20",
+   "state": "waiting for today's protected review before paper decisions start",
+   "status_at": "2026-10-20T19:30:00Z",
+   "heartbeat_at": "2026-10-20T19:30:03Z",
+   "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
@@ -375,15 +375,15 @@
     "weather_events": 398,
     "markets": 3923,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T19:19:19Z",
+    "last_scan_at": "2026-10-20T19:26:29Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": null,
-   "research_accept": null,
-   "reject": null,
-   "gated": null,
+   "total": 0,
+   "research_accept": 0,
+   "reject": 0,
+   "gated": 0,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T19:19:19Z",
+    "updated_at": "2026-10-20T19:26:29Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T19:24:33Z",
+    "updated_at": "2026-10-20T19:28:34Z",
     "detail": "observations retained"
    },
    {
