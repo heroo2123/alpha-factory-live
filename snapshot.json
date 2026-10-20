@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T12:20:03Z",
+ "generated_at": "2026-10-20T12:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2b455b2f",
     "task": "PAPER-09 Bind each learning-pair child to its original lead prediction",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -130,25 +130,27 @@
     0,
     0,
     2,
-    11,
-    3,
+    12,
+    2,
     6,
     0,
-    3,
-    2,
+    5,
+    0,
     0,
     0,
     0,
     0,
     0,
     4,
-    2,
-    2,
-    5,
-    5,
+    3,
+    1,
+    6,
+    4,
     3
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "lock busy"
+   ],
    "stage_totals": {
     "queued": 23,
     "building": 1,
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T12:20:03Z",
+    "last_check_at": "2026-10-20T12:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +227,7 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T12:10:03Z",
+    "last_check_at": "2026-10-20T12:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -363,9 +365,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "census service",
-   "status_at": "2026-10-20T12:20:00Z",
-   "heartbeat_at": "2026-10-20T12:20:02Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-20T12:22:39Z",
+   "heartbeat_at": "2026-10-20T12:25:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +406,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T12:19:56Z",
+    "updated_at": "2026-10-20T12:23:57Z",
     "detail": "observations retained"
    },
    {
