@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T13:00:02Z",
+ "generated_at": "2026-10-20T13:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 22,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "66 built in 24h"
+    "detail": "67 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_b9178a67",
-    "task": "Let fresh external census reach evaluation before redundant periodic census",
-    "elapsed_min": 22
+    "task_id": "t_1f493310",
+    "task": "Size bounded station source fan-in for the actual registered book tokens",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_b9178a67",
+    "task": "Let fresh external census reach evaluation before redundant periodic census",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 50,
    "commits_24h": 50,
-   "built_24h": 66,
+   "built_24h": 67,
    "build_failed_24h": 11,
    "reviews_passed_24h": 53,
    "reviews_changes_24h": 20,
@@ -129,8 +129,8 @@
     0,
     0,
     2,
-    2,
-    11,
+    4,
+    9,
     6,
     1,
     0,
@@ -140,19 +140,19 @@
     0,
     0,
     0,
+    3,
     2,
     3,
-    3,
     0,
-    7,
-    5,
+    8,
+    4,
     2
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 23,
+    "queued": 22,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 321,
     "parked": 171
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T13:00:03Z",
+    "last_check_at": "2026-10-20T13:04:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,7 +226,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T12:50:03Z",
+    "last_check_at": "2026-10-20T13:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T13:03:57Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Let fresh external census reach evaluation before redundant periodic…” → sent to independent review"
+   },
    {
     "at": "2026-10-20T12:58:56Z",
     "kind": "heal",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T11:19:20Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “LIVE-15 Run guardian safety checks despite continuous rejected…”: passed"
-   },
-   {
-    "at": "2026-10-20T11:12:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “LIVE-15 Run guardian safety checks despite continuous rejected…” → sent to independent review"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T13:00:04Z",
-   "heartbeat_at": "2026-10-20T13:00:02Z",
+   "status_at": "2026-10-20T13:05:00Z",
+   "heartbeat_at": "2026-10-20T13:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -405,7 +405,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T12:58:13Z",
+    "updated_at": "2026-10-20T13:04:15Z",
     "detail": "observations retained"
    },
    {
