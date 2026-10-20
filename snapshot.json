@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T12:15:01Z",
+ "generated_at": "2026-10-20T12:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "66 built in 24h"
+    "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "48 merged in 24h"
+    "detail": "49 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2b455b2f",
     "task": "PAPER-09 Bind each learning-pair child to its original lead prediction",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_845fa7ce",
-    "task": "PAPER-08 Compare basket scenario inputs with the historical account",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 48,
-   "commits_24h": 48,
-   "built_24h": 66,
+   "merges_24h": 49,
+   "commits_24h": 49,
+   "built_24h": 65,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 53,
+   "reviews_passed_24h": 54,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     0,
@@ -130,12 +130,12 @@
     0,
     0,
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
-    0,
-    5,
+    3,
+    2,
     0,
     0,
     0,
@@ -144,17 +144,17 @@
     4,
     2,
     2,
-    3,
-    6,
+    5,
+    5,
     3
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 23,
     "building": 1,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 0,
-    "merged": 319,
+    "merged": 320,
     "parked": 172
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T12:17:45Z",
+    "title": "PAPER-08 Compare basket scenario inputs with the historical account",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T11:50:36Z",
     "title": "PAPER-08 Escalate risk when a leased model channel disappears",
@@ -199,11 +204,6 @@
     "at": "2026-10-20T10:08:25Z",
     "title": "PAPER-08 Fence execution-health publication to its exact archive prefix",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T08:29:19Z",
-    "title": "CODE-01 Verify readiness body bytes against the pinned digest",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T12:15:02Z",
+    "last_check_at": "2026-10-20T12:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
    },
    "operator": {
     "runs_24h": 58,
-    "runs_total": 209,
+    "runs_total": 210,
     "last_run_at": "2026-10-20T12:15:01Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -245,6 +245,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T12:17:45Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 Compare basket scenario inputs with the historical account” into the main build"
+   },
+   {
+    "at": "2026-10-20T12:16:19Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Compare basket scenario inputs with the historical account”: passed"
+   },
    {
     "at": "2026-10-20T12:15:01Z",
     "kind": "heal",
@@ -344,16 +354,6 @@
     "at": "2026-10-20T10:57:36Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_98b27d05 e53c999486c6”: passed"
-   },
-   {
-    "at": "2026-10-20T10:57:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_bfe0ef62 bd3be3841679”: passed"
-   },
-   {
-    "at": "2026-10-20T10:53:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “CODE-01 Reject absent or malformed reward allocation identities” → sent to independent review"
    }
   ]
  },
@@ -364,17 +364,17 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T12:15:00Z",
-   "heartbeat_at": "2026-10-20T12:15:02Z",
+   "status_at": "2026-10-20T12:20:00Z",
+   "heartbeat_at": "2026-10-20T12:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 391,
-    "markets": 3832,
+    "weather_events": 392,
+    "markets": 3857,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T12:13:42Z",
+    "last_scan_at": "2026-10-20T12:20:02Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T12:13:42Z",
+    "updated_at": "2026-10-20T12:20:02Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T12:13:54Z",
+    "updated_at": "2026-10-20T12:19:56Z",
     "detail": "observations retained"
    },
    {
@@ -469,20 +469,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9594,
-     "city_days": 29
+     "brier": 0.9718,
+     "city_days": 30
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8754,
-     "city_days": 29
+     "brier": 0.885,
+     "city_days": 30
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.764,
-     "city_days": 29
+     "brier": 0.7812,
+     "city_days": 30
     },
     {
      "key": "equal",
@@ -494,19 +494,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 30,
-   "waiting_city_days": 13,
+   "labelled_city_days": 31,
+   "waiting_city_days": 12,
    "labelled_days": 7,
    "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T11:17:02Z",
+   "updated_at": "2026-10-20T12:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 9,
+     "have": 10,
      "need": 50,
      "done": false,
      "detail": ""
@@ -713,8 +713,8 @@
      "name": "Scenario-risk accounting",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 15,
-     "open_tasks": 1
+     "merged_tasks": 16,
+     "open_tasks": 0
     },
     {
      "id": "PAPER-09",
@@ -1075,7 +1075,7 @@
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "9 of 50 untouched city-days collected"
+    "detail": "10 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
