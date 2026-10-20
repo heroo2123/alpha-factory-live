@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T16:50:02Z",
+ "generated_at": "2026-10-20T16:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "52 merged in 24h"
+    "detail": "53 merged in 24h"
    },
    {
     "key": "qa",
@@ -106,18 +106,18 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-20T10:05:19Z",
-   "last_passed": 14043,
+   "last_finished_at": "2026-10-20T16:49:27Z",
+   "last_passed": 14212,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-20T10:05:19Z",
-   "last_minutes": 90
+   "last_green_at": "2026-10-20T16:49:27Z",
+   "last_minutes": 94
   },
-  "tests_passing": 14043,
+  "tests_passing": 14212,
   "flow": {
-   "merges_24h": 52,
-   "commits_24h": 52,
+   "merges_24h": 53,
+   "commits_24h": 53,
    "built_24h": 65,
    "build_failed_24h": 6,
    "reviews_passed_24h": 55,
@@ -141,12 +141,12 @@
     3,
     0,
     7,
-    4,
-    3,
+    5,
+    2,
     3,
     0,
     0,
-    0
+    1
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
@@ -155,8 +155,8 @@
     "queued": 17,
     "building": 0,
     "in_review": 0,
-    "awaiting_merge": 3,
-    "merged": 324,
+    "awaiting_merge": 2,
+    "merged": 325,
     "parked": 171
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T16:53:30Z",
+    "title": "CODE-01 Distinguish official revisions from capture-envelope changes",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T13:42:12Z",
     "title": "Recover bounded GEFS worker progress after completed model constituent supersession",
@@ -201,11 +206,6 @@
     "at": "2026-10-20T11:20:45Z",
     "title": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T10:18:18Z",
-    "title": "PAPER-09 Report PWS ablation metrics by station and horizon",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-20T16:50:02Z",
+    "last_check_at": "2026-10-20T16:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T16:40:02Z",
+    "last_check_at": "2026-10-20T16:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T16:53:30Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Distinguish official revisions from capture-envelope changes” into the main build"
+   },
+   {
+    "at": "2026-10-20T16:49:27Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 14212 passed, 0 failed"
+   },
    {
     "at": "2026-10-20T16:14:19Z",
     "kind": "review",
@@ -348,16 +358,6 @@
     "at": "2026-10-20T13:37:22Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “Recover bounded GEFS worker progress after completed model…”: passed"
-   },
-   {
-    "at": "2026-10-20T13:30:17Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Recover bounded GEFS worker progress after completed model…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T13:30:12Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -367,9 +367,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "making paper decisions",
-   "status_at": "2026-10-20T16:49:26Z",
-   "heartbeat_at": "2026-10-20T16:50:01Z",
+   "state": "census service",
+   "status_at": "2026-10-20T16:55:00Z",
+   "heartbeat_at": "2026-10-20T16:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T16:49:42Z",
+    "updated_at": "2026-10-20T16:53:43Z",
     "detail": "observations retained"
    },
    {
@@ -627,8 +627,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 23,
-     "open_tasks": 4
+     "merged_tasks": 24,
+     "open_tasks": 3
     },
     {
      "id": "CODE-02",
