@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T20:25:02Z",
+ "generated_at": "2026-10-20T20:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -123,8 +123,8 @@
    "reviews_passed_24h": 41,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
-    2,
-    6,
+    3,
+    5,
     0,
     5,
     0,
@@ -134,8 +134,8 @@
     0,
     0,
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T20:25:02Z",
+    "last_check_at": "2026-10-20T20:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-20T20:24:49Z",
-   "heartbeat_at": "2026-10-20T20:25:02Z",
+   "status_at": "2026-10-20T20:29:50Z",
+   "heartbeat_at": "2026-10-20T20:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T20:23:17Z",
+    "updated_at": "2026-10-20T20:29:19Z",
     "detail": "observations retained"
    },
    {
