@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T08:25:02Z",
+ "generated_at": "2026-10-20T08:30:04Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "37 merged in 24h"
+    "detail": "38 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_9e877389",
     "task": "LIVE-15 Prevent failed cancellation retries from starving later targets",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,17 +116,16 @@
   },
   "tests_passing": 13972,
   "flow": {
-   "merges_24h": 37,
-   "commits_24h": 37,
+   "merges_24h": 38,
+   "commits_24h": 38,
    "built_24h": 58,
    "build_failed_24h": 12,
-   "reviews_passed_24h": 45,
+   "reviews_passed_24h": 46,
    "reviews_changes_24h": 16,
    "commits_by_hour": [
     0,
     0,
     2,
-    0,
     0,
     1,
     0,
@@ -134,9 +133,10 @@
     0,
     0,
     2,
+    0,
     12,
-    2,
-    6,
+    3,
+    5,
     0,
     5,
     0,
@@ -146,7 +146,7 @@
     0,
     0,
     4,
-    3
+    4
    ],
    "merge_holds": [
     "disallowed path set"
@@ -154,9 +154,9 @@
    "stage_totals": {
     "queued": 25,
     "building": 1,
-    "in_review": 3,
+    "in_review": 2,
     "awaiting_merge": 1,
-    "merged": 306,
+    "merged": 307,
     "parked": 166
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T08:29:19Z",
+    "title": "CODE-01 Verify readiness body bytes against the pinned digest",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T08:23:26Z",
     "title": "CODE-01 Resolve country attribution by the pinned metadata fingerprint",
@@ -201,11 +206,6 @@
     "at": "2026-10-20T00:23:43Z",
     "title": "PAPER-09 Expire trajectory features when their supporting history leaves the window",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T00:23:18Z",
-    "title": "PAPER-08 Derive settlement windows from one validated rule-state snapshot",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T08:24:01Z",
+    "last_check_at": "2026-10-20T08:30:06Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T08:29:19Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Verify readiness body bytes against the pinned digest” into the main build"
+   },
+   {
+    "at": "2026-10-20T08:26:05Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Verify readiness body bytes against the pinned digest”: passed"
+   },
    {
     "at": "2026-10-20T08:25:02Z",
     "kind": "heal",
@@ -349,16 +359,6 @@
     "at": "2026-10-20T07:09:16Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “PAPER-08 Feed cumulative liquidity collapse into event risk” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T07:07:56Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Recheck guardian deadlines immediately before dispatch” into the main build"
-   },
-   {
-    "at": "2026-10-20T07:07:48Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Bind transaction leases to the opening account policy”: changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T08:24:59Z",
-   "heartbeat_at": "2026-10-20T08:25:01Z",
+   "status_at": "2026-10-20T08:29:59Z",
+   "heartbeat_at": "2026-10-20T08:30:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +379,7 @@
     "weather_events": 400,
     "markets": 3928,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T08:21:00Z",
+    "last_scan_at": "2026-10-20T08:27:04Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T08:21:00Z",
+    "updated_at": "2026-10-20T08:27:04Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T08:23:15Z",
+    "updated_at": "2026-10-20T08:29:18Z",
     "detail": "observations retained"
    },
    {
@@ -628,8 +628,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 22,
-     "open_tasks": 1
+     "merged_tasks": 23,
+     "open_tasks": 0
     },
     {
      "id": "CODE-02",
