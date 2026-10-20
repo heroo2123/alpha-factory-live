@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T02:40:02Z",
+ "generated_at": "2026-10-20T02:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -141,8 +141,8 @@
     2,
     0,
     13,
-    5,
-    2,
+    6,
+    1,
     0,
     5,
     0,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T02:39:02Z",
+    "last_check_at": "2026-10-20T02:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow review no distinct family",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T02:30:02Z",
+    "last_check_at": "2026-10-20T02:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-19",
    "state": "iteration gated",
-   "status_at": "2026-10-20T02:39:53Z",
-   "heartbeat_at": "2026-10-20T02:40:02Z",
+   "status_at": "2026-10-20T02:44:56Z",
+   "heartbeat_at": "2026-10-20T02:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -377,7 +377,7 @@
     "weather_events": 334,
     "markets": 3221,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T02:39:38Z",
+    "last_scan_at": "2026-10-20T02:45:01Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T02:39:38Z",
+    "updated_at": "2026-10-20T02:45:01Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T02:39:14Z",
+    "updated_at": "2026-10-20T02:43:15Z",
     "detail": "observations retained"
    },
    {
