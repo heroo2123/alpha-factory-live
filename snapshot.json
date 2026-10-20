@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T11:20:03Z",
+ "generated_at": "2026-10-20T11:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "45 merged in 24h"
+    "detail": "46 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_5074770e",
     "task": "LIVE-15 Bind transaction leases to the opening account policy",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 45,
-   "commits_24h": 45,
+   "merges_24h": 46,
+   "commits_24h": 46,
    "built_24h": 66,
    "build_failed_24h": 11,
    "reviews_passed_24h": 51,
@@ -131,21 +131,21 @@
     0,
     0,
     2,
-    11,
-    3,
+    12,
+    2,
     6,
     0,
-    3,
-    2,
+    5,
+    0,
     0,
     0,
     0,
     0,
     0,
     4,
-    2,
-    2,
-    5,
+    3,
+    1,
+    6,
     4
    ],
    "merge_holds": [],
@@ -153,8 +153,8 @@
     "queued": 21,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 316,
+    "awaiting_merge": 0,
+    "merged": 317,
     "parked": 170
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T11:20:45Z",
+    "title": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T10:18:18Z",
     "title": "PAPER-09 Report PWS ablation metrics by station and horizon",
@@ -199,11 +204,6 @@
     "at": "2026-10-20T08:23:26Z",
     "title": "CODE-01 Resolve country attribution by the pinned metadata fingerprint",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T08:05:34Z",
-    "title": "CODE-01 Validate boot and monotonic freshness before maker telemetry",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T11:20:03Z",
+    "last_check_at": "2026-10-20T11:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T11:17:45Z",
+    "last_check_at": "2026-10-20T11:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -245,6 +245,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T11:20:45Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Run guardian safety checks despite continuous rejected…” into the main build"
+   },
    {
     "at": "2026-10-20T11:20:03Z",
     "kind": "heal",
@@ -349,11 +354,6 @@
     "at": "2026-10-20T10:10:02Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-20T10:09:02Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Prevent failed cancellation retries from starving later…” into the main build"
    }
   ]
  },
@@ -364,17 +364,17 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T11:20:00Z",
-   "heartbeat_at": "2026-10-20T11:20:02Z",
+   "status_at": "2026-10-20T11:24:59Z",
+   "heartbeat_at": "2026-10-20T11:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 394,
-    "markets": 3862,
+    "weather_events": 393,
+    "markets": 3854,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T11:17:41Z",
+    "last_scan_at": "2026-10-20T11:23:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T11:17:41Z",
+    "updated_at": "2026-10-20T11:23:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T11:19:35Z",
+    "updated_at": "2026-10-20T11:23:36Z",
     "detail": "observations retained"
    },
    {
@@ -1001,8 +1001,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 15,
-     "open_tasks": 2
+     "merged_tasks": 16,
+     "open_tasks": 1
     },
     {
      "id": "LIVE-16",
