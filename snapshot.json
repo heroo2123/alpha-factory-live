@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T13:20:02Z",
+ "generated_at": "2026-10-20T13:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_46b346b1",
     "task": "Recover bounded GEFS worker progress after completed model constituent supersession",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -129,28 +129,28 @@
     0,
     0,
     2,
-    11,
-    3,
+    12,
+    2,
     6,
     0,
-    3,
-    2,
-    0,
-    0,
-    0,
-    0,
-    0,
-    4,
-    2,
-    2,
     5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
     4,
+    3,
+    1,
+    6,
     4,
+    3,
     3
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 21,
+    "queued": 22,
     "building": 1,
     "in_review": 0,
     "awaiting_merge": 0,
@@ -160,7 +160,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-20T11:40:08Z",
+   "last_run_at": "2026-10-20T13:20:07Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T13:20:02Z",
+    "last_check_at": "2026-10-20T13:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,12 +226,12 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T13:10:02Z",
+    "last_check_at": "2026-10-20T13:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 212,
+    "runs_total": 213,
     "last_run_at": "2026-10-20T13:15:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T13:20:07Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-20T13:15:22Z",
     "kind": "merge",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T11:40:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-20T11:34:19Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_5074770e a71daa4148b3”: passed"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T13:20:03Z",
-   "heartbeat_at": "2026-10-20T13:20:02Z",
+   "status_at": "2026-10-20T13:25:00Z",
+   "heartbeat_at": "2026-10-20T13:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -405,7 +405,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T13:18:21Z",
+    "updated_at": "2026-10-20T13:24:23Z",
     "detail": "observations retained"
    },
    {
@@ -625,7 +625,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 23,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "CODE-02",
