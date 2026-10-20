@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T06:55:02Z",
+ "generated_at": "2026-10-20T07:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "9 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 7,
+    "count": 4,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "30 merged in 24h"
+    "detail": "32 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_058f9e13",
     "task": "PAPER-08 Feed cumulative liquidity collapse into event risk",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "DeepSeek",
     "task_id": "t_5074770e",
     "task": "LIVE-15 Bind transaction leases to the opening account policy",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_ed82b4bf",
-    "task": "LIVE-15 Run bounded guardian checks during client silence",
-    "elapsed_min": 1
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_bfe0ef62",
-    "task": "PAPER-09 Report PWS score comparisons separately by settlement station",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -116,12 +116,12 @@
   },
   "tests_passing": 13972,
   "flow": {
-   "merges_24h": 30,
-   "commits_24h": 30,
+   "merges_24h": 32,
+   "commits_24h": 32,
    "built_24h": 50,
    "build_failed_24h": 12,
-   "reviews_passed_24h": 37,
-   "reviews_changes_24h": 12,
+   "reviews_passed_24h": 39,
+   "reviews_changes_24h": 13,
    "commits_by_hour": [
     0,
     0,
@@ -135,8 +135,8 @@
     0,
     0,
     2,
-    0,
-    13,
+    2,
+    11,
     6,
     1,
     0,
@@ -146,16 +146,16 @@
     0,
     0,
     0,
-    0
+    2
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 21,
     "building": 2,
-    "in_review": 7,
+    "in_review": 4,
     "awaiting_merge": 0,
-    "merged": 299,
-    "parked": 162
+    "merged": 301,
+    "parked": 163
    }
   },
   "architect": {
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T06:59:21Z",
+    "title": "PAPER-09 Reject unsafe PWS worker lock files before blocking",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T00:23:43Z",
     "title": "PAPER-09 Expire trajectory features when their supporting history leaves the window",
@@ -199,20 +204,15 @@
     "at": "2026-10-19T21:33:52Z",
     "title": "LIVE-15 Reject guardian-client completion after the absolute deadline",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T21:32:50Z",
-    "title": "CODE-01 Resolve tied observation revisions by archive sequence",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T06:54:02Z",
+    "last_check_at": "2026-10-20T07:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -248,6 +248,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T06:59:21Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Reject unsafe PWS worker lock files before blocking” into the main build"
+   },
+   {
+    "at": "2026-10-20T06:58:22Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_c8de42c4 6a9cff4cc724”: passed"
+   },
+   {
+    "at": "2026-10-20T06:57:19Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Reject unsafe PWS worker lock files before blocking”: passed"
+   },
+   {
+    "at": "2026-10-20T06:55:19Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Report PWS score comparisons separately by settlement station”: changes required"
+   },
    {
     "at": "2026-10-20T06:53:11Z",
     "kind": "build",
@@ -337,26 +357,6 @@
     "at": "2026-10-19T23:24:56Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) review ended: quota hold"
-   },
-   {
-    "at": "2026-10-19T23:24:07Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) review ended: quota hold"
-   },
-   {
-    "at": "2026-10-19T23:23:22Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Expire trajectory features when their supporting history…”: passed"
-   },
-   {
-    "at": "2026-10-19T23:21:36Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “PAPER-08 Derive settlement windows from one validated rule-state…”: passed"
-   },
-   {
-    "at": "2026-10-19T23:21:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Revalidate sizing factors at the calculation boundary”: passed"
    }
   ]
  },
@@ -367,17 +367,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T06:54:52Z",
-   "heartbeat_at": "2026-10-20T06:55:01Z",
+   "status_at": "2026-10-20T07:00:02Z",
+   "heartbeat_at": "2026-10-20T07:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 386,
-    "markets": 3774,
+    "weather_events": 393,
+    "markets": 3851,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T06:51:23Z",
+    "last_scan_at": "2026-10-20T06:57:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T06:51:23Z",
+    "updated_at": "2026-10-20T06:57:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T06:54:39Z",
+    "updated_at": "2026-10-20T06:58:40Z",
     "detail": "observations retained"
    },
    {
@@ -725,8 +725,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 21,
-     "open_tasks": 3
+     "merged_tasks": 22,
+     "open_tasks": 1
     },
     {
      "id": "PAPER-10",
