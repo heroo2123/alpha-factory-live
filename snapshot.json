@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T15:15:02Z",
+ "generated_at": "2026-10-20T15:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "65 built in 24h"
    },
    {
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "count": 0,
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_d2a4f97e",
+    "task": "CODE-01 Prevent synthetic constituent fields from acquiring public provenance",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": false,
-   "progress_pct": null,
+   "running": true,
+   "progress_pct": 0,
    "last_finished_at": "2026-10-20T10:05:19Z",
    "last_passed": 14043,
    "last_failed": 0,
@@ -127,24 +127,24 @@
     0,
     0,
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
+    3,
+    2,
     0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    2,
+    2,
     5,
-    0,
-    0,
-    0,
-    0,
-    0,
     4,
-    2,
-    2,
-    3,
-    6,
-    3,
     4,
+    3,
     1,
     0
    ],
@@ -152,12 +152,12 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 19,
-    "building": 0,
+    "queued": 17,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 324,
-    "parked": 171
+    "parked": 172
    }
   },
   "architect": {
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
+    "active": 6,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T15:15:02Z",
+    "last_check_at": "2026-10-20T15:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,10 +235,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 222,
-    "last_run_at": "2026-10-20T15:15:02Z",
+    "runs_total": 223,
+    "last_run_at": "2026-10-20T15:20:01Z",
     "last_ok": true,
-    "last_kind": "hermes dashboard down",
+    "last_kind": "hermes job late flexible provider router",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T15:20:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: hermes job late flexible provider router"
+   },
    {
     "at": "2026-10-20T15:15:02Z",
     "kind": "heal",
@@ -304,11 +309,6 @@
     "at": "2026-10-20T14:40:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-20T14:20:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow census churn"
    },
    {
     "at": "2026-10-20T14:00:28Z",
@@ -368,18 +368,18 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "census service",
-   "status_at": "2026-10-20T15:15:00Z",
-   "heartbeat_at": "2026-10-20T15:15:01Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-20T15:17:47Z",
+   "heartbeat_at": "2026-10-20T15:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 401,
-    "markets": 3956,
+    "weather_events": 400,
+    "markets": 3945,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T15:09:14Z",
+    "last_scan_at": "2026-10-20T15:15:29Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T15:09:14Z",
+    "updated_at": "2026-10-20T15:15:29Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T15:13:09Z",
+    "updated_at": "2026-10-20T15:19:11Z",
     "detail": "observations retained"
    },
    {
@@ -474,20 +474,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9718,
-     "city_days": 30
+     "brier": 0.9659,
+     "city_days": 31
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.885,
-     "city_days": 30
+     "brier": 0.8794,
+     "city_days": 31
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.7812,
-     "city_days": 30
+     "brier": 0.7773,
+     "city_days": 31
     },
     {
      "key": "equal",
@@ -499,19 +499,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 31,
-   "waiting_city_days": 23,
+   "labelled_city_days": 32,
+   "waiting_city_days": 22,
    "labelled_days": 7,
    "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T14:17:03Z",
+   "updated_at": "2026-10-20T15:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 10,
+     "have": 11,
      "need": 50,
      "done": false,
      "detail": ""
@@ -629,7 +629,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 23,
-     "open_tasks": 4
+     "open_tasks": 3
     },
     {
      "id": "CODE-02",
@@ -1080,7 +1080,7 @@
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "10 of 50 untouched city-days collected"
+    "detail": "11 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
