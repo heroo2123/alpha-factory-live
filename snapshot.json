@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T22:05:02Z",
+ "generated_at": "2026-10-20T22:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "40 built in 24h"
+    "detail": "39 built in 24h"
    },
    {
     "key": "review",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 34,
    "commits_24h": 34,
-   "built_24h": 40,
+   "built_24h": 39,
    "build_failed_24h": 3,
    "reviews_passed_24h": 34,
    "reviews_changes_24h": 9,
@@ -131,12 +131,12 @@
     0,
     0,
     0,
-    3,
-    2,
-    3,
-    0,
-    8,
     4,
+    2,
+    2,
+    2,
+    7,
+    3,
     2,
     3,
     0,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-20T22:04:02Z",
+    "last_check_at": "2026-10-20T22:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "making paper decisions",
-   "status_at": "2026-10-20T22:01:54Z",
-   "heartbeat_at": "2026-10-20T22:05:02Z",
+   "status_at": "2026-10-20T22:07:10Z",
+   "heartbeat_at": "2026-10-20T22:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T22:03:47Z",
+    "updated_at": "2026-10-20T22:09:49Z",
     "detail": "observations retained"
    },
    {
