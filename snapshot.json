@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T10:55:02Z",
+ "generated_at": "2026-10-20T11:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "45 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_95d71bc6",
     "task": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -85,22 +85,22 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_055320bf",
-    "task": "FLEX candidate t_bfe0ef62 bd3be3841679",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_dd5a4407",
-    "task": "FLEX candidate t_98b27d05 e53c999486c6",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -131,8 +131,8 @@
     0,
     0,
     2,
-    0,
-    13,
+    2,
+    11,
     6,
     1,
     0,
@@ -142,8 +142,8 @@
     0,
     0,
     0,
-    0,
-    5,
+    2,
+    3,
     3,
     0,
     7
@@ -152,8 +152,8 @@
    "stage_totals": {
     "queued": 22,
     "building": 1,
-    "in_review": 2,
-    "awaiting_merge": 0,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 314,
     "parked": 170
    }
@@ -210,9 +210,9 @@
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 12,
+    "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T10:55:02Z",
+    "last_check_at": "2026-10-20T11:00:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,9 +232,9 @@
    "operator": {
     "runs_24h": 58,
     "runs_total": 206,
-    "last_run_at": "2026-10-20T10:45:02Z",
+    "last_run_at": "2026-10-20T11:00:03Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow shadow frozen authority drift",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -246,6 +246,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T11:00:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
+   },
+   {
+    "at": "2026-10-20T10:57:36Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_98b27d05 e53c999486c6”: passed"
+   },
+   {
+    "at": "2026-10-20T10:57:22Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_bfe0ef62 bd3be3841679”: passed"
+   },
    {
     "at": "2026-10-20T10:53:12Z",
     "kind": "build",
@@ -340,21 +355,6 @@
     "at": "2026-10-20T09:58:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “CODE-01 Reject absent or malformed reward allocation identities” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T09:56:15Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “CODE-01 Validate admission provenance before assigning performance…”: changes required"
-   },
-   {
-    "at": "2026-10-20T09:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-20T09:54:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “CODE-01 Validate admission provenance before assigning performance…” → sent to independent review"
    }
   ]
  },
@@ -372,10 +372,10 @@
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 394,
-    "markets": 3862,
+    "weather_events": 397,
+    "markets": 3895,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T10:53:27Z",
+    "last_scan_at": "2026-10-20T10:59:10Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T10:53:27Z",
+    "updated_at": "2026-10-20T10:59:10Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T10:54:10Z",
+    "updated_at": "2026-10-20T10:58:11Z",
     "detail": "observations retained"
    },
    {
