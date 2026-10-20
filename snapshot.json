@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T11:05:02Z",
+ "generated_at": "2026-10-20T11:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
     "detail": "45 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_95d71bc6",
     "task": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -123,7 +123,7 @@
    "reviews_passed_24h": 52,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
-    1,
+    0,
     0,
     1,
     0,
@@ -131,9 +131,9 @@
     0,
     0,
     2,
-    4,
-    9,
-    6,
+    7,
+    7,
+    5,
     1,
     0,
     5,
@@ -142,25 +142,25 @@
     0,
     0,
     0,
-    3,
+    4,
     2,
-    3,
-    0,
-    8
+    2,
+    2,
+    7
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 22,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 315,
+    "awaiting_merge": 0,
+    "merged": 316,
     "parked": 170
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-20T10:10:02Z",
+   "last_run_at": "2026-10-20T11:10:03Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T11:04:01Z",
+    "last_check_at": "2026-10-20T11:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +231,7 @@
    },
    "operator": {
     "runs_24h": 58,
-    "runs_total": 206,
+    "runs_total": 207,
     "last_run_at": "2026-10-20T11:00:03Z",
     "last_ok": true,
     "last_kind": "flow shadow frozen authority drift",
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T11:10:03Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-20T11:00:03Z",
     "kind": "heal",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T09:59:08Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-20T09:58:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “CODE-01 Reject absent or malformed reward allocation identities” → sent to independent review"
    }
   ]
  },
@@ -372,10 +372,10 @@
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 397,
-    "markets": 3895,
+    "weather_events": 396,
+    "markets": 3884,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T10:59:10Z",
+    "last_scan_at": "2026-10-20T11:05:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T10:59:10Z",
+    "updated_at": "2026-10-20T11:05:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T11:04:14Z",
+    "updated_at": "2026-10-20T11:08:15Z",
     "detail": "observations retained"
    },
    {
