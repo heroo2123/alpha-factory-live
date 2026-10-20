@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T18:15:02Z",
+ "generated_at": "2026-10-20T18:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -120,28 +120,28 @@
    "commits_24h": 55,
    "built_24h": 59,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 51,
+   "reviews_passed_24h": 50,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
+    3,
+    2,
     0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    2,
+    2,
     5,
-    0,
-    0,
-    0,
-    0,
-    0,
     4,
-    2,
-    2,
-    3,
-    6,
-    3,
     4,
+    3,
     1,
     0,
     0,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-20T18:15:02Z",
+    "last_check_at": "2026-10-20T18:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -376,7 +376,7 @@
     "weather_events": 398,
     "markets": 3923,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T18:09:08Z",
+    "last_scan_at": "2026-10-20T18:16:05Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T18:09:08Z",
+    "updated_at": "2026-10-20T18:16:05Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T18:14:11Z",
+    "updated_at": "2026-10-20T18:18:12Z",
     "detail": "observations retained"
    },
    {
@@ -504,7 +504,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T17:17:02Z",
+   "updated_at": "2026-10-20T18:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
