@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T10:20:02Z",
+ "generated_at": "2026-10-20T10:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,18 +23,18 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "43 merged in 24h"
+    "detail": "44 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c4fc9ee7",
     "task": "CODE-01 Validate admission provenance before assigning performance slices",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_a51d758a",
+    "task": "a build task",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 43,
-   "commits_24h": 43,
+   "merges_24h": 44,
+   "commits_24h": 44,
    "built_24h": 64,
    "build_failed_24h": 12,
    "reviews_passed_24h": 51,
@@ -132,29 +132,29 @@
     0,
     0,
     2,
-    11,
-    3,
+    12,
+    2,
     6,
     0,
-    3,
-    2,
+    5,
+    0,
     0,
     0,
     0,
     0,
     0,
     4,
-    2,
-    2,
-    5
+    3,
+    1,
+    6
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 24,
     "building": 1,
-    "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 312,
+    "in_review": 1,
+    "awaiting_merge": 0,
+    "merged": 313,
     "parked": 170
    }
   },
@@ -212,21 +212,20 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T10:20:03Z",
+    "last_check_at": "2026-10-20T10:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 1,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 0,
      "P2": 1
     },
     "codes": [
-     "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T10:10:02Z",
+    "last_check_at": "2026-10-20T10:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -365,8 +364,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T10:19:51Z",
-   "heartbeat_at": "2026-10-20T10:20:02Z",
+   "status_at": "2026-10-20T10:24:51Z",
+   "heartbeat_at": "2026-10-20T10:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -375,7 +374,7 @@
     "weather_events": 394,
     "markets": 3862,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T10:17:22Z",
+    "last_scan_at": "2026-10-20T10:23:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T10:17:22Z",
+    "updated_at": "2026-10-20T10:23:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T10:19:55Z",
+    "updated_at": "2026-10-20T10:23:57Z",
     "detail": "observations retained"
    },
    {
