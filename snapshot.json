@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T14:50:02Z",
+ "generated_at": "2026-10-20T14:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "66 built in 24h"
+    "detail": "65 built in 24h"
    },
    {
     "key": "review",
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 69,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_f9e1ba34",
     "task": "CODE-01 Validate the archived envelope before reusing a forecast slice",
-    "elapsed_min": 52
+    "elapsed_min": 57
    },
    {
     "slot": "Builder 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 69,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-20T10:05:19Z",
    "last_passed": 14043,
    "last_failed": 0,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 52,
    "commits_24h": 52,
-   "built_24h": 66,
+   "built_24h": 65,
    "build_failed_24h": 7,
    "reviews_passed_24h": 54,
    "reviews_changes_24h": 17,
@@ -143,8 +143,8 @@
     3,
     0,
     7,
-    4,
-    3,
+    5,
+    2,
     3,
     0
    ],
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T14:49:01Z",
+    "last_check_at": "2026-10-20T14:54:06Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T14:40:03Z",
+    "last_check_at": "2026-10-20T14:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T14:49:59Z",
-   "heartbeat_at": "2026-10-20T14:50:01Z",
+   "status_at": "2026-10-20T14:55:00Z",
+   "heartbeat_at": "2026-10-20T14:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -407,7 +407,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T14:48:55Z",
+    "updated_at": "2026-10-20T14:54:59Z",
     "detail": "observations retained"
    },
    {
