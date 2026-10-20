@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T09:10:01Z",
+ "generated_at": "2026-10-20T09:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 24,
     "unit": "queued",
     "active": false,
     "detail": "9 ready to build"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 41,
+    "count": 47,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_ee33f4b7",
     "task": "LIVE-15 Bind transaction-time guardian checks to the opening account policy",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_4dec6a81",
     "task": "LIVE-15 Process PAPER safety cancellations while the broker is idle",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 2",
@@ -98,14 +98,14 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_058f9e13",
-    "task": "PAPER-08 Feed cumulative liquidity collapse into event risk",
-    "elapsed_min": 6
+    "task_id": "t_069aff65",
+    "task": "PAPER-09 Report PWS ablation metrics by station and horizon",
+    "elapsed_min": 2
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 41,
+   "progress_pct": 47,
    "last_finished_at": "2026-10-20T01:44:32Z",
    "last_passed": 13972,
    "last_failed": 0,
@@ -121,7 +121,7 @@
    "built_24h": 60,
    "build_failed_24h": 12,
    "reviews_passed_24h": 47,
-   "reviews_changes_24h": 16,
+   "reviews_changes_24h": 17,
    "commits_by_hour": [
     0,
     2,
@@ -133,10 +133,10 @@
     0,
     0,
     2,
-    7,
-    7,
-    5,
-    1,
+    8,
+    6,
+    6,
+    0,
     0,
     5,
     0,
@@ -152,12 +152,12 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 23,
+    "queued": 24,
     "building": 1,
-    "in_review": 3,
+    "in_review": 2,
     "awaiting_merge": 2,
     "merged": 307,
-    "parked": 166
+    "parked": 167
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T09:09:02Z",
+    "last_check_at": "2026-10-20T09:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,15 +229,15 @@
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T09:00:03Z",
+    "last_check_at": "2026-10-20T09:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 51,
+    "runs_24h": 52,
     "runs_total": 198,
-    "last_run_at": "2026-10-20T09:05:01Z",
+    "last_run_at": "2026-10-20T09:15:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow shadow frozen authority drift",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T09:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
+   },
+   {
+    "at": "2026-10-20T09:12:18Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Feed cumulative liquidity collapse into event risk”: changes required"
+   },
    {
     "at": "2026-10-20T09:05:01Z",
     "kind": "heal",
@@ -293,11 +303,6 @@
     "at": "2026-10-20T08:26:05Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Verify readiness body bytes against the pinned digest”: passed"
-   },
-   {
-    "at": "2026-10-20T08:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
    },
    {
     "at": "2026-10-20T08:23:26Z",
@@ -353,11 +358,6 @@
     "at": "2026-10-20T07:43:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “PAPER-09 Recheck completed PWS commands after acquiring the worker…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T07:26:07Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Fence execution-health publication to its exact archive…”: passed"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T09:09:57Z",
-   "heartbeat_at": "2026-10-20T09:10:01Z",
+   "status_at": "2026-10-20T09:14:58Z",
+   "heartbeat_at": "2026-10-20T09:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T09:09:33Z",
+    "updated_at": "2026-10-20T09:13:34Z",
     "detail": "observations retained"
    },
    {
@@ -718,7 +718,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 13,
-     "open_tasks": 2
+     "open_tasks": 1
     },
     {
      "id": "PAPER-09",
