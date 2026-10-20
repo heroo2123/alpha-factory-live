@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T11:50:02Z",
+ "generated_at": "2026-10-20T11:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "47 merged in 24h"
+    "detail": "48 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_845fa7ce",
     "task": "PAPER-08 Compare basket scenario inputs with the historical account",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 47,
-   "commits_24h": 47,
+   "merges_24h": 48,
+   "commits_24h": 48,
    "built_24h": 65,
    "build_failed_24h": 11,
    "reviews_passed_24h": 53,
@@ -146,15 +146,15 @@
     3,
     0,
     7,
-    4
+    5
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 22,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 318,
+    "awaiting_merge": 0,
+    "merged": 319,
     "parked": 171
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T11:50:36Z",
+    "title": "PAPER-08 Escalate risk when a leased model channel disappears",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T11:20:45Z",
     "title": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
@@ -199,11 +204,6 @@
     "at": "2026-10-20T08:29:19Z",
     "title": "CODE-01 Verify readiness body bytes against the pinned digest",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T08:23:26Z",
-    "title": "CODE-01 Resolve country attribution by the pinned metadata fingerprint",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T11:49:01Z",
+    "last_check_at": "2026-10-20T11:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T11:40:02Z",
+    "last_check_at": "2026-10-20T11:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -245,6 +245,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T11:50:36Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 Escalate risk when a leased model channel disappears” into the main build"
+   },
    {
     "at": "2026-10-20T11:47:20Z",
     "kind": "review",
@@ -349,11 +354,6 @@
     "at": "2026-10-20T10:45:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-20T10:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: routine"
    }
   ]
  },
@@ -364,17 +364,17 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T11:50:01Z",
-   "heartbeat_at": "2026-10-20T11:50:03Z",
+   "status_at": "2026-10-20T11:55:01Z",
+   "heartbeat_at": "2026-10-20T11:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 393,
-    "markets": 3854,
+    "weather_events": 392,
+    "markets": 3843,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T11:48:21Z",
+    "last_scan_at": "2026-10-20T11:54:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T11:48:21Z",
+    "updated_at": "2026-10-20T11:54:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T11:49:45Z",
+    "updated_at": "2026-10-20T11:53:46Z",
     "detail": "observations retained"
    },
    {
@@ -713,8 +713,8 @@
      "name": "Scenario-risk accounting",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 14,
-     "open_tasks": 2
+     "merged_tasks": 15,
+     "open_tasks": 1
     },
     {
      "id": "PAPER-09",
