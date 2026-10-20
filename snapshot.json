@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T08:05:02Z",
+ "generated_at": "2026-10-20T08:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "35 merged in 24h"
+    "detail": "36 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_103b85a8",
     "task": "CODE-01 Resolve country attribution by the pinned metadata fingerprint",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 13972,
   "flow": {
-   "merges_24h": 35,
-   "commits_24h": 35,
+   "merges_24h": 36,
+   "commits_24h": 36,
    "built_24h": 56,
    "build_failed_24h": 12,
    "reviews_passed_24h": 44,
@@ -125,8 +125,8 @@
    "commits_by_hour": [
     0,
     0,
-    1,
-    1,
+    2,
+    0,
     0,
     1,
     0,
@@ -134,9 +134,9 @@
     0,
     0,
     2,
-    4,
-    9,
-    6,
+    7,
+    7,
+    5,
     1,
     0,
     5,
@@ -145,7 +145,7 @@
     0,
     0,
     0,
-    3,
+    4,
     2
    ],
    "merge_holds": [
@@ -155,8 +155,8 @@
     "queued": 27,
     "building": 1,
     "in_review": 2,
-    "awaiting_merge": 2,
-    "merged": 304,
+    "awaiting_merge": 1,
+    "merged": 305,
     "parked": 166
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T08:05:34Z",
+    "title": "CODE-01 Validate boot and monotonic freshness before maker telemetry",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T07:50:20Z",
     "title": "PAPER-09 Recheck completed PWS commands after acquiring the worker lock",
@@ -201,11 +206,6 @@
     "at": "2026-10-20T00:20:19Z",
     "title": "PAPER-08 Revalidate sizing factors at the calculation boundary",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T00:16:46Z",
-    "title": "PAPER-08 Surface newly introduced model channels as risk events",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T08:05:02Z",
+    "last_check_at": "2026-10-20T08:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T08:05:34Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Validate boot and monotonic freshness before maker telemetry” into the main build"
+   },
    {
     "at": "2026-10-20T08:05:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-20T07:02:26Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Recheck guardian deadlines immediately before dispatch”: passed"
-   },
-   {
-    "at": "2026-10-20T07:02:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T08:04:54Z",
-   "heartbeat_at": "2026-10-20T08:05:03Z",
+   "status_at": "2026-10-20T08:09:52Z",
+   "heartbeat_at": "2026-10-20T08:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -380,7 +380,7 @@
     "weather_events": 400,
     "markets": 3928,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T08:02:48Z",
+    "last_scan_at": "2026-10-20T08:08:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T08:02:48Z",
+    "updated_at": "2026-10-20T08:08:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T08:03:07Z",
+    "updated_at": "2026-10-20T08:09:10Z",
     "detail": "observations retained"
    },
    {
@@ -629,8 +629,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 20,
-     "open_tasks": 3
+     "merged_tasks": 21,
+     "open_tasks": 2
     },
     {
      "id": "CODE-02",
