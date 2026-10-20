@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T19:40:02Z",
+ "generated_at": "2026-10-20T19:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "55 built in 24h"
+    "detail": "54 built in 24h"
    },
    {
     "key": "review",
@@ -118,14 +118,14 @@
   "flow": {
    "merges_24h": 53,
    "commits_24h": 53,
-   "built_24h": 55,
+   "built_24h": 54,
    "build_failed_24h": 4,
    "reviews_passed_24h": 48,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     13,
-    5,
-    2,
+    6,
+    1,
     0,
     5,
     0,
@@ -139,8 +139,8 @@
     0,
     7,
     4,
-    2,
-    4,
+    3,
+    3,
     0,
     0,
     0,
@@ -211,8 +211,8 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 10,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T19:39:01Z",
+    "recoveries_24h": 10,
+    "last_check_at": "2026-10-20T19:45:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T19:30:02Z",
+    "last_check_at": "2026-10-20T19:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-20T19:40:01Z",
-   "heartbeat_at": "2026-10-20T19:40:02Z",
+   "status_at": "2026-10-20T19:45:01Z",
+   "heartbeat_at": "2026-10-20T19:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -374,7 +374,7 @@
     "weather_events": 398,
     "markets": 3923,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T19:33:56Z",
+    "last_scan_at": "2026-10-20T19:41:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T19:33:56Z",
+    "updated_at": "2026-10-20T19:41:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T19:39:02Z",
+    "updated_at": "2026-10-20T19:43:03Z",
     "detail": "observations retained"
    },
    {
