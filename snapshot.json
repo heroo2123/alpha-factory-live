@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T11:25:01Z",
+ "generated_at": "2026-10-20T11:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,22 +10,22 @@
     "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "8 ready to build"
+    "detail": "7 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "66 built in 24h"
+    "active": false,
+    "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_5074770e",
-    "task": "LIVE-15 Bind transaction leases to the opening account policy",
-    "elapsed_min": 12
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_4292389e",
+    "task": "FLEX candidate t_5074770e a71daa4148b3",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -118,12 +118,11 @@
   "flow": {
    "merges_24h": 46,
    "commits_24h": 46,
-   "built_24h": 66,
-   "build_failed_24h": 11,
+   "built_24h": 65,
+   "build_failed_24h": 12,
    "reviews_passed_24h": 51,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
-    0,
     0,
     1,
     0,
@@ -131,9 +130,10 @@
     0,
     0,
     2,
+    0,
     12,
-    2,
-    6,
+    3,
+    5,
     0,
     5,
     0,
@@ -143,16 +143,16 @@
     0,
     0,
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 21,
-    "building": 1,
-    "in_review": 0,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 317,
     "parked": 170
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T11:25:01Z",
+    "last_check_at": "2026-10-20T11:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 207,
+    "runs_total": 208,
     "last_run_at": "2026-10-20T11:20:03Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -245,6 +245,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T11:28:08Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-20T11:27:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “LIVE-15 Bind transaction leases to the opening account policy” → sent to independent review"
+   },
    {
     "at": "2026-10-20T11:20:45Z",
     "kind": "merge",
@@ -344,16 +354,6 @@
     "at": "2026-10-20T10:17:22Z",
     "kind": "merge",
     "text": "Merged “LIVE-15 Bind transaction-time guardian checks to the opening account…” into the main build"
-   },
-   {
-    "at": "2026-10-20T10:14:12Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Process PAPER safety cancellations while the broker is idle” into the main build"
-   },
-   {
-    "at": "2026-10-20T10:10:02Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -363,9 +363,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "census service",
-   "status_at": "2026-10-20T11:24:59Z",
-   "heartbeat_at": "2026-10-20T11:25:01Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-20T11:26:50Z",
+   "heartbeat_at": "2026-10-20T11:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -374,7 +374,7 @@
     "weather_events": 393,
     "markets": 3854,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T11:23:49Z",
+    "last_scan_at": "2026-10-20T11:29:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,14 +397,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T11:23:49Z",
+    "updated_at": "2026-10-20T11:29:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T11:23:36Z",
+    "updated_at": "2026-10-20T11:29:38Z",
     "detail": "observations retained"
    },
    {
