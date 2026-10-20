@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T15:40:02Z",
+ "generated_at": "2026-10-20T15:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "65 built in 24h"
+    "detail": "66 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 27,
+    "count": 34,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_d2a4f97e",
-    "task": "CODE-01 Prevent synthetic constituent fields from acquiring public provenance",
-    "elapsed_min": 24
+    "task_id": "t_2dabbf66",
+    "task": "CODE-01 Preserve official features when an optional capture is unavailable",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_d2a4f97e",
+    "task": "CODE-01 Prevent synthetic constituent fields from acquiring public provenance",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 27,
+   "progress_pct": 34,
    "last_finished_at": "2026-10-20T10:05:19Z",
    "last_passed": 14043,
    "last_failed": 0,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 52,
    "commits_24h": 52,
-   "built_24h": 65,
+   "built_24h": 66,
    "build_failed_24h": 8,
    "reviews_passed_24h": 54,
    "reviews_changes_24h": 17,
@@ -128,8 +128,8 @@
     2,
     0,
     13,
-    5,
-    2,
+    6,
+    1,
     0,
     5,
     0,
@@ -143,8 +143,8 @@
     0,
     7,
     4,
-    2,
-    4,
+    3,
+    3,
     0,
     0
    ],
@@ -154,10 +154,10 @@
    "stage_totals": {
     "queued": 17,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 324,
-    "parked": 172
+    "parked": 171
    }
   },
   "architect": {
@@ -212,23 +212,24 @@
    "guardian": {
     "state": "p1",
     "active": 7,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T15:40:03Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-20T15:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 2
+     "P2": 3
     },
     "codes": [
+     "flow deepseek low",
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T15:30:03Z",
+    "last_check_at": "2026-10-20T15:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -248,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T15:44:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “CODE-01 Prevent synthetic constituent fields from acquiring public…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-20T15:42:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-20T15:40:02Z",
     "kind": "heal",
@@ -304,11 +315,6 @@
     "text": "Guardian raised an alert: hermes job late flexible provider router"
    },
    {
-    "at": "2026-10-20T14:55:03Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes dashboard down"
-   },
-   {
     "at": "2026-10-20T14:00:28Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Distinguish official revisions from capture-envelope changes”: passed"
@@ -352,11 +358,6 @@
     "at": "2026-10-20T13:14:33Z",
     "kind": "merge",
     "text": "Merged “Let fresh external census reach evaluation before redundant periodic…” into the main build"
-   },
-   {
-    "at": "2026-10-20T13:12:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “Size bounded station source fan-in for the actual registered book…”: passed"
    }
   ]
  },
@@ -367,8 +368,8 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T15:40:01Z",
-   "heartbeat_at": "2026-10-20T15:40:02Z",
+   "status_at": "2026-10-20T15:44:59Z",
+   "heartbeat_at": "2026-10-20T15:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -377,7 +378,7 @@
     "weather_events": 400,
     "markets": 3945,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T15:35:21Z",
+    "last_scan_at": "2026-10-20T15:42:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T15:35:21Z",
+    "updated_at": "2026-10-20T15:42:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T15:39:18Z",
+    "updated_at": "2026-10-20T15:43:20Z",
     "detail": "observations retained"
    },
    {
@@ -627,7 +628,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 23,
-     "open_tasks": 3
+     "open_tasks": 4
     },
     {
      "id": "CODE-02",
