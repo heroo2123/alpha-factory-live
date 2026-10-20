@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T19:50:02Z",
+ "generated_at": "2026-10-20T19:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -119,9 +119,9 @@
    "merges_24h": 53,
    "commits_24h": 53,
    "built_24h": 54,
-   "build_failed_24h": 4,
-   "reviews_passed_24h": 47,
-   "reviews_changes_24h": 11,
+   "build_failed_24h": 3,
+   "reviews_passed_24h": 46,
+   "reviews_changes_24h": 10,
    "commits_by_hour": [
     13,
     6,
@@ -138,13 +138,13 @@
     3,
     0,
     7,
-    4,
-    3,
+    5,
+    2,
     3,
     0,
     0,
-    0,
-    3,
+    2,
+    1,
     0,
     0
    ],
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T19:50:03Z",
+    "last_check_at": "2026-10-20T19:54:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T19:40:03Z",
+    "last_check_at": "2026-10-20T19:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-20T19:50:02Z",
-   "heartbeat_at": "2026-10-20T19:50:03Z",
+   "status_at": "2026-10-20T19:55:02Z",
+   "heartbeat_at": "2026-10-20T19:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T19:49:06Z",
+    "updated_at": "2026-10-20T19:53:07Z",
     "detail": "observations retained"
    },
    {
@@ -580,7 +580,7 @@
    }
   ],
   "readiness": {
-   "accepted": 38,
+   "accepted": 39,
    "total": 48,
    "groups": [
     {
@@ -603,9 +603,9 @@
      "name": "LEARNING",
      "label": "Learning",
      "total": 14,
-     "accepted": 12,
+     "accepted": 13,
      "owner": 1,
-     "pending": 1
+     "pending": 0
     },
     {
      "name": "LIVE",
@@ -810,8 +810,8 @@
      "id": "LEARNING-08",
      "group": "LEARNING",
      "name": "Challenger evaluation pipeline",
-     "status": "pending",
-     "detail": "not accepted yet",
+     "status": "accepted",
+     "detail": "accepted by an independent reviewer",
      "merged_tasks": 5,
      "open_tasks": 0
     },
@@ -1064,8 +1064,8 @@
    },
    {
     "step": "Safe self-learning controls",
-    "state": "active",
-    "detail": "13 of 14 criteria accepted"
+    "state": "done",
+    "detail": "14 of 14 criteria accepted"
    },
    {
     "step": "Live-execution safety",
