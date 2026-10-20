@@ -1,40 +1,40 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T07:00:02Z",
+ "generated_at": "2026-10-20T07:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 26,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "51 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "32 merged in 24h"
+    "detail": "33 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,21 +70,11 @@
     "family": "DeepSeek",
     "task_id": "t_058f9e13",
     "task": "PAPER-08 Feed cumulative liquidity collapse into event risk",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5074770e",
-    "task": "LIVE-15 Bind transaction leases to the opening account policy",
-    "elapsed_min": 18
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
     "state": "idle",
     "model": "",
     "family": "",
@@ -93,9 +83,19 @@
     "elapsed_min": null
    },
    {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_5074770e",
+    "task": "LIVE-15 Bind transaction leases to the opening account policy",
+    "elapsed_min": 0
+   },
+   {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,18 +116,18 @@
   },
   "tests_passing": 13972,
   "flow": {
-   "merges_24h": 32,
-   "commits_24h": 32,
-   "built_24h": 50,
+   "merges_24h": 33,
+   "commits_24h": 33,
+   "built_24h": 51,
    "build_failed_24h": 12,
-   "reviews_passed_24h": 39,
-   "reviews_changes_24h": 13,
+   "reviews_passed_24h": 41,
+   "reviews_changes_24h": 15,
    "commits_by_hour": [
     0,
     0,
     0,
-    0,
-    2,
+    1,
+    1,
     0,
     1,
     0,
@@ -135,8 +135,8 @@
     0,
     0,
     2,
-    2,
-    11,
+    4,
+    9,
     6,
     1,
     0,
@@ -146,25 +146,30 @@
     0,
     0,
     0,
-    2
+    3
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 21,
-    "building": 2,
-    "in_review": 4,
-    "awaiting_merge": 0,
-    "merged": 301,
-    "parked": 163
+    "queued": 26,
+    "building": 1,
+    "in_review": 1,
+    "awaiting_merge": 1,
+    "merged": 302,
+    "parked": 165
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-20T06:50:11Z",
+   "last_run_at": "2026-10-20T07:00:19Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T07:03:43Z",
+    "title": "LIVE-15 Run bounded guardian checks during client silence",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T06:59:21Z",
     "title": "PAPER-09 Reject unsafe PWS worker lock files before blocking",
@@ -199,11 +204,6 @@
     "at": "2026-10-19T22:13:38Z",
     "title": "LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-19T21:33:52Z",
-    "title": "LIVE-15 Reject guardian-client completion after the absolute deadline",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T07:00:03Z",
+    "last_check_at": "2026-10-20T07:04:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,15 +228,15 @@
      "flow review no distinct family",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T06:50:02Z",
+    "last_check_at": "2026-10-20T07:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 40,
-    "runs_total": 184,
-    "last_run_at": "2026-10-20T06:50:02Z",
+    "runs_24h": 41,
+    "runs_total": 185,
+    "last_run_at": "2026-10-20T07:05:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow frozen authority drift",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +248,51 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T07:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-20T07:04:21Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “PAPER-07 Record malformed or refused public payloads per source…”: changes required"
+   },
+   {
+    "at": "2026-10-20T07:04:12Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “LIVE-15 Bind transaction leases to the opening account policy” → sent to independent review"
+   },
+   {
+    "at": "2026-10-20T07:03:43Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Run bounded guardian checks during client silence” into the main build"
+   },
+   {
+    "at": "2026-10-20T07:02:26Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Recheck guardian deadlines immediately before dispatch”: passed"
+   },
+   {
+    "at": "2026-10-20T07:02:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-20T07:00:40Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Render-only hardened systemd units for distinct-principal guardian…”: changes required"
+   },
+   {
+    "at": "2026-10-20T07:00:31Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Run bounded guardian checks during client silence”: passed"
+   },
+   {
+    "at": "2026-10-20T07:00:19Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-20T06:59:21Z",
     "kind": "merge",
@@ -312,51 +357,6 @@
     "at": "2026-10-20T00:23:18Z",
     "kind": "merge",
     "text": "Merged “PAPER-08 Derive settlement windows from one validated rule-state…” into the main build"
-   },
-   {
-    "at": "2026-10-20T00:20:19Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 Revalidate sizing factors at the calculation boundary” into the main build"
-   },
-   {
-    "at": "2026-10-20T00:18:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
-   },
-   {
-    "at": "2026-10-20T00:16:46Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 Surface newly introduced model channels as risk events” into the main build"
-   },
-   {
-    "at": "2026-10-20T00:16:09Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Record which trigger caused each guardian cancel and add…” into the main build"
-   },
-   {
-    "at": "2026-10-20T00:12:29Z",
-    "kind": "warn",
-    "text": "Full test suite finished: 13864 passed, 1 failed"
-   },
-   {
-    "at": "2026-10-19T23:44:11Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “PAPER-09 Bound physical-model provenance traversal” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T23:33:12Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “PAPER-09 Reject unsafe PWS worker lock files before blocking” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T23:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-19T23:24:56Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) review ended: quota hold"
    }
   ]
  },
@@ -367,17 +367,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T07:00:02Z",
-   "heartbeat_at": "2026-10-20T07:00:03Z",
+   "status_at": "2026-10-20T07:05:00Z",
+   "heartbeat_at": "2026-10-20T07:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 393,
-    "markets": 3851,
+    "weather_events": 392,
+    "markets": 3840,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T06:57:15Z",
+    "last_scan_at": "2026-10-20T07:03:17Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T06:57:15Z",
+    "updated_at": "2026-10-20T07:03:17Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T06:58:40Z",
+    "updated_at": "2026-10-20T07:04:43Z",
     "detail": "observations retained"
    },
    {
@@ -708,7 +708,7 @@
      "status": "pending",
      "detail": "re-check inconclusive",
      "merged_tasks": 6,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "PAPER-08",
@@ -717,7 +717,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 13,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "PAPER-09",
@@ -726,7 +726,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 22,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "PAPER-10",
@@ -1004,7 +1004,7 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 10,
+     "merged_tasks": 11,
      "open_tasks": 5
     },
     {
