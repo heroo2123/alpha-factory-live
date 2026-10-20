@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T06:45:02Z",
+ "generated_at": "2026-10-20T06:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_ed82b4bf",
     "task": "LIVE-15 Run bounded guardian checks during client silence",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_5074770e",
     "task": "LIVE-15 Bind transaction leases to the opening account policy",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T06:45:02Z",
+    "last_check_at": "2026-10-20T06:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 39,
-    "runs_total": 183,
-    "last_run_at": "2026-10-19T23:25:02Z",
-    "last_ok": false,
-    "last_kind": "independent review changes required",
+    "runs_24h": 40,
+    "runs_total": 184,
+    "last_run_at": "2026-10-20T06:50:02Z",
+    "last_ok": true,
+    "last_kind": "flow shadow frozen authority drift",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +248,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T06:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
+   },
    {
     "at": "2026-10-20T06:41:12Z",
     "kind": "build",
@@ -352,11 +357,6 @@
     "at": "2026-10-19T23:05:01Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-19T23:04:12Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “PAPER-08 Derive settlement windows from one validated rule-state…” → sent to independent review"
    }
   ]
  },
@@ -367,17 +367,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T06:44:55Z",
-   "heartbeat_at": "2026-10-20T06:45:02Z",
+   "status_at": "2026-10-20T06:49:54Z",
+   "heartbeat_at": "2026-10-20T06:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 388,
-    "markets": 3796,
+    "weather_events": 386,
+    "markets": 3774,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T06:39:16Z",
+    "last_scan_at": "2026-10-20T06:45:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T06:39:16Z",
+    "updated_at": "2026-10-20T06:45:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T06:44:35Z",
+    "updated_at": "2026-10-20T06:48:36Z",
     "detail": "observations retained"
    },
    {
