@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T10:30:02Z",
+ "generated_at": "2026-10-20T10:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "44 merged in 24h"
+    "detail": "45 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_bfe0ef62",
     "task": "PAPER-09 Report PWS score comparisons separately by settlement station",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_bd0f430b",
-    "task": "FLEX candidate t_c4fc9ee7 718973bff796",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -116,11 +116,11 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 44,
-   "commits_24h": 44,
+   "merges_24h": 45,
+   "commits_24h": 45,
    "built_24h": 65,
-   "build_failed_24h": 12,
-   "reviews_passed_24h": 51,
+   "build_failed_24h": 11,
+   "reviews_passed_24h": 52,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     2,
@@ -133,8 +133,8 @@
     2,
     0,
     12,
-    3,
-    5,
+    6,
+    2,
     0,
     5,
     0,
@@ -146,15 +146,15 @@
     4,
     4,
     0,
-    6
+    7
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 23,
+    "queued": 24,
     "building": 1,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 0,
-    "merged": 313,
+    "merged": 314,
     "parked": 170
    }
   },
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T10:29:02Z",
+    "last_check_at": "2026-10-20T10:34:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,7 +225,7 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T10:20:03Z",
+    "last_check_at": "2026-10-20T10:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -245,6 +245,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T10:31:23Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_c4fc9ee7 718973bff796”: passed"
+   },
    {
     "at": "2026-10-20T10:30:02Z",
     "kind": "heal",
@@ -349,11 +354,6 @@
     "at": "2026-10-20T09:29:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “PAPER-08 Feed cumulative liquidity collapse into event risk” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T09:24:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Report PWS ablation metrics by station and horizon”: passed"
    }
   ]
  },
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T10:29:50Z",
-   "heartbeat_at": "2026-10-20T10:30:01Z",
+   "status_at": "2026-10-20T10:34:53Z",
+   "heartbeat_at": "2026-10-20T10:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T10:29:59Z",
+    "updated_at": "2026-10-20T10:34:00Z",
     "detail": "observations retained"
    },
    {
