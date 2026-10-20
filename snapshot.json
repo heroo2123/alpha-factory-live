@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T07:50:03Z",
+ "generated_at": "2026-10-20T07:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "55 built in 24h"
    },
    {
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "34 merged in 24h"
+    "detail": "35 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_e5723262",
-    "task": "CODE-01 Validate boot and monotonic freshness before maker telemetry",
-    "elapsed_min": 6
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 13972,
   "flow": {
-   "merges_24h": 34,
-   "commits_24h": 34,
+   "merges_24h": 35,
+   "commits_24h": 35,
    "built_24h": 55,
    "build_failed_24h": 12,
    "reviews_passed_24h": 43,
@@ -146,7 +146,7 @@
     0,
     0,
     0,
-    4
+    5
    ],
    "merge_holds": [
     "disallowed path set"
@@ -155,8 +155,8 @@
     "queued": 28,
     "building": 1,
     "in_review": 2,
-    "awaiting_merge": 2,
-    "merged": 303,
+    "awaiting_merge": 1,
+    "merged": 304,
     "parked": 166
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T07:50:20Z",
+    "title": "PAPER-09 Recheck completed PWS commands after acquiring the worker lock",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T07:07:56Z",
     "title": "LIVE-15 Recheck guardian deadlines immediately before dispatch",
@@ -201,11 +206,6 @@
     "at": "2026-10-20T00:16:46Z",
     "title": "PAPER-08 Surface newly introduced model channels as risk events",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T00:16:09Z",
-    "title": "LIVE-15 Record which trigger caused each guardian cancel and add adversarial trigger tests",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,31 +214,32 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T07:50:03Z",
+    "last_check_at": "2026-10-20T07:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 5,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
+     "flow qa resource blocked",
      "flow shadow frozen authority drift",
      "flow acceptance stalled",
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T07:40:03Z",
+    "last_check_at": "2026-10-20T07:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 44,
-    "runs_total": 189,
-    "last_run_at": "2026-10-20T07:45:02Z",
+    "runs_24h": 45,
+    "runs_total": 190,
+    "last_run_at": "2026-10-20T07:55:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow frozen authority drift",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T07:55:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-20T07:50:20Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Recheck completed PWS commands after acquiring the worker…” into the main build"
+   },
    {
     "at": "2026-10-20T07:47:24Z",
     "kind": "review",
@@ -316,11 +327,6 @@
     "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Bind transaction leases to the opening account policy”: changes required"
    },
    {
-    "at": "2026-10-20T07:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-20T07:04:21Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “PAPER-07 Record malformed or refused public payloads per source…”: changes required"
@@ -354,11 +360,6 @@
     "at": "2026-10-20T07:00:31Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “LIVE-15 Run bounded guardian checks during client silence”: passed"
-   },
-   {
-    "at": "2026-10-20T07:00:19Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -369,8 +370,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T07:49:52Z",
-   "heartbeat_at": "2026-10-20T07:50:02Z",
+   "status_at": "2026-10-20T07:54:51Z",
+   "heartbeat_at": "2026-10-20T07:55:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +380,7 @@
     "weather_events": 399,
     "markets": 3917,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T07:44:46Z",
+    "last_scan_at": "2026-10-20T07:50:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T07:44:46Z",
+    "updated_at": "2026-10-20T07:50:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T07:49:00Z",
+    "updated_at": "2026-10-20T07:53:01Z",
     "detail": "observations retained"
    },
    {
@@ -727,8 +728,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 22,
-     "open_tasks": 3
+     "merged_tasks": 23,
+     "open_tasks": 2
     },
     {
      "id": "PAPER-10",
