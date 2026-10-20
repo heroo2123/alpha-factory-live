@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T06:40:02Z",
+ "generated_at": "2026-10-20T06:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "48 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 5,
+    "count": 6,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_ed82b4bf",
     "task": "LIVE-15 Run bounded guardian checks during client silence",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -78,8 +78,8 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_f34de3db",
-    "task": "LIVE-15 Recheck guardian deadlines immediately before dispatch",
+    "task_id": "t_5074770e",
+    "task": "LIVE-15 Bind transaction leases to the opening account policy",
     "elapsed_min": 3
    },
    {
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 30,
    "commits_24h": 30,
-   "built_24h": 48,
+   "built_24h": 49,
    "build_failed_24h": 12,
    "reviews_passed_24h": 37,
    "reviews_changes_24h": 12,
@@ -137,8 +137,8 @@
     2,
     0,
     13,
-    5,
-    2,
+    6,
+    1,
     0,
     5,
     0,
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 19,
     "building": 2,
-    "in_review": 5,
+    "in_review": 6,
     "awaiting_merge": 0,
     "merged": 299,
     "parked": 162
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T06:39:01Z",
+    "last_check_at": "2026-10-20T06:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow review no distinct family",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T06:30:02Z",
+    "last_check_at": "2026-10-20T06:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -248,6 +248,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T06:41:12Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “LIVE-15 Recheck guardian deadlines immediately before dispatch” → sent to independent review"
+   },
+   {
+    "at": "2026-10-20T06:40:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-20T01:44:32Z",
     "kind": "qa",
@@ -347,16 +357,6 @@
     "at": "2026-10-19T23:04:12Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “PAPER-08 Derive settlement windows from one validated rule-state…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-19T22:57:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Surface newly introduced model channels as risk events”: passed"
-   },
-   {
-    "at": "2026-10-19T22:55:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow qa resource blocked"
    }
   ]
  },
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T06:39:58Z",
-   "heartbeat_at": "2026-10-20T06:40:01Z",
+   "status_at": "2026-10-20T06:44:55Z",
+   "heartbeat_at": "2026-10-20T06:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -407,7 +407,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T06:38:33Z",
+    "updated_at": "2026-10-20T06:44:35Z",
     "detail": "observations retained"
    },
    {
