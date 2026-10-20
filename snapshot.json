@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T13:05:02Z",
+ "generated_at": "2026-10-20T13:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,8 +68,8 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_1f493310",
-    "task": "Size bounded station source fan-in for the actual registered book tokens",
+    "task_id": "t_46b346b1",
+    "task": "Recover bounded GEFS worker progress after completed model constituent supersession",
     "elapsed_min": 1
    },
    {
@@ -90,17 +90,17 @@
     "family": "DeepSeek",
     "task_id": "t_b9178a67",
     "task": "Let fresh external census reach evaluation before redundant periodic census",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_1f493310",
+    "task": "Size bounded station source fan-in for the actual registered book tokens",
+    "elapsed_min": 1
    }
   ],
   "qa": {
@@ -129,9 +129,9 @@
     0,
     0,
     2,
-    4,
-    9,
-    6,
+    7,
+    7,
+    5,
     1,
     0,
     5,
@@ -140,19 +140,19 @@
     0,
     0,
     0,
-    3,
-    2,
-    3,
-    0,
-    8,
     4,
+    2,
+    2,
+    2,
+    7,
+    3,
     2
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 22,
+    "queued": 21,
     "building": 1,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 321,
     "parked": 171
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T13:04:02Z",
+    "last_check_at": "2026-10-20T13:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,8 +230,8 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
-    "runs_total": 211,
+    "runs_24h": 58,
+    "runs_total": 212,
     "last_run_at": "2026-10-20T12:58:56Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T13:08:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Size bounded station source fan-in for the actual registered book…” → sent to independent review"
+   },
    {
     "at": "2026-10-20T13:03:57Z",
     "kind": "build",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T11:20:03Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-20T11:19:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Run guardian safety checks despite continuous rejected…”: passed"
    }
   ]
  },
@@ -364,9 +364,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "census service",
-   "status_at": "2026-10-20T13:05:00Z",
-   "heartbeat_at": "2026-10-20T13:05:01Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-20T13:08:29Z",
+   "heartbeat_at": "2026-10-20T13:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -375,7 +375,7 @@
     "weather_events": 397,
     "markets": 3912,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T12:59:36Z",
+    "last_scan_at": "2026-10-20T13:06:17Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T12:59:36Z",
+    "updated_at": "2026-10-20T13:06:17Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T13:04:15Z",
+    "updated_at": "2026-10-20T13:08:17Z",
     "detail": "observations retained"
    },
    {
