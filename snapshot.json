@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T06:15:02Z",
+ "generated_at": "2026-10-20T06:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -136,12 +136,12 @@
     0,
     0,
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
-    0,
-    5,
+    3,
+    2,
     0,
     0,
     0,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T06:15:02Z",
+    "last_check_at": "2026-10-20T06:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T06:14:59Z",
-   "heartbeat_at": "2026-10-20T06:15:01Z",
+   "status_at": "2026-10-20T06:19:54Z",
+   "heartbeat_at": "2026-10-20T06:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -377,7 +377,7 @@
     "weather_events": 389,
     "markets": 3807,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T06:10:59Z",
+    "last_scan_at": "2026-10-20T06:16:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T06:10:59Z",
+    "updated_at": "2026-10-20T06:16:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T06:14:25Z",
+    "updated_at": "2026-10-20T06:18:26Z",
     "detail": "observations retained"
    },
    {
@@ -505,7 +505,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T05:17:02Z",
+   "updated_at": "2026-10-20T06:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
