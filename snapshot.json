@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T09:30:02Z",
+ "generated_at": "2026-10-20T09:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 64,
+    "count": 67,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c4fc9ee7",
     "task": "CODE-01 Validate admission provenance before assigning performance slices",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_0df573a0",
     "task": "FLEX candidate t_058f9e13 2dd9d78cf725",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 64,
+   "progress_pct": 67,
    "last_finished_at": "2026-10-20T01:44:32Z",
    "last_passed": 13972,
    "last_failed": 0,
@@ -134,8 +134,8 @@
     2,
     0,
     12,
-    3,
-    5,
+    6,
+    2,
     0,
     5,
     0,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T09:30:03Z",
+    "last_check_at": "2026-10-20T09:34:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,12 +229,12 @@
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T09:20:02Z",
+    "last_check_at": "2026-10-20T09:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 52,
-    "runs_total": 198,
+    "runs_total": 199,
     "last_run_at": "2026-10-20T09:15:02Z",
     "last_ok": true,
     "last_kind": "flow shadow frozen authority drift",
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T09:29:54Z",
-   "heartbeat_at": "2026-10-20T09:30:03Z",
+   "status_at": "2026-10-20T09:34:53Z",
+   "heartbeat_at": "2026-10-20T09:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T09:29:39Z",
+    "updated_at": "2026-10-20T09:33:40Z",
     "detail": "observations retained"
    },
    {
