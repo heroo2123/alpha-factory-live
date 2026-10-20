@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T12:40:03Z",
+ "generated_at": "2026-10-20T12:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "49 merged in 24h"
+    "detail": "50 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b9178a67",
     "task": "Let fresh external census reach evaluation before redundant periodic census",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 49,
-   "commits_24h": 49,
+   "merges_24h": 50,
+   "commits_24h": 50,
    "built_24h": 66,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 52,
+   "reviews_passed_24h": 53,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     1,
@@ -131,8 +131,8 @@
     2,
     0,
     13,
-    5,
-    2,
+    6,
+    1,
     0,
     5,
     0,
@@ -146,15 +146,15 @@
     0,
     7,
     4,
-    2
+    3
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 23,
     "building": 1,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 0,
-    "merged": 320,
+    "merged": 321,
     "parked": 171
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T12:41:44Z",
+    "title": "PAPER-09 Bind each learning-pair child to its original lead prediction",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T12:17:45Z",
     "title": "PAPER-08 Compare basket scenario inputs with the historical account",
@@ -199,11 +204,6 @@
     "at": "2026-10-20T10:09:02Z",
     "title": "LIVE-15 Prevent failed cancellation retries from starving later targets",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T10:08:25Z",
-    "title": "PAPER-08 Fence execution-health publication to its exact archive prefix",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,20 +212,21 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T12:39:02Z",
+    "last_check_at": "2026-10-20T12:45:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 1,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 1
+     "P2": 2
     },
     "codes": [
+     "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T12:30:02Z",
+    "last_check_at": "2026-10-20T12:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -245,6 +246,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T12:41:44Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Bind each learning-pair child to its original lead prediction” into the main build"
+   },
+   {
+    "at": "2026-10-20T12:40:29Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Bind each learning-pair child to its original lead prediction”: passed"
+   },
    {
     "at": "2026-10-20T12:37:19Z",
     "kind": "build",
@@ -344,16 +355,6 @@
     "at": "2026-10-20T11:11:04Z",
     "kind": "release",
     "text": "New Shadow release 1b71903 went live (paper only)"
-   },
-   {
-    "at": "2026-10-20T11:10:39Z",
-    "kind": "release",
-    "text": "Release 1b71903 installed by the release manager"
-   },
-   {
-    "at": "2026-10-20T11:10:03Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -363,9 +364,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "making paper decisions",
-   "status_at": "2026-10-20T12:39:26Z",
-   "heartbeat_at": "2026-10-20T12:40:02Z",
+   "state": "census service",
+   "status_at": "2026-10-20T12:45:01Z",
+   "heartbeat_at": "2026-10-20T12:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +405,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T12:38:04Z",
+    "updated_at": "2026-10-20T12:44:07Z",
     "detail": "observations retained"
    },
    {
@@ -722,8 +723,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 24,
-     "open_tasks": 2
+     "merged_tasks": 25,
+     "open_tasks": 1
     },
     {
      "id": "PAPER-10",
