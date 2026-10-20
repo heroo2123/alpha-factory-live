@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T16:55:02Z",
+ "generated_at": "2026-10-20T17:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "65 built in 24h"
+    "detail": "64 built in 24h"
    },
    {
     "key": "review",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "53 merged in 24h"
+    "detail": "55 merged in 24h"
    },
    {
     "key": "qa",
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
-    "detail": "current release 1b71903"
+    "active": true,
+    "detail": ""
    },
    {
     "key": "shadow",
@@ -116,17 +116,17 @@
   },
   "tests_passing": 14212,
   "flow": {
-   "merges_24h": 53,
-   "commits_24h": 53,
-   "built_24h": 65,
+   "merges_24h": 55,
+   "commits_24h": 55,
+   "built_24h": 64,
    "build_failed_24h": 6,
    "reviews_passed_24h": 55,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
     0,
     2,
-    0,
-    13,
+    2,
+    11,
     6,
     1,
     0,
@@ -136,8 +136,8 @@
     0,
     0,
     0,
-    0,
-    5,
+    2,
+    3,
     3,
     0,
     7,
@@ -146,17 +146,15 @@
     3,
     0,
     0,
-    1
+    3
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 17,
     "building": 0,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 325,
+    "awaiting_merge": 0,
+    "merged": 327,
     "parked": 171
    }
   },
@@ -167,6 +165,16 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T16:58:09Z",
+    "title": "CODE-01 Preserve official features when an optional capture is unavailable",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-20T16:55:20Z",
+    "title": "CODE-01 Prevent synthetic constituent fields from acquiring public provenance",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T16:53:30Z",
     "title": "CODE-01 Distinguish official revisions from capture-envelope changes",
@@ -196,16 +204,6 @@
     "at": "2026-10-20T12:17:45Z",
     "title": "PAPER-08 Compare basket scenario inputs with the historical account",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T11:50:36Z",
-    "title": "PAPER-08 Escalate risk when a leased model channel disappears",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T11:20:45Z",
-    "title": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-20T16:55:02Z",
+    "last_check_at": "2026-10-20T16:59:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +247,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T16:58:09Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Preserve official features when an optional capture is…” into the main build"
+   },
+   {
+    "at": "2026-10-20T16:55:20Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Prevent synthetic constituent fields from acquiring public…” into the main build"
+   },
    {
     "at": "2026-10-20T16:53:30Z",
     "kind": "merge",
@@ -348,45 +356,35 @@
     "at": "2026-10-20T13:57:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “CODE-01 Distinguish official revisions from capture-envelope changes” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T13:42:12Z",
-    "kind": "merge",
-    "text": "Merged “Recover bounded GEFS worker progress after completed model…” into the main build"
-   },
-   {
-    "at": "2026-10-20T13:37:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “Recover bounded GEFS worker progress after completed model…”: passed"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": "1b71903",
+   "release": null,
    "commissioned_at": "2026-10-20T11:10:39Z",
-   "day": "2026-10-20",
-   "state": "census service",
-   "status_at": "2026-10-20T16:55:00Z",
-   "heartbeat_at": "2026-10-20T16:55:01Z",
-   "real_orders_sent": false,
+   "day": null,
+   "state": "",
+   "status_at": null,
+   "heartbeat_at": null,
+   "real_orders_sent": null,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 400,
-    "markets": 3945,
+    "weather_events": 398,
+    "markets": 3923,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T16:49:02Z",
+    "last_scan_at": "2026-10-20T16:55:41Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 0,
-   "research_accept": 0,
-   "reject": 0,
-   "gated": 0,
+   "total": null,
+   "research_accept": null,
+   "reject": null,
+   "gated": null,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -401,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T16:49:02Z",
+    "updated_at": "2026-10-20T16:55:41Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T16:53:43Z",
+    "updated_at": "2026-10-20T16:59:45Z",
     "detail": "observations retained"
    },
    {
@@ -627,8 +625,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 24,
-     "open_tasks": 3
+     "merged_tasks": 26,
+     "open_tasks": 1
     },
     {
      "id": "CODE-02",
