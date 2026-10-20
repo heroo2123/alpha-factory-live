@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T07:45:02Z",
+ "generated_at": "2026-10-20T07:50:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,28 +10,28 @@
     "count": 28,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "54 built in 24h"
+    "detail": "55 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "34 merged in 24h"
@@ -70,27 +70,27 @@
     "family": "OpenAI",
     "task_id": "t_e5723262",
     "task": "CODE-01 Validate boot and monotonic freshness before maker telemetry",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_069aff65",
-    "task": "PAPER-09 Report PWS ablation metrics by station and horizon",
-    "elapsed_min": 32
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_cdcafe46",
-    "task": "PAPER-09 Recheck completed PWS commands after acquiring the worker lock",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 34,
    "commits_24h": 34,
-   "built_24h": 54,
+   "built_24h": 55,
    "build_failed_24h": 12,
-   "reviews_passed_24h": 42,
+   "reviews_passed_24h": 43,
    "reviews_changes_24h": 16,
    "commits_by_hour": [
     0,
@@ -153,9 +153,9 @@
    ],
    "stage_totals": {
     "queued": 28,
-    "building": 2,
+    "building": 1,
     "in_review": 2,
-    "awaiting_merge": 1,
+    "awaiting_merge": 2,
     "merged": 303,
     "parked": 166
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T07:45:02Z",
+    "last_check_at": "2026-10-20T07:50:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T07:47:24Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Recheck completed PWS commands after acquiring the worker…”: passed"
+   },
+   {
+    "at": "2026-10-20T07:47:11Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “PAPER-09 Report PWS ablation metrics by station and horizon” → sent to independent review"
+   },
    {
     "at": "2026-10-20T07:45:02Z",
     "kind": "heal",
@@ -349,16 +359,6 @@
     "at": "2026-10-20T07:00:19Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-20T06:59:21Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-09 Reject unsafe PWS worker lock files before blocking” into the main build"
-   },
-   {
-    "at": "2026-10-20T06:58:22Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_c8de42c4 6a9cff4cc724”: passed"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T07:44:53Z",
-   "heartbeat_at": "2026-10-20T07:45:02Z",
+   "status_at": "2026-10-20T07:49:52Z",
+   "heartbeat_at": "2026-10-20T07:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T07:44:58Z",
+    "updated_at": "2026-10-20T07:49:00Z",
     "detail": "observations retained"
    },
    {
