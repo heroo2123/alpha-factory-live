@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T09:15:02Z",
+ "generated_at": "2026-10-20T09:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 23,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "60 built in 24h"
+    "detail": "61 built in 24h"
    },
    {
     "key": "review",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "38 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 47,
+    "count": 51,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_ee33f4b7",
-    "task": "LIVE-15 Bind transaction-time guardian checks to the opening account policy",
-    "elapsed_min": 12
+    "task_id": "t_058f9e13",
+    "task": "PAPER-08 Feed cumulative liquidity collapse into event risk",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_4dec6a81",
-    "task": "LIVE-15 Process PAPER safety cancellations while the broker is idle",
-    "elapsed_min": 12
+    "task_id": "t_ee33f4b7",
+    "task": "LIVE-15 Bind transaction-time guardian checks to the opening account policy",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -100,12 +100,12 @@
     "family": "DeepSeek",
     "task_id": "t_069aff65",
     "task": "PAPER-09 Report PWS ablation metrics by station and horizon",
-    "elapsed_min": 2
+    "elapsed_min": 7
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 47,
+   "progress_pct": 51,
    "last_finished_at": "2026-10-20T01:44:32Z",
    "last_passed": 13972,
    "last_failed": 0,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 38,
    "commits_24h": 38,
-   "built_24h": 60,
+   "built_24h": 61,
    "build_failed_24h": 12,
-   "reviews_passed_24h": 47,
+   "reviews_passed_24h": 48,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
     0,
@@ -133,12 +133,12 @@
     0,
     0,
     2,
-    8,
-    6,
+    11,
+    3,
     6,
     0,
-    0,
-    5,
+    3,
+    2,
     0,
     0,
     0,
@@ -152,10 +152,10 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 24,
+    "queued": 23,
     "building": 1,
     "in_review": 2,
-    "awaiting_merge": 2,
+    "awaiting_merge": 3,
     "merged": 307,
     "parked": 167
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T09:15:02Z",
+    "last_check_at": "2026-10-20T09:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T09:18:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “LIVE-15 Bind transaction-time guardian checks to the opening account…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-20T09:15:24Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Process PAPER safety cancellations while the broker is idle”: passed"
+   },
    {
     "at": "2026-10-20T09:15:02Z",
     "kind": "heal",
@@ -348,16 +358,6 @@
     "at": "2026-10-20T07:47:24Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Recheck completed PWS commands after acquiring the worker…”: passed"
-   },
-   {
-    "at": "2026-10-20T07:47:11Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “PAPER-09 Report PWS ablation metrics by station and horizon” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T07:43:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-09 Recheck completed PWS commands after acquiring the worker…” → sent to independent review"
    }
   ]
  },
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T09:14:58Z",
-   "heartbeat_at": "2026-10-20T09:15:02Z",
+   "status_at": "2026-10-20T09:19:57Z",
+   "heartbeat_at": "2026-10-20T09:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 399,
-    "markets": 3917,
+    "weather_events": 398,
+    "markets": 3906,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T09:09:54Z",
+    "last_scan_at": "2026-10-20T09:16:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T09:09:54Z",
+    "updated_at": "2026-10-20T09:16:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T09:13:34Z",
+    "updated_at": "2026-10-20T09:19:36Z",
     "detail": "observations retained"
    },
    {
@@ -473,20 +473,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9946,
-     "city_days": 22
+     "brier": 0.9861,
+     "city_days": 24
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8916,
-     "city_days": 22
+     "brier": 0.8844,
+     "city_days": 24
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.7995,
-     "city_days": 22
+     "brier": 0.7956,
+     "city_days": 24
     },
     {
      "key": "equal",
@@ -498,19 +498,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 23,
-   "waiting_city_days": 20,
+   "labelled_city_days": 25,
+   "waiting_city_days": 18,
    "labelled_days": 7,
    "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-20T08:17:02Z",
+   "updated_at": "2026-10-20T09:17:02Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 2,
+     "have": 4,
      "need": 50,
      "done": false,
      "detail": ""
@@ -1079,7 +1079,7 @@
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "2 of 50 untouched city-days collected"
+    "detail": "4 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
