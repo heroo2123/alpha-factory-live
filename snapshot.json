@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T08:20:02Z",
+ "generated_at": "2026-10-20T08:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 26,
+    "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "57 built in 24h"
+    "detail": "58 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 3,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "36 merged in 24h"
+    "detail": "37 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_2edd8807",
-    "task": "CODE-01 Verify readiness body bytes against the pinned digest",
-    "elapsed_min": 1
+    "task_id": "t_9e877389",
+    "task": "LIVE-15 Prevent failed cancellation retries from starving later targets",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_103b85a8",
-    "task": "CODE-01 Resolve country attribution by the pinned metadata fingerprint",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 13972,
   "flow": {
-   "merges_24h": 36,
-   "commits_24h": 36,
-   "built_24h": 57,
+   "merges_24h": 37,
+   "commits_24h": 37,
+   "built_24h": 58,
    "build_failed_24h": 12,
-   "reviews_passed_24h": 44,
+   "reviews_passed_24h": 45,
    "reviews_changes_24h": 16,
    "commits_by_hour": [
     0,
@@ -134,29 +134,29 @@
     0,
     0,
     2,
-    11,
-    3,
+    12,
+    2,
     6,
     0,
-    3,
-    2,
+    5,
+    0,
     0,
     0,
     0,
     0,
     0,
     4,
-    2
+    3
    ],
    "merge_holds": [
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 26,
+    "queued": 25,
     "building": 1,
     "in_review": 3,
     "awaiting_merge": 1,
-    "merged": 305,
+    "merged": 306,
     "parked": 166
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T08:23:26Z",
+    "title": "CODE-01 Resolve country attribution by the pinned metadata fingerprint",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T08:05:34Z",
     "title": "CODE-01 Validate boot and monotonic freshness before maker telemetry",
@@ -201,11 +206,6 @@
     "at": "2026-10-20T00:23:18Z",
     "title": "PAPER-08 Derive settlement windows from one validated rule-state snapshot",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T00:20:19Z",
-    "title": "PAPER-08 Revalidate sizing factors at the calculation boundary",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,32 +214,31 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T08:20:02Z",
+    "last_check_at": "2026-10-20T08:24:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 4,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 4
+     "P2": 3
     },
     "codes": [
      "flow qa resource blocked",
      "flow shadow frozen authority drift",
-     "flow acceptance stalled",
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T08:10:02Z",
+    "last_check_at": "2026-10-20T08:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 48,
-    "runs_total": 193,
-    "last_run_at": "2026-10-20T08:20:02Z",
+    "runs_24h": 49,
+    "runs_total": 194,
+    "last_run_at": "2026-10-20T08:25:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow shadow frozen authority drift",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +250,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T08:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
+   },
+   {
+    "at": "2026-10-20T08:23:26Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Resolve country attribution by the pinned metadata fingerprint” into the main build"
+   },
+   {
+    "at": "2026-10-20T08:22:19Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Resolve country attribution by the pinned metadata fingerprint”: passed"
+   },
+   {
+    "at": "2026-10-20T08:21:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “CODE-01 Verify readiness body bytes against the pinned digest” → sent to independent review"
+   },
    {
     "at": "2026-10-20T08:20:02Z",
     "kind": "heal",
@@ -307,11 +326,6 @@
     "text": "DeepSeek V4 Pro built “PAPER-09 Report PWS ablation metrics by station and horizon” → sent to independent review"
    },
    {
-    "at": "2026-10-20T07:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
-   },
-   {
     "at": "2026-10-20T07:43:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “PAPER-09 Recheck completed PWS commands after acquiring the worker…” → sent to independent review"
@@ -345,21 +359,6 @@
     "at": "2026-10-20T07:07:48Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Bind transaction leases to the opening account policy”: changes required"
-   },
-   {
-    "at": "2026-10-20T07:04:21Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “PAPER-07 Record malformed or refused public payloads per source…”: changes required"
-   },
-   {
-    "at": "2026-10-20T07:04:12Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “LIVE-15 Bind transaction leases to the opening account policy” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T07:03:43Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Run bounded guardian checks during client silence” into the main build"
    }
   ]
  },
@@ -370,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T08:20:01Z",
-   "heartbeat_at": "2026-10-20T08:20:02Z",
+   "status_at": "2026-10-20T08:24:59Z",
+   "heartbeat_at": "2026-10-20T08:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -380,7 +379,7 @@
     "weather_events": 400,
     "markets": 3928,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T08:14:52Z",
+    "last_scan_at": "2026-10-20T08:21:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T08:14:52Z",
+    "updated_at": "2026-10-20T08:21:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T08:19:14Z",
+    "updated_at": "2026-10-20T08:23:15Z",
     "detail": "observations retained"
    },
    {
@@ -629,8 +628,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 21,
-     "open_tasks": 2
+     "merged_tasks": 22,
+     "open_tasks": 1
     },
     {
      "id": "CODE-02",
