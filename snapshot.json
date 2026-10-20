@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T13:35:02Z",
+ "generated_at": "2026-10-20T13:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "51 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b65e58f9",
     "task": "CODE-01 Distinguish official revisions from capture-envelope changes",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_46b346b1",
-    "task": "Recover bounded GEFS worker progress after completed model constituent supersession",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 51,
    "built_24h": 68,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 53,
+   "reviews_passed_24h": 54,
    "reviews_changes_24h": 18,
    "commits_by_hour": [
     0,
@@ -129,8 +129,8 @@
     0,
     2,
     0,
-    12,
-    6,
+    13,
+    5,
     2,
     0,
     5,
@@ -144,16 +144,16 @@
     4,
     0,
     7,
-    3,
-    3,
+    4,
+    2,
     3
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 24,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 0,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 323,
     "parked": 171
    }
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T13:34:02Z",
+    "last_check_at": "2026-10-20T13:39:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 60,
+    "runs_24h": 59,
     "runs_total": 214,
     "last_run_at": "2026-10-20T13:35:02Z",
     "last_ok": true,
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T13:37:22Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “Recover bounded GEFS worker progress after completed model…”: passed"
+   },
    {
     "at": "2026-10-20T13:35:02Z",
     "kind": "heal",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T11:50:36Z",
     "kind": "merge",
     "text": "Merged “PAPER-08 Escalate risk when a leased model channel disappears” into the main build"
-   },
-   {
-    "at": "2026-10-20T11:47:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Escalate risk when a leased model channel disappears”: passed"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T13:35:01Z",
-   "heartbeat_at": "2026-10-20T13:35:02Z",
+   "status_at": "2026-10-20T13:40:00Z",
+   "heartbeat_at": "2026-10-20T13:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -375,7 +375,7 @@
     "weather_events": 401,
     "markets": 3956,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T13:31:41Z",
+    "last_scan_at": "2026-10-20T13:38:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -391,21 +391,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-20T12:38:07Z",
+    "updated_at": "2026-10-20T13:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T13:31:41Z",
+    "updated_at": "2026-10-20T13:38:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T13:34:26Z",
+    "updated_at": "2026-10-20T13:38:27Z",
     "detail": "observations retained"
    },
    {
