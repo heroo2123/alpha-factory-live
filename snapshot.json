@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T10:05:02Z",
+ "generated_at": "2026-10-20T10:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -31,18 +31,18 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "38 merged in 24h"
+    "detail": "40 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 99,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c4fc9ee7",
     "task": "CODE-01 Validate admission provenance before assigning performance slices",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -104,27 +104,27 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 99,
-   "last_finished_at": "2026-10-20T01:44:32Z",
-   "last_passed": 13972,
+   "running": false,
+   "progress_pct": null,
+   "last_finished_at": "2026-10-20T10:05:19Z",
+   "last_passed": 14043,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-20T01:44:32Z",
-   "last_minutes": 79
+   "last_green_at": "2026-10-20T10:05:19Z",
+   "last_minutes": 90
   },
-  "tests_passing": 13972,
+  "tests_passing": 14043,
   "flow": {
-   "merges_24h": 38,
-   "commits_24h": 38,
+   "merges_24h": 40,
+   "commits_24h": 40,
    "built_24h": 64,
    "build_failed_24h": 13,
    "reviews_passed_24h": 51,
    "reviews_changes_24h": 19,
    "commits_by_hour": [
-    1,
-    1,
+    2,
+    0,
     0,
     1,
     0,
@@ -132,9 +132,9 @@
     0,
     0,
     2,
-    4,
-    9,
-    6,
+    7,
+    7,
+    5,
     1,
     0,
     5,
@@ -143,30 +143,38 @@
     0,
     0,
     0,
-    3,
+    4,
     2,
-    3,
-    0
+    2,
+    2
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 24,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 6,
-    "merged": 307,
+    "awaiting_merge": 4,
+    "merged": 309,
     "parked": 170
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-20T09:20:11Z",
+   "last_run_at": "2026-10-20T10:10:02Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T10:09:02Z",
+    "title": "LIVE-15 Prevent failed cancellation retries from starving later targets",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-20T10:08:25Z",
+    "title": "PAPER-08 Fence execution-health publication to its exact archive prefix",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T08:29:19Z",
     "title": "CODE-01 Verify readiness body bytes against the pinned digest",
@@ -196,16 +204,6 @@
     "at": "2026-10-20T07:03:43Z",
     "title": "LIVE-15 Run bounded guardian checks during client silence",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T06:59:21Z",
-    "title": "PAPER-09 Reject unsafe PWS worker lock files before blocking",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T00:23:43Z",
-    "title": "PAPER-09 Expire trajectory features when their supporting history leaves the window",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T10:04:02Z",
+    "last_check_at": "2026-10-20T10:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -248,6 +246,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T10:10:02Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
+   {
+    "at": "2026-10-20T10:09:02Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Prevent failed cancellation retries from starving later…” into the main build"
+   },
+   {
+    "at": "2026-10-20T10:08:25Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 Fence execution-health publication to its exact archive…” into the main build"
+   },
+   {
+    "at": "2026-10-20T10:05:19Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 14043 passed, 0 failed"
+   },
    {
     "at": "2026-10-20T10:05:02Z",
     "kind": "heal",
@@ -337,26 +355,6 @@
     "at": "2026-10-20T09:12:18Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “PAPER-08 Feed cumulative liquidity collapse into event risk”: changes required"
-   },
-   {
-    "at": "2026-10-20T09:02:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “LIVE-15 Process PAPER safety cancellations while the broker is idle” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T08:51:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Prevent failed cancellation retries from starving later…”: passed"
-   },
-   {
-    "at": "2026-10-20T08:44:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “LIVE-15 Prevent failed cancellation retries from starving later…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T08:29:19Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Verify readiness body bytes against the pinned digest” into the main build"
    }
   ]
  },
@@ -367,17 +365,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T10:04:53Z",
-   "heartbeat_at": "2026-10-20T10:05:01Z",
+   "status_at": "2026-10-20T10:09:51Z",
+   "heartbeat_at": "2026-10-20T10:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 395,
-    "markets": 3873,
+    "weather_events": 394,
+    "markets": 3862,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T09:59:24Z",
+    "last_scan_at": "2026-10-20T10:05:27Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T09:59:24Z",
+    "updated_at": "2026-10-20T10:05:27Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T10:03:50Z",
+    "updated_at": "2026-10-20T10:09:52Z",
     "detail": "observations retained"
    },
    {
@@ -716,8 +714,8 @@
      "name": "Scenario-risk accounting",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 13,
-     "open_tasks": 1
+     "merged_tasks": 14,
+     "open_tasks": 0
     },
     {
      "id": "PAPER-09",
@@ -1004,8 +1002,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 12,
-     "open_tasks": 5
+     "merged_tasks": 13,
+     "open_tasks": 4
     },
     {
      "id": "LIVE-16",
