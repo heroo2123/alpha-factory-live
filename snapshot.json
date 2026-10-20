@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T13:45:01Z",
+ "generated_at": "2026-10-20T13:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "count": 0,
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b65e58f9",
     "task": "CODE-01 Distinguish official revisions from capture-envelope changes",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Builder 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": false,
-   "progress_pct": null,
+   "running": true,
+   "progress_pct": 0,
    "last_finished_at": "2026-10-20T10:05:19Z",
    "last_passed": 14043,
    "last_failed": 0,
@@ -119,7 +119,7 @@
    "merges_24h": 52,
    "commits_24h": 52,
    "built_24h": 68,
-   "build_failed_24h": 10,
+   "build_failed_24h": 8,
    "reviews_passed_24h": 54,
    "reviews_changes_24h": 18,
    "commits_by_hour": [
@@ -140,8 +140,8 @@
     0,
     0,
     0,
-    4,
-    4,
+    5,
+    3,
     0,
     7,
     4,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-20T13:45:02Z",
+    "last_check_at": "2026-10-20T13:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -364,9 +364,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "making paper decisions",
-   "status_at": "2026-10-20T13:43:26Z",
-   "heartbeat_at": "2026-10-20T13:45:01Z",
+   "state": "census service",
+   "status_at": "2026-10-20T13:50:00Z",
+   "heartbeat_at": "2026-10-20T13:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -405,7 +405,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T13:44:30Z",
+    "updated_at": "2026-10-20T13:48:31Z",
     "detail": "observations retained"
    },
    {
