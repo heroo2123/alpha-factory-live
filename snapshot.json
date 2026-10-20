@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T08:35:02Z",
+ "generated_at": "2026-10-20T08:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_9e877389",
     "task": "LIVE-15 Prevent failed cancellation retries from starving later targets",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-20T01:44:32Z",
    "last_passed": 13972,
@@ -134,8 +134,8 @@
     0,
     2,
     0,
-    12,
-    6,
+    13,
+    5,
     2,
     0,
     5,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T08:35:01Z",
+    "last_check_at": "2026-10-20T08:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T08:35:00Z",
-   "heartbeat_at": "2026-10-20T08:35:02Z",
+   "status_at": "2026-10-20T08:40:00Z",
+   "heartbeat_at": "2026-10-20T08:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +379,7 @@
     "weather_events": 400,
     "markets": 3928,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T08:33:13Z",
+    "last_scan_at": "2026-10-20T08:39:05Z",
     "mode": "silent paper scan"
    }
   },
@@ -395,21 +395,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-20T07:37:03Z",
+    "updated_at": "2026-10-20T08:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T08:33:13Z",
+    "updated_at": "2026-10-20T08:39:05Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T08:33:19Z",
+    "updated_at": "2026-10-20T08:39:21Z",
     "detail": "observations retained"
    },
    {
