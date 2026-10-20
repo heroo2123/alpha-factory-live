@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T12:35:02Z",
+ "generated_at": "2026-10-20T12:40:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 23,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "65 built in 24h"
+    "detail": "66 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_2b455b2f",
-    "task": "PAPER-09 Bind each learning-pair child to its original lead prediction",
-    "elapsed_min": 24
+    "task_id": "t_b9178a67",
+    "task": "Let fresh external census reach evaluation before redundant periodic census",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 49,
    "commits_24h": 49,
-   "built_24h": 65,
+   "built_24h": 66,
    "build_failed_24h": 11,
    "reviews_passed_24h": 52,
    "reviews_changes_24h": 20,
@@ -130,8 +130,8 @@
     0,
     2,
     0,
-    12,
-    6,
+    13,
+    5,
     2,
     0,
     5,
@@ -145,14 +145,14 @@
     4,
     0,
     7,
-    3,
-    3
+    4,
+    2
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 24,
+    "queued": 23,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 320,
     "parked": 171
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T12:35:02Z",
+    "last_check_at": "2026-10-20T12:39:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -245,6 +245,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T12:37:19Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “PAPER-09 Bind each learning-pair child to its original lead prediction” → sent to independent review"
+   },
    {
     "at": "2026-10-20T12:30:04Z",
     "kind": "heal",
@@ -349,11 +354,6 @@
     "at": "2026-10-20T11:10:03Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-20T11:00:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
    }
   ]
  },
@@ -363,18 +363,18 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "census service",
-   "status_at": "2026-10-20T12:35:03Z",
-   "heartbeat_at": "2026-10-20T12:35:02Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-20T12:39:26Z",
+   "heartbeat_at": "2026-10-20T12:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 393,
-    "markets": 3868,
+    "weather_events": 396,
+    "markets": 3901,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T12:33:20Z",
+    "last_scan_at": "2026-10-20T12:39:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -390,21 +390,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-20T11:37:02Z",
+    "updated_at": "2026-10-20T12:38:07Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T12:33:20Z",
+    "updated_at": "2026-10-20T12:39:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T12:34:02Z",
+    "updated_at": "2026-10-20T12:38:04Z",
     "detail": "observations retained"
    },
    {
