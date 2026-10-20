@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T10:50:01Z",
+ "generated_at": "2026-10-20T10:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "64 built in 24h"
+    "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
-    "detail": "current release c107c9c"
+    "active": true,
+    "detail": ""
    },
    {
     "key": "shadow",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_bfe0ef62",
-    "task": "PAPER-09 Report PWS score comparisons separately by settlement station",
-    "elapsed_min": 22
+    "task_id": "t_95d71bc6",
+    "task": "LIVE-15 Run guardian safety checks despite continuous rejected connections",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,22 +85,22 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_055320bf",
+    "task": "FLEX candidate t_bfe0ef62 bd3be3841679",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_dd5a4407",
+    "task": "FLEX candidate t_98b27d05 e53c999486c6",
+    "elapsed_min": 1
    }
   ],
   "qa": {
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 45,
    "commits_24h": 45,
-   "built_24h": 64,
+   "built_24h": 65,
    "build_failed_24h": 11,
    "reviews_passed_24h": 52,
    "reviews_changes_24h": 20,
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 24,
+    "queued": 22,
     "building": 1,
-    "in_review": 0,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 314,
     "parked": 170
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T10:49:01Z",
+    "last_check_at": "2026-10-20T10:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,12 +226,12 @@
      "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T10:40:03Z",
+    "last_check_at": "2026-10-20T10:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
-    "runs_total": 205,
+    "runs_24h": 58,
+    "runs_total": 206,
     "last_run_at": "2026-10-20T10:45:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -246,6 +246,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T10:53:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “CODE-01 Reject absent or malformed reward allocation identities” → sent to independent review"
+   },
+   {
+    "at": "2026-10-20T10:51:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “PAPER-09 Report PWS score comparisons separately by settlement station” → sent to independent review"
+   },
    {
     "at": "2026-10-20T10:45:02Z",
     "kind": "heal",
@@ -345,45 +355,35 @@
     "at": "2026-10-20T09:54:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “CODE-01 Validate admission provenance before assigning performance…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T09:38:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_058f9e13 2dd9d78cf725”: passed"
-   },
-   {
-    "at": "2026-10-20T09:29:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-08 Feed cumulative liquidity collapse into event risk” → sent to independent review"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": "c107c9c",
+   "release": null,
    "commissioned_at": "2026-10-19T13:50:02Z",
-   "day": "2026-10-20",
-   "state": "iteration gated",
-   "status_at": "2026-10-20T10:49:52Z",
-   "heartbeat_at": "2026-10-20T10:50:01Z",
-   "real_orders_sent": false,
+   "day": null,
+   "state": "",
+   "status_at": null,
+   "heartbeat_at": null,
+   "real_orders_sent": null,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 396,
-    "markets": 3884,
+    "weather_events": 394,
+    "markets": 3862,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T10:47:30Z",
+    "last_scan_at": "2026-10-20T10:53:27Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 0,
-   "research_accept": 0,
-   "reject": 0,
-   "gated": 0,
+   "total": null,
+   "research_accept": null,
+   "reject": null,
+   "gated": null,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T10:47:30Z",
+    "updated_at": "2026-10-20T10:53:27Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T10:48:08Z",
+    "updated_at": "2026-10-20T10:54:10Z",
     "detail": "observations retained"
    },
    {
@@ -1080,7 +1080,7 @@
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
-    "state": "done",
+    "state": "active",
     "detail": "trading key isolated"
    },
    {
