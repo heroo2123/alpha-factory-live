@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T07:40:03Z",
+ "generated_at": "2026-10-20T07:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 29,
+    "count": 28,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "53 built in 24h"
+    "detail": "54 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_cdcafe46",
-    "task": "PAPER-09 Recheck completed PWS commands after acquiring the worker lock",
-    "elapsed_min": 20
+    "task_id": "t_e5723262",
+    "task": "CODE-01 Validate boot and monotonic freshness before maker telemetry",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_069aff65",
     "task": "PAPER-09 Report PWS ablation metrics by station and horizon",
-    "elapsed_min": 27
+    "elapsed_min": 32
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_cdcafe46",
+    "task": "PAPER-09 Recheck completed PWS commands after acquiring the worker lock",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 34,
    "commits_24h": 34,
-   "built_24h": 53,
+   "built_24h": 54,
    "build_failed_24h": 12,
    "reviews_passed_24h": 42,
    "reviews_changes_24h": 16,
@@ -136,8 +136,8 @@
     2,
     0,
     13,
-    5,
-    2,
+    6,
+    1,
     0,
     5,
     0,
@@ -152,9 +152,9 @@
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 29,
+    "queued": 28,
     "building": 2,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 1,
     "merged": 303,
     "parked": 166
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T07:40:03Z",
+    "last_check_at": "2026-10-20T07:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +230,15 @@
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T07:30:03Z",
+    "last_check_at": "2026-10-20T07:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 43,
-    "runs_total": 188,
-    "last_run_at": "2026-10-20T07:35:02Z",
+    "runs_24h": 44,
+    "runs_total": 189,
+    "last_run_at": "2026-10-20T07:45:02Z",
     "last_ok": true,
-    "last_kind": "routine",
+    "last_kind": "flow shadow frozen authority drift",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T07:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
+   },
+   {
+    "at": "2026-10-20T07:43:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “PAPER-09 Recheck completed PWS commands after acquiring the worker…” → sent to independent review"
+   },
    {
     "at": "2026-10-20T07:35:02Z",
     "kind": "heal",
@@ -349,16 +359,6 @@
     "at": "2026-10-20T06:58:22Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_c8de42c4 6a9cff4cc724”: passed"
-   },
-   {
-    "at": "2026-10-20T06:57:19Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Reject unsafe PWS worker lock files before blocking”: passed"
-   },
-   {
-    "at": "2026-10-20T06:55:19Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Report PWS score comparisons separately by settlement station”: changes required"
    }
   ]
  },
@@ -369,17 +369,17 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T07:39:54Z",
-   "heartbeat_at": "2026-10-20T07:40:03Z",
+   "status_at": "2026-10-20T07:44:53Z",
+   "heartbeat_at": "2026-10-20T07:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 400,
-    "markets": 3928,
+    "weather_events": 399,
+    "markets": 3917,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T07:38:55Z",
+    "last_scan_at": "2026-10-20T07:44:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T07:38:55Z",
+    "updated_at": "2026-10-20T07:44:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T07:38:57Z",
+    "updated_at": "2026-10-20T07:44:58Z",
     "detail": "observations retained"
    },
    {
