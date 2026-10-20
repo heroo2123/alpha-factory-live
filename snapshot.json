@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T10:10:02Z",
+ "generated_at": "2026-10-20T10:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 25,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "64 built in 24h"
    },
    {
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "41 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_c4fc9ee7",
-    "task": "CODE-01 Validate admission provenance before assigning performance slices",
-    "elapsed_min": 6
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 14043,
   "flow": {
-   "merges_24h": 40,
-   "commits_24h": 40,
+   "merges_24h": 41,
+   "commits_24h": 41,
    "built_24h": 64,
    "build_failed_24h": 13,
    "reviews_passed_24h": 51,
@@ -132,10 +132,10 @@
     0,
     0,
     2,
-    7,
-    7,
-    5,
-    1,
+    8,
+    6,
+    6,
+    0,
     0,
     5,
     0,
@@ -146,15 +146,15 @@
     4,
     2,
     2,
-    2
+    3
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 24,
-    "building": 1,
+    "queued": 25,
+    "building": 0,
     "in_review": 0,
-    "awaiting_merge": 4,
-    "merged": 309,
+    "awaiting_merge": 3,
+    "merged": 310,
     "parked": 170
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-20T10:14:12Z",
+    "title": "LIVE-15 Process PAPER safety cancellations while the broker is idle",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-20T10:09:02Z",
     "title": "LIVE-15 Prevent failed cancellation retries from starving later targets",
@@ -199,11 +204,6 @@
     "at": "2026-10-20T07:07:56Z",
     "title": "LIVE-15 Recheck guardian deadlines immediately before dispatch",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T07:03:43Z",
-    "title": "LIVE-15 Run bounded guardian checks during client silence",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,21 +212,21 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-20T10:10:02Z",
+    "last_check_at": "2026-10-20T10:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
     "active": 2,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
-     "P2": 2
+     "P1": 1,
+     "P2": 1
     },
     "codes": [
-     "flow maintenance review independence pending",
+     "flow shadow frozen authority drift",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T10:00:03Z",
+    "last_check_at": "2026-10-20T10:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T10:14:12Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Process PAPER safety cancellations while the broker is idle” into the main build"
+   },
    {
     "at": "2026-10-20T10:10:02Z",
     "kind": "plan",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T09:15:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow shadow frozen authority drift"
-   },
-   {
-    "at": "2026-10-20T09:12:18Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-08 Feed cumulative liquidity collapse into event risk”: changes required"
    }
   ]
  },
@@ -365,8 +365,8 @@
    "commissioned_at": "2026-10-19T13:50:02Z",
    "day": "2026-10-20",
    "state": "iteration gated",
-   "status_at": "2026-10-20T10:09:51Z",
-   "heartbeat_at": "2026-10-20T10:10:01Z",
+   "status_at": "2026-10-20T10:14:52Z",
+   "heartbeat_at": "2026-10-20T10:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -375,7 +375,7 @@
     "weather_events": 394,
     "markets": 3862,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T10:05:27Z",
+    "last_scan_at": "2026-10-20T10:11:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T10:05:27Z",
+    "updated_at": "2026-10-20T10:11:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T10:09:52Z",
+    "updated_at": "2026-10-20T10:13:54Z",
     "detail": "observations retained"
    },
    {
@@ -1002,8 +1002,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 13,
-     "open_tasks": 4
+     "merged_tasks": 14,
+     "open_tasks": 3
     },
     {
      "id": "LIVE-16",
