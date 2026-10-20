@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T17:25:01Z",
+ "generated_at": "2026-10-20T17:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -123,11 +123,11 @@
    "reviews_passed_24h": 53,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
+    2,
     0,
-    2,
     12,
-    2,
-    6,
+    3,
+    5,
     0,
     5,
     0,
@@ -137,8 +137,8 @@
     0,
     0,
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-20T17:25:02Z",
+    "last_check_at": "2026-10-20T17:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -376,7 +376,7 @@
     "weather_events": 398,
     "markets": 3923,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T17:22:11Z",
+    "last_scan_at": "2026-10-20T17:28:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T17:22:11Z",
+    "updated_at": "2026-10-20T17:28:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T17:23:53Z",
+    "updated_at": "2026-10-20T17:29:55Z",
     "detail": "observations retained"
    },
    {
@@ -582,7 +582,7 @@
    }
   ],
   "readiness": {
-   "accepted": 37,
+   "accepted": 38,
    "total": 48,
    "groups": [
     {
@@ -598,8 +598,8 @@
      "label": "Paper trading",
      "total": 11,
      "accepted": 6,
-     "owner": 0,
-     "pending": 5
+     "owner": 1,
+     "pending": 4
     },
     {
      "name": "LEARNING",
@@ -704,8 +704,8 @@
      "id": "PAPER-07",
      "group": "PAPER",
      "name": "Collector recovery",
-     "status": "pending",
-     "detail": "re-check inconclusive",
+     "status": "owner",
+     "detail": "accepted by the owner",
      "merged_tasks": 6,
      "open_tasks": 0
     },
@@ -1062,7 +1062,7 @@
    {
     "step": "Paper trading evidence",
     "state": "active",
-    "detail": "6 of 11 criteria accepted"
+    "detail": "7 of 11 criteria accepted"
    },
    {
     "step": "Safe self-learning controls",
