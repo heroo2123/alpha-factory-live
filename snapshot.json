@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T12:55:02Z",
+ "generated_at": "2026-10-20T13:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b9178a67",
     "task": "Let fresh external census reach evaluation before redundant periodic census",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Builder 2",
@@ -129,8 +129,8 @@
     0,
     0,
     2,
-    0,
-    13,
+    2,
+    11,
     6,
     1,
     0,
@@ -140,8 +140,8 @@
     0,
     0,
     0,
-    0,
-    5,
+    2,
+    3,
     3,
     0,
     7,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T12:55:02Z",
+    "last_check_at": "2026-10-20T13:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,11 +230,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
+    "runs_24h": 59,
     "runs_total": 211,
-    "last_run_at": "2026-10-20T12:30:04Z",
+    "last_run_at": "2026-10-20T12:58:56Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -246,6 +246,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T12:58:56Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-20T12:41:44Z",
     "kind": "merge",
@@ -350,11 +355,6 @@
     "at": "2026-10-20T11:12:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “LIVE-15 Run guardian safety checks despite continuous rejected…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T11:11:04Z",
-    "kind": "release",
-    "text": "New Shadow release 1b71903 went live (paper only)"
    }
   ]
  },
@@ -365,17 +365,17 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T12:54:59Z",
-   "heartbeat_at": "2026-10-20T12:55:02Z",
+   "status_at": "2026-10-20T13:00:04Z",
+   "heartbeat_at": "2026-10-20T13:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 396,
-    "markets": 3901,
+    "weather_events": 397,
+    "markets": 3912,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T12:53:14Z",
+    "last_scan_at": "2026-10-20T12:59:36Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,14 +398,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T12:53:14Z",
+    "updated_at": "2026-10-20T12:59:36Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T12:54:11Z",
+    "updated_at": "2026-10-20T12:58:13Z",
     "detail": "observations retained"
    },
    {
