@@ -1,37 +1,37 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T11:30:02Z",
+ "generated_at": "2026-10-20T11:35:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "7 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "46 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_f25432e5",
+    "task": "PAPER-08 Escalate risk when a leased model channel disappears",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_4292389e",
-    "task": "FLEX candidate t_5074770e a71daa4148b3",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -119,8 +119,8 @@
    "merges_24h": 46,
    "commits_24h": 46,
    "built_24h": 65,
-   "build_failed_24h": 12,
-   "reviews_passed_24h": 51,
+   "build_failed_24h": 11,
+   "reviews_passed_24h": 52,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     0,
@@ -132,35 +132,35 @@
     2,
     0,
     12,
-    3,
-    5,
-    0,
-    5,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    4,
-    4,
-    0,
     6,
-    4
+    2,
+    0,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    4,
+    0,
+    7,
+    3
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 21,
-    "building": 0,
-    "in_review": 1,
-    "awaiting_merge": 0,
+    "queued": 22,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 317,
-    "parked": 170
+    "parked": 171
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-20T11:10:03Z",
+   "last_run_at": "2026-10-20T11:30:15Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T11:29:01Z",
+    "last_check_at": "2026-10-20T11:35:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -225,11 +225,11 @@
     "codes": [
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T11:20:03Z",
+    "last_check_at": "2026-10-20T11:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
+    "runs_24h": 58,
     "runs_total": 208,
     "last_run_at": "2026-10-20T11:20:03Z",
     "last_ok": true,
@@ -245,6 +245,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-20T11:34:19Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_5074770e a71daa4148b3”: passed"
+   },
+   {
+    "at": "2026-10-20T11:30:15Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-20T11:28:08Z",
     "kind": "warn",
@@ -344,16 +354,6 @@
     "at": "2026-10-20T10:27:11Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “CODE-01 Validate admission provenance before assigning performance…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T10:18:18Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-09 Report PWS ablation metrics by station and horizon” into the main build"
-   },
-   {
-    "at": "2026-10-20T10:17:22Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Bind transaction-time guardian checks to the opening account…” into the main build"
    }
   ]
  },
@@ -363,9 +363,9 @@
    "release": "1b71903",
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
-   "state": "making paper decisions",
-   "status_at": "2026-10-20T11:26:50Z",
-   "heartbeat_at": "2026-10-20T11:30:03Z",
+   "state": "census service",
+   "status_at": "2026-10-20T11:35:03Z",
+   "heartbeat_at": "2026-10-20T11:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T11:29:38Z",
+    "updated_at": "2026-10-20T11:33:39Z",
     "detail": "observations retained"
    },
    {
@@ -714,7 +714,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 14,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-09",
@@ -723,7 +723,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 24,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "PAPER-10",
@@ -1002,7 +1002,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 16,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
