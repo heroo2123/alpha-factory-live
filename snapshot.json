@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T22:35:01Z",
+ "generated_at": "2026-10-20T22:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -135,10 +135,10 @@
     4,
     0,
     7,
-    3,
-    3,
-    3,
-    1,
+    4,
+    2,
+    4,
+    0,
     0,
     0,
     3,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-20T22:34:01Z",
+    "last_check_at": "2026-10-20T22:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T22:35:01Z",
-   "heartbeat_at": "2026-10-20T22:35:01Z",
+   "status_at": "2026-10-20T22:40:01Z",
+   "heartbeat_at": "2026-10-20T22:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -374,7 +374,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 1,
-    "last_scan_at": "2026-10-20T22:28:51Z",
+    "last_scan_at": "2026-10-20T22:35:07Z",
     "mode": "silent paper scan"
    }
   },
@@ -390,21 +390,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-20T21:37:02Z",
+    "updated_at": "2026-10-20T22:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T22:28:51Z",
+    "updated_at": "2026-10-20T22:35:07Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T22:33:57Z",
+    "updated_at": "2026-10-20T22:39:59Z",
     "detail": "observations retained"
    },
    {
