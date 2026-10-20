@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-20T11:55:01Z",
+ "generated_at": "2026-10-20T12:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_845fa7ce",
     "task": "PAPER-08 Compare basket scenario inputs with the historical account",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -130,8 +130,8 @@
     0,
     0,
     2,
-    0,
-    13,
+    2,
+    11,
     6,
     1,
     0,
@@ -141,8 +141,8 @@
     0,
     0,
     0,
-    0,
-    5,
+    2,
+    3,
     3,
     0,
     7,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-20T11:55:01Z",
+    "last_check_at": "2026-10-20T11:59:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,8 +229,8 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
-    "runs_total": 208,
+    "runs_24h": 57,
+    "runs_total": 209,
     "last_run_at": "2026-10-20T11:40:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -364,8 +364,8 @@
    "commissioned_at": "2026-10-20T11:10:39Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-20T11:55:01Z",
-   "heartbeat_at": "2026-10-20T11:55:02Z",
+   "status_at": "2026-10-20T12:00:00Z",
+   "heartbeat_at": "2026-10-20T12:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -404,7 +404,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T11:53:46Z",
+    "updated_at": "2026-10-20T11:59:49Z",
     "detail": "observations retained"
    },
    {
