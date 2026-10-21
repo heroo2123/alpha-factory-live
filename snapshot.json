@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T07:10:02Z",
+ "generated_at": "2026-10-21T07:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,15 +10,15 @@
     "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "18 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "41 built in 24h"
+    "active": true,
+    "detail": "42 built in 24h"
    },
    {
     "key": "review",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "36 merged in 24h"
+    "detail": "37 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_e76d5f6a",
+    "task": "PAPER-03 Recompute the retained decision population in replay_audit instead of trusting…",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -116,49 +116,48 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 36,
-   "commits_24h": 36,
-   "built_24h": 41,
+   "merges_24h": 37,
+   "commits_24h": 37,
+   "built_24h": 42,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 49,
+   "reviews_passed_24h": 50,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
     2,
-    2,
-    7,
     3,
-    2,
+    6,
     3,
-    0,
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
     4,
-    5,
+    1,
+    0,
     0,
     3,
-    0
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5,
+    4,
+    1,
+    2,
+    1
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
-    "protected code: waiting for a second review"
+    "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 21,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 339,
-    "parked": 173
+    "awaiting_merge": 1,
+    "merged": 340,
+    "parked": 174
    }
   },
   "architect": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T07:10:02Z",
+    "last_check_at": "2026-10-21T07:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +232,7 @@
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T07:00:03Z",
+    "last_check_at": "2026-10-21T07:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T07:11:18Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-02 protected review publishers certify only the current day…”: passed"
+   },
+   {
+    "at": "2026-10-21T07:10:15Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-02 protected review publishers certify only the current day…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T07:10:02Z",
     "kind": "heal",
@@ -353,16 +362,6 @@
     "at": "2026-10-21T05:12:46Z",
     "kind": "merge",
     "text": "Merged “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence” into the main build"
-   },
-   {
-    "at": "2026-10-21T05:07:19Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “LIVE-15 Make the guardian client reject unbound or replayed CHECK…”: passed"
-   },
-   {
-    "at": "2026-10-21T05:06:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “LIVE-15 Make the guardian client reject unbound or replayed CHECK…” → sent to independent review"
    }
   ]
  },
@@ -373,8 +372,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T07:10:00Z",
-   "heartbeat_at": "2026-10-21T07:10:01Z",
+   "status_at": "2026-10-21T07:14:59Z",
+   "heartbeat_at": "2026-10-21T07:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -413,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T07:08:50Z",
+    "updated_at": "2026-10-21T07:14:53Z",
     "detail": "observations retained"
    },
    {
