@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T12:05:01Z",
+ "generated_at": "2026-10-21T12:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 36,
+    "count": 35,
     "unit": "queued",
     "active": false,
     "detail": "21 ready to build"
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "37 built in 24h"
+    "detail": "38 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 99,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_e560e159",
-    "task": "CODE-01 PAPER reward maker : reward-zone two-sided quotes + news-aware pulls (model…",
-    "elapsed_min": 5
+    "task_id": "t_5afbc936",
+    "task": "CODE-01 PAPER reward maker : inventory transform + cost reserves + separated TRADING_PNL…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_e560e159",
+    "task": "CODE-01 PAPER reward maker : reward-zone two-sided quotes + news-aware pulls (model…",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -100,25 +100,25 @@
     "family": "DeepSeek",
     "task_id": "t_87c6daa7",
     "task": "CODE-01 PAPER reward maker : queue-honest simulated fills + markouts 1m/5m/30m/settlement",
-    "elapsed_min": 5
+    "elapsed_min": 10
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 99,
-   "last_finished_at": "2026-10-21T02:27:12Z",
-   "last_passed": 14245,
-   "last_failed": 0,
+   "running": false,
+   "progress_pct": null,
+   "last_finished_at": "2026-10-21T12:05:34Z",
+   "last_passed": 14450,
+   "last_failed": 1,
    "last_skipped": 51,
-   "last_green": true,
+   "last_green": false,
    "last_green_at": "2026-10-21T02:27:12Z",
-   "last_minutes": 92
+   "last_minutes": 100
   },
-  "tests_passing": 14245,
+  "tests_passing": 14450,
   "flow": {
    "merges_24h": 26,
    "commits_24h": 26,
-   "built_24h": 37,
+   "built_24h": 38,
    "build_failed_24h": 2,
    "reviews_passed_24h": 50,
    "reviews_changes_24h": 4,
@@ -152,9 +152,9 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 36,
+    "queued": 35,
     "building": 1,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 4,
     "merged": 345,
     "parked": 179
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T12:05:01Z",
+    "last_check_at": "2026-10-21T12:09:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T12:08:13Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 PAPER reward maker : reward-zone two-sided quotes +…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T12:05:34Z",
+    "kind": "warn",
+    "text": "Full test suite finished: 14450 passed, 1 failed"
+   },
    {
     "at": "2026-10-21T12:05:01Z",
     "kind": "heal",
@@ -350,16 +360,6 @@
     "at": "2026-10-21T10:22:18Z",
     "kind": "merge",
     "text": "Merged “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…” into the main build"
-   },
-   {
-    "at": "2026-10-21T10:07:20Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…”: passed"
-   },
-   {
-    "at": "2026-10-21T10:06:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T12:05:00Z",
-   "heartbeat_at": "2026-10-21T12:05:01Z",
+   "status_at": "2026-10-21T12:10:00Z",
+   "heartbeat_at": "2026-10-21T12:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 438,
     "markets": 4355,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T12:04:01Z",
+    "last_scan_at": "2026-10-21T12:09:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T12:04:01Z",
+    "updated_at": "2026-10-21T12:09:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T12:04:39Z",
+    "updated_at": "2026-10-21T12:08:40Z",
     "detail": "observations retained"
    },
    {
