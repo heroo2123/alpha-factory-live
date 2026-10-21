@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T03:30:02Z",
+ "generated_at": "2026-10-21T03:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,20 +10,20 @@
     "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "39 built in 24h"
+    "active": false,
+    "detail": "40 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 5,
+    "count": 3,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "34 merged in 24h"
+    "detail": "35 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_ed0ae975",
-    "task": "LIVE-15 Reject aliased guardian custody files",
-    "elapsed_min": 17
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 34,
-   "commits_24h": 34,
-   "built_24h": 39,
+   "merges_24h": 35,
+   "commits_24h": 35,
+   "built_24h": 40,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 37,
+   "reviews_passed_24h": 40,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
@@ -129,8 +129,8 @@
     4,
     4,
     0,
-    6,
-    4,
+    7,
+    3,
     3,
     3,
     1,
@@ -145,18 +145,18 @@
     0,
     0,
     0,
-    0,
-    6
+    2,
+    5
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 18,
-    "building": 1,
-    "in_review": 5,
-    "awaiting_merge": 1,
-    "merged": 333,
+    "building": 0,
+    "in_review": 3,
+    "awaiting_merge": 2,
+    "merged": 334,
     "parked": 171
    }
   },
@@ -167,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T03:33:24Z",
+    "title": "CODE-01 Validate the archived envelope before reusing a forecast slice",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T03:23:39Z",
     "title": "CODE-01 Refuse realized-P&L splits over a lot attribution that is not an exact partition",
@@ -201,11 +206,6 @@
     "at": "2026-10-20T16:58:09Z",
     "title": "CODE-01 Preserve official features when an optional capture is unavailable",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T16:55:20Z",
-    "title": "CODE-01 Prevent synthetic constituent fields from acquiring public provenance",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T03:30:03Z",
+    "last_check_at": "2026-10-21T03:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,15 +228,15 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T03:20:02Z",
+    "last_check_at": "2026-10-21T03:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 56,
-    "runs_total": 239,
-    "last_run_at": "2026-10-21T03:30:02Z",
+    "runs_24h": 57,
+    "runs_total": 240,
+    "last_run_at": "2026-10-21T03:35:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow deepseek low",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,36 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T03:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
+   },
+   {
+    "at": "2026-10-21T03:34:09Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T03:33:24Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Validate the archived envelope before reusing a forecast slice” into the main build"
+   },
+   {
+    "at": "2026-10-21T03:33:19Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “LIVE-15 Reject aliased guardian custody files”: passed"
+   },
+   {
+    "at": "2026-10-21T03:32:13Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “FLEX candidate t_ffa8eff4 09847c75d2db”: passed"
+   },
+   {
+    "at": "2026-10-21T03:31:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “LIVE-15 Reject aliased guardian custody files” → sent to independent review"
+   },
    {
     "at": "2026-10-21T03:30:02Z",
     "kind": "heal",
@@ -328,36 +358,6 @@
     "at": "2026-10-21T02:40:21Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “CODE-01 Refuse realized-P&L splits over a lot attribution that is…”: passed"
-   },
-   {
-    "at": "2026-10-21T02:39:11Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Validate the archived envelope before reusing a forecast slice” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T02:33:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-21T02:31:35Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 R31 port: honest finality verdict with contract correction…” into the main build"
-   },
-   {
-    "at": "2026-10-21T02:31:09Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 R31 port: WRH vs IEM ASOS independent cross-check…” into the main build"
-   },
-   {
-    "at": "2026-10-21T02:27:12Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 14245 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-21T02:20:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: engineering regression selftest failed"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T03:29:59Z",
-   "heartbeat_at": "2026-10-21T03:30:03Z",
+   "status_at": "2026-10-21T03:35:00Z",
+   "heartbeat_at": "2026-10-21T03:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +378,7 @@
     "weather_events": 392,
     "markets": 3851,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T03:28:49Z",
+    "last_scan_at": "2026-10-21T03:34:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T03:28:49Z",
+    "updated_at": "2026-10-21T03:34:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T03:29:38Z",
+    "updated_at": "2026-10-21T03:33:39Z",
     "detail": "observations retained"
    },
    {
@@ -627,8 +627,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 29,
-     "open_tasks": 2
+     "merged_tasks": 30,
+     "open_tasks": 1
     },
     {
      "id": "CODE-02",
