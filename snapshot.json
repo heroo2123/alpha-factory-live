@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T07:00:03Z",
+ "generated_at": "2026-10-21T07:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "38 merged in 24h"
+    "detail": "37 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,22 +65,22 @@
    {
     "slot": "Builder 1",
     "role": "build",
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_fb402777",
+    "task": "PAPER-02 protected review publishers certify only the current day: publish the…",
+    "elapsed_min": 1
+   },
+   {
+    "slot": "Builder 2",
+    "role": "build",
     "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
-   },
-   {
-    "slot": "Builder 2",
-    "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_198dd669",
-    "task": "CODE-01 Capture rejected-trade counterfactual markouts",
-    "elapsed_min": 27
    },
    {
     "slot": "Reviewer 1",
@@ -116,18 +116,18 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 38,
-   "commits_24h": 38,
+   "merges_24h": 37,
+   "commits_24h": 37,
    "built_24h": 42,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 50,
-   "reviews_changes_24h": 9,
+   "reviews_passed_24h": 49,
+   "reviews_changes_24h": 7,
    "commits_by_hour": [
-    3,
+    2,
     3,
     0,
-    7,
-    5,
+    8,
+    4,
     2,
     3,
     0,
@@ -142,22 +142,23 @@
     0,
     0,
     0,
-    3,
-    6,
+    4,
+    5,
     0,
     3,
     0
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff"
+    "targeted tests failed recently backoff",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 21,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 1,
+    "awaiting_merge": 2,
     "merged": 339,
-    "parked": 174
+    "parked": 173
    }
   },
   "architect": {
@@ -213,8 +214,8 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 11,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T07:00:03Z",
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-21T07:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +233,7 @@
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T06:50:02Z",
+    "last_check_at": "2026-10-21T07:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +254,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T07:03:19Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “FLEX candidate t_198dd669 2d18fa0c0776”: passed"
+   },
+   {
+    "at": "2026-10-21T07:01:16Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Capture rejected-trade counterfactual markouts” → sent to independent review"
+   },
    {
     "at": "2026-10-21T06:31:07Z",
     "kind": "warn",
@@ -352,16 +363,6 @@
     "at": "2026-10-21T05:06:13Z",
     "kind": "build",
     "text": "Claude Opus built “LIVE-15 Make the guardian client reject unbound or replayed CHECK…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T05:03:11Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T05:02:09Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
    }
   ]
  },
@@ -371,9 +372,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T06:59:49Z",
-   "heartbeat_at": "2026-10-21T07:00:04Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-21T07:00:13Z",
+   "heartbeat_at": "2026-10-21T07:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -382,7 +383,7 @@
     "weather_events": 434,
     "markets": 4308,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T06:56:15Z",
+    "last_scan_at": "2026-10-21T07:02:36Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T06:56:15Z",
+    "updated_at": "2026-10-21T07:02:36Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T06:58:47Z",
+    "updated_at": "2026-10-21T07:04:49Z",
     "detail": "observations retained"
    },
    {
@@ -668,7 +669,7 @@
      "status": "pending",
      "detail": "re-check inconclusive",
      "merged_tasks": 3,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "PAPER-03",
