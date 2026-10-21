@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T23:20:03Z",
+ "generated_at": "2026-10-21T23:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 34,
+    "count": 33,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "55 built in 24h"
+    "detail": "56 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 63,
+    "count": 66,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_8b133f43",
-    "task": "Render-only hardened systemd units for distinct-principal guardian broker/client",
-    "elapsed_min": 7
+    "task_id": "t_b1216fcc",
+    "task": "LIVE-15 Add a fail-closed guardian commissioning-prerequisite evaluator that never…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_dda00e7a",
+    "task": "FLEX candidate t_8b133f43 099cfbd73f3d",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 63,
+   "progress_pct": 66,
    "last_finished_at": "2026-10-21T21:50:24Z",
    "last_passed": 14693,
    "last_failed": 15,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 41,
    "commits_24h": 41,
-   "built_24h": 55,
+   "built_24h": 56,
    "build_failed_24h": 20,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 10,
@@ -126,15 +126,15 @@
     0,
     0,
     0,
-    5,
-    4,
+    6,
+    3,
+    2,
     1,
     2,
     1,
+    2,
     1,
-    3,
     0,
-    1,
     4,
     0,
     0,
@@ -142,8 +142,8 @@
     2,
     6,
     3,
-    2,
-    2,
+    3,
+    1,
     0,
     4,
     0
@@ -152,9 +152,9 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 34,
+    "queued": 33,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 10,
     "merged": 368,
     "parked": 195
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-21T23:20:03Z",
+    "last_check_at": "2026-10-21T23:25:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,12 +228,12 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T23:10:02Z",
+    "last_check_at": "2026-10-21T23:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 54,
-    "runs_total": 281,
+    "runs_total": 282,
     "last_run_at": "2026-10-21T22:50:02Z",
     "last_ok": true,
     "last_kind": "full suite not green",
@@ -251,6 +251,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-21T23:23:14Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “Render-only hardened systemd units for distinct-principal guardian…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T23:17:24Z",
     "kind": "review",
@@ -355,11 +360,6 @@
     "at": "2026-10-21T22:13:13Z",
     "kind": "build",
     "text": "Claude Opus built “CODE-01 Record observed A->B->A reversions and the polling cadence…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T22:13:06Z",
-    "kind": "warn",
-    "text": "Claude Opus build attempt ended: quota hold"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T23:20:04Z",
-   "heartbeat_at": "2026-10-21T23:20:03Z",
+   "status_at": "2026-10-21T23:24:58Z",
+   "heartbeat_at": "2026-10-21T23:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T23:17:11Z",
+    "last_scan_at": "2026-10-21T23:22:25Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T23:17:11Z",
+    "updated_at": "2026-10-21T23:22:25Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T23:19:07Z",
+    "updated_at": "2026-10-21T23:23:08Z",
     "detail": "observations retained"
    },
    {
