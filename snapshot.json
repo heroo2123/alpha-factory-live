@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T06:25:01Z",
+ "generated_at": "2026-10-21T06:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_39936fc1",
     "task": "PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started same-day contract…",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Builder 2",
@@ -124,8 +124,8 @@
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T06:24:02Z",
+    "last_check_at": "2026-10-21T06:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,9 +238,9 @@
    "operator": {
     "runs_24h": 60,
     "runs_total": 246,
-    "last_run_at": "2026-10-21T06:25:01Z",
+    "last_run_at": "2026-10-21T06:30:02Z",
     "last_ok": true,
-    "last_kind": "flow deepseek low",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T06:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
    {
     "at": "2026-10-21T06:25:01Z",
     "kind": "heal",
@@ -329,11 +334,6 @@
     "text": "GLM 5.3 review ended: quota hold"
    },
    {
-    "at": "2026-10-21T05:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-21T05:12:46Z",
     "kind": "merge",
     "text": "Merged “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence” into the main build"
@@ -371,9 +371,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "making paper decisions",
-   "status_at": "2026-10-21T06:24:11Z",
-   "heartbeat_at": "2026-10-21T06:25:00Z",
+   "state": "census service",
+   "status_at": "2026-10-21T06:30:00Z",
+   "heartbeat_at": "2026-10-21T06:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T06:24:36Z",
+    "updated_at": "2026-10-21T06:28:37Z",
     "detail": "observations retained"
    },
    {
