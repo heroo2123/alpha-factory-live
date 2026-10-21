@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T07:15:02Z",
+ "generated_at": "2026-10-21T07:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "17 ready to build"
+    "detail": "18 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "42 built in 24h"
+    "detail": "41 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e76d5f6a",
     "task": "PAPER-03 Recompute the retained decision population in replay_audit instead of trusting…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -118,17 +118,17 @@
   "flow": {
    "merges_24h": 37,
    "commits_24h": 37,
-   "built_24h": 42,
+   "built_24h": 41,
    "build_failed_24h": 4,
    "reviews_passed_24h": 50,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
     2,
-    3,
-    6,
-    3,
+    5,
     4,
+    4,
+    3,
     1,
     0,
     0,
@@ -149,12 +149,12 @@
     1
    ],
    "merge_holds": [
-    "targeted tests failed"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 21,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 340,
     "parked": 174
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T07:15:02Z",
+    "last_check_at": "2026-10-21T07:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -371,18 +371,18 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T07:14:59Z",
-   "heartbeat_at": "2026-10-21T07:15:01Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-21T07:18:54Z",
+   "heartbeat_at": "2026-10-21T07:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 433,
-    "markets": 4297,
+    "weather_events": 432,
+    "markets": 4286,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T07:08:46Z",
+    "last_scan_at": "2026-10-21T07:15:10Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T07:08:46Z",
+    "updated_at": "2026-10-21T07:15:10Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T07:14:53Z",
+    "updated_at": "2026-10-21T07:18:54Z",
     "detail": "observations retained"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9659,
-     "city_days": 31
+     "brier": 0.9652,
+     "city_days": 34
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8794,
-     "city_days": 31
+     "brier": 0.8766,
+     "city_days": 34
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.7773,
-     "city_days": 31
+     "brier": 0.7387,
+     "city_days": 34
     },
     {
      "key": "equal",
@@ -502,19 +502,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 32,
-   "waiting_city_days": 22,
+   "labelled_city_days": 35,
+   "waiting_city_days": 19,
    "labelled_days": 8,
    "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T06:17:03Z",
+   "updated_at": "2026-10-21T07:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 11,
+     "have": 14,
      "need": 50,
      "done": false,
      "detail": ""
@@ -1083,7 +1083,7 @@
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "11 of 50 untouched city-days collected"
+    "detail": "14 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
