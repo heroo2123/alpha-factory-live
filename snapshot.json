@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:00:02Z",
+ "generated_at": "2026-10-21T10:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 28,
+    "count": 27,
     "unit": "queued",
     "active": false,
     "detail": "24 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "36 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "37 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_92816f5c",
+    "task": "PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health ObservationPolicy as the Shadow…",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -120,42 +120,43 @@
    "commits_24h": 37,
    "built_24h": 36,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 49,
-   "reviews_changes_24h": 5,
+   "reviews_passed_24h": 50,
+   "reviews_changes_24h": 4,
    "commits_by_hour": [
-    7,
+    8,
+    4,
+    2,
+    3,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
     5,
-    2,
-    3,
-    0,
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    3,
-    6,
     0,
     3,
     0,
     2,
-    2,
-    1
+    3,
+    0
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff"
+    "targeted tests failed recently backoff",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 28,
-    "building": 0,
-    "in_review": 1,
-    "awaiting_merge": 1,
+    "queued": 27,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 344,
     "parked": 176
    }
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T09:59:01Z",
+    "last_check_at": "2026-10-21T10:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +233,11 @@
      "flow pin guard scope missing",
      "flow maintenance review packet invalid"
     ],
-    "last_check_at": "2026-10-21T09:50:02Z",
+    "last_check_at": "2026-10-21T10:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 51,
+    "runs_24h": 50,
     "runs_total": 253,
     "last_run_at": "2026-10-21T09:20:02Z",
     "last_ok": true,
@@ -253,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T10:02:20Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts…”: passed"
+   },
    {
     "at": "2026-10-21T09:48:14Z",
     "kind": "build",
@@ -357,11 +363,6 @@
     "at": "2026-10-21T07:50:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
-   },
-   {
-    "at": "2026-10-21T07:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -382,7 +383,7 @@
     "weather_events": 434,
     "markets": 4308,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T09:58:22Z",
+    "last_scan_at": "2026-10-21T10:03:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T09:58:22Z",
+    "updated_at": "2026-10-21T10:03:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T09:59:52Z",
+    "updated_at": "2026-10-21T10:03:53Z",
     "detail": "observations retained"
    },
    {
