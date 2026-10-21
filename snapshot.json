@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T16:10:03Z",
+ "generated_at": "2026-10-21T16:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 49,
     "unit": "queued",
     "active": false,
-    "detail": "22 ready to build"
+    "detail": "21 ready to build"
    },
    {
     "key": "build",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 27,
+    "count": 35,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_e0cc19a2",
     "task": "PAPER-02 METAR rules : event compiler recognises the AWC METAR source, station from ids=…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
     "role": "build",
     "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_b0a67257",
-    "task": "CODE-01 Let the PAPER result-lag lane start on owner-rescoped contract-window finality",
-    "elapsed_min": 25
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_5981d2d8",
+    "task": "PAPER-02 METAR rules : rule authority profile for the AWC METAR rules (population…",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_50933597",
     "task": "PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts limit-pinned settled buckets…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 27,
+   "progress_pct": 35,
    "last_finished_at": "2026-10-21T15:31:10Z",
    "last_passed": 14485,
    "last_failed": 1,
@@ -120,8 +120,8 @@
    "commits_24h": 27,
    "built_24h": 35,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 51,
-   "reviews_changes_24h": 4,
+   "reviews_passed_24h": 50,
+   "reviews_changes_24h": 5,
    "commits_by_hour": [
     3,
     0,
@@ -133,17 +133,17 @@
     0,
     0,
     0,
-    4,
     5,
-    0,
-    3,
-    0,
+    4,
+    1,
     2,
+    1,
+    1,
     3,
     0,
     1,
-    1,
-    3,
+    4,
+    0,
     0,
     0,
     2
@@ -158,7 +158,7 @@
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 351,
-    "parked": 179
+    "parked": 180
    }
   },
   "architect": {
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T16:10:03Z",
+    "last_check_at": "2026-10-21T16:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T16:00:02Z",
+    "last_check_at": "2026-10-21T16:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T16:14:11Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “CODE-01 Let the PAPER result-lag lane start on owner-rescoped…”: changes required"
+   },
+   {
+    "at": "2026-10-21T16:12:12Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Let the PAPER result-lag lane start on owner-rescoped…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T16:09:13Z",
     "kind": "build",
@@ -348,16 +358,6 @@
     "at": "2026-10-21T12:38:10Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T12:29:11Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T12:27:10Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T16:10:03Z",
-   "heartbeat_at": "2026-10-21T16:10:03Z",
+   "status_at": "2026-10-21T16:15:01Z",
+   "heartbeat_at": "2026-10-21T16:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -378,7 +378,7 @@
     "weather_events": 444,
     "markets": 4435,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T16:07:36Z",
+    "last_scan_at": "2026-10-21T16:13:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T16:07:36Z",
+    "updated_at": "2026-10-21T16:13:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T16:08:19Z",
+    "updated_at": "2026-10-21T16:14:21Z",
     "detail": "observations retained"
    },
    {
@@ -635,7 +635,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 31,
-     "open_tasks": 5
+     "open_tasks": 4
     },
     {
      "id": "CODE-02",
