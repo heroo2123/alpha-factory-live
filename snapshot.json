@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T05:00:03Z",
+ "generated_at": "2026-10-21T05:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "12 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "41 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "37 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_37b9c8fc",
+    "task": "LIVE-15 Make the guardian client reject unbound or replayed CHECK receipts and fail…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -120,40 +120,42 @@
    "commits_24h": 37,
    "built_24h": 41,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 43,
+   "reviews_passed_24h": 46,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
+    3,
     2,
     3,
+    0,
+    8,
+    4,
+    2,
     3,
     0,
-    7,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
     5,
-    2,
-    3,
-    0,
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    3,
-    6,
     0
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 17,
-    "building": 0,
-    "in_review": 3,
-    "awaiting_merge": 0,
+    "queued": 16,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 336,
     "parked": 173
    }
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T05:00:03Z",
+    "last_check_at": "2026-10-21T05:04:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,12 +228,12 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T04:50:02Z",
+    "last_check_at": "2026-10-21T05:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 58,
-    "runs_total": 240,
+    "runs_total": 241,
     "last_run_at": "2026-10-21T04:20:02Z",
     "last_ok": true,
     "last_kind": "routine",
@@ -247,6 +249,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T05:03:11Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T05:02:09Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T05:01:20Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence”: passed"
+   },
    {
     "at": "2026-10-21T04:20:02Z",
     "kind": "heal",
@@ -341,21 +358,6 @@
     "at": "2026-10-21T03:14:18Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Show clock-health, health-record freshness and cancel-only…” into the main build"
-   },
-   {
-    "at": "2026-10-21T03:14:10Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T03:14:10Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T03:12:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “LEARNING-12 Refuse a model-authority state that moves backwards or…” → sent to independent review"
    }
   ]
  },
@@ -366,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T05:00:00Z",
-   "heartbeat_at": "2026-10-21T05:00:02Z",
+   "status_at": "2026-10-21T05:05:01Z",
+   "heartbeat_at": "2026-10-21T05:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -406,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T04:58:08Z",
+    "updated_at": "2026-10-21T05:04:10Z",
     "detail": "observations retained"
    },
    {
