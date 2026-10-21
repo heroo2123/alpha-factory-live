@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T03:10:03Z",
+ "generated_at": "2026-10-21T03:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "38 built in 24h"
+    "detail": "39 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 3,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "32 merged in 24h"
+    "detail": "33 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_ffa8eff4",
-    "task": "LEARNING-12 Refuse a model-authority state that moves backwards or is future-dated",
-    "elapsed_min": 25
+    "task_id": "t_ed0ae975",
+    "task": "LIVE-15 Reject aliased guardian custody files",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -116,9 +116,9 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 32,
-   "commits_24h": 32,
-   "built_24h": 38,
+   "merges_24h": 33,
+   "commits_24h": 33,
+   "built_24h": 39,
    "build_failed_24h": 3,
    "reviews_passed_24h": 37,
    "reviews_changes_24h": 9,
@@ -129,14 +129,16 @@
     4,
     2,
     2,
-    2,
-    7,
     3,
-    2,
+    6,
+    3,
+    4,
+    1,
+    0,
+    0,
     3,
     0,
     0,
-    3,
     0,
     0,
     0,
@@ -144,21 +146,18 @@
     0,
     0,
     0,
-    0,
-    0,
-    4
+    5
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 18,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 4,
-    "merged": 331,
-    "parked": 170
+    "in_review": 3,
+    "awaiting_merge": 2,
+    "merged": 332,
+    "parked": 171
    }
   },
   "architect": {
@@ -168,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T03:14:18Z",
+    "title": "CODE-01 Show clock-health, health-record freshness and cancel-only guardian status in…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T03:05:24Z",
     "title": "CODE-01 Refuse RESULT_LAG certification eligibility and EXACT_FINALITY PASS proofs until…",
@@ -202,11 +206,6 @@
     "at": "2026-10-20T16:53:30Z",
     "title": "CODE-01 Distinguish official revisions from capture-envelope changes",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T13:42:12Z",
-    "title": "Recover bounded GEFS worker progress after completed model constituent supersession",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T03:10:03Z",
+    "last_check_at": "2026-10-21T03:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +228,7 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T03:00:03Z",
+    "last_check_at": "2026-10-21T03:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +249,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T03:14:18Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Show clock-health, health-record freshness and cancel-only…” into the main build"
+   },
+   {
+    "at": "2026-10-21T03:14:10Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-21T03:14:10Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-21T03:12:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “LEARNING-12 Refuse a model-authority state that moves backwards or…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T03:05:24Z",
     "kind": "merge",
@@ -339,26 +358,6 @@
     "at": "2026-10-21T02:12:06Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T02:10:24Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Refuse realized-P&L splits over a lot attribution that is…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T02:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-21T01:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow census churn"
-   },
-   {
-    "at": "2026-10-21T01:44:14Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 Refuse RESULT_LAG certification eligibility and…”: passed"
    }
   ]
  },
@@ -369,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T03:09:59Z",
-   "heartbeat_at": "2026-10-21T03:10:03Z",
+   "status_at": "2026-10-21T03:14:59Z",
+   "heartbeat_at": "2026-10-21T03:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +378,7 @@
     "weather_events": 394,
     "markets": 3873,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T03:04:16Z",
+    "last_scan_at": "2026-10-21T03:10:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T03:04:16Z",
+    "updated_at": "2026-10-21T03:10:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T03:09:32Z",
+    "updated_at": "2026-10-21T03:13:33Z",
     "detail": "observations retained"
    },
    {
@@ -628,8 +627,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 27,
-     "open_tasks": 4
+     "merged_tasks": 28,
+     "open_tasks": 3
     },
     {
      "id": "CODE-02",
