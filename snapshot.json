@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T09:35:03Z",
+ "generated_at": "2026-10-21T09:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_50933597",
     "task": "PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts limit-pinned settled buckets…",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -120,14 +120,14 @@
    "commits_24h": 37,
    "built_24h": 37,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 49,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     7,
     4,
     2,
-    3,
-    1,
+    4,
+    0,
     0,
     0,
     3,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T09:35:03Z",
+    "last_check_at": "2026-10-21T09:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -379,10 +379,10 @@
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 436,
-    "markets": 4330,
+    "weather_events": 435,
+    "markets": 4319,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T09:31:40Z",
+    "last_scan_at": "2026-10-21T09:36:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-21T08:37:03Z",
+    "updated_at": "2026-10-21T09:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T09:31:40Z",
+    "updated_at": "2026-10-21T09:36:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T09:33:43Z",
+    "updated_at": "2026-10-21T09:39:45Z",
     "detail": "observations retained"
    },
    {
