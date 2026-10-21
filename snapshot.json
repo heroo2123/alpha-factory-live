@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T18:15:01Z",
+ "generated_at": "2026-10-21T18:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,22 +10,22 @@
     "count": 41,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "44 built in 24h"
+    "detail": "45 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_d5ed2226",
     "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 56
+    "elapsed_min": 61
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_578189f6",
+    "task": "LIVE-14 Gate candidate job dispatch on the same strict clock-health predicate used at…",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 33,
    "commits_24h": 33,
-   "built_24h": 44,
-   "build_failed_24h": 4,
+   "built_24h": 45,
+   "build_failed_24h": 5,
    "reviews_passed_24h": 58,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
@@ -154,8 +154,8 @@
    ],
    "stage_totals": {
     "queued": 41,
-    "building": 2,
-    "in_review": 0,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 360,
     "parked": 183
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T18:15:02Z",
+    "last_check_at": "2026-10-21T18:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T18:17:10Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-21T18:15:17Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “LIVE-14 Gate candidate job dispatch on the same strict clock-health…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T18:15:01Z",
     "kind": "heal",
@@ -349,16 +359,6 @@
     "at": "2026-10-21T17:10:39Z",
     "kind": "merge",
     "text": "Merged “Account replay deadline during final aggregation must report…” into the main build"
-   },
-   {
-    "at": "2026-10-21T17:09:38Z",
-    "kind": "merge",
-    "text": "Merged “Maker-telemetry candidate dispatch test must not depend on host load…” into the main build"
-   },
-   {
-    "at": "2026-10-21T17:09:18Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 PAPER reward maker : reward-zone two-sided quotes +…” into the main build"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T18:15:00Z",
-   "heartbeat_at": "2026-10-21T18:15:01Z",
+   "status_at": "2026-10-21T18:20:01Z",
+   "heartbeat_at": "2026-10-21T18:20:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -379,7 +379,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T18:10:18Z",
+    "last_scan_at": "2026-10-21T18:15:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T18:10:18Z",
+    "updated_at": "2026-10-21T18:15:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T18:13:10Z",
+    "updated_at": "2026-10-21T18:19:12Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +507,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T17:17:03Z",
+   "updated_at": "2026-10-21T18:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
