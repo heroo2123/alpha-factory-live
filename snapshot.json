@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T00:55:02Z",
+ "generated_at": "2026-10-21T01:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "count": 1,
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_6a3e2587",
     "task": "PAPER-02 A periodic census gated only by provider cooldown must stay periodic so the…",
-    "elapsed_min": 23
+    "elapsed_min": 28
    },
    {
     "slot": "Builder 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": false,
-   "progress_pct": null,
+   "running": true,
+   "progress_pct": 1,
    "last_finished_at": "2026-10-20T16:49:27Z",
    "last_passed": 14212,
    "last_failed": 0,
@@ -128,8 +128,8 @@
     0,
     0,
     0,
-    0,
-    5,
+    2,
+    3,
     3,
     0,
     7,
@@ -138,8 +138,8 @@
     3,
     0,
     0,
-    2,
-    1,
+    3,
+    0,
     0,
     0,
     0,
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
-    "alerts_24h": 10,
+    "state": "p1",
+    "active": 2,
+    "alerts_24h": 11,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-21T00:55:02Z",
+    "last_check_at": "2026-10-21T01:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T00:57:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
    {
     "at": "2026-10-21T00:40:01Z",
     "kind": "heal",
@@ -343,11 +348,6 @@
    {
     "at": "2026-10-20T15:50:02Z",
     "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes job late evidence qualification registry"
-   },
-   {
-    "at": "2026-10-20T15:50:02Z",
-    "kind": "heal",
     "text": "Guardian confirmed recovery: hermes job late flexible provider router"
    },
    {
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T00:55:00Z",
-   "heartbeat_at": "2026-10-21T00:55:02Z",
+   "status_at": "2026-10-21T01:00:00Z",
+   "heartbeat_at": "2026-10-21T01:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +379,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T00:50:14Z",
+    "last_scan_at": "2026-10-21T00:56:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T00:50:14Z",
+    "updated_at": "2026-10-21T00:56:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T00:54:46Z",
+    "updated_at": "2026-10-21T00:58:48Z",
     "detail": "observations retained"
    },
    {
