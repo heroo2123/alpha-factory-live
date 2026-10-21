@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T22:00:02Z",
+ "generated_at": "2026-10-21T22:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 41,
+    "count": 40,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "53 built in 24h"
+    "detail": "54 built in 24h"
    },
    {
     "key": "review",
@@ -34,7 +34,7 @@
     "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "38 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_6738fbf9",
-    "task": "PAPER-02 METAR rules : rollforward publisher normalises METAR rule envelopes (URL…",
-    "elapsed_min": 3
+    "task_id": "t_59b8c163",
+    "task": "CODE-01 METAR rules : offline official settlement source derives METAR-rule settlements…",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -90,17 +90,17 @@
     "family": "DeepSeek",
     "task_id": "t_2b28c39a",
     "task": "FLEX candidate t_50933597 fc02dc23d320",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_6738fbf9",
+    "task": "PAPER-02 METAR rules : rollforward publisher normalises METAR rule envelopes (URL…",
+    "elapsed_min": 2
    }
   ],
   "qa": {
@@ -116,25 +116,25 @@
   },
   "tests_passing": 14693,
   "flow": {
-   "merges_24h": 38,
-   "commits_24h": 38,
-   "built_24h": 53,
+   "merges_24h": 39,
+   "commits_24h": 39,
+   "built_24h": 54,
    "build_failed_24h": 15,
    "reviews_passed_24h": 65,
-   "reviews_changes_24h": 9,
+   "reviews_changes_24h": 8,
    "commits_by_hour": [
     0,
     0,
     0,
     0,
-    3,
-    6,
+    4,
+    5,
     0,
     3,
     0,
     2,
-    2,
-    1,
+    3,
+    0,
     1,
     0,
     4,
@@ -146,17 +146,17 @@
     3,
     2,
     0,
-    1
+    2
    ],
    "merge_holds": [
     "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 41,
+    "queued": 40,
     "building": 1,
     "in_review": 2,
     "awaiting_merge": 6,
-    "merged": 365,
+    "merged": 366,
     "parked": 190
    }
   },
@@ -167,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T22:03:01Z",
+    "title": "PAPER-02 METAR rules : settlement window accepts the METAR population and…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T21:59:27Z",
     "title": "LIVE-15 Fail the finite guardian client closed when the broker repeats a stale status…",
@@ -201,20 +206,15 @@
     "at": "2026-10-21T17:45:16Z",
     "title": "CODE-01 Re-check ASOS day coverage and make the IEM corroboration digest reproducible",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T17:15:18Z",
-    "title": "PAPER-02 METAR rules : fail-closed AWC raw METAR settlement value (routine only, T-group…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 2,
     "alerts_24h": 13,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T21:59:01Z",
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-21T22:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T21:50:02Z",
+    "last_check_at": "2026-10-21T22:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,26 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-21T22:03:01Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 METAR rules : settlement window accepts the METAR…” into the main build"
+   },
+   {
+    "at": "2026-10-21T22:02:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-02 METAR rules : rollforward publisher normalises METAR rule…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T22:02:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-21T22:00:29Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “Candidate tests must advance the synthetic host clock after the…”: passed"
+   },
    {
     "at": "2026-10-21T21:59:27Z",
     "kind": "merge",
@@ -340,26 +360,6 @@
     "at": "2026-10-21T21:15:20Z",
     "kind": "warn",
     "text": "Claude Opus's build of “PAPER-02 METAR rules : continuous day manager accepts the METAR…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-21T21:03:11Z",
-    "kind": "warn",
-    "text": "Claude Opus's build of “PAPER-02 METAR rules : root daily review authority applies the same…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-21T20:58:51Z",
-    "kind": "warn",
-    "text": "Claude Opus's build of “PAPER-02 METAR rules : rollforward publisher normalises METAR rule…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-21T20:46:51Z",
-    "kind": "warn",
-    "text": "Claude Opus's build of “PAPER-02 METAR rules : daily evidence rollover re-certifies the…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-21T20:43:27Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-02 METAR rules : strict contract accepts exactly the METAR…”: passed"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T21:59:59Z",
-   "heartbeat_at": "2026-10-21T22:00:03Z",
+   "status_at": "2026-10-21T22:05:01Z",
+   "heartbeat_at": "2026-10-21T22:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T21:58:35Z",
+    "updated_at": "2026-10-21T22:04:37Z",
     "detail": "observations retained"
    },
    {
