@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:30:02Z",
+ "generated_at": "2026-10-21T10:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 29,
     "unit": "queued",
     "active": false,
-    "detail": "23 ready to build"
+    "detail": "24 ready to build"
    },
    {
     "key": "build",
@@ -34,12 +34,12 @@
     "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "32 merged in 24h"
+    "detail": "31 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 4,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0d9d2318",
     "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
-    "elapsed_min": 22
+    "elapsed_min": 27
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 4,
    "last_finished_at": "2026-10-21T02:27:12Z",
    "last_passed": 14245,
    "last_failed": 0,
@@ -116,14 +116,14 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 32,
-   "commits_24h": 32,
+   "merges_24h": 31,
+   "commits_24h": 31,
    "built_24h": 36,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 51,
+   "reviews_passed_24h": 50,
    "reviews_changes_24h": 3,
    "commits_by_hour": [
-    4,
+    3,
     3,
     3,
     1,
@@ -138,9 +138,9 @@
     0,
     0,
     0,
-    0,
-    6,
-    3,
+    2,
+    5,
+    2,
     2,
     1,
     2,
@@ -214,24 +214,23 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T10:30:02Z",
+    "last_check_at": "2026-10-21T10:34:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 4,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 4
+     "P2": 3
     },
     "codes": [
-     "flow qa resource blocked",
      "flow deepseek low",
      "flow shadow evals all gated",
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T10:20:02Z",
+    "last_check_at": "2026-10-21T10:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T10:34:10Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-21T10:30:02Z",
     "kind": "heal",
@@ -356,11 +360,6 @@
     "at": "2026-10-21T08:30:03Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-21T08:27:12Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -381,7 +380,7 @@
     "weather_events": 431,
     "markets": 4275,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T10:24:42Z",
+    "last_scan_at": "2026-10-21T10:30:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T10:24:42Z",
+    "updated_at": "2026-10-21T10:30:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T10:28:03Z",
+    "updated_at": "2026-10-21T10:34:07Z",
     "detail": "observations retained"
    },
    {
