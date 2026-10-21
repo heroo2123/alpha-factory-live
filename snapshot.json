@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T00:20:02Z",
+ "generated_at": "2026-10-21T00:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "31 merged in 24h"
+    "detail": "28 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_7992d2d9",
     "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -116,25 +116,25 @@
   },
   "tests_passing": 14212,
   "flow": {
-   "merges_24h": 31,
-   "commits_24h": 30,
+   "merges_24h": 28,
+   "commits_24h": 28,
    "built_24h": 30,
    "build_failed_24h": 3,
    "reviews_passed_24h": 28,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
-    2,
+    0,
     0,
     0,
     0,
     0,
     0,
     4,
-    2,
-    2,
-    5,
+    3,
+    1,
+    6,
     4,
-    4,
+    3,
     3,
     1,
     0,
@@ -150,7 +150,7 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 18,
+    "queued": 24,
     "building": 1,
     "in_review": 0,
     "awaiting_merge": 0,
@@ -160,9 +160,9 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-20T13:30:12Z",
+   "last_run_at": "2026-10-21T00:20:23Z",
    "last_planned": 6,
-   "model": "Codex (GPT-6 Astra)"
+   "model": "Claude Opus"
   },
   "recent_merges": [
    {
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 10,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-21T00:20:02Z",
+    "last_check_at": "2026-10-21T00:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T00:10:02Z",
+    "last_check_at": "2026-10-21T00:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T00:20:23Z",
+    "kind": "plan",
+    "text": "Architect (Claude Opus) planned 6 new tasks"
+   },
    {
     "at": "2026-10-21T00:19:01Z",
     "kind": "warn",
@@ -353,11 +358,6 @@
     "at": "2026-10-20T15:25:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: hermes job late code evidence to kanban"
-   },
-   {
-    "at": "2026-10-20T15:11:09Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra)'s build of “CODE-01 Validate the archived envelope before reusing a forecast slice” failed its tests; it will be retried"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T00:19:59Z",
-   "heartbeat_at": "2026-10-21T00:20:03Z",
+   "status_at": "2026-10-21T00:25:00Z",
+   "heartbeat_at": "2026-10-21T00:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T00:18:34Z",
+    "updated_at": "2026-10-21T00:24:36Z",
     "detail": "observations retained"
    },
    {
@@ -628,7 +628,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 26,
-     "open_tasks": 1
+     "open_tasks": 5
     },
     {
      "id": "CODE-02",
@@ -1006,7 +1006,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 16,
-     "open_tasks": 2
+     "open_tasks": 4
     },
     {
      "id": "LIVE-16",
