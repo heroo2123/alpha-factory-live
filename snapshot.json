@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T06:15:01Z",
+ "generated_at": "2026-10-21T06:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_39936fc1",
     "task": "PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started same-day contract…",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -126,10 +126,10 @@
     4,
     2,
     2,
-    3,
-    6,
-    3,
+    5,
     4,
+    4,
+    3,
     1,
     0,
     0,
@@ -149,7 +149,7 @@
     2
    ],
    "merge_holds": [
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
     "queued": 21,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T06:15:01Z",
+    "last_check_at": "2026-10-21T06:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,10 +235,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 244,
-    "last_run_at": "2026-10-21T05:25:02Z",
+    "runs_total": 245,
+    "last_run_at": "2026-10-21T06:20:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T06:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-21T06:09:10Z",
     "kind": "review",
@@ -355,11 +360,6 @@
     "at": "2026-10-21T04:20:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: routine"
-   },
-   {
-    "at": "2026-10-21T04:16:06Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -370,17 +370,17 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T06:14:59Z",
-   "heartbeat_at": "2026-10-21T06:15:02Z",
+   "status_at": "2026-10-21T06:19:59Z",
+   "heartbeat_at": "2026-10-21T06:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 439,
-    "markets": 4363,
+    "weather_events": 438,
+    "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T06:12:32Z",
+    "last_scan_at": "2026-10-21T06:18:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T06:12:32Z",
+    "updated_at": "2026-10-21T06:18:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T06:14:33Z",
+    "updated_at": "2026-10-21T06:18:34Z",
     "detail": "observations retained"
    },
    {
@@ -508,7 +508,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T05:17:03Z",
+   "updated_at": "2026-10-21T06:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
