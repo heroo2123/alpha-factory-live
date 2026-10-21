@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T03:25:01Z",
+ "generated_at": "2026-10-21T03:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 5,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_ed0ae975",
     "task": "LIVE-15 Reject aliased guardian custody files",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Builder 2",
@@ -127,8 +127,8 @@
     0,
     0,
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -148,11 +148,13 @@
     0,
     6
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
     "queued": 18,
     "building": 1,
-    "in_review": 4,
+    "in_review": 5,
     "awaiting_merge": 1,
     "merged": 333,
     "parked": 171
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T03:24:02Z",
+    "last_check_at": "2026-10-21T03:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 55,
-    "runs_total": 238,
-    "last_run_at": "2026-10-21T03:25:01Z",
+    "runs_24h": 56,
+    "runs_total": 239,
+    "last_run_at": "2026-10-21T03:30:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -247,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T03:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
    {
     "at": "2026-10-21T03:25:01Z",
     "kind": "heal",
@@ -351,11 +358,6 @@
     "at": "2026-10-21T02:20:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-21T02:15:23Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 Show clock-health, health-record freshness and cancel-only…”: passed"
    }
   ]
  },
@@ -366,17 +368,17 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T03:25:00Z",
-   "heartbeat_at": "2026-10-21T03:25:01Z",
+   "status_at": "2026-10-21T03:29:59Z",
+   "heartbeat_at": "2026-10-21T03:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 394,
-    "markets": 3873,
+    "weather_events": 392,
+    "markets": 3851,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T03:22:45Z",
+    "last_scan_at": "2026-10-21T03:28:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T03:22:45Z",
+    "updated_at": "2026-10-21T03:28:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T03:23:37Z",
+    "updated_at": "2026-10-21T03:29:38Z",
     "detail": "observations retained"
    },
    {
