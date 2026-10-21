@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T02:10:02Z",
+ "generated_at": "2026-10-21T02:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "35 built in 24h"
+    "detail": "37 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 80,
+    "count": 82,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 80,
+   "progress_pct": 82,
    "last_finished_at": "2026-10-20T16:49:27Z",
    "last_passed": 14212,
    "last_failed": 0,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 28,
    "commits_24h": 28,
-   "built_24h": 35,
+   "built_24h": 37,
    "build_failed_24h": 3,
    "reviews_passed_24h": 33,
    "reviews_changes_24h": 8,
@@ -130,11 +130,11 @@
     4,
     2,
     2,
-    2,
-    7,
     3,
-    2,
+    6,
     3,
+    4,
+    1,
     0,
     0,
     3,
@@ -149,12 +149,12 @@
     0
    ],
    "merge_holds": [
-    "lock busy"
+    "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 21,
-    "building": 1,
-    "in_review": 0,
+    "queued": 20,
+    "building": 0,
+    "in_review": 2,
     "awaiting_merge": 5,
     "merged": 327,
     "parked": 169
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T02:10:03Z",
+    "last_check_at": "2026-10-21T02:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T02:00:03Z",
+    "last_check_at": "2026-10-21T02:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T02:14:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Show clock-health, health-record freshness and cancel-only…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T02:12:06Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-21T02:10:24Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Refuse realized-P&L splits over a lot attribution that is…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T02:05:02Z",
     "kind": "heal",
@@ -343,21 +358,6 @@
     "at": "2026-10-21T00:32:06Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro review ended: review deepseek failed requeued for…"
-   },
-   {
-    "at": "2026-10-21T00:31:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T00:27:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-21T00:20:23Z",
-    "kind": "plan",
-    "text": "Architect (Claude Opus) planned 6 new tasks"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T02:09:59Z",
-   "heartbeat_at": "2026-10-21T02:10:03Z",
+   "status_at": "2026-10-21T02:14:59Z",
+   "heartbeat_at": "2026-10-21T02:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T02:09:12Z",
+    "updated_at": "2026-10-21T02:13:14Z",
     "detail": "observations retained"
    },
    {
