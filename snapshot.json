@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T17:15:02Z",
+ "generated_at": "2026-10-21T17:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 41,
+    "count": 40,
     "unit": "queued",
     "active": false,
-    "detail": "17 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "42 built in 24h"
+    "detail": "44 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 4,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "29 merged in 24h"
+    "detail": "30 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,19 +68,19 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_5afbc936",
-    "task": "CODE-01 PAPER reward maker : inventory transform + cost reserves + separated TRADING_PNL…",
-    "elapsed_min": 10
+    "task_id": "t_d5ed2226",
+    "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_ec45d4b6",
-    "task": "Edge evaluator: day-clustered (target-date) bootstrap + recorded funding-bar verdict for…",
-    "elapsed_min": 5
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -88,14 +88,14 @@
     "state": "working",
     "model": "GLM 5.3",
     "family": "Zhipu",
-    "task_id": "t_78e7d50e",
-    "task": "CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH finality bracket",
-    "elapsed_min": 3
+    "task_id": "t_ec45d4b6",
+    "task": "Edge evaluator: day-clustered (target-date) bootstrap + recorded funding-bar verdict for…",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 29,
-   "commits_24h": 29,
-   "built_24h": 42,
-   "build_failed_24h": 3,
-   "reviews_passed_24h": 56,
+   "merges_24h": 30,
+   "commits_24h": 30,
+   "built_24h": 44,
+   "build_failed_24h": 4,
+   "reviews_passed_24h": 57,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     0,
@@ -146,15 +146,17 @@
     0,
     0,
     2,
-    5
+    6
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 41,
-    "building": 2,
-    "in_review": 1,
+    "queued": 40,
+    "building": 1,
+    "in_review": 2,
     "awaiting_merge": 4,
-    "merged": 356,
+    "merged": 357,
     "parked": 183
    }
   },
@@ -165,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T17:15:18Z",
+    "title": "PAPER-02 METAR rules : fail-closed AWC raw METAR settlement value (routine only, T-group…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T17:14:41Z",
     "title": "PAPER-02 METAR rules : rule authority profile for the AWC METAR rules (population…",
@@ -199,20 +206,15 @@
     "at": "2026-10-21T15:36:10Z",
     "title": "CODE-01 PAPER reward maker : queue-honest simulated fills + markouts 1m/5m/30m/settlement",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T12:14:56Z",
-    "title": "CODE-01 PAPER reward maker : official full-book reward score + per-epoch share estimate",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T17:15:03Z",
+    "last_check_at": "2026-10-21T17:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -247,6 +249,36 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T17:19:09Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-21T17:19:09Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-21T17:18:15Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 PAPER reward maker : inventory transform + cost reserves +…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T17:17:12Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “Edge evaluator: day-clustered (target-date) bootstrap + recorded…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T17:16:27Z",
+    "kind": "review",
+    "text": "GLM 5.3 reviewed “CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH…”: passed"
+   },
+   {
+    "at": "2026-10-21T17:15:18Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 METAR rules : fail-closed AWC raw METAR settlement value…” into the main build"
+   },
    {
     "at": "2026-10-21T17:15:02Z",
     "kind": "heal",
@@ -326,36 +358,6 @@
     "at": "2026-10-21T17:02:08Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T17:00:16Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T16:59:35Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T16:59:20Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Record the polling cadence in the WRH revision ledger” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T16:59:14Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Bind the finality policy bounds and financial_authority into…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T16:58:22Z",
-    "kind": "review",
-    "text": "GLM 5.3 reviewed “PAPER-02 METAR rules : fail-closed AWC raw METAR settlement value…”: passed"
-   },
-   {
-    "at": "2026-10-21T16:54:09Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -366,8 +368,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T17:15:00Z",
-   "heartbeat_at": "2026-10-21T17:15:03Z",
+   "status_at": "2026-10-21T17:19:58Z",
+   "heartbeat_at": "2026-10-21T17:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -376,7 +378,7 @@
     "weather_events": 442,
     "markets": 4413,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T17:12:06Z",
+    "last_scan_at": "2026-10-21T17:17:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T17:12:06Z",
+    "updated_at": "2026-10-21T17:17:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T17:14:47Z",
+    "updated_at": "2026-10-21T17:18:49Z",
     "detail": "observations retained"
    },
    {
@@ -504,7 +506,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T16:17:03Z",
+   "updated_at": "2026-10-21T17:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
