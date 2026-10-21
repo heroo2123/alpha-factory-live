@@ -1,40 +1,40 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T15:35:01Z",
+ "generated_at": "2026-10-21T15:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 53,
+    "count": 52,
     "unit": "queued",
     "active": false,
-    "detail": "24 ready to build"
+    "detail": "23 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": true,
-    "detail": "33 built in 24h"
+    "active": false,
+    "detail": "34 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "25 merged in 24h"
+    "detail": "27 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_67a6f26a",
-    "task": "Account replay deadline during final aggregation must report…",
-    "elapsed_min": 23
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_67a6f26a",
+    "task": "Account replay deadline during final aggregation must report…",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -106,19 +106,19 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-21T13:52:14Z",
-   "last_passed": 14470,
-   "last_failed": 2,
+   "last_finished_at": "2026-10-21T15:31:10Z",
+   "last_passed": 14485,
+   "last_failed": 1,
    "last_skipped": 51,
    "last_green": false,
    "last_green_at": "2026-10-21T02:27:12Z",
    "last_minutes": 96
   },
-  "tests_passing": 14470,
+  "tests_passing": 14485,
   "flow": {
-   "merges_24h": 25,
-   "commits_24h": 25,
-   "built_24h": 33,
+   "merges_24h": 27,
+   "commits_24h": 27,
+   "built_24h": 34,
    "build_failed_24h": 2,
    "reviews_passed_24h": 50,
    "reviews_changes_24h": 4,
@@ -146,19 +146,15 @@
     4,
     0,
     0,
-    0
+    2
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish",
-    "disallowed path set",
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 53,
+    "queued": 52,
     "building": 1,
-    "in_review": 0,
-    "awaiting_merge": 3,
-    "merged": 349,
+    "in_review": 1,
+    "awaiting_merge": 1,
+    "merged": 351,
     "parked": 179
    }
   },
@@ -169,6 +165,16 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T15:39:31Z",
+    "title": "PAPER-08 PAPER-UNBLOCK : FUTURE_FORECAST lane targets the forecast-relevant buckets of…",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-21T15:36:10Z",
+    "title": "CODE-01 PAPER reward maker : queue-honest simulated fills + markouts 1m/5m/30m/settlement",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T12:14:56Z",
     "title": "CODE-01 PAPER reward maker : official full-book reward score + per-epoch share estimate",
@@ -198,25 +204,15 @@
     "at": "2026-10-21T09:05:56Z",
     "title": "PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started same-day contract…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T08:53:15Z",
-    "title": "LIVE-15 Type every liveness transport failure and require distinct published receipt ids",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T08:23:15Z",
-    "title": "PAPER-02 Recompute the retained account-command population in account_replay_audit",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
+    "state": "p1",
     "active": 1,
-    "alerts_24h": 10,
-    "recoveries_24h": 14,
-    "last_check_at": "2026-10-21T15:35:01Z",
+    "alerts_24h": 11,
+    "recoveries_24h": 13,
+    "last_check_at": "2026-10-21T15:39:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,11 +231,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 38,
-    "runs_total": 263,
-    "last_run_at": "2026-10-21T12:15:02Z",
+    "runs_24h": 37,
+    "runs_total": 264,
+    "last_run_at": "2026-10-21T15:40:02Z",
     "last_ok": true,
-    "last_kind": "flow glm near cap",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +247,46 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T15:40:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T15:39:31Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 PAPER-UNBLOCK : FUTURE_FORECAST lane targets the…” into the main build"
+   },
+   {
+    "at": "2026-10-21T15:38:10Z",
+    "kind": "build",
+    "text": "Claude Opus built “Account replay deadline during final aggregation must report…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T15:38:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-10-21T15:38:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-21T15:37:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-21T15:36:10Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 PAPER reward maker : queue-honest simulated fills + markouts…” into the main build"
+   },
+   {
+    "at": "2026-10-21T15:31:10Z",
+    "kind": "warn",
+    "text": "Full test suite finished: 14485 passed, 1 failed"
+   },
    {
     "at": "2026-10-21T15:23:27Z",
     "kind": "review",
@@ -287,11 +323,6 @@
     "text": "Full test suite finished: 14470 passed, 2 failed"
    },
    {
-    "at": "2026-10-21T12:52:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
     "at": "2026-10-21T12:38:10Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
@@ -317,16 +348,6 @@
     "text": "New Shadow release b603a22 went live (paper only)"
    },
    {
-    "at": "2026-10-21T12:18:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: agent4 qa pipeline subsystem failed"
-   },
-   {
-    "at": "2026-10-21T12:18:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: full suite not green"
-   },
-   {
     "at": "2026-10-21T12:17:16Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 PAPER reward maker : queue-honest simulated fills + markouts…”: passed"
@@ -335,31 +356,6 @@
     "at": "2026-10-21T12:15:02Z",
     "kind": "release",
     "text": "Release b603a22 installed by the release manager"
-   },
-   {
-    "at": "2026-10-21T12:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow glm near cap"
-   },
-   {
-    "at": "2026-10-21T12:14:56Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 PAPER reward maker : official full-book reward score +…” into the main build"
-   },
-   {
-    "at": "2026-10-21T12:14:28Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 PAPER-UNBLOCK : GEFS 00/06/12/18Z run rollover with…” into the main build"
-   },
-   {
-    "at": "2026-10-21T12:13:08Z",
-    "kind": "warn",
-    "text": "Claude Opus build attempt ended: model process failed"
-   },
-   {
-    "at": "2026-10-21T12:11:10Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-08 PAPER-UNBLOCK : paper-only zero-fill execution-health…” into the main build"
    }
   ]
  },
@@ -370,8 +366,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T15:34:59Z",
-   "heartbeat_at": "2026-10-21T15:35:00Z",
+   "status_at": "2026-10-21T15:39:59Z",
+   "heartbeat_at": "2026-10-21T15:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -396,7 +392,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-21T14:37:03Z",
+    "updated_at": "2026-10-21T15:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -410,8 +406,8 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T15:34:07Z",
-    "detail": "gated"
+    "updated_at": "2026-10-21T15:38:08Z",
+    "detail": "observations retained"
    },
    {
     "name": "ECMWF IFS / AIFS",
