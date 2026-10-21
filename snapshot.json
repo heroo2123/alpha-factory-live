@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T15:50:03Z",
+ "generated_at": "2026-10-21T15:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 5,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_50933597",
     "task": "PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts limit-pinned settled buckets…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_b0a67257",
     "task": "CODE-01 Let the PAPER result-lag lane start on owner-rescoped contract-window finality",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 5,
    "last_finished_at": "2026-10-21T15:31:10Z",
    "last_passed": 14485,
    "last_failed": 1,
@@ -120,27 +120,27 @@
    "commits_24h": 27,
    "built_24h": 34,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 52,
+   "reviews_passed_24h": 51,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
     0,
     3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    2,
     6,
-    1,
+    0,
     3,
     0,
     2,
-    1,
     2,
+    1,
     1,
     0,
     4,
@@ -213,23 +213,22 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 11,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T15:49:01Z",
+    "recoveries_24h": 10,
+    "last_check_at": "2026-10-21T15:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 2
+     "P2": 1
     },
     "codes": [
-     "flow unmergeable reviewed work",
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T15:40:02Z",
+    "last_check_at": "2026-10-21T15:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -368,8 +367,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T15:49:59Z",
-   "heartbeat_at": "2026-10-21T15:50:03Z",
+   "status_at": "2026-10-21T15:55:01Z",
+   "heartbeat_at": "2026-10-21T15:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -378,7 +377,7 @@
     "weather_events": 444,
     "markets": 4435,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T15:49:03Z",
+    "last_scan_at": "2026-10-21T15:54:18Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T15:49:03Z",
+    "updated_at": "2026-10-21T15:54:18Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T15:48:12Z",
+    "updated_at": "2026-10-21T15:54:14Z",
     "detail": "observations retained"
    },
    {
