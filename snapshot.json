@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T00:30:02Z",
+ "generated_at": "2026-10-21T00:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "30 built in 24h"
+    "detail": "31 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_7992d2d9",
-    "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
-    "elapsed_min": 29
+    "task_id": "t_6a3e2587",
+    "task": "PAPER-02 A periodic census gated only by provider cooldown must stay periodic so the…",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 28,
    "commits_24h": 28,
-   "built_24h": 30,
+   "built_24h": 31,
    "build_failed_24h": 3,
    "reviews_passed_24h": 28,
    "reviews_changes_24h": 8,
@@ -132,8 +132,8 @@
     4,
     4,
     0,
-    6,
-    4,
+    7,
+    3,
     3,
     3,
     1,
@@ -152,7 +152,7 @@
    "stage_totals": {
     "queued": 24,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 327,
     "parked": 171
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 10,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-21T00:29:01Z",
+    "last_check_at": "2026-10-21T00:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,17 +228,17 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T00:20:02Z",
+    "last_check_at": "2026-10-21T00:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 45,
-    "runs_total": 228,
-    "last_run_at": "2026-10-20T15:50:02Z",
+    "runs_24h": 46,
+    "runs_total": 229,
+    "last_run_at": "2026-10-21T00:35:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
     "running": false,
-    "model": "Codex (GPT-6 Astra)",
+    "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -249,6 +249,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T00:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T00:32:06Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro review ended: review deepseek failed requeued for…"
+   },
+   {
+    "at": "2026-10-21T00:31:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence” → sent to independent review"
+   },
    {
     "at": "2026-10-21T00:27:01Z",
     "kind": "heal",
@@ -343,21 +358,6 @@
     "at": "2026-10-20T15:40:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: evidence 48 registry stale"
-   },
-   {
-    "at": "2026-10-20T15:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: hermes job late development milestone alerts"
-   },
-   {
-    "at": "2026-10-20T15:30:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: hermes job late evidence qualification registry"
-   },
-   {
-    "at": "2026-10-20T15:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: hermes job late code evidence to kanban"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T00:30:00Z",
-   "heartbeat_at": "2026-10-21T00:30:02Z",
+   "status_at": "2026-10-21T00:35:00Z",
+   "heartbeat_at": "2026-10-21T00:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +378,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T00:25:56Z",
+    "last_scan_at": "2026-10-21T00:32:05Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T00:25:56Z",
+    "updated_at": "2026-10-21T00:32:05Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T00:28:37Z",
+    "updated_at": "2026-10-21T00:34:39Z",
     "detail": "observations retained"
    },
    {
@@ -664,7 +664,7 @@
      "status": "pending",
      "detail": "re-check inconclusive",
      "merged_tasks": 2,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-03",
