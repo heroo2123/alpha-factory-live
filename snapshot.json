@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T20:05:02Z",
+ "generated_at": "2026-10-21T20:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_4df66dcb",
     "task": "PAPER-02 METAR rules : settlement window accepts the METAR population and…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_af1ca03c",
     "task": "PAPER-02 METAR rules : strict contract accepts exactly the METAR rules form and reports…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 1",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-21T17:06:41Z",
    "last_passed": 0,
@@ -120,8 +120,8 @@
    "commits_24h": 37,
    "built_24h": 52,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 71,
-   "reviews_changes_24h": 9,
+   "reviews_passed_24h": 70,
+   "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
     0,
@@ -138,18 +138,19 @@
     3,
     0,
     1,
-    0,
-    4,
+    1,
+    3,
     0,
     0,
     2,
-    0,
-    8,
     3,
+    6,
+    2,
     2
    ],
    "merge_holds": [
-    "review model not approved reviewer"
+    "protected code: waiting for a second review",
+    "waiting for the full test run to finish"
    ],
    "stage_totals": {
     "queued": 34,
@@ -162,9 +163,9 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-21T15:20:15Z",
-   "last_planned": 5,
-   "model": "Claude Opus"
+   "last_run_at": "2026-10-21T20:10:02Z",
+   "last_planned": 0,
+   "model": "Kimi K3"
   },
   "recent_merges": [
    {
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T20:05:02Z",
+    "last_check_at": "2026-10-21T20:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,11 +235,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 47,
-    "runs_total": 275,
-    "last_run_at": "2026-10-21T19:50:01Z",
+    "runs_24h": 48,
+    "runs_total": 276,
+    "last_run_at": "2026-10-21T20:10:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow qa runtime guard killed run",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,9 +249,31 @@
    "Claude",
    "DeepSeek",
    "GLM",
-   "MiniMax"
+   "Kimi",
+   "MiniMax",
+   "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-21T20:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow qa runtime guard killed run"
+   },
+   {
+    "at": "2026-10-21T20:10:02Z",
+    "kind": "plan",
+    "text": "Architect (Kimi K3) planned 0 new tasks"
+   },
+   {
+    "at": "2026-10-21T20:07:52Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T20:06:18Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “a task”: changes required"
+   },
    {
     "at": "2026-10-21T20:03:15Z",
     "kind": "review",
@@ -340,26 +363,6 @@
     "at": "2026-10-21T19:15:28Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “FLEX candidate t_868291f7 3ce6df04a39b”: passed"
-   },
-   {
-    "at": "2026-10-21T19:10:54Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 R31 contract-defined finality verdict per event (rules-text…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T19:07:57Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “FLEX candidate t_5afbc936 a21db870c19a”: passed"
-   },
-   {
-    "at": "2026-10-21T19:04:13Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 PAPER reward maker : inventory transform + cost reserves +…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T19:01:56Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH…”: passed"
    }
   ]
  },
@@ -370,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T20:05:00Z",
-   "heartbeat_at": "2026-10-21T20:05:02Z",
+   "status_at": "2026-10-21T20:09:59Z",
+   "heartbeat_at": "2026-10-21T20:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +383,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T20:02:07Z",
+    "last_scan_at": "2026-10-21T20:07:18Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T20:02:07Z",
+    "updated_at": "2026-10-21T20:07:18Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T20:03:51Z",
+    "updated_at": "2026-10-21T20:09:53Z",
     "detail": "observations retained"
    },
    {
