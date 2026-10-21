@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:25:02Z",
+ "generated_at": "2026-10-21T10:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 27,
+    "count": 29,
     "unit": "queued",
     "active": false,
     "detail": "23 ready to build"
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "37 built in 24h"
+    "detail": "36 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0d9d2318",
     "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Builder 2",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-21T02:27:12Z",
    "last_passed": 14245,
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 32,
    "commits_24h": 32,
-   "built_24h": 37,
+   "built_24h": 36,
    "build_failed_24h": 3,
    "reviews_passed_24h": 51,
-   "reviews_changes_24h": 4,
+   "reviews_changes_24h": 3,
    "commits_by_hour": [
     4,
     3,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 27,
+    "queued": 29,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 345,
     "parked": 177
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T10:24:01Z",
+    "last_check_at": "2026-10-21T10:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,8 +236,8 @@
    },
    "operator": {
     "runs_24h": 51,
-    "runs_total": 254,
-    "last_run_at": "2026-10-21T10:10:02Z",
+    "runs_total": 255,
+    "last_run_at": "2026-10-21T10:30:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
     "running": false,
@@ -252,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T10:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-21T10:22:18Z",
     "kind": "merge",
@@ -356,11 +361,6 @@
     "at": "2026-10-21T08:27:12Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T08:23:15Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-02 Recompute the retained account-command population in…” into the main build"
    }
   ]
  },
@@ -411,7 +411,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T10:24:00Z",
+    "updated_at": "2026-10-21T10:28:03Z",
     "detail": "observations retained"
    },
    {
