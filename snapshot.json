@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T19:45:01Z",
+ "generated_at": "2026-10-21T19:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 8,
     "unit": "awaiting merge",
     "active": true,
     "detail": "36 merged in 24h"
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,7 +120,7 @@
    "commits_24h": 36,
    "built_24h": 52,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 69,
+   "reviews_passed_24h": 70,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 34,
     "building": 0,
-    "in_review": 1,
-    "awaiting_merge": 7,
+    "in_review": 0,
+    "awaiting_merge": 8,
     "merged": 363,
     "parked": 186
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T19:45:02Z",
+    "last_check_at": "2026-10-21T19:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,11 +234,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 46,
-    "runs_total": 274,
-    "last_run_at": "2026-10-21T19:30:03Z",
-    "last_ok": false,
-    "last_kind": "routine",
+    "runs_24h": 47,
+    "runs_total": 275,
+    "last_run_at": "2026-10-21T19:50:01Z",
+    "last_ok": true,
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-21T19:50:01Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T19:45:26Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “New main SHA 9fa0041e4fc5 Alpha V11 FLEX code task t_f0e5eb27 claude”: passed"
+   },
    {
     "at": "2026-10-21T19:40:26Z",
     "kind": "review",
@@ -350,16 +360,6 @@
     "at": "2026-10-21T18:59:00Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “LIVE-14 Bind observation collection to the fresh health sample cited…”: passed"
-   },
-   {
-    "at": "2026-10-21T18:58:08Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T18:57:13Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T19:44:58Z",
-   "heartbeat_at": "2026-10-21T19:45:00Z",
+   "status_at": "2026-10-21T19:50:00Z",
+   "heartbeat_at": "2026-10-21T19:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T19:41:33Z",
+    "last_scan_at": "2026-10-21T19:46:41Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T19:41:33Z",
+    "updated_at": "2026-10-21T19:46:41Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T19:43:44Z",
+    "updated_at": "2026-10-21T19:49:46Z",
     "detail": "observations retained"
    },
    {
