@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T01:40:02Z",
+ "generated_at": "2026-10-21T01:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "34 built in 24h"
+    "detail": "35 built in 24h"
    },
    {
     "key": "review",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
     "detail": "28 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 50,
+    "count": 54,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_6dd0693f",
-    "task": "CODE-01 Refuse RESULT_LAG certification eligibility and EXACT_FINALITY PASS proofs until…",
-    "elapsed_min": 25
+    "task_id": "t_e42e5d46",
+    "task": "CODE-01 Refuse realized-P&L splits over a lot attribution that is not an exact partition",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 50,
+   "progress_pct": 54,
    "last_finished_at": "2026-10-20T16:49:27Z",
    "last_passed": 14212,
    "last_failed": 0,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 28,
    "commits_24h": 28,
-   "built_24h": 34,
+   "built_24h": 35,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 32,
+   "reviews_passed_24h": 33,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     0,
@@ -133,8 +133,8 @@
     0,
     7,
     4,
-    2,
-    4,
+    3,
+    3,
     0,
     0,
     0,
@@ -152,10 +152,10 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 21,
+    "queued": 20,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 4,
+    "awaiting_merge": 5,
     "merged": 327,
     "parked": 171
    }
@@ -214,22 +214,21 @@
     "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T01:39:02Z",
+    "last_check_at": "2026-10-21T01:44:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 3
+     "P2": 2
     },
     "codes": [
      "flow deepseek low",
-     "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T01:30:03Z",
+    "last_check_at": "2026-10-21T01:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T01:44:14Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “CODE-01 Refuse RESULT_LAG certification eligibility and…”: passed"
+   },
+   {
+    "at": "2026-10-21T01:43:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Refuse RESULT_LAG certification eligibility and…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T01:35:02Z",
     "kind": "heal",
@@ -349,16 +358,6 @@
     "at": "2026-10-21T00:20:23Z",
     "kind": "plan",
     "text": "Architect (Claude Opus) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-21T00:19:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-21T00:05:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    }
   ]
  },
@@ -369,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T01:40:00Z",
-   "heartbeat_at": "2026-10-21T01:40:02Z",
+   "status_at": "2026-10-21T01:44:59Z",
+   "heartbeat_at": "2026-10-21T01:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -409,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T01:39:02Z",
+    "updated_at": "2026-10-21T01:43:03Z",
     "detail": "observations retained"
    },
    {
