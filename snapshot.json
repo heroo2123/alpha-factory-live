@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T01:10:02Z",
+ "generated_at": "2026-10-21T01:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "14 ready to build"
@@ -15,23 +15,23 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "34 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "28 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 18,
+    "count": 25,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_6dd0693f",
+    "task": "CODE-01 Refuse RESULT_LAG certification eligibility and EXACT_FINALITY PASS proofs until…",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_6a3e2587",
-    "task": "PAPER-02 A periodic census gated only by provider cooldown must stay periodic so the…",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 18,
+   "progress_pct": 25,
    "last_finished_at": "2026-10-20T16:49:27Z",
    "last_passed": 14212,
    "last_failed": 0,
@@ -120,7 +120,7 @@
    "commits_24h": 28,
    "built_24h": 34,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 29,
+   "reviews_passed_24h": 32,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     0,
@@ -131,11 +131,11 @@
     4,
     2,
     2,
-    2,
-    7,
     3,
-    2,
+    6,
     3,
+    4,
+    1,
     0,
     0,
     3,
@@ -152,10 +152,10 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 22,
-    "building": 0,
-    "in_review": 3,
-    "awaiting_merge": 1,
+    "queued": 21,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 4,
     "merged": 327,
     "parked": 171
    }
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T01:10:02Z",
+    "last_check_at": "2026-10-21T01:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,15 +229,15 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T01:00:02Z",
+    "last_check_at": "2026-10-21T01:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 47,
-    "runs_total": 230,
-    "last_run_at": "2026-10-21T00:40:01Z",
+    "runs_24h": 48,
+    "runs_total": 231,
+    "last_run_at": "2026-10-21T01:15:02Z",
     "last_ok": true,
-    "last_kind": "flow deepseek low",
+    "last_kind": "flow qa resource blocked",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T01:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow qa resource blocked"
+   },
+   {
+    "at": "2026-10-21T01:14:14Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “CODE-01 R31 port: honest finality verdict with contract correction…”: passed"
+   },
+   {
+    "at": "2026-10-21T01:12:18Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “CODE-01 R31 port: WRH vs IEM ASOS independent cross-check…”: passed"
+   },
+   {
+    "at": "2026-10-21T01:11:17Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-02 A periodic census gated only by provider cooldown must stay…”: passed"
+   },
    {
     "at": "2026-10-21T01:09:17Z",
     "kind": "review",
@@ -339,26 +359,6 @@
     "at": "2026-10-20T19:25:01Z",
     "kind": "release",
     "text": "Release 4e4ffc6 installed by the release manager"
-   },
-   {
-    "at": "2026-10-20T16:58:09Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Preserve official features when an optional capture is…” into the main build"
-   },
-   {
-    "at": "2026-10-20T16:55:20Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Prevent synthetic constituent fields from acquiring public…” into the main build"
-   },
-   {
-    "at": "2026-10-20T16:53:30Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Distinguish official revisions from capture-envelope changes” into the main build"
-   },
-   {
-    "at": "2026-10-20T16:49:27Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 14212 passed, 0 failed"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T01:09:59Z",
-   "heartbeat_at": "2026-10-21T01:10:02Z",
+   "status_at": "2026-10-21T01:15:01Z",
+   "heartbeat_at": "2026-10-21T01:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +379,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T01:08:22Z",
+    "last_scan_at": "2026-10-21T01:14:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T01:08:22Z",
+    "updated_at": "2026-10-21T01:14:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T01:08:51Z",
+    "updated_at": "2026-10-21T01:14:53Z",
     "detail": "observations retained"
    },
    {
