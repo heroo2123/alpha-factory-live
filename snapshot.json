@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T18:45:02Z",
+ "generated_at": "2026-10-21T18:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 39,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "46 built in 24h"
+    "detail": "47 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
     "detail": "35 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_5d12b882",
     "task": "LIVE-14 Bind observation collection to the fresh health sample cited by this cycle's…",
-    "elapsed_min": 23
+    "elapsed_min": 28
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_b1216fcc",
-    "task": "LIVE-15 Add a fail-closed guardian commissioning-prerequisite evaluator that never…",
-    "elapsed_min": 23
+    "task_id": "t_78e7d50e",
+    "task": "CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH finality bracket",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_b1216fcc",
+    "task": "LIVE-15 Add a fail-closed guardian commissioning-prerequisite evaluator that never…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 35,
    "commits_24h": 35,
-   "built_24h": 46,
+   "built_24h": 47,
    "build_failed_24h": 5,
    "reviews_passed_24h": 60,
    "reviews_changes_24h": 8,
@@ -148,16 +148,14 @@
     7,
     4
    ],
-   "merge_holds": [
-    "protected code: second review asked for changes"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 39,
     "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 1,
+    "in_review": 1,
+    "awaiting_merge": 0,
     "merged": 362,
-    "parked": 185
+    "parked": 186
    }
   },
   "architect": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T18:45:02Z",
+    "last_check_at": "2026-10-21T18:50:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +248,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-21T18:49:51Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “LIVE-15 Add a fail-closed guardian commissioning-prerequisite…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T18:40:22Z",
     "kind": "review",
@@ -354,11 +357,6 @@
     "at": "2026-10-21T17:19:09Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T17:18:15Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 PAPER reward maker : inventory transform + cost reserves +…” → sent to independent review"
    }
   ]
  },
@@ -368,9 +366,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T18:44:59Z",
-   "heartbeat_at": "2026-10-21T18:45:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-21T18:45:46Z",
+   "heartbeat_at": "2026-10-21T18:50:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -379,7 +377,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T18:42:36Z",
+    "last_scan_at": "2026-10-21T18:47:47Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T18:42:36Z",
+    "updated_at": "2026-10-21T18:47:47Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T18:43:21Z",
+    "updated_at": "2026-10-21T18:49:23Z",
     "detail": "observations retained"
    },
    {
