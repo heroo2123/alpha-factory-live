@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T00:25:02Z",
+ "generated_at": "2026-10-21T00:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_7992d2d9",
     "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
-    "elapsed_min": 24
+    "elapsed_min": 29
    },
    {
     "slot": "Builder 2",
@@ -130,8 +130,8 @@
     0,
     0,
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 10,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-21T00:25:02Z",
+    "last_check_at": "2026-10-21T00:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T00:27:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: engineering regression selftest failed"
+   },
    {
     "at": "2026-10-21T00:20:23Z",
     "kind": "plan",
@@ -330,11 +335,6 @@
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
    },
    {
-    "at": "2026-10-20T15:49:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes job late development milestone alerts"
-   },
-   {
     "at": "2026-10-20T15:44:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “CODE-01 Prevent synthetic constituent fields from acquiring public…” → sent to independent review"
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T00:25:00Z",
-   "heartbeat_at": "2026-10-21T00:25:01Z",
+   "status_at": "2026-10-21T00:30:00Z",
+   "heartbeat_at": "2026-10-21T00:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +378,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T00:19:40Z",
+    "last_scan_at": "2026-10-21T00:25:56Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T00:19:40Z",
+    "updated_at": "2026-10-21T00:25:56Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T00:24:36Z",
+    "updated_at": "2026-10-21T00:28:37Z",
     "detail": "observations retained"
    },
    {
