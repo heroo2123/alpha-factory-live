@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T17:25:03Z",
+ "generated_at": "2026-10-21T17:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 39,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_d5ed2226",
     "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_578189f6",
     "task": "LIVE-14 Gate candidate job dispatch on the same strict clock-health predicate used at…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.3",
-    "family": "Zhipu",
-    "task_id": "t_5afbc936",
-    "task": "CODE-01 PAPER reward maker : inventory transform + cost reserves + separated TRADING_PNL…",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -121,7 +121,7 @@
    "built_24h": 44,
    "build_failed_24h": 4,
    "reviews_passed_24h": 58,
-   "reviews_changes_24h": 6,
+   "reviews_changes_24h": 7,
    "commits_by_hour": [
     0,
     0,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 38,
+    "queued": 39,
     "building": 2,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 5,
     "merged": 357,
-    "parked": 184
+    "parked": 185
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T17:25:02Z",
+    "last_check_at": "2026-10-21T17:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -248,6 +248,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T17:28:23Z",
+    "kind": "warn",
+    "text": "GLM 5.3 reviewed “CODE-01 PAPER reward maker : inventory transform + cost reserves +…”: changes required"
+   },
    {
     "at": "2026-10-21T17:22:23Z",
     "kind": "review",
@@ -352,11 +357,6 @@
     "at": "2026-10-21T17:04:15Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T17:03:28Z",
-    "kind": "review",
-    "text": "GLM 5.3 reviewed “CODE-01 Re-check ASOS day coverage and make the IEM corroboration…”: passed"
    }
   ]
  },
@@ -366,9 +366,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-21T17:22:18Z",
-   "heartbeat_at": "2026-10-21T17:25:02Z",
+   "state": "census service",
+   "status_at": "2026-10-21T17:30:01Z",
+   "heartbeat_at": "2026-10-21T17:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -377,7 +377,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T17:22:45Z",
+    "last_scan_at": "2026-10-21T17:28:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T17:22:45Z",
+    "updated_at": "2026-10-21T17:28:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T17:24:51Z",
+    "updated_at": "2026-10-21T17:28:53Z",
     "detail": "observations retained"
    },
    {
