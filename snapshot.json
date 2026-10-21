@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T21:55:02Z",
+ "generated_at": "2026-10-21T22:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,31 +10,31 @@
     "count": 41,
     "unit": "queued",
     "active": false,
-    "detail": "21 ready to build"
+    "detail": "19 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "51 built in 24h"
+    "detail": "53 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "37 merged in 24h"
+    "detail": "38 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,27 +65,7 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_50933597",
-    "task": "PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts limit-pinned settled buckets…",
-    "elapsed_min": 30
-   },
-   {
-    "slot": "Builder 2",
-    "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_296b2c28",
-    "task": "Candidate tests must advance the synthetic host clock after the LIVE-14 strict dispatch…",
-    "elapsed_min": 5
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -93,9 +73,29 @@
     "elapsed_min": null
    },
    {
+    "slot": "Builder 2",
+    "role": "build",
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_6738fbf9",
+    "task": "PAPER-02 METAR rules : rollforward publisher normalises METAR rule envelopes (URL…",
+    "elapsed_min": 3
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_2b28c39a",
+    "task": "FLEX candidate t_50933597 fc02dc23d320",
+    "elapsed_min": 3
+   },
+   {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -106,21 +106,21 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-21T17:06:41Z",
-   "last_passed": 0,
-   "last_failed": 0,
-   "last_skipped": 0,
+   "last_finished_at": "2026-10-21T21:50:24Z",
+   "last_passed": 14693,
+   "last_failed": 15,
+   "last_skipped": 51,
    "last_green": false,
    "last_green_at": "2026-10-21T02:27:12Z",
-   "last_minutes": 81
+   "last_minutes": 105
   },
-  "tests_passing": 0,
+  "tests_passing": 14693,
   "flow": {
-   "merges_24h": 37,
-   "commits_24h": 37,
-   "built_24h": 51,
-   "build_failed_24h": 14,
-   "reviews_passed_24h": 68,
+   "merges_24h": 38,
+   "commits_24h": 38,
+   "built_24h": 53,
+   "build_failed_24h": 15,
+   "reviews_passed_24h": 65,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
@@ -144,20 +144,19 @@
     0,
     8,
     3,
-    1,
-    1,
-    0
+    2,
+    0,
+    1
    ],
    "merge_holds": [
-    "waiting for the full test run to finish",
-    "protected code: second review asked for changes"
+    "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 41,
-    "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 7,
-    "merged": 364,
+    "building": 1,
+    "in_review": 2,
+    "awaiting_merge": 6,
+    "merged": 365,
     "parked": 190
    }
   },
@@ -168,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T21:59:27Z",
+    "title": "LIVE-15 Fail the finite guardian client closed when the broker repeats a stale status…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T19:23:26Z",
     "title": "CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH finality bracket",
@@ -202,20 +206,15 @@
     "at": "2026-10-21T17:15:18Z",
     "title": "PAPER-02 METAR rules : fail-closed AWC raw METAR settlement value (routine only, T-group…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T17:14:41Z",
-    "title": "PAPER-02 METAR rules : rule authority profile for the AWC METAR rules (population…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 11,
+    "state": "p1",
+    "active": 3,
+    "alerts_24h": 13,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T21:55:02Z",
+    "last_check_at": "2026-10-21T21:59:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,9 +252,44 @@
   ],
   "events": [
    {
+    "at": "2026-10-21T21:59:27Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Fail the finite guardian client closed when the broker…” into the main build"
+   },
+   {
+    "at": "2026-10-21T21:58:09Z",
+    "kind": "warn",
+    "text": "Claude Opus build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-21T21:58:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-10-21T21:58:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-21T21:56:16Z",
+    "kind": "build",
+    "text": "Claude Opus built “Candidate tests must advance the synthetic host clock after the…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T21:56:11Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts…” → sent to independent review"
+   },
+   {
     "at": "2026-10-21T21:52:59Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “Candidate tests must advance the synthetic host clock after the…”: passed"
+   },
+   {
+    "at": "2026-10-21T21:50:24Z",
+    "kind": "warn",
+    "text": "Full test suite finished: 14693 passed, 15 failed"
    },
    {
     "at": "2026-10-21T21:49:14Z",
@@ -326,41 +360,6 @@
     "at": "2026-10-21T20:43:27Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-02 METAR rules : strict contract accepts exactly the METAR…”: passed"
-   },
-   {
-    "at": "2026-10-21T20:43:10Z",
-    "kind": "warn",
-    "text": "Claude Opus's build of “PAPER-02 METAR rules : continuous day manager accepts the METAR…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-21T20:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow qa resource blocked"
-   },
-   {
-    "at": "2026-10-21T20:36:16Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-02 METAR rules : strict contract accepts exactly the METAR…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T20:32:24Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “PAPER-02 METAR rules : settlement window accepts the METAR…”: passed"
-   },
-   {
-    "at": "2026-10-21T20:28:14Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-02 METAR rules : settlement window accepts the METAR…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T20:20:17Z",
-    "kind": "plan",
-    "text": "Architect (Claude Opus) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-21T20:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow qa runtime guard killed run"
    }
   ]
  },
@@ -371,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T21:55:01Z",
-   "heartbeat_at": "2026-10-21T21:55:01Z",
+   "status_at": "2026-10-21T21:59:59Z",
+   "heartbeat_at": "2026-10-21T22:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -381,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T21:54:53Z",
+    "last_scan_at": "2026-10-21T22:00:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T21:54:53Z",
+    "updated_at": "2026-10-21T22:00:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T21:54:34Z",
+    "updated_at": "2026-10-21T21:58:35Z",
     "detail": "observations retained"
    },
    {
@@ -1015,8 +1014,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 19,
-     "open_tasks": 2
+     "merged_tasks": 20,
+     "open_tasks": 1
     },
     {
      "id": "LIVE-16",
