@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T01:00:02Z",
+ "generated_at": "2026-10-21T01:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "31 built in 24h"
+    "detail": "33 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 3,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 1,
+    "count": 11,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_6a3e2587",
-    "task": "PAPER-02 A periodic census gated only by provider cooldown must stay periodic so the…",
-    "elapsed_min": 28
+    "task_id": "t_f0e5eb27",
+    "task": "CODE-01 R31 port: honest finality verdict with contract correction window (first…",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,27 +85,27 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_6a3e2587",
+    "task": "PAPER-02 A periodic census gated only by provider cooldown must stay periodic so the…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_7992d2d9",
+    "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
+    "elapsed_min": 3
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 1,
+   "progress_pct": 11,
    "last_finished_at": "2026-10-20T16:49:27Z",
    "last_passed": 14212,
    "last_failed": 0,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 28,
    "commits_24h": 28,
-   "built_24h": 31,
+   "built_24h": 33,
    "build_failed_24h": 3,
    "reviews_passed_24h": 28,
    "reviews_changes_24h": 8,
@@ -128,12 +128,12 @@
     0,
     0,
     0,
+    3,
     2,
     3,
-    3,
     0,
-    7,
-    5,
+    8,
+    4,
     2,
     3,
     0,
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 24,
+    "queued": 22,
     "building": 1,
-    "in_review": 1,
+    "in_review": 3,
     "awaiting_merge": 0,
     "merged": 327,
     "parked": 171
@@ -212,24 +212,22 @@
     "active": 2,
     "alerts_24h": 11,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-21T01:00:02Z",
+    "last_check_at": "2026-10-21T01:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 5
+     "P2": 3
     },
     "codes": [
-     "flow qa resource blocked",
-     "flow qa not running",
      "flow deepseek low",
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T00:50:02Z",
+    "last_check_at": "2026-10-21T01:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +248,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T01:04:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 R31 port: WRH vs IEM ASOS independent cross-check…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T01:01:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-02 A periodic census gated only by provider cooldown must stay…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T00:57:02Z",
     "kind": "warn",
@@ -349,16 +357,6 @@
     "at": "2026-10-20T15:50:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes job late flexible provider router"
-   },
-   {
-    "at": "2026-10-20T15:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-20T15:44:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “CODE-01 Prevent synthetic constituent fields from acquiring public…” → sent to independent review"
    }
   ]
  },
@@ -369,8 +367,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T01:00:00Z",
-   "heartbeat_at": "2026-10-21T01:00:02Z",
+   "status_at": "2026-10-21T01:05:00Z",
+   "heartbeat_at": "2026-10-21T01:05:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +377,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T00:56:15Z",
+    "last_scan_at": "2026-10-21T01:02:25Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T00:56:15Z",
+    "updated_at": "2026-10-21T01:02:25Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T00:58:48Z",
+    "updated_at": "2026-10-21T01:04:50Z",
     "detail": "observations retained"
    },
    {
