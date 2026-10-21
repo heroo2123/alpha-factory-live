@@ -1,37 +1,37 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:50:03Z",
+ "generated_at": "2026-10-21T10:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 31,
+    "count": 41,
     "unit": "queued",
     "active": false,
-    "detail": "24 ready to build"
+    "detail": "23 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "36 built in 24h"
+    "active": false,
+    "detail": "35 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "31 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 27,
+    "count": 30,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_0d9d2318",
-    "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
-    "elapsed_min": 42
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Sonnet",
+    "family": "Anthropic",
+    "task_id": "t_bba23e2c",
+    "task": "a build task",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 27,
+   "progress_pct": 30,
    "last_finished_at": "2026-10-21T02:27:12Z",
    "last_passed": 14245,
    "last_failed": 0,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 31,
    "commits_24h": 31,
-   "built_24h": 36,
+   "built_24h": 35,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 51,
    "reviews_changes_24h": 3,
    "commits_by_hour": [
     5,
@@ -128,32 +128,34 @@
     3,
     0,
     0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
     0,
     3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    2,
     6,
-    1,
+    0,
     3,
     0,
     2,
-    1,
     2,
+    1,
     1
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 31,
-    "building": 1,
+    "queued": 41,
+    "building": 0,
     "in_review": 1,
-    "awaiting_merge": 0,
+    "awaiting_merge": 1,
     "merged": 345,
     "parked": 178
    }
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T10:49:02Z",
+    "last_check_at": "2026-10-21T10:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,15 +230,15 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T10:40:02Z",
+    "last_check_at": "2026-10-21T10:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 49,
-    "runs_total": 255,
-    "last_run_at": "2026-10-21T10:30:02Z",
+    "runs_24h": 50,
+    "runs_total": 256,
+    "last_run_at": "2026-10-21T10:55:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow shadow evals all gated",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +251,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T10:55:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
+   },
+   {
+    "at": "2026-10-21T10:54:21Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per…”: passed"
+   },
+   {
+    "at": "2026-10-21T10:52:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T10:34:10Z",
     "kind": "review",
@@ -343,21 +360,6 @@
     "at": "2026-10-21T08:35:12Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T08:34:20Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “LIVE-15 Type every liveness transport failure and require distinct…”: passed"
-   },
-   {
-    "at": "2026-10-21T08:33:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “LIVE-15 Type every liveness transport failure and require distinct…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T08:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -377,8 +379,8 @@
    "scanner": {
     "weather_events": 434,
     "markets": 4308,
-    "opportunities": 0,
-    "last_scan_at": "2026-10-21T10:46:57Z",
+    "opportunities": 1,
+    "last_scan_at": "2026-10-21T10:52:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T10:46:57Z",
+    "updated_at": "2026-10-21T10:52:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T10:48:12Z",
+    "updated_at": "2026-10-21T10:54:14Z",
     "detail": "observations retained"
    },
    {
