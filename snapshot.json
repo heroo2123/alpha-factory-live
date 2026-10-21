@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T08:50:02Z",
+ "generated_at": "2026-10-21T08:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "35 merged in 24h"
+    "detail": "36 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e76d5f6a",
     "task": "PAPER-03 Recompute the retained decision population in replay_audit instead of trusting…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -116,37 +116,37 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 35,
-   "commits_24h": 35,
+   "merges_24h": 36,
+   "commits_24h": 36,
    "built_24h": 39,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 52,
+   "reviews_passed_24h": 51,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     0,
     7,
-    4,
+    5,
+    2,
     3,
-    3,
-    0,
-    0,
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
     0,
     0,
     2,
-    6,
     1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    6,
+    0,
     3,
     0,
     2,
-    1
+    2
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
@@ -155,8 +155,8 @@
     "queued": 18,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 342,
+    "awaiting_merge": 1,
+    "merged": 343,
     "parked": 175
    }
   },
@@ -167,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T08:53:15Z",
+    "title": "LIVE-15 Type every liveness transport failure and require distinct published receipt ids",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T08:23:15Z",
     "title": "PAPER-02 Recompute the retained account-command population in account_replay_audit",
@@ -201,11 +206,6 @@
     "at": "2026-10-21T03:33:24Z",
     "title": "CODE-01 Validate the archived envelope before reusing a forecast slice",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T03:23:39Z",
-    "title": "CODE-01 Refuse realized-P&L splits over a lot attribution that is not an exact partition",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T08:50:03Z",
+    "last_check_at": "2026-10-21T08:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,11 +231,11 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T08:40:03Z",
+    "last_check_at": "2026-10-21T08:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 56,
     "runs_total": 252,
     "last_run_at": "2026-10-21T08:30:03Z",
     "last_ok": true,
@@ -252,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T08:53:15Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Type every liveness transport failure and require distinct…” into the main build"
+   },
    {
     "at": "2026-10-21T08:48:21Z",
     "kind": "review",
@@ -356,11 +361,6 @@
     "at": "2026-10-21T07:10:15Z",
     "kind": "build",
     "text": "Claude Opus built “PAPER-02 protected review publishers certify only the current day…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T07:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
    }
   ]
  },
@@ -370,9 +370,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T08:49:59Z",
-   "heartbeat_at": "2026-10-21T08:50:03Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-21T08:50:56Z",
+   "heartbeat_at": "2026-10-21T08:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -381,7 +381,7 @@
     "weather_events": 438,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T08:48:40Z",
+    "last_scan_at": "2026-10-21T08:53:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T08:48:40Z",
+    "updated_at": "2026-10-21T08:53:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T08:49:26Z",
+    "updated_at": "2026-10-21T08:53:28Z",
     "detail": "observations retained"
    },
    {
@@ -1008,8 +1008,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 18,
-     "open_tasks": 3
+     "merged_tasks": 19,
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
