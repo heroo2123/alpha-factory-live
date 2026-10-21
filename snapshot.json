@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T09:20:02Z",
+ "generated_at": "2026-10-21T09:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 25,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "21 ready to build"
+    "detail": "20 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "38 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "37 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_50933597",
+    "task": "PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts limit-pinned settled buckets…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -121,11 +121,11 @@
    "built_24h": 38,
    "build_failed_24h": 4,
    "reviews_passed_24h": 50,
-   "reviews_changes_24h": 5,
+   "reviews_changes_24h": 6,
    "commits_by_hour": [
-    5,
+    6,
     4,
-    4,
+    3,
     3,
     1,
     0,
@@ -140,20 +140,22 @@
     0,
     0,
     0,
-    5,
-    4,
+    6,
+    3,
+    2,
     1,
     2,
     1,
-    1,
-    3
+    2
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 25,
-    "building": 0,
-    "in_review": 3,
-    "awaiting_merge": 0,
+    "queued": 24,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 344,
     "parked": 175
    }
@@ -212,24 +214,25 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T09:20:03Z",
+    "last_check_at": "2026-10-21T09:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 6,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 4
+     "P2": 5
     },
     "codes": [
      "flow qa resource blocked",
      "flow deepseek low",
      "flow shadow evals all gated",
      "flow shadow census churn",
+     "flow maintenance review packet invalid",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T09:10:02Z",
+    "last_check_at": "2026-10-21T09:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T09:23:22Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-03 Recompute the retained decision population in replay_audit…”: passed"
+   },
+   {
+    "at": "2026-10-21T09:21:11Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-21T09:20:12Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-21T09:20:02Z",
     "kind": "heal",
@@ -344,21 +362,6 @@
     "at": "2026-10-21T07:41:10Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T07:39:11Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T07:37:14Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-03 Recompute the retained decision population in replay_audit…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T07:25:12Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -379,7 +382,7 @@
     "weather_events": 438,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T09:15:32Z",
+    "last_scan_at": "2026-10-21T09:20:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T09:15:32Z",
+    "updated_at": "2026-10-21T09:20:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T09:19:37Z",
+    "updated_at": "2026-10-21T09:23:38Z",
     "detail": "observations retained"
    },
    {
