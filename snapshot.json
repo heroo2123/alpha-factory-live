@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T23:25:02Z",
+ "generated_at": "2026-10-21T23:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 33,
+    "count": 32,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,23 +15,23 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "56 built in 24h"
+    "detail": "55 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 10,
+    "count": 11,
     "unit": "awaiting merge",
     "active": true,
     "detail": "41 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 66,
+    "count": 68,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,27 +70,27 @@
     "family": "DeepSeek",
     "task_id": "t_b1216fcc",
     "task": "LIVE-15 Add a fail-closed guardian commissioning-prerequisite evaluator that never…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_5d12b882",
+    "task": "LIVE-14 Bind observation collection to the fresh health sample cited by this cycle's…",
+    "elapsed_min": 1
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_dda00e7a",
-    "task": "FLEX candidate t_8b133f43 099cfbd73f3d",
-    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 66,
+   "progress_pct": 68,
    "last_finished_at": "2026-10-21T21:50:24Z",
    "last_passed": 14693,
    "last_failed": 15,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 41,
    "commits_24h": 41,
-   "built_24h": 56,
+   "built_24h": 55,
    "build_failed_24h": 20,
-   "reviews_passed_24h": 59,
+   "reviews_passed_24h": 60,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
@@ -141,8 +141,8 @@
     0,
     2,
     6,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
@@ -152,10 +152,10 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 33,
-    "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 10,
+    "queued": 32,
+    "building": 2,
+    "in_review": 0,
+    "awaiting_merge": 11,
     "merged": 368,
     "parked": 195
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-21T23:25:03Z",
+    "last_check_at": "2026-10-21T23:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-21T23:28:28Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_8b133f43 099cfbd73f3d”: passed"
+   },
    {
     "at": "2026-10-21T23:23:14Z",
     "kind": "build",
@@ -355,11 +360,6 @@
     "at": "2026-10-21T22:15:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: full suite not green"
-   },
-   {
-    "at": "2026-10-21T22:13:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Record observed A->B->A reversions and the polling cadence…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T23:24:58Z",
-   "heartbeat_at": "2026-10-21T23:25:02Z",
+   "status_at": "2026-10-21T23:30:00Z",
+   "heartbeat_at": "2026-10-21T23:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T23:22:25Z",
+    "last_scan_at": "2026-10-21T23:27:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T23:22:25Z",
+    "updated_at": "2026-10-21T23:27:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T23:23:08Z",
+    "updated_at": "2026-10-21T23:29:11Z",
     "detail": "observations retained"
    },
    {
