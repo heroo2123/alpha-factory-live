@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T00:00:03Z",
+ "generated_at": "2026-10-21T00:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "10 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "30 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_7992d2d9",
+    "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -129,12 +129,12 @@
     0,
     0,
     0,
+    3,
     2,
     3,
-    3,
     0,
-    7,
-    5,
+    8,
+    4,
     2,
     3,
     0,
@@ -150,8 +150,8 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 17,
-    "building": 0,
+    "queued": 16,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 0,
     "merged": 327,
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 9,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-20T23:59:01Z",
+    "last_check_at": "2026-10-21T00:04:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,12 +228,12 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-20T23:50:02Z",
+    "last_check_at": "2026-10-21T00:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 45,
-    "runs_total": 227,
+    "runs_total": 228,
     "last_run_at": "2026-10-20T15:50:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -243,6 +243,7 @@
    }
   },
   "providers": [
+   "Claude",
    "Codex",
    "DeepSeek",
    "GLM"
@@ -366,9 +367,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
-   "state": "making paper decisions",
-   "status_at": "2026-10-20T23:58:15Z",
-   "heartbeat_at": "2026-10-21T00:00:02Z",
+   "state": "census service",
+   "status_at": "2026-10-21T00:05:00Z",
+   "heartbeat_at": "2026-10-21T00:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -377,7 +378,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-20T23:54:49Z",
+    "last_scan_at": "2026-10-21T00:01:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-20T23:54:49Z",
+    "updated_at": "2026-10-21T00:01:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-20T23:58:27Z",
+    "updated_at": "2026-10-21T00:04:29Z",
     "detail": "observations retained"
    },
    {
