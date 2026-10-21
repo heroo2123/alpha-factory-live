@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T03:15:02Z",
+ "generated_at": "2026-10-21T03:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 4,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_ed0ae975",
     "task": "LIVE-15 Reject aliased guardian custody files",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -129,10 +129,10 @@
     4,
     2,
     2,
-    3,
-    6,
-    3,
+    5,
     4,
+    4,
+    3,
     1,
     0,
     0,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 18,
     "building": 1,
-    "in_review": 3,
+    "in_review": 4,
     "awaiting_merge": 2,
     "merged": 332,
     "parked": 171
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T03:15:02Z",
+    "last_check_at": "2026-10-21T03:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T03:14:59Z",
-   "heartbeat_at": "2026-10-21T03:15:02Z",
+   "status_at": "2026-10-21T03:19:59Z",
+   "heartbeat_at": "2026-10-21T03:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +378,7 @@
     "weather_events": 394,
     "markets": 3873,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T03:10:35Z",
+    "last_scan_at": "2026-10-21T03:16:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T03:10:35Z",
+    "updated_at": "2026-10-21T03:16:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T03:13:33Z",
+    "updated_at": "2026-10-21T03:19:35Z",
     "detail": "observations retained"
    },
    {
@@ -506,7 +506,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T02:17:03Z",
+   "updated_at": "2026-10-21T03:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
