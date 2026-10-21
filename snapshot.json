@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T08:20:02Z",
+ "generated_at": "2026-10-21T08:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "39 built in 24h"
+    "detail": "38 built in 24h"
    },
    {
     "key": "review",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "36 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_43c196cd",
     "task": "LIVE-15 Type every liveness transport failure and require distinct published receipt ids",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
@@ -118,15 +118,15 @@
   "flow": {
    "merges_24h": 36,
    "commits_24h": 36,
-   "built_24h": 39,
+   "built_24h": 38,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 51,
+   "reviews_passed_24h": 50,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    2,
-    5,
+    1,
+    6,
     4,
-    4,
+    3,
     3,
     1,
     0,
@@ -141,23 +141,22 @@
     0,
     0,
     0,
-    5,
-    4,
-    1,
+    6,
+    3,
     2,
     1,
+    2,
     1
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 19,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 341,
+    "awaiting_merge": 1,
+    "merged": 342,
     "parked": 174
    }
   },
@@ -168,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T08:23:15Z",
+    "title": "PAPER-02 Recompute the retained account-command population in account_replay_audit",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T07:23:01Z",
     "title": "PAPER-02 protected review publishers certify only the current day: publish the…",
@@ -202,11 +206,6 @@
     "at": "2026-10-21T03:23:39Z",
     "title": "CODE-01 Refuse realized-P&L splits over a lot attribution that is not an exact partition",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T03:14:18Z",
-    "title": "CODE-01 Show clock-health, health-record freshness and cancel-only guardian status in…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T08:20:02Z",
+    "last_check_at": "2026-10-21T08:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,11 +232,11 @@
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T08:10:02Z",
+    "last_check_at": "2026-10-21T08:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
+    "runs_24h": 57,
     "runs_total": 251,
     "last_run_at": "2026-10-21T08:05:02Z",
     "last_ok": true,
@@ -254,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T08:23:15Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 Recompute the retained account-command population in…” into the main build"
+   },
    {
     "at": "2026-10-21T08:13:20Z",
     "kind": "review",
@@ -358,11 +362,6 @@
     "at": "2026-10-21T06:06:12Z",
     "kind": "build",
     "text": "Claude Opus built “PAPER-02 Recompute the retained account-command population in…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T05:43:14Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Bind FEATURES source leases to the admitted rule fingerprint…” into the main build"
    }
   ]
  },
@@ -373,8 +372,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T08:20:01Z",
-   "heartbeat_at": "2026-10-21T08:20:02Z",
+   "status_at": "2026-10-21T08:24:59Z",
+   "heartbeat_at": "2026-10-21T08:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -413,8 +412,8 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T08:19:16Z",
-    "detail": "gated"
+    "updated_at": "2026-10-21T08:23:18Z",
+    "detail": "observations retained"
    },
    {
     "name": "ECMWF IFS / AIFS",
@@ -668,8 +667,8 @@
      "name": "First full cycle healthy",
      "status": "pending",
      "detail": "re-check inconclusive",
-     "merged_tasks": 3,
-     "open_tasks": 2
+     "merged_tasks": 4,
+     "open_tasks": 1
     },
     {
      "id": "PAPER-03",
