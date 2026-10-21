@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T08:25:02Z",
+ "generated_at": "2026-10-21T08:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "36 merged in 24h"
+    "detail": "35 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_43c196cd",
     "task": "LIVE-15 Type every liveness transport failure and require distinct published receipt ids",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 36,
-   "commits_24h": 36,
+   "merges_24h": 35,
+   "commits_24h": 35,
    "built_24h": 38,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 49,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    1,
+    0,
     6,
     4,
     3,
@@ -148,16 +148,14 @@
     2,
     1
    ],
-   "merge_holds": [
-    "protected code: second review asked for changes"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 19,
+    "queued": 20,
     "building": 1,
-    "in_review": 0,
-    "awaiting_merge": 1,
+    "in_review": 1,
+    "awaiting_merge": 0,
     "merged": 342,
-    "parked": 174
+    "parked": 175
    }
   },
   "architect": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T08:25:02Z",
+    "last_check_at": "2026-10-21T08:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,11 +234,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
-    "runs_total": 251,
-    "last_run_at": "2026-10-21T08:05:02Z",
+    "runs_24h": 58,
+    "runs_total": 252,
+    "last_run_at": "2026-10-21T08:30:03Z",
     "last_ok": true,
-    "last_kind": "flow shadow evals all gated",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T08:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T08:27:12Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-21T08:23:15Z",
     "kind": "merge",
@@ -344,11 +352,6 @@
     "text": "Claude Opus's build of “PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started…” failed its tests; it will be retried"
    },
    {
-    "at": "2026-10-21T06:30:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-21T06:09:10Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
@@ -357,11 +360,6 @@
     "at": "2026-10-21T06:08:19Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “PAPER-02 Recompute the retained account-command population in…”: passed"
-   },
-   {
-    "at": "2026-10-21T06:06:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-02 Recompute the retained account-command population in…” → sent to independent review"
    }
   ]
  },
@@ -372,17 +370,17 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T08:24:59Z",
-   "heartbeat_at": "2026-10-21T08:25:00Z",
+   "status_at": "2026-10-21T08:30:00Z",
+   "heartbeat_at": "2026-10-21T08:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": null,
-    "markets": null,
+    "weather_events": 442,
+    "markets": 4396,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T08:17:38Z",
+    "last_scan_at": "2026-10-21T08:28:01Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T08:17:38Z",
+    "updated_at": "2026-10-21T08:28:01Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T08:23:18Z",
+    "updated_at": "2026-10-21T08:29:20Z",
     "detail": "observations retained"
    },
    {
