@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T08:35:02Z",
+ "generated_at": "2026-10-21T08:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "39 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_39936fc1",
+    "task": "PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started same-day contract…",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,15 +120,15 @@
    "commits_24h": 35,
    "built_24h": 39,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 51,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     0,
     7,
-    3,
-    3,
-    3,
-    1,
+    4,
+    2,
+    4,
+    0,
     0,
     0,
     3,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 20,
-    "building": 0,
-    "in_review": 1,
+    "queued": 19,
+    "building": 1,
+    "in_review": 0,
     "awaiting_merge": 1,
     "merged": 342,
     "parked": 175
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T08:35:02Z",
+    "last_check_at": "2026-10-21T08:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T08:35:12Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-21T08:34:20Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-21T07:01:16Z",
     "kind": "build",
     "text": "Claude Opus built “CODE-01 Capture rejected-trade counterfactual markouts” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T06:31:07Z",
-    "kind": "warn",
-    "text": "Claude Opus's build of “PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started…” failed its tests; it will be retried"
    }
   ]
  },
@@ -371,9 +371,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "making paper decisions",
-   "status_at": "2026-10-21T08:31:19Z",
-   "heartbeat_at": "2026-10-21T08:35:02Z",
+   "state": "census service",
+   "status_at": "2026-10-21T08:40:01Z",
+   "heartbeat_at": "2026-10-21T08:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -382,7 +382,7 @@
     "weather_events": 438,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T08:33:16Z",
+    "last_scan_at": "2026-10-21T08:38:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-21T07:37:03Z",
+    "updated_at": "2026-10-21T08:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T08:33:16Z",
+    "updated_at": "2026-10-21T08:38:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T08:33:21Z",
+    "updated_at": "2026-10-21T08:39:23Z",
     "detail": "observations retained"
    },
    {
