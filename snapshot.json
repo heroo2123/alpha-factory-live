@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T11:50:02Z",
+ "generated_at": "2026-10-21T11:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 37,
     "unit": "queued",
     "active": false,
     "detail": "21 ready to build"
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "35 built in 24h"
+    "detail": "36 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "27 merged in 24h"
+    "detail": "26 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_1c24d741",
-    "task": "CODE-01 PAPER reward maker : official full-book reward score + per-epoch share estimate",
-    "elapsed_min": 4
+    "task_id": "t_87c6daa7",
+    "task": "CODE-01 PAPER reward maker : queue-honest simulated fills + markouts 1m/5m/30m/settlement",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_1c24d741",
+    "task": "CODE-01 PAPER reward maker : official full-book reward score + per-epoch share estimate",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -116,35 +116,35 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 27,
-   "commits_24h": 27,
-   "built_24h": 35,
+   "merges_24h": 26,
+   "commits_24h": 26,
+   "built_24h": 36,
    "build_failed_24h": 2,
    "reviews_passed_24h": 49,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
+    2,
     3,
-    3,
-    0,
-    0,
-    0,
-    3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
     0,
     0,
     2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
     6,
-    1,
+    0,
     3,
     0,
     2,
-    1,
     2,
+    1,
     1,
     0
    ],
@@ -153,9 +153,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 38,
+    "queued": 37,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 345,
     "parked": 179
@@ -215,24 +215,23 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T11:50:02Z",
+    "last_check_at": "2026-10-21T11:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 4,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 4
+     "P2": 3
     },
     "codes": [
-     "flow deepseek low",
      "flow glm near cap",
      "flow shadow evals all gated",
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T11:40:02Z",
+    "last_check_at": "2026-10-21T11:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T11:53:14Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 PAPER reward maker : official full-book reward score +…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T11:50:02Z",
     "kind": "heal",
@@ -356,11 +360,6 @@
     "at": "2026-10-21T09:48:14Z",
     "kind": "build",
     "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T09:40:17Z",
-    "kind": "plan",
-    "text": "Architect (Claude Opus) planned 6 new tasks"
    }
   ]
  },
@@ -371,8 +370,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T11:50:01Z",
-   "heartbeat_at": "2026-10-21T11:50:01Z",
+   "status_at": "2026-10-21T11:54:59Z",
+   "heartbeat_at": "2026-10-21T11:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -381,7 +380,7 @@
     "weather_events": 438,
     "markets": 4355,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T11:48:32Z",
+    "last_scan_at": "2026-10-21T11:53:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T11:48:32Z",
+    "updated_at": "2026-10-21T11:53:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T11:48:33Z",
+    "updated_at": "2026-10-21T11:54:35Z",
     "detail": "observations retained"
    },
    {
