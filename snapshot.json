@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T22:55:01Z",
+ "generated_at": "2026-10-21T23:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 39,
+    "count": 38,
     "unit": "queued",
     "active": false,
     "detail": "18 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "55 built in 24h"
+    "active": false,
+    "detail": "56 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 39,
+    "count": 45,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5afbc936",
-    "task": "CODE-01 PAPER reward maker : inventory transform + cost reserves + separated TRADING_PNL…",
-    "elapsed_min": 6
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,27 +85,27 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_9ec72389",
+    "task": "FLEX candidate t_5afbc936 a21db870c19a",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_cf3243f1",
+    "task": "FLEX candidate t_b18cee74 b27b5760832c",
+    "elapsed_min": 1
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 39,
+   "progress_pct": 45,
    "last_finished_at": "2026-10-21T21:50:24Z",
    "last_passed": 14693,
    "last_failed": 15,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 41,
    "commits_24h": 41,
-   "built_24h": 55,
-   "build_failed_24h": 18,
-   "reviews_passed_24h": 61,
+   "built_24h": 56,
+   "build_failed_24h": 19,
+   "reviews_passed_24h": 59,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
@@ -143,19 +143,19 @@
     0,
     8,
     3,
-    1,
-    1,
+    2,
     0,
-    4
+    1,
+    3
    ],
    "merge_holds": [
     "waiting for the full test run to finish",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 39,
-    "building": 1,
-    "in_review": 0,
+    "queued": 38,
+    "building": 0,
+    "in_review": 2,
     "awaiting_merge": 7,
     "merged": 368,
     "parked": 193
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-21T22:55:01Z",
+    "last_check_at": "2026-10-21T23:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -252,6 +252,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-21T22:59:08Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-21T22:58:13Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Extend the IEM ASOS station allow-list to every reviewed NWS…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T22:56:10Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 PAPER reward maker : inventory transform + cost reserves +…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T22:50:02Z",
     "kind": "heal",
@@ -346,21 +361,6 @@
     "at": "2026-10-21T22:08:07Z",
     "kind": "warn",
     "text": "Claude Opus build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-21T22:07:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 METAR rules : offline official settlement source derives…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T22:05:56Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-02 METAR rules : strict contract accepts exactly the METAR…” into the main build"
-   },
-   {
-    "at": "2026-10-21T22:03:01Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-02 METAR rules : settlement window accepts the METAR…” into the main build"
    }
   ]
  },
@@ -370,9 +370,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-21T22:52:00Z",
-   "heartbeat_at": "2026-10-21T22:55:02Z",
+   "state": "census service",
+   "status_at": "2026-10-21T22:59:59Z",
+   "heartbeat_at": "2026-10-21T23:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -381,7 +381,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T22:51:34Z",
+    "last_scan_at": "2026-10-21T22:56:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T22:51:34Z",
+    "updated_at": "2026-10-21T22:56:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T22:54:56Z",
+    "updated_at": "2026-10-21T22:58:57Z",
     "detail": "observations retained"
    },
    {
