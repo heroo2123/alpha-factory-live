@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T00:35:02Z",
+ "generated_at": "2026-10-21T00:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_6a3e2587",
     "task": "PAPER-02 A periodic census gated only by provider cooldown must stay periodic so the…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -133,10 +133,10 @@
     4,
     0,
     7,
-    3,
-    3,
-    3,
-    1,
+    4,
+    2,
+    4,
+    0,
     0,
     0,
     3,
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 10,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-21T00:35:02Z",
+    "last_check_at": "2026-10-21T00:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 46,
-    "runs_total": 229,
-    "last_run_at": "2026-10-21T00:35:02Z",
+    "runs_24h": 47,
+    "runs_total": 230,
+    "last_run_at": "2026-10-21T00:40:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow deepseek low",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T00:40:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
+   },
    {
     "at": "2026-10-21T00:35:02Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-20T15:44:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “CODE-01 Prevent synthetic constituent fields from acquiring public…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-20T15:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: evidence 48 registry stale"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T00:35:00Z",
-   "heartbeat_at": "2026-10-21T00:35:02Z",
+   "status_at": "2026-10-21T00:39:59Z",
+   "heartbeat_at": "2026-10-21T00:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +378,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T00:32:05Z",
+    "last_scan_at": "2026-10-21T00:38:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -394,21 +394,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-20T23:37:02Z",
+    "updated_at": "2026-10-21T00:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T00:32:05Z",
+    "updated_at": "2026-10-21T00:38:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T00:34:39Z",
+    "updated_at": "2026-10-21T00:38:40Z",
     "detail": "observations retained"
    },
    {
