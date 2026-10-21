@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T04:05:02Z",
+ "generated_at": "2026-10-21T04:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,20 +10,20 @@
     "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "40 built in 24h"
+    "active": false,
+    "detail": "41 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_7992d2d9",
-    "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
-    "elapsed_min": 26
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -118,19 +118,19 @@
   "flow": {
    "merges_24h": 37,
    "commits_24h": 37,
-   "built_24h": 40,
+   "built_24h": 41,
    "build_failed_24h": 3,
    "reviews_passed_24h": 43,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
     0,
-    3,
-    2,
-    3,
-    0,
-    8,
     4,
+    2,
+    2,
+    2,
+    7,
+    3,
     2,
     3,
     0,
@@ -151,8 +151,8 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 17,
-    "building": 1,
-    "in_review": 2,
+    "building": 0,
+    "in_review": 3,
     "awaiting_merge": 0,
     "merged": 336,
     "parked": 173
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T04:04:02Z",
+    "last_check_at": "2026-10-21T04:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -247,6 +247,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T04:08:13Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence” → sent to independent review"
+   },
    {
     "at": "2026-10-21T03:54:33Z",
     "kind": "merge",
@@ -351,11 +356,6 @@
     "at": "2026-10-21T02:50:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
-   },
-   {
-    "at": "2026-10-21T02:45:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -365,9 +365,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "making paper decisions",
-   "status_at": "2026-10-21T04:00:20Z",
-   "heartbeat_at": "2026-10-21T04:05:01Z",
+   "state": "census service",
+   "status_at": "2026-10-21T04:10:01Z",
+   "heartbeat_at": "2026-10-21T04:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -406,7 +406,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T04:03:49Z",
+    "updated_at": "2026-10-21T04:09:51Z",
     "detail": "observations retained"
    },
    {
