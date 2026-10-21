@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T17:20:02Z",
+ "generated_at": "2026-10-21T17:25:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 40,
+    "count": 38,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "44 built in 24h"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
     "detail": "30 merged in 24h"
@@ -70,17 +70,17 @@
     "family": "DeepSeek",
     "task_id": "t_d5ed2226",
     "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_578189f6",
+    "task": "LIVE-14 Gate candidate job dispatch on the same strict clock-health predicate used at…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -88,14 +88,14 @@
     "state": "working",
     "model": "GLM 5.3",
     "family": "Zhipu",
-    "task_id": "t_ec45d4b6",
-    "task": "Edge evaluator: day-clustered (target-date) bootstrap + recorded funding-bar verdict for…",
+    "task_id": "t_5afbc936",
+    "task": "CODE-01 PAPER reward maker : inventory transform + cost reserves + separated TRADING_PNL…",
     "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,7 +120,7 @@
    "commits_24h": 30,
    "built_24h": 44,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 57,
+   "reviews_passed_24h": 58,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     0,
@@ -132,15 +132,15 @@
     0,
     0,
     0,
-    5,
-    4,
+    6,
+    3,
+    2,
     1,
     2,
     1,
+    2,
     1,
-    3,
     0,
-    1,
     4,
     0,
     0,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 40,
-    "building": 1,
-    "in_review": 2,
-    "awaiting_merge": 4,
+    "queued": 38,
+    "building": 2,
+    "in_review": 1,
+    "awaiting_merge": 5,
     "merged": 357,
-    "parked": 183
+    "parked": 184
    }
   },
   "architect": {
@@ -210,26 +210,25 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T17:20:02Z",
+    "last_check_at": "2026-10-21T17:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 3,
+    "active": 2,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 2
+     "P2": 1
     },
     "codes": [
      "flow shadow census churn",
-     "flow maintenance review packet invalid",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T17:10:02Z",
+    "last_check_at": "2026-10-21T17:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +248,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T17:22:23Z",
+    "kind": "review",
+    "text": "GLM 5.3 reviewed “Edge evaluator: day-clustered (target-date) bootstrap + recorded…”: passed"
+   },
+   {
+    "at": "2026-10-21T17:20:08Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-21T17:19:09Z",
     "kind": "warn",
@@ -348,16 +357,6 @@
     "at": "2026-10-21T17:03:28Z",
     "kind": "review",
     "text": "GLM 5.3 reviewed “CODE-01 Re-check ASOS day coverage and make the IEM corroboration…”: passed"
-   },
-   {
-    "at": "2026-10-21T17:03:28Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T17:02:08Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -367,18 +366,18 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T17:19:58Z",
-   "heartbeat_at": "2026-10-21T17:20:01Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-21T17:22:18Z",
+   "heartbeat_at": "2026-10-21T17:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 442,
-    "markets": 4413,
+    "weather_events": 443,
+    "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T17:17:28Z",
+    "last_scan_at": "2026-10-21T17:22:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T17:17:28Z",
+    "updated_at": "2026-10-21T17:22:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T17:18:49Z",
+    "updated_at": "2026-10-21T17:24:51Z",
     "detail": "observations retained"
    },
    {
