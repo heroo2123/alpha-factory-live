@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T03:35:02Z",
+ "generated_at": "2026-10-21T03:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 17,
     "unit": "queued",
     "active": false,
     "detail": "12 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "40 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_7992d2d9",
+    "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,8 +120,8 @@
    "commits_24h": 35,
    "built_24h": 40,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 40,
-   "reviews_changes_24h": 9,
+   "reviews_passed_24h": 43,
+   "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
     0,
@@ -130,10 +130,10 @@
     4,
     0,
     7,
-    3,
-    3,
-    3,
-    1,
+    4,
+    2,
+    4,
+    0,
     0,
     0,
     3,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 18,
-    "building": 0,
-    "in_review": 3,
+    "queued": 17,
+    "building": 1,
+    "in_review": 0,
     "awaiting_merge": 2,
     "merged": 334,
     "parked": 171
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T03:35:02Z",
+    "last_check_at": "2026-10-21T03:39:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T03:38:08Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T03:37:10Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T03:36:10Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-21T03:35:11Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-21T03:35:02Z",
     "kind": "heal",
@@ -338,26 +358,6 @@
     "at": "2026-10-21T02:44:08Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T02:43:10Z",
-    "kind": "warn",
-    "text": "Claude Sonnet reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-21T02:42:18Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 Validate the archived envelope before reusing a forecast slice”: passed"
-   },
-   {
-    "at": "2026-10-21T02:42:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-21T02:40:21Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 Refuse realized-P&L splits over a lot attribution that is…”: passed"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T03:35:00Z",
-   "heartbeat_at": "2026-10-21T03:35:02Z",
+   "status_at": "2026-10-21T03:40:01Z",
+   "heartbeat_at": "2026-10-21T03:40:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -394,7 +394,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-21T02:37:02Z",
+    "updated_at": "2026-10-21T03:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T03:33:39Z",
+    "updated_at": "2026-10-21T03:39:41Z",
     "detail": "observations retained"
    },
    {
