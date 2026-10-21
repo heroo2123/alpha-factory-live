@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T09:15:02Z",
+ "generated_at": "2026-10-21T09:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "38 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_e76d5f6a",
-    "task": "PAPER-03 Recompute the retained decision population in replay_audit instead of trusting…",
-    "elapsed_min": 26
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,13 +120,13 @@
    "commits_24h": 37,
    "built_24h": 38,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 51,
+   "reviews_passed_24h": 50,
    "reviews_changes_24h": 5,
    "commits_by_hour": [
-    3,
-    6,
-    3,
+    5,
     4,
+    4,
+    3,
     1,
     0,
     0,
@@ -151,8 +151,8 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 25,
-    "building": 1,
-    "in_review": 2,
+    "building": 0,
+    "in_review": 3,
     "awaiting_merge": 0,
     "merged": 344,
     "parked": 175
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T09:15:02Z",
+    "last_check_at": "2026-10-21T09:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,11 +233,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 53,
-    "runs_total": 252,
-    "last_run_at": "2026-10-21T08:30:03Z",
+    "runs_24h": 54,
+    "runs_total": 253,
+    "last_run_at": "2026-10-21T09:20:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow maintenance review independence pending",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T09:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow maintenance review independence pending"
+   },
+   {
+    "at": "2026-10-21T09:19:13Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-03 Recompute the retained decision population in replay_audit…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T09:05:56Z",
     "kind": "merge",
@@ -349,16 +359,6 @@
     "at": "2026-10-21T07:25:12Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T07:23:01Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-02 protected review publishers certify only the current day…” into the main build"
-   },
-   {
-    "at": "2026-10-21T07:11:18Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “PAPER-02 protected review publishers certify only the current day…”: passed"
    }
   ]
  },
@@ -379,7 +379,7 @@
     "weather_events": 438,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T09:10:13Z",
+    "last_scan_at": "2026-10-21T09:15:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T09:10:13Z",
+    "updated_at": "2026-10-21T09:15:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T09:13:35Z",
+    "updated_at": "2026-10-21T09:19:37Z",
     "detail": "observations retained"
    },
    {
@@ -474,20 +474,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9552,
-     "city_days": 36
+     "brier": 0.9368,
+     "city_days": 38
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8721,
-     "city_days": 36
+     "brier": 0.866,
+     "city_days": 38
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.7214,
-     "city_days": 36
+     "brier": 0.7117,
+     "city_days": 38
     },
     {
      "key": "equal",
@@ -499,19 +499,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 37,
-   "waiting_city_days": 17,
+   "labelled_city_days": 39,
+   "waiting_city_days": 15,
    "labelled_days": 8,
    "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T08:17:03Z",
+   "updated_at": "2026-10-21T09:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 16,
+     "have": 18,
      "need": 50,
      "done": false,
      "detail": ""
@@ -1080,7 +1080,7 @@
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "16 of 50 untouched city-days collected"
+    "detail": "18 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
