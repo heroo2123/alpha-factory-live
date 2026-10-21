@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T01:25:02Z",
+ "generated_at": "2026-10-21T01:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_6dd0693f",
     "task": "CODE-01 Refuse RESULT_LAG certification eligibility and EXACT_FINALITY PASS proofs until…",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -129,8 +129,8 @@
     0,
     0,
     4,
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T01:25:02Z",
+    "last_check_at": "2026-10-21T01:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,11 +233,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 48,
-    "runs_total": 231,
-    "last_run_at": "2026-10-21T01:15:02Z",
+    "runs_24h": 49,
+    "runs_total": 232,
+    "last_run_at": "2026-10-21T01:30:02Z",
     "last_ok": true,
-    "last_kind": "flow qa resource blocked",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T01:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-21T01:15:02Z",
     "kind": "heal",
@@ -354,11 +359,6 @@
     "at": "2026-10-20T19:28:09Z",
     "kind": "release",
     "text": "New Shadow release 4e4ffc6 went live (paper only)"
-   },
-   {
-    "at": "2026-10-20T19:25:01Z",
-    "kind": "release",
-    "text": "Release 4e4ffc6 installed by the release manager"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T01:25:01Z",
-   "heartbeat_at": "2026-10-21T01:25:01Z",
+   "status_at": "2026-10-21T01:30:00Z",
+   "heartbeat_at": "2026-10-21T01:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -379,7 +379,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T01:20:35Z",
+    "last_scan_at": "2026-10-21T01:26:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T01:20:35Z",
+    "updated_at": "2026-10-21T01:26:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T01:24:56Z",
+    "updated_at": "2026-10-21T01:28:58Z",
     "detail": "observations retained"
    },
    {
