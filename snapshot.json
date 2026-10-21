@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:40:02Z",
+ "generated_at": "2026-10-21T10:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 16,
+    "count": 18,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0d9d2318",
     "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
-    "elapsed_min": 32
+    "elapsed_min": 37
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 16,
+   "progress_pct": 18,
    "last_finished_at": "2026-10-21T02:27:12Z",
    "last_passed": 14245,
    "last_failed": 0,
@@ -124,8 +124,8 @@
    "reviews_changes_24h": 3,
    "commits_by_hour": [
     4,
-    2,
-    4,
+    3,
+    3,
     0,
     0,
     0,
@@ -139,10 +139,10 @@
     0,
     0,
     2,
-    5,
-    2,
-    2,
+    6,
     1,
+    3,
+    0,
     2,
     1,
     2,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T10:40:02Z",
+    "last_check_at": "2026-10-21T10:44:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,11 +230,11 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T10:37:13Z",
+    "last_check_at": "2026-10-21T10:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 50,
+    "runs_24h": 49,
     "runs_total": 255,
     "last_run_at": "2026-10-21T10:30:02Z",
     "last_ok": true,
@@ -380,7 +380,7 @@
     "weather_events": 434,
     "markets": 4308,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T10:35:58Z",
+    "last_scan_at": "2026-10-21T10:41:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T10:35:58Z",
+    "updated_at": "2026-10-21T10:41:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T10:38:09Z",
+    "updated_at": "2026-10-21T10:44:11Z",
     "detail": "observations retained"
    },
    {
