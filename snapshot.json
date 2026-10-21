@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T15:40:02Z",
+ "generated_at": "2026-10-21T15:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 52,
+    "count": 50,
     "unit": "queued",
     "active": false,
-    "detail": "23 ready to build"
+    "detail": "22 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "34 built in 24h"
    },
    {
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "27 merged in 24h"
@@ -65,22 +65,22 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_50933597",
+    "task": "PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts limit-pinned settled buckets…",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_b0a67257",
+    "task": "CODE-01 Let the PAPER result-lag lane start on owner-rescoped contract-window finality",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_67a6f26a",
     "task": "Account replay deadline during final aggregation must report…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 27,
    "built_24h": 34,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 51,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     0,
@@ -134,10 +134,10 @@
     0,
     0,
     2,
-    5,
-    2,
-    2,
+    6,
     1,
+    3,
+    0,
     2,
     1,
     2,
@@ -148,12 +148,14 @@
     0,
     2
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 52,
-    "building": 1,
+    "queued": 50,
+    "building": 2,
     "in_review": 1,
-    "awaiting_merge": 1,
+    "awaiting_merge": 2,
     "merged": 351,
     "parked": 179
    }
@@ -212,7 +214,7 @@
     "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-21T15:39:01Z",
+    "last_check_at": "2026-10-21T15:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -227,7 +229,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T15:30:03Z",
+    "last_check_at": "2026-10-21T15:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -247,6 +249,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T15:44:15Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “Maker-telemetry candidate dispatch test must not depend on host load…”: passed"
+   },
+   {
+    "at": "2026-10-21T15:40:21Z",
+    "kind": "build",
+    "text": "Claude Opus built “Maker-telemetry candidate dispatch test must not depend on host load…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T15:40:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: engineering regression selftest failed"
+   },
    {
     "at": "2026-10-21T15:40:02Z",
     "kind": "heal",
@@ -313,11 +330,6 @@
     "text": "Guardian raised an alert: code queue idle with capacity"
    },
    {
-    "at": "2026-10-21T14:17:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
     "at": "2026-10-21T13:52:14Z",
     "kind": "warn",
     "text": "Full test suite finished: 14470 passed, 2 failed"
@@ -346,16 +358,6 @@
     "at": "2026-10-21T12:20:04Z",
     "kind": "release",
     "text": "New Shadow release b603a22 went live (paper only)"
-   },
-   {
-    "at": "2026-10-21T12:17:16Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 PAPER reward maker : queue-honest simulated fills + markouts…”: passed"
-   },
-   {
-    "at": "2026-10-21T12:15:02Z",
-    "kind": "release",
-    "text": "Release b603a22 installed by the release manager"
    }
   ]
  },
@@ -365,18 +367,18 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T15:39:59Z",
-   "heartbeat_at": "2026-10-21T15:40:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-21T15:42:47Z",
+   "heartbeat_at": "2026-10-21T15:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": null,
-    "markets": null,
+    "weather_events": 444,
+    "markets": 4435,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T15:33:23Z",
+    "last_scan_at": "2026-10-21T15:43:47Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T15:33:23Z",
+    "updated_at": "2026-10-21T15:43:47Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T15:38:08Z",
+    "updated_at": "2026-10-21T15:44:10Z",
     "detail": "observations retained"
    },
    {
