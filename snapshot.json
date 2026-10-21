@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T21:05:02Z",
+ "generated_at": "2026-10-21T21:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 39,
     "unit": "queued",
     "active": false,
-    "detail": "17 ready to build"
+    "detail": "18 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "51 built in 24h"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
     "detail": "37 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 53,
+    "count": 63,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_8ae6fc7d",
     "task": "PAPER-02 METAR rules : day preparer prepares METAR-rule days under the METAR capability…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_47b74467",
+    "task": "PAPER-02 METAR rules : continuous day manager accepts the METAR scope review for…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 53,
+   "progress_pct": 63,
    "last_finished_at": "2026-10-21T17:06:41Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -137,29 +137,29 @@
     3,
     0,
     1,
-    0,
-    4,
+    1,
+    3,
     0,
     0,
     2,
-    0,
-    8,
     3,
+    6,
+    2,
     2,
     0
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
     "waiting for the full test run to finish",
+    "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 38,
-    "building": 1,
+    "queued": 39,
+    "building": 2,
     "in_review": 0,
-    "awaiting_merge": 7,
+    "awaiting_merge": 6,
     "merged": 364,
-    "parked": 187
+    "parked": 189
    }
   },
   "architect": {
@@ -212,11 +212,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T21:05:02Z",
+    "last_check_at": "2026-10-21T21:10:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T21:05:02Z",
-   "heartbeat_at": "2026-10-21T21:05:02Z",
+   "status_at": "2026-10-21T21:09:59Z",
+   "heartbeat_at": "2026-10-21T21:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -383,7 +383,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T21:03:40Z",
+    "last_scan_at": "2026-10-21T21:08:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T21:03:40Z",
+    "updated_at": "2026-10-21T21:08:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T21:04:17Z",
+    "updated_at": "2026-10-21T21:08:18Z",
     "detail": "observations retained"
    },
    {
