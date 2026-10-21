@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T02:40:02Z",
+ "generated_at": "2026-10-21T02:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "38 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
     "detail": "30 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_ffa8eff4",
+    "task": "LEARNING-12 Refuse a model-authority state that moves backwards or is future-dated",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,8 +120,8 @@
    "commits_24h": 30,
    "built_24h": 38,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 34,
-   "reviews_changes_24h": 8,
+   "reviews_passed_24h": 37,
+   "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
     0,
@@ -132,8 +132,8 @@
     0,
     7,
     4,
-    2,
-    4,
+    3,
+    3,
     0,
     0,
     0,
@@ -149,13 +149,14 @@
     2
    ],
    "merge_holds": [
+    "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 19,
-    "building": 0,
-    "in_review": 4,
-    "awaiting_merge": 4,
+    "queued": 18,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 6,
     "merged": 329,
     "parked": 169
    }
@@ -210,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T02:39:02Z",
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-21T02:45:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,15 +229,15 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T02:30:02Z",
+    "last_check_at": "2026-10-21T02:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 52,
-    "runs_total": 235,
-    "last_run_at": "2026-10-21T02:05:02Z",
+    "runs_24h": 53,
+    "runs_total": 236,
+    "last_run_at": "2026-10-21T02:45:01Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +250,36 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T02:45:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T02:44:08Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T02:43:10Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-21T02:42:18Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “CODE-01 Validate the archived envelope before reusing a forecast slice”: passed"
+   },
+   {
+    "at": "2026-10-21T02:42:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-21T02:40:21Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “CODE-01 Refuse realized-P&L splits over a lot attribution that is…”: passed"
+   },
    {
     "at": "2026-10-21T02:39:11Z",
     "kind": "build",
@@ -328,36 +359,6 @@
     "at": "2026-10-21T01:30:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-21T01:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow qa resource blocked"
-   },
-   {
-    "at": "2026-10-21T01:14:14Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 R31 port: honest finality verdict with contract correction…”: passed"
-   },
-   {
-    "at": "2026-10-21T01:12:18Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 R31 port: WRH vs IEM ASOS independent cross-check…”: passed"
-   },
-   {
-    "at": "2026-10-21T01:11:17Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “PAPER-02 A periodic census gated only by provider cooldown must stay…”: passed"
-   },
-   {
-    "at": "2026-10-21T01:09:17Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence”: passed"
-   },
-   {
-    "at": "2026-10-21T01:08:19Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -368,8 +369,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T02:40:01Z",
-   "heartbeat_at": "2026-10-21T02:40:02Z",
+   "status_at": "2026-10-21T02:45:01Z",
+   "heartbeat_at": "2026-10-21T02:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +379,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T02:34:04Z",
+    "last_scan_at": "2026-10-21T02:40:07Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T02:34:04Z",
+    "updated_at": "2026-10-21T02:40:07Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T02:39:23Z",
+    "updated_at": "2026-10-21T02:43:24Z",
     "detail": "observations retained"
    },
    {
