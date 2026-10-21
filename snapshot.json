@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T00:05:02Z",
+ "generated_at": "2026-10-21T00:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_7992d2d9",
     "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -129,12 +129,12 @@
     0,
     0,
     0,
-    3,
-    2,
-    3,
-    0,
-    8,
     4,
+    2,
+    2,
+    2,
+    7,
+    3,
     2,
     3,
     0,
@@ -210,9 +210,9 @@
    "guardian": {
     "state": "p2",
     "active": 1,
-    "alerts_24h": 9,
+    "alerts_24h": 10,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-21T00:04:01Z",
+    "last_check_at": "2026-10-21T00:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T00:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-20T19:28:09Z",
     "kind": "release",
@@ -317,11 +322,6 @@
    {
     "at": "2026-10-20T15:49:02Z",
     "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes dashboard down"
-   },
-   {
-    "at": "2026-10-20T15:49:02Z",
-    "kind": "heal",
     "text": "Guardian confirmed recovery: hermes job late code evidence to kanban"
    },
    {
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T00:05:00Z",
-   "heartbeat_at": "2026-10-21T00:05:01Z",
+   "status_at": "2026-10-21T00:10:02Z",
+   "heartbeat_at": "2026-10-21T00:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +378,7 @@
     "weather_events": 395,
     "markets": 3898,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T00:01:03Z",
+    "last_scan_at": "2026-10-21T00:07:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T00:01:03Z",
+    "updated_at": "2026-10-21T00:07:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T00:04:29Z",
+    "updated_at": "2026-10-21T00:08:31Z",
     "detail": "observations retained"
    },
    {
