@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T07:20:02Z",
+ "generated_at": "2026-10-21T07:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "37 merged in 24h"
+    "detail": "38 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e76d5f6a",
     "task": "PAPER-03 Recompute the retained decision population in replay_audit instead of trusting…",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,18 +116,18 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 37,
-   "commits_24h": 37,
+   "merges_24h": 38,
+   "commits_24h": 38,
    "built_24h": 41,
    "build_failed_24h": 4,
    "reviews_passed_24h": 50,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    2,
-    2,
-    5,
+    3,
+    1,
+    6,
     4,
-    4,
+    3,
     3,
     1,
     0,
@@ -142,21 +142,19 @@
     0,
     0,
     0,
-    5,
-    4,
-    1,
+    6,
+    3,
     2,
-    1
+    1,
+    2
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 21,
     "building": 1,
     "in_review": 1,
-    "awaiting_merge": 1,
-    "merged": 340,
+    "awaiting_merge": 0,
+    "merged": 341,
     "parked": 174
    }
   },
@@ -167,6 +165,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T07:23:01Z",
+    "title": "PAPER-02 protected review publishers certify only the current day: publish the…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T05:43:14Z",
     "title": "CODE-01 Bind FEATURES source leases to the admitted rule fingerprint and a declared as_of",
@@ -201,11 +204,6 @@
     "at": "2026-10-21T03:14:18Z",
     "title": "CODE-01 Show clock-health, health-record freshness and cancel-only guardian status in…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T03:05:24Z",
-    "title": "CODE-01 Refuse RESULT_LAG certification eligibility and EXACT_FINALITY PASS proofs until…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,25 +212,24 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T07:20:02Z",
+    "last_check_at": "2026-10-21T07:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 5,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 5
+     "P2": 4
     },
     "codes": [
      "flow deepseek low",
      "flow shadow evals all gated",
      "flow shadow census churn",
-     "flow pin guard scope missing",
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T07:10:02Z",
+    "last_check_at": "2026-10-21T07:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T07:23:01Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 protected review publishers certify only the current day…” into the main build"
+   },
    {
     "at": "2026-10-21T07:11:18Z",
     "kind": "review",
@@ -357,11 +359,6 @@
     "at": "2026-10-21T05:19:06Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-21T05:12:46Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence” into the main build"
    }
   ]
  },
@@ -371,18 +368,18 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "making paper decisions",
-   "status_at": "2026-10-21T07:18:54Z",
-   "heartbeat_at": "2026-10-21T07:20:02Z",
+   "state": "census service",
+   "status_at": "2026-10-21T07:25:01Z",
+   "heartbeat_at": "2026-10-21T07:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 432,
-    "markets": 4286,
+    "weather_events": 431,
+    "markets": 4275,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T07:15:10Z",
+    "last_scan_at": "2026-10-21T07:21:25Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T07:15:10Z",
+    "updated_at": "2026-10-21T07:21:25Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T07:18:54Z",
+    "updated_at": "2026-10-21T07:24:56Z",
     "detail": "observations retained"
    },
    {
