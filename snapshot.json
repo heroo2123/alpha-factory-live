@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:05:02Z",
+ "generated_at": "2026-10-21T10:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 27,
+    "count": 26,
     "unit": "queued",
     "active": false,
-    "detail": "24 ready to build"
+    "detail": "23 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "36 built in 24h"
+    "detail": "37 built in 24h"
    },
    {
     "key": "review",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "37 merged in 24h"
+    "detail": "35 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,8 +68,8 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_92816f5c",
-    "task": "PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health ObservationPolicy as the Shadow…",
+    "task_id": "t_0d9d2318",
+    "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
     "elapsed_min": 2
    },
    {
@@ -116,15 +116,15 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 37,
-   "commits_24h": 37,
-   "built_24h": 36,
+   "merges_24h": 35,
+   "commits_24h": 35,
+   "built_24h": 37,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 51,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    8,
-    4,
+    7,
+    3,
     2,
     3,
     0,
@@ -153,10 +153,10 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 27,
+    "queued": 26,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 2,
+    "awaiting_merge": 3,
     "merged": 344,
     "parked": 176
    }
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T10:05:02Z",
+    "last_check_at": "2026-10-21T10:09:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,7 +238,7 @@
    },
    "operator": {
     "runs_24h": 50,
-    "runs_total": 253,
+    "runs_total": 254,
     "last_run_at": "2026-10-21T09:20:02Z",
     "last_ok": true,
     "last_kind": "flow maintenance review independence pending",
@@ -254,6 +254,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T10:07:20Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…”: passed"
+   },
+   {
+    "at": "2026-10-21T10:06:13Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T10:02:20Z",
     "kind": "review",
@@ -353,16 +363,6 @@
     "at": "2026-10-21T08:12:13Z",
     "kind": "build",
     "text": "Claude Opus built “PAPER-02 Recompute the retained account-command population in…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T08:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
-   },
-   {
-    "at": "2026-10-21T07:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
    }
   ]
  },
@@ -380,10 +380,10 @@
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 434,
-    "markets": 4308,
-    "opportunities": 0,
-    "last_scan_at": "2026-10-21T10:03:44Z",
+    "weather_events": 431,
+    "markets": 4275,
+    "opportunities": 1,
+    "last_scan_at": "2026-10-21T10:08:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T10:03:44Z",
+    "updated_at": "2026-10-21T10:08:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T10:03:53Z",
+    "updated_at": "2026-10-21T10:09:55Z",
     "detail": "observations retained"
    },
    {
