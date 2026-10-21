@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T18:10:02Z",
+ "generated_at": "2026-10-21T18:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,17 +70,17 @@
     "family": "DeepSeek",
     "task_id": "t_d5ed2226",
     "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 51
+    "elapsed_min": 56
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_578189f6",
-    "task": "LIVE-14 Gate candidate job dispatch on the same strict clock-health predicate used at…",
-    "elapsed_min": 45
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -131,24 +131,25 @@
     0,
     0,
     0,
-    4,
     5,
-    0,
-    3,
-    0,
+    4,
+    1,
     2,
-    3,
-    0,
     1,
     1,
     3,
     0,
+    1,
+    4,
+    0,
+    0,
     0,
     2,
-    3,
-    6
+    6,
+    3
    ],
    "merge_holds": [
+    "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
@@ -210,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T18:10:02Z",
+    "last_check_at": "2026-10-21T18:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,17 +230,17 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T18:00:02Z",
+    "last_check_at": "2026-10-21T18:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 42,
-    "runs_total": 270,
-    "last_run_at": "2026-10-21T18:10:02Z",
-    "last_ok": false,
-    "last_kind": "independent review changes required",
+    "runs_24h": 43,
+    "runs_total": 271,
+    "last_run_at": "2026-10-21T18:15:01Z",
+    "last_ok": true,
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
-    "model": "GLM 5.3",
+    "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -249,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T18:15:01Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-21T18:10:02Z",
     "kind": "heal",
@@ -353,11 +359,6 @@
     "at": "2026-10-21T17:09:18Z",
     "kind": "merge",
     "text": "Merged “CODE-01 PAPER reward maker : reward-zone two-sided quotes +…” into the main build"
-   },
-   {
-    "at": "2026-10-21T17:07:21Z",
-    "kind": "review",
-    "text": "GLM 5.3 reviewed “CODE-01 Bind the finality policy bounds and financial_authority into…”: passed"
    }
   ]
  },
@@ -368,8 +369,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T18:10:00Z",
-   "heartbeat_at": "2026-10-21T18:10:03Z",
+   "status_at": "2026-10-21T18:15:00Z",
+   "heartbeat_at": "2026-10-21T18:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -378,7 +379,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T18:05:11Z",
+    "last_scan_at": "2026-10-21T18:10:18Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T18:05:11Z",
+    "updated_at": "2026-10-21T18:10:18Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T18:09:09Z",
+    "updated_at": "2026-10-21T18:13:10Z",
     "detail": "observations retained"
    },
    {
