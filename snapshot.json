@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T17:40:02Z",
+ "generated_at": "2026-10-21T17:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_d5ed2226",
     "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_578189f6",
     "task": "LIVE-14 Gate candidate job dispatch on the same strict clock-health predicate used at…",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Reviewer 1",
@@ -132,10 +132,10 @@
     0,
     0,
     2,
-    5,
-    2,
-    2,
+    6,
     1,
+    3,
+    0,
     2,
     1,
     2,
@@ -214,21 +214,22 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T17:40:02Z",
+    "last_check_at": "2026-10-21T17:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 1
+     "P2": 2
     },
     "codes": [
+     "flow qa runtime guard killed run",
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T17:30:03Z",
+    "last_check_at": "2026-10-21T17:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -366,9 +367,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T17:39:59Z",
-   "heartbeat_at": "2026-10-21T17:40:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-21T17:43:15Z",
+   "heartbeat_at": "2026-10-21T17:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -377,7 +378,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T17:39:08Z",
+    "last_scan_at": "2026-10-21T17:44:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T17:39:08Z",
+    "updated_at": "2026-10-21T17:44:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T17:38:57Z",
+    "updated_at": "2026-10-21T17:44:59Z",
     "detail": "observations retained"
    },
    {
