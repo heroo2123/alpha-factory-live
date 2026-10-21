@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T22:15:02Z",
+ "generated_at": "2026-10-21T22:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "19 ready to build"
+    "detail": "18 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
     "detail": "41 merged in 24h"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_b18cee74",
-    "task": "CODE-01 Extend the IEM ASOS station allow-list to every reviewed NWS WRH contract…",
-    "elapsed_min": 1
+    "task_id": "t_46058179",
+    "task": "CODE-01 Bind the bracket's first-following row identity so the contract cutoff datapoint…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_974143e1",
-    "task": "CODE-01 Record observed A->B->A reversions and the polling cadence as quantified…",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-21T21:50:24Z",
    "last_passed": 14693,
@@ -120,8 +120,8 @@
    "commits_24h": 41,
    "built_24h": 55,
    "build_failed_24h": 17,
-   "reviews_passed_24h": 63,
-   "reviews_changes_24h": 9,
+   "reviews_passed_24h": 62,
+   "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
     0,
@@ -149,17 +149,17 @@
     4
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
+    "waiting for the full test run to finish",
     "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 37,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 6,
+    "in_review": 0,
+    "awaiting_merge": 7,
     "merged": 368,
-    "parked": 193
+    "parked": 194
    }
   },
   "architect": {
@@ -212,11 +212,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T22:15:02Z",
+    "state": "healthy",
+    "active": 0,
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-21T22:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,26 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-21T22:19:19Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Extend the IEM ASOS station allow-list to every reviewed NWS…”: changes required"
+   },
+   {
+    "at": "2026-10-21T22:17:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: full suite not green"
+   },
+   {
+    "at": "2026-10-21T22:16:34Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Record observed A->B->A reversions and the polling cadence…”: passed"
+   },
+   {
+    "at": "2026-10-21T22:16:20Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Extend the IEM ASOS station allow-list to every reviewed NWS…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T22:15:02Z",
     "kind": "heal",
@@ -342,26 +362,6 @@
     "at": "2026-10-21T21:58:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: full suite not green"
-   },
-   {
-    "at": "2026-10-21T21:58:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-21T21:56:16Z",
-    "kind": "build",
-    "text": "Claude Opus built “Candidate tests must advance the synthetic host clock after the…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T21:56:11Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T21:52:59Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “Candidate tests must advance the synthetic host clock after the…”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T22:15:01Z",
-   "heartbeat_at": "2026-10-21T22:15:01Z",
+   "status_at": "2026-10-21T22:19:58Z",
+   "heartbeat_at": "2026-10-21T22:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T22:14:40Z",
+    "updated_at": "2026-10-21T22:18:42Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +510,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T21:17:03Z",
+   "updated_at": "2026-10-21T22:17:04Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
@@ -639,7 +639,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 35,
-     "open_tasks": 3
+     "open_tasks": 2
     },
     {
      "id": "CODE-02",
