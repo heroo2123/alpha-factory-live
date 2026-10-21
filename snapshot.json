@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T15:45:02Z",
+ "generated_at": "2026-10-21T15:50:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "27 merged in 24h"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_50933597",
     "task": "PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts limit-pinned settled buckets…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_b0a67257",
     "task": "CODE-01 Let the PAPER result-lag lane start on owner-rescoped contract-window finality",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_67a6f26a",
-    "task": "Account replay deadline during final aggregation must report…",
-    "elapsed_min": 6
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-21T15:31:10Z",
    "last_passed": 14485,
@@ -120,7 +120,7 @@
    "commits_24h": 27,
    "built_24h": 34,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 51,
+   "reviews_passed_24h": 52,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 50,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 3,
     "merged": 351,
     "parked": 179
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
-    "recoveries_24h": 13,
-    "last_check_at": "2026-10-21T15:45:02Z",
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-21T15:49:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 37,
+    "runs_24h": 36,
     "runs_total": 264,
     "last_run_at": "2026-10-21T15:40:02Z",
     "last_ok": true,
@@ -249,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T15:47:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: full suite not green"
+   },
+   {
+    "at": "2026-10-21T15:46:22Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “Account replay deadline during final aggregation must report…”: passed"
+   },
    {
     "at": "2026-10-21T15:44:15Z",
     "kind": "review",
@@ -325,11 +335,6 @@
     "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
-    "at": "2026-10-21T14:52:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
     "at": "2026-10-21T13:52:14Z",
     "kind": "warn",
     "text": "Full test suite finished: 14470 passed, 2 failed"
@@ -353,11 +358,6 @@
     "at": "2026-10-21T12:20:16Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 PAPER reward maker : reward-zone two-sided quotes +…”: passed"
-   },
-   {
-    "at": "2026-10-21T12:20:04Z",
-    "kind": "release",
-    "text": "New Shadow release b603a22 went live (paper only)"
    }
   ]
  },
@@ -367,9 +367,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-21T15:42:47Z",
-   "heartbeat_at": "2026-10-21T15:45:03Z",
+   "state": "census service",
+   "status_at": "2026-10-21T15:49:59Z",
+   "heartbeat_at": "2026-10-21T15:50:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -378,7 +378,7 @@
     "weather_events": 444,
     "markets": 4435,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T15:43:47Z",
+    "last_scan_at": "2026-10-21T15:49:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T15:43:47Z",
+    "updated_at": "2026-10-21T15:49:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T15:44:10Z",
+    "updated_at": "2026-10-21T15:48:12Z",
     "detail": "observations retained"
    },
    {
@@ -591,7 +591,7 @@
    }
   ],
   "readiness": {
-   "accepted": 41,
+   "accepted": 42,
    "total": 48,
    "groups": [
     {
@@ -606,9 +606,9 @@
      "name": "PAPER",
      "label": "Paper trading",
      "total": 11,
-     "accepted": 6,
+     "accepted": 7,
      "owner": 1,
-     "pending": 4
+     "pending": 3
     },
     {
      "name": "LEARNING",
@@ -677,8 +677,8 @@
      "id": "PAPER-03",
      "group": "PAPER",
      "name": "Evidence persistence healthy",
-     "status": "pending",
-     "detail": "re-check inconclusive",
+     "status": "accepted",
+     "detail": "accepted by an independent reviewer",
      "merged_tasks": 1,
      "open_tasks": 2
     },
@@ -1071,7 +1071,7 @@
    {
     "step": "Paper trading evidence",
     "state": "active",
-    "detail": "7 of 11 criteria accepted"
+    "detail": "8 of 11 criteria accepted"
    },
    {
     "step": "Safe self-learning controls",
