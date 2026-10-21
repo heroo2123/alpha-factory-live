@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T03:50:03Z",
+ "generated_at": "2026-10-21T03:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "36 merged in 24h"
+    "detail": "37 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_7992d2d9",
     "task": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 36,
-   "commits_24h": 36,
+   "merges_24h": 37,
+   "commits_24h": 37,
    "built_24h": 40,
    "build_failed_24h": 3,
    "reviews_passed_24h": 43,
@@ -135,28 +135,26 @@
     3,
     0,
     0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
     0,
     3,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    2,
     6
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 17,
     "building": 1,
-    "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 335,
+    "in_review": 1,
+    "awaiting_merge": 0,
+    "merged": 336,
     "parked": 172
    }
   },
@@ -167,6 +165,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T03:54:33Z",
+    "title": "LIVE-15 Reject aliased guardian custody files",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T03:33:24Z",
     "title": "CODE-01 Validate the archived envelope before reusing a forecast slice",
@@ -201,11 +204,6 @@
     "at": "2026-10-21T02:31:09Z",
     "title": "CODE-01 R31 port: WRH vs IEM ASOS independent cross-check (supporting-only) on current…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T16:58:09Z",
-    "title": "CODE-01 Preserve official features when an optional capture is unavailable",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T03:49:02Z",
+    "last_check_at": "2026-10-21T03:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +226,7 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T03:47:19Z",
+    "last_check_at": "2026-10-21T03:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +247,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T03:54:33Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Reject aliased guardian custody files” into the main build"
+   },
    {
     "at": "2026-10-21T03:38:08Z",
     "kind": "review",
@@ -353,11 +356,6 @@
     "at": "2026-10-21T02:45:01Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-21T02:44:08Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
    }
   ]
  },
@@ -368,8 +366,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T03:50:00Z",
-   "heartbeat_at": "2026-10-21T03:50:03Z",
+   "status_at": "2026-10-21T03:55:00Z",
+   "heartbeat_at": "2026-10-21T03:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -377,8 +375,8 @@
    "scanner": {
     "weather_events": 392,
     "markets": 3851,
-    "opportunities": 1,
-    "last_scan_at": "2026-10-21T03:46:54Z",
+    "opportunities": 0,
+    "last_scan_at": "2026-10-21T03:52:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T03:46:54Z",
+    "updated_at": "2026-10-21T03:52:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T03:49:44Z",
+    "updated_at": "2026-10-21T03:53:46Z",
     "detail": "observations retained"
    },
    {
@@ -1005,8 +1003,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 16,
-     "open_tasks": 4
+     "merged_tasks": 17,
+     "open_tasks": 3
     },
     {
      "id": "LIVE-16",
