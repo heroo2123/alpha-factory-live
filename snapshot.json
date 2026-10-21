@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-18T23:32:35Z",
+ "generated_at": "2026-10-21T10:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 29,
     "unit": "queued",
     "active": false,
-    "detail": "18 ready to build"
+    "detail": "23 ready to build"
    },
    {
     "key": "build",
@@ -18,28 +18,28 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "58 built in 24h"
+    "detail": "36 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 40,
+    "count": 1,
     "unit": "in review",
-    "active": true,
-    "detail": "different model family from the builder"
+    "active": false,
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 12,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "80 merged in 24h"
+    "detail": "31 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 87,
+    "count": 18,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
-    "detail": "current release 70c90ca"
+    "active": true,
+    "detail": ""
    },
    {
     "key": "shadow",
@@ -66,11 +66,11 @@
     "slot": "Builder 1",
     "role": "build",
     "state": "working",
-    "model": "Claude Sonnet",
+    "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_bd7af86f",
-    "task": "PAPER-07 Record committed census source receipts on CENSUS_INTERRUPTED and on…",
-    "elapsed_min": 11
+    "task_id": "t_0d9d2318",
+    "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
+    "elapsed_min": 37
    },
    {
     "slot": "Builder 2",
@@ -95,147 +95,150 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_29d2d63d",
-    "task": "LIVE-15 Stop a refused cancellation trigger from blocking later triggers on its channel",
-    "elapsed_min": 10
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 87,
-   "last_finished_at": "2026-10-18T16:09:12Z",
-   "last_passed": 12957,
+   "progress_pct": 18,
+   "last_finished_at": "2026-10-21T02:27:12Z",
+   "last_passed": 14245,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-18T16:09:12Z",
-   "last_minutes": 84
+   "last_green_at": "2026-10-21T02:27:12Z",
+   "last_minutes": 92
   },
-  "tests_passing": 12957,
+  "tests_passing": 14245,
   "flow": {
-   "merges_24h": 80,
-   "commits_24h": 80,
-   "built_24h": 58,
-   "build_failed_24h": 8,
-   "reviews_passed_24h": 85,
-   "reviews_changes_24h": 4,
+   "merges_24h": 31,
+   "commits_24h": 31,
+   "built_24h": 36,
+   "build_failed_24h": 3,
+   "reviews_passed_24h": 50,
+   "reviews_changes_24h": 3,
    "commits_by_hour": [
-    5,
-    0,
-    8,
     4,
+    3,
+    3,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
     6,
-    2,
-    5,
+    1,
     3,
     0,
-    3,
-    3,
-    5,
     2,
-    3,
-    4,
     1,
-    9,
-    4,
     2,
-    3,
-    3,
-    3,
-    2,
-    0
+    1
    ],
    "merge_holds": [
-    "waiting for the full test run to finish"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 29,
     "building": 1,
-    "in_review": 40,
-    "awaiting_merge": 12,
-    "merged": 247,
-    "parked": 99
+    "in_review": 1,
+    "awaiting_merge": 1,
+    "merged": 345,
+    "parked": 177
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-18T20:20:17Z",
+   "last_run_at": "2026-10-21T09:40:17Z",
    "last_planned": 6,
    "model": "Claude Opus"
   },
   "recent_merges": [
    {
-    "at": "2026-10-18T22:04:38Z",
-    "title": "PAPER-02 Periodic census must reuse a still-fresh completed GEFS model census instead of…",
+    "at": "2026-10-21T10:22:18Z",
+    "title": "PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health ObservationPolicy as the Shadow…",
     "area": "Core build"
    },
    {
-    "at": "2026-10-18T21:37:11Z",
-    "title": "Spec 6A safety modes step 2: executor enforces scoped reductions",
-    "area": "Pre-funding checks"
-   },
-   {
-    "at": "2026-10-18T21:19:09Z",
-    "title": "Add Polymarket exchange heartbeat dead-man switch",
-    "area": "Live safety"
-   },
-   {
-    "at": "2026-10-18T21:07:12Z",
-    "title": "PAPER-07 Close reserved source-host schedules with backoff when the collector cycle aborts",
+    "at": "2026-10-21T09:05:56Z",
+    "title": "PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started same-day contract…",
     "area": "Core build"
    },
    {
-    "at": "2026-10-18T20:52:27Z",
-    "title": "Wire authenticated Telegram operator safety commands into the assembled Shadow/PAPER…",
-    "area": "Pre-funding checks"
-   },
-   {
-    "at": "2026-10-18T20:26:04Z",
-    "title": "Read-only V11 operator /status rendering (flags, account, cancel requested vs confirmed)",
-    "area": "Pre-funding checks"
-   },
-   {
-    "at": "2026-10-18T20:12:21Z",
-    "title": "LIVE-14 Bind clock_healthy_at_finish to the exact health record and full clock checks",
+    "at": "2026-10-21T08:53:15Z",
+    "title": "LIVE-15 Type every liveness transport failure and require distinct published receipt ids",
     "area": "Core build"
    },
    {
-    "at": "2026-10-18T19:38:11Z",
-    "title": "Durable operator acknowledgement replies for V11 Telegram safety commands (requested vs…",
-    "area": "Pre-funding checks"
+    "at": "2026-10-21T08:23:15Z",
+    "title": "PAPER-02 Recompute the retained account-command population in account_replay_audit",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-21T07:23:01Z",
+    "title": "PAPER-02 protected review publishers certify only the current day: publish the…",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-21T05:43:14Z",
+    "title": "CODE-01 Bind FEATURES source leases to the admitted rule fingerprint and a declared as_of",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-21T05:22:34Z",
+    "title": "LIVE-15 Make the guardian client reject unbound or replayed CHECK receipts and fail…",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-21T05:12:46Z",
+    "title": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
+    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-18T23:32:01Z",
+    "alerts_24h": 11,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-21T10:44:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 1,
+    "active": 4,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
-     "P2": 0
+     "P1": 0,
+     "P2": 3
     },
     "codes": [
-     "flow brain capture missed"
+     "flow deepseek low",
+     "flow shadow evals all gated",
+     "flow shadow census churn",
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-18T23:30:02Z",
+    "last_check_at": "2026-10-21T10:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 56,
-    "runs_total": 117,
-    "last_run_at": "2026-10-18T22:45:02Z",
+    "runs_24h": 49,
+    "runs_total": 255,
+    "last_run_at": "2026-10-21T10:30:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -245,148 +248,147 @@
    "Claude",
    "Codex",
    "DeepSeek",
-   "GLM",
-   "MiniMax"
+   "GLM"
   ],
   "events": [
    {
-    "at": "2026-10-18T23:25:22Z",
+    "at": "2026-10-21T10:34:10Z",
     "kind": "review",
-    "text": "MiniMax M3 reviewed “PAPER-07 Bind already-committed source receipts when a pump cycle is…”: passed"
+    "text": "GLM 5.3 review ended: quota hold"
    },
    {
-    "at": "2026-10-18T23:22:11Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “LIVE-15 Stop a refused cancellation trigger from blocking later…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T23:21:12Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “PAPER-07 Bind already-committed source receipts when a pump cycle is…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T23:09:22Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “Spec 6A safety modes step 3: owner panel commands”: passed"
-   },
-   {
-    "at": "2026-10-18T23:04:20Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL”: passed"
-   },
-   {
-    "at": "2026-10-18T23:02:13Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “Spec 6A safety modes step 3: owner panel commands” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:59:24Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Station-bias + pooled-spread research learner (new module, -10%…”: passed"
-   },
-   {
-    "at": "2026-10-18T22:59:11Z",
-    "kind": "build",
-    "text": "Claude Opus built “LIVE-15 Enforce a no-risk-increase invariant on every broker CANCEL” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:57:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Station-bias + pooled-spread research learner (new module, -10%…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-18T22:47:19Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)”: passed"
-   },
-   {
-    "at": "2026-10-18T22:47:06Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra)'s build of “offline_learning: flag challenger selected on the preregistered grid…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-18T22:45:02Z",
+    "at": "2026-10-21T10:30:02Z",
     "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
    },
    {
-    "at": "2026-10-18T22:42:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)” → sent to independent review"
+    "at": "2026-10-21T10:22:18Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…” into the main build"
    },
    {
-    "at": "2026-10-18T22:38:18Z",
+    "at": "2026-10-21T10:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T10:07:20Z",
     "kind": "review",
-    "text": "MiniMax M3 reviewed “Same-day observed-so-far conditioned forecast evaluation for station…”: passed"
+    "text": "Claude Sonnet reviewed “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…”: passed"
    },
    {
-    "at": "2026-10-18T22:34:11Z",
+    "at": "2026-10-21T10:06:13Z",
     "kind": "build",
-    "text": "Claude Opus built “Same-day observed-so-far conditioned forecast evaluation for station…” → sent to independent review"
+    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…” → sent to independent review"
    },
    {
-    "at": "2026-10-18T22:32:18Z",
+    "at": "2026-10-21T10:02:20Z",
     "kind": "review",
-    "text": "MiniMax M3 reviewed “Wire the governed learning worker to forward captures and labels (no…”: passed"
+    "text": "Claude Sonnet reviewed “PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts…”: passed"
    },
    {
-    "at": "2026-10-18T22:27:28Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with…”: passed"
-   },
-   {
-    "at": "2026-10-18T22:27:14Z",
+    "at": "2026-10-21T09:48:14Z",
     "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “Wire the governed learning worker to forward captures and labels (no…” → sent to independent review"
+    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts…” → sent to independent review"
    },
    {
-    "at": "2026-10-18T22:25:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with…” → sent to independent review"
+    "at": "2026-10-21T09:40:17Z",
+    "kind": "plan",
+    "text": "Architect (Claude Opus) planned 6 new tasks"
    },
    {
-    "at": "2026-10-18T22:24:18Z",
+    "at": "2026-10-21T09:23:22Z",
     "kind": "review",
-    "text": "MiniMax M3 reviewed “Model-vs-market edge evaluator after Polymarket weather fees…”: passed"
+    "text": "Claude Sonnet reviewed “PAPER-03 Recompute the retained decision population in replay_audit…”: passed"
    },
    {
-    "at": "2026-10-18T22:20:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “Model-vs-market edge evaluator after Polymarket weather fees…” → sent to independent review"
+    "at": "2026-10-21T09:21:11Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “a task”: changes required"
    },
    {
-    "at": "2026-10-18T22:16:33Z",
+    "at": "2026-10-21T09:20:12Z",
     "kind": "review",
-    "text": "GLM 5.2 reviewed “Station-bias + pooled-spread research learner (new module, -10%…”: passed"
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T09:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow maintenance review independence pending"
+   },
+   {
+    "at": "2026-10-21T09:19:13Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-03 Recompute the retained decision population in replay_audit…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T09:05:56Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started…” into the main build"
+   },
+   {
+    "at": "2026-10-21T08:53:15Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-15 Type every liveness transport failure and require distinct…” into the main build"
+   },
+   {
+    "at": "2026-10-21T08:48:21Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started…”: passed"
+   },
+   {
+    "at": "2026-10-21T08:46:15Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T08:35:12Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T08:34:20Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “LIVE-15 Type every liveness transport failure and require distinct…”: passed"
+   },
+   {
+    "at": "2026-10-21T08:33:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “LIVE-15 Type every liveness transport failure and require distinct…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T08:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": "70c90ca",
-   "commissioned_at": "2026-10-18T13:40:02Z",
-   "day": "2026-10-18",
-   "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-18T23:32:30Z",
-   "heartbeat_at": "2026-10-18T23:32:33Z",
-   "real_orders_sent": false,
+   "release": null,
+   "commissioned_at": "2026-10-20T19:25:01Z",
+   "day": null,
+   "state": "",
+   "status_at": null,
+   "heartbeat_at": null,
+   "real_orders_sent": null,
    "trading_executor_locked": true,
-   "days_with_market_data": 2,
+   "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 341,
-    "markets": 3296,
+    "weather_events": 434,
+    "markets": 4308,
     "opportunities": 0,
-    "last_scan_at": "2026-10-18T23:30:05Z",
+    "last_scan_at": "2026-10-21T10:41:30Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 0,
-   "research_accept": 0,
-   "reject": 0,
-   "gated": 0,
+   "total": null,
+   "research_accept": null,
+   "reject": null,
+   "gated": null,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -394,21 +396,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-18T22:37:02Z",
+    "updated_at": "2026-10-21T10:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-18T23:30:05Z",
+    "updated_at": "2026-10-21T10:41:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-18T23:32:00Z",
+    "updated_at": "2026-10-21T10:44:11Z",
     "detail": "observations retained"
    },
    {
@@ -449,16 +451,16 @@
    {
     "name": "HRRR",
     "role": "hourly same-day model",
-    "health": "building",
+    "health": "configured",
     "updated_at": null,
-    "detail": "adapter in review"
+    "detail": "adapter parked (not in a live queue)"
    },
    {
     "name": "NWS LAMP",
     "role": "hourly station guidance",
-    "health": "building",
+    "health": "configured",
     "updated_at": null,
-    "detail": "adapter in review"
+    "detail": "adapter parked (not in a live queue)"
    },
    {
     "name": "IEM",
@@ -473,20 +475,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 1.0217,
-     "city_days": 20
+     "brier": 0.9377,
+     "city_days": 40
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.903,
-     "city_days": 20
+     "brier": 0.8641,
+     "city_days": 40
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.8195,
-     "city_days": 20
+     "brier": 0.7022,
+     "city_days": 40
     },
     {
      "key": "equal",
@@ -498,19 +500,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 21,
-   "waiting_city_days": 11,
-   "labelled_days": 6,
+   "labelled_city_days": 41,
+   "waiting_city_days": 13,
+   "labelled_days": 8,
    "captured_days_waiting": 2,
-   "stations": 10,
+   "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-18T23:17:03Z",
+   "updated_at": "2026-10-21T10:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 0,
+     "have": 20,
      "need": 50,
      "done": false,
      "detail": ""
@@ -520,11 +522,11 @@
      "have": null,
      "need": null,
      "done": false,
-     "detail": "not measured yet: needs untouched data"
+     "detail": "measured on untouched days: worse than the market so far"
     },
     {
      "item": "Profitable over 100+ simulated paper trades",
-     "have": 64,
+     "have": 86,
      "need": 100,
      "done": false,
      "detail": "simulated return negative so far"
@@ -533,58 +535,58 @@
   },
   "skills": [
    {
-    "title": "Spec 6A safety modes step 2: executor enforces scoped reductions",
+    "title": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-19T20:16:52Z"
+   },
+   {
+    "title": "Wire the governed learning worker to forward captures and labels (no caller today)",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-19T11:02:20Z"
+   },
+   {
+    "title": "InventoryTransform observer: strict nested artifact schema (close residual L2 forged…",
+    "area": "Position management",
+    "merged_at": "2026-10-19T04:08:06Z"
+   },
+   {
+    "title": "Brain forward supervisor scorer must use the live Shadow release code, not the frozen…",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-19T00:55:00Z"
+   },
+   {
+    "title": "offline_learning: flag challenger selected on the preregistered grid edge (root cause of…",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-19T00:46:09Z"
+   },
+   {
+    "title": "New evidence-only merge/NegRisk-conversion screen over normalized public books",
+    "area": "Position management",
+    "merged_at": "2026-10-19T00:42:01Z"
+   },
+   {
+    "title": "Spec 6A safety modes step 3: owner panel commands",
     "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T21:37:11Z"
+    "merged_at": "2026-10-19T00:00:36Z"
    },
    {
-    "title": "Add Polymarket exchange heartbeat dead-man switch",
-    "area": "Live safety",
-    "merged_at": "2026-10-18T21:19:09Z"
+    "title": "Same-day observed-so-far conditioned forecast evaluation for station (new tool)",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-18T23:50:00Z"
    },
    {
-    "title": "Wire authenticated Telegram operator safety commands into the assembled Shadow/PAPER…",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T20:52:27Z"
+    "title": "Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with dependence-group weights (new…",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-18T23:44:17Z"
    },
    {
-    "title": "Read-only V11 operator /status rendering (flags, account, cancel requested vs confirmed)",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T20:26:04Z"
-   },
-   {
-    "title": "Durable operator acknowledgement replies for V11 Telegram safety commands (requested vs…",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T19:38:11Z"
-   },
-   {
-    "title": "Spec 6A scoped safety modes in the production operator control protocol",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T19:02:10Z"
-   },
-   {
-    "title": "Plain-language audit report rendering and durable at-most-once Telegram delivery",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-18T18:50:13Z"
-   },
-   {
-    "title": "Add Iowa Environmental Mesonet history adapter (station ASOS + CLI daily max)",
-    "area": "Weather data",
-    "merged_at": "2026-10-18T17:17:16Z"
-   },
-   {
-    "title": "Gap-aware exits and depth-capped sizing on thin books",
-    "area": "Execution",
-    "merged_at": "2026-10-18T17:02:44Z"
-   },
-   {
-    "title": "Pull resting orders around official observation releases",
-    "area": "Execution",
-    "merged_at": "2026-10-18T16:59:25Z"
+    "title": "Model-vs-market edge evaluator after Polymarket weather fees (funding gate metric)",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-18T23:43:53Z"
    }
   ],
   "readiness": {
-   "accepted": 37,
+   "accepted": 40,
    "total": 48,
    "groups": [
     {
@@ -600,24 +602,24 @@
      "label": "Paper trading",
      "total": 11,
      "accepted": 6,
-     "owner": 0,
-     "pending": 5
+     "owner": 1,
+     "pending": 4
     },
     {
      "name": "LEARNING",
      "label": "Learning",
      "total": 14,
-     "accepted": 12,
+     "accepted": 13,
      "owner": 1,
-     "pending": 1
+     "pending": 0
     },
     {
      "name": "LIVE",
      "label": "Live safety",
      "total": 20,
-     "accepted": 12,
+     "accepted": 13,
      "owner": 4,
-     "pending": 4
+     "pending": 3
     }
    ],
    "cells": [
@@ -627,7 +629,7 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 17,
+     "merged_tasks": 31,
      "open_tasks": 4
     },
     {
@@ -637,7 +639,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 2,
-     "open_tasks": 5
+     "open_tasks": 4
     },
     {
      "id": "CODE-03",
@@ -663,7 +665,7 @@
      "name": "First full cycle healthy",
      "status": "pending",
      "detail": "re-check inconclusive",
-     "merged_tasks": 2,
+     "merged_tasks": 5,
      "open_tasks": 0
     },
     {
@@ -673,7 +675,7 @@
      "status": "pending",
      "detail": "re-check inconclusive",
      "merged_tasks": 1,
-     "open_tasks": 0
+     "open_tasks": 2
     },
     {
      "id": "PAPER-04",
@@ -691,7 +693,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 1,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "PAPER-06",
@@ -706,10 +708,10 @@
      "id": "PAPER-07",
      "group": "PAPER",
      "name": "Collector recovery",
-     "status": "pending",
-     "detail": "re-check inconclusive",
-     "merged_tasks": 4,
-     "open_tasks": 2
+     "status": "owner",
+     "detail": "accepted by the owner",
+     "merged_tasks": 6,
+     "open_tasks": 0
     },
     {
      "id": "PAPER-08",
@@ -717,7 +719,7 @@
      "name": "Scenario-risk accounting",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 8,
+     "merged_tasks": 16,
      "open_tasks": 0
     },
     {
@@ -726,8 +728,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 13,
-     "open_tasks": 1
+     "merged_tasks": 26,
+     "open_tasks": 0
     },
     {
      "id": "PAPER-10",
@@ -781,7 +783,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 5,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-05",
@@ -790,7 +792,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 7,
-     "open_tasks": 5
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-06",
@@ -799,7 +801,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 4,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-07",
@@ -814,10 +816,10 @@
      "id": "LEARNING-08",
      "group": "LEARNING",
      "name": "Challenger evaluation pipeline",
-     "status": "pending",
-     "detail": "not accepted yet",
+     "status": "accepted",
+     "detail": "accepted by an independent reviewer",
      "merged_tasks": 5,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-09",
@@ -844,7 +846,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 3,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-12",
@@ -853,7 +855,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 1,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-13",
@@ -862,7 +864,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 2,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LEARNING-14",
@@ -871,7 +873,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 3,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-01",
@@ -880,7 +882,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 0,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "LIVE-02",
@@ -925,7 +927,7 @@
      "status": "owner",
      "detail": "accepted by the owner",
      "merged_tasks": 3,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-07",
@@ -943,7 +945,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 1,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LIVE-09",
@@ -952,16 +954,16 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 5,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-10",
      "group": "LIVE",
      "name": "Station certification gate",
-     "status": "pending",
-     "detail": "not accepted yet",
+     "status": "accepted",
+     "detail": "accepted by an independent reviewer",
      "merged_tasks": 7,
-     "open_tasks": 2
+     "open_tasks": 0
     },
     {
      "id": "LIVE-11",
@@ -970,7 +972,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 7,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-12",
@@ -997,7 +999,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 3,
-     "open_tasks": 0
+     "open_tasks": 3
     },
     {
      "id": "LIVE-15",
@@ -1005,8 +1007,8 @@
      "name": "Cancel-only guardian",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 3,
-     "open_tasks": 4
+     "merged_tasks": 19,
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
@@ -1024,7 +1026,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 4,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-18",
@@ -1051,7 +1053,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 2,
-     "open_tasks": 1
+     "open_tasks": 0
     }
    ]
   },
@@ -1064,27 +1066,27 @@
    {
     "step": "Paper trading evidence",
     "state": "active",
-    "detail": "6 of 11 criteria accepted"
+    "detail": "7 of 11 criteria accepted"
    },
    {
     "step": "Safe self-learning controls",
-    "state": "active",
-    "detail": "13 of 14 criteria accepted"
+    "state": "done",
+    "detail": "14 of 14 criteria accepted"
    },
    {
     "step": "Live-execution safety",
     "state": "active",
-    "detail": "16 of 20 criteria accepted"
+    "detail": "17 of 20 criteria accepted"
    },
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "0 of 50 untouched city-days collected"
+    "detail": "20 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
     "state": "active",
-    "detail": "trading key isolated · release published privately"
+    "detail": "trading key isolated"
    },
    {
     "step": "Owner decides whether to fund",
