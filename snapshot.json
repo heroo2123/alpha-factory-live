@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T07:25:02Z",
+ "generated_at": "2026-10-21T07:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e76d5f6a",
     "task": "PAPER-03 Recompute the retained decision population in replay_audit instead of trusting…",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,11 +120,11 @@
    "commits_24h": 38,
    "built_24h": 41,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 49,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
-    3,
-    1,
+    4,
+    0,
     6,
     4,
     3,
@@ -152,7 +152,7 @@
    "stage_totals": {
     "queued": 21,
     "building": 1,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 341,
     "parked": 174
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T07:25:02Z",
+    "last_check_at": "2026-10-21T07:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T07:25:12Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-21T07:23:01Z",
     "kind": "merge",
@@ -354,11 +359,6 @@
     "at": "2026-10-21T05:20:21Z",
     "kind": "plan",
     "text": "Architect (Claude Opus) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-21T05:19:06Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T07:25:01Z",
-   "heartbeat_at": "2026-10-21T07:25:02Z",
+   "status_at": "2026-10-21T07:29:59Z",
+   "heartbeat_at": "2026-10-21T07:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -379,7 +379,7 @@
     "weather_events": 431,
     "markets": 4275,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T07:21:25Z",
+    "last_scan_at": "2026-10-21T07:27:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T07:21:25Z",
+    "updated_at": "2026-10-21T07:27:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T07:24:56Z",
+    "updated_at": "2026-10-21T07:28:57Z",
     "detail": "observations retained"
    },
    {
