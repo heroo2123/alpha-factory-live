@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T17:00:04Z",
+ "generated_at": "2026-10-21T17:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 43,
+    "count": 42,
     "unit": "queued",
     "active": false,
-    "detail": "20 ready to build"
+    "detail": "18 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "41 built in 24h"
+    "detail": "42 built in 24h"
    },
    {
     "key": "review",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
     "detail": "24 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 71,
+    "count": 74,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,8 +68,8 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_78e7d50e",
-    "task": "CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH finality bracket",
+    "task_id": "t_5afbc936",
+    "task": "CODE-01 PAPER reward maker : inventory transform + cost reserves + separated TRADING_PNL…",
     "elapsed_min": 0
    },
    {
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_868291f7",
     "task": "CODE-01 R31 contract-defined finality verdict per event (rules-text correction window +…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
@@ -88,8 +88,8 @@
     "state": "working",
     "model": "GLM 5.3",
     "family": "Zhipu",
-    "task_id": "t_4e65b446",
-    "task": "CODE-01 Re-check ASOS day coverage and make the IEM corroboration digest reproducible",
+    "task_id": "t_c3ea7842",
+    "task": "CODE-01 Bind the finality policy bounds and financial_authority into the WRH bracket…",
     "elapsed_min": 1
    },
    {
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 71,
+   "progress_pct": 74,
    "last_finished_at": "2026-10-21T15:31:10Z",
    "last_passed": 14485,
    "last_failed": 1,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 24,
    "commits_24h": 24,
-   "built_24h": 41,
+   "built_24h": 42,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 53,
+   "reviews_passed_24h": 54,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     0,
@@ -132,14 +132,14 @@
     0,
     0,
     0,
-    3,
-    6,
+    4,
+    5,
     0,
     3,
     0,
     2,
-    2,
-    1,
+    3,
+    0,
     1,
     0,
     4,
@@ -153,10 +153,10 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 43,
+    "queued": 42,
     "building": 2,
     "in_review": 3,
-    "awaiting_merge": 6,
+    "awaiting_merge": 7,
     "merged": 351,
     "parked": 182
    }
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T17:00:04Z",
+    "last_check_at": "2026-10-21T17:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
      "flow maintenance review packet invalid",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T16:50:03Z",
+    "last_check_at": "2026-10-21T17:00:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,31 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T17:04:15Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T17:03:28Z",
+    "kind": "review",
+    "text": "GLM 5.3 reviewed “CODE-01 Re-check ASOS day coverage and make the IEM corroboration…”: passed"
+   },
+   {
+    "at": "2026-10-21T17:03:28Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-21T17:02:08Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-21T17:00:16Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-21T16:59:35Z",
     "kind": "review",
@@ -334,31 +359,6 @@
     "at": "2026-10-21T16:14:11Z",
     "kind": "warn",
     "text": "Claude Sonnet reviewed “CODE-01 Let the PAPER result-lag lane start on owner-rescoped…”: changes required"
-   },
-   {
-    "at": "2026-10-21T16:12:12Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Let the PAPER result-lag lane start on owner-rescoped…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T16:09:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-08 PAPER-UNBLOCK : whole-event book coverage counts…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T15:47:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: full suite not green"
-   },
-   {
-    "at": "2026-10-21T15:46:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “Account replay deadline during final aggregation must report…”: passed"
-   },
-   {
-    "at": "2026-10-21T15:44:15Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “Maker-telemetry candidate dispatch test must not depend on host load…”: passed"
    }
   ]
  },
@@ -368,18 +368,18 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T16:59:58Z",
-   "heartbeat_at": "2026-10-21T17:00:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-21T17:00:59Z",
+   "heartbeat_at": "2026-10-21T17:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 443,
-    "markets": 4424,
+    "weather_events": 442,
+    "markets": 4413,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T16:56:01Z",
+    "last_scan_at": "2026-10-21T17:01:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T16:56:01Z",
+    "updated_at": "2026-10-21T17:01:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T16:58:39Z",
+    "updated_at": "2026-10-21T17:04:42Z",
     "detail": "observations retained"
    },
    {
