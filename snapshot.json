@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:20:02Z",
+ "generated_at": "2026-10-21T10:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "32 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0d9d2318",
     "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Builder 2",
@@ -124,7 +124,7 @@
    "reviews_changes_24h": 4,
    "commits_by_hour": [
     4,
-    4,
+    3,
     3,
     1,
     0,
@@ -139,25 +139,24 @@
     0,
     0,
     0,
-    5,
-    4,
+    6,
+    3,
+    2,
     1,
     2,
     1,
-    1,
-    3,
-    0
+    2,
+    1
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 27,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 344,
+    "awaiting_merge": 1,
+    "merged": 345,
     "parked": 177
    }
   },
@@ -168,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T10:22:18Z",
+    "title": "PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health ObservationPolicy as the Shadow…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T09:05:56Z",
     "title": "PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started same-day contract…",
@@ -202,11 +206,6 @@
     "at": "2026-10-21T05:12:46Z",
     "title": "PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T03:54:33Z",
-    "title": "LIVE-15 Reject aliased guardian custody files",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,25 +214,24 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T10:20:02Z",
+    "last_check_at": "2026-10-21T10:24:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 7,
+    "active": 5,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 6
+     "P2": 4
     },
     "codes": [
      "flow qa resource blocked",
      "flow deepseek low",
      "flow shadow evals all gated",
      "flow shadow census churn",
-     "flow pin guard scope missing",
-     "flow maintenance review packet invalid"
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T10:10:02Z",
+    "last_check_at": "2026-10-21T10:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T10:22:18Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 PAPER-UNBLOCK : reviewed PAPER execution-health…” into the main build"
+   },
    {
     "at": "2026-10-21T10:10:02Z",
     "kind": "heal",
@@ -358,11 +361,6 @@
     "at": "2026-10-21T08:23:15Z",
     "kind": "merge",
     "text": "Merged “PAPER-02 Recompute the retained account-command population in…” into the main build"
-   },
-   {
-    "at": "2026-10-21T08:13:20Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “PAPER-02 Recompute the retained account-command population in…”: passed"
    }
   ]
  },
@@ -383,7 +381,7 @@
     "weather_events": 431,
     "markets": 4275,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T10:19:23Z",
+    "last_scan_at": "2026-10-21T10:24:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T10:19:23Z",
+    "updated_at": "2026-10-21T10:24:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T10:19:59Z",
+    "updated_at": "2026-10-21T10:24:00Z",
     "detail": "observations retained"
    },
    {
@@ -525,11 +523,11 @@
      "have": null,
      "need": null,
      "done": false,
-     "detail": "not measured yet: needs untouched data"
+     "detail": "measured on untouched days: worse than the market so far"
     },
     {
      "item": "Profitable over 100+ simulated paper trades",
-     "have": 64,
+     "have": 86,
      "need": 100,
      "done": false,
      "detail": "simulated return negative so far"
