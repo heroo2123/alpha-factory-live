@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T18:25:02Z",
+ "generated_at": "2026-10-21T18:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 39,
     "unit": "queued",
     "active": false,
     "detail": "14 ready to build"
@@ -23,18 +23,18 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "33 merged in 24h"
+    "detail": "34 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_5d12b882",
     "task": "LIVE-14 Bind observation collection to the fresh health sample cited by this cycle's…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_b1216fcc",
     "task": "LIVE-15 Add a fail-closed guardian commissioning-prerequisite evaluator that never…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_d5ed2226",
-    "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -116,12 +116,12 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 33,
-   "commits_24h": 33,
+   "merges_24h": 34,
+   "commits_24h": 34,
    "built_24h": 46,
    "build_failed_24h": 5,
    "reviews_passed_24h": 59,
-   "reviews_changes_24h": 7,
+   "reviews_changes_24h": 8,
    "commits_by_hour": [
     0,
     0,
@@ -146,19 +146,19 @@
     0,
     2,
     6,
-    3
+    4
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 38,
+    "queued": 39,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 3,
-    "merged": 360,
-    "parked": 184
+    "in_review": 0,
+    "awaiting_merge": 2,
+    "merged": 361,
+    "parked": 185
    }
   },
   "architect": {
@@ -168,6 +168,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T18:27:12Z",
+    "title": "Edge evaluator: day-clustered (target-date) bootstrap + recorded funding-bar verdict for…",
+    "area": "Forecast brain"
+   },
    {
     "at": "2026-10-21T18:06:10Z",
     "title": "CODE-01 Record the polling cadence in the WRH revision ledger",
@@ -202,11 +207,6 @@
     "at": "2026-10-21T17:10:39Z",
     "title": "Account replay deadline during final aggregation must report…",
     "area": "Test repairs"
-   },
-   {
-    "at": "2026-10-21T17:09:38Z",
-    "title": "Maker-telemetry candidate dispatch test must not depend on host load (5 s real-time…",
-    "area": "Test repairs"
    }
   ],
   "self_healing": {
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T18:25:02Z",
+    "last_check_at": "2026-10-21T18:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,11 +234,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 43,
-    "runs_total": 271,
-    "last_run_at": "2026-10-21T18:15:01Z",
+    "runs_24h": 44,
+    "runs_total": 272,
+    "last_run_at": "2026-10-21T18:30:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow qa runtime guard killed run",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T18:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow qa runtime guard killed run"
+   },
+   {
+    "at": "2026-10-21T18:27:12Z",
+    "kind": "merge",
+    "text": "Merged “Edge evaluator: day-clustered (target-date) bootstrap + recorded…” into the main build"
+   },
+   {
+    "at": "2026-10-21T18:26:12Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Keep the guardian GATED while its own cancel requests are…”: changes required"
+   },
    {
     "at": "2026-10-21T18:22:28Z",
     "kind": "review",
@@ -344,21 +359,6 @@
     "at": "2026-10-21T17:15:18Z",
     "kind": "merge",
     "text": "Merged “PAPER-02 METAR rules : fail-closed AWC raw METAR settlement value…” into the main build"
-   },
-   {
-    "at": "2026-10-21T17:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (GLM 5.3) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-21T17:14:41Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-02 METAR rules : rule authority profile for the AWC METAR…” into the main build"
-   },
-   {
-    "at": "2026-10-21T17:14:13Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-02 METAR rules : event compiler recognises the AWC METAR…” into the main build"
    }
   ]
  },
@@ -368,9 +368,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-21T18:24:31Z",
-   "heartbeat_at": "2026-10-21T18:25:00Z",
+   "state": "census service",
+   "status_at": "2026-10-21T18:30:01Z",
+   "heartbeat_at": "2026-10-21T18:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -379,7 +379,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T18:21:18Z",
+    "last_scan_at": "2026-10-21T18:26:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T18:21:18Z",
+    "updated_at": "2026-10-21T18:26:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T18:23:14Z",
+    "updated_at": "2026-10-21T18:29:16Z",
     "detail": "observations retained"
    },
    {
@@ -541,6 +541,11 @@
   },
   "skills": [
    {
+    "title": "Edge evaluator: day-clustered (target-date) bootstrap + recorded funding-bar verdict for…",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-21T18:27:12Z"
+   },
+   {
     "title": "Rolling multi-city GEFS forward capture from NOAA NODD S3 (new tool)",
     "area": "Forecast brain",
     "merged_at": "2026-10-19T20:16:52Z"
@@ -584,11 +589,6 @@
     "title": "Multi-source blend learner GEFS+NBM/ECMWF/HRRR/LAMP with dependence-group weights (new…",
     "area": "Forecast brain",
     "merged_at": "2026-10-18T23:44:17Z"
-   },
-   {
-    "title": "Model-vs-market edge evaluator after Polymarket weather fees (funding gate metric)",
-    "area": "Forecast brain",
-    "merged_at": "2026-10-18T23:43:53Z"
    }
   ],
   "readiness": {
@@ -1014,7 +1014,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 19,
-     "open_tasks": 3
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
