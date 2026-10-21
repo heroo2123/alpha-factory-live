@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T06:20:02Z",
+ "generated_at": "2026-10-21T06:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_39936fc1",
     "task": "PAPER-02 Shadow evaluates FUTURE_FORECAST on the already-started same-day contract…",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -124,11 +124,11 @@
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     4,
-    2,
-    2,
-    5,
+    3,
+    1,
+    6,
     4,
-    4,
+    3,
     3,
     1,
     0,
@@ -143,10 +143,10 @@
     0,
     0,
     0,
-    5,
-    4,
-    1,
-    2
+    6,
+    3,
+    2,
+    1
    ],
    "merge_holds": [
     "targeted tests failed recently backoff"
@@ -214,31 +214,33 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T06:20:02Z",
+    "last_check_at": "2026-10-21T06:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 6,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 4
+     "P2": 5
     },
     "codes": [
      "flow deepseek low",
      "flow shadow evals all gated",
+     "flow shadow census churn",
+     "flow pin guard scope missing",
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T06:10:02Z",
+    "last_check_at": "2026-10-21T06:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 245,
-    "last_run_at": "2026-10-21T06:20:02Z",
+    "runs_total": 246,
+    "last_run_at": "2026-10-21T06:25:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow deepseek low",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T06:25:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
+   },
    {
     "at": "2026-10-21T06:20:02Z",
     "kind": "heal",
@@ -355,11 +362,6 @@
     "at": "2026-10-21T05:01:20Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “PAPER-09 Refuse mixed synthetic and observed PWS scoring evidence”: passed"
-   },
-   {
-    "at": "2026-10-21T04:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: routine"
    }
   ]
  },
@@ -369,9 +371,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T06:19:59Z",
-   "heartbeat_at": "2026-10-21T06:20:02Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-21T06:24:11Z",
+   "heartbeat_at": "2026-10-21T06:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +382,7 @@
     "weather_events": 438,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T06:18:38Z",
+    "last_scan_at": "2026-10-21T06:24:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T06:18:38Z",
+    "updated_at": "2026-10-21T06:24:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T06:18:34Z",
+    "updated_at": "2026-10-21T06:24:36Z",
     "detail": "observations retained"
    },
    {
