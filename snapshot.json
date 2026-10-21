@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T20:10:02Z",
+ "generated_at": "2026-10-21T20:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 34,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 4,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_4df66dcb",
     "task": "PAPER-02 METAR rules : settlement window accepts the METAR population and…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_af1ca03c",
     "task": "PAPER-02 METAR rules : strict contract accepts exactly the METAR rules form and reports…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 4,
    "last_finished_at": "2026-10-21T17:06:41Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -129,26 +129,27 @@
     0,
     0,
     0,
-    4,
     5,
-    0,
-    3,
-    0,
+    4,
+    1,
     2,
-    3,
-    0,
     1,
     1,
     3,
     0,
+    1,
+    4,
+    0,
+    0,
     0,
     2,
-    3,
     6,
+    3,
     2,
     2
    ],
    "merge_holds": [
+    "protected code: second review asked for changes",
     "protected code: waiting for a second review",
     "waiting for the full test run to finish"
    ],
@@ -158,7 +159,7 @@
     "in_review": 0,
     "awaiting_merge": 7,
     "merged": 364,
-    "parked": 184
+    "parked": 185
    }
   },
   "architect": {
@@ -215,7 +216,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T20:10:02Z",
+    "last_check_at": "2026-10-21T20:15:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,12 +227,12 @@
      "P2": 3
     },
     "codes": [
-     "flow qa resource blocked",
-     "flow qa runtime guard killed run",
      "flow shadow census churn",
+     "flow maintenance review packet invalid",
+     "flow coding card priority stranded",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T20:00:03Z",
+    "last_check_at": "2026-10-21T20:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -372,18 +373,18 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T20:09:59Z",
-   "heartbeat_at": "2026-10-21T20:10:01Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-21T20:11:51Z",
+   "heartbeat_at": "2026-10-21T20:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 443,
-    "markets": 4414,
+    "weather_events": 441,
+    "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T20:07:18Z",
+    "last_scan_at": "2026-10-21T20:12:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T20:07:18Z",
+    "updated_at": "2026-10-21T20:12:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T20:09:53Z",
+    "updated_at": "2026-10-21T20:13:55Z",
     "detail": "observations retained"
    },
    {
