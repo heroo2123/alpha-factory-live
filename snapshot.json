@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T05:30:02Z",
+ "generated_at": "2026-10-21T05:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "42 built in 24h"
+    "active": false,
+    "detail": "43 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_49336fdd",
-    "task": "CODE-01 Bind FEATURES source leases to the admitted rule fingerprint and a declared as_of",
-    "elapsed_min": 22
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Sonnet",
+    "family": "Anthropic",
+    "task_id": "t_49336fdd",
+    "task": "CODE-01 Bind FEATURES source leases to the admitted rule fingerprint and a declared as_of",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 39,
    "commits_24h": 39,
-   "built_24h": 42,
+   "built_24h": 43,
    "build_failed_24h": 3,
    "reviews_passed_24h": 47,
    "reviews_changes_24h": 10,
@@ -127,8 +127,8 @@
     4,
     4,
     0,
-    6,
-    4,
+    7,
+    3,
     3,
     3,
     1,
@@ -143,16 +143,16 @@
     0,
     0,
     0,
-    0,
-    6,
-    3,
+    2,
+    5,
+    2,
     2
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 22,
-    "building": 1,
-    "in_review": 2,
+    "building": 0,
+    "in_review": 3,
     "awaiting_merge": 0,
     "merged": 338,
     "parked": 173
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T05:30:02Z",
+    "last_check_at": "2026-10-21T05:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -226,7 +226,7 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T05:20:02Z",
+    "last_check_at": "2026-10-21T05:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -247,6 +247,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T05:34:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Bind FEATURES source leases to the admitted rule fingerprint…” → sent to independent review"
+   },
    {
     "at": "2026-10-21T05:25:02Z",
     "kind": "heal",
@@ -351,11 +356,6 @@
     "at": "2026-10-21T03:35:11Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T03:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
    }
   ]
  },
@@ -365,9 +365,9 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T05:29:59Z",
-   "heartbeat_at": "2026-10-21T05:30:01Z",
+   "state": "making paper decisions",
+   "status_at": "2026-10-21T05:32:12Z",
+   "heartbeat_at": "2026-10-21T05:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -406,7 +406,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T05:28:18Z",
+    "updated_at": "2026-10-21T05:34:20Z",
     "detail": "observations retained"
    },
    {
