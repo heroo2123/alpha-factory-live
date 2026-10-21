@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T17:50:02Z",
+ "generated_at": "2026-10-21T17:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 40,
+    "count": 41,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "31 merged in 24h"
+    "detail": "32 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_d5ed2226",
     "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 31
+    "elapsed_min": 36
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_578189f6",
     "task": "LIVE-14 Gate candidate job dispatch on the same strict clock-health predicate used at…",
-    "elapsed_min": 25
+    "elapsed_min": 30
    },
    {
     "slot": "Reviewer 1",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 31,
-   "commits_24h": 31,
+   "merges_24h": 32,
+   "commits_24h": 32,
    "built_24h": 44,
    "build_failed_24h": 4,
    "reviews_passed_24h": 58,
@@ -131,14 +131,14 @@
     0,
     0,
     0,
-    2,
+    3,
     6,
-    1,
+    0,
     3,
     0,
     2,
-    1,
     2,
+    1,
     1,
     0,
     4,
@@ -146,18 +146,18 @@
     0,
     2,
     0,
-    7
+    8
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 40,
+    "queued": 41,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 4,
-    "merged": 358,
-    "parked": 184
+    "awaiting_merge": 3,
+    "merged": 359,
+    "parked": 183
    }
   },
   "architect": {
@@ -167,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T17:54:10Z",
+    "title": "CODE-01 Bind the finality policy bounds and financial_authority into the WRH bracket…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T17:45:16Z",
     "title": "CODE-01 Re-check ASOS day coverage and make the IEM corroboration digest reproducible",
@@ -201,11 +206,6 @@
     "at": "2026-10-21T17:09:18Z",
     "title": "CODE-01 PAPER reward maker : reward-zone two-sided quotes + news-aware pulls (model…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T15:39:31Z",
-    "title": "PAPER-08 PAPER-UNBLOCK : FUTURE_FORECAST lane targets the forecast-relevant buckets of…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T17:50:03Z",
+    "last_check_at": "2026-10-21T17:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T17:40:02Z",
+    "last_check_at": "2026-10-21T17:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T17:54:10Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Bind the finality policy bounds and financial_authority into…” into the main build"
+   },
    {
     "at": "2026-10-21T17:50:03Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-21T17:06:10Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-21T17:06:10Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T17:50:03Z",
-   "heartbeat_at": "2026-10-21T17:50:03Z",
+   "status_at": "2026-10-21T17:54:59Z",
+   "heartbeat_at": "2026-10-21T17:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -378,7 +378,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T17:49:41Z",
+    "last_scan_at": "2026-10-21T17:54:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T17:49:41Z",
+    "updated_at": "2026-10-21T17:54:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T17:49:00Z",
+    "updated_at": "2026-10-21T17:53:02Z",
     "detail": "observations retained"
    },
    {
@@ -634,8 +634,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 32,
-     "open_tasks": 3
+     "merged_tasks": 33,
+     "open_tasks": 2
     },
     {
      "id": "CODE-02",
