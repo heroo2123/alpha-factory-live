@@ -1,24 +1,24 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T19:25:02Z",
+ "generated_at": "2026-10-21T19:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 36,
+    "count": 33,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 2,
     "unit": "building",
-    "active": false,
-    "detail": "52 built in 24h"
+    "active": true,
+    "detail": "53 built in 24h"
    },
    {
     "key": "review",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
     "detail": "36 merged in 24h"
@@ -65,22 +65,22 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_5416533b",
+    "task": "New main SHA 9fa0041e4fc5 Alpha V11 FLEX code task t_f0e5eb27 claude",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_b86ffbc0",
+    "task": "LIVE-01 Release-bound read-only Alpha-adapter authentication probe",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -88,8 +88,8 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_a70995d3",
-    "task": "FLEX candidate t_8843a19c 8b21e955a2ab",
+    "task_id": "t_25075fc1",
+    "task": "LIVE-15 Fail the finite guardian client closed when the broker repeats a stale status…",
     "elapsed_min": 1
    },
    {
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 36,
    "commits_24h": 36,
-   "built_24h": 52,
+   "built_24h": 53,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 65,
+   "reviews_passed_24h": 67,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     0,
@@ -145,17 +145,17 @@
     0,
     2,
     6,
-    3,
-    3
+    4,
+    2
    ],
    "merge_holds": [
     "review model not approved reviewer"
    ],
    "stage_totals": {
-    "queued": 36,
-    "building": 0,
+    "queued": 33,
+    "building": 2,
     "in_review": 1,
-    "awaiting_merge": 4,
+    "awaiting_merge": 5,
     "merged": 363,
     "parked": 186
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T19:25:02Z",
+    "last_check_at": "2026-10-21T19:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,11 +234,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 45,
+    "runs_24h": 46,
     "runs_total": 273,
-    "last_run_at": "2026-10-21T18:35:01Z",
-    "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_run_at": "2026-10-21T19:30:03Z",
+    "last_ok": false,
+    "last_kind": "routine",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,26 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-21T19:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: routine"
+   },
+   {
+    "at": "2026-10-21T19:28:57Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-21T19:28:54Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “LIVE-15 Fail the finite guardian client closed when the broker…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T19:28:27Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “FLEX candidate t_8843a19c 8b21e955a2ab”: passed"
+   },
    {
     "at": "2026-10-21T19:23:26Z",
     "kind": "merge",
@@ -340,26 +360,6 @@
     "at": "2026-10-21T18:34:39Z",
     "kind": "merge",
     "text": "Merged “LIVE-14 Gate candidate job dispatch on the same strict clock-health…” into the main build"
-   },
-   {
-    "at": "2026-10-21T18:30:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow qa runtime guard killed run"
-   },
-   {
-    "at": "2026-10-21T18:27:12Z",
-    "kind": "merge",
-    "text": "Merged “Edge evaluator: day-clustered (target-date) bootstrap + recorded…” into the main build"
-   },
-   {
-    "at": "2026-10-21T18:26:12Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “LIVE-15 Keep the guardian GATED while its own cancel requests are…”: changes required"
-   },
-   {
-    "at": "2026-10-21T18:22:28Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “LIVE-14 Gate candidate job dispatch on the same strict clock-health…”: passed"
    }
   ]
  },
@@ -369,9 +369,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "census service",
-   "status_at": "2026-10-21T19:25:02Z",
-   "heartbeat_at": "2026-10-21T19:25:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-21T19:29:08Z",
+   "heartbeat_at": "2026-10-21T19:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T19:19:44Z",
+    "last_scan_at": "2026-10-21T19:25:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T19:19:44Z",
+    "updated_at": "2026-10-21T19:25:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T19:23:36Z",
+    "updated_at": "2026-10-21T19:29:38Z",
     "detail": "observations retained"
    },
    {
