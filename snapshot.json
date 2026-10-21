@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T10:15:03Z",
+ "generated_at": "2026-10-21T10:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "34 merged in 24h"
+    "detail": "32 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0d9d2318",
     "task": "PAPER-08 PAPER-UNBLOCK : sourced non-empty entry cost components per request (existing…",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -116,16 +116,16 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 34,
-   "commits_24h": 34,
+   "merges_24h": 32,
+   "commits_24h": 32,
    "built_24h": 37,
    "build_failed_24h": 3,
    "reviews_passed_24h": 51,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    6,
-    3,
     4,
+    4,
+    3,
     1,
     0,
     0,
@@ -149,7 +149,6 @@
     0
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
     "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
@@ -216,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T10:15:02Z",
+    "last_check_at": "2026-10-21T10:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -383,8 +382,8 @@
    "scanner": {
     "weather_events": 431,
     "markets": 4275,
-    "opportunities": 1,
-    "last_scan_at": "2026-10-21T10:14:10Z",
+    "opportunities": 0,
+    "last_scan_at": "2026-10-21T10:19:23Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T10:14:10Z",
+    "updated_at": "2026-10-21T10:19:23Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T10:13:57Z",
+    "updated_at": "2026-10-21T10:19:59Z",
     "detail": "observations retained"
    },
    {
@@ -479,20 +478,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9368,
-     "city_days": 38
+     "brier": 0.9377,
+     "city_days": 40
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.866,
-     "city_days": 38
+     "brier": 0.8641,
+     "city_days": 40
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.7117,
-     "city_days": 38
+     "brier": 0.7022,
+     "city_days": 40
     },
     {
      "key": "equal",
@@ -504,19 +503,19 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet (current model is also worse than equal odds)",
    "verdict_tone": "bad",
-   "labelled_city_days": 39,
-   "waiting_city_days": 15,
+   "labelled_city_days": 41,
+   "waiting_city_days": 13,
    "labelled_days": 8,
    "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T09:17:03Z",
+   "updated_at": "2026-10-21T10:17:03Z",
    "funding_bar": [
     {
      "item": "Untouched forward city-days",
-     "have": 18,
+     "have": 20,
      "need": 50,
      "done": false,
      "detail": ""
@@ -1085,7 +1084,7 @@
    {
     "step": "Forecast brain beats the market on untouched days",
     "state": "active",
-    "detail": "18 of 50 untouched city-days collected"
+    "detail": "20 of 50 untouched city-days collected"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
