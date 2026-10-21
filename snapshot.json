@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T03:20:02Z",
+ "generated_at": "2026-10-21T03:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "33 merged in 24h"
+    "detail": "34 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_ed0ae975",
     "task": "LIVE-15 Reject aliased guardian custody files",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 14245,
   "flow": {
-   "merges_24h": 33,
-   "commits_24h": 33,
+   "merges_24h": 34,
+   "commits_24h": 34,
    "built_24h": 39,
    "build_failed_24h": 3,
    "reviews_passed_24h": 37,
@@ -127,11 +127,11 @@
     0,
     0,
     4,
-    2,
-    2,
-    5,
+    3,
+    1,
+    6,
     4,
-    4,
+    3,
     3,
     1,
     0,
@@ -146,17 +146,15 @@
     0,
     0,
     0,
-    5
+    6
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 18,
     "building": 1,
     "in_review": 4,
-    "awaiting_merge": 2,
-    "merged": 332,
+    "awaiting_merge": 1,
+    "merged": 333,
     "parked": 171
    }
   },
@@ -167,6 +165,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-21T03:23:39Z",
+    "title": "CODE-01 Refuse realized-P&L splits over a lot attribution that is not an exact partition",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-21T03:14:18Z",
     "title": "CODE-01 Show clock-health, health-record freshness and cancel-only guardian status in…",
@@ -201,11 +204,6 @@
     "at": "2026-10-20T16:55:20Z",
     "title": "CODE-01 Prevent synthetic constituent fields from acquiring public provenance",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-20T16:53:30Z",
-    "title": "CODE-01 Distinguish official revisions from capture-envelope changes",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-21T03:20:02Z",
+    "last_check_at": "2026-10-21T03:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,15 +226,15 @@
      "flow deepseek low",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T03:10:03Z",
+    "last_check_at": "2026-10-21T03:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 54,
-    "runs_total": 237,
-    "last_run_at": "2026-10-21T02:50:02Z",
+    "runs_24h": 55,
+    "runs_total": 238,
+    "last_run_at": "2026-10-21T03:25:01Z",
     "last_ok": true,
-    "last_kind": "flow deepseek low",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +247,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T03:25:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T03:23:39Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Refuse realized-P&L splits over a lot attribution that is…” into the main build"
+   },
    {
     "at": "2026-10-21T03:14:18Z",
     "kind": "merge",
@@ -348,16 +356,6 @@
     "at": "2026-10-21T02:15:23Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “CODE-01 Show clock-health, health-record freshness and cancel-only…”: passed"
-   },
-   {
-    "at": "2026-10-21T02:14:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Show clock-health, health-record freshness and cancel-only…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T02:12:06Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -368,8 +366,8 @@
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-20",
    "state": "census service",
-   "status_at": "2026-10-21T03:19:59Z",
-   "heartbeat_at": "2026-10-21T03:20:03Z",
+   "status_at": "2026-10-21T03:25:00Z",
+   "heartbeat_at": "2026-10-21T03:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -378,7 +376,7 @@
     "weather_events": 394,
     "markets": 3873,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T03:16:35Z",
+    "last_scan_at": "2026-10-21T03:22:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +399,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T03:16:35Z",
+    "updated_at": "2026-10-21T03:22:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T03:19:35Z",
+    "updated_at": "2026-10-21T03:23:37Z",
     "detail": "observations retained"
    },
    {
@@ -627,8 +625,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 28,
-     "open_tasks": 3
+     "merged_tasks": 29,
+     "open_tasks": 2
     },
     {
      "id": "CODE-02",
