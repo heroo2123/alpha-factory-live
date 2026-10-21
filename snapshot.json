@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T19:30:03Z",
+ "generated_at": "2026-10-21T19:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 33,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
     "detail": "36 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_5416533b",
     "task": "New main SHA 9fa0041e4fc5 Alpha V11 FLEX code task t_f0e5eb27 claude",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_b86ffbc0",
-    "task": "LIVE-01 Release-bound read-only Alpha-adapter authentication probe",
-    "elapsed_min": 2
+    "task_id": "t_7c64cad4",
+    "task": "New main SHA ae957ab2baf7 Alpha V11 FLEX code task t_35fa30e5 claude",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_25075fc1",
-    "task": "LIVE-15 Fail the finite guardian client closed when the broker repeats a stale status…",
-    "elapsed_min": 1
+    "task_id": "t_b86ffbc0",
+    "task": "LIVE-01 Release-bound read-only Alpha-adapter authentication probe",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 36,
    "built_24h": 53,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 67,
+   "reviews_passed_24h": 68,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     0,
@@ -129,9 +129,9 @@
     0,
     0,
     0,
-    0,
-    6,
-    3,
+    2,
+    5,
+    2,
     2,
     1,
     2,
@@ -145,8 +145,8 @@
     0,
     2,
     6,
-    4,
-    2
+    5,
+    1
    ],
    "merge_holds": [
     "review model not approved reviewer"
@@ -155,9 +155,9 @@
     "queued": 33,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 5,
+    "awaiting_merge": 6,
     "merged": 363,
-    "parked": 186
+    "parked": 185
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T19:30:03Z",
+    "last_check_at": "2026-10-21T19:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T19:20:03Z",
+    "last_check_at": "2026-10-21T19:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-21T19:34:13Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “LIVE-01 Release-bound read-only Alpha-adapter authentication probe” → sent to independent review"
+   },
+   {
+    "at": "2026-10-21T19:31:24Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “LIVE-15 Fail the finite guardian client closed when the broker…”: passed"
+   },
    {
     "at": "2026-10-21T19:30:03Z",
     "kind": "heal",
@@ -350,16 +360,6 @@
     "at": "2026-10-21T18:40:22Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T18:35:01Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-21T18:34:39Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-14 Gate candidate job dispatch on the same strict clock-health…” into the main build"
    }
   ]
  },
@@ -369,9 +369,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-21T19:29:08Z",
-   "heartbeat_at": "2026-10-21T19:30:04Z",
+   "state": "census service",
+   "status_at": "2026-10-21T19:34:59Z",
+   "heartbeat_at": "2026-10-21T19:35:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T19:25:11Z",
+    "last_scan_at": "2026-10-21T19:30:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T19:25:11Z",
+    "updated_at": "2026-10-21T19:30:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T19:29:38Z",
+    "updated_at": "2026-10-21T19:33:40Z",
     "detail": "observations retained"
    },
    {
