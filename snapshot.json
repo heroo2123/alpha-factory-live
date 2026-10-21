@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T07:40:02Z",
+ "generated_at": "2026-10-21T07:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -15,23 +15,23 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "42 built in 24h"
+    "active": true,
+    "detail": "41 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "38 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_1db0ef81",
+    "task": "PAPER-02 Recompute the retained account-command population in account_replay_audit",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_2ea753ed",
-    "task": "a build task",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -118,17 +118,17 @@
   "flow": {
    "merges_24h": 38,
    "commits_24h": 38,
-   "built_24h": 42,
+   "built_24h": 41,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 50,
+   "reviews_passed_24h": 52,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     4,
     0,
     7,
     4,
-    2,
-    4,
+    3,
+    3,
     0,
     0,
     0,
@@ -142,18 +142,20 @@
     0,
     0,
     2,
-    5,
-    2,
-    2,
+    6,
     1,
+    3,
+    0,
     2
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 21,
-    "building": 0,
-    "in_review": 2,
-    "awaiting_merge": 0,
+    "queued": 20,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 341,
     "parked": 174
    }
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-21T07:39:01Z",
+    "last_check_at": "2026-10-21T07:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +232,15 @@
      "flow maintenance review independence pending",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T07:30:04Z",
+    "last_check_at": "2026-10-21T07:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 248,
-    "last_run_at": "2026-10-21T07:10:02Z",
+    "runs_total": 249,
+    "last_run_at": "2026-10-21T07:45:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow evals all gated",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-21T07:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-21T07:43:18Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “PAPER-03 Recompute the retained decision population in replay_audit…”: passed"
+   },
+   {
+    "at": "2026-10-21T07:41:10Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-21T07:39:11Z",
     "kind": "review",
@@ -345,21 +362,6 @@
     "at": "2026-10-21T05:36:10Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-21T05:35:16Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 Bind FEATURES source leases to the admitted rule fingerprint…”: passed"
-   },
-   {
-    "at": "2026-10-21T05:34:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Bind FEATURES source leases to the admitted rule fingerprint…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T05:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
    }
   ]
  },
@@ -369,18 +371,18 @@
    "release": "4e4ffc6",
    "commissioned_at": "2026-10-20T19:25:01Z",
    "day": "2026-10-21",
-   "state": "making paper decisions",
-   "status_at": "2026-10-21T07:37:39Z",
-   "heartbeat_at": "2026-10-21T07:40:02Z",
+   "state": "census service",
+   "status_at": "2026-10-21T07:45:02Z",
+   "heartbeat_at": "2026-10-21T07:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 431,
-    "markets": 4275,
+    "weather_events": 439,
+    "markets": 4363,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T07:34:27Z",
+    "last_scan_at": "2026-10-21T07:40:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T07:34:27Z",
+    "updated_at": "2026-10-21T07:40:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T07:39:01Z",
+    "updated_at": "2026-10-21T07:43:03Z",
     "detail": "observations retained"
    },
    {
