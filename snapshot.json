@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-21T19:40:02Z",
+ "generated_at": "2026-10-21T19:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 34,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -18,20 +18,20 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "53 built in 24h"
+    "detail": "52 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
     "detail": "36 merged in 24h"
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5416533b",
-    "task": "New main SHA 9fa0041e4fc5 Alpha V11 FLEX code task t_f0e5eb27 claude",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 36,
    "commits_24h": 36,
-   "built_24h": 53,
+   "built_24h": 52,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 68,
+   "reviews_passed_24h": 69,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
@@ -130,10 +130,10 @@
     0,
     0,
     2,
-    5,
-    2,
-    2,
+    6,
     1,
+    3,
+    0,
     2,
     1,
     2,
@@ -144,8 +144,8 @@
     0,
     2,
     0,
-    6,
-    5,
+    7,
+    4,
     1
    ],
    "merge_holds": [
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 34,
     "building": 0,
-    "in_review": 2,
-    "awaiting_merge": 6,
+    "in_review": 1,
+    "awaiting_merge": 7,
     "merged": 363,
     "parked": 186
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-21T19:40:03Z",
+    "last_check_at": "2026-10-21T19:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
      "flow shadow census churn",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-21T19:30:03Z",
+    "last_check_at": "2026-10-21T19:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-21T19:40:26Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “New main SHA ae957ab2baf7 Alpha V11 FLEX code task t_35fa30e5 claude”: passed"
+   },
    {
     "at": "2026-10-21T19:39:14Z",
     "kind": "build",
@@ -355,11 +360,6 @@
     "at": "2026-10-21T18:57:13Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T18:55:53Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “LIVE-14 Bind observation collection to the fresh health sample cited…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-21T19:40:01Z",
-   "heartbeat_at": "2026-10-21T19:40:02Z",
+   "status_at": "2026-10-21T19:44:58Z",
+   "heartbeat_at": "2026-10-21T19:45:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-21T19:36:11Z",
+    "last_scan_at": "2026-10-21T19:41:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-21T19:36:11Z",
+    "updated_at": "2026-10-21T19:41:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-21T19:39:42Z",
+    "updated_at": "2026-10-21T19:43:44Z",
     "detail": "observations retained"
    },
    {
