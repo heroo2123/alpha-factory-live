@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:10:02Z",
+ "generated_at": "2026-10-22T10:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 21,
+    "count": 22,
     "unit": "awaiting merge",
     "active": true,
     "detail": "52 merged in 24h"
@@ -85,22 +85,22 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_e03cfd20",
-    "task": "CODE-01 Require the exact NWS correction-window and finality sentences and refuse…",
-    "elapsed_min": 8
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_ab4d4b53",
-    "task": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -124,28 +124,28 @@
    "reviews_changes_24h": 7,
    "commits_by_hour": [
     1,
+    4,
+    0,
+    0,
+    0,
+    2,
+    6,
+    3,
+    2,
+    2,
+    0,
+    4,
+    0,
     1,
-    3,
-    0,
-    0,
-    2,
-    3,
-    6,
-    2,
     2,
     0,
-    4,
-    0,
-    0,
+    3,
+    7,
+    3,
+    7,
+    2,
     3,
     0,
-    3,
-    4,
-    6,
-    6,
-    3,
-    0,
-    3,
     0
    ],
    "merge_holds": [
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 18,
     "building": 0,
-    "in_review": 3,
-    "awaiting_merge": 21,
+    "in_review": 2,
+    "awaiting_merge": 22,
     "merged": 396,
     "parked": 205
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T10:10:03Z",
+    "last_check_at": "2026-10-22T10:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T10:00:04Z",
+    "last_check_at": "2026-10-22T10:10:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T10:13:15Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “CODE-01 Require the exact NWS correction-window and finality…”: passed"
+   },
    {
     "at": "2026-10-22T10:09:13Z",
     "kind": "warn",
@@ -358,11 +363,6 @@
     "at": "2026-10-22T08:50:25Z",
     "kind": "plan",
     "text": "Architect (Claude Opus) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-22T08:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
    }
   ]
  },
@@ -373,17 +373,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T10:09:59Z",
-   "heartbeat_at": "2026-10-22T10:10:05Z",
+   "status_at": "2026-10-22T10:15:00Z",
+   "heartbeat_at": "2026-10-22T10:15:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 441,
-    "markets": 4375,
+    "weather_events": 440,
+    "markets": 4364,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T10:06:37Z",
+    "last_scan_at": "2026-10-22T10:12:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T10:06:37Z",
+    "updated_at": "2026-10-22T10:12:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T10:09:33Z",
+    "updated_at": "2026-10-22T10:13:35Z",
     "detail": "observations retained"
    },
    {
