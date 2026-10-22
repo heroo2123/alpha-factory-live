@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T19:20:02Z",
+ "generated_at": "2026-10-22T19:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "18 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "71 merged in 24h"
+    "detail": "70 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_c5e4e50f",
-    "task": "CODE-01 PAPER reward maker : causal per-minute paper runner with variants over captured…",
-    "elapsed_min": 7
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "DeepSeek",
     "task_id": "t_749a8ee3",
     "task": "CODE-01 Quantify the residual-risk components and cross-bind the upstream R31 verdict's…",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,21 +116,21 @@
   },
   "tests_passing": 15631,
   "flow": {
-   "merges_24h": 71,
-   "commits_24h": 71,
-   "built_24h": 50,
+   "merges_24h": 70,
+   "commits_24h": 70,
+   "built_24h": 49,
    "build_failed_24h": 12,
-   "reviews_passed_24h": 71,
+   "reviews_passed_24h": 72,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
-    2,
+    1,
     0,
     4,
     0,
     2,
     1,
-    1,
-    2,
+    3,
+    0,
     10,
     0,
     9,
@@ -143,20 +143,21 @@
     13,
     0,
     0,
-    5,
+    6,
     7,
-    4,
+    3,
     2
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
+    "protected code: waiting for a second review",
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
     "queued": 19,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 5,
+    "in_review": 0,
+    "awaiting_merge": 6,
     "merged": 433,
     "parked": 220
    }
@@ -215,7 +216,7 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T19:20:03Z",
+    "last_check_at": "2026-10-22T19:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,15 +234,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T19:10:02Z",
+    "last_check_at": "2026-10-22T19:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 359,
-    "last_run_at": "2026-10-22T19:20:02Z",
+    "runs_total": 360,
+    "last_run_at": "2026-10-22T19:25:02Z",
     "last_ok": true,
-    "last_kind": "routine",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +255,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T19:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-22T19:20:19Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LIVE-15 forbid lazy promisor fetch during read-only guardian release…”: passed"
+   },
    {
     "at": "2026-10-22T19:20:02Z",
     "kind": "heal",
@@ -305,11 +316,6 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow exact scope undispatchable"
    },
    {
-    "at": "2026-10-22T19:00:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow review oversized"
-   },
-   {
     "at": "2026-10-22T18:54:38Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “METAR rule authority must prove the REAL published Polymarket METAR…”: passed"
@@ -358,11 +364,6 @@
     "at": "2026-10-22T18:19:14Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T18:09:23Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “CODE-01 Require a satisfied R31 contract-finality verdict before…”: passed"
    }
   ]
  },
@@ -373,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T19:20:01Z",
-   "heartbeat_at": "2026-10-22T19:20:03Z",
+   "status_at": "2026-10-22T19:24:59Z",
+   "heartbeat_at": "2026-10-22T19:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T19:18:17Z",
+    "updated_at": "2026-10-22T19:24:19Z",
     "detail": "observations retained"
    },
    {
