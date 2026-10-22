@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T12:20:02Z",
+ "generated_at": "2026-10-22T12:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 63,
+    "count": 66,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_03e94d0f",
     "task": "CODE-01 Bind the METAR R31 verdict to its event and require a bounded cutoff bracket",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_ffd5cac2",
     "task": "CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER coordinator inside the…",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 63,
+   "progress_pct": 66,
    "last_finished_at": "2026-10-22T10:21:01Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -129,15 +129,15 @@
     2,
     6,
     3,
-    2,
-    2,
+    3,
+    1,
     0,
     4,
     0,
     2,
     1,
-    1,
-    2,
+    3,
+    0,
     10,
     0,
     9,
@@ -214,15 +214,15 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T12:20:02Z",
+    "last_check_at": "2026-10-22T12:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 8,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 4
+     "P2": 3
     },
     "codes": [
      "flow deepseek low",
@@ -232,12 +232,12 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T12:10:02Z",
+    "last_check_at": "2026-10-22T12:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 331,
+    "runs_total": 332,
     "last_run_at": "2026-10-22T12:20:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -373,17 +373,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T12:20:00Z",
-   "heartbeat_at": "2026-10-22T12:20:01Z",
+   "status_at": "2026-10-22T12:24:59Z",
+   "heartbeat_at": "2026-10-22T12:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 439,
-    "markets": 4356,
+    "weather_events": 440,
+    "markets": 4381,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T12:15:34Z",
+    "last_scan_at": "2026-10-22T12:20:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T12:15:34Z",
+    "updated_at": "2026-10-22T12:20:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T12:19:45Z",
+    "updated_at": "2026-10-22T12:23:47Z",
     "detail": "observations retained"
    },
    {
