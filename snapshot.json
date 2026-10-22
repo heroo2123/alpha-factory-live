@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T03:30:02Z",
+ "generated_at": "2026-10-22T03:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 21,
+    "count": 23,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "41 merged in 24h"
+    "detail": "40 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 67,
+    "count": 69,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_79d4d5a7",
     "task": "CODE-01 PAPER reward maker : multi-city public capture of all reward-bearing weather…",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_673d26c1",
-    "task": "CODE-01 Certify the first-following-date routine-METAR transition bracket for the active…",
-    "elapsed_min": 4
+    "task_id": "t_959d9887",
+    "task": "test_v11_request_assembly must pass monkeypatch to the changed run_candidate helper…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
@@ -88,24 +88,24 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_d3dcb0c2",
-    "task": "CODE-01 Make the RESULT_LAG admission gate evidence-conditional instead of blanket",
-    "elapsed_min": 7
+    "task_id": "t_e9300a16",
+    "task": "New main SHA 515984ec3815 Alpha V11 FLEX code task t_ec45d4b6 deepseek_api",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_47b74467",
-    "task": "PAPER-02 METAR rules : continuous day manager accepts the METAR scope review for…",
-    "elapsed_min": 5
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 67,
+   "progress_pct": 69,
    "last_finished_at": "2026-10-22T02:10:27Z",
    "last_passed": 14813,
    "last_failed": 0,
@@ -116,14 +116,14 @@
   },
   "tests_passing": 14813,
   "flow": {
-   "merges_24h": 41,
-   "commits_24h": 41,
+   "merges_24h": 40,
+   "commits_24h": 40,
    "built_24h": 61,
    "build_failed_24h": 19,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
-    3,
+    2,
     2,
     1,
     2,
@@ -137,8 +137,8 @@
     0,
     2,
     6,
-    4,
-    2,
+    5,
+    1,
     1,
     0,
     4,
@@ -152,10 +152,10 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 22,
+    "queued": 21,
     "building": 2,
-    "in_review": 3,
-    "awaiting_merge": 21,
+    "in_review": 2,
+    "awaiting_merge": 23,
     "merged": 374,
     "parked": 195
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T03:30:02Z",
+    "last_check_at": "2026-10-22T03:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,11 +228,11 @@
      "flow second review inconclusive",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-22T03:20:02Z",
+    "last_check_at": "2026-10-22T03:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 55,
+    "runs_24h": 54,
     "runs_total": 294,
     "last_run_at": "2026-10-22T03:15:02Z",
     "last_ok": true,
@@ -251,6 +251,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T03:34:22Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “CODE-01 Make the RESULT_LAG admission gate evidence-conditional…”: passed"
+   },
+   {
+    "at": "2026-10-22T03:31:27Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “PAPER-02 METAR rules : continuous day manager accepts the METAR…”: passed"
+   },
+   {
+    "at": "2026-10-22T03:31:14Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Certify the first-following-date routine-METAR transition…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T03:25:18Z",
     "kind": "build",
@@ -345,21 +360,6 @@
     "at": "2026-10-22T02:18:24Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “FLEX candidate t_9b9add2c 94e017ecb9e5”: passed"
-   },
-   {
-    "at": "2026-10-22T02:14:15Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “New main SHA 8047ce656d82 Alpha V11 FLEX code task t_73b267c5…”: passed"
-   },
-   {
-    "at": "2026-10-22T02:12:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “New main SHA 8047ce656d82 Alpha V11 FLEX code task t_73b267c5…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T02:11:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “New main SHA 59d8a61a298e Alpha V11 FLEX code task t_53fa1de6 codex” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T03:30:03Z",
-   "heartbeat_at": "2026-10-22T03:30:02Z",
+   "status_at": "2026-10-22T03:34:59Z",
+   "heartbeat_at": "2026-10-22T03:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 438,
     "markets": 4347,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T03:29:19Z",
+    "last_scan_at": "2026-10-22T03:34:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T03:29:19Z",
+    "updated_at": "2026-10-22T03:34:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T03:28:45Z",
+    "updated_at": "2026-10-22T03:34:48Z",
     "detail": "observations retained"
    },
    {
