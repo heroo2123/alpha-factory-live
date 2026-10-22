@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T07:15:02Z",
+ "generated_at": "2026-10-22T07:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 50,
+    "count": 53,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 50,
+   "progress_pct": 53,
    "last_finished_at": "2026-10-22T05:55:17Z",
    "last_passed": 14987,
    "last_failed": 0,
@@ -139,14 +139,14 @@
     0,
     4,
     0,
+    2,
+    1,
     1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2
+    9,
+    0
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T07:15:02Z",
+    "last_check_at": "2026-10-22T07:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,11 +236,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
-    "runs_total": 307,
-    "last_run_at": "2026-10-22T06:35:01Z",
+    "runs_24h": 60,
+    "runs_total": 308,
+    "last_run_at": "2026-10-22T07:20:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow shadow evals all gated",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T07:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
+   },
    {
     "at": "2026-10-22T07:10:30Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-22T06:10:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
-   },
-   {
-    "at": "2026-10-22T06:06:33Z",
-    "kind": "merge",
-    "text": "Merged “LEARNING-SOURCES METAR rules : label attestation uses the event's…” into the main build"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T07:15:01Z",
-   "heartbeat_at": "2026-10-22T07:15:01Z",
+   "status_at": "2026-10-22T07:20:00Z",
+   "heartbeat_at": "2026-10-22T07:20:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 495,
     "markets": 4969,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T07:12:28Z",
+    "last_scan_at": "2026-10-22T07:17:39Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T07:12:28Z",
+    "updated_at": "2026-10-22T07:17:39Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T07:14:01Z",
+    "updated_at": "2026-10-22T07:18:03Z",
     "detail": "observations retained"
    },
    {
@@ -479,20 +479,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9442,
-     "city_days": 44
+     "brier": 0.9208,
+     "city_days": 47
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.866,
-     "city_days": 44
+     "brier": 0.8573,
+     "city_days": 47
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6931,
-     "city_days": 44
+     "brier": 0.6834,
+     "city_days": 47
     },
     {
      "key": "equal",
@@ -504,15 +504,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 24 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 45,
-   "waiting_city_days": 20,
+   "labelled_city_days": 48,
+   "waiting_city_days": 17,
    "labelled_days": 9,
    "captured_days_waiting": 1,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T06:17:03Z",
+   "updated_at": "2026-10-22T07:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
