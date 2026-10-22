@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T00:55:02Z",
+ "generated_at": "2026-10-22T01:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 30,
+    "count": 29,
     "unit": "queued",
     "active": false,
-    "detail": "18 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
@@ -25,13 +25,13 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 15,
+    "count": 16,
     "unit": "awaiting merge",
     "active": true,
     "detail": "44 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 23,
+    "count": 27,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_5065cd2a",
+    "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,22 +80,22 @@
     "family": "DeepSeek",
     "task_id": "t_d3dcb0c2",
     "task": "CODE-01 Make the RESULT_LAG admission gate evidence-conditional instead of blanket",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_673d26c1",
+    "task": "CODE-01 Certify the first-following-date routine-METAR transition bracket for the active…",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 23,
+   "progress_pct": 27,
    "last_finished_at": "2026-10-22T00:06:12Z",
    "last_passed": 14779,
    "last_failed": 15,
@@ -141,10 +141,10 @@
     0,
     8,
     3,
-    1,
-    1,
+    2,
     0,
-    4,
+    1,
+    3,
     0,
     3
    ],
@@ -152,10 +152,10 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 30,
+    "queued": 29,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 15,
+    "awaiting_merge": 16,
     "merged": 371,
     "parked": 193
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T00:55:02Z",
+    "last_check_at": "2026-10-22T01:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,13 +232,13 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
-    "runs_total": 289,
-    "last_run_at": "2026-10-22T00:45:01Z",
-    "last_ok": false,
+    "runs_24h": 60,
+    "runs_total": 290,
+    "last_run_at": "2026-10-22T01:00:02Z",
+    "last_ok": true,
     "last_kind": "routine",
     "running": false,
-    "model": "GLM 5.3",
+    "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -251,6 +251,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T01:00:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: routine"
+   },
+   {
+    "at": "2026-10-22T00:55:33Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_8843a19c 8b21e955a2ab”: passed"
+   },
+   {
+    "at": "2026-10-22T00:55:18Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Certify the first-following-date routine-METAR transition…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T00:49:23Z",
     "kind": "review",
@@ -345,21 +360,6 @@
     "at": "2026-10-22T00:20:03Z",
     "kind": "plan",
     "text": "Architect (Kimi K3) planned 0 new tasks"
-   },
-   {
-    "at": "2026-10-22T00:18:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “New main SHA ae957ab2baf7 Alpha V11 FLEX code task t_35fa30e5 claude”: passed"
-   },
-   {
-    "at": "2026-10-22T00:15:29Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “LIVE-14 Bind observation collection to the fresh health sample cited…”: passed"
-   },
-   {
-    "at": "2026-10-22T00:15:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T00:54:59Z",
-   "heartbeat_at": "2026-10-22T00:55:03Z",
+   "status_at": "2026-10-22T01:00:00Z",
+   "heartbeat_at": "2026-10-22T01:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T00:54:07Z",
+    "last_scan_at": "2026-10-22T00:59:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T00:54:07Z",
+    "updated_at": "2026-10-22T00:59:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T00:53:47Z",
+    "updated_at": "2026-10-22T00:59:50Z",
     "detail": "observations retained"
    },
    {
