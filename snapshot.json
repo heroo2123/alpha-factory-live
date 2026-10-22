@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T14:05:01Z",
+ "generated_at": "2026-10-22T14:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 17,
+    "count": 18,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 69,
+    "count": 73,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 69,
+   "progress_pct": 73,
    "last_finished_at": "2026-10-22T12:54:42Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -125,28 +125,28 @@
    "commits_by_hour": [
     0,
     2,
-    0,
-    8,
-    3,
-    2,
-    0,
-    2,
-    2,
-    0,
-    3,
-    0,
-    3,
-    1,
-    9,
     3,
     6,
+    2,
+    2,
+    0,
+    4,
+    0,
+    0,
+    3,
+    0,
+    3,
+    4,
+    6,
+    6,
+    3,
     0,
     3,
     0,
     6,
     0,
-    12,
-    1
+    13,
+    0
    ],
    "merge_holds": [
     "targeted tests failed"
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 20,
     "building": 0,
-    "in_review": 17,
+    "in_review": 18,
     "awaiting_merge": 14,
     "merged": 415,
     "parked": 206
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T14:05:02Z",
+    "last_check_at": "2026-10-22T14:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,11 +238,11 @@
    "operator": {
     "runs_24h": 60,
     "runs_total": 338,
-    "last_run_at": "2026-10-22T13:15:02Z",
+    "last_run_at": "2026-10-22T14:10:02Z",
     "last_ok": false,
     "last_kind": "flow acceptance followthrough required",
     "running": false,
-    "model": "Claude Opus",
+    "model": "Kimi K3",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -250,10 +250,16 @@
    "Claude",
    "DeepSeek",
    "GLM",
+   "Kimi",
    "MiniMax",
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T14:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-22T13:25:12Z",
     "kind": "review",
@@ -358,11 +364,6 @@
     "at": "2026-10-22T12:54:17Z",
     "kind": "merge",
     "text": "Merged “Candidate-assembly census/audit and MADIS candidate tests must not…” into the main build"
-   },
-   {
-    "at": "2026-10-22T12:43:56Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Enforce the stated bracket bound, quantify per-event…” into the main build"
    }
   ]
  },
@@ -372,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T14:00:46Z",
-   "heartbeat_at": "2026-10-22T14:05:00Z",
+   "state": "census service",
+   "status_at": "2026-10-22T14:10:03Z",
+   "heartbeat_at": "2026-10-22T14:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +384,7 @@
     "weather_events": 448,
     "markets": 4498,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T14:00:38Z",
+    "last_scan_at": "2026-10-22T14:05:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T14:00:38Z",
+    "updated_at": "2026-10-22T14:05:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T14:04:23Z",
+    "updated_at": "2026-10-22T14:08:24Z",
     "detail": "observations retained"
    },
    {
