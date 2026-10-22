@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T16:20:02Z",
+ "generated_at": "2026-10-22T16:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,18 +31,18 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 9,
+    "count": 8,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "69 merged in 24h"
+    "detail": "70 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_13fe0489",
     "task": "strategy_admission must import: tighten RESULT_LAG finality policy to the stated 120 s…",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_e37252e8",
     "task": "PAPER-09 Re-validate the pinned PWS QC record's provider, health, station and…",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": true,
+   "running": false,
    "progress_pct": null,
    "last_finished_at": "2026-10-22T14:41:03Z",
    "last_passed": 0,
@@ -116,24 +116,24 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 69,
-   "commits_24h": 69,
+   "merges_24h": 70,
+   "commits_24h": 70,
    "built_24h": 52,
    "build_failed_24h": 9,
-   "reviews_passed_24h": 81,
+   "reviews_passed_24h": 82,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
     6,
     3,
-    2,
-    2,
+    3,
+    1,
     0,
     4,
     0,
     2,
     1,
-    1,
-    2,
+    3,
+    0,
     10,
     0,
     9,
@@ -146,15 +146,18 @@
     13,
     0,
     0,
-    5
+    6
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "conflicts with newer code, being rebuilt",
+    "targeted tests failed"
+   ],
    "stage_totals": {
     "queued": 18,
     "building": 2,
     "in_review": 2,
-    "awaiting_merge": 9,
-    "merged": 420,
+    "awaiting_merge": 8,
+    "merged": 421,
     "parked": 209
    }
   },
@@ -165,6 +168,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T16:22:19Z",
+    "title": "CODE-01 Record the finality basis and finality evidence hash in the W7 confirmed shadow…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T16:18:42Z",
     "title": "CODE-01 Adversarial rule-drift tests for every master drift class",
@@ -199,11 +207,6 @@
     "at": "2026-10-22T12:54:46Z",
     "title": "CODE-01 Cap WRH bracket policy at the stated finality bound so no caller can certify an…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T12:54:17Z",
-    "title": "Candidate-assembly census/audit and MADIS candidate tests must not depend on host load",
-    "area": "Test repairs"
    }
   ],
   "self_healing": {
@@ -212,15 +215,15 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T16:20:02Z",
+    "last_check_at": "2026-10-22T16:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 13,
+    "active": 11,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 8
+     "P2": 6
     },
     "codes": [
      "flow unmergeable reviewed work",
@@ -230,7 +233,7 @@
      "flow green release failed",
      "flow release repeated same failure"
     ],
-    "last_check_at": "2026-10-22T16:10:03Z",
+    "last_check_at": "2026-10-22T16:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +256,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T16:24:14Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:23:09Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:22:19Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Record the finality basis and finality evidence hash in the…” into the main build"
+   },
    {
     "at": "2026-10-22T16:19:13Z",
     "kind": "review",
@@ -347,21 +365,6 @@
     "at": "2026-10-22T16:09:15Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:08:18Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:08:13Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:06:23Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
    }
   ]
  },
@@ -371,9 +374,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T16:17:12Z",
-   "heartbeat_at": "2026-10-22T16:20:02Z",
+   "state": "census service",
+   "status_at": "2026-10-22T16:25:00Z",
+   "heartbeat_at": "2026-10-22T16:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +385,7 @@
     "weather_events": 438,
     "markets": 4393,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T16:17:21Z",
+    "last_scan_at": "2026-10-22T16:22:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T16:17:21Z",
+    "updated_at": "2026-10-22T16:22:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T16:19:08Z",
+    "updated_at": "2026-10-22T16:23:09Z",
     "detail": "observations retained"
    },
    {
@@ -638,8 +641,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 46,
-     "open_tasks": 10
+     "merged_tasks": 47,
+     "open_tasks": 9
     },
     {
      "id": "CODE-02",
