@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T01:00:02Z",
+ "generated_at": "2026-10-22T01:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 29,
+    "count": 31,
     "unit": "queued",
     "active": false,
-    "detail": "17 ready to build"
+    "detail": "18 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 27,
+    "count": 29,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_d3dcb0c2",
     "task": "CODE-01 Make the RESULT_LAG admission gate evidence-conditional instead of blanket",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_673d26c1",
-    "task": "CODE-01 Certify the first-following-date routine-METAR transition bracket for the active…",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 27,
+   "progress_pct": 29,
    "last_finished_at": "2026-10-22T00:06:12Z",
    "last_passed": 14779,
    "last_failed": 15,
@@ -121,17 +121,17 @@
    "built_24h": 59,
    "build_failed_24h": 20,
    "reviews_passed_24h": 57,
-   "reviews_changes_24h": 10,
+   "reviews_changes_24h": 11,
    "commits_by_hour": [
     0,
-    3,
-    6,
+    4,
+    5,
     0,
     3,
     0,
     2,
-    2,
-    1,
+    3,
+    0,
     1,
     0,
     4,
@@ -143,8 +143,8 @@
     3,
     2,
     0,
-    1,
-    3,
+    2,
+    2,
     0,
     3
    ],
@@ -152,9 +152,9 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 29,
+    "queued": 31,
     "building": 2,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 16,
     "merged": 371,
     "parked": 193
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T01:00:03Z",
+    "last_check_at": "2026-10-22T01:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -222,13 +222,13 @@
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 1
+     "P2": 2
     },
     "codes": [
-     "flow shadow census churn",
+     "flow review repair scope missing",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-22T00:50:02Z",
+    "last_check_at": "2026-10-22T01:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T01:03:18Z",
+    "kind": "warn",
+    "text": "MiniMax M3 reviewed “CODE-01 Certify the first-following-date routine-METAR transition…”: changes required"
+   },
    {
     "at": "2026-10-22T01:00:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-22T00:21:17Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “test_v11_request_assembly must pass monkeypatch to the changed…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T00:20:03Z",
-    "kind": "plan",
-    "text": "Architect (Kimi K3) planned 0 new tasks"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T01:00:00Z",
-   "heartbeat_at": "2026-10-22T01:00:03Z",
+   "status_at": "2026-10-22T01:05:00Z",
+   "heartbeat_at": "2026-10-22T01:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T00:59:30Z",
+    "last_scan_at": "2026-10-22T01:04:55Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T00:59:30Z",
+    "updated_at": "2026-10-22T01:04:55Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T00:59:50Z",
+    "updated_at": "2026-10-22T01:03:52Z",
     "detail": "observations retained"
    },
    {
@@ -637,7 +637,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 35,
-     "open_tasks": 4
+     "open_tasks": 3
     },
     {
      "id": "CODE-02",
