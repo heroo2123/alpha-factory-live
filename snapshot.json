@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T11:50:07Z",
+ "generated_at": "2026-10-22T11:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "7 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_a3eb2f8a",
     "task": "CODE-01 Test durable scenario-view archive incl. namespace/tamper refusals",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Builder 2",
@@ -128,8 +128,8 @@
     0,
     2,
     0,
-    7,
-    4,
+    8,
+    3,
     1,
     1,
     0,
@@ -152,12 +152,12 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 18,
+    "queued": 19,
     "building": 1,
     "in_review": 0,
     "awaiting_merge": 20,
     "merged": 402,
-    "parked": 205
+    "parked": 204
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T11:50:08Z",
+    "last_check_at": "2026-10-22T11:55:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T11:40:37Z",
+    "last_check_at": "2026-10-22T11:50:08Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T11:49:15Z",
-   "heartbeat_at": "2026-10-22T11:50:10Z",
+   "status_at": "2026-10-22T11:54:59Z",
+   "heartbeat_at": "2026-10-22T11:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 439,
     "markets": 4356,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T11:47:16Z",
+    "last_scan_at": "2026-10-22T11:53:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T11:47:16Z",
+    "updated_at": "2026-10-22T11:53:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T11:49:31Z",
+    "updated_at": "2026-10-22T11:53:35Z",
     "detail": "observations retained"
    },
    {
