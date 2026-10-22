@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T11:40:53Z",
+ "generated_at": "2026-10-22T11:45:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 29,
+    "count": 38,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_a3eb2f8a",
     "task": "CODE-01 Test durable scenario-view archive incl. namespace/tamper refusals",
-    "elapsed_min": 7
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 29,
+   "progress_pct": 38,
    "last_finished_at": "2026-10-22T10:21:01Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -128,8 +128,8 @@
     0,
     2,
     0,
-    6,
-    5,
+    7,
+    4,
     1,
     1,
     0,
@@ -145,8 +145,8 @@
     0,
     3,
     0,
-    4,
-    2
+    6,
+    0
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
@@ -214,15 +214,15 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T11:41:09Z",
+    "last_check_at": "2026-10-22T11:45:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 8,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 4
+     "P2": 3
     },
     "codes": [
      "flow deepseek low",
@@ -232,15 +232,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T11:30:03Z",
+    "last_check_at": "2026-10-22T11:40:37Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 326,
-    "last_run_at": "2026-10-22T11:41:09Z",
+    "runs_total": 327,
+    "last_run_at": "2026-10-22T11:45:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow evals all gated",
+    "last_kind": "flow deepseek low",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T11:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow deepseek low"
+   },
    {
     "at": "2026-10-22T11:41:09Z",
     "kind": "heal",
@@ -278,11 +283,6 @@
     "at": "2026-10-22T11:20:04Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
-   },
-   {
-    "at": "2026-10-22T11:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow review oversized"
    },
    {
     "at": "2026-10-22T11:05:51Z",
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T11:39:55Z",
-   "heartbeat_at": "2026-10-22T11:41:11Z",
+   "status_at": "2026-10-22T11:44:58Z",
+   "heartbeat_at": "2026-10-22T11:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T11:38:35Z",
+    "updated_at": "2026-10-22T11:43:18Z",
     "detail": "observations retained"
    },
    {
