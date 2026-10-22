@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T06:25:02Z",
+ "generated_at": "2026-10-22T06:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "64 built in 24h"
+    "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 4,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_959d9887",
-    "task": "test_v11_request_assembly must pass monkeypatch to the changed run_candidate helper…",
-    "elapsed_min": 15
+    "task_id": "t_b86ffbc0",
+    "task": "LIVE-01 Release-bound read-only Alpha-adapter authentication probe",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_0aa08bf8",
-    "task": "PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any forecast exists",
-    "elapsed_min": 1
+    "task_id": "t_679985b0",
+    "task": "New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389 deepseek_api",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -88,24 +88,24 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_935883da",
-    "task": "a build task",
-    "elapsed_min": 3
+    "task_id": "t_0aa08bf8",
+    "task": "PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any forecast exists",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_7158ea01",
+    "task": "FLEX candidate t_959d9887 0218eebc031c",
+    "elapsed_min": 3
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 4,
    "last_finished_at": "2026-10-22T05:55:17Z",
    "last_passed": 14987,
    "last_failed": 0,
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 54,
    "commits_24h": 54,
-   "built_24h": 64,
+   "built_24h": 65,
    "build_failed_24h": 16,
-   "reviews_passed_24h": 69,
-   "reviews_changes_24h": 8,
+   "reviews_passed_24h": 67,
+   "reviews_changes_24h": 9,
    "commits_by_hour": [
     2,
     1,
@@ -134,14 +134,14 @@
     0,
     2,
     6,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -149,16 +149,15 @@
     9
    ],
    "merge_holds": [
-    "waiting for the full test run to finish",
-    "protected code: second review asked for changes"
+    "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 21,
+    "queued": 20,
     "building": 2,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 13,
     "merged": 393,
-    "parked": 201
+    "parked": 200
    }
   },
   "architect": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T06:25:02Z",
+    "last_check_at": "2026-10-22T06:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 59,
-    "runs_total": 305,
-    "last_run_at": "2026-10-22T06:15:02Z",
+    "runs_total": 306,
+    "last_run_at": "2026-10-22T06:30:03Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -256,6 +255,26 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T06:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-22T06:29:20Z",
+    "kind": "warn",
+    "text": "MiniMax M3 reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-22T06:29:15Z",
+    "kind": "build",
+    "text": "Claude Opus built “PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T06:26:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “test_v11_request_assembly must pass monkeypatch to the changed…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T06:17:22Z",
     "kind": "review",
@@ -337,11 +356,6 @@
     "text": "DeepSeek V4 Pro reviewed “CODE-01 PAPER reward maker : multi-city public capture of all…”: passed"
    },
    {
-    "at": "2026-10-22T05:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Sonnet) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-22T05:28:58Z",
     "kind": "warn",
     "text": "MiniMax M3 reviewed “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…”: changes required"
@@ -350,21 +364,6 @@
     "at": "2026-10-22T05:19:54Z",
     "kind": "build",
     "text": "Claude Opus built “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T05:16:59Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 PAPER reward maker : multi-city public capture of all…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T04:54:31Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “CODE-01 Bind optional R31 contract-finality verdict provenance to…”: passed"
-   },
-   {
-    "at": "2026-10-22T04:54:19Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “CODE-01 Cap WRH bracket policy at the stated finality bound so no…”: passed"
    }
   ]
  },
@@ -374,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T06:25:01Z",
-   "heartbeat_at": "2026-10-22T06:25:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T06:27:12Z",
+   "heartbeat_at": "2026-10-22T06:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -415,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T06:23:45Z",
+    "updated_at": "2026-10-22T06:29:47Z",
     "detail": "observations retained"
    },
    {
@@ -503,7 +502,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 22 untouched city-days (11 cities, 2 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 24 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 45,
    "waiting_city_days": 20,
@@ -538,7 +537,7 @@
     },
     {
      "item": "Not worse than the market on new untouched days",
-     "have": 2,
+     "have": 3,
      "need": 10,
      "done": false,
      "detail": "waiting for a frozen candidate"
@@ -1093,7 +1092,7 @@
    {
     "step": "Forecast brain passes a preregistered historical test and is not worse than the market on new days",
     "state": "active",
-    "detail": "0 of 3 candidate models used · 2 of 10 untouched days"
+    "detail": "0 of 3 candidate models used · 3 of 10 untouched days"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
