@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T16:10:02Z",
+ "generated_at": "2026-10-22T16:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
@@ -18,23 +18,23 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "59 built in 24h"
+    "detail": "54 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 13,
+    "count": 6,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 14,
+    "count": 12,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "64 merged in 24h"
+    "detail": "66 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_13fe0489",
     "task": "strategy_admission must import: tighten RESULT_LAG finality policy to the stated 120 s…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_ecfbaf75",
-    "task": "a build task",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -116,48 +116,46 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 64,
-   "commits_24h": 64,
-   "built_24h": 59,
+   "merges_24h": 66,
+   "commits_24h": 66,
+   "built_24h": 54,
    "build_failed_24h": 9,
-   "reviews_passed_24h": 73,
-   "reviews_changes_24h": 8,
+   "reviews_passed_24h": 79,
+   "reviews_changes_24h": 7,
    "commits_by_hour": [
-    3,
     6,
+    3,
     2,
     2,
     0,
     4,
     0,
+    1,
+    2,
     0,
     3,
+    7,
+    3,
+    7,
+    2,
+    3,
     0,
-    3,
-    4,
-    6,
-    6,
-    3,
-    0,
-    3,
     0,
     6,
     0,
     13,
     0,
     0,
-    0
+    2
    ],
-   "merge_holds": [
-    "targeted tests failed"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 19,
     "building": 1,
-    "in_review": 13,
-    "awaiting_merge": 14,
-    "merged": 415,
-    "parked": 208
+    "in_review": 6,
+    "awaiting_merge": 12,
+    "merged": 417,
+    "parked": 209
    }
   },
   "architect": {
@@ -167,6 +165,16 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T16:11:58Z",
+    "title": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-22T16:11:31Z",
+    "title": "CODE-01 Require the exact NWS correction-window and finality sentences and refuse…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T13:07:59Z",
     "title": "CODE-01 Re-verify the WRH snapshot digests before IEM ASOS corroboration",
@@ -196,33 +204,23 @@
     "at": "2026-10-22T12:43:24Z",
     "title": "CODE-01 Make opportunity ranking respect candidate expiry and fail closed on missing…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T12:39:49Z",
-    "title": "CODE-01 PAPER reward maker : multi-city public capture of all reward-bearing weather…",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T12:39:24Z",
-    "title": "CODE-01 Bind optional R31 contract-finality verdict provenance to provisional Result-Lag…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 11,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-10-22T16:10:03Z",
+    "recoveries_24h": 10,
+    "last_check_at": "2026-10-22T16:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 12,
+    "active": 13,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 7
+     "P2": 8
     },
     "codes": [
      "flow unmergeable reviewed work",
@@ -232,7 +230,7 @@
      "flow green release failed",
      "flow release repeated same failure"
     ],
-    "last_check_at": "2026-10-22T16:00:02Z",
+    "last_check_at": "2026-10-22T16:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +253,56 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T16:14:11Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:13:19Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:13:14Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:13:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-22T16:11:58Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-03 Refuse reopening an evidence store whose append-only…” into the main build"
+   },
+   {
+    "at": "2026-10-22T16:11:31Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Require the exact NWS correction-window and finality…” into the main build"
+   },
+   {
+    "at": "2026-10-22T16:11:23Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:11:20Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:10:23Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:10:18Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-22T16:09:15Z",
     "kind": "review",
@@ -314,56 +362,6 @@
     "at": "2026-10-22T16:02:13Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T15:35:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-22T15:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (GLM 5.3) audit run: flow green release failed"
-   },
-   {
-    "at": "2026-10-22T15:32:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-22T15:31:07Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T15:31:07Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T14:48:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
-   },
-   {
-    "at": "2026-10-22T14:41:03Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 0 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-22T14:32:39Z",
-    "kind": "warn",
-    "text": "Full test suite finished: 15411 passed, 19 failed"
-   },
-   {
-    "at": "2026-10-22T14:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (GLM 5.3) audit run: flow green release failed"
-   },
-   {
-    "at": "2026-10-22T14:28:07Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -374,8 +372,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T16:10:01Z",
-   "heartbeat_at": "2026-10-22T16:10:03Z",
+   "status_at": "2026-10-22T16:14:59Z",
+   "heartbeat_at": "2026-10-22T16:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +382,7 @@
     "weather_events": 438,
     "markets": 4393,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T16:05:43Z",
+    "last_scan_at": "2026-10-22T16:11:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T16:05:43Z",
+    "updated_at": "2026-10-22T16:11:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T16:09:03Z",
+    "updated_at": "2026-10-22T16:13:04Z",
     "detail": "observations retained"
    },
    {
@@ -640,8 +638,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 43,
-     "open_tasks": 13
+     "merged_tasks": 44,
+     "open_tasks": 12
     },
     {
      "id": "CODE-02",
@@ -685,8 +683,8 @@
      "name": "Evidence persistence healthy",
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
-     "merged_tasks": 1,
-     "open_tasks": 2
+     "merged_tasks": 2,
+     "open_tasks": 1
     },
     {
      "id": "PAPER-04",
