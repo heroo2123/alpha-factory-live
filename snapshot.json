@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T01:50:03Z",
+ "generated_at": "2026-10-22T01:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "61 built in 24h"
+    "detail": "60 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 19,
+    "count": 20,
     "unit": "awaiting merge",
     "active": true,
     "detail": "44 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 77,
+    "count": 79,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_9289e72a",
     "task": "New main SHA 8047ce656d82 Alpha V11 FLEX code task t_73b267c5 claude_api",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_9b9add2c",
     "task": "New main SHA 59d8a61a298e Alpha V11 FLEX code task t_53fa1de6 codex",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Reviewer 1",
@@ -98,14 +98,14 @@
     "state": "working",
     "model": "GLM 5.2",
     "family": "Zhipu",
-    "task_id": "t_31228a44",
-    "task": "FLEX candidate t_b0a67257 294b1fa034eb",
-    "elapsed_min": 2
+    "task_id": "t_4ac67683",
+    "task": "LEARNING-SOURCES METAR rules : label attestation uses the event's rule version (METAR…",
+    "elapsed_min": 1
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 77,
+   "progress_pct": 79,
    "last_finished_at": "2026-10-22T00:06:12Z",
    "last_passed": 14779,
    "last_failed": 15,
@@ -118,19 +118,19 @@
   "flow": {
    "merges_24h": 44,
    "commits_24h": 44,
-   "built_24h": 61,
+   "built_24h": 60,
    "build_failed_24h": 20,
    "reviews_passed_24h": 57,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
-    2,
+    3,
     6,
-    1,
+    0,
     3,
     0,
     2,
-    1,
     2,
+    1,
     1,
     0,
     4,
@@ -138,8 +138,8 @@
     0,
     2,
     0,
-    7,
-    4,
+    8,
+    3,
     1,
     1,
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 25,
     "building": 2,
-    "in_review": 3,
-    "awaiting_merge": 19,
+    "in_review": 2,
+    "awaiting_merge": 20,
     "merged": 371,
     "parked": 193
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T01:50:03Z",
+    "last_check_at": "2026-10-22T01:55:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,11 +228,11 @@
      "flow second review inconclusive",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-22T01:40:02Z",
+    "last_check_at": "2026-10-22T01:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
+    "runs_24h": 57,
     "runs_total": 291,
     "last_run_at": "2026-10-22T01:35:02Z",
     "last_ok": true,
@@ -251,6 +251,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T01:53:28Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “FLEX candidate t_b0a67257 294b1fa034eb”: passed"
+   },
+   {
+    "at": "2026-10-22T01:53:10Z",
+    "kind": "review",
+    "text": "MiniMax M3 review ended: review unresolved inconclusive bad…"
+   },
    {
     "at": "2026-10-22T01:48:23Z",
     "kind": "review",
@@ -350,16 +360,6 @@
     "at": "2026-10-22T00:45:01Z",
     "kind": "heal",
     "text": "Operator AI (GLM 5.3) audit run: routine"
-   },
-   {
-    "at": "2026-10-22T00:41:19Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “test_v11_risk_inputs must pass monkeypatch to the changed…”: passed"
-   },
-   {
-    "at": "2026-10-22T00:40:14Z",
-    "kind": "plan",
-    "text": "Architect (GLM 5.2) planned 6 new tasks"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T01:50:00Z",
-   "heartbeat_at": "2026-10-22T01:50:04Z",
+   "status_at": "2026-10-22T01:55:00Z",
+   "heartbeat_at": "2026-10-22T01:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T01:47:18Z",
+    "last_scan_at": "2026-10-22T01:52:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T01:47:18Z",
+    "updated_at": "2026-10-22T01:52:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T01:48:09Z",
+    "updated_at": "2026-10-22T01:54:12Z",
     "detail": "observations retained"
    },
    {
