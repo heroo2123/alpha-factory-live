@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T06:05:01Z",
+ "generated_at": "2026-10-22T06:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 22,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "64 built in 24h"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 18,
+    "count": 16,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "48 merged in 24h"
+    "detail": "50 merged in 24h"
    },
    {
     "key": "qa",
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
+    "active": false,
     "detail": "current release b603a22"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_66e9fed7",
-    "task": "CODE-01 Enforce the stated bracket bound, quantify per-event residual risk and join IEM…",
-    "elapsed_min": 1
+    "task_id": "t_959d9887",
+    "task": "test_v11_request_assembly must pass monkeypatch to the changed run_candidate helper…",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_9df150f6",
-    "task": "CODE-01 Make opportunity ranking respect candidate expiry and fail closed on missing…",
-    "elapsed_min": 6
+    "task_id": "t_66e9fed7",
+    "task": "CODE-01 Enforce the stated bracket bound, quantify per-event residual risk and join IEM…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 14987,
   "flow": {
-   "merges_24h": 48,
-   "commits_24h": 48,
+   "merges_24h": 50,
+   "commits_24h": 50,
    "built_24h": 64,
-   "build_failed_24h": 17,
-   "reviews_passed_24h": 67,
+   "build_failed_24h": 16,
+   "reviews_passed_24h": 68,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
@@ -128,34 +128,34 @@
     3,
     0,
     1,
+    1,
+    3,
+    0,
+    0,
+    2,
+    3,
+    6,
+    2,
+    2,
     0,
     4,
     0,
     0,
-    2,
-    0,
-    8,
-    3,
-    2,
-    0,
-    2,
-    2,
-    0,
     3,
     0,
     3,
-    1,
-    9,
-    3
+    4,
+    6,
+    5
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 23,
-    "building": 1,
+    "queued": 22,
+    "building": 2,
     "in_review": 1,
-    "awaiting_merge": 18,
-    "merged": 387,
-    "parked": 198
+    "awaiting_merge": 16,
+    "merged": 389,
+    "parked": 199
    }
   },
   "architect": {
@@ -165,6 +165,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T06:06:33Z",
+    "title": "LEARNING-SOURCES METAR rules : label attestation uses the event's rule version (METAR…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T06:02:38Z",
     "title": "CODE-01 R31 contract-defined finality: re-implement reviewed candidate on current main…",
@@ -199,11 +204,6 @@
     "at": "2026-10-22T02:21:55Z",
     "title": "CODE-01 Record observed A->B->A reversions and the polling cadence as quantified…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T02:18:55Z",
-    "title": "PAPER-02 METAR rules : rollforward publisher normalises METAR rule envelopes (URL…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T06:04:02Z",
+    "last_check_at": "2026-10-22T06:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,11 +232,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
-    "runs_total": 303,
-    "last_run_at": "2026-10-22T06:00:03Z",
+    "runs_24h": 60,
+    "runs_total": 304,
+    "last_run_at": "2026-10-22T06:10:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow shadow evals all gated",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,26 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T06:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
+   },
+   {
+    "at": "2026-10-22T06:06:33Z",
+    "kind": "merge",
+    "text": "Merged “LEARNING-SOURCES METAR rules : label attestation uses the event's…” into the main build"
+   },
+   {
+    "at": "2026-10-22T06:06:27Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “CODE-01 Make opportunity ranking respect candidate expiry and fail…”: passed"
+   },
+   {
+    "at": "2026-10-22T06:06:13Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Enforce the stated bracket bound, quantify per-event…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T06:02:38Z",
     "kind": "merge",
@@ -340,26 +360,6 @@
     "at": "2026-10-22T04:42:13Z",
     "kind": "build",
     "text": "Claude Opus built “LIVE-14 Measure the kernel clock error bound and gate new openings…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T04:40:21Z",
-    "kind": "plan",
-    "text": "Architect (Claude Opus) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-22T04:30:32Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389…”: passed"
-   },
-   {
-    "at": "2026-10-22T04:25:55Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T04:24:11Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “a task”: passed"
    }
   ]
  },
@@ -369,9 +369,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T06:04:59Z",
-   "heartbeat_at": "2026-10-22T06:05:00Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T06:08:44Z",
+   "heartbeat_at": "2026-10-22T06:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 499,
     "markets": 5013,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T06:03:41Z",
+    "last_scan_at": "2026-10-22T06:08:47Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T06:03:41Z",
+    "updated_at": "2026-10-22T06:08:47Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T06:03:37Z",
+    "updated_at": "2026-10-22T06:09:39Z",
     "detail": "observations retained"
    },
    {
