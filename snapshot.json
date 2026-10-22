@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T06:55:01Z",
+ "generated_at": "2026-10-22T07:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 22,
     "unit": "queued",
     "active": false,
     "detail": "14 ready to build"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 38,
+    "count": 39,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_7ed3d9e0",
     "task": "Root-custodied guardian commissioning manifest reader",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_fa1ac2ee",
     "task": "CODE-01 Cap WRH bracket policy at the stated finality bound so no caller can certify an…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 38,
+   "progress_pct": 39,
    "last_finished_at": "2026-10-22T05:55:17Z",
    "last_passed": 14987,
    "last_failed": 0,
@@ -135,10 +135,10 @@
     0,
     8,
     3,
-    1,
-    1,
+    2,
     0,
-    4,
+    1,
+    3,
     0,
     3,
     0,
@@ -152,7 +152,7 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 21,
+    "queued": 22,
     "building": 2,
     "in_review": 0,
     "awaiting_merge": 14,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T06:55:01Z",
+    "last_check_at": "2026-10-22T07:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T06:55:00Z",
-   "heartbeat_at": "2026-10-22T06:55:01Z",
+   "status_at": "2026-10-22T07:00:00Z",
+   "heartbeat_at": "2026-10-22T07:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 494,
     "markets": 4958,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T06:51:19Z",
+    "last_scan_at": "2026-10-22T06:56:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T06:51:19Z",
+    "updated_at": "2026-10-22T06:56:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T06:53:54Z",
+    "updated_at": "2026-10-22T06:59:56Z",
     "detail": "observations retained"
    },
    {
