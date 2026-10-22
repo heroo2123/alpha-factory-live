@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T05:25:02Z",
+ "generated_at": "2026-10-22T05:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "63 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 67,
+    "count": 70,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_9df150f6",
+    "task": "CODE-01 Make opportunity ranking respect candidate expiry and fail closed on missing…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -90,22 +90,22 @@
     "family": "DeepSeek",
     "task_id": "t_79d4d5a7",
     "task": "CODE-01 PAPER reward maker : multi-city public capture of all reward-bearing weather…",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_ffd5cac2",
-    "task": "CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER coordinator inside the…",
-    "elapsed_min": 5
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 67,
+   "progress_pct": 70,
    "last_finished_at": "2026-10-22T03:58:58Z",
    "last_passed": 14835,
    "last_failed": 0,
@@ -121,7 +121,7 @@
    "built_24h": 63,
    "build_failed_24h": 17,
    "reviews_passed_24h": 67,
-   "reviews_changes_24h": 9,
+   "reviews_changes_24h": 10,
    "commits_by_hour": [
     1,
     2,
@@ -135,14 +135,14 @@
     0,
     2,
     6,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -152,12 +152,12 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 23,
-    "building": 0,
-    "in_review": 2,
+    "queued": 24,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 20,
     "merged": 384,
-    "parked": 197
+    "parked": 198
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T05:25:02Z",
+    "last_check_at": "2026-10-22T05:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,13 +233,13 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 56,
-    "runs_total": 300,
-    "last_run_at": "2026-10-22T05:25:02Z",
-    "last_ok": false,
-    "last_kind": "flow acceptance followthrough required",
+    "runs_24h": 57,
+    "runs_total": 301,
+    "last_run_at": "2026-10-22T05:30:03Z",
+    "last_ok": true,
+    "last_kind": "flow green release failed",
     "running": false,
-    "model": "Claude Opus",
+    "model": "Claude Sonnet",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -252,6 +252,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T05:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Sonnet) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-22T05:28:58Z",
+    "kind": "warn",
+    "text": "MiniMax M3 reviewed “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…”: changes required"
+   },
    {
     "at": "2026-10-22T05:25:02Z",
     "kind": "heal",
@@ -351,16 +361,6 @@
     "at": "2026-10-22T04:12:12Z",
     "kind": "warn",
     "text": "MiniMax M3 reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-22T04:11:53Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-14 Bind observation collection to the fresh health sample cited…” into the main build"
-   },
-   {
-    "at": "2026-10-22T04:11:17Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Add a fail-closed guardian commissioning-prerequisite…” into the main build"
    }
   ]
  },
@@ -370,9 +370,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T05:25:00Z",
-   "heartbeat_at": "2026-10-22T05:25:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T05:28:09Z",
+   "heartbeat_at": "2026-10-22T05:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -381,7 +381,7 @@
     "weather_events": 502,
     "markets": 5046,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T05:22:09Z",
+    "last_scan_at": "2026-10-22T05:27:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T05:22:09Z",
+    "updated_at": "2026-10-22T05:27:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T05:23:24Z",
+    "updated_at": "2026-10-22T05:29:26Z",
     "detail": "observations retained"
    },
    {
@@ -638,7 +638,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 37,
-     "open_tasks": 7
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
