@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T11:15:02Z",
+ "generated_at": "2026-10-22T11:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_62f55abb",
     "task": "Journal rule-text drift rejection in the day manager refresh",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -135,14 +135,14 @@
     0,
     4,
     0,
+    2,
+    1,
     1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2,
+    9,
+    0,
     3,
     0,
     0,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T11:15:03Z",
+    "last_check_at": "2026-10-22T11:20:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 322,
-    "last_run_at": "2026-10-22T11:15:02Z",
+    "runs_total": 323,
+    "last_run_at": "2026-10-22T11:20:04Z",
     "last_ok": true,
-    "last_kind": "flow review oversized",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -256,6 +256,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T11:20:04Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
+   },
    {
     "at": "2026-10-22T11:15:02Z",
     "kind": "heal",
@@ -305,11 +310,6 @@
     "at": "2026-10-22T10:37:12Z",
     "kind": "merge",
     "text": "Merged “LEARNING-SOURCES METAR rules : multimodel panel accepts…” into the main build"
-   },
-   {
-    "at": "2026-10-22T10:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
    },
    {
     "at": "2026-10-22T10:33:01Z",
@@ -375,17 +375,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T11:15:00Z",
-   "heartbeat_at": "2026-10-22T11:15:03Z",
+   "status_at": "2026-10-22T11:20:00Z",
+   "heartbeat_at": "2026-10-22T11:20:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
     "weather_events": 439,
-    "markets": 4353,
+    "markets": 4356,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T11:11:16Z",
+    "last_scan_at": "2026-10-22T11:17:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T11:11:16Z",
+    "updated_at": "2026-10-22T11:17:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T11:14:19Z",
+    "updated_at": "2026-10-22T11:18:22Z",
     "detail": "observations retained"
    },
    {
@@ -513,7 +513,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T10:17:04Z",
+   "updated_at": "2026-10-22T11:17:04Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
