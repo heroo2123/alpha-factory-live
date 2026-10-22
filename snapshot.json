@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T04:35:01Z",
+ "generated_at": "2026-10-22T04:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 16,
+    "count": 18,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_b951553d",
     "task": "LIVE-14 Measure the kernel clock error bound and gate new openings on it",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 16,
+   "progress_pct": 18,
    "last_finished_at": "2026-10-22T03:58:58Z",
    "last_passed": 14835,
    "last_failed": 0,
@@ -133,8 +133,8 @@
     4,
     0,
     0,
-    0,
     2,
+    0,
     6,
     5,
     1,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T04:35:02Z",
+    "last_check_at": "2026-10-22T04:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -370,18 +370,18 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T04:34:43Z",
-   "heartbeat_at": "2026-10-22T04:35:01Z",
+   "state": "census service",
+   "status_at": "2026-10-22T04:39:59Z",
+   "heartbeat_at": "2026-10-22T04:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 439,
-    "markets": 4353,
+    "weather_events": 449,
+    "markets": 4463,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T04:29:57Z",
+    "last_scan_at": "2026-10-22T04:35:17Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,21 +397,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-22T03:37:03Z",
+    "updated_at": "2026-10-22T04:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T04:29:57Z",
+    "updated_at": "2026-10-22T04:35:17Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T04:33:08Z",
+    "updated_at": "2026-10-22T04:39:11Z",
     "detail": "observations retained"
    },
    {
