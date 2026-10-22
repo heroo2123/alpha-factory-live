@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:25:02Z",
+ "generated_at": "2026-10-22T10:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 23,
+    "count": 22,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "51 merged in 24h"
+    "detail": "52 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_ab128c9c",
     "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -106,18 +106,18 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-22T08:08:01Z",
-   "last_passed": 15109,
-   "last_failed": 1,
-   "last_skipped": 51,
+   "last_finished_at": "2026-10-22T10:21:01Z",
+   "last_passed": 0,
+   "last_failed": 0,
+   "last_skipped": 0,
    "last_green": false,
    "last_green_at": "2026-10-22T05:55:17Z",
-   "last_minutes": 107
+   "last_minutes": 125
   },
-  "tests_passing": 15109,
+  "tests_passing": 0,
   "flow": {
-   "merges_24h": 51,
-   "commits_24h": 51,
+   "merges_24h": 52,
+   "commits_24h": 52,
    "built_24h": 68,
    "build_failed_24h": 11,
    "reviews_passed_24h": 71,
@@ -130,14 +130,14 @@
     0,
     2,
     6,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -146,17 +146,15 @@
     0,
     3,
     0,
-    0
+    1
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 17,
     "building": 1,
     "in_review": 1,
-    "awaiting_merge": 23,
-    "merged": 396,
+    "awaiting_merge": 22,
+    "merged": 397,
     "parked": 205
    }
   },
@@ -167,6 +165,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T10:29:37Z",
+    "title": "PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any forecast exists",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T08:13:13Z",
     "title": "CODE-01 Make the RESULT_LAG admission gate evidence-conditional instead of blanket",
@@ -201,20 +204,15 @@
     "at": "2026-10-22T06:02:11Z",
     "title": "CODE-01 METAR rules : R31 finality verdict for METAR-rule events (first following…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T04:19:19Z",
-    "title": "test_v11_risk_inputs must pass monkeypatch to the changed run_candidate helper (full QA…",
-    "area": "Test repairs"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T10:25:02Z",
+    "last_check_at": "2026-10-22T10:30:05Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,9 +254,19 @@
   ],
   "events": [
    {
+    "at": "2026-10-22T10:29:37Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any…” into the main build"
+   },
+   {
     "at": "2026-10-22T10:25:02Z",
     "kind": "heal",
     "text": "Operator AI (Kimi K3) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-22T10:21:01Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 0 passed, 0 failed"
    },
    {
     "at": "2026-10-22T10:20:02Z",
@@ -354,16 +362,6 @@
     "at": "2026-10-22T08:57:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: worker receipt untrusted review"
-   },
-   {
-    "at": "2026-10-22T08:54:17Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Re-verify the WRH snapshot digests before IEM ASOS…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T08:54:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker receipt untrusted review"
    }
   ]
  },
@@ -374,8 +372,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T10:25:02Z",
-   "heartbeat_at": "2026-10-22T10:25:03Z",
+   "status_at": "2026-10-22T10:30:00Z",
+   "heartbeat_at": "2026-10-22T10:30:06Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +382,7 @@
     "weather_events": 440,
     "markets": 4364,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T10:23:49Z",
+    "last_scan_at": "2026-10-22T10:29:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T10:23:49Z",
+    "updated_at": "2026-10-22T10:29:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T10:23:40Z",
+    "updated_at": "2026-10-22T10:29:43Z",
     "detail": "observations retained"
    },
    {
@@ -502,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 31 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 33 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 54,
    "waiting_city_days": 11,
