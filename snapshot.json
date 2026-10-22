@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T23:25:02Z",
+ "generated_at": "2026-10-22T23:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "25 ready to build"
+    "detail": "26 ready to build"
    },
    {
     "key": "build",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 65,
+    "count": 66,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_3ea06cb5",
     "task": "CODE-01 Persist and re-verify the R31 contract-finality verdict and residual-risk…",
-    "elapsed_min": 24
+    "elapsed_min": 29
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_9d206335",
     "task": "CODE-01 PWS score audit: usable lead net of latency, per-source/station lead verdict…",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 65,
+   "progress_pct": 66,
    "last_finished_at": "2026-10-22T21:46:38Z",
    "last_passed": 15768,
    "last_failed": 2,
@@ -123,8 +123,8 @@
    "reviews_passed_24h": 64,
    "reviews_changes_24h": 23,
    "commits_by_hour": [
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -133,8 +133,8 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -216,11 +216,11 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T23:25:03Z",
+    "last_check_at": "2026-10-22T23:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 10,
+    "active": 9,
     "by_severity": {
      "P0": 0,
      "P1": 4,
@@ -234,7 +234,7 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T23:20:02Z",
+    "last_check_at": "2026-10-22T23:29:31Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -373,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T23:25:01Z",
-   "heartbeat_at": "2026-10-22T23:25:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T23:26:05Z",
+   "heartbeat_at": "2026-10-22T23:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T23:19:45Z",
+    "last_scan_at": "2026-10-22T23:25:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T23:19:45Z",
+    "updated_at": "2026-10-22T23:25:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T23:23:49Z",
+    "updated_at": "2026-10-22T23:29:51Z",
     "detail": "observations retained"
    },
    {
