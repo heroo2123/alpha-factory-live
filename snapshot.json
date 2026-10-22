@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T23:05:02Z",
+ "generated_at": "2026-10-22T23:10:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 26,
+    "count": 25,
     "unit": "queued",
     "active": false,
-    "detail": "26 ready to build"
+    "detail": "27 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "52 built in 24h"
+    "detail": "53 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 46,
+    "count": 49,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_3ea06cb5",
     "task": "CODE-01 Persist and re-verify the R31 contract-finality verdict and residual-risk…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_acb9f3da",
-    "task": "CODE-01 Re-derive IEM ASOS cross-check values so a forged agreement cannot mask a…",
-    "elapsed_min": 23
+    "task_id": "t_5ecc1daf",
+    "task": "FLEX candidate t_c5cc326a ad09e468c7c9",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_acb9f3da",
+    "task": "CODE-01 Re-derive IEM ASOS cross-check values so a forged agreement cannot mask a…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 46,
+   "progress_pct": 49,
    "last_finished_at": "2026-10-22T21:46:38Z",
    "last_passed": 15768,
    "last_failed": 2,
@@ -118,41 +118,44 @@
   "flow": {
    "merges_24h": 76,
    "commits_24h": 76,
-   "built_24h": 52,
+   "built_24h": 53,
    "build_failed_24h": 7,
-   "reviews_passed_24h": 66,
+   "reviews_passed_24h": 65,
    "reviews_changes_24h": 21,
    "commits_by_hour": [
     0,
     3,
     0,
     3,
-    1,
-    9,
-    3,
-    6,
-    0,
-    3,
-    0,
-    6,
-    0,
-    12,
-    1,
-    0,
-    0,
-    12,
-    2,
     4,
+    6,
+    6,
+    3,
+    0,
+    3,
+    0,
+    6,
+    0,
+    13,
+    0,
+    0,
+    0,
+    12,
+    3,
+    3,
     2,
     2,
     2,
     5
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review",
+    "targeted tests failed"
+   ],
    "stage_totals": {
-    "queued": 26,
+    "queued": 25,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 4,
     "merged": 444,
     "parked": 236
@@ -212,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T23:05:02Z",
+    "last_check_at": "2026-10-22T23:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T23:09:16Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Re-derive IEM ASOS cross-check values so a forged agreement…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T23:04:06Z",
     "kind": "merge",
@@ -355,11 +363,6 @@
     "at": "2026-10-22T22:27:17Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_25791f2c 8079ae67a764”: changes required"
-   },
-   {
-    "at": "2026-10-22T22:25:19Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Record the R31 contract-finality verdict and residual risk…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T23:05:00Z",
-   "heartbeat_at": "2026-10-22T23:05:03Z",
+   "status_at": "2026-10-22T23:09:58Z",
+   "heartbeat_at": "2026-10-22T23:10:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +383,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T23:03:05Z",
+    "last_scan_at": "2026-10-22T23:08:41Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T23:03:05Z",
+    "updated_at": "2026-10-22T23:08:41Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T23:03:42Z",
+    "updated_at": "2026-10-22T23:09:44Z",
     "detail": "observations retained"
    },
    {
