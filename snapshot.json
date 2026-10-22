@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T15:05:01Z",
+ "generated_at": "2026-10-22T15:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -124,28 +124,28 @@
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     2,
-    0,
-    8,
-    3,
-    2,
-    0,
-    2,
-    2,
-    0,
-    3,
-    0,
-    3,
-    1,
-    9,
     3,
     6,
+    2,
+    2,
+    0,
+    4,
+    0,
+    0,
+    3,
+    0,
+    3,
+    4,
+    6,
+    6,
+    3,
     0,
     3,
     0,
     6,
     0,
-    12,
-    1,
+    13,
+    0,
     0
    ],
    "merge_holds": [
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T15:05:01Z",
+    "last_check_at": "2026-10-22T15:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T15:05:01Z",
-   "heartbeat_at": "2026-10-22T15:05:00Z",
+   "status_at": "2026-10-22T15:09:57Z",
+   "heartbeat_at": "2026-10-22T15:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 439,
     "markets": 4410,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T15:03:37Z",
+    "last_scan_at": "2026-10-22T15:08:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T15:03:37Z",
+    "updated_at": "2026-10-22T15:08:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T15:04:43Z",
+    "updated_at": "2026-10-22T15:08:44Z",
     "detail": "observations retained"
    },
    {
