@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T17:20:01Z",
+ "generated_at": "2026-10-22T17:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "19 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "47 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
     "detail": "70 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 38,
+    "count": 44,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0040d5d0",
     "task": "LIVE-15 Bind custody-gate results to the release commit and the expected check count",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_6bce24d6",
-    "task": "LIVE-15 Verify the cited adversarial report bytes before a guardian commission can match",
-    "elapsed_min": 0
+    "task_id": "t_749a8ee3",
+    "task": "CODE-01 Quantify the residual-risk components and cross-bind the upstream R31 verdict's…",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_e37252e8",
-    "task": "PAPER-09 Re-validate the pinned PWS QC record's provider, health, station and…",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 38,
+   "progress_pct": 44,
    "last_finished_at": "2026-10-22T16:21:07Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -118,21 +118,21 @@
   "flow": {
    "merges_24h": 70,
    "commits_24h": 70,
-   "built_24h": 47,
+   "built_24h": 49,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 82,
-   "reviews_changes_24h": 8,
+   "reviews_passed_24h": 79,
+   "reviews_changes_24h": 9,
    "commits_by_hour": [
     3,
-    2,
-    2,
+    3,
+    1,
     0,
     4,
     0,
     2,
     1,
-    1,
-    2,
+    3,
+    0,
     10,
     0,
     9,
@@ -145,20 +145,20 @@
     13,
     0,
     0,
-    5,
-    7
+    6,
+    6
    ],
    "merge_holds": [
     "protected code: waiting for a second review",
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 18,
+    "queued": 17,
     "building": 2,
     "in_review": 2,
-    "awaiting_merge": 6,
+    "awaiting_merge": 7,
     "merged": 427,
-    "parked": 211
+    "parked": 212
    }
   },
   "architect": {
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-22T17:20:02Z",
+    "last_check_at": "2026-10-22T17:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,15 +233,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T17:10:02Z",
+    "last_check_at": "2026-10-22T17:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 345,
-    "last_run_at": "2026-10-22T17:20:01Z",
+    "runs_total": 346,
+    "last_run_at": "2026-10-22T17:25:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow evals all gated",
+    "last_kind": "flow green release failed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,31 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T17:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-22T17:23:26Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Verify the cited adversarial report bytes before a guardian…”: changes required"
+   },
+   {
+    "at": "2026-10-22T17:23:17Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “LIVE-15 Verify the asserted release identity of an adversarial…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T17:21:30Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “PAPER-09 Re-validate the pinned PWS QC record's provider, health…”: passed"
+   },
+   {
+    "at": "2026-10-22T17:21:16Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “LIVE-15 Verify the cited adversarial report bytes before a guardian…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T17:20:01Z",
     "kind": "heal",
@@ -338,31 +363,6 @@
     "at": "2026-10-22T16:42:25Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “CODE-01 Recheck the WRH snapshot's digests before the IEM cross-check”: passed"
-   },
-   {
-    "at": "2026-10-22T16:42:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: full suite not green"
-   },
-   {
-    "at": "2026-10-22T16:38:11Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:37:08Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T16:37:08Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T16:35:17Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Recheck the WRH snapshot's digests before the IEM cross-check” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T17:20:00Z",
-   "heartbeat_at": "2026-10-22T17:20:02Z",
+   "status_at": "2026-10-22T17:24:57Z",
+   "heartbeat_at": "2026-10-22T17:25:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T17:17:03Z",
+    "last_scan_at": "2026-10-22T17:22:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T17:17:03Z",
+    "updated_at": "2026-10-22T17:22:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T17:19:29Z",
+    "updated_at": "2026-10-22T17:23:30Z",
     "detail": "observations retained"
    },
    {
@@ -1018,7 +1018,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 21,
-     "open_tasks": 3
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
