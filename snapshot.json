@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T19:00:03Z",
+ "generated_at": "2026-10-22T19:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "70 merged in 24h"
+    "detail": "71 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_bdcd2298",
     "task": "CODE-01 Re-check ASOS day coverage and use half-up rounding in the WRH-bracket agreement",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_1736d1ac",
     "task": "CODE-01 Require a satisfied R31 contract-finality verdict before any…",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Reviewer 1",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 15631,
   "flow": {
-   "merges_24h": 70,
-   "commits_24h": 70,
+   "merges_24h": 71,
+   "commits_24h": 71,
    "built_24h": 49,
    "build_failed_24h": 12,
    "reviews_passed_24h": 74,
@@ -125,40 +125,41 @@
    "commits_by_hour": [
     2,
     0,
+    2,
+    2,
+    0,
+    3,
+    0,
+    3,
     1,
-    3,
-    0,
-    3,
-    0,
-    3,
-    0,
-    10,
-    0,
     9,
+    3,
+    6,
     0,
     3,
     0,
     6,
     0,
-    10,
-    3,
+    12,
+    1,
     0,
     0,
-    11,
-    3,
-    3
+    12,
+    2,
+    4
    ],
    "merge_holds": [
-    "protected code: waiting for a second review",
     "protected code: second review asked for changes",
-    "targeted tests failed recently backoff"
+    "protected code: waiting for a second review",
+    "targeted tests failed recently backoff",
+    "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 20,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 6,
-    "merged": 432,
+    "awaiting_merge": 5,
+    "merged": 433,
     "parked": 218
    }
   },
@@ -213,18 +214,18 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T19:00:04Z",
+    "last_check_at": "2026-10-22T19:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 3
+     "P2": 2
     },
     "codes": [
      "flow integration candidate persistently red",
@@ -234,15 +235,15 @@
      "flow release repeated same failure",
      "flow shadow observation unavailable"
     ],
-    "last_check_at": "2026-10-22T18:56:52Z",
+    "last_check_at": "2026-10-22T19:01:22Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 355,
-    "last_run_at": "2026-10-22T19:00:03Z",
+    "runs_total": 356,
+    "last_run_at": "2026-10-22T19:05:02Z",
     "last_ok": true,
-    "last_kind": "flow review oversized",
+    "last_kind": "flow exact scope undispatchable",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -255,6 +256,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T19:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow exact scope undispatchable"
+   },
    {
     "at": "2026-10-22T19:00:03Z",
     "kind": "heal",
@@ -304,11 +310,6 @@
     "at": "2026-10-22T18:35:19Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Require a satisfied R31 contract-finality verdict before…” into the main build"
-   },
-   {
-    "at": "2026-10-22T18:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow release repeated same failure"
    },
    {
     "at": "2026-10-22T18:33:02Z",
@@ -373,9 +374,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T18:59:57Z",
-   "heartbeat_at": "2026-10-22T19:00:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T19:03:11Z",
+   "heartbeat_at": "2026-10-22T19:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +385,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T18:56:50Z",
+    "last_scan_at": "2026-10-22T19:02:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T18:56:50Z",
+    "updated_at": "2026-10-22T19:02:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T18:58:09Z",
+    "updated_at": "2026-10-22T19:04:13Z",
     "detail": "observations retained"
    },
    {
