@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T06:30:03Z",
+ "generated_at": "2026-10-22T06:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,15 +10,15 @@
     "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "65 built in 24h"
+    "detail": "64 built in 24h"
    },
    {
     "key": "review",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 13,
+    "count": 14,
     "unit": "awaiting merge",
     "active": true,
     "detail": "54 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 4,
+    "count": 15,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_b86ffbc0",
-    "task": "LIVE-01 Release-bound read-only Alpha-adapter authentication probe",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_679985b0",
     "task": "New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389 deepseek_api",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "MiniMax",
     "task_id": "t_0aa08bf8",
     "task": "PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any forecast exists",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 2",
@@ -98,14 +98,14 @@
     "state": "working",
     "model": "GLM 5.2",
     "family": "Zhipu",
-    "task_id": "t_7158ea01",
-    "task": "FLEX candidate t_959d9887 0218eebc031c",
-    "elapsed_min": 3
+    "task_id": "t_fed5eb15",
+    "task": "FLEX candidate t_b86ffbc0 641a88abc8b8",
+    "elapsed_min": 1
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 4,
+   "progress_pct": 15,
    "last_finished_at": "2026-10-22T05:55:17Z",
    "last_passed": 14987,
    "last_failed": 0,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 54,
    "commits_24h": 54,
-   "built_24h": 65,
+   "built_24h": 64,
    "build_failed_24h": 16,
-   "reviews_passed_24h": 67,
+   "reviews_passed_24h": 68,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     2,
@@ -134,8 +134,8 @@
     0,
     2,
     6,
-    4,
-    2,
+    5,
+    1,
     1,
     0,
     4,
@@ -153,11 +153,11 @@
    ],
    "stage_totals": {
     "queued": 20,
-    "building": 2,
+    "building": 1,
     "in_review": 2,
-    "awaiting_merge": 13,
+    "awaiting_merge": 14,
     "merged": 393,
-    "parked": 200
+    "parked": 201
    }
   },
   "architect": {
@@ -214,11 +214,11 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T06:30:03Z",
+    "last_check_at": "2026-10-22T06:34:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 2,
@@ -230,17 +230,17 @@
      "flow green release failed",
      "flow shadow evals all gated",
      "flow shadow census churn",
-     "flow acceptance followthrough required"
+     "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-22T06:20:03Z",
+    "last_check_at": "2026-10-22T06:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 59,
+    "runs_24h": 60,
     "runs_total": 306,
-    "last_run_at": "2026-10-22T06:30:03Z",
+    "last_run_at": "2026-10-22T06:35:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -255,6 +255,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T06:35:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-22T06:33:21Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “FLEX candidate t_959d9887 0218eebc031c”: passed"
+   },
+   {
+    "at": "2026-10-22T06:31:19Z",
+    "kind": "build",
+    "text": "Claude Opus built “LIVE-01 Release-bound read-only Alpha-adapter authentication probe” → sent to independent review"
+   },
    {
     "at": "2026-10-22T06:30:03Z",
     "kind": "heal",
@@ -346,24 +361,9 @@
     "text": "Full test suite finished: 14987 passed, 0 failed"
    },
    {
-    "at": "2026-10-22T05:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-22T05:31:26Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 PAPER reward maker : multi-city public capture of all…”: passed"
-   },
-   {
-    "at": "2026-10-22T05:28:58Z",
-    "kind": "warn",
-    "text": "MiniMax M3 reviewed “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…”: changes required"
-   },
-   {
-    "at": "2026-10-22T05:19:54Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…” → sent to independent review"
    }
   ]
  },
@@ -373,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T06:27:12Z",
-   "heartbeat_at": "2026-10-22T06:30:03Z",
+   "state": "census service",
+   "status_at": "2026-10-22T06:35:01Z",
+   "heartbeat_at": "2026-10-22T06:35:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 499,
     "markets": 5013,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T06:24:52Z",
+    "last_scan_at": "2026-10-22T06:30:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T06:24:52Z",
+    "updated_at": "2026-10-22T06:30:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T06:29:47Z",
+    "updated_at": "2026-10-22T06:33:48Z",
     "detail": "observations retained"
    },
    {
