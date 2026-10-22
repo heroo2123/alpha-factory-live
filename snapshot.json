@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T13:50:02Z",
+ "generated_at": "2026-10-22T13:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 14,
+    "count": 15,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 53,
+    "count": 64,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 53,
+   "progress_pct": 64,
    "last_finished_at": "2026-10-22T12:54:42Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -126,8 +126,8 @@
     0,
     2,
     0,
-    7,
-    4,
+    8,
+    3,
     1,
     1,
     0,
@@ -145,8 +145,8 @@
     0,
     6,
     0,
-    6,
-    7
+    9,
+    4
    ],
    "merge_holds": [
     "targeted tests failed"
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 20,
     "building": 0,
-    "in_review": 14,
+    "in_review": 15,
     "awaiting_merge": 14,
     "merged": 415,
     "parked": 206
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T13:50:02Z",
+    "last_check_at": "2026-10-22T13:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T13:40:02Z",
+    "last_check_at": "2026-10-22T13:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T13:50:00Z",
-   "heartbeat_at": "2026-10-22T13:50:02Z",
+   "status_at": "2026-10-22T13:54:59Z",
+   "heartbeat_at": "2026-10-22T13:55:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T13:48:18Z",
+    "updated_at": "2026-10-22T13:54:20Z",
     "detail": "observations retained"
    },
    {
