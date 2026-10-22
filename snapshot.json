@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T08:20:02Z",
+ "generated_at": "2026-10-22T08:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "67 built in 24h"
+    "detail": "66 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 3,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 15,
+    "count": 16,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "55 merged in 24h"
+    "detail": "54 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 2,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_eaed39d3",
     "task": "LEARNING-SOURCES METAR rules : multimodel panel accepts AWC_METAR_ROUTINE days alongside…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Reviewer 1",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_1428e593",
-    "task": "LEARNING-SOURCES METAR rules : perpetual brain harvest keeps harvesting METAR-rule…",
-    "elapsed_min": 9
+    "task_id": "t_665a1c0e",
+    "task": "a build task",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -100,12 +100,12 @@
     "family": "Zhipu",
     "task_id": "t_821d889e",
     "task": "a build task",
-    "elapsed_min": 4
+    "elapsed_min": 9
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 2,
    "last_finished_at": "2026-10-22T08:08:01Z",
    "last_passed": 15109,
    "last_failed": 1,
@@ -116,16 +116,16 @@
   },
   "tests_passing": 15109,
   "flow": {
-   "merges_24h": 55,
-   "commits_24h": 55,
-   "built_24h": 67,
+   "merges_24h": 54,
+   "commits_24h": 54,
+   "built_24h": 66,
    "build_failed_24h": 13,
-   "reviews_passed_24h": 68,
+   "reviews_passed_24h": 69,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
-    3,
-    0,
+    2,
     1,
+    0,
     4,
     0,
     0,
@@ -133,15 +133,15 @@
     2,
     6,
     3,
-    2,
-    2,
+    3,
+    1,
     0,
     4,
     0,
     2,
     1,
-    1,
-    2,
+    3,
+    0,
     10,
     0,
     9,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 16,
     "building": 2,
-    "in_review": 4,
-    "awaiting_merge": 15,
+    "in_review": 3,
+    "awaiting_merge": 16,
     "merged": 396,
     "parked": 204
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T08:20:03Z",
+    "last_check_at": "2026-10-22T08:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow shadow evals all gated",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-22T08:10:02Z",
+    "last_check_at": "2026-10-22T08:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T08:23:27Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “LEARNING-SOURCES METAR rules : perpetual brain harvest keeps…”: passed"
+   },
    {
     "at": "2026-10-22T08:17:02Z",
     "kind": "heal",
@@ -359,11 +364,6 @@
     "at": "2026-10-22T07:04:14Z",
     "kind": "build",
     "text": "Claude Opus built “CODE-01 Cap WRH bracket policy at the stated finality bound so no…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T07:02:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “Root-custodied guardian commissioning manifest reader” → sent to independent review"
    }
   ]
  },
@@ -373,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T08:20:00Z",
-   "heartbeat_at": "2026-10-22T08:20:05Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T08:20:41Z",
+   "heartbeat_at": "2026-10-22T08:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 496,
     "markets": 4980,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T08:14:49Z",
+    "last_scan_at": "2026-10-22T08:20:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T08:14:49Z",
+    "updated_at": "2026-10-22T08:20:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T08:18:28Z",
+    "updated_at": "2026-10-22T08:24:30Z",
     "detail": "observations retained"
    },
    {
