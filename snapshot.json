@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T08:10:01Z",
+ "generated_at": "2026-10-22T08:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -15,10 +15,10 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
-    "active": false,
-    "detail": "66 built in 24h"
+    "active": true,
+    "detail": "67 built in 24h"
    },
    {
     "key": "review",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 17,
+    "count": 15,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "52 merged in 24h"
+    "detail": "55 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,25 +65,35 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_eaed39d3",
+    "task": "LEARNING-SOURCES METAR rules : multimodel panel accepts AWC_METAR_ROUTINE days alongside…",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_5065cd2a",
+    "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_1428e593",
+    "task": "LEARNING-SOURCES METAR rules : perpetual brain harvest keeps harvesting METAR-rule…",
+    "elapsed_min": 4
+   },
+   {
+    "slot": "Reviewer 2",
     "role": "review",
     "state": "waiting",
     "model": "",
@@ -91,72 +101,60 @@
     "task_id": "",
     "task": "",
     "elapsed_min": null
-   },
-   {
-    "slot": "Reviewer 2",
-    "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_503f6541",
-    "task": "FLEX candidate t_868291f7 3ce6df04a39b",
-    "elapsed_min": 4
    }
   ],
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-22T05:55:17Z",
-   "last_passed": 14987,
-   "last_failed": 0,
+   "last_finished_at": "2026-10-22T08:08:01Z",
+   "last_passed": 15109,
+   "last_failed": 1,
    "last_skipped": 51,
-   "last_green": true,
+   "last_green": false,
    "last_green_at": "2026-10-22T05:55:17Z",
-   "last_minutes": 95
+   "last_minutes": 107
   },
-  "tests_passing": 14987,
+  "tests_passing": 15109,
   "flow": {
-   "merges_24h": 52,
-   "commits_24h": 52,
-   "built_24h": 66,
+   "merges_24h": 55,
+   "commits_24h": 55,
+   "built_24h": 67,
    "build_failed_24h": 13,
-   "reviews_passed_24h": 69,
+   "reviews_passed_24h": 68,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     3,
     0,
     1,
+    4,
+    0,
+    0,
+    0,
+    2,
+    6,
+    3,
+    2,
+    2,
+    0,
+    4,
+    0,
     1,
-    3,
-    0,
-    0,
-    2,
-    3,
-    6,
-    2,
     2,
     0,
-    4,
-    0,
-    0,
     3,
-    0,
+    7,
     3,
-    4,
-    6,
-    6,
-    3,
-    0
+    7,
+    2,
+    3
    ],
-   "merge_holds": [
-    "waiting for the full test run to finish"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 18,
-    "building": 1,
+    "queued": 16,
+    "building": 2,
     "in_review": 2,
-    "awaiting_merge": 17,
-    "merged": 393,
+    "awaiting_merge": 15,
+    "merged": 396,
     "parked": 204
    }
   },
@@ -167,6 +165,21 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T08:13:13Z",
+    "title": "CODE-01 Make the RESULT_LAG admission gate evidence-conditional instead of blanket",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-22T08:12:36Z",
+    "title": "PAPER-02 METAR rules : continuous day manager accepts the METAR scope review for…",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-22T08:12:13Z",
+    "title": "PAPER-02 METAR rules : day preparer prepares METAR-rule days under the METAR capability…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T06:17:04Z",
     "title": "PAPER-02 METAR rules : root daily review authority applies the same METAR envelope…",
@@ -191,30 +204,15 @@
     "at": "2026-10-22T04:19:19Z",
     "title": "test_v11_risk_inputs must pass monkeypatch to the changed run_candidate helper (full QA…",
     "area": "Test repairs"
-   },
-   {
-    "at": "2026-10-22T04:11:53Z",
-    "title": "LIVE-14 Bind observation collection to the fresh health sample cited by this cycle's…",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T04:11:17Z",
-    "title": "LIVE-15 Add a fail-closed guardian commissioning-prerequisite evaluator that never…",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T02:24:55Z",
-    "title": "CODE-01 Bind the bracket's first-following row identity so the contract cutoff datapoint…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 6,
-    "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T08:10:02Z",
+    "state": "p1",
+    "active": 1,
+    "alerts_24h": 7,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-10-22T08:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +230,7 @@
      "flow shadow evals all gated",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-22T08:00:02Z",
+    "last_check_at": "2026-10-22T08:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -256,9 +254,44 @@
   ],
   "events": [
    {
+    "at": "2026-10-22T08:14:17Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “FLEX candidate t_868291f7 3ce6df04a39b”: passed"
+   },
+   {
+    "at": "2026-10-22T08:13:13Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Make the RESULT_LAG admission gate evidence-conditional…” into the main build"
+   },
+   {
+    "at": "2026-10-22T08:13:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-10-22T08:12:36Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 METAR rules : continuous day manager accepts the METAR…” into the main build"
+   },
+   {
+    "at": "2026-10-22T08:12:13Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 METAR rules : day preparer prepares METAR-rule days under…” into the main build"
+   },
+   {
+    "at": "2026-10-22T08:10:16Z",
+    "kind": "build",
+    "text": "Claude Opus built “LEARNING-SOURCES METAR rules : perpetual brain harvest keeps…” → sent to independent review"
+   },
+   {
     "at": "2026-10-22T08:08:22Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “FLEX candidate t_8843a19c 8b21e955a2ab”: passed"
+   },
+   {
+    "at": "2026-10-22T08:08:01Z",
+    "kind": "warn",
+    "text": "Full test suite finished: 15109 passed, 1 failed"
    },
    {
     "at": "2026-10-22T08:05:16Z",
@@ -329,41 +362,6 @@
     "at": "2026-10-22T06:44:16Z",
     "kind": "review",
     "text": "GLM 5.2 reviewed “New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389…”: passed"
-   },
-   {
-    "at": "2026-10-22T06:41:20Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any…”: passed"
-   },
-   {
-    "at": "2026-10-22T06:38:17Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “FLEX candidate t_b86ffbc0 641a88abc8b8”: passed"
-   },
-   {
-    "at": "2026-10-22T06:36:16Z",
-    "kind": "build",
-    "text": "Claude Opus built “New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T06:35:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-22T06:33:21Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “FLEX candidate t_959d9887 0218eebc031c”: passed"
-   },
-   {
-    "at": "2026-10-22T06:31:19Z",
-    "kind": "build",
-    "text": "Claude Opus built “LIVE-01 Release-bound read-only Alpha-adapter authentication probe” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T06:29:20Z",
-    "kind": "warn",
-    "text": "MiniMax M3 reviewed “a task”: changes required"
    }
   ]
  },
@@ -374,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T08:10:02Z",
-   "heartbeat_at": "2026-10-22T08:10:01Z",
+   "status_at": "2026-10-22T08:15:00Z",
+   "heartbeat_at": "2026-10-22T08:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 497,
-    "markets": 4991,
+    "weather_events": 496,
+    "markets": 4980,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T08:09:28Z",
+    "last_scan_at": "2026-10-22T08:14:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T08:09:28Z",
+    "updated_at": "2026-10-22T08:14:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T08:08:23Z",
+    "updated_at": "2026-10-22T08:14:26Z",
     "detail": "observations retained"
    },
    {
@@ -640,8 +638,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 37,
-     "open_tasks": 6
+     "merged_tasks": 38,
+     "open_tasks": 5
     },
     {
      "id": "CODE-02",
