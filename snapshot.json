@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T20:35:02Z",
+ "generated_at": "2026-10-22T20:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 33,
+    "count": 38,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_bb48a7f0",
     "task": "PAPER-07 Record STALE, MALFORMED and COOLDOWN source outcomes as distinct states",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "DeepSeek",
     "task_id": "t_1d522d7b",
     "task": "New main SHA 7598ba947ab9 Alpha V11 FLEX code task t_39936fc1 claude",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -100,12 +100,12 @@
     "family": "DeepSeek",
     "task_id": "t_c5e4e50f",
     "task": "CODE-01 PAPER reward maker : causal per-minute paper runner with variants over captured…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 33,
+   "progress_pct": 38,
    "last_finished_at": "2026-10-22T18:28:11Z",
    "last_passed": 15631,
    "last_failed": 1,
@@ -136,14 +136,14 @@
     0,
     3,
     0,
-    2,
+    3,
+    3,
+    3,
+    10,
+    0,
+    0,
+    9,
     4,
-    1,
-    12,
-    0,
-    0,
-    7,
-    6,
     4,
     2,
     1
@@ -154,12 +154,12 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 14,
+    "queued": 15,
     "building": 2,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 8,
     "merged": 435,
-    "parked": 223
+    "parked": 224
    }
   },
   "architect": {
@@ -216,7 +216,7 @@
     "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-22T20:35:02Z",
+    "last_check_at": "2026-10-22T20:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -239,10 +239,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 370,
-    "last_run_at": "2026-10-22T20:35:02Z",
+    "runs_total": 371,
+    "last_run_at": "2026-10-22T20:40:02Z",
     "last_ok": true,
-    "last_kind": "flow second review inconclusive",
+    "last_kind": "flow shadow evals all gated",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -255,6 +255,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T20:40:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow evals all gated"
+   },
+   {
+    "at": "2026-10-22T20:35:40Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “R31 negative fixture must exercise legacy loose brackets after the…”: passed"
+   },
    {
     "at": "2026-10-22T20:35:02Z",
     "kind": "heal",
@@ -311,11 +321,6 @@
     "text": "DeepSeek V4 Pro reviewed “Release census must bind the day rule's source_family”: passed"
    },
    {
-    "at": "2026-10-22T20:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-22T20:03:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: full suite not green"
@@ -359,11 +364,6 @@
     "at": "2026-10-22T19:38:29Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_3d1f0c9e 996f1537503e”: passed"
-   },
-   {
-    "at": "2026-10-22T19:38:14Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Quantify the residual-risk components and cross-bind the…” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T20:35:00Z",
-   "heartbeat_at": "2026-10-22T20:35:01Z",
+   "status_at": "2026-10-22T20:39:57Z",
+   "heartbeat_at": "2026-10-22T20:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 434,
     "markets": 4351,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T20:32:43Z",
+    "last_scan_at": "2026-10-22T20:38:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,21 +400,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-22T19:37:03Z",
+    "updated_at": "2026-10-22T20:37:02Z",
     "detail": "multi-city capture collecting"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T20:32:43Z",
+    "updated_at": "2026-10-22T20:38:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T20:34:45Z",
+    "updated_at": "2026-10-22T20:38:47Z",
     "detail": "observations retained"
    },
    {
