@@ -1,37 +1,37 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T12:00:02Z",
+ "generated_at": "2026-10-22T12:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "67 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 20,
+    "count": 21,
     "unit": "awaiting merge",
     "active": true,
     "detail": "57 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 44,
+    "count": 47,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,27 +65,7 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_a3eb2f8a",
-    "task": "CODE-01 Test durable scenario-view archive incl. namespace/tamper refusals",
-    "elapsed_min": 26
-   },
-   {
-    "slot": "Builder 2",
-    "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_e7dbc3b8",
-    "task": "Candidate-assembly census/audit and MADIS candidate tests must not depend on host load",
-    "elapsed_min": 1
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -93,9 +73,29 @@
     "elapsed_min": null
    },
    {
+    "slot": "Builder 2",
+    "role": "build",
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "Claude Sonnet",
+    "family": "Anthropic",
+    "task_id": "t_a3eb2f8a",
+    "task": "CODE-01 Test durable scenario-view archive incl. namespace/tamper refusals",
+    "elapsed_min": 1
+   },
+   {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 44,
+   "progress_pct": 47,
    "last_finished_at": "2026-10-22T10:21:01Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -119,8 +119,8 @@
    "merges_24h": 57,
    "commits_24h": 57,
    "built_24h": 67,
-   "build_failed_24h": 12,
-   "reviews_passed_24h": 71,
+   "build_failed_24h": 11,
+   "reviews_passed_24h": 72,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
     4,
@@ -132,16 +132,16 @@
     3,
     2,
     0,
+    2,
+    2,
+    0,
+    3,
+    0,
+    3,
     1,
-    3,
-    0,
-    3,
-    0,
-    3,
-    0,
-    10,
-    0,
     9,
+    3,
+    6,
     0,
     3,
     0,
@@ -149,20 +149,20 @@
     0
    ],
    "merge_holds": [
-    "lock busy"
+    "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 19,
-    "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 20,
+    "queued": 21,
+    "building": 1,
+    "in_review": 1,
+    "awaiting_merge": 21,
     "merged": 402,
     "parked": 204
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-22T08:50:25Z",
+   "last_run_at": "2026-10-22T12:00:22Z",
    "last_planned": 6,
    "model": "Claude Opus"
   },
@@ -214,15 +214,15 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T12:00:03Z",
+    "last_check_at": "2026-10-22T12:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 9,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
      "flow deepseek low",
@@ -232,15 +232,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T11:50:08Z",
+    "last_check_at": "2026-10-22T12:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 328,
-    "last_run_at": "2026-10-22T11:50:07Z",
+    "runs_total": 329,
+    "last_run_at": "2026-10-22T12:05:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "routine",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,31 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T12:05:02Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “Candidate-assembly census/audit and MADIS candidate tests must not…”: passed"
+   },
+   {
+    "at": "2026-10-22T12:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: routine"
+   },
+   {
+    "at": "2026-10-22T12:03:21Z",
+    "kind": "build",
+    "text": "Claude Opus built “Candidate-assembly census/audit and MADIS candidate tests must not…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T12:03:15Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Test durable scenario-view archive incl. namespace/tamper…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T12:00:22Z",
+    "kind": "plan",
+    "text": "Architect (Claude Opus) planned 6 new tasks"
+   },
    {
     "at": "2026-10-22T11:50:07Z",
     "kind": "heal",
@@ -273,11 +298,6 @@
     "at": "2026-10-22T11:35:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-22T11:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
    },
    {
     "at": "2026-10-22T11:22:14Z",
@@ -343,26 +363,6 @@
     "at": "2026-10-22T10:16:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-22T10:15:39Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “PAPER-03 Refuse reopening an evidence store whose append-only…”: passed"
-   },
-   {
-    "at": "2026-10-22T10:13:15Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “CODE-01 Require the exact NWS correction-window and finality…”: passed"
-   },
-   {
-    "at": "2026-10-22T10:09:13Z",
-    "kind": "warn",
-    "text": "Claude Opus build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T10:06:33Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “PAPER-03 Refuse reopening an evidence store whose append-only…” → sent to independent review"
    }
   ]
  },
@@ -372,9 +372,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T11:59:58Z",
-   "heartbeat_at": "2026-10-22T12:00:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T12:03:53Z",
+   "heartbeat_at": "2026-10-22T12:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T11:59:38Z",
+    "updated_at": "2026-10-22T12:03:40Z",
     "detail": "observations retained"
    },
    {
@@ -640,7 +640,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 38,
-     "open_tasks": 13
+     "open_tasks": 16
     },
     {
      "id": "CODE-02",
