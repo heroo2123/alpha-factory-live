@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T16:30:02Z",
+ "generated_at": "2026-10-22T16:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 16,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 9,
+    "count": 8,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "70 merged in 24h"
+    "detail": "71 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,16 +116,16 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 70,
-   "commits_24h": 70,
+   "merges_24h": 71,
+   "commits_24h": 71,
    "built_24h": 51,
-   "build_failed_24h": 10,
-   "reviews_passed_24h": 82,
+   "build_failed_24h": 11,
+   "reviews_passed_24h": 81,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
     6,
-    4,
-    2,
+    5,
+    1,
     1,
     0,
     4,
@@ -140,27 +140,26 @@
     0,
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6
+    7
    ],
    "merge_holds": [
     "conflicts with newer code, being rebuilt",
     "protected code: waiting for a second review",
-    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 18,
+    "queued": 16,
     "building": 1,
     "in_review": 2,
-    "awaiting_merge": 9,
-    "merged": 421,
-    "parked": 209
+    "awaiting_merge": 8,
+    "merged": 422,
+    "parked": 211
    }
   },
   "architect": {
@@ -170,6 +169,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T16:32:16Z",
+    "title": "strategy_admission must import: tighten RESULT_LAG finality policy to the stated 120 s…",
+    "area": "Test repairs"
+   },
    {
     "at": "2026-10-22T16:22:19Z",
     "title": "CODE-01 Record the finality basis and finality evidence hash in the W7 confirmed shadow…",
@@ -204,11 +208,6 @@
     "at": "2026-10-22T12:58:03Z",
     "title": "Root-custodied guardian commissioning manifest reader",
     "area": "Safety guardian"
-   },
-   {
-    "at": "2026-10-22T12:54:46Z",
-    "title": "CODE-01 Cap WRH bracket policy at the stated finality bound so no caller can certify an…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -217,33 +216,33 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T16:30:02Z",
+    "last_check_at": "2026-10-22T16:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 11,
+    "active": 10,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 6
+     "P2": 5
     },
     "codes": [
-     "flow unmergeable reviewed work",
      "flow deepseek low",
      "flow green release failed",
      "flow green release failed",
      "flow green release failed",
-     "flow release repeated same failure"
+     "flow release repeated same failure",
+     "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T16:20:03Z",
+    "last_check_at": "2026-10-22T16:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 342,
-    "last_run_at": "2026-10-22T16:30:02Z",
+    "runs_total": 343,
+    "last_run_at": "2026-10-22T16:35:01Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -258,6 +257,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T16:35:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-22T16:32:16Z",
+    "kind": "merge",
+    "text": "Merged “strategy_admission must import: tighten RESULT_LAG finality policy…” into the main build"
+   },
+   {
+    "at": "2026-10-22T16:30:18Z",
+    "kind": "warn",
+    "text": "Claude Sonnet's build of “LIVE-15 Bind custody-gate results to the release commit and the…” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-22T16:30:02Z",
     "kind": "heal",
@@ -352,21 +366,6 @@
     "at": "2026-10-22T16:14:11Z",
     "kind": "review",
     "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:13:19Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:13:14Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:13:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    }
   ]
  },
@@ -377,8 +376,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T16:29:59Z",
-   "heartbeat_at": "2026-10-22T16:30:01Z",
+   "status_at": "2026-10-22T16:34:59Z",
+   "heartbeat_at": "2026-10-22T16:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -387,7 +386,7 @@
     "weather_events": 438,
     "markets": 4393,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T16:28:00Z",
+    "last_scan_at": "2026-10-22T16:33:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -410,14 +409,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T16:28:00Z",
+    "updated_at": "2026-10-22T16:33:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T16:29:11Z",
+    "updated_at": "2026-10-22T16:33:12Z",
     "detail": "observations retained"
    },
    {
@@ -743,7 +742,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 26,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "PAPER-10",
@@ -1022,7 +1021,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 21,
-     "open_tasks": 1
+     "open_tasks": 0
     },
     {
      "id": "LIVE-16",
