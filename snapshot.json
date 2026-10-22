@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T18:30:02Z",
+ "generated_at": "2026-10-22T18:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "70 merged in 24h"
+    "detail": "69 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0e08e9d8",
     "task": "Release census must bind the day rule's source_family",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_b9c5f22f",
     "task": "METAR rule authority must prove the REAL published Polymarket METAR rules text (3…",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Reviewer 1",
@@ -106,24 +106,24 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-22T16:21:07Z",
-   "last_passed": 0,
-   "last_failed": 0,
-   "last_skipped": 0,
+   "last_finished_at": "2026-10-22T18:28:11Z",
+   "last_passed": 15631,
+   "last_failed": 1,
+   "last_skipped": 51,
    "last_green": false,
    "last_green_at": "2026-10-22T05:55:17Z",
-   "last_minutes": 5
+   "last_minutes": 107
   },
-  "tests_passing": 0,
+  "tests_passing": 15631,
   "flow": {
-   "merges_24h": 70,
-   "commits_24h": 70,
+   "merges_24h": 69,
+   "commits_24h": 69,
    "built_24h": 50,
    "build_failed_24h": 12,
    "reviews_passed_24h": 73,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
-    2,
+    1,
     1,
     0,
     4,
@@ -138,14 +138,14 @@
     0,
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6,
     7,
+    6,
     3
    ],
    "merge_holds": [
@@ -212,11 +212,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 11,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-22T18:30:03Z",
+    "state": "p1",
+    "active": 1,
+    "alerts_24h": 12,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-22T18:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,15 +234,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T18:20:03Z",
+    "last_check_at": "2026-10-22T18:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 350,
-    "last_run_at": "2026-10-22T18:30:03Z",
+    "runs_total": 351,
+    "last_run_at": "2026-10-22T18:35:02Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -256,9 +256,24 @@
   ],
   "events": [
    {
+    "at": "2026-10-22T18:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-22T18:33:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
     "at": "2026-10-22T18:30:03Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-22T18:28:11Z",
+    "kind": "warn",
+    "text": "Full test suite finished: 15631 passed, 1 failed"
    },
    {
     "at": "2026-10-22T18:21:22Z",
@@ -349,21 +364,6 @@
     "at": "2026-10-22T17:37:16Z",
     "kind": "build",
     "text": "Claude Sonnet built “LIVE-15 Bind custody-gate results to the release commit and the…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T17:33:20Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-22T17:31:09Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “CODE-01 Quantify the residual-risk components and cross-bind the…”: changes required"
-   },
-   {
-    "at": "2026-10-22T17:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T18:29:59Z",
-   "heartbeat_at": "2026-10-22T18:30:02Z",
+   "status_at": "2026-10-22T18:35:00Z",
+   "heartbeat_at": "2026-10-22T18:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T18:28:16Z",
+    "last_scan_at": "2026-10-22T18:34:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T18:28:16Z",
+    "updated_at": "2026-10-22T18:34:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T18:29:55Z",
+    "updated_at": "2026-10-22T18:33:56Z",
     "detail": "observations retained"
    },
    {
