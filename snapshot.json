@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T19:50:03Z",
+ "generated_at": "2026-10-22T19:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,16 +25,16 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "71 merged in 24h"
+    "detail": "72 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_bdcd2298",
     "task": "CODE-01 Re-check ASOS day coverage and use half-up rounding in the WRH-bracket agreement",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_0e08e9d8",
     "task": "Release census must bind the day rule's source_family",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ebd0377d",
+    "task": "FLEX candidate t_1736d1ac cb4c821bfa99",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 15631,
   "flow": {
-   "merges_24h": 71,
-   "commits_24h": 71,
+   "merges_24h": 72,
+   "commits_24h": 72,
    "built_24h": 49,
    "build_failed_24h": 12,
    "reviews_passed_24h": 72,
@@ -139,26 +139,26 @@
     0,
     6,
     0,
-    6,
-    7,
-    0,
-    0,
-    10,
-    3,
+    9,
     4,
-    2
+    0,
+    0,
+    11,
+    2,
+    4,
+    3
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
     "protected code: waiting for a second review",
-    "targeted tests failed recently backoff"
+    "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 16,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 7,
-    "merged": 434,
+    "awaiting_merge": 6,
+    "merged": 435,
     "parked": 222
    }
   },
@@ -216,15 +216,15 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T19:50:03Z",
+    "last_check_at": "2026-10-22T19:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 9,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 2
+     "P2": 3
     },
     "codes": [
      "flow integration candidate persistently red",
@@ -234,15 +234,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T19:40:02Z",
+    "last_check_at": "2026-10-22T19:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 364,
-    "last_run_at": "2026-10-22T19:50:03Z",
+    "last_run_at": "2026-10-22T19:55:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow evals all gated",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -255,6 +255,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T19:55:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
+   },
    {
     "at": "2026-10-22T19:50:03Z",
     "kind": "heal",
@@ -326,11 +331,6 @@
     "text": "Codex (GPT-6 Sol) built “CODE-01 PAPER reward maker : causal per-minute paper runner with…” → sent to independent review"
    },
    {
-    "at": "2026-10-22T19:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow release repeated same failure"
-   },
-   {
     "at": "2026-10-22T19:20:19Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “LIVE-15 forbid lazy promisor fetch during read-only guardian release…”: passed"
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T19:50:01Z",
-   "heartbeat_at": "2026-10-22T19:50:02Z",
+   "status_at": "2026-10-22T19:54:59Z",
+   "heartbeat_at": "2026-10-22T19:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T19:47:47Z",
+    "last_scan_at": "2026-10-22T19:53:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T19:47:47Z",
+    "updated_at": "2026-10-22T19:53:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T19:48:27Z",
+    "updated_at": "2026-10-22T19:54:29Z",
     "detail": "observations retained"
    },
    {
