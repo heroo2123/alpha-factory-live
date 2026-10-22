@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T18:25:01Z",
+ "generated_at": "2026-10-22T18:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,15 +34,15 @@
     "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "71 merged in 24h"
+    "detail": "70 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 87,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0e08e9d8",
     "task": "Release census must bind the day rule's source_family",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_b9c5f22f",
     "task": "METAR rule authority must prove the REAL published Polymarket METAR rules text (3…",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Reviewer 1",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 87,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-22T16:21:07Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -116,20 +116,20 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 71,
-   "commits_24h": 71,
+   "merges_24h": 70,
+   "commits_24h": 70,
    "built_24h": 50,
    "build_failed_24h": 12,
    "reviews_passed_24h": 73,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
-    3,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -138,8 +138,8 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -151,8 +151,7 @@
    "merge_holds": [
     "protected code: second review asked for changes",
     "protected code: waiting for a second review",
-    "targeted tests failed recently backoff",
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
     "queued": 19,
@@ -217,7 +216,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-22T18:25:01Z",
+    "last_check_at": "2026-10-22T18:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -240,12 +239,12 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 349,
-    "last_run_at": "2026-10-22T18:20:02Z",
-    "last_ok": false,
-    "last_kind": "flow shadow evals all gated",
+    "runs_total": 350,
+    "last_run_at": "2026-10-22T18:30:03Z",
+    "last_ok": true,
+    "last_kind": "flow green release failed",
     "running": false,
-    "model": "Claude Opus",
+    "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -256,6 +255,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T18:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow green release failed"
+   },
    {
     "at": "2026-10-22T18:21:22Z",
     "kind": "review",
@@ -360,11 +364,6 @@
     "at": "2026-10-22T17:30:03Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
-   },
-   {
-    "at": "2026-10-22T17:27:30Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Verify the asserted release identity of an adversarial…”: changes required"
    }
   ]
  },
@@ -375,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T18:24:58Z",
-   "heartbeat_at": "2026-10-22T18:25:01Z",
+   "status_at": "2026-10-22T18:29:59Z",
+   "heartbeat_at": "2026-10-22T18:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -385,7 +384,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T18:22:23Z",
+    "last_scan_at": "2026-10-22T18:28:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T18:22:23Z",
+    "updated_at": "2026-10-22T18:28:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T18:23:53Z",
+    "updated_at": "2026-10-22T18:29:55Z",
     "detail": "observations retained"
    },
    {
