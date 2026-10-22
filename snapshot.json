@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T08:50:02Z",
+ "generated_at": "2026-10-22T08:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "67 built in 24h"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 4,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 16,
+    "count": 17,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "54 merged in 24h"
+    "detail": "53 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 29,
+    "count": 38,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_bdcd2298",
+    "task": "CODE-01 Re-check ASOS day coverage and use half-up rounding in the WRH-bracket agreement",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_679985b0",
-    "task": "New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389 deepseek_api",
-    "elapsed_min": 4
+    "task_id": "t_e03cfd20",
+    "task": "CODE-01 Require the exact NWS correction-window and finality sentences and refuse…",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_e604b586",
-    "task": "Historical held-out backfill with the forward capture method: GEFS S3 + closed Gamma +…",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -98,14 +98,14 @@
     "state": "working",
     "model": "GLM 5.2",
     "family": "Zhipu",
-    "task_id": "t_77b2af6f",
-    "task": "FLEX candidate t_5065cd2a 5347ce8b8425",
-    "elapsed_min": 4
+    "task_id": "t_679985b0",
+    "task": "New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389 deepseek_api",
+    "elapsed_min": 2
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 29,
+   "progress_pct": 38,
    "last_finished_at": "2026-10-22T08:08:01Z",
    "last_passed": 15109,
    "last_failed": 1,
@@ -116,14 +116,14 @@
   },
   "tests_passing": 15109,
   "flow": {
-   "merges_24h": 54,
-   "commits_24h": 54,
+   "merges_24h": 53,
+   "commits_24h": 53,
    "built_24h": 67,
    "build_failed_24h": 14,
-   "reviews_passed_24h": 69,
+   "reviews_passed_24h": 68,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
-    2,
+    1,
     1,
     0,
     4,
@@ -131,8 +131,8 @@
     0,
     2,
     0,
-    7,
-    4,
+    8,
+    3,
     1,
     1,
     0,
@@ -152,17 +152,17 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 15,
-    "building": 1,
-    "in_review": 3,
-    "awaiting_merge": 16,
+    "queued": 17,
+    "building": 2,
+    "in_review": 4,
+    "awaiting_merge": 17,
     "merged": 396,
-    "parked": 205
+    "parked": 206
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-22T04:40:21Z",
+   "last_run_at": "2026-10-22T08:50:25Z",
    "last_planned": 6,
    "model": "Claude Opus"
   },
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T08:50:03Z",
+    "last_check_at": "2026-10-22T08:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,12 +232,12 @@
      "flow shadow evals all gated",
      "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-22T08:40:03Z",
+    "last_check_at": "2026-10-22T08:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 312,
+    "runs_total": 313,
     "last_run_at": "2026-10-22T08:50:02Z",
     "last_ok": true,
     "last_kind": "flow shadow evals all gated",
@@ -250,11 +250,40 @@
    "Claude",
    "DeepSeek",
    "GLM",
-   "Kimi",
    "MiniMax",
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T08:54:17Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Re-verify the WRH snapshot digests before IEM ASOS…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T08:54:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker receipt untrusted review"
+   },
+   {
+    "at": "2026-10-22T08:53:11Z",
+    "kind": "review",
+    "text": "MiniMax M3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-22T08:52:21Z",
+    "kind": "build",
+    "text": "Claude Opus built “New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T08:51:28Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “FLEX candidate t_5065cd2a 5347ce8b8425”: passed"
+   },
+   {
+    "at": "2026-10-22T08:50:25Z",
+    "kind": "plan",
+    "text": "Architect (Claude Opus) planned 6 new tasks"
+   },
    {
     "at": "2026-10-22T08:50:02Z",
     "kind": "heal",
@@ -334,36 +363,6 @@
     "at": "2026-10-22T08:10:16Z",
     "kind": "build",
     "text": "Claude Opus built “LEARNING-SOURCES METAR rules : perpetual brain harvest keeps…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T08:08:22Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “FLEX candidate t_8843a19c 8b21e955a2ab”: passed"
-   },
-   {
-    "at": "2026-10-22T08:08:01Z",
-    "kind": "warn",
-    "text": "Full test suite finished: 15109 passed, 1 failed"
-   },
-   {
-    "at": "2026-10-22T08:05:16Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 R31 contract-defined finality verdict per event (rules-text…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T08:05:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-22T08:02:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 PAPER reward maker : multi-city public capture of all…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T07:46:15Z",
-    "kind": "build",
-    "text": "Claude Opus built “Hash-bound adversarial verification runner for cancel-only guardian” → sent to independent review"
    }
   ]
  },
@@ -374,17 +373,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T08:50:01Z",
-   "heartbeat_at": "2026-10-22T08:50:04Z",
+   "status_at": "2026-10-22T08:55:00Z",
+   "heartbeat_at": "2026-10-22T08:55:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 474,
-    "markets": 4738,
+    "weather_events": 468,
+    "markets": 4672,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T08:47:11Z",
+    "last_scan_at": "2026-10-22T08:52:36Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T08:47:11Z",
+    "updated_at": "2026-10-22T08:52:36Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T08:48:40Z",
+    "updated_at": "2026-10-22T08:54:46Z",
     "detail": "observations retained"
    },
    {
@@ -641,7 +640,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 38,
-     "open_tasks": 5
+     "open_tasks": 11
     },
     {
      "id": "CODE-02",
