@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T08:35:02Z",
+ "generated_at": "2026-10-22T08:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "66 built in 24h"
+    "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 15,
+    "count": 16,
     "unit": "awaiting merge",
     "active": true,
     "detail": "54 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 16,
+    "count": 18,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e604b586",
     "task": "Historical held-out backfill with the forward capture method: GEFS S3 + closed Gamma +…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "Anthropic",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 20
+    "elapsed_min": 25
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,17 +95,17 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_eaed39d3",
-    "task": "LEARNING-SOURCES METAR rules : multimodel panel accepts AWC_METAR_ROUTINE days alongside…",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 16,
+   "progress_pct": 18,
    "last_finished_at": "2026-10-22T08:08:01Z",
    "last_passed": 15109,
    "last_failed": 1,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 54,
    "commits_24h": 54,
-   "built_24h": 66,
+   "built_24h": 65,
    "build_failed_24h": 13,
-   "reviews_passed_24h": 70,
+   "reviews_passed_24h": 71,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     2,
@@ -129,8 +129,8 @@
     4,
     0,
     0,
-    0,
     2,
+    0,
     6,
     5,
     1,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 15,
     "building": 2,
-    "in_review": 3,
-    "awaiting_merge": 15,
+    "in_review": 1,
+    "awaiting_merge": 16,
     "merged": 396,
     "parked": 206
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T08:35:02Z",
+    "last_check_at": "2026-10-22T08:40:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T08:36:23Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “LEARNING-SOURCES METAR rules : multimodel panel accepts…”: passed"
+   },
+   {
+    "at": "2026-10-22T08:35:19Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-22T08:30:25Z",
     "kind": "build",
@@ -354,16 +364,6 @@
     "at": "2026-10-22T07:23:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-22T07:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
-   },
-   {
-    "at": "2026-10-22T07:10:30Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Root-custodied guardian commissioning manifest reader”: passed"
    }
   ]
  },
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T08:35:00Z",
-   "heartbeat_at": "2026-10-22T08:35:02Z",
+   "status_at": "2026-10-22T08:40:03Z",
+   "heartbeat_at": "2026-10-22T08:40:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 488,
-    "markets": 4892,
+    "weather_events": 482,
+    "markets": 4826,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T08:31:24Z",
+    "last_scan_at": "2026-10-22T08:36:47Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,21 +400,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-22T07:37:02Z",
+    "updated_at": "2026-10-22T08:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T08:31:24Z",
+    "updated_at": "2026-10-22T08:36:47Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T08:34:35Z",
+    "updated_at": "2026-10-22T08:38:37Z",
     "detail": "observations retained"
    },
    {
