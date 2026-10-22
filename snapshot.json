@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:05:03Z",
+ "generated_at": "2026-10-22T10:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,20 +10,20 @@
     "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "68 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_ab4d4b53",
-    "task": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
-    "elapsed_min": 55
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -90,17 +90,17 @@
     "family": "MiniMax",
     "task_id": "t_e03cfd20",
     "task": "CODE-01 Require the exact NWS correction-window and finality sentences and refuse…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_ab4d4b53",
+    "task": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
+    "elapsed_min": 3
    }
   ],
   "qa": {
@@ -119,31 +119,31 @@
    "merges_24h": 52,
    "commits_24h": 52,
    "built_24h": 68,
-   "build_failed_24h": 10,
+   "build_failed_24h": 11,
    "reviews_passed_24h": 71,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
     1,
+    1,
+    3,
+    0,
+    0,
+    2,
+    3,
+    6,
+    2,
+    2,
     0,
     4,
     0,
     0,
-    2,
-    0,
-    8,
-    3,
-    2,
-    0,
-    2,
-    2,
-    0,
     3,
     0,
     3,
-    1,
-    9,
-    3,
+    4,
     6,
+    6,
+    3,
     0,
     3,
     0
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 18,
-    "building": 1,
-    "in_review": 2,
+    "building": 0,
+    "in_review": 3,
     "awaiting_merge": 21,
     "merged": 396,
     "parked": 205
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T10:05:02Z",
+    "last_check_at": "2026-10-22T10:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T10:09:13Z",
+    "kind": "warn",
+    "text": "Claude Opus build attempt ended: quota hold"
+   },
+   {
+    "at": "2026-10-22T10:06:33Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “PAPER-03 Refuse reopening an evidence store whose append-only…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T10:02:40Z",
     "kind": "review",
@@ -353,16 +363,6 @@
     "at": "2026-10-22T08:50:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
-   },
-   {
-    "at": "2026-10-22T08:46:10Z",
-    "kind": "warn",
-    "text": "Claude Opus build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-22T08:45:23Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-07 Record malformed or refused public payloads per source…” → sent to independent review"
    }
   ]
  },
@@ -373,17 +373,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T10:04:58Z",
-   "heartbeat_at": "2026-10-22T10:05:04Z",
+   "status_at": "2026-10-22T10:09:59Z",
+   "heartbeat_at": "2026-10-22T10:10:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 443,
-    "markets": 4397,
+    "weather_events": 441,
+    "markets": 4375,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T09:59:33Z",
+    "last_scan_at": "2026-10-22T10:06:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T09:59:33Z",
+    "updated_at": "2026-10-22T10:06:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T10:03:28Z",
+    "updated_at": "2026-10-22T10:09:33Z",
     "detail": "observations retained"
    },
    {
