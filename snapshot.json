@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:45:02Z",
+ "generated_at": "2026-10-22T10:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 16,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -31,18 +31,18 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 19,
+    "count": 18,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "56 merged in 24h"
+    "detail": "57 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-22T10:21:01Z",
    "last_passed": 0,
@@ -116,8 +116,8 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 56,
-   "commits_24h": 56,
+   "merges_24h": 57,
+   "commits_24h": 57,
    "built_24h": 68,
    "build_failed_24h": 11,
    "reviews_passed_24h": 71,
@@ -146,15 +146,17 @@
     0,
     3,
     0,
-    5
+    6
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "waiting for the full test run to finish"
+   ],
    "stage_totals": {
     "queued": 16,
     "building": 0,
     "in_review": 2,
-    "awaiting_merge": 19,
-    "merged": 401,
+    "awaiting_merge": 18,
+    "merged": 402,
     "parked": 205
    }
   },
@@ -165,6 +167,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T10:45:32Z",
+    "title": "LIVE-14 Measure the kernel clock error bound and gate new openings on it",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T10:37:12Z",
     "title": "LEARNING-SOURCES METAR rules : multimodel panel accepts AWC_METAR_ROUTINE days alongside…",
@@ -199,11 +206,6 @@
     "at": "2026-10-22T06:17:04Z",
     "title": "PAPER-02 METAR rules : root daily review authority applies the same METAR envelope…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T06:06:33Z",
-    "title": "LEARNING-SOURCES METAR rules : label attestation uses the event's rule version (METAR…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T10:45:03Z",
+    "last_check_at": "2026-10-22T10:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T10:45:32Z",
+    "kind": "merge",
+    "text": "Merged “LIVE-14 Measure the kernel clock error bound and gate new openings…” into the main build"
+   },
    {
     "at": "2026-10-22T10:45:02Z",
     "kind": "heal",
@@ -357,11 +364,6 @@
     "at": "2026-10-22T09:52:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: agent held review"
-   },
-   {
-    "at": "2026-10-22T09:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
    }
   ]
  },
@@ -372,17 +374,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T10:45:01Z",
-   "heartbeat_at": "2026-10-22T10:45:04Z",
+   "status_at": "2026-10-22T10:49:59Z",
+   "heartbeat_at": "2026-10-22T10:50:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 442,
-    "markets": 4386,
+    "weather_events": 439,
+    "markets": 4353,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T10:41:39Z",
+    "last_scan_at": "2026-10-22T10:47:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T10:41:39Z",
+    "updated_at": "2026-10-22T10:47:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T10:43:52Z",
+    "updated_at": "2026-10-22T10:49:55Z",
     "detail": "observations retained"
    },
    {
@@ -1007,8 +1009,8 @@
      "name": "Host clock health",
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
-     "merged_tasks": 5,
-     "open_tasks": 1
+     "merged_tasks": 6,
+     "open_tasks": 0
     },
     {
      "id": "LIVE-15",
