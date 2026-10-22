@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T15:25:01Z",
+ "generated_at": "2026-10-22T15:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 24,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -85,22 +85,22 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_f593d393",
+    "task": "a build task",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_bb8a4b73",
+    "task": "a build task",
+    "elapsed_min": 0
    }
   ],
   "qa": {
@@ -125,14 +125,14 @@
    "commits_by_hour": [
     2,
     6,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -141,8 +141,8 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T15:25:01Z",
+    "last_check_at": "2026-10-22T15:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,7 +237,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 339,
+    "runs_total": 340,
     "last_run_at": "2026-10-22T14:30:03Z",
     "last_ok": false,
     "last_kind": "flow green release failed",
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T15:25:00Z",
-   "heartbeat_at": "2026-10-22T15:25:02Z",
+   "status_at": "2026-10-22T15:29:59Z",
+   "heartbeat_at": "2026-10-22T15:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 439,
-    "markets": 4410,
+    "weather_events": 438,
+    "markets": 4399,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T15:24:06Z",
+    "last_scan_at": "2026-10-22T15:27:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T15:24:06Z",
+    "updated_at": "2026-10-22T15:27:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T15:24:49Z",
+    "updated_at": "2026-10-22T15:28:50Z",
     "detail": "observations retained"
    },
    {
