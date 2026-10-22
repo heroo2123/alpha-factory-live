@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T19:40:02Z",
+ "generated_at": "2026-10-22T19:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 15,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 6,
+    "count": 8,
     "unit": "awaiting merge",
     "active": true,
     "detail": "71 merged in 24h"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_1736d1ac",
-    "task": "CODE-01 Require a satisfied R31 contract-finality verdict before any…",
-    "elapsed_min": 1
+    "task_id": "t_bdcd2298",
+    "task": "CODE-01 Re-check ASOS day coverage and use half-up rounding in the WRH-bracket agreement",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "DeepSeek",
     "task_id": "t_0e08e9d8",
     "task": "Release census must bind the day rule's source_family",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_a310be8f",
-    "task": "FLEX candidate t_749a8ee3 2333e5fe1885",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_7e36a88e",
-    "task": "FLEX candidate t_25791f2c 8079ae67a764",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 71,
    "commits_24h": 71,
-   "built_24h": 50,
+   "built_24h": 49,
    "build_failed_24h": 12,
    "reviews_passed_24h": 72,
    "reviews_changes_24h": 12,
@@ -137,14 +137,14 @@
     0,
     3,
     0,
-    3,
-    3,
-    3,
+    6,
+    0,
+    5,
+    8,
+    0,
+    0,
     10,
-    0,
-    0,
-    9,
-    4,
+    3,
     4,
     2
    ],
@@ -154,10 +154,10 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 16,
+    "queued": 15,
     "building": 2,
-    "in_review": 2,
-    "awaiting_merge": 6,
+    "in_review": 1,
+    "awaiting_merge": 8,
     "merged": 434,
     "parked": 221
    }
@@ -216,7 +216,7 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T19:40:02Z",
+    "last_check_at": "2026-10-22T19:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,12 +234,12 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T19:30:03Z",
+    "last_check_at": "2026-10-22T19:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 362,
+    "runs_total": 363,
     "last_run_at": "2026-10-22T19:40:02Z",
     "last_ok": true,
     "last_kind": "full suite not green",
@@ -255,6 +255,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T19:45:01Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_25791f2c 8079ae67a764”: passed"
+   },
+   {
+    "at": "2026-10-22T19:44:51Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-22T19:43:25Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_749a8ee3 2333e5fe1885”: passed"
+   },
+   {
+    "at": "2026-10-22T19:41:54Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Require a satisfied R31 contract-finality verdict before any…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T19:40:02Z",
     "kind": "heal",
@@ -344,26 +364,6 @@
     "at": "2026-10-22T19:06:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-22T18:54:38Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “METAR rule authority must prove the REAL published Polymarket METAR…”: passed"
-   },
-   {
-    "at": "2026-10-22T18:54:24Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “Release census must bind the day rule's source_family”: passed"
-   },
-   {
-    "at": "2026-10-22T18:51:14Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “METAR rule authority must prove the REAL published Polymarket METAR…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T18:42:09Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T19:40:01Z",
-   "heartbeat_at": "2026-10-22T19:40:01Z",
+   "status_at": "2026-10-22T19:44:58Z",
+   "heartbeat_at": "2026-10-22T19:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T19:36:28Z",
+    "last_scan_at": "2026-10-22T19:42:05Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T19:36:28Z",
+    "updated_at": "2026-10-22T19:42:05Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T19:38:24Z",
+    "updated_at": "2026-10-22T19:44:26Z",
     "detail": "observations retained"
    },
    {
