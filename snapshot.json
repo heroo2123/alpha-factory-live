@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:00:03Z",
+ "generated_at": "2026-10-22T10:05:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "69 built in 24h"
+    "detail": "68 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 19,
+    "count": 21,
     "unit": "awaiting merge",
     "active": true,
     "detail": "52 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 79,
+    "count": 81,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_ab4d4b53",
     "task": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
-    "elapsed_min": 50
+    "elapsed_min": 55
    },
    {
     "slot": "Builder 2",
@@ -88,24 +88,24 @@
     "state": "working",
     "model": "MiniMax M3",
     "family": "MiniMax",
-    "task_id": "t_bdcd2298",
-    "task": "CODE-01 Re-check ASOS day coverage and use half-up rounding in the WRH-bracket agreement",
-    "elapsed_min": 4
+    "task_id": "t_e03cfd20",
+    "task": "CODE-01 Require the exact NWS correction-window and finality sentences and refuse…",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "GLM 5.2",
-    "family": "Zhipu",
-    "task_id": "t_e604b586",
-    "task": "LEARNING-SOURCES Historical held-out backfill with the forward capture method: GEFS S3 +…",
-    "elapsed_min": 11
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 79,
+   "progress_pct": 81,
    "last_finished_at": "2026-10-22T08:08:01Z",
    "last_passed": 15109,
    "last_failed": 1,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 52,
    "commits_24h": 52,
-   "built_24h": 69,
-   "build_failed_24h": 11,
-   "reviews_passed_24h": 69,
+   "built_24h": 68,
+   "build_failed_24h": 10,
+   "reviews_passed_24h": 71,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
     1,
@@ -134,16 +134,16 @@
     3,
     2,
     0,
+    2,
+    2,
+    0,
+    3,
+    0,
+    3,
     1,
-    3,
-    0,
-    3,
-    0,
-    3,
-    0,
-    10,
-    0,
     9,
+    3,
+    6,
     0,
     3,
     0
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 18,
     "building": 1,
-    "in_review": 4,
-    "awaiting_merge": 19,
+    "in_review": 2,
+    "awaiting_merge": 21,
     "merged": 396,
     "parked": 205
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T10:00:04Z",
+    "last_check_at": "2026-10-22T10:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T09:50:05Z",
+    "last_check_at": "2026-10-22T10:00:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T10:02:40Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “LEARNING-SOURCES Historical held-out backfill with the forward…”: passed"
+   },
+   {
+    "at": "2026-10-22T10:01:45Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “CODE-01 Re-check ASOS day coverage and use half-up rounding in the…”: passed"
+   },
    {
     "at": "2026-10-22T09:55:51Z",
     "kind": "review",
@@ -353,16 +363,6 @@
     "at": "2026-10-22T08:45:23Z",
     "kind": "build",
     "text": "Claude Opus built “PAPER-07 Record malformed or refused public payloads per source…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T08:45:16Z",
-    "kind": "build",
-    "text": "Claude Opus built “LEARNING-SOURCES Historical held-out backfill with the forward…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T08:36:23Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “LEARNING-SOURCES METAR rules : multimodel panel accepts…”: passed"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T09:59:59Z",
-   "heartbeat_at": "2026-10-22T10:00:04Z",
+   "status_at": "2026-10-22T10:04:58Z",
+   "heartbeat_at": "2026-10-22T10:05:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T09:59:24Z",
+    "updated_at": "2026-10-22T10:03:28Z",
     "detail": "observations retained"
    },
    {
