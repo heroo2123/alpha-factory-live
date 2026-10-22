@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T17:25:02Z",
+ "generated_at": "2026-10-22T17:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 17,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "49 built in 24h"
+    "detail": "48 built in 24h"
    },
    {
     "key": "review",
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "70 merged in 24h"
+    "detail": "71 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 44,
+    "count": 47,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0040d5d0",
     "task": "LIVE-15 Bind custody-gate results to the release commit and the expected check count",
-    "elapsed_min": 18
+    "elapsed_min": 23
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_749a8ee3",
-    "task": "CODE-01 Quantify the residual-risk components and cross-bind the upstream R31 verdict's…",
-    "elapsed_min": 1
+    "task_id": "t_6bce24d6",
+    "task": "LIVE-15 Verify the cited adversarial report bytes before a guardian commission can match",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 44,
+   "progress_pct": 47,
    "last_finished_at": "2026-10-22T16:21:07Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -116,21 +116,21 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 70,
-   "commits_24h": 70,
-   "built_24h": 49,
+   "merges_24h": 71,
+   "commits_24h": 71,
+   "built_24h": 48,
    "build_failed_24h": 11,
    "reviews_passed_24h": 79,
-   "reviews_changes_24h": 9,
+   "reviews_changes_24h": 10,
    "commits_by_hour": [
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -139,26 +139,23 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
     0,
     6,
-    6
+    7
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review",
-    "targeted tests failed recently backoff"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 17,
     "building": 2,
     "in_review": 2,
-    "awaiting_merge": 7,
-    "merged": 427,
-    "parked": 212
+    "awaiting_merge": 6,
+    "merged": 428,
+    "parked": 213
    }
   },
   "architect": {
@@ -168,6 +165,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T17:26:38Z",
+    "title": "Candidate model #1: station-bias correction + multi-model blend + calibrated spread (new…",
+    "area": "Forecast brain"
+   },
    {
     "at": "2026-10-22T17:04:03Z",
     "title": "CODE-01 Recheck the WRH snapshot's digests before the IEM cross-check",
@@ -202,11 +204,6 @@
     "at": "2026-10-22T16:18:21Z",
     "title": "CODE-01 Test durable scenario-view archive incl. namespace/tamper refusals",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T16:11:58Z",
-    "title": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-22T17:25:02Z",
+    "last_check_at": "2026-10-22T17:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +235,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 346,
-    "last_run_at": "2026-10-22T17:25:02Z",
+    "runs_total": 347,
+    "last_run_at": "2026-10-22T17:30:03Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +251,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T17:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-22T17:27:30Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Verify the asserted release identity of an adversarial…”: changes required"
+   },
+   {
+    "at": "2026-10-22T17:27:21Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Quantify the residual-risk components and cross-bind the…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T17:26:38Z",
+    "kind": "merge",
+    "text": "Merged “Candidate model #1: station-bias correction + multi-model blend +…” into the main build"
+   },
    {
     "at": "2026-10-22T17:25:02Z",
     "kind": "heal",
@@ -343,26 +360,6 @@
     "at": "2026-10-22T16:46:14Z",
     "kind": "warn",
     "text": "Claude Sonnet reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-22T16:45:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-22T16:44:23Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Recheck ASOS full-day coverage before reporting ASOS/WRH…” into the main build"
-   },
-   {
-    "at": "2026-10-22T16:44:12Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-22T16:42:25Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 Recheck the WRH snapshot's digests before the IEM cross-check”: passed"
    }
   ]
  },
@@ -372,9 +369,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T17:24:57Z",
-   "heartbeat_at": "2026-10-22T17:25:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T17:28:41Z",
+   "heartbeat_at": "2026-10-22T17:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +380,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T17:22:32Z",
+    "last_scan_at": "2026-10-22T17:27:56Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T17:22:32Z",
+    "updated_at": "2026-10-22T17:27:56Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T17:23:30Z",
+    "updated_at": "2026-10-22T17:29:33Z",
     "detail": "observations retained"
    },
    {
@@ -545,6 +542,11 @@
   },
   "skills": [
    {
+    "title": "Candidate model #1: station-bias correction + multi-model blend + calibrated spread (new…",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-22T17:26:38Z"
+   },
+   {
     "title": "Root-custodied guardian commissioning manifest reader",
     "area": "Safety guardian",
     "merged_at": "2026-10-22T12:58:03Z"
@@ -588,11 +590,6 @@
     "title": "Spec 6A safety modes step 3: owner panel commands",
     "area": "Pre-funding checks",
     "merged_at": "2026-10-19T00:00:36Z"
-   },
-   {
-    "title": "Same-day observed-so-far conditioned forecast evaluation for station (new tool)",
-    "area": "Forecast brain",
-    "merged_at": "2026-10-18T23:50:00Z"
    }
   ],
   "readiness": {
@@ -1018,7 +1015,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 21,
-     "open_tasks": 2
+     "open_tasks": 1
     },
     {
      "id": "LIVE-16",
