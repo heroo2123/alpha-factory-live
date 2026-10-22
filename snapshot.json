@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T01:15:01Z",
+ "generated_at": "2026-10-22T01:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 44,
+    "count": 47,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "DeepSeek",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4.1 Flash",
-    "family": "DeepSeek",
-    "task_id": "t_d3dcb0c2",
-    "task": "CODE-01 Make the RESULT_LAG admission gate evidence-conditional instead of blanket",
-    "elapsed_min": 29
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 44,
+   "progress_pct": 47,
    "last_finished_at": "2026-10-22T00:06:12Z",
    "last_passed": 14779,
    "last_failed": 15,
@@ -145,8 +145,8 @@
     0,
     4,
     0,
-    1,
-    2
+    2,
+    1
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T01:15:02Z",
+    "last_check_at": "2026-10-22T01:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +231,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 60,
+    "runs_24h": 59,
     "runs_total": 290,
     "last_run_at": "2026-10-22T01:00:02Z",
     "last_ok": true,
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T01:15:01Z",
-   "heartbeat_at": "2026-10-22T01:15:01Z",
+   "status_at": "2026-10-22T01:19:59Z",
+   "heartbeat_at": "2026-10-22T01:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -379,7 +379,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T01:10:13Z",
+    "last_scan_at": "2026-10-22T01:15:23Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T01:10:13Z",
+    "updated_at": "2026-10-22T01:15:23Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T01:13:55Z",
+    "updated_at": "2026-10-22T01:19:57Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +507,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T00:17:03Z",
+   "updated_at": "2026-10-22T01:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
