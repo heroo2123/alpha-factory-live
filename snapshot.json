@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T08:15:02Z",
+ "generated_at": "2026-10-22T08:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 4,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_eaed39d3",
     "task": "LEARNING-SOURCES METAR rules : multimodel panel accepts AWC_METAR_ROUTINE days alongside…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_5065cd2a",
     "task": "PAPER-07 Record malformed or refused public payloads per source instead of aborting the…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
@@ -90,21 +90,21 @@
     "family": "MiniMax",
     "task_id": "t_1428e593",
     "task": "LEARNING-SOURCES METAR rules : perpetual brain harvest keeps harvesting METAR-rule…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_821d889e",
+    "task": "a build task",
+    "elapsed_min": 4
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-22T08:08:01Z",
    "last_passed": 15109,
@@ -138,21 +138,23 @@
     0,
     4,
     0,
+    2,
+    1,
     1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2,
+    9,
+    0,
     3
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "waiting for the full test run to finish"
+   ],
    "stage_totals": {
     "queued": 16,
     "building": 2,
-    "in_review": 2,
+    "in_review": 4,
     "awaiting_merge": 15,
     "merged": 396,
     "parked": 204
@@ -208,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T08:15:02Z",
+    "last_check_at": "2026-10-22T08:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T08:17:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: full suite not green"
+   },
    {
     "at": "2026-10-22T08:14:17Z",
     "kind": "review",
@@ -357,11 +364,6 @@
     "at": "2026-10-22T07:02:12Z",
     "kind": "build",
     "text": "Claude Opus built “Root-custodied guardian commissioning manifest reader” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T06:44:16Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389…”: passed"
    }
   ]
  },
@@ -372,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T08:15:00Z",
-   "heartbeat_at": "2026-10-22T08:15:02Z",
+   "status_at": "2026-10-22T08:20:00Z",
+   "heartbeat_at": "2026-10-22T08:20:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -412,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T08:14:26Z",
+    "updated_at": "2026-10-22T08:18:28Z",
     "detail": "observations retained"
    },
    {
@@ -477,20 +479,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9208,
-     "city_days": 47
+     "brier": 0.9074,
+     "city_days": 49
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8573,
-     "city_days": 47
+     "brier": 0.8522,
+     "city_days": 49
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6834,
-     "city_days": 47
+     "brier": 0.6812,
+     "city_days": 49
     },
     {
      "key": "equal",
@@ -502,15 +504,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 27 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 48,
-   "waiting_city_days": 17,
+   "labelled_city_days": 50,
+   "waiting_city_days": 15,
    "labelled_days": 9,
    "captured_days_waiting": 1,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T07:17:03Z",
+   "updated_at": "2026-10-22T08:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
