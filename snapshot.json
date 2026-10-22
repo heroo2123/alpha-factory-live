@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T14:25:01Z",
+ "generated_at": "2026-10-22T14:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 21,
+    "count": 22,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 85,
+    "count": 88,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 85,
+   "progress_pct": 88,
    "last_finished_at": "2026-10-22T12:54:42Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -120,20 +120,20 @@
    "commits_24h": 66,
    "built_24h": 66,
    "build_failed_24h": 9,
-   "reviews_passed_24h": 72,
+   "reviews_passed_24h": 70,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     0,
     2,
     6,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -142,8 +142,8 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 20,
     "building": 0,
-    "in_review": 21,
+    "in_review": 22,
     "awaiting_merge": 14,
     "merged": 415,
     "parked": 206
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T14:25:02Z",
+    "last_check_at": "2026-10-22T14:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,11 +238,11 @@
    "operator": {
     "runs_24h": 60,
     "runs_total": 339,
-    "last_run_at": "2026-10-22T14:10:02Z",
+    "last_run_at": "2026-10-22T14:30:03Z",
     "last_ok": false,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow green release failed",
     "running": false,
-    "model": "Kimi K3",
+    "model": "GLM 5.3",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -255,6 +255,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T14:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (GLM 5.3) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-22T14:28:07Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-22T14:27:09Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-22T14:10:02Z",
     "kind": "heal",
@@ -349,21 +364,6 @@
     "at": "2026-10-22T12:55:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
-   },
-   {
-    "at": "2026-10-22T12:54:46Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Cap WRH bracket policy at the stated finality bound so no…” into the main build"
-   },
-   {
-    "at": "2026-10-22T12:54:42Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 0 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-22T12:54:17Z",
-    "kind": "merge",
-    "text": "Merged “Candidate-assembly census/audit and MADIS candidate tests must not…” into the main build"
    }
   ]
  },
@@ -373,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T14:23:57Z",
-   "heartbeat_at": "2026-10-22T14:25:02Z",
+   "state": "census service",
+   "status_at": "2026-10-22T14:30:00Z",
+   "heartbeat_at": "2026-10-22T14:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 448,
     "markets": 4498,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T14:21:54Z",
+    "last_scan_at": "2026-10-22T14:27:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T14:21:54Z",
+    "updated_at": "2026-10-22T14:27:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T14:24:29Z",
+    "updated_at": "2026-10-22T14:28:31Z",
     "detail": "observations retained"
    },
    {
