@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T09:15:01Z",
+ "generated_at": "2026-10-22T09:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "14 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "68 built in 24h"
+    "detail": "69 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 5,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 50,
+    "count": 53,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_ab4d4b53",
     "task": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Claude Opus",
-    "family": "Anthropic",
-    "task_id": "t_e03cfd20",
-    "task": "CODE-01 Require the exact NWS correction-window and finality sentences and refuse…",
-    "elapsed_min": 22
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 50,
+   "progress_pct": 53,
    "last_finished_at": "2026-10-22T08:08:01Z",
    "last_passed": 15109,
    "last_failed": 1,
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 52,
    "commits_24h": 52,
-   "built_24h": 68,
-   "build_failed_24h": 13,
+   "built_24h": 69,
+   "build_failed_24h": 12,
    "reviews_passed_24h": 68,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
@@ -137,14 +137,14 @@
     0,
     4,
     0,
+    2,
+    1,
     1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2,
+    9,
+    0,
     3,
     0
    ],
@@ -152,12 +152,12 @@
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 14,
-    "building": 2,
-    "in_review": 4,
+    "queued": 15,
+    "building": 1,
+    "in_review": 5,
     "awaiting_merge": 18,
     "merged": 396,
-    "parked": 208
+    "parked": 207
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T09:15:02Z",
+    "last_check_at": "2026-10-22T09:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 60,
+    "runs_24h": 59,
     "runs_total": 313,
     "last_run_at": "2026-10-22T08:50:02Z",
     "last_ok": true,
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T09:19:16Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Require the exact NWS correction-window and finality…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T09:04:10Z",
     "kind": "warn",
@@ -358,11 +363,6 @@
     "at": "2026-10-22T08:17:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: full suite not green"
-   },
-   {
-    "at": "2026-10-22T08:14:17Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “FLEX candidate t_868291f7 3ce6df04a39b”: passed"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T09:15:00Z",
-   "heartbeat_at": "2026-10-22T09:15:01Z",
+   "status_at": "2026-10-22T09:19:59Z",
+   "heartbeat_at": "2026-10-22T09:20:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 459,
     "markets": 4573,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T09:13:56Z",
+    "last_scan_at": "2026-10-22T09:19:02Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T09:13:56Z",
+    "updated_at": "2026-10-22T09:19:02Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T09:14:53Z",
+    "updated_at": "2026-10-22T09:18:55Z",
     "detail": "observations retained"
    },
    {
@@ -478,20 +478,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.9074,
-     "city_days": 49
+     "brier": 0.9126,
+     "city_days": 51
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8522,
-     "city_days": 49
+     "brier": 0.8521,
+     "city_days": 51
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6812,
-     "city_days": 49
+     "brier": 0.6705,
+     "city_days": 51
     },
     {
      "key": "equal",
@@ -503,15 +503,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 29 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 50,
-   "waiting_city_days": 15,
+   "labelled_city_days": 52,
+   "waiting_city_days": 13,
    "labelled_days": 9,
    "captured_days_waiting": 1,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T08:17:03Z",
+   "updated_at": "2026-10-22T09:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
