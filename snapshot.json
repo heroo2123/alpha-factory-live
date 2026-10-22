@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T22:25:02Z",
+ "generated_at": "2026-10-22T22:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 16,
     "unit": "queued",
     "active": false,
-    "detail": "17 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 4,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_03e94d0f",
     "task": "CODE-01 Bind the METAR R31 verdict to its event and require a bounded cutoff bracket",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Sonnet",
+    "family": "Anthropic",
+    "task_id": "t_1736d1ac",
+    "task": "CODE-01 Require a satisfied R31 contract-finality verdict before any…",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 4,
    "last_finished_at": "2026-10-22T21:46:38Z",
    "last_passed": 15768,
    "last_failed": 2,
@@ -119,13 +119,13 @@
    "merges_24h": 73,
    "commits_24h": 73,
    "built_24h": 51,
-   "build_failed_24h": 10,
+   "build_failed_24h": 9,
    "reviews_passed_24h": 69,
-   "reviews_changes_24h": 16,
+   "reviews_changes_24h": 17,
    "commits_by_hour": [
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -134,8 +134,8 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -150,6 +150,7 @@
    ],
    "merge_holds": [
     "protected code: waiting for a second review",
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
@@ -158,7 +159,7 @@
     "in_review": 0,
     "awaiting_merge": 5,
     "merged": 441,
-    "parked": 231
+    "parked": 232
    }
   },
   "architect": {
@@ -215,7 +216,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T22:25:02Z",
+    "last_check_at": "2026-10-22T22:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +239,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 377,
-    "last_run_at": "2026-10-22T22:20:02Z",
+    "runs_total": 378,
+    "last_run_at": "2026-10-22T22:30:02Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +255,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T22:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-22T22:27:17Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_25791f2c 8079ae67a764”: changes required"
+   },
+   {
+    "at": "2026-10-22T22:25:19Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Record the R31 contract-finality verdict and residual risk…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T22:24:17Z",
     "kind": "merge",
@@ -348,21 +364,6 @@
     "at": "2026-10-22T21:47:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-22T21:46:53Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Quantify the residual-risk components and cross-bind the…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T21:46:38Z",
-    "kind": "merge",
-    "text": "Merged “METAR rule authority must prove the REAL published Polymarket METAR…” into the main build"
-   },
-   {
-    "at": "2026-10-22T21:46:38Z",
-    "kind": "warn",
-    "text": "Full test suite finished: 15768 passed, 2 failed"
    }
   ]
  },
@@ -372,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T22:24:58Z",
-   "heartbeat_at": "2026-10-22T22:25:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T22:29:54Z",
+   "heartbeat_at": "2026-10-22T22:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +384,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T22:23:16Z",
+    "last_scan_at": "2026-10-22T22:28:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T22:23:16Z",
+    "updated_at": "2026-10-22T22:28:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T22:23:28Z",
+    "updated_at": "2026-10-22T22:29:30Z",
     "detail": "observations retained"
    },
    {
