@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T17:15:02Z",
+ "generated_at": "2026-10-22T17:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 18,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -18,7 +18,7 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "48 built in 24h"
+    "detail": "47 built in 24h"
    },
    {
     "key": "review",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "71 merged in 24h"
+    "detail": "70 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_0040d5d0",
     "task": "LIVE-15 Bind custody-gate results to the release commit and the expected check count",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -78,12 +78,22 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_e37252e8",
-    "task": "PAPER-09 Re-validate the pinned PWS QC record's provider, health, station and…",
-    "elapsed_min": 22
+    "task_id": "t_6bce24d6",
+    "task": "LIVE-15 Verify the cited adversarial report bytes before a guardian commission can match",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_e37252e8",
+    "task": "PAPER-09 Re-validate the pinned PWS QC record's provider, health, station and…",
+    "elapsed_min": 0
+   },
+   {
+    "slot": "Reviewer 2",
     "role": "review",
     "state": "waiting",
     "model": "",
@@ -91,16 +101,6 @@
     "task_id": "",
     "task": "",
     "elapsed_min": null
-   },
-   {
-    "slot": "Reviewer 2",
-    "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_03e94d0f",
-    "task": "CODE-01 Bind the METAR R31 verdict to its event and require a bounded cutoff bracket",
-    "elapsed_min": 8
    }
   ],
   "qa": {
@@ -116,11 +116,11 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 71,
+   "merges_24h": 70,
    "commits_24h": 70,
-   "built_24h": 48,
+   "built_24h": 47,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 81,
+   "reviews_passed_24h": 82,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     3,
@@ -129,14 +129,14 @@
     0,
     4,
     0,
+    2,
+    1,
     1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2,
+    9,
+    0,
     3,
     0,
     0,
@@ -145,18 +145,18 @@
     13,
     0,
     0,
-    3,
-    9
+    5,
+    7
    ],
    "merge_holds": [
     "protected code: waiting for a second review",
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 19,
+    "queued": 18,
     "building": 2,
     "in_review": 2,
-    "awaiting_merge": 5,
+    "awaiting_merge": 6,
     "merged": 427,
     "parked": 211
    }
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-22T17:15:02Z",
+    "last_check_at": "2026-10-22T17:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 344,
-    "last_run_at": "2026-10-22T16:45:01Z",
+    "runs_total": 345,
+    "last_run_at": "2026-10-22T17:20:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow shadow evals all gated",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,10 +249,26 @@
   },
   "providers": [
    "Claude",
+   "Codex",
    "DeepSeek",
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T17:20:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow evals all gated"
+   },
+   {
+    "at": "2026-10-22T17:19:15Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “PAPER-09 Re-validate the pinned PWS QC record's provider, health…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T17:17:22Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Bind the METAR R31 verdict to its event and require a…”: passed"
+   },
    {
     "at": "2026-10-22T17:14:22Z",
     "kind": "review",
@@ -347,21 +363,6 @@
     "at": "2026-10-22T16:35:17Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 Recheck the WRH snapshot's digests before the IEM cross-check” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T16:35:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
-   },
-   {
-    "at": "2026-10-22T16:32:16Z",
-    "kind": "merge",
-    "text": "Merged “strategy_admission must import: tighten RESULT_LAG finality policy…” into the main build"
-   },
-   {
-    "at": "2026-10-22T16:30:18Z",
-    "kind": "warn",
-    "text": "Claude Sonnet's build of “LIVE-15 Bind custody-gate results to the release commit and the…” failed its tests; it will be retried"
    }
   ]
  },
@@ -372,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T17:15:00Z",
-   "heartbeat_at": "2026-10-22T17:15:02Z",
+   "status_at": "2026-10-22T17:20:00Z",
+   "heartbeat_at": "2026-10-22T17:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +383,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T17:11:33Z",
+    "last_scan_at": "2026-10-22T17:17:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T17:11:33Z",
+    "updated_at": "2026-10-22T17:17:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T17:13:27Z",
+    "updated_at": "2026-10-22T17:19:29Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +511,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T16:17:03Z",
+   "updated_at": "2026-10-22T17:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
