@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T19:30:03Z",
+ "generated_at": "2026-10-22T19:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_3d1f0c9e",
-    "task": "LIVE-15 Verify the asserted release identity of an adversarial report against git blobs",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_749a8ee3",
     "task": "CODE-01 Quantify the residual-risk components and cross-bind the upstream R31 verdict's…",
-    "elapsed_min": 20
+    "elapsed_min": 25
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_c5e4e50f",
-    "task": "CODE-01 PAPER reward maker : causal per-minute paper runner with variants over captured…",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -137,19 +137,20 @@
     0,
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6,
     7,
-    3,
-    3
+    6,
+    4,
+    2
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
@@ -215,7 +216,7 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T19:30:03Z",
+    "last_check_at": "2026-10-22T19:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,15 +234,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T19:20:03Z",
+    "last_check_at": "2026-10-22T19:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 361,
-    "last_run_at": "2026-10-22T19:30:02Z",
+    "runs_total": 362,
+    "last_run_at": "2026-10-22T19:35:01Z",
     "last_ok": true,
-    "last_kind": "engineering regression selftest failed",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +255,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T19:35:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-22T19:30:02Z",
     "kind": "heal",
@@ -298,11 +304,6 @@
     "at": "2026-10-22T19:12:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “LIVE-15 forbid lazy promisor fetch during read-only guardian release…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T19:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
    },
    {
     "at": "2026-10-22T19:09:20Z",
@@ -372,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T19:28:38Z",
-   "heartbeat_at": "2026-10-22T19:30:02Z",
+   "state": "census service",
+   "status_at": "2026-10-22T19:34:58Z",
+   "heartbeat_at": "2026-10-22T19:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +384,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T19:25:22Z",
+    "last_scan_at": "2026-10-22T19:31:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T19:25:22Z",
+    "updated_at": "2026-10-22T19:31:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T19:28:20Z",
+    "updated_at": "2026-10-22T19:34:22Z",
     "detail": "observations retained"
    },
    {
