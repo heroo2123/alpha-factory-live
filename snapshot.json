@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:40:03Z",
+ "generated_at": "2026-10-22T10:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "68 built in 24h"
    },
    {
@@ -25,16 +25,16 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 20,
+    "count": 19,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "54 merged in 24h"
+    "detail": "56 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4.1 Flash",
-    "family": "DeepSeek",
-    "task_id": "t_b87ac0af",
-    "task": "PAPER-08 census commissioning plan must accept today's already-started contract",
-    "elapsed_min": 8
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_4a2fe8a3",
-    "task": "FLEX candidate t_ab128c9c 0365b9c308d2",
-    "elapsed_min": 8
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 54,
-   "commits_24h": 54,
+   "merges_24h": 56,
+   "commits_24h": 56,
    "built_24h": 68,
    "build_failed_24h": 11,
    "reviews_passed_24h": 71,
@@ -129,8 +129,8 @@
     0,
     2,
     0,
-    6,
-    5,
+    7,
+    4,
     1,
     1,
     0,
@@ -146,15 +146,15 @@
     0,
     3,
     0,
-    3
+    5
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 16,
-    "building": 1,
+    "building": 0,
     "in_review": 2,
-    "awaiting_merge": 20,
-    "merged": 399,
+    "awaiting_merge": 19,
+    "merged": 401,
     "parked": 205
    }
   },
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T10:40:03Z",
+    "last_check_at": "2026-10-22T10:45:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +230,15 @@
      "flow green release failed",
      "flow green release failed"
     ],
-    "last_check_at": "2026-10-22T10:30:04Z",
+    "last_check_at": "2026-10-22T10:40:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 318,
-    "last_run_at": "2026-10-22T10:35:02Z",
+    "runs_total": 319,
+    "last_run_at": "2026-10-22T10:45:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow green release failed",
     "running": false,
     "model": "Kimi K3",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T10:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Kimi K3) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-22T10:42:18Z",
+    "kind": "build",
+    "text": "DeepSeek V4.1 Flash built “PAPER-08 census commissioning plan must accept today's…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T10:40:40Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “FLEX candidate t_ab128c9c 0365b9c308d2”: passed"
+   },
    {
     "at": "2026-10-22T10:37:12Z",
     "kind": "merge",
@@ -347,21 +362,6 @@
     "at": "2026-10-22T09:45:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
-    "at": "2026-10-22T09:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
-    "at": "2026-10-22T09:25:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: agent held review"
-   },
-   {
-    "at": "2026-10-22T09:19:16Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Require the exact NWS correction-window and finality…” → sent to independent review"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T10:39:58Z",
-   "heartbeat_at": "2026-10-22T10:40:03Z",
+   "status_at": "2026-10-22T10:45:01Z",
+   "heartbeat_at": "2026-10-22T10:45:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 440,
-    "markets": 4364,
+    "weather_events": 442,
+    "markets": 4386,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T10:35:42Z",
+    "last_scan_at": "2026-10-22T10:41:39Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T10:35:42Z",
+    "updated_at": "2026-10-22T10:41:39Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T10:39:50Z",
+    "updated_at": "2026-10-22T10:43:52Z",
     "detail": "observations retained"
    },
    {
