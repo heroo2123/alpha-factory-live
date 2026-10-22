@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T13:15:02Z",
+ "generated_at": "2026-10-22T13:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 6,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 17,
+    "count": 26,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 17,
+   "progress_pct": 26,
    "last_finished_at": "2026-10-22T12:54:42Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -133,14 +133,14 @@
     0,
     4,
     0,
+    2,
+    1,
     1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2,
+    9,
+    0,
     3,
     0,
     0,
@@ -152,12 +152,12 @@
     "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 20,
+    "queued": 19,
     "building": 0,
-    "in_review": 4,
+    "in_review": 6,
     "awaiting_merge": 14,
     "merged": 415,
-    "parked": 206
+    "parked": 207
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T13:15:02Z",
+    "last_check_at": "2026-10-22T13:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,9 +372,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T13:14:15Z",
-   "heartbeat_at": "2026-10-22T13:15:01Z",
+   "state": "census service",
+   "status_at": "2026-10-22T13:19:58Z",
+   "heartbeat_at": "2026-10-22T13:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 448,
     "markets": 4498,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T13:13:25Z",
+    "last_scan_at": "2026-10-22T13:18:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T13:13:25Z",
+    "updated_at": "2026-10-22T13:18:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T13:14:06Z",
+    "updated_at": "2026-10-22T13:18:08Z",
     "detail": "observations retained"
    },
    {
@@ -511,7 +511,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T12:17:04Z",
+   "updated_at": "2026-10-22T13:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
