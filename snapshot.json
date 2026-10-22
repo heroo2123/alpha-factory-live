@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T02:15:02Z",
+ "generated_at": "2026-10-22T02:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 25,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -23,18 +23,18 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 23,
+    "count": 22,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "44 merged in 24h"
+    "detail": "45 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_b8421697",
     "task": "New main SHA 7e08bfcaa7a4 Alpha V11 FLEX code task t_069aff65 deepseek_api",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "Anthropic",
     "task_id": "t_583cd913",
     "task": "Window-bounded audit archive scan so DAILY reports cover their own window under the row…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_6bfc9197",
-    "task": "FLEX candidate t_9b9add2c 94e017ecb9e5",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -106,18 +106,18 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-22T00:06:12Z",
-   "last_passed": 14779,
-   "last_failed": 15,
+   "last_finished_at": "2026-10-22T02:10:27Z",
+   "last_passed": 14813,
+   "last_failed": 0,
    "last_skipped": 51,
-   "last_green": false,
-   "last_green_at": "2026-10-21T02:27:12Z",
-   "last_minutes": 110
+   "last_green": true,
+   "last_green_at": "2026-10-22T02:10:27Z",
+   "last_minutes": 100
   },
-  "tests_passing": 14779,
+  "tests_passing": 14813,
   "flow": {
-   "merges_24h": 44,
-   "commits_24h": 44,
+   "merges_24h": 45,
+   "commits_24h": 45,
    "built_24h": 61,
    "build_failed_24h": 19,
    "reviews_passed_24h": 57,
@@ -144,20 +144,20 @@
     0,
     4,
     0,
-    1,
     2,
-    0
+    1,
+    1
    ],
    "merge_holds": [
-    "waiting for the full test run to finish"
+    "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 24,
+    "queued": 25,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 23,
-    "merged": 371,
-    "parked": 192
+    "in_review": 0,
+    "awaiting_merge": 22,
+    "merged": 372,
+    "parked": 193
    }
   },
   "architect": {
@@ -167,6 +167,11 @@
    "model": "GLM 5.2"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T02:18:55Z",
+    "title": "PAPER-02 METAR rules : rollforward publisher normalises METAR rule envelopes (URL…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T00:21:34Z",
     "title": "Candidate tests must advance the synthetic host clock after the LIVE-14 strict dispatch…",
@@ -201,11 +206,6 @@
     "at": "2026-10-21T19:23:26Z",
     "title": "CODE-01 Add a supporting-only IEM ASOS agreement check against a WRH finality bracket",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-21T18:34:39Z",
-    "title": "LIVE-14 Gate candidate job dispatch on the same strict clock-health predicate used at…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T02:15:02Z",
+    "last_check_at": "2026-10-22T02:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -252,6 +252,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-22T02:18:55Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-02 METAR rules : rollforward publisher normalises METAR rule…” into the main build"
+   },
+   {
+    "at": "2026-10-22T02:18:24Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “FLEX candidate t_9b9add2c 94e017ecb9e5”: passed"
+   },
+   {
     "at": "2026-10-22T02:14:15Z",
     "kind": "review",
     "text": "GLM 5.2 reviewed “New main SHA 8047ce656d82 Alpha V11 FLEX code task t_73b267c5…”: passed"
@@ -265,6 +275,11 @@
     "at": "2026-10-22T02:11:12Z",
     "kind": "build",
     "text": "Claude Opus built “New main SHA 59d8a61a298e Alpha V11 FLEX code task t_53fa1de6 codex” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T02:10:27Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 14813 passed, 0 failed"
    },
    {
     "at": "2026-10-22T02:10:02Z",
@@ -345,21 +360,6 @@
     "at": "2026-10-22T01:31:14Z",
     "kind": "build",
     "text": "Claude Opus built “CODE-01 R31 contract-defined finality: re-implement reviewed…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T01:20:12Z",
-    "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “CODE-01 Make the RESULT_LAG admission gate evidence-conditional…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T01:03:18Z",
-    "kind": "warn",
-    "text": "MiniMax M3 reviewed “CODE-01 Certify the first-following-date routine-METAR transition…”: changes required"
-   },
-   {
-    "at": "2026-10-22T01:00:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: routine"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T02:15:01Z",
-   "heartbeat_at": "2026-10-22T02:15:02Z",
+   "status_at": "2026-10-22T02:19:58Z",
+   "heartbeat_at": "2026-10-22T02:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T02:13:20Z",
+    "last_scan_at": "2026-10-22T02:18:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T02:13:20Z",
+    "updated_at": "2026-10-22T02:18:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T02:14:19Z",
+    "updated_at": "2026-10-22T02:18:20Z",
     "detail": "observations retained"
    },
    {
@@ -508,7 +508,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T01:17:02Z",
+   "updated_at": "2026-10-22T02:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
