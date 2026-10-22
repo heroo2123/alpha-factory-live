@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T08:05:01Z",
+ "generated_at": "2026-10-22T08:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 16,
+    "count": 17,
     "unit": "awaiting merge",
     "active": true,
     "detail": "52 merged in 24h"
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 87,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -85,27 +85,27 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_a70995d3",
-    "task": "FLEX candidate t_8843a19c 8b21e955a2ab",
-    "elapsed_min": 18
-   },
-   {
-    "slot": "Reviewer 2",
-    "role": "review",
     "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 2",
+    "role": "review",
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_503f6541",
+    "task": "FLEX candidate t_868291f7 3ce6df04a39b",
+    "elapsed_min": 4
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 87,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-22T05:55:17Z",
    "last_passed": 14987,
    "last_failed": 0,
@@ -126,36 +126,36 @@
     3,
     0,
     1,
+    1,
+    3,
+    0,
+    0,
+    2,
+    3,
+    6,
+    2,
+    2,
     0,
     4,
     0,
     0,
-    2,
-    0,
-    8,
-    3,
-    2,
-    0,
-    2,
-    2,
-    0,
     3,
     0,
     3,
-    1,
-    9,
-    3,
+    4,
     6,
+    6,
+    3,
     0
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
    ],
    "stage_totals": {
-    "queued": 19,
+    "queued": 18,
     "building": 1,
     "in_review": 2,
-    "awaiting_merge": 16,
+    "awaiting_merge": 17,
     "merged": 393,
     "parked": 204
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T08:05:02Z",
+    "last_check_at": "2026-10-22T08:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T08:08:22Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “FLEX candidate t_8843a19c 8b21e955a2ab”: passed"
+   },
+   {
+    "at": "2026-10-22T08:05:16Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 R31 contract-defined finality verdict per event (rules-text…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T08:05:01Z",
     "kind": "heal",
@@ -354,16 +364,6 @@
     "at": "2026-10-22T06:29:20Z",
     "kind": "warn",
     "text": "MiniMax M3 reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-22T06:29:15Z",
-    "kind": "build",
-    "text": "Claude Opus built “PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T06:26:12Z",
-    "kind": "build",
-    "text": "Claude Opus built “test_v11_request_assembly must pass monkeypatch to the changed…” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T08:04:59Z",
-   "heartbeat_at": "2026-10-22T08:05:01Z",
+   "status_at": "2026-10-22T08:10:02Z",
+   "heartbeat_at": "2026-10-22T08:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 497,
     "markets": 4991,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T08:04:15Z",
+    "last_scan_at": "2026-10-22T08:09:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T08:04:15Z",
+    "updated_at": "2026-10-22T08:09:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T08:04:22Z",
+    "updated_at": "2026-10-22T08:08:23Z",
     "detail": "observations retained"
    },
    {
