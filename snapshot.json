@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T07:10:02Z",
+ "generated_at": "2026-10-22T07:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 15,
+    "count": 16,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "54 merged in 24h"
+    "detail": "53 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 47,
+    "count": 50,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 47,
+   "progress_pct": 50,
    "last_finished_at": "2026-10-22T05:55:17Z",
    "last_passed": 14987,
    "last_failed": 0,
@@ -116,37 +116,37 @@
   },
   "tests_passing": 14987,
   "flow": {
-   "merges_24h": 54,
-   "commits_24h": 54,
+   "merges_24h": 53,
+   "commits_24h": 53,
    "built_24h": 65,
-   "build_failed_24h": 15,
-   "reviews_passed_24h": 68,
+   "build_failed_24h": 14,
+   "reviews_passed_24h": 69,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
-    2,
-    3,
-    0,
-    1,
     1,
     3,
     0,
+    1,
+    4,
+    0,
+    0,
     0,
     2,
-    3,
     6,
+    3,
     2,
     2,
     0,
     4,
     0,
+    1,
+    2,
     0,
     3,
-    0,
+    7,
     3,
-    4,
-    6,
-    6,
-    3
+    7,
+    2
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 22,
     "building": 0,
-    "in_review": 1,
-    "awaiting_merge": 15,
+    "in_review": 0,
+    "awaiting_merge": 16,
     "merged": 393,
     "parked": 204
    }
@@ -210,29 +210,29 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T07:10:02Z",
+    "last_check_at": "2026-10-22T07:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 7,
+    "active": 8,
     "by_severity": {
      "P0": 0,
-     "P1": 2,
+     "P1": 3,
      "P2": 3
     },
     "codes": [
      "flow deepseek low",
      "flow green release failed",
      "flow green release failed",
+     "flow green release failed",
      "flow shadow evals all gated",
-     "flow shadow census churn",
-     "flow queued scope needless pin fixture"
+     "flow shadow census churn"
     ],
-    "last_check_at": "2026-10-22T07:00:03Z",
+    "last_check_at": "2026-10-22T07:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T07:10:30Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “Root-custodied guardian commissioning manifest reader”: passed"
+   },
    {
     "at": "2026-10-22T07:09:20Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-22T06:06:33Z",
     "kind": "merge",
     "text": "Merged “LEARNING-SOURCES METAR rules : label attestation uses the event's…” into the main build"
-   },
-   {
-    "at": "2026-10-22T06:06:27Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “CODE-01 Make opportunity ranking respect candidate expiry and fail…”: passed"
    }
   ]
  },
@@ -373,18 +373,18 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T07:05:09Z",
-   "heartbeat_at": "2026-10-22T07:10:02Z",
+   "state": "census service",
+   "status_at": "2026-10-22T07:15:01Z",
+   "heartbeat_at": "2026-10-22T07:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 497,
-    "markets": 4991,
+    "weather_events": 495,
+    "markets": 4969,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T07:07:17Z",
+    "last_scan_at": "2026-10-22T07:12:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T07:07:17Z",
+    "updated_at": "2026-10-22T07:12:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T07:09:59Z",
+    "updated_at": "2026-10-22T07:14:01Z",
     "detail": "observations retained"
    },
    {
