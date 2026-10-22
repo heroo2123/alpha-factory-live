@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:50:01Z",
+ "generated_at": "2026-10-22T10:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -129,8 +129,8 @@
     0,
     2,
     0,
-    7,
-    4,
+    8,
+    3,
     1,
     1,
     0,
@@ -214,33 +214,33 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T10:50:02Z",
+    "last_check_at": "2026-10-22T10:55:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 11,
+    "active": 9,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 6
+     "P2": 4
     },
     "codes": [
-     "flow qa resource blocked",
-     "flow qa runtime guard killed run",
      "flow deepseek low",
      "flow green release failed",
      "flow green release failed",
-     "flow green release failed"
+     "flow green release failed",
+     "flow release repeated same failure",
+     "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T10:40:04Z",
+    "last_check_at": "2026-10-22T10:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 319,
-    "last_run_at": "2026-10-22T10:45:02Z",
+    "runs_total": 320,
+    "last_run_at": "2026-10-22T10:55:02Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow shadow evals all gated",
     "running": false,
     "model": "Kimi K3",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T10:55:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Kimi K3) audit run: flow shadow evals all gated"
+   },
    {
     "at": "2026-10-22T10:45:32Z",
     "kind": "merge",
@@ -359,11 +364,6 @@
     "at": "2026-10-22T09:55:51Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “CODE-01 Re-verify the WRH snapshot digests before IEM ASOS…”: passed"
-   },
-   {
-    "at": "2026-10-22T09:52:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: agent held review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T10:49:59Z",
-   "heartbeat_at": "2026-10-22T10:50:03Z",
+   "status_at": "2026-10-22T10:55:03Z",
+   "heartbeat_at": "2026-10-22T10:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 439,
     "markets": 4353,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T10:47:24Z",
+    "last_scan_at": "2026-10-22T10:53:25Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T10:47:24Z",
+    "updated_at": "2026-10-22T10:53:25Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T10:49:55Z",
+    "updated_at": "2026-10-22T10:53:58Z",
     "detail": "observations retained"
    },
    {
