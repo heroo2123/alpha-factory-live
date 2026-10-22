@@ -1,45 +1,45 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T22:35:02Z",
+ "generated_at": "2026-10-22T22:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 26,
     "unit": "queued",
     "active": false,
-    "detail": "22 ready to build"
+    "detail": "24 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 2,
     "unit": "building",
-    "active": true,
-    "detail": "51 built in 24h"
+    "active": false,
+    "detail": "53 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "73 merged in 24h"
+    "detail": "74 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 15,
+    "count": 17,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,27 +65,27 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_03e94d0f",
-    "task": "CODE-01 Bind the METAR R31 verdict to its event and require a bounded cutoff bracket",
-    "elapsed_min": 31
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_1736d1ac",
-    "task": "CODE-01 Require a satisfied R31 contract-finality verdict before any…",
-    "elapsed_min": 9
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,17 +95,17 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ebd0377d",
+    "task": "FLEX candidate t_1736d1ac cb4c821bfa99",
+    "elapsed_min": 1
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 15,
+   "progress_pct": 17,
    "last_finished_at": "2026-10-22T21:46:38Z",
    "last_passed": 15768,
    "last_failed": 2,
@@ -116,11 +116,11 @@
   },
   "tests_passing": 15768,
   "flow": {
-   "merges_24h": 73,
-   "commits_24h": 73,
-   "built_24h": 51,
+   "merges_24h": 74,
+   "commits_24h": 74,
+   "built_24h": 53,
    "build_failed_24h": 9,
-   "reviews_passed_24h": 69,
+   "reviews_passed_24h": 67,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
     0,
@@ -134,30 +134,30 @@
     0,
     3,
     0,
-    2,
-    4,
-    1,
-    12,
+    3,
+    3,
+    3,
+    10,
     0,
     0,
-    7,
-    6,
+    9,
+    4,
     4,
     2,
     1,
     2,
-    4
+    5
    ],
    "merge_holds": [
     "protected code: waiting for a second review",
-    "targeted tests failed recently backoff"
+    "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 21,
+    "queued": 26,
     "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 5,
-    "merged": 441,
+    "in_review": 2,
+    "awaiting_merge": 4,
+    "merged": 442,
     "parked": 232
    }
   },
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T22:35:02Z",
+    "last_check_at": "2026-10-22T22:39:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T22:38:21Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Require a satisfied R31 contract-finality verdict before any…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T22:38:15Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Bind the METAR R31 verdict to its event and require a…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-22T22:38:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-10-22T22:30:22Z",
     "kind": "plan",
@@ -348,21 +363,6 @@
     "at": "2026-10-22T21:50:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-22T21:49:20Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “LIVE-15 Bind guardian commission matches to the deployed units…”: changes required"
-   },
-   {
-    "at": "2026-10-22T21:48:30Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_749a8ee3 2333e5fe1885”: passed"
-   },
-   {
-    "at": "2026-10-22T21:48:17Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “LIVE-15 Bind guardian commission matches to the deployed units…” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T22:35:01Z",
-   "heartbeat_at": "2026-10-22T22:35:02Z",
+   "status_at": "2026-10-22T22:39:58Z",
+   "heartbeat_at": "2026-10-22T22:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -399,7 +399,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-22T21:37:03Z",
+    "updated_at": "2026-10-22T22:37:03Z",
     "detail": "multi-city capture collecting"
    },
    {
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T22:33:31Z",
+    "updated_at": "2026-10-22T22:39:33Z",
     "detail": "observations retained"
    },
    {
