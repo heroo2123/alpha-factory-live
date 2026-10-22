@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T21:10:02Z",
+ "generated_at": "2026-10-22T21:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,15 +10,15 @@
     "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "18 ready to build"
+    "detail": "19 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 65,
+    "count": 67,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_b9c5f22f",
     "task": "METAR rule authority must prove the REAL published Polymarket METAR rules text (3…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 65,
+   "progress_pct": 67,
    "last_finished_at": "2026-10-22T18:28:11Z",
    "last_passed": 15631,
    "last_failed": 1,
@@ -118,47 +118,46 @@
   "flow": {
    "merges_24h": 73,
    "commits_24h": 73,
-   "built_24h": 50,
-   "build_failed_24h": 12,
+   "built_24h": 49,
+   "build_failed_24h": 13,
    "reviews_passed_24h": 68,
    "reviews_changes_24h": 15,
    "commits_by_hour": [
     4,
     0,
+    1,
+    2,
     0,
     3,
+    7,
+    3,
+    7,
+    2,
+    3,
     0,
-    3,
-    4,
-    6,
-    6,
-    3,
-    0,
-    3,
     0,
     6,
     0,
     13,
     0,
     0,
-    0,
-    12,
+    3,
+    9,
     3,
     3,
     2,
     2
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
     "queued": 19,
-    "building": 2,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 3,
     "merged": 437,
-    "parked": 229
+    "parked": 230
    }
   },
   "architect": {
@@ -215,15 +214,15 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T21:10:02Z",
+    "last_check_at": "2026-10-22T21:15:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 10,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
      "flow integration candidate persistently red",
@@ -233,7 +232,7 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T21:00:03Z",
+    "last_check_at": "2026-10-22T21:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T21:10:10Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro's build of “New main SHA 7598ba947ab9 Alpha V11 FLEX code task t_39936fc1 claude” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-22T21:10:02Z",
     "kind": "heal",
@@ -358,11 +362,6 @@
     "at": "2026-10-22T20:00:18Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “Release census must bind the day rule's source_family” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T19:56:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1736d1ac cb4c821bfa99”: passed"
    }
   ]
  },
@@ -372,9 +371,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T21:07:41Z",
-   "heartbeat_at": "2026-10-22T21:10:02Z",
+   "state": "census service",
+   "status_at": "2026-10-22T21:14:58Z",
+   "heartbeat_at": "2026-10-22T21:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +382,7 @@
     "weather_events": 434,
     "markets": 4351,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T21:06:17Z",
+    "last_scan_at": "2026-10-22T21:11:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T21:06:17Z",
+    "updated_at": "2026-10-22T21:11:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T21:08:59Z",
+    "updated_at": "2026-10-22T21:13:01Z",
     "detail": "observations retained"
    },
    {
