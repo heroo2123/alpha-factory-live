@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T11:55:02Z",
+ "generated_at": "2026-10-22T12:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,12 +10,12 @@
     "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "67 built in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 39,
+    "count": 44,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_a3eb2f8a",
     "task": "CODE-01 Test durable scenario-view archive incl. namespace/tamper refusals",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_e7dbc3b8",
+    "task": "Candidate-assembly census/audit and MADIS candidate tests must not depend on host load",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 39,
+   "progress_pct": 44,
    "last_finished_at": "2026-10-22T10:21:01Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -130,10 +130,10 @@
     0,
     8,
     3,
-    1,
-    1,
+    2,
     0,
-    4,
+    1,
+    3,
     0,
     3,
     0,
@@ -149,11 +149,11 @@
     0
    ],
    "merge_holds": [
-    "waiting for the full test run to finish"
+    "lock busy"
    ],
    "stage_totals": {
     "queued": 19,
-    "building": 1,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 20,
     "merged": 402,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T11:55:03Z",
+    "last_check_at": "2026-10-22T12:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T11:54:59Z",
-   "heartbeat_at": "2026-10-22T11:55:02Z",
+   "status_at": "2026-10-22T11:59:58Z",
+   "heartbeat_at": "2026-10-22T12:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 439,
     "markets": 4356,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T11:53:51Z",
+    "last_scan_at": "2026-10-22T11:59:39Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T11:53:51Z",
+    "updated_at": "2026-10-22T11:59:39Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T11:53:35Z",
+    "updated_at": "2026-10-22T11:59:38Z",
     "detail": "observations retained"
    },
    {
