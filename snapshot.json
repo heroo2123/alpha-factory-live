@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T12:50:03Z",
+ "generated_at": "2026-10-22T12:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,18 +31,18 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 21,
+    "count": 17,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "58 merged in 24h"
+    "detail": "62 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 81,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_c5e4e50f",
     "task": "CODE-01 PAPER reward maker : causal per-minute paper runner with variants over captured…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 81,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-22T10:21:01Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -116,8 +116,8 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 58,
-   "commits_24h": 58,
+   "merges_24h": 62,
+   "commits_24h": 62,
    "built_24h": 69,
    "build_failed_24h": 9,
    "reviews_passed_24h": 74,
@@ -127,8 +127,8 @@
     0,
     2,
     0,
-    7,
-    4,
+    8,
+    3,
     1,
     1,
     0,
@@ -146,17 +146,15 @@
     0,
     6,
     0,
-    5
+    9
    ],
-   "merge_holds": [
-    "targeted tests failed"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 15,
     "building": 1,
     "in_review": 1,
-    "awaiting_merge": 21,
-    "merged": 407,
+    "awaiting_merge": 17,
+    "merged": 411,
     "parked": 207
    }
   },
@@ -167,6 +165,16 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T12:54:46Z",
+    "title": "CODE-01 Cap WRH bracket policy at the stated finality bound so no caller can certify an…",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-22T12:54:17Z",
+    "title": "Candidate-assembly census/audit and MADIS candidate tests must not depend on host load",
+    "area": "Test repairs"
+   },
    {
     "at": "2026-10-22T12:43:56Z",
     "title": "CODE-01 Enforce the stated bracket bound, quantify per-event residual risk and join IEM…",
@@ -196,16 +204,6 @@
     "at": "2026-10-22T10:45:32Z",
     "title": "LIVE-14 Measure the kernel clock error bound and gate new openings on it",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T10:37:12Z",
-    "title": "LEARNING-SOURCES METAR rules : multimodel panel accepts AWC_METAR_ROUTINE days alongside…",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T10:33:01Z",
-    "title": "LEARNING-SOURCES METAR rules : perpetual brain harvest keeps harvesting METAR-rule…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,15 +212,15 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T12:50:04Z",
+    "last_check_at": "2026-10-22T12:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 10,
+    "active": 11,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 5
+     "P2": 6
     },
     "codes": [
      "flow deepseek low",
@@ -232,15 +230,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T12:40:03Z",
+    "last_check_at": "2026-10-22T12:50:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 335,
-    "last_run_at": "2026-10-22T12:40:03Z",
+    "last_run_at": "2026-10-22T12:55:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +252,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T12:55:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-22T12:54:46Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Cap WRH bracket policy at the stated finality bound so no…” into the main build"
+   },
+   {
+    "at": "2026-10-22T12:54:17Z",
+    "kind": "merge",
+    "text": "Merged “Candidate-assembly census/audit and MADIS candidate tests must not…” into the main build"
+   },
    {
     "at": "2026-10-22T12:43:56Z",
     "kind": "merge",
@@ -348,21 +361,6 @@
     "at": "2026-10-22T12:17:01Z",
     "kind": "build",
     "text": "Claude Sonnet built “LEARNING-SOURCES Model-update-lag study : read-only collector of…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T12:15:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
-    "at": "2026-10-22T12:08:00Z",
-    "kind": "review",
-    "text": "Claude Sonnet reviewed “CODE-01 Record the finality basis and finality evidence hash in the…”: passed"
-   },
-   {
-    "at": "2026-10-22T12:07:14Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Record the finality basis and finality evidence hash in the…” → sent to independent review"
    }
   ]
  },
@@ -372,9 +370,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T12:49:58Z",
-   "heartbeat_at": "2026-10-22T12:50:04Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T12:50:55Z",
+   "heartbeat_at": "2026-10-22T12:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +381,7 @@
     "weather_events": 443,
     "markets": 4414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T12:47:13Z",
+    "last_scan_at": "2026-10-22T12:52:27Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T12:47:13Z",
+    "updated_at": "2026-10-22T12:52:27Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T12:49:55Z",
+    "updated_at": "2026-10-22T12:53:57Z",
     "detail": "observations retained"
    },
    {
@@ -639,8 +637,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 41,
-     "open_tasks": 12
+     "merged_tasks": 42,
+     "open_tasks": 11
     },
     {
      "id": "CODE-02",
