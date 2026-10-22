@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T16:45:02Z",
+ "generated_at": "2026-10-22T16:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 4,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_03e94d0f",
     "task": "CODE-01 Bind the METAR R31 verdict to its event and require a bounded cutoff bracket",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_80bc9512",
     "task": "Candidate model #1: station-bias correction + multi-model blend + calibrated spread (new…",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 4,
    "last_finished_at": "2026-10-22T16:21:07Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 74,
    "commits_24h": 74,
-   "built_24h": 50,
+   "built_24h": 49,
    "build_failed_24h": 11,
    "reviews_passed_24h": 80,
-   "reviews_changes_24h": 7,
+   "reviews_changes_24h": 8,
    "commits_by_hour": [
     7,
     4,
@@ -142,8 +142,8 @@
     0,
     6,
     0,
-    5,
-    8,
+    6,
+    7,
     0,
     0,
     10
@@ -151,6 +151,7 @@
    "merge_holds": [
     "conflicts with newer code, being rebuilt",
     "protected code: waiting for a second review",
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
@@ -216,7 +217,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-22T16:45:02Z",
+    "last_check_at": "2026-10-22T16:50:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +257,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T16:46:14Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “a task”: changes required"
+   },
    {
     "at": "2026-10-22T16:45:01Z",
     "kind": "heal",
@@ -360,11 +366,6 @@
     "at": "2026-10-22T16:22:19Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Record the finality basis and finality evidence hash in the…” into the main build"
-   },
-   {
-    "at": "2026-10-22T16:21:07Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 0 passed, 0 failed"
    }
   ]
  },
@@ -375,8 +376,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T16:45:02Z",
-   "heartbeat_at": "2026-10-22T16:45:01Z",
+   "status_at": "2026-10-22T16:50:01Z",
+   "heartbeat_at": "2026-10-22T16:50:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -385,7 +386,7 @@
     "weather_events": 436,
     "markets": 4371,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T16:43:51Z",
+    "last_scan_at": "2026-10-22T16:49:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +409,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T16:43:51Z",
+    "updated_at": "2026-10-22T16:49:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T16:43:16Z",
+    "updated_at": "2026-10-22T16:49:19Z",
     "detail": "observations retained"
    },
    {
