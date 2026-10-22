@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T05:10:02Z",
+ "generated_at": "2026-10-22T05:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,12 +34,12 @@
     "count": 20,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "48 merged in 24h"
+    "detail": "47 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 51,
+    "count": 56,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
+    "active": true,
     "detail": "current release b603a22"
    },
    {
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_ffd5cac2",
     "task": "CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER coordinator inside the…",
-    "elapsed_min": 23
+    "elapsed_min": 28
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_79d4d5a7",
     "task": "CODE-01 PAPER reward maker : multi-city public capture of all reward-bearing weather…",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 51,
+   "progress_pct": 56,
    "last_finished_at": "2026-10-22T03:58:58Z",
    "last_passed": 14835,
    "last_failed": 0,
@@ -116,37 +116,37 @@
   },
   "tests_passing": 14835,
   "flow": {
-   "merges_24h": 48,
-   "commits_24h": 48,
+   "merges_24h": 47,
+   "commits_24h": 47,
    "built_24h": 61,
    "build_failed_24h": 18,
    "reviews_passed_24h": 67,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
-    3,
-    0,
     2,
-    3,
-    0,
     1,
     1,
     3,
     0,
+    1,
+    4,
+    0,
+    0,
     0,
     2,
-    3,
     6,
+    3,
     2,
     2,
     0,
     4,
     0,
+    1,
+    2,
     0,
     3,
-    0,
-    3,
-    4,
-    6
+    7,
+    3
    ],
    "merge_holds": [
     "waiting for the full test run to finish"
@@ -214,25 +214,26 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T05:10:02Z",
+    "last_check_at": "2026-10-22T05:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 2,
+    "active": 3,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
+     "P1": 1,
      "P2": 1
     },
     "codes": [
      "flow integration candidate persistently red",
+     "flow green release failed",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-22T05:00:02Z",
+    "last_check_at": "2026-10-22T05:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 58,
+    "runs_24h": 57,
     "runs_total": 299,
     "last_run_at": "2026-10-22T04:15:03Z",
     "last_ok": true,
@@ -369,9 +370,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T05:09:50Z",
-   "heartbeat_at": "2026-10-22T05:10:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T05:10:07Z",
+   "heartbeat_at": "2026-10-22T05:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +381,7 @@
     "weather_events": 502,
     "markets": 5046,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T05:06:23Z",
+    "last_scan_at": "2026-10-22T05:11:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T05:06:23Z",
+    "updated_at": "2026-10-22T05:11:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T05:09:20Z",
+    "updated_at": "2026-10-22T05:13:21Z",
     "detail": "observations retained"
    },
    {
