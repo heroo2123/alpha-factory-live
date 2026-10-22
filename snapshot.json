@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T23:30:02Z",
+ "generated_at": "2026-10-22T23:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 25,
+    "count": 24,
     "unit": "queued",
     "active": false,
     "detail": "26 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 66,
+    "count": 69,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -66,11 +66,11 @@
     "slot": "Builder 1",
     "role": "build",
     "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_3ea06cb5",
-    "task": "CODE-01 Persist and re-verify the R31 contract-finality verdict and residual-risk…",
-    "elapsed_min": 29
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_4fc935d9",
+    "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "Anthropic",
     "task_id": "t_9d206335",
     "task": "CODE-01 PWS score audit: usable lead net of latency, per-source/station lead verdict…",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_3ea06cb5",
+    "task": "CODE-01 Persist and re-verify the R31 contract-finality verdict and residual-risk…",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 66,
+   "progress_pct": 69,
    "last_finished_at": "2026-10-22T21:46:38Z",
    "last_passed": 15768,
    "last_failed": 2,
@@ -133,16 +133,16 @@
     0,
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6,
     7,
-    3,
-    3,
+    6,
+    4,
+    2,
     1,
     2,
     4,
@@ -154,9 +154,9 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 25,
+    "queued": 24,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 5,
     "merged": 444,
     "parked": 238
@@ -216,7 +216,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T23:30:02Z",
+    "last_check_at": "2026-10-22T23:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,7 +234,7 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T23:29:31Z",
+    "last_check_at": "2026-10-22T23:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T23:33:17Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Persist and re-verify the R31 contract-finality verdict and…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T23:24:19Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-22T22:40:03Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
-    "at": "2026-10-22T22:38:21Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Require a satisfied R31 contract-finality verdict before any…” → sent to independent review"
    }
   ]
  },
@@ -373,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T23:26:05Z",
-   "heartbeat_at": "2026-10-22T23:30:04Z",
+   "state": "census service",
+   "status_at": "2026-10-22T23:35:00Z",
+   "heartbeat_at": "2026-10-22T23:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T23:25:26Z",
+    "last_scan_at": "2026-10-22T23:31:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T23:25:26Z",
+    "updated_at": "2026-10-22T23:31:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T23:29:51Z",
+    "updated_at": "2026-10-22T23:33:52Z",
     "detail": "observations retained"
    },
    {
