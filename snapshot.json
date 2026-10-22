@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T03:35:02Z",
+ "generated_at": "2026-10-22T03:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "61 built in 24h"
+    "detail": "60 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 23,
+    "count": 25,
     "unit": "awaiting merge",
     "active": true,
     "detail": "40 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 69,
+    "count": 74,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_79d4d5a7",
     "task": "CODE-01 PAPER reward maker : multi-city public capture of all reward-bearing weather…",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,22 +80,22 @@
     "family": "Anthropic",
     "task_id": "t_959d9887",
     "task": "test_v11_request_assembly must pass monkeypatch to the changed run_candidate helper…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_e9300a16",
-    "task": "New main SHA 515984ec3815 Alpha V11 FLEX code task t_ec45d4b6 deepseek_api",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 69,
+   "progress_pct": 74,
    "last_finished_at": "2026-10-22T02:10:27Z",
    "last_passed": 14813,
    "last_failed": 0,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 40,
    "commits_24h": 40,
-   "built_24h": 61,
+   "built_24h": 60,
    "build_failed_24h": 19,
-   "reviews_passed_24h": 59,
+   "reviews_passed_24h": 61,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
     2,
@@ -134,8 +134,8 @@
     4,
     0,
     0,
-    0,
     2,
+    0,
     6,
     5,
     1,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 21,
     "building": 2,
-    "in_review": 2,
-    "awaiting_merge": 23,
+    "in_review": 0,
+    "awaiting_merge": 25,
     "merged": 374,
     "parked": 195
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T03:35:02Z",
+    "last_check_at": "2026-10-22T03:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T03:39:20Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “New main SHA 515984ec3815 Alpha V11 FLEX code task t_ec45d4b6…”: passed"
+   },
+   {
+    "at": "2026-10-22T03:35:19Z",
+    "kind": "review",
+    "text": "GLM 5.2 reviewed “FLEX candidate t_673d26c1 7aa91fd26a29”: passed"
+   },
    {
     "at": "2026-10-22T03:34:22Z",
     "kind": "review",
@@ -350,16 +360,6 @@
     "at": "2026-10-22T02:21:55Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Record observed A->B->A reversions and the polling cadence…” into the main build"
-   },
-   {
-    "at": "2026-10-22T02:18:55Z",
-    "kind": "merge",
-    "text": "Merged “PAPER-02 METAR rules : rollforward publisher normalises METAR rule…” into the main build"
-   },
-   {
-    "at": "2026-10-22T02:18:24Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “FLEX candidate t_9b9add2c 94e017ecb9e5”: passed"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T03:34:59Z",
-   "heartbeat_at": "2026-10-22T03:35:02Z",
+   "status_at": "2026-10-22T03:40:03Z",
+   "heartbeat_at": "2026-10-22T03:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 438,
     "markets": 4347,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T03:34:40Z",
+    "last_scan_at": "2026-10-22T03:39:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -396,21 +396,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-22T02:37:02Z",
+    "updated_at": "2026-10-22T03:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T03:34:40Z",
+    "updated_at": "2026-10-22T03:39:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T03:34:48Z",
+    "updated_at": "2026-10-22T03:38:49Z",
     "detail": "observations retained"
    },
    {
