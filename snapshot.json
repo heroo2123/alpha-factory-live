@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T10:30:03Z",
+ "generated_at": "2026-10-22T10:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "12 ready to build"
@@ -23,18 +23,18 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 22,
+    "count": 21,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "52 merged in 24h"
+    "detail": "53 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "DeepSeek V4.1 Flash",
     "family": "DeepSeek",
-    "task_id": "t_ab128c9c",
-    "task": "Station-bias + pooled-spread research learner (new module, -10% Brier on holdout)",
-    "elapsed_min": 5
+    "task_id": "t_b87ac0af",
+    "task": "PAPER-08 census commissioning plan must accept today's already-started contract",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_4a2fe8a3",
+    "task": "FLEX candidate t_ab128c9c 0365b9c308d2",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 0,
   "flow": {
-   "merges_24h": 52,
-   "commits_24h": 52,
+   "merges_24h": 53,
+   "commits_24h": 53,
    "built_24h": 68,
    "build_failed_24h": 11,
    "reviews_passed_24h": 71,
@@ -130,8 +130,8 @@
     0,
     2,
     6,
-    4,
-    2,
+    5,
+    1,
     1,
     0,
     4,
@@ -146,15 +146,15 @@
     0,
     3,
     0,
-    1
+    2
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 17,
+    "queued": 16,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 22,
-    "merged": 397,
+    "in_review": 2,
+    "awaiting_merge": 21,
+    "merged": 398,
     "parked": 205
    }
   },
@@ -165,6 +165,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-22T10:33:01Z",
+    "title": "LEARNING-SOURCES METAR rules : perpetual brain harvest keeps harvesting METAR-rule…",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-22T10:29:37Z",
     "title": "PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any forecast exists",
@@ -199,11 +204,6 @@
     "at": "2026-10-22T06:02:38Z",
     "title": "CODE-01 R31 contract-defined finality: re-implement reviewed candidate on current main…",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-22T06:02:11Z",
-    "title": "CODE-01 METAR rules : R31 finality verdict for METAR-rule events (first following…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -211,34 +211,34 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 8,
-    "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T10:30:05Z",
+    "recoveries_24h": 8,
+    "last_check_at": "2026-10-22T10:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 11,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 4
+     "P2": 6
     },
     "codes": [
+     "flow qa resource blocked",
+     "flow qa runtime guard killed run",
      "flow deepseek low",
      "flow green release failed",
      "flow green release failed",
-     "flow green release failed",
-     "flow release repeated same failure",
-     "flow shadow evals all gated"
+     "flow green release failed"
     ],
-    "last_check_at": "2026-10-22T10:20:03Z",
+    "last_check_at": "2026-10-22T10:30:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 317,
-    "last_run_at": "2026-10-22T10:25:02Z",
+    "runs_total": 318,
+    "last_run_at": "2026-10-22T10:35:02Z",
     "last_ok": true,
-    "last_kind": "flow release repeated same failure",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Kimi K3",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,26 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T10:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-22T10:33:01Z",
+    "kind": "merge",
+    "text": "Merged “LEARNING-SOURCES METAR rules : perpetual brain harvest keeps…” into the main build"
+   },
+   {
+    "at": "2026-10-22T10:32:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-22T10:31:19Z",
+    "kind": "build",
+    "text": "DeepSeek V4.1 Flash built “Station-bias + pooled-spread research learner (new module, -10%…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T10:29:37Z",
     "kind": "merge",
@@ -342,26 +362,6 @@
     "at": "2026-10-22T09:04:10Z",
     "kind": "warn",
     "text": "Claude Opus build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-22T08:59:21Z",
-    "kind": "review",
-    "text": "GLM 5.2 reviewed “New main SHA d5e75fa398d5 Alpha V11 FLEX code task t_9ec72389…”: passed"
-   },
-   {
-    "at": "2026-10-22T08:58:12Z",
-    "kind": "warn",
-    "text": "Claude Opus build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-22T08:57:21Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Re-check ASOS day coverage and use half-up rounding in the…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T08:57:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker receipt untrusted review"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T10:30:00Z",
-   "heartbeat_at": "2026-10-22T10:30:06Z",
+   "status_at": "2026-10-22T10:34:59Z",
+   "heartbeat_at": "2026-10-22T10:35:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T10:29:43Z",
+    "updated_at": "2026-10-22T10:33:45Z",
     "detail": "observations retained"
    },
    {
