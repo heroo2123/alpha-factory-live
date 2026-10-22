@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T02:35:01Z",
+ "generated_at": "2026-10-22T02:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 26,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "60 built in 24h"
+    "detail": "61 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 19,
+    "count": 18,
     "unit": "awaiting merge",
     "active": true,
     "detail": "45 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 8,
+    "count": 17,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
+    "active": false,
     "detail": "current release b603a22"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_b8421697",
-    "task": "New main SHA 7e08bfcaa7a4 Alpha V11 FLEX code task t_069aff65 deepseek_api",
-    "elapsed_min": 22
+    "task_id": "t_e8b11bcf",
+    "task": "PAPER-02 METAR rules : root daily review authority applies the same METAR envelope…",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "Anthropic",
     "task_id": "t_583cd913",
     "task": "Window-bounded audit archive scan so DAILY reports cover their own window under the row…",
-    "elapsed_min": 23
+    "elapsed_min": 28
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_b8421697",
+    "task": "New main SHA 7e08bfcaa7a4 Alpha V11 FLEX code task t_069aff65 deepseek_api",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 8,
+   "progress_pct": 17,
    "last_finished_at": "2026-10-22T02:10:27Z",
    "last_passed": 14813,
    "last_failed": 0,
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 45,
    "commits_24h": 45,
-   "built_24h": 60,
+   "built_24h": 61,
    "build_failed_24h": 19,
-   "reviews_passed_24h": 58,
+   "reviews_passed_24h": 57,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     5,
@@ -135,8 +135,8 @@
     4,
     0,
     0,
-    0,
     2,
+    0,
     6,
     5,
     1,
@@ -154,10 +154,10 @@
    "stage_totals": {
     "queued": 26,
     "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 19,
+    "in_review": 1,
+    "awaiting_merge": 18,
     "merged": 374,
-    "parked": 194
+    "parked": 195
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T02:34:01Z",
+    "last_check_at": "2026-10-22T02:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T02:39:12Z",
+    "kind": "build",
+    "text": "Claude Opus built “New main SHA 7e08bfcaa7a4 Alpha V11 FLEX code task t_069aff65…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T02:30:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-22T01:41:12Z",
     "kind": "build",
     "text": "Claude Opus built “CODE-01 Certify the first-following-date routine-METAR transition…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T01:39:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Let the PAPER result-lag lane start on owner-rescoped…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T02:35:01Z",
-   "heartbeat_at": "2026-10-22T02:35:00Z",
+   "status_at": "2026-10-22T02:40:01Z",
+   "heartbeat_at": "2026-10-22T02:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -380,7 +380,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T02:33:50Z",
+    "last_scan_at": "2026-10-22T02:38:55Z",
     "mode": "silent paper scan"
    }
   },
@@ -396,21 +396,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-22T01:37:02Z",
+    "updated_at": "2026-10-22T02:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T02:33:50Z",
+    "updated_at": "2026-10-22T02:38:55Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T02:34:26Z",
+    "updated_at": "2026-10-22T02:38:27Z",
     "detail": "observations retained"
    },
    {
