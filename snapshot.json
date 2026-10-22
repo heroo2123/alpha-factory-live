@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T18:40:02Z",
+ "generated_at": "2026-10-22T18:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "50 built in 24h"
+    "detail": "49 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_bdcd2298",
+    "task": "CODE-01 Re-check ASOS day coverage and use half-up rounding in the WRH-bracket agreement",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_b9c5f22f",
     "task": "METAR rule authority must prove the REAL published Polymarket METAR rules text (3…",
-    "elapsed_min": 20
+    "elapsed_min": 25
    },
    {
     "slot": "Reviewer 1",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 70,
    "commits_24h": 70,
-   "built_24h": 50,
+   "built_24h": 49,
    "build_failed_24h": 12,
    "reviews_passed_24h": 73,
    "reviews_changes_24h": 12,
@@ -138,26 +138,25 @@
     0,
     3,
     0,
-    3,
-    3,
-    3,
+    6,
+    0,
+    5,
+    8,
+    0,
+    0,
     10,
-    0,
-    0,
-    9,
-    4,
+    3,
     4
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
     "protected code: waiting for a second review",
-    "targeted tests failed recently backoff",
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
     "queued": 19,
     "building": 2,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 5,
     "merged": 432,
     "parked": 217
@@ -217,7 +216,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-22T18:40:03Z",
+    "last_check_at": "2026-10-22T18:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,15 +234,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T18:30:03Z",
+    "last_check_at": "2026-10-22T18:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 351,
-    "last_run_at": "2026-10-22T18:35:02Z",
+    "runs_total": 352,
+    "last_run_at": "2026-10-22T18:45:02Z",
     "last_ok": true,
-    "last_kind": "flow release repeated same failure",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Astra)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -256,6 +255,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-22T18:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Astra)) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-22T18:42:09Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-22T18:40:26Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Release census must bind the day rule's source_family” → sent to independent review"
+   },
    {
     "at": "2026-10-22T18:35:19Z",
     "kind": "merge",
@@ -350,21 +364,6 @@
     "at": "2026-10-22T17:39:30Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “LIVE-15 Bind custody-gate results to the release commit and the…”: passed"
-   },
-   {
-    "at": "2026-10-22T17:39:30Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T17:39:15Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “LIVE-15 Verify the asserted release identity of an adversarial…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T17:37:23Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “LIVE-15 Verify the cited adversarial report bytes before a guardian…” → sent to independent review"
    }
   ]
  },
@@ -375,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T18:39:57Z",
-   "heartbeat_at": "2026-10-22T18:40:03Z",
+   "status_at": "2026-10-22T18:44:59Z",
+   "heartbeat_at": "2026-10-22T18:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -415,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T18:39:59Z",
+    "updated_at": "2026-10-22T18:44:00Z",
     "detail": "observations retained"
    },
    {
