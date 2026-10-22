@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T11:10:02Z",
+ "generated_at": "2026-10-22T11:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 14,
+    "count": 17,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_62f55abb",
     "task": "Journal rule-text drift rejection in the day manager refresh",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 14,
+   "progress_pct": 17,
    "last_finished_at": "2026-10-22T10:21:01Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -123,33 +123,34 @@
    "reviews_passed_24h": 72,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
+    4,
+    0,
+    0,
+    0,
+    2,
+    6,
+    3,
+    2,
+    2,
+    0,
+    4,
+    0,
     1,
-    3,
-    0,
-    0,
-    2,
-    3,
-    6,
-    2,
     2,
     0,
-    4,
-    0,
-    0,
+    3,
+    7,
+    3,
+    7,
+    2,
     3,
     0,
-    3,
-    4,
-    6,
-    6,
-    3,
-    0,
-    3,
     0,
     6
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review",
+    "waiting for the full test run to finish"
    ],
    "stage_totals": {
     "queued": 16,
@@ -214,15 +215,15 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T11:10:04Z",
+    "last_check_at": "2026-10-22T11:15:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 8,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 4
+     "P2": 3
     },
     "codes": [
      "flow deepseek low",
@@ -232,17 +233,17 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-22T11:00:04Z",
+    "last_check_at": "2026-10-22T11:10:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 321,
-    "last_run_at": "2026-10-22T11:05:02Z",
+    "runs_total": 322,
+    "last_run_at": "2026-10-22T11:15:02Z",
     "last_ok": true,
-    "last_kind": "flow deepseek low",
+    "last_kind": "flow review oversized",
     "running": false,
-    "model": "Kimi K3",
+    "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -255,6 +256,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T11:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow review oversized"
+   },
    {
     "at": "2026-10-22T11:05:51Z",
     "kind": "review",
@@ -326,11 +332,6 @@
     "text": "Merged “PAPER-08 FUTURE_FORECAST plan needs a commissioning mode before any…” into the main build"
    },
    {
-    "at": "2026-10-22T10:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Kimi K3) audit run: flow release repeated same failure"
-   },
-   {
     "at": "2026-10-22T10:21:01Z",
     "kind": "qa",
     "text": "Full test suite finished: 0 passed, 0 failed"
@@ -373,18 +374,18 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T11:09:49Z",
-   "heartbeat_at": "2026-10-22T11:10:05Z",
+   "state": "census service",
+   "status_at": "2026-10-22T11:15:00Z",
+   "heartbeat_at": "2026-10-22T11:15:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 440,
-    "markets": 4364,
+    "weather_events": 439,
+    "markets": 4353,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T11:05:30Z",
+    "last_scan_at": "2026-10-22T11:11:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T11:05:30Z",
+    "updated_at": "2026-10-22T11:11:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T11:08:14Z",
+    "updated_at": "2026-10-22T11:14:19Z",
     "detail": "observations retained"
    },
    {
