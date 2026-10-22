@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T09:25:02Z",
+ "generated_at": "2026-10-22T09:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 62,
+    "count": 65,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_ab4d4b53",
     "task": "PAPER-03 Refuse reopening an evidence store whose append-only triggers or row namespace…",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 62,
+   "progress_pct": 65,
    "last_finished_at": "2026-10-22T08:08:01Z",
    "last_passed": 15109,
    "last_failed": 1,
@@ -131,14 +131,14 @@
     0,
     2,
     6,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     4,
     0,
-    2,
-    1,
+    3,
+    0,
     3,
     0,
     10,
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 1,
-    "alerts_24h": 6,
-    "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T09:24:02Z",
+    "alerts_24h": 7,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-10-22T09:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T09:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: agent held review"
+   },
    {
     "at": "2026-10-22T09:19:16Z",
     "kind": "build",
@@ -358,11 +363,6 @@
     "at": "2026-10-22T08:23:27Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “LEARNING-SOURCES METAR rules : perpetual brain harvest keeps…”: passed"
-   },
-   {
-    "at": "2026-10-22T08:17:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: full suite not green"
    }
   ]
  },
@@ -372,9 +372,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "census service",
-   "status_at": "2026-10-22T09:25:00Z",
-   "heartbeat_at": "2026-10-22T09:25:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-22T09:25:17Z",
+   "heartbeat_at": "2026-10-22T09:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 457,
     "markets": 4551,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T09:24:19Z",
+    "last_scan_at": "2026-10-22T09:29:27Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T09:24:19Z",
+    "updated_at": "2026-10-22T09:29:27Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T09:24:57Z",
+    "updated_at": "2026-10-22T09:28:58Z",
     "detail": "observations retained"
    },
    {
@@ -501,7 +501,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 29 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 31 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 52,
    "waiting_city_days": 13,
