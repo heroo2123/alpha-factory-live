@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T16:05:02Z",
+ "generated_at": "2026-10-22T16:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "62 built in 24h"
+    "detail": "59 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 20,
+    "count": 13,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_13fe0489",
     "task": "strategy_admission must import: tighten RESULT_LAG finality policy to the stated 120 s…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Sonnet",
+    "family": "Anthropic",
+    "task_id": "t_ecfbaf75",
+    "task": "a build task",
+    "elapsed_min": 0
    }
   ],
   "qa": {
@@ -118,33 +118,33 @@
   "flow": {
    "merges_24h": 64,
    "commits_24h": 64,
-   "built_24h": 62,
+   "built_24h": 59,
    "build_failed_24h": 9,
-   "reviews_passed_24h": 71,
-   "reviews_changes_24h": 7,
+   "reviews_passed_24h": 73,
+   "reviews_changes_24h": 8,
    "commits_by_hour": [
-    0,
-    8,
-    3,
-    2,
-    0,
-    2,
-    2,
-    0,
-    3,
-    0,
-    3,
-    1,
-    9,
     3,
     6,
+    2,
+    2,
+    0,
+    4,
+    0,
+    0,
+    3,
+    0,
+    3,
+    4,
+    6,
+    6,
+    3,
     0,
     3,
     0,
     6,
     0,
-    12,
-    1,
+    13,
+    0,
     0,
     0
    ],
@@ -154,10 +154,10 @@
    "stage_totals": {
     "queued": 19,
     "building": 1,
-    "in_review": 20,
+    "in_review": 13,
     "awaiting_merge": 14,
     "merged": 415,
-    "parked": 206
+    "parked": 208
    }
   },
   "architect": {
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 2,
-    "alerts_24h": 10,
+    "alerts_24h": 11,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-22T16:04:02Z",
+    "last_check_at": "2026-10-22T16:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,46 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T16:09:15Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:08:18Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:08:13Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:06:23Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:06:19Z",
+    "kind": "warn",
+    "text": "Claude Sonnet reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-22T16:05:17Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:05:14Z",
+    "kind": "review",
+    "text": "Claude Sonnet reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-22T16:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-22T16:04:19Z",
     "kind": "warn",
@@ -324,46 +364,6 @@
     "at": "2026-10-22T14:28:07Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T14:27:09Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T14:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-22T13:25:12Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T13:25:12Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T13:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-22T13:12:07Z",
-    "kind": "review",
-    "text": "Claude Sonnet review ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T13:11:08Z",
-    "kind": "warn",
-    "text": "Claude Sonnet build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-22T13:11:08Z",
-    "kind": "review",
-    "text": "Claude Sonnet review ended: quota hold"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-22T16:05:02Z",
-   "heartbeat_at": "2026-10-22T16:05:02Z",
+   "status_at": "2026-10-22T16:10:01Z",
+   "heartbeat_at": "2026-10-22T16:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 438,
     "markets": 4393,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T16:00:09Z",
+    "last_scan_at": "2026-10-22T16:05:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T16:00:09Z",
+    "updated_at": "2026-10-22T16:05:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T16:05:01Z",
+    "updated_at": "2026-10-22T16:09:03Z",
     "detail": "observations retained"
    },
    {
