@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T15:15:01Z",
+ "generated_at": "2026-10-22T15:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -131,14 +131,14 @@
     0,
     4,
     0,
+    2,
+    1,
     1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2,
+    9,
+    0,
     3,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T15:15:02Z",
+    "last_check_at": "2026-10-22T15:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -373,9 +373,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T15:10:31Z",
-   "heartbeat_at": "2026-10-22T15:15:01Z",
+   "state": "census service",
+   "status_at": "2026-10-22T15:19:58Z",
+   "heartbeat_at": "2026-10-22T15:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 439,
     "markets": 4410,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T15:13:53Z",
+    "last_scan_at": "2026-10-22T15:19:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T15:13:53Z",
+    "updated_at": "2026-10-22T15:19:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T15:14:46Z",
+    "updated_at": "2026-10-22T15:18:47Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T14:17:03Z",
+   "updated_at": "2026-10-22T15:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
