@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T00:15:02Z",
+ "generated_at": "2026-10-22T00:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 11,
+    "count": 13,
     "unit": "awaiting merge",
     "active": true,
     "detail": "42 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_d5ed2226",
     "task": "LIVE-15 Keep the guardian GATED while its own cancel requests are unconfirmed",
-    "elapsed_min": 23
+    "elapsed_min": 28
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "DeepSeek",
     "task_id": "t_959d9887",
     "task": "test_v11_request_assembly must pass monkeypatch to the changed run_candidate helper…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_7c64cad4",
-    "task": "New main SHA ae957ab2baf7 Alpha V11 FLEX code task t_35fa30e5 claude",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -120,7 +120,7 @@
    "commits_24h": 42,
    "built_24h": 57,
    "build_failed_24h": 20,
-   "reviews_passed_24h": 58,
+   "reviews_passed_24h": 59,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
@@ -148,21 +148,23 @@
     0,
     1
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "targeted tests failed"
+   ],
    "stage_totals": {
     "queued": 31,
     "building": 2,
-    "in_review": 2,
-    "awaiting_merge": 11,
+    "in_review": 0,
+    "awaiting_merge": 13,
     "merged": 369,
     "parked": 193
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-21T20:20:17Z",
-   "last_planned": 6,
-   "model": "Claude Opus"
+   "last_run_at": "2026-10-22T00:20:03Z",
+   "last_planned": 0,
+   "model": "Kimi K3"
   },
   "recent_merges": [
    {
@@ -212,7 +214,7 @@
     "active": 1,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-22T00:14:02Z",
+    "last_check_at": "2026-10-22T00:20:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +252,26 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T00:20:03Z",
+    "kind": "plan",
+    "text": "Architect (Kimi K3) planned 0 new tasks"
+   },
+   {
+    "at": "2026-10-22T00:18:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “New main SHA ae957ab2baf7 Alpha V11 FLEX code task t_35fa30e5 claude”: passed"
+   },
+   {
+    "at": "2026-10-22T00:15:29Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “LIVE-14 Bind observation collection to the fresh health sample cited…”: passed"
+   },
+   {
+    "at": "2026-10-22T00:15:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-22T00:14:08Z",
     "kind": "build",
@@ -339,26 +361,6 @@
     "at": "2026-10-21T23:01:32Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_b18cee74 b27b5760832c”: passed"
-   },
-   {
-    "at": "2026-10-21T23:01:19Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_5afbc936 a21db870c19a”: passed"
-   },
-   {
-    "at": "2026-10-21T22:59:08Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-21T22:58:13Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Extend the IEM ASOS station allow-list to every reviewed NWS…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-21T22:56:10Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 PAPER reward maker : inventory transform + cost reserves +…” → sent to independent review"
    }
   ]
  },
@@ -369,8 +371,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-21",
    "state": "census service",
-   "status_at": "2026-10-22T00:14:59Z",
-   "heartbeat_at": "2026-10-22T00:15:02Z",
+   "status_at": "2026-10-22T00:20:00Z",
+   "heartbeat_at": "2026-10-22T00:20:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -379,7 +381,7 @@
     "weather_events": 441,
     "markets": 4394,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T00:09:57Z",
+    "last_scan_at": "2026-10-22T00:15:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T00:09:57Z",
+    "updated_at": "2026-10-22T00:15:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T00:13:28Z",
+    "updated_at": "2026-10-22T00:19:31Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +509,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-21T23:17:03Z",
+   "updated_at": "2026-10-22T00:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
