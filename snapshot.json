@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-22T06:10:02Z",
+ "generated_at": "2026-10-22T06:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,12 +10,12 @@
     "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "64 built in 24h"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 16,
+    "count": 15,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "50 merged in 24h"
+    "detail": "52 merged in 24h"
    },
    {
     "key": "qa",
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
+    "active": true,
     "detail": "current release b603a22"
    },
    {
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_959d9887",
     "task": "test_v11_request_assembly must pass monkeypatch to the changed run_candidate helper…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -85,22 +85,22 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_66e9fed7",
-    "task": "CODE-01 Enforce the stated bracket bound, quantify per-event residual risk and join IEM…",
-    "elapsed_min": 3
-   },
-   {
-    "slot": "Reviewer 2",
-    "role": "review",
     "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 2",
+    "role": "review",
+    "state": "working",
+    "model": "GLM 5.2",
+    "family": "Zhipu",
+    "task_id": "t_4a477cee",
+    "task": "CODE-01 Add a contract-defined-finality PAPER shadow path to the Result-Lag lane driven…",
+    "elapsed_min": 4
    }
   ],
   "qa": {
@@ -116,45 +116,45 @@
   },
   "tests_passing": 14987,
   "flow": {
-   "merges_24h": 50,
-   "commits_24h": 50,
+   "merges_24h": 52,
+   "commits_24h": 52,
    "built_24h": 64,
    "build_failed_24h": 16,
    "reviews_passed_24h": 68,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
-    0,
-    2,
-    3,
-    0,
     1,
     1,
     3,
     0,
+    1,
+    4,
+    0,
+    0,
     0,
     2,
-    3,
     6,
+    3,
     2,
     2,
     0,
     4,
     0,
+    1,
+    2,
     0,
     3,
-    0,
+    7,
     3,
-    4,
-    6,
-    5
+    7
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 22,
-    "building": 2,
+    "building": 1,
     "in_review": 1,
-    "awaiting_merge": 16,
-    "merged": 389,
+    "awaiting_merge": 15,
+    "merged": 391,
     "parked": 199
    }
   },
@@ -212,31 +212,32 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-22T06:10:02Z",
+    "last_check_at": "2026-10-22T06:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 5,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 2,
      "P2": 2
     },
     "codes": [
      "flow integration candidate persistently red",
      "flow green release failed",
+     "flow green release failed",
      "flow shadow evals all gated",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-22T06:00:03Z",
+    "last_check_at": "2026-10-22T06:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 304,
-    "last_run_at": "2026-10-22T06:10:02Z",
+    "last_run_at": "2026-10-22T06:15:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow evals all gated",
+    "last_kind": "flow green release failed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +252,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-22T06:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-22T06:13:25Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “CODE-01 Enforce the stated bracket bound, quantify per-event…”: passed"
+   },
+   {
+    "at": "2026-10-22T06:10:23Z",
+    "kind": "build",
+    "text": "Claude Opus built “CODE-01 Add a contract-defined-finality PAPER shadow path to the…” → sent to independent review"
+   },
    {
     "at": "2026-10-22T06:10:02Z",
     "kind": "heal",
@@ -317,11 +333,6 @@
     "text": "MiniMax M3 reviewed “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…”: changes required"
    },
    {
-    "at": "2026-10-22T05:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-22T05:19:54Z",
     "kind": "build",
     "text": "Claude Opus built “CODE-01 Wire size_within_ceiling dynamic sizing into the PAPER…” → sent to independent review"
@@ -350,16 +361,6 @@
     "at": "2026-10-22T04:48:24Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “LIVE-14 Measure the kernel clock error bound and gate new openings…”: passed"
-   },
-   {
-    "at": "2026-10-22T04:46:15Z",
-    "kind": "build",
-    "text": "Claude Opus built “CODE-01 Bind optional R31 contract-finality verdict provenance to…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T04:42:13Z",
-    "kind": "build",
-    "text": "Claude Opus built “LIVE-14 Measure the kernel clock error bound and gate new openings…” → sent to independent review"
    }
   ]
  },
@@ -369,9 +370,9 @@
    "release": "b603a22",
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-22T06:08:44Z",
-   "heartbeat_at": "2026-10-22T06:10:03Z",
+   "state": "census service",
+   "status_at": "2026-10-22T06:15:03Z",
+   "heartbeat_at": "2026-10-22T06:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +381,7 @@
     "weather_events": 499,
     "markets": 5013,
     "opportunities": 0,
-    "last_scan_at": "2026-10-22T06:08:47Z",
+    "last_scan_at": "2026-10-22T06:14:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-22T06:08:47Z",
+    "updated_at": "2026-10-22T06:14:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-22T06:09:39Z",
+    "updated_at": "2026-10-22T06:13:41Z",
     "detail": "observations retained"
    },
    {
