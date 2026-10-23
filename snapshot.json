@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T10:15:02Z",
+ "generated_at": "2026-10-23T10:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_5f9df8b0",
     "task": "METAR 30 h window: daily-review publisher/authority, multimodel panel and offline…",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_3f43dbe4",
     "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Reviewer 1",
@@ -128,10 +128,10 @@
     13,
     0,
     0,
-    3,
-    9,
-    3,
-    3,
+    5,
+    7,
+    4,
+    2,
     2,
     2,
     3,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T10:15:02Z",
+    "last_check_at": "2026-10-23T10:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T10:14:27Z",
-   "heartbeat_at": "2026-10-23T10:15:01Z",
+   "status_at": "2026-10-23T10:19:28Z",
+   "heartbeat_at": "2026-10-23T10:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 423,
     "markets": 4201,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T10:11:17Z",
+    "last_scan_at": "2026-10-23T10:16:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T10:11:17Z",
+    "updated_at": "2026-10-23T10:16:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T10:14:10Z",
+    "updated_at": "2026-10-23T10:18:12Z",
     "detail": "observations retained"
    },
    {
@@ -475,20 +475,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8791,
-     "city_days": 63
+     "brier": 0.8843,
+     "city_days": 64
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8323,
-     "city_days": 63
+     "brier": 0.8361,
+     "city_days": 64
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.686,
-     "city_days": 63
+     "brier": 0.6905,
+     "city_days": 64
     },
     {
      "key": "equal",
@@ -500,15 +500,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 43 untouched city-days (11 cities, 4 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 64,
-   "waiting_city_days": 1,
+   "labelled_city_days": 65,
+   "waiting_city_days": 0,
    "labelled_days": 10,
    "captured_days_waiting": 0,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-23T09:17:02Z",
+   "updated_at": "2026-10-23T10:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
