@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T11:00:03Z",
+ "generated_at": "2026-10-23T11:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_55fc8599",
     "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "OpenAI",
     "task_id": "t_08446fe7",
     "task": "CODE-01 PAPER reward maker capture fixes: live Gamma page size over response limit…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5f9df8b0",
-    "task": "METAR 30 h window: daily-review publisher/authority, multimodel panel and offline…",
-    "elapsed_min": 7
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_6fea7677",
-    "task": "FLEX candidate t_6e08e1fe d473dfafe748",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -120,49 +120,49 @@
    "commits_24h": 55,
    "built_24h": 77,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 29,
-   "reviews_changes_24h": 48,
+   "reviews_passed_24h": 28,
+   "reviews_changes_24h": 49,
    "commits_by_hour": [
     0,
-    10,
-    3,
+    12,
+    1,
     0,
     0,
-    11,
-    3,
+    12,
+    2,
     4,
     2,
-    1,
-    3,
-    4,
-    3,
-    0,
-    0,
-    3,
-    0,
-    1,
-    0,
+    2,
+    2,
+    5,
+    2,
     0,
     1,
     2,
-    2,
+    0,
+    1,
+    0,
+    0,
+    1,
+    3,
+    1,
     2
    ],
    "merge_holds": [
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 15,
+    "queued": 18,
     "building": 2,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 457,
-    "parked": 314
+    "parked": 315
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-23T10:50:20Z",
+   "last_run_at": "2026-10-23T11:00:18Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -214,23 +214,24 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T11:00:03Z",
+    "last_check_at": "2026-10-23T11:04:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 5,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
      "flow brain capture missed",
      "flow release needs release",
      "flow pin guard scope missing",
+     "flow queued scope unmergeable",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T10:50:03Z",
+    "last_check_at": "2026-10-23T11:01:11Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T11:01:21Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “METAR 30 h window: daily-review publisher/authority, multimodel…”: changes required"
+   },
+   {
+    "at": "2026-10-23T11:00:18Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-23T11:00:03Z",
     "kind": "heal",
@@ -350,16 +361,6 @@
     "at": "2026-10-23T09:33:17Z",
     "kind": "build",
     "text": "Claude Sonnet built “FLEX candidate t_7a3b6b25 8150c5e8545e” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T09:30:26Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_acb9f3da 6cdc461bbab7”: changes required"
-   },
-   {
-    "at": "2026-10-23T09:28:18Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Re-derive IEM ASOS cross-check values so a forged agreement…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +371,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T10:59:30Z",
-   "heartbeat_at": "2026-10-23T11:00:04Z",
+   "status_at": "2026-10-23T11:04:30Z",
+   "heartbeat_at": "2026-10-23T11:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +381,7 @@
     "weather_events": 426,
     "markets": 4234,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T10:55:31Z",
+    "last_scan_at": "2026-10-23T11:01:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T10:55:31Z",
+    "updated_at": "2026-10-23T11:01:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T10:58:25Z",
+    "updated_at": "2026-10-23T11:04:27Z",
     "detail": "observations retained"
    },
    {
@@ -637,7 +638,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 55,
-     "open_tasks": 4
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
