@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T12:20:02Z",
+ "generated_at": "2026-10-23T12:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "77 built in 24h"
+    "detail": "76 built in 24h"
    },
    {
     "key": "review",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 17,
+    "count": 23,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_4fc935d9",
     "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_5f9df8b0",
     "task": "METAR 30 h window: daily-review publisher/authority, multimodel panel and offline…",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_6ce9782f",
     "task": "FLEX candidate t_55fc8599 e",
-    "elapsed_min": 3
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 17,
+   "progress_pct": 23,
    "last_finished_at": "2026-10-23T09:44:59Z",
    "last_passed": 15935,
    "last_failed": 0,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 58,
    "commits_24h": 58,
-   "built_24h": 77,
+   "built_24h": 76,
    "build_failed_24h": 2,
    "reviews_passed_24h": 29,
    "reviews_changes_24h": 47,
@@ -126,23 +126,23 @@
     13,
     0,
     0,
-    5,
+    6,
     7,
-    4,
-    2,
-    2,
-    2,
     3,
+    3,
+    1,
+    2,
     4,
+    3,
     2,
     0,
-    1,
     2,
     1,
-    0,
+    1,
     0,
     0,
     1,
+    0,
     4,
     0,
     2,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T12:20:02Z",
+    "last_check_at": "2026-10-23T12:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,15 +229,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T12:10:02Z",
+    "last_check_at": "2026-10-23T12:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 427,
-    "last_run_at": "2026-10-23T11:40:02Z",
+    "runs_total": 428,
+    "last_run_at": "2026-10-23T12:25:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T12:25:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-23T12:22:10Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro review ended: review unresolved inconclusive source…"
+   },
    {
     "at": "2026-10-23T12:16:17Z",
     "kind": "build",
@@ -349,16 +359,6 @@
     "at": "2026-10-23T11:01:21Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “METAR 30 h window: daily-review publisher/authority, multimodel…”: changes required"
-   },
-   {
-    "at": "2026-10-23T11:00:18Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-23T11:00:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T12:19:34Z",
-   "heartbeat_at": "2026-10-23T12:20:04Z",
+   "status_at": "2026-10-23T12:24:35Z",
+   "heartbeat_at": "2026-10-23T12:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T12:18:53Z",
+    "updated_at": "2026-10-23T12:24:56Z",
     "detail": "observations retained"
    },
    {
