@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T05:00:02Z",
+ "generated_at": "2026-10-23T05:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_a6515aed",
     "task": "FLEX candidate t_f7919dca 83e",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_4fc935d9",
     "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Reviewer 1",
@@ -106,15 +106,15 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-23T03:18:21Z",
-   "last_passed": 15864,
+   "last_finished_at": "2026-10-23T04:58:31Z",
+   "last_passed": 15901,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-23T03:18:21Z",
+   "last_green_at": "2026-10-23T04:58:31Z",
    "last_minutes": 98
   },
-  "tests_passing": 15864,
+  "tests_passing": 15901,
   "flow": {
    "merges_24h": 66,
    "commits_24h": 66,
@@ -123,28 +123,28 @@
    "reviews_passed_24h": 43,
    "reviews_changes_24h": 36,
    "commits_by_hour": [
-    0,
-    9,
+    3,
+    6,
     0,
     3,
     0,
     6,
     0,
-    10,
-    3,
+    12,
+    1,
     0,
     0,
-    11,
-    3,
+    12,
+    2,
     4,
     2,
+    2,
+    2,
+    5,
+    2,
+    0,
     1,
-    3,
-    4,
-    3,
-    0,
-    0,
-    3,
+    2,
     0,
     1
    ],
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T05:00:03Z",
+    "last_check_at": "2026-10-23T05:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow brain capture missed",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T04:50:03Z",
+    "last_check_at": "2026-10-23T05:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T04:58:31Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 15901 passed, 0 failed"
+   },
    {
     "at": "2026-10-23T04:53:17Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T03:40:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-23T03:29:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01/PAPER-09 Performance: add official-quality slice from…”: changes required"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T04:59:05Z",
-   "heartbeat_at": "2026-10-23T05:00:04Z",
+   "status_at": "2026-10-23T05:04:05Z",
+   "heartbeat_at": "2026-10-23T05:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 447,
-    "markets": 4465,
+    "weather_events": 453,
+    "markets": 4531,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T04:56:48Z",
+    "last_scan_at": "2026-10-23T05:02:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T04:56:48Z",
+    "updated_at": "2026-10-23T05:02:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T04:59:47Z",
+    "updated_at": "2026-10-23T05:03:48Z",
     "detail": "gated"
    },
    {
