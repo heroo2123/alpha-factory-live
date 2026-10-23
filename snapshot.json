@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T08:50:02Z",
+ "generated_at": "2026-10-23T08:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 39,
+    "count": 38,
     "unit": "queued",
     "active": false,
-    "detail": "42 ready to build"
+    "detail": "41 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "57 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 48,
+    "count": 53,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,27 +70,27 @@
     "family": "Anthropic",
     "task_id": "t_83d959d3",
     "task": "LIVE-15 Withhold READY when a guardian cycle has not revalidated every retained resting…",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_2b40a6db",
-    "task": "CODE-01 Bind our_order_scores to the reference that was actually chosen",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_0f3feac1",
-    "task": "CODE-01 Tag events without a fresh brain probability as BRAIN_UNCOVERED",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 48,
+   "progress_pct": 53,
    "last_finished_at": "2026-10-23T04:58:31Z",
    "last_passed": 15901,
    "last_failed": 0,
@@ -120,25 +120,25 @@
    "commits_24h": 57,
    "built_24h": 76,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 32,
-   "reviews_changes_24h": 45,
+   "reviews_passed_24h": 34,
+   "reviews_changes_24h": 43,
    "commits_by_hour": [
     0,
     6,
     0,
-    6,
-    7,
-    0,
-    0,
-    10,
-    3,
+    9,
     4,
-    2,
-    2,
+    0,
+    0,
+    11,
     2,
     4,
     3,
     1,
+    3,
+    4,
+    3,
+    0,
     0,
     3,
     0,
@@ -149,13 +149,15 @@
     2
    ],
    "merge_holds": [
+    "disallowed path set",
+    "protected code: waiting for a second review",
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 39,
+    "queued": 38,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 4,
     "merged": 453,
     "parked": 280
    }
@@ -214,7 +216,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T08:50:03Z",
+    "last_check_at": "2026-10-23T08:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +232,7 @@
      "flow maintenance review packet invalid",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T08:40:03Z",
+    "last_check_at": "2026-10-23T08:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T08:53:23Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Bind our_order_scores to the reference that was actually…”: passed"
+   },
+   {
+    "at": "2026-10-23T08:51:22Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Bind our_order_scores to the reference that was actually…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T08:50:20Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Tag events without a fresh brain probability as…”: passed"
+   },
    {
     "at": "2026-10-23T08:49:15Z",
     "kind": "build",
@@ -345,21 +362,6 @@
     "at": "2026-10-23T07:35:03Z",
     "kind": "release",
     "text": "New Shadow release ab3a103 went live (paper only)"
-   },
-   {
-    "at": "2026-10-23T07:30:22Z",
-    "kind": "plan",
-    "text": "Architect (Claude Opus) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-23T07:28:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-23T07:27:17Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01/LIVE-11 PWS lead degradation: fail-closed…”: changes required"
    }
   ]
  },
@@ -370,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T08:49:22Z",
-   "heartbeat_at": "2026-10-23T08:50:03Z",
+   "status_at": "2026-10-23T08:54:23Z",
+   "heartbeat_at": "2026-10-23T08:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +382,7 @@
     "weather_events": 425,
     "markets": 4223,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T08:47:22Z",
+    "last_scan_at": "2026-10-23T08:52:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T08:47:22Z",
+    "updated_at": "2026-10-23T08:52:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T08:49:37Z",
+    "updated_at": "2026-10-23T08:53:38Z",
     "detail": "observations retained"
    },
    {
