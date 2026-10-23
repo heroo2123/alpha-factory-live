@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T13:05:02Z",
+ "generated_at": "2026-10-23T13:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "46 merged in 24h"
+    "detail": "45 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_55fc8599",
+    "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "OpenAI",
     "task_id": "t_7aeb2ad5",
     "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_26b8e2e5",
+    "task": "FLEX candidate t_1e3d458a d23ca00c9924",
+    "elapsed_min": 4
+   },
+   {
+    "slot": "Reviewer 2",
+    "role": "review",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
-   },
-   {
-    "slot": "Reviewer 2",
-    "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_e53282e5",
-    "task": "FLEX candidate t_ab6de61c 518ae5eeb144",
-    "elapsed_min": 11
    }
   ],
   "qa": {
@@ -116,19 +116,19 @@
   },
   "tests_passing": 15935,
   "flow": {
-   "merges_24h": 46,
-   "commits_24h": 46,
+   "merges_24h": 45,
+   "commits_24h": 45,
    "built_24h": 75,
    "build_failed_24h": 2,
    "reviews_passed_24h": 30,
    "reviews_changes_24h": 46,
    "commits_by_hour": [
-    1,
+    0,
     0,
     0,
     12,
-    2,
-    4,
+    3,
+    3,
     2,
     2,
     2,
@@ -137,8 +137,8 @@
     0,
     1,
     2,
-    0,
     1,
+    0,
     0,
     0,
     1,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 19,
+    "queued": 18,
     "building": 2,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 2,
     "merged": 460,
     "parked": 324
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T13:05:02Z",
+    "last_check_at": "2026-10-23T13:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T13:05:26Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T12:55:32Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T11:40:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-23T11:39:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “LIVE-15 Withhold READY when a guardian cycle has not revalidated…” → sent to independent review"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T13:04:40Z",
-   "heartbeat_at": "2026-10-23T13:05:02Z",
+   "status_at": "2026-10-23T13:09:40Z",
+   "heartbeat_at": "2026-10-23T13:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 433,
-    "markets": 4328,
+    "weather_events": 438,
+    "markets": 4383,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T13:01:45Z",
+    "last_scan_at": "2026-10-23T13:07:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T13:01:45Z",
+    "updated_at": "2026-10-23T13:07:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T13:03:21Z",
+    "updated_at": "2026-10-23T13:09:24Z",
     "detail": "observations retained"
    },
    {
