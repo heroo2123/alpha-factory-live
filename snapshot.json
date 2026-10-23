@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T22:45:02Z",
+ "generated_at": "2026-10-23T22:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 7,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "75 built in 24h"
+    "detail": "74 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "39 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0c549268",
     "task": "CODE-01 Remove daylight dependencies from daylight ablations",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "OpenAI",
     "task_id": "t_6908db19",
     "task": "CODE-01 Measure bid-only liquidation markouts",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_eb50401e",
-    "task": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_a12bfc82",
-    "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 39,
    "commits_24h": 39,
-   "built_24h": 75,
+   "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 51,
-   "reviews_changes_24h": 23,
+   "reviews_passed_24h": 53,
+   "reviews_changes_24h": 22,
    "commits_by_hour": [
     3,
     1,
@@ -149,13 +149,14 @@
     3
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 7,
     "building": 2,
-    "in_review": 2,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 4,
     "merged": 481,
     "parked": 359
    }
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-23T22:45:02Z",
+    "last_check_at": "2026-10-23T22:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 495,
-    "last_run_at": "2026-10-23T22:45:02Z",
+    "runs_total": 496,
+    "last_run_at": "2026-10-23T22:50:02Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow shadow stuck waiting",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +254,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T22:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
+   },
+   {
+    "at": "2026-10-23T22:48:34Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Propagate synthetic provenance into release assessments”: passed"
+   },
+   {
+    "at": "2026-10-23T22:48:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Group fill-markout sufficiency by rule-bound station-day”: passed"
+   },
    {
     "at": "2026-10-23T22:45:02Z",
     "kind": "heal",
@@ -334,11 +350,6 @@
     "text": "Operator AI (Claude Opus) audit run: flow release needs release"
    },
    {
-    "at": "2026-10-23T22:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-23T22:04:17Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Reject ASOS day evidence with an impossible causal cutoff” into the main build"
@@ -352,16 +363,6 @@
     "at": "2026-10-23T21:51:16Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1e3d458a d23ca00c9924”: passed"
-   },
-   {
-    "at": "2026-10-23T21:48:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject ASOS day evidence with an impossible causal cutoff”: passed"
-   },
-   {
-    "at": "2026-10-23T21:45:31Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
    }
   ]
  },
@@ -372,17 +373,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T22:44:14Z",
-   "heartbeat_at": "2026-10-23T22:45:03Z",
+   "status_at": "2026-10-23T22:49:15Z",
+   "heartbeat_at": "2026-10-23T22:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 387,
-    "markets": 3822,
+    "weather_events": 385,
+    "markets": 3800,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T22:43:15Z",
+    "last_scan_at": "2026-10-23T22:48:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T22:43:15Z",
+    "updated_at": "2026-10-23T22:48:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T22:44:57Z",
+    "updated_at": "2026-10-23T22:48:58Z",
     "detail": "observations retained"
    },
    {
