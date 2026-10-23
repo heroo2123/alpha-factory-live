@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T10:25:01Z",
+ "generated_at": "2026-10-23T10:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "40 ready to build"
+    "detail": "39 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "77 built in 24h"
+    "detail": "76 built in 24h"
    },
    {
     "key": "review",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "59 merged in 24h"
+    "detail": "58 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_5f9df8b0",
     "task": "METAR 30 h window: daily-review publisher/authority, multimodel panel and offline…",
-    "elapsed_min": 20
+    "elapsed_min": 25
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ebd0377d",
+    "task": "FLEX candidate t_1736d1ac cb4c821bfa99",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 15935,
   "flow": {
-   "merges_24h": 59,
-   "commits_24h": 59,
-   "built_24h": 77,
+   "merges_24h": 58,
+   "commits_24h": 58,
+   "built_24h": 76,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 29,
+   "reviews_passed_24h": 30,
    "reviews_changes_24h": 48,
    "commits_by_hour": [
-    6,
+    5,
     0,
     13,
     0,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 38,
+    "queued": 12,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
+    "awaiting_merge": 3,
     "merged": 455,
-    "parked": 288
+    "parked": 313
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T10:25:01Z",
+    "last_check_at": "2026-10-23T10:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T10:27:28Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_3f43dbe4 199631a0012e”: passed"
+   },
+   {
+    "at": "2026-10-23T10:25:16Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Seal ASOS availability time alongside the IEM cross-check…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T10:10:02Z",
     "kind": "heal",
@@ -349,16 +359,6 @@
     "at": "2026-10-23T08:55:18Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 Never let the CONSERVATIVE queue start ahead of the visible…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T08:53:23Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Bind our_order_scores to the reference that was actually…”: passed"
-   },
-   {
-    "at": "2026-10-23T08:51:22Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Bind our_order_scores to the reference that was actually…” → sent to independent review"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T10:24:28Z",
-   "heartbeat_at": "2026-10-23T10:25:00Z",
+   "status_at": "2026-10-23T10:29:28Z",
+   "heartbeat_at": "2026-10-23T10:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +379,7 @@
     "weather_events": 423,
     "markets": 4201,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T10:22:11Z",
+    "last_scan_at": "2026-10-23T10:27:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T10:22:11Z",
+    "updated_at": "2026-10-23T10:27:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T10:24:14Z",
+    "updated_at": "2026-10-23T10:28:15Z",
     "detail": "observations retained"
    },
    {
@@ -497,7 +497,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 43 untouched city-days (11 cities, 4 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 44 untouched city-days (11 cities, 4 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 65,
    "waiting_city_days": 0,
