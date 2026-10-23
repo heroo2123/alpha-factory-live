@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T14:15:03Z",
+ "generated_at": "2026-10-23T14:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "75 built in 24h"
+    "detail": "74 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_4fc935d9",
     "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "DeepSeek",
     "task_id": "t_d26b025d",
     "task": "Freeze-and-register a candidate in the preregistered holdout registry before any…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_26b8e2e5",
-    "task": "FLEX candidate t_1e3d458a d23ca00c9924",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_6ae1c95c",
-    "task": "a build task",
-    "elapsed_min": 9
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -118,16 +118,16 @@
   "flow": {
    "merges_24h": 47,
    "commits_24h": 47,
-   "built_24h": 75,
+   "built_24h": 74,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 32,
+   "reviews_passed_24h": 33,
    "reviews_changes_24h": 42,
    "commits_by_hour": [
     0,
-    3,
-    9,
-    3,
-    3,
+    5,
+    7,
+    4,
+    2,
     2,
     2,
     3,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 21,
     "building": 2,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 462,
     "parked": 328
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T14:15:03Z",
+    "last_check_at": "2026-10-23T14:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 438,
-    "last_run_at": "2026-10-23T13:50:03Z",
-    "last_ok": true,
-    "last_kind": "independent review changes required",
+    "runs_total": 439,
+    "last_run_at": "2026-10-23T14:20:02Z",
+    "last_ok": false,
+    "last_kind": "routine",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T14:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: routine"
+   },
+   {
+    "at": "2026-10-23T14:18:01Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-23T14:14:53Z",
     "kind": "build",
@@ -329,11 +339,6 @@
     "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
    },
    {
-    "at": "2026-10-23T13:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-23T13:24:21Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Require covered IEM agreement for contract finality”: changes required"
@@ -357,11 +362,6 @@
     "at": "2026-10-23T13:05:26Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T12:55:32Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_4fc935d9 e7ffa674694e”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T14:14:44Z",
-   "heartbeat_at": "2026-10-23T14:15:04Z",
+   "status_at": "2026-10-23T14:19:45Z",
+   "heartbeat_at": "2026-10-23T14:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 438,
     "markets": 4383,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T14:12:45Z",
+    "last_scan_at": "2026-10-23T14:18:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T14:12:45Z",
+    "updated_at": "2026-10-23T14:18:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T14:13:51Z",
+    "updated_at": "2026-10-23T14:19:54Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +510,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-23T13:17:02Z",
+   "updated_at": "2026-10-23T14:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
