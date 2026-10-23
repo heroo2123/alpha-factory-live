@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T02:25:02Z",
+ "generated_at": "2026-10-23T02:30:04Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 27,
     "unit": "queued",
     "active": false,
-    "detail": "25 ready to build"
+    "detail": "26 ready to build"
    },
    {
     "key": "build",
@@ -18,20 +18,20 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "62 built in 24h"
+    "detail": "63 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "74 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 47,
+    "count": 53,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Sonnet",
+    "family": "Anthropic",
+    "task_id": "t_a1809ffa",
+    "task": "CODE-01/PAPER-09 PWS score audit: measure false-lead and missed-lead rates with…",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_03e94d0f",
     "task": "CODE-01 Bind the METAR R31 verdict to its event and require a bounded cutoff bracket",
-    "elapsed_min": 11
+    "elapsed_min": 17
    },
    {
     "slot": "Reviewer 1",
@@ -95,17 +95,17 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_1e3d458a",
-    "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
-    "elapsed_min": 12
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 47,
+   "progress_pct": 53,
    "last_finished_at": "2026-10-23T00:06:35Z",
    "last_passed": 15823,
    "last_failed": 1,
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 74,
    "commits_24h": 74,
-   "built_24h": 62,
+   "built_24h": 63,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 62,
-   "reviews_changes_24h": 24,
+   "reviews_passed_24h": 60,
+   "reviews_changes_24h": 25,
    "commits_by_hour": [
     0,
     10,
@@ -130,8 +130,8 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -149,17 +149,17 @@
     2
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
     "protected code: waiting for a second review",
-    "targeted tests failed"
+    "targeted tests failed recently backoff",
+    "conflicts with newer code, being rebuilt"
    ],
    "stage_totals": {
-    "queued": 22,
+    "queued": 27,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 5,
+    "awaiting_merge": 4,
     "merged": 448,
-    "parked": 248
+    "parked": 250
    }
   },
   "architect": {
@@ -216,7 +216,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T02:25:02Z",
+    "last_check_at": "2026-10-23T02:30:05Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T02:27:17Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “As-issued extra model inputs per city-day: GEFS lagged cycles, NBM…”: changes required"
+   },
+   {
+    "at": "2026-10-23T02:25:15Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “As-issued extra model inputs per city-day: GEFS lagged cycles, NBM…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T02:25:02Z",
     "kind": "heal",
@@ -354,16 +364,6 @@
     "at": "2026-10-23T01:40:21Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “CODE-01 Produce first-class SOURCE_SCHEDULE release events with…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T01:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-23T01:36:17Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 PWS score audit: usable lead net of latency…”: passed"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-23T02:24:59Z",
-   "heartbeat_at": "2026-10-23T02:25:01Z",
+   "status_at": "2026-10-23T02:30:01Z",
+   "heartbeat_at": "2026-10-23T02:30:06Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T02:24:56Z",
+    "updated_at": "2026-10-23T02:28:57Z",
     "detail": "observations retained"
    },
    {
