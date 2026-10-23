@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T14:00:02Z",
+ "generated_at": "2026-10-23T14:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,15 +34,15 @@
     "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "45 merged in 24h"
+    "detail": "46 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 87,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_4fc935d9",
     "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_1e3d458a",
     "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 1",
@@ -90,22 +90,22 @@
     "family": "DeepSeek",
     "task_id": "t_041d5254",
     "task": "FLEX candidate t_057db1b5 e6021ee53e81",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_14378e0e",
-    "task": "FLEX candidate t_5f9df8b0 728357d9070e",
-    "elapsed_min": 10
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 87,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-23T09:44:59Z",
    "last_passed": 15935,
    "last_failed": 0,
@@ -116,48 +116,46 @@
   },
   "tests_passing": 15935,
   "flow": {
-   "merges_24h": 45,
-   "commits_24h": 45,
+   "merges_24h": 46,
+   "commits_24h": 46,
    "built_24h": 75,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 30,
-   "reviews_changes_24h": 44,
+   "reviews_passed_24h": 31,
+   "reviews_changes_24h": 43,
    "commits_by_hour": [
     0,
     0,
-    11,
-    3,
+    12,
+    2,
     4,
     2,
+    2,
+    2,
+    5,
+    2,
+    0,
+    1,
+    2,
+    0,
+    1,
+    0,
+    0,
     1,
     3,
-    4,
-    3,
-    0,
-    0,
-    3,
-    0,
-    1,
-    0,
-    0,
     1,
     2,
     2,
-    2,
-    2,
     1,
-    0
+    1
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 21,
     "building": 2,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 1,
-    "merged": 460,
-    "parked": 329
+    "merged": 461,
+    "parked": 328
    }
   },
   "architect": {
@@ -214,24 +212,25 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T14:00:03Z",
+    "last_check_at": "2026-10-23T14:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 6,
     "by_severity": {
      "P0": 0,
      "P1": 3,
      "P2": 2
     },
     "codes": [
+     "flow glm plan lane dead",
      "flow green release failed",
      "flow shadow stuck waiting",
      "flow brain capture missed",
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T13:50:04Z",
+    "last_check_at": "2026-10-23T14:00:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T14:00:43Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_5f9df8b0 728357d9070e”: passed"
+   },
    {
     "at": "2026-10-23T13:55:24Z",
     "kind": "build",
@@ -356,11 +360,6 @@
     "at": "2026-10-23T12:29:09Z",
     "kind": "review",
     "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-23T12:28:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_55fc8599 e”: passed"
    }
   ]
  },
@@ -371,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T13:59:43Z",
-   "heartbeat_at": "2026-10-23T14:00:03Z",
+   "status_at": "2026-10-23T14:04:44Z",
+   "heartbeat_at": "2026-10-23T14:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -381,7 +380,7 @@
     "weather_events": 438,
     "markets": 4383,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T13:55:01Z",
+    "last_scan_at": "2026-10-23T14:01:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T13:55:01Z",
+    "updated_at": "2026-10-23T14:01:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T13:59:46Z",
+    "updated_at": "2026-10-23T14:03:48Z",
     "detail": "observations retained"
    },
    {
