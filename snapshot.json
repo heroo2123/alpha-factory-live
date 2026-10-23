@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T15:10:02Z",
+ "generated_at": "2026-10-23T15:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_53e3bee9",
-    "task": "CODE-01 Bind IEM coverage to the actual local calendar day",
-    "elapsed_min": 25
+    "task_id": "t_1e3d458a",
+    "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_14378e0e",
     "task": "METAR 30h daily review: preserve exact WRH URL binding",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_53e3bee9",
+    "task": "CODE-01 Bind IEM coverage to the actual local calendar day",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -123,36 +123,36 @@
    "reviews_passed_24h": 33,
    "reviews_changes_24h": 42,
    "commits_by_hour": [
-    0,
-    12,
+    3,
+    9,
     3,
     3,
     2,
     2,
-    2,
-    5,
-    2,
-    0,
-    1,
-    2,
-    1,
-    0,
-    0,
-    0,
-    1,
     3,
+    4,
+    2,
+    0,
     1,
     2,
-    2,
     1,
+    0,
+    0,
+    0,
+    1,
+    4,
+    0,
+    2,
+    3,
+    0,
     2,
     2
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 20,
+    "queued": 19,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 464,
     "parked": 331
@@ -212,7 +212,7 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T15:10:03Z",
+    "last_check_at": "2026-10-23T15:15:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +230,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T15:00:03Z",
+    "last_check_at": "2026-10-23T15:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 448,
-    "last_run_at": "2026-10-23T15:10:03Z",
+    "runs_total": 449,
+    "last_run_at": "2026-10-23T15:15:02Z",
     "last_ok": true,
-    "last_kind": "routine",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T15:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-23T15:11:53Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Bind IEM coverage to the actual local calendar day” → sent to independent review"
+   },
    {
     "at": "2026-10-23T15:10:03Z",
     "kind": "heal",
@@ -285,11 +295,6 @@
     "at": "2026-10-23T14:51:10Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro's build of “Freeze-and-register a candidate in the preregistered holdout…” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-23T14:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: engineering regression selftest failed"
    },
    {
     "at": "2026-10-23T14:44:18Z",
@@ -355,11 +360,6 @@
     "at": "2026-10-23T13:52:26Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_55fc8599 e”: passed"
-   },
-   {
-    "at": "2026-10-23T13:49:17Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “METAR 30h daily review: preserve exact WRH URL binding” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T15:09:48Z",
-   "heartbeat_at": "2026-10-23T15:10:04Z",
+   "status_at": "2026-10-23T15:14:48Z",
+   "heartbeat_at": "2026-10-23T15:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 438,
     "markets": 4383,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T15:05:13Z",
+    "last_scan_at": "2026-10-23T15:11:02Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T15:05:13Z",
+    "updated_at": "2026-10-23T15:11:02Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T15:08:16Z",
+    "updated_at": "2026-10-23T15:14:18Z",
     "detail": "observations retained"
    },
    {
