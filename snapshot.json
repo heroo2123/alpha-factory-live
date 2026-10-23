@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T14:25:02Z",
+ "generated_at": "2026-10-23T14:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c91a21ae",
     "task": "Make guardian lost-response replay proof deterministic across idle safety ticks",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_d26b025d",
     "task": "Freeze-and-register a candidate in the preregistered holdout registry before any…",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_45c04324",
     "task": "FLEX candidate t_4fc935d9 e7ffa674694e",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 2",
@@ -152,7 +152,7 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 22,
+    "queued": 21,
     "building": 2,
     "in_review": 1,
     "awaiting_merge": 1,
@@ -214,25 +214,25 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T14:24:02Z",
+    "last_check_at": "2026-10-23T14:30:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 3,
-     "P2": 2
+     "P2": 3
     },
     "codes": [
      "flow glm plan lane dead",
      "flow green release failed",
+     "flow shadow observation unavailable",
      "flow shadow stuck waiting",
      "flow brain capture missed",
-     "flow release needs release",
-     "flow acceptance followthrough required"
+     "flow release needs release"
     ],
-    "last_check_at": "2026-10-23T14:20:03Z",
+    "last_check_at": "2026-10-23T14:29:31Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T14:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
    {
     "at": "2026-10-23T14:25:02Z",
     "kind": "heal",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T13:20:58Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T13:11:45Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_ab6de61c 518ae5eeb144”: changes required"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T14:24:45Z",
-   "heartbeat_at": "2026-10-23T14:25:03Z",
+   "status_at": "2026-10-23T14:29:45Z",
+   "heartbeat_at": "2026-10-23T14:30:06Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T14:23:55Z",
+    "updated_at": "2026-10-23T14:29:57Z",
     "detail": "observations retained"
    },
    {
