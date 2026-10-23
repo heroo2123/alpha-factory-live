@@ -1,32 +1,32 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T07:05:02Z",
+ "generated_at": "2026-10-23T07:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 36,
+    "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "39 ready to build"
+    "detail": "38 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "75 built in 24h"
+    "detail": "74 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
-    "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
@@ -70,22 +70,22 @@
     "family": "Anthropic",
     "task_id": "t_e210bdd2",
     "task": "LIVE-15 Derive CustodyGateResult from the actual custody-gate JUnit report so skipped…",
-    "elapsed_min": 18
+    "elapsed_min": 23
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_7a3b6b25",
-    "task": "PAPER-02 METAR daily-review publisher/authority + multimodel panel accept the published…",
-    "elapsed_min": 42
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,23 +118,23 @@
   "flow": {
    "merges_24h": 57,
    "commits_24h": 57,
-   "built_24h": 75,
+   "built_24h": 74,
    "build_failed_24h": 3,
    "reviews_passed_24h": 36,
-   "reviews_changes_24h": 39,
+   "reviews_changes_24h": 40,
    "commits_by_hour": [
     0,
     3,
     0,
     6,
     0,
-    12,
-    1,
+    13,
     0,
     0,
+    0,
     12,
-    2,
-    4,
+    3,
+    3,
     2,
     2,
     2,
@@ -143,8 +143,8 @@
     0,
     1,
     2,
-    0,
     1,
+    0,
     0,
     0
    ],
@@ -152,9 +152,9 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 36,
-    "building": 2,
-    "in_review": 0,
+    "queued": 37,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 450,
     "parked": 274
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 2,
-    "alerts_24h": 13,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-23T07:05:02Z",
+    "alerts_24h": 12,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-23T07:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T07:08:13Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “PAPER-02 METAR daily-review publisher/authority + multimodel panel…”: changes required"
+   },
+   {
+    "at": "2026-10-23T07:08:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: agent4 qa pipeline subsystem failed"
+   },
+   {
+    "at": "2026-10-23T07:06:14Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “PAPER-02 METAR daily-review publisher/authority + multimodel panel…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T07:05:02Z",
     "kind": "release",
@@ -347,21 +362,6 @@
     "at": "2026-10-23T05:54:15Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 Feed an optional cited IEM ASOS cross-check into the…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T05:40:16Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_e7a00d3a dea42032fd88”: changes required"
-   },
-   {
-    "at": "2026-10-23T05:38:15Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01/PAPER-09 PWS score audit: official confirmation rate with…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T05:30:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
    }
   ]
  },
@@ -379,10 +379,10 @@
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 416,
-    "markets": 4124,
+    "weather_events": 418,
+    "markets": 4146,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T06:59:31Z",
+    "last_scan_at": "2026-10-23T07:05:27Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,15 +405,15 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T06:59:31Z",
+    "updated_at": "2026-10-23T07:05:27Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T07:04:45Z",
-    "detail": "gated"
+    "updated_at": "2026-10-23T07:09:03Z",
+    "detail": "observations retained"
    },
    {
     "name": "ECMWF IFS / AIFS",
