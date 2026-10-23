@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T07:35:01Z",
+ "generated_at": "2026-10-23T07:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 40,
+    "count": 41,
     "unit": "queued",
     "active": false,
-    "detail": "28 ready to build"
+    "detail": "44 ready to build"
    },
    {
     "key": "build",
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
-    "detail": "current release b603a22"
+    "active": false,
+    "detail": "current release ab3a103"
    },
    {
     "key": "shadow",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e210bdd2",
     "task": "LIVE-15 Derive CustodyGateResult from the actual custody-gate JUnit report so skipped…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_3f43dbe4",
     "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 24
+    "elapsed_min": 29
    },
    {
     "slot": "Reviewer 1",
@@ -125,20 +125,20 @@
    "commits_by_hour": [
     3,
     0,
-    2,
-    4,
-    1,
-    12,
-    0,
-    0,
-    7,
-    6,
-    4,
-    2,
-    1,
-    2,
-    4,
     3,
+    3,
+    3,
+    10,
+    0,
+    0,
+    9,
+    4,
+    4,
+    2,
+    1,
+    2,
+    5,
+    2,
     2,
     0,
     2,
@@ -152,12 +152,12 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 40,
+    "queued": 41,
     "building": 2,
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 451,
-    "parked": 277
+    "parked": 276
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T07:35:01Z",
+    "last_check_at": "2026-10-23T07:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -252,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T07:35:03Z",
+    "kind": "release",
+    "text": "New Shadow release ab3a103 went live (paper only)"
+   },
    {
     "at": "2026-10-23T07:30:22Z",
     "kind": "plan",
@@ -356,32 +361,27 @@
     "at": "2026-10-23T06:24:18Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_b8980144 55347ab2e0fe”: changes required"
-   },
-   {
-    "at": "2026-10-23T06:22:12Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “FLEX candidate t_e7a00d3a dea42032fd88” → sent to independent review"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": "b603a22",
-   "commissioned_at": "2026-10-21T12:15:02Z",
-   "day": "2026-10-23",
-   "state": "owner stopped or rolling back",
-   "status_at": "2026-10-23T07:00:09Z",
-   "heartbeat_at": null,
+   "release": "ab3a103",
+   "commissioned_at": "2026-10-23T07:05:02Z",
+   "day": "2026-10-24",
+   "state": "waiting prepared day",
+   "status_at": "2026-10-23T07:39:18Z",
+   "heartbeat_at": "2026-10-23T07:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 418,
-    "markets": 4146,
+    "weather_events": 426,
+    "markets": 4234,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T07:33:32Z",
+    "last_scan_at": "2026-10-23T07:38:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,21 +397,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-23T06:37:02Z",
+    "updated_at": "2026-10-23T07:37:02Z",
     "detail": "multi-city capture collecting"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T07:33:32Z",
+    "updated_at": "2026-10-23T07:38:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T07:33:12Z",
+    "updated_at": "2026-10-23T07:39:13Z",
     "detail": "observations retained"
    },
    {
@@ -1016,7 +1016,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 23,
-     "open_tasks": 1
+     "open_tasks": 2
     },
     {
      "id": "LIVE-16",
@@ -1094,7 +1094,7 @@
    {
     "step": "Pre-funding checklist and real rollback drill",
     "state": "active",
-    "detail": "trading key isolated · release published privately"
+    "detail": "trading key isolated"
    },
    {
     "step": "Owner decides whether to fund",
