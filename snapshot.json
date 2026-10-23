@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T22:50:02Z",
+ "generated_at": "2026-10-23T22:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 7,
+    "count": 8,
     "unit": "queued",
     "active": false,
-    "detail": "8 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "39 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0c549268",
     "task": "CODE-01 Remove daylight dependencies from daylight ablations",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_6908db19",
     "task": "CODE-01 Measure bid-only liquidation markouts",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Reviewer 1",
@@ -124,7 +124,7 @@
    "reviews_changes_24h": 22,
    "commits_by_hour": [
     3,
-    1,
+    0,
     0,
     3,
     0,
@@ -134,31 +134,28 @@
     1,
     2,
     2,
+    2,
+    2,
     1,
-    2,
-    2,
     0,
-    2,
     3,
+    2,
     3,
     0,
     3,
     3,
     2,
-    2,
+    3,
     3
    ],
-   "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 7,
+    "queued": 8,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 4,
-    "merged": 481,
-    "parked": 359
+    "awaiting_merge": 2,
+    "merged": 482,
+    "parked": 360
    }
   },
   "architect": {
@@ -168,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-23T22:52:50Z",
+    "title": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-23T22:34:27Z",
     "title": "CODE-01 Rank basket opportunities using exact economic ratios",
@@ -202,11 +204,6 @@
     "at": "2026-10-23T20:03:33Z",
     "title": "CODE-01 Bind maker markouts to the entry evidence class",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-23T19:42:22Z",
-    "title": "CODE-01 Apply consistent event weighting to reliability bins",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,14 +212,14 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-23T22:50:02Z",
+    "last_check_at": "2026-10-23T22:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 9,
     "by_severity": {
      "P0": 0,
-     "P1": 3,
+     "P1": 4,
      "P2": 3
     },
     "codes": [
@@ -230,18 +227,18 @@
      "flow green release failed",
      "flow shadow stuck waiting",
      "flow brain capture missed",
-     "flow release needs release",
-     "flow brain harvest incomplete"
+     "flow published rules changed",
+     "flow release needs release"
     ],
-    "last_check_at": "2026-10-23T22:40:02Z",
+    "last_check_at": "2026-10-23T22:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 496,
-    "last_run_at": "2026-10-23T22:50:02Z",
+    "runs_total": 497,
+    "last_run_at": "2026-10-23T22:55:01Z",
     "last_ok": true,
-    "last_kind": "flow shadow stuck waiting",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T22:55:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-23T22:52:50Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Group fill-markout sufficiency by rule-bound station-day” into the main build"
+   },
    {
     "at": "2026-10-23T22:50:02Z",
     "kind": "heal",
@@ -345,11 +352,6 @@
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    },
    {
-    "at": "2026-10-23T22:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow release needs release"
-   },
-   {
     "at": "2026-10-23T22:04:17Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Reject ASOS day evidence with an impossible causal cutoff” into the main build"
@@ -358,11 +360,6 @@
     "at": "2026-10-23T21:52:18Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Revalidate ASOS series before deriving observations” into the main build"
-   },
-   {
-    "at": "2026-10-23T21:51:16Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1e3d458a d23ca00c9924”: passed"
    }
   ]
  },
@@ -373,17 +370,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T22:49:15Z",
-   "heartbeat_at": "2026-10-23T22:50:02Z",
+   "status_at": "2026-10-23T22:54:15Z",
+   "heartbeat_at": "2026-10-23T22:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 385,
-    "markets": 3800,
+    "weather_events": 384,
+    "markets": 3789,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T22:48:53Z",
+    "last_scan_at": "2026-10-23T22:54:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T22:48:53Z",
+    "updated_at": "2026-10-23T22:54:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T22:48:58Z",
+    "updated_at": "2026-10-23T22:55:00Z",
     "detail": "observations retained"
    },
    {
@@ -639,8 +636,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 72,
-     "open_tasks": 6
+     "merged_tasks": 73,
+     "open_tasks": 5
     },
     {
      "id": "CODE-02",
