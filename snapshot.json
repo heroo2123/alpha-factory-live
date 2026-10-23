@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T21:15:01Z",
+ "generated_at": "2026-10-23T21:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_06800754",
     "task": "CODE-01 Revalidate ASOS series before deriving observations",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_fc7fda81",
+    "task": "CODE-01 Reject ASOS day evidence with an impossible causal cutoff",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
@@ -120,8 +120,8 @@
    "commits_24h": 41,
    "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 45,
-   "reviews_changes_24h": 30,
+   "reviews_passed_24h": 46,
+   "reviews_changes_24h": 29,
    "commits_by_hour": [
     3,
     4,
@@ -148,16 +148,14 @@
     2,
     3
    ],
-   "merge_holds": [
-    "protected code: second review asked for changes"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 10,
     "building": 2,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 478,
-    "parked": 356
+    "parked": 357
    }
   },
   "architect": {
@@ -210,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T21:15:02Z",
+    "last_check_at": "2026-10-23T21:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T21:19:20Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Propagate synthetic provenance into release assessments”: passed"
+   },
+   {
+    "at": "2026-10-23T21:15:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Propagate synthetic provenance into release assessments” → sent to independent review"
+   },
    {
     "at": "2026-10-23T21:15:02Z",
     "kind": "heal",
@@ -352,16 +360,6 @@
     "at": "2026-10-23T19:57:19Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Bind maker markouts to the entry evidence class” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T19:50:29Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Require covered IEM agreement for contract finality”: changes required"
-   },
-   {
-    "at": "2026-10-23T19:47:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
    }
   ]
  },
@@ -372,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T21:14:09Z",
-   "heartbeat_at": "2026-10-23T21:15:02Z",
+   "status_at": "2026-10-23T21:19:10Z",
+   "heartbeat_at": "2026-10-23T21:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +380,7 @@
     "weather_events": 406,
     "markets": 4031,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T21:09:52Z",
+    "last_scan_at": "2026-10-23T21:15:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T21:09:52Z",
+    "updated_at": "2026-10-23T21:15:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T21:14:28Z",
+    "updated_at": "2026-10-23T21:18:29Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +508,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-23T20:17:03Z",
+   "updated_at": "2026-10-23T21:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
