@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T05:25:01Z",
+ "generated_at": "2026-10-23T05:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 32,
     "unit": "queued",
     "active": false,
-    "detail": "33 ready to build"
+    "detail": "34 ready to build"
    },
    {
     "key": "build",
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
+    "active": false,
     "detail": "current release b603a22"
    },
    {
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e7a00d3a",
     "task": "CODE-01/PAPER-09 PWS score audit: official confirmation rate with stated denominator +…",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_1e3d458a",
-    "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
-    "elapsed_min": 2
+    "task_id": "t_ea2dd72e",
+    "task": "CODE-01 Feed an optional cited IEM ASOS cross-check into the result-lag…",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
@@ -120,15 +120,15 @@
    "commits_24h": 66,
    "built_24h": 74,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 41,
-   "reviews_changes_24h": 37,
+   "reviews_passed_24h": 40,
+   "reviews_changes_24h": 38,
    "commits_by_hour": [
     9,
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -157,7 +157,7 @@
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 450,
-    "parked": 267
+    "parked": 268
    }
   },
   "architect": {
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 12,
+    "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T05:24:02Z",
+    "last_check_at": "2026-10-23T05:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,12 +237,12 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 410,
-    "last_run_at": "2026-10-23T04:45:02Z",
+    "runs_total": 411,
+    "last_run_at": "2026-10-23T05:30:02Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow release repeated same failure",
     "running": false,
-    "model": "Claude Sonnet",
+    "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -253,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T05:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-23T05:27:22Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “Historical backfill: accept Wunderground-era (pre-switch) closed…”: changes required"
+   },
+   {
+    "at": "2026-10-23T05:25:13Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T05:24:17Z",
     "kind": "warn",
@@ -347,21 +362,6 @@
     "at": "2026-10-23T04:10:13Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01/PAPER-09 Performance: add official-quality slice from…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T04:03:17Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01/PAPER-09 Whole-strategy causal replay comparison: V11…”: changes required"
-   },
-   {
-    "at": "2026-10-23T04:01:19Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01/PAPER-09 Whole-strategy causal replay comparison: V11…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T03:59:16Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_de6640b9 48f3e868261f”: changes required"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T05:24:06Z",
-   "heartbeat_at": "2026-10-23T05:25:02Z",
+   "status_at": "2026-10-23T05:29:07Z",
+   "heartbeat_at": "2026-10-23T05:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 465,
-    "markets": 4663,
+    "weather_events": 461,
+    "markets": 4619,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T05:19:51Z",
+    "last_scan_at": "2026-10-23T05:25:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T05:19:51Z",
+    "updated_at": "2026-10-23T05:25:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T05:23:53Z",
+    "updated_at": "2026-10-23T05:29:54Z",
     "detail": "gated"
    },
    {
