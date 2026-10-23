@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T06:30:02Z",
+ "generated_at": "2026-10-23T06:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_fdd0e2df",
     "task": "METAR strict contract must accept the published 30 h AWC lookup window",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_7a3b6b25",
     "task": "PAPER-02 METAR daily-review publisher/authority + multimodel panel accept the published…",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 1",
@@ -126,16 +126,16 @@
     0,
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6,
     7,
-    3,
-    3,
+    6,
+    4,
+    2,
     1,
     2,
     4,
@@ -214,33 +214,33 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T06:30:02Z",
+    "last_check_at": "2026-10-23T06:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 1
+     "P2": 2
     },
     "codes": [
      "flow integration candidate persistently red",
+     "flow qa resource blocked",
      "flow green release failed",
      "flow pws ingest gated",
      "flow brain capture missed",
-     "flow main refuses published rules",
-     "flow acceptance followthrough required"
+     "flow main refuses published rules"
     ],
-    "last_check_at": "2026-10-23T06:20:03Z",
+    "last_check_at": "2026-10-23T06:30:51Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 412,
-    "last_run_at": "2026-10-23T06:00:02Z",
+    "runs_total": 413,
+    "last_run_at": "2026-10-23T06:35:01Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T06:35:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
+   },
    {
     "at": "2026-10-23T06:24:18Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T05:08:14Z",
     "kind": "build",
     "text": "Claude Sonnet built “FLEX candidate t_f7919dca 83e” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T04:58:31Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 15901 passed, 0 failed"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T06:29:40Z",
-   "heartbeat_at": "2026-10-23T06:30:02Z",
+   "status_at": "2026-10-23T06:34:41Z",
+   "heartbeat_at": "2026-10-23T06:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 419,
-    "markets": 4157,
+    "weather_events": 416,
+    "markets": 4124,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T06:26:31Z",
+    "last_scan_at": "2026-10-23T06:31:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T06:26:31Z",
+    "updated_at": "2026-10-23T06:31:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T06:28:33Z",
+    "updated_at": "2026-10-23T06:34:37Z",
     "detail": "gated"
    },
    {
