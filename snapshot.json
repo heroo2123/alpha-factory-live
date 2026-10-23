@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T16:15:02Z",
+ "generated_at": "2026-10-23T16:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 5,
+    "count": 4,
     "unit": "queued",
     "active": false,
     "detail": "6 ready to build"
@@ -25,21 +25,21 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "50 merged in 24h"
+    "detail": "47 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 39,
+    "count": 47,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,27 +70,27 @@
     "family": "OpenAI",
     "task_id": "t_4252cf3d",
     "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
     "role": "build",
     "state": "working",
-    "model": "Codex (GPT-6 Astra)",
+    "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_14378e0e",
-    "task": "Restore frozen METAR delta and repair WRH URL binding",
-    "elapsed_min": 13
+    "task_id": "t_1bdb24f5",
+    "task": "CODE-01 Reject superseded books in standalone valuations",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_14378e0e",
+    "task": "Restore frozen METAR delta and repair WRH URL binding",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 39,
+   "progress_pct": 47,
    "last_finished_at": "2026-10-23T14:04:15Z",
    "last_passed": 15950,
    "last_failed": 1,
@@ -116,16 +116,16 @@
   },
   "tests_passing": 15950,
   "flow": {
-   "merges_24h": 50,
-   "commits_24h": 49,
+   "merges_24h": 47,
+   "commits_24h": 47,
    "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 35,
-   "reviews_changes_24h": 39,
+   "reviews_passed_24h": 36,
+   "reviews_changes_24h": 38,
    "commits_by_hour": [
-    9,
-    3,
-    3,
+    7,
+    4,
+    2,
     2,
     2,
     3,
@@ -149,13 +149,14 @@
     3
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 5,
+    "queued": 4,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 1,
+    "awaiting_merge": 2,
     "merged": 467,
     "parked": 347
    }
@@ -214,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T16:15:02Z",
+    "last_check_at": "2026-10-23T16:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,7 +238,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 459,
+    "runs_total": 460,
     "last_run_at": "2026-10-23T16:15:02Z",
     "last_ok": true,
     "last_kind": "flow shadow stuck waiting",
@@ -253,6 +254,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T16:17:58Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Restore frozen METAR delta and repair WRH URL binding” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T16:15:29Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Prevent mixed synthetic and observed microstructure…”: passed"
+   },
    {
     "at": "2026-10-23T16:15:02Z",
     "kind": "heal",
@@ -352,16 +363,6 @@
     "at": "2026-10-23T15:16:17Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T15:11:53Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Bind IEM coverage to the actual local calendar day” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T15:00:23Z",
-    "kind": "merge",
-    "text": "Merged “Make guardian lost-response replay proof deterministic across idle…” into the main build"
    }
   ]
  },
@@ -372,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T16:14:51Z",
-   "heartbeat_at": "2026-10-23T16:15:02Z",
+   "status_at": "2026-10-23T16:19:52Z",
+   "heartbeat_at": "2026-10-23T16:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +383,7 @@
     "weather_events": 432,
     "markets": 4317,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T16:09:18Z",
+    "last_scan_at": "2026-10-23T16:15:25Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T16:09:18Z",
+    "updated_at": "2026-10-23T16:15:25Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T16:14:39Z",
+    "updated_at": "2026-10-23T16:18:40Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +511,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-23T15:17:02Z",
+   "updated_at": "2026-10-23T16:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
