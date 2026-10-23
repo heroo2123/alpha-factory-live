@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T21:40:02Z",
+ "generated_at": "2026-10-23T21:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 9,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "41 merged in 24h"
@@ -70,27 +70,27 @@
     "family": "OpenAI",
     "task_id": "t_1e3d458a",
     "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_fc7fda81",
-    "task": "CODE-01 Reject ASOS day evidence with an impossible causal cutoff",
-    "elapsed_min": 24
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_06800754",
-    "task": "CODE-01 Revalidate ASOS series before deriving observations",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -117,35 +117,35 @@
   "tests_passing": 16253,
   "flow": {
    "merges_24h": 41,
-   "commits_24h": 41,
+   "commits_24h": 40,
    "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 46,
-   "reviews_changes_24h": 29,
+   "reviews_passed_24h": 47,
+   "reviews_changes_24h": 28,
    "commits_by_hour": [
-    5,
+    4,
+    3,
+    1,
+    0,
+    3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
     2,
     2,
     0,
     2,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
-    3,
-    1,
-    1,
-    3,
-    0,
-    2,
     3,
     3,
     0,
+    3,
     3,
     2,
-    3,
     2
    ],
    "merge_holds": [
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 9,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 1,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 478,
     "parked": 357
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T21:40:02Z",
+    "last_check_at": "2026-10-23T21:45:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +232,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T21:30:04Z",
+    "last_check_at": "2026-10-23T21:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 486,
-    "last_run_at": "2026-10-23T21:15:02Z",
+    "runs_total": 487,
+    "last_run_at": "2026-10-23T21:45:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "routine",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T21:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: routine"
+   },
+   {
+    "at": "2026-10-23T21:43:20Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Revalidate ASOS series before deriving observations”: passed"
+   },
    {
     "at": "2026-10-23T21:39:19Z",
     "kind": "build",
@@ -314,11 +324,6 @@
     "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
    },
    {
-    "at": "2026-10-23T20:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-23T20:44:23Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Bind supplied performance snapshots to archived records”: passed"
@@ -357,11 +362,6 @@
     "at": "2026-10-23T20:03:33Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Bind maker markouts to the entry evidence class” into the main build"
-   },
-   {
-    "at": "2026-10-23T19:59:59Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Bind maker markouts to the entry evidence class”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T21:39:11Z",
-   "heartbeat_at": "2026-10-23T21:40:03Z",
+   "status_at": "2026-10-23T21:44:11Z",
+   "heartbeat_at": "2026-10-23T21:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 402,
     "markets": 3987,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T21:38:30Z",
+    "last_scan_at": "2026-10-23T21:44:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T21:38:30Z",
+    "updated_at": "2026-10-23T21:44:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T21:38:36Z",
+    "updated_at": "2026-10-23T21:44:37Z",
     "detail": "observations retained"
    },
    {
