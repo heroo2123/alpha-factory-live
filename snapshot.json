@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T15:45:03Z",
+ "generated_at": "2026-10-23T15:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "10 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "73 built in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 4,
+    "count": 15,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_3f2824d3",
     "task": "CODE-01 Prevent mixed synthetic and observed microstructure measurements",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_98048939",
+    "task": "FLEX candidate t_c5e4e50f 684e9636c5fd",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 4,
+   "progress_pct": 15,
    "last_finished_at": "2026-10-23T14:04:15Z",
    "last_passed": 15950,
    "last_failed": 1,
@@ -153,8 +153,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 16,
-    "building": 1,
+    "queued": 15,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 3,
     "merged": 465,
@@ -212,10 +212,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T15:45:03Z",
+    "last_check_at": "2026-10-23T15:50:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 454,
-    "last_run_at": "2026-10-23T15:45:02Z",
+    "runs_total": 455,
+    "last_run_at": "2026-10-23T15:50:03Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "agent held develop parallel",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T15:50:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: agent held develop parallel"
+   },
    {
     "at": "2026-10-23T15:45:02Z",
     "kind": "heal",
@@ -315,11 +320,6 @@
     "text": "Merged “CODE-01 Bind IEM coverage to the actual local calendar day” into the main build"
    },
    {
-    "at": "2026-10-23T15:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-23T15:17:59Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Bind IEM coverage to the actual local calendar day”: passed"
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T15:44:50Z",
-   "heartbeat_at": "2026-10-23T15:45:03Z",
+   "status_at": "2026-10-23T15:49:50Z",
+   "heartbeat_at": "2026-10-23T15:50:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 432,
     "markets": 4317,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T15:39:43Z",
+    "last_scan_at": "2026-10-23T15:45:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T15:39:43Z",
+    "updated_at": "2026-10-23T15:45:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T15:44:28Z",
+    "updated_at": "2026-10-23T15:48:29Z",
     "detail": "observations retained"
    },
    {
