@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T06:55:02Z",
+ "generated_at": "2026-10-23T07:00:04Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,10 +23,10 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
-    "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e210bdd2",
     "task": "LIVE-15 Derive CustodyGateResult from the actual custody-gate JUnit report so skipped…",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_7a3b6b25",
     "task": "PAPER-02 METAR daily-review publisher/authority + multimodel panel accept the published…",
-    "elapsed_min": 32
+    "elapsed_min": 37
    },
    {
     "slot": "Reviewer 1",
@@ -128,14 +128,14 @@
     0,
     6,
     0,
-    9,
-    4,
+    10,
+    3,
     0,
     0,
     11,
-    2,
-    4,
     3,
+    4,
+    2,
     1,
     3,
     4,
@@ -149,15 +149,15 @@
     0
    ],
    "merge_holds": [
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
     "queued": 36,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 450,
-    "parked": 274
+    "parked": 273
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T06:54:02Z",
+    "last_check_at": "2026-10-23T07:00:05Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T06:54:42Z",
-   "heartbeat_at": "2026-10-23T06:55:03Z",
+   "status_at": "2026-10-23T06:59:42Z",
+   "heartbeat_at": "2026-10-23T07:00:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 416,
     "markets": 4124,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T06:53:56Z",
+    "last_scan_at": "2026-10-23T06:59:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T06:53:56Z",
+    "updated_at": "2026-10-23T06:59:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T06:54:43Z",
+    "updated_at": "2026-10-23T06:58:44Z",
     "detail": "gated"
    },
    {
