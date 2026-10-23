@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T05:10:02Z",
+ "generated_at": "2026-10-23T05:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 31,
+    "count": 32,
     "unit": "queued",
     "active": false,
     "detail": "33 ready to build"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e7a00d3a",
     "task": "CODE-01/PAPER-09 PWS score audit: official confirmation rate with stated denominator +…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "Anthropic",
     "task_id": "t_4fc935d9",
     "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
-    "elapsed_min": 18
+    "elapsed_min": 23
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -123,24 +123,24 @@
    "reviews_passed_24h": 42,
    "reviews_changes_24h": 36,
    "commits_by_hour": [
-    6,
+    7,
+    2,
     3,
     0,
-    3,
     0,
     6,
     0,
     13,
     0,
     0,
-    0,
-    12,
+    3,
+    9,
     3,
     3,
     2,
     2,
-    2,
-    5,
+    3,
+    4,
     2,
     0,
     1,
@@ -152,12 +152,12 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 31,
+    "queued": 32,
     "building": 2,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 2,
     "merged": 450,
-    "parked": 265
+    "parked": 266
    }
   },
   "architect": {
@@ -214,25 +214,24 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T05:09:02Z",
+    "last_check_at": "2026-10-23T05:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 5,
     "by_severity": {
      "P0": 0,
-     "P1": 4,
+     "P1": 3,
      "P2": 1
     },
     "codes": [
      "flow integration candidate persistently red",
      "flow green release failed",
      "flow green release failed",
-     "flow green release failed",
      "flow brain capture missed",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T05:00:03Z",
+    "last_check_at": "2026-10-23T05:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T05:10:15Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_a6515aed 58625a5fb09e”: changes required"
+   },
    {
     "at": "2026-10-23T05:08:14Z",
     "kind": "build",
@@ -357,11 +361,6 @@
     "at": "2026-10-23T03:42:16Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01/PAPER-09 PWS score audit: measure false-lead and missed-lead…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T03:40:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: engineering regression selftest failed"
    }
   ]
  },
@@ -372,17 +371,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T05:09:05Z",
-   "heartbeat_at": "2026-10-23T05:10:02Z",
+   "status_at": "2026-10-23T05:14:06Z",
+   "heartbeat_at": "2026-10-23T05:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 474,
-    "markets": 4762,
+    "weather_events": 466,
+    "markets": 4674,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T05:08:22Z",
+    "last_scan_at": "2026-10-23T05:14:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T05:08:22Z",
+    "updated_at": "2026-10-23T05:14:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T05:09:50Z",
+    "updated_at": "2026-10-23T05:13:51Z",
     "detail": "gated"
    },
    {
