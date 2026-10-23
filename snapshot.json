@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T20:05:02Z",
+ "generated_at": "2026-10-23T20:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
     "detail": "40 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 49,
+    "count": 53,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_1e3d458a",
-    "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
-    "elapsed_min": 7
+    "task_id": "t_88b3bc40",
+    "task": "CODE-01 Reject omitted causal corrections in nowcast inputs",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_5397e86c",
     "task": "CODE-01 Include archived public trades in maker runtime features",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_26b8e2e5",
+    "task": "FLEX candidate t_1e3d458a d23ca00c9924",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 49,
+   "progress_pct": 53,
    "last_finished_at": "2026-10-23T17:10:43Z",
    "last_passed": 16016,
    "last_failed": 0,
@@ -130,8 +130,8 @@
     0,
     1,
     2,
-    0,
     1,
+    0,
     0,
     0,
     1,
@@ -140,8 +140,8 @@
     2,
     2,
     1,
-    1,
-    3,
+    2,
+    2,
     3,
     1,
     1,
@@ -152,10 +152,10 @@
    "stage_totals": {
     "queued": 12,
     "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 1,
+    "in_review": 1,
+    "awaiting_merge": 0,
     "merged": 475,
-    "parked": 356
+    "parked": 357
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T20:05:02Z",
+    "last_check_at": "2026-10-23T20:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T20:07:14Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T20:03:33Z",
     "kind": "merge",
@@ -355,11 +360,6 @@
     "at": "2026-10-23T18:53:22Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject contradictory METAR physical feature groups”: passed"
-   },
-   {
-    "at": "2026-10-23T18:48:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Reject contradictory METAR physical feature groups” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T20:04:05Z",
-   "heartbeat_at": "2026-10-23T20:05:03Z",
+   "status_at": "2026-10-23T20:09:06Z",
+   "heartbeat_at": "2026-10-23T20:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T20:04:02Z",
+    "updated_at": "2026-10-23T20:08:04Z",
     "detail": "observations retained"
    },
    {
