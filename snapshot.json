@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T15:30:02Z",
+ "generated_at": "2026-10-23T15:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "12 ready to build"
@@ -15,10 +15,10 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "73 built in 24h"
    },
    {
     "key": "review",
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_f6c089cc",
     "task": "CODE-01 Keep overdue unconfirmed release schedules fail-closed",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_14378e0e",
-    "task": "METAR 30h daily review: preserve exact WRH URL binding",
-    "elapsed_min": 27
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -118,15 +118,15 @@
   "flow": {
    "merges_24h": 50,
    "commits_24h": 50,
-   "built_24h": 74,
-   "build_failed_24h": 3,
+   "built_24h": 73,
+   "build_failed_24h": 4,
    "reviews_passed_24h": 34,
    "reviews_changes_24h": 41,
    "commits_by_hour": [
-    6,
     7,
-    3,
-    3,
+    6,
+    4,
+    2,
     1,
     2,
     4,
@@ -139,21 +139,21 @@
     0,
     0,
     1,
-    0,
-    4,
-    0,
-    2,
+    1,
+    3,
+    1,
+    1,
     3,
     0,
     2,
     3
    ],
    "merge_holds": [
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 18,
-    "building": 2,
+    "queued": 19,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 465,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 3,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T15:30:03Z",
+    "last_check_at": "2026-10-23T15:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +232,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T15:20:03Z",
+    "last_check_at": "2026-10-23T15:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 451,
-    "last_run_at": "2026-10-23T15:25:02Z",
+    "runs_total": 452,
+    "last_run_at": "2026-10-23T15:35:01Z",
     "last_ok": true,
-    "last_kind": "flow shadow stuck waiting",
+    "last_kind": "full suite not green",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T15:35:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
+   },
+   {
+    "at": "2026-10-23T15:31:12Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro's build of “METAR 30h daily review: preserve exact WRH URL binding” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-23T15:25:02Z",
     "kind": "heal",
@@ -297,11 +307,6 @@
     "at": "2026-10-23T15:10:03Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: routine"
-   },
-   {
-    "at": "2026-10-23T15:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
    },
    {
     "at": "2026-10-23T15:00:23Z",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T14:08:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: full suite not green"
-   },
-   {
-    "at": "2026-10-23T14:07:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_057db1b5 e6021ee53e81”: passed"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T15:29:49Z",
-   "heartbeat_at": "2026-10-23T15:30:04Z",
+   "status_at": "2026-10-23T15:34:49Z",
+   "heartbeat_at": "2026-10-23T15:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 437,
-    "markets": 4372,
+    "weather_events": 435,
+    "markets": 4350,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T15:28:09Z",
+    "last_scan_at": "2026-10-23T15:33:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T15:28:09Z",
+    "updated_at": "2026-10-23T15:33:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T15:28:22Z",
+    "updated_at": "2026-10-23T15:34:25Z",
     "detail": "observations retained"
    },
    {
