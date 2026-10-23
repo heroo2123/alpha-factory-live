@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T11:20:02Z",
+ "generated_at": "2026-10-23T11:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 15,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "77 built in 24h"
+    "detail": "78 built in 24h"
    },
    {
     "key": "review",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "55 merged in 24h"
@@ -65,16 +65,6 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_55fc8599",
-    "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
-    "elapsed_min": 27
-   },
-   {
-    "slot": "Builder 2",
-    "role": "build",
     "state": "idle",
     "model": "",
     "family": "",
@@ -83,9 +73,19 @@
     "elapsed_min": null
    },
    {
+    "slot": "Builder 2",
+    "role": "build",
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_83d959d3",
+    "task": "LIVE-15 Withhold READY when a guardian cycle has not revalidated every retained resting…",
+    "elapsed_min": 4
+   },
+   {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,44 +118,45 @@
   "flow": {
    "merges_24h": 55,
    "commits_24h": 55,
-   "built_24h": 77,
-   "build_failed_24h": 2,
-   "reviews_passed_24h": 29,
-   "reviews_changes_24h": 48,
+   "built_24h": 78,
+   "build_failed_24h": 1,
+   "reviews_passed_24h": 30,
+   "reviews_changes_24h": 47,
    "commits_by_hour": [
     0,
     13,
     0,
     0,
-    5,
+    6,
     7,
-    4,
-    2,
-    2,
-    2,
     3,
+    3,
+    1,
+    2,
     4,
+    3,
     2,
     0,
-    1,
     2,
     1,
-    0,
+    1,
     0,
     0,
     1,
+    0,
     4,
     0,
     2
    ],
    "merge_holds": [
+    "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 17,
+    "queued": 15,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 1,
+    "awaiting_merge": 3,
     "merged": 457,
     "parked": 317
    }
@@ -214,25 +215,25 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T11:20:02Z",
+    "last_check_at": "2026-10-23T11:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 7,
+    "active": 6,
     "by_severity": {
      "P0": 0,
      "P1": 3,
-     "P2": 3
+     "P2": 2
     },
     "codes": [
      "flow green release failed",
      "flow shadow stuck waiting",
      "flow brain capture missed",
      "flow release needs release",
-     "flow queued scope unmergeable",
-     "flow queued scope needless pin fixture"
+     "flow queued scope needless pin fixture",
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T11:10:03Z",
+    "last_check_at": "2026-10-23T11:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +254,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T11:24:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LEARNING-SOURCES Historical held-out backfill with the forward…”: passed"
+   },
+   {
+    "at": "2026-10-23T11:23:14Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “PAPER-09 Validate exact book evidence before reporting PWS market…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T11:20:23Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 PAPER reward maker capture fixes: live Gamma page size over…”: passed"
+   },
+   {
+    "at": "2026-10-23T11:20:14Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “LEARNING-SOURCES Historical held-out backfill with the forward…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T11:09:15Z",
     "kind": "build",
@@ -342,26 +363,6 @@
     "at": "2026-10-23T10:06:27Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_83d959d3 b1b6d3141539”: passed"
-   },
-   {
-    "at": "2026-10-23T10:04:14Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “LIVE-15 Withhold READY when a guardian cycle has not revalidated…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T10:01:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_ea2dd72e 0664c91438e5”: changes required"
-   },
-   {
-    "at": "2026-10-23T09:59:15Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Feed an optional cited IEM ASOS cross-check into the…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T09:44:59Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 15935 passed, 0 failed"
    }
   ]
  },
@@ -372,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T11:19:31Z",
-   "heartbeat_at": "2026-10-23T11:20:02Z",
+   "status_at": "2026-10-23T11:24:31Z",
+   "heartbeat_at": "2026-10-23T11:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +383,7 @@
     "weather_events": 430,
     "markets": 4281,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T11:17:51Z",
+    "last_scan_at": "2026-10-23T11:23:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T11:17:51Z",
+    "updated_at": "2026-10-23T11:23:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T11:18:32Z",
+    "updated_at": "2026-10-23T11:24:34Z",
     "detail": "observations retained"
    },
    {
