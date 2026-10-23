@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T19:25:02Z",
+ "generated_at": "2026-10-23T19:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 7,
+    "count": 15,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_002f260a",
-    "task": "CODE-01 Apply consistent event weighting to reliability bins",
-    "elapsed_min": 25
+    "task_id": "t_f4643b16",
+    "task": "CODE-01 Bind maker markouts to the entry evidence class",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_d2629d21",
     "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 7,
+   "progress_pct": 15,
    "last_finished_at": "2026-10-23T17:10:43Z",
    "last_passed": 16016,
    "last_failed": 0,
@@ -116,7 +116,7 @@
   },
   "tests_passing": 16016,
   "flow": {
-   "merges_24h": 40,
+   "merges_24h": 39,
    "commits_24h": 39,
    "built_24h": 74,
    "build_failed_24h": 5,
@@ -153,10 +153,10 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 12,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
+    "awaiting_merge": 3,
     "merged": 473,
     "parked": 354
    }
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T19:25:02Z",
+    "last_check_at": "2026-10-23T19:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 472,
-    "last_run_at": "2026-10-23T18:35:02Z",
-    "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "runs_total": 473,
+    "last_run_at": "2026-10-23T19:30:03Z",
+    "last_ok": false,
+    "last_kind": "flow release needs release",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T19:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release needs release"
+   },
+   {
+    "at": "2026-10-23T19:29:27Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Apply consistent event weighting to reliability bins”: passed"
+   },
+   {
+    "at": "2026-10-23T19:26:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Apply consistent event weighting to reliability bins” → sent to independent review"
+   },
    {
     "at": "2026-10-23T19:20:59Z",
     "kind": "review",
@@ -348,21 +363,6 @@
     "at": "2026-10-23T18:08:15Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Validate schedule provenance before attaching release timing” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T18:05:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
-    "at": "2026-10-23T18:02:16Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Measure exit markouts from valid bid-only books” into the main build"
-   },
-   {
-    "at": "2026-10-23T18:00:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T19:25:03Z",
-   "heartbeat_at": "2026-10-23T19:25:03Z",
+   "status_at": "2026-10-23T19:30:03Z",
+   "heartbeat_at": "2026-10-23T19:30:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 412,
     "markets": 4095,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T19:21:56Z",
+    "last_scan_at": "2026-10-23T19:27:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T19:21:56Z",
+    "updated_at": "2026-10-23T19:27:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T19:23:48Z",
+    "updated_at": "2026-10-23T19:29:50Z",
     "detail": "observations retained"
    },
    {
