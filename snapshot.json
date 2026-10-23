@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T01:30:02Z",
+ "generated_at": "2026-10-23T01:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c353770f",
     "task": "CODE-01 Station registry: current-state/quarantine-history summary and…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_4fc935d9",
     "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_9d206335",
     "task": "CODE-01 PWS score audit: usable lead net of latency, per-source/station lead verdict…",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Reviewer 2",
@@ -100,7 +100,7 @@
     "family": "DeepSeek",
     "task_id": "t_5823db49",
     "task": "Historical backfill strict-rule caller matches current harvester signature",
-    "elapsed_min": 3
+    "elapsed_min": 8
    }
   ],
   "qa": {
@@ -131,16 +131,16 @@
     0,
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6,
     7,
-    3,
-    3,
+    6,
+    4,
+    2,
     1,
     2,
     4,
@@ -149,7 +149,7 @@
     0
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff"
+    "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 24,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T01:30:02Z",
+    "last_check_at": "2026-10-23T01:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +232,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-23T01:20:02Z",
+    "last_check_at": "2026-10-23T01:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 396,
-    "last_run_at": "2026-10-23T01:25:01Z",
+    "runs_total": 397,
+    "last_run_at": "2026-10-23T01:35:02Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T01:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow release repeated same failure"
+   },
    {
     "at": "2026-10-23T01:26:20Z",
     "kind": "build",
@@ -297,11 +302,6 @@
     "at": "2026-10-23T01:00:15Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_c5e4e50f 684e9636c5fd”: changes required"
-   },
-   {
-    "at": "2026-10-23T00:55:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow evals all gated"
    },
    {
     "at": "2026-10-23T00:49:20Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-23T01:29:58Z",
-   "heartbeat_at": "2026-10-23T01:30:02Z",
+   "status_at": "2026-10-23T01:34:59Z",
+   "heartbeat_at": "2026-10-23T01:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T01:29:10Z",
+    "last_scan_at": "2026-10-23T01:34:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T01:29:10Z",
+    "updated_at": "2026-10-23T01:34:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T01:28:36Z",
+    "updated_at": "2026-10-23T01:34:38Z",
     "detail": "observations retained"
    },
    {
