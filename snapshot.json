@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T12:45:02Z",
+ "generated_at": "2026-10-23T12:50:04Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "75 built in 24h"
+    "detail": "76 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 38,
+    "count": 44,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_4fc935d9",
-    "task": "CODE-01 Produce first-class SOURCE_SCHEDULE release events with expected release time",
-    "elapsed_min": 28
+    "task_id": "t_1e3d458a",
+    "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_ab6de61c",
     "task": "LEARNING-SOURCES Model-update-lag study : read-only collector of GEFS/GFS run…",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_45c04324",
+    "task": "FLEX candidate t_4fc935d9 e7ffa674694e",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 38,
+   "progress_pct": 44,
    "last_finished_at": "2026-10-23T09:44:59Z",
    "last_passed": 15935,
    "last_failed": 0,
@@ -117,13 +117,13 @@
   "tests_passing": 15935,
   "flow": {
    "merges_24h": 53,
-   "commits_24h": 53,
-   "built_24h": 75,
+   "commits_24h": 52,
+   "built_24h": 76,
    "build_failed_24h": 2,
    "reviews_passed_24h": 29,
-   "reviews_changes_24h": 47,
+   "reviews_changes_24h": 46,
    "commits_by_hour": [
-    8,
+    7,
     0,
     0,
     10,
@@ -149,12 +149,12 @@
     2
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "lock busy"
    ],
    "stage_totals": {
-    "queued": 20,
+    "queued": 19,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 460,
     "parked": 323
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T12:44:01Z",
+    "last_check_at": "2026-10-23T12:50:05Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T12:47:26Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Produce first-class SOURCE_SCHEDULE release events with…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T12:40:33Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T11:25:11Z",
     "kind": "warn",
     "text": "GLM 5.3 build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-23T11:25:11Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T12:44:39Z",
-   "heartbeat_at": "2026-10-23T12:45:03Z",
+   "status_at": "2026-10-23T12:49:39Z",
+   "heartbeat_at": "2026-10-23T12:50:06Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 433,
     "markets": 4328,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T12:42:18Z",
+    "last_scan_at": "2026-10-23T12:48:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T12:42:18Z",
+    "updated_at": "2026-10-23T12:48:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T12:43:04Z",
+    "updated_at": "2026-10-23T12:49:11Z",
     "detail": "observations retained"
    },
    {
