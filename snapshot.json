@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T00:15:01Z",
+ "generated_at": "2026-10-23T00:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c353770f",
     "task": "CODE-01 Station registry: current-state/quarantine-history summary and…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_1736d1ac",
     "task": "CODE-01 Require a satisfied R31 contract-finality verdict before any…",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_ab6de61c",
     "task": "LEARNING-SOURCES Model-update-lag study : read-only collector of GEFS/GFS run…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 2",
@@ -117,19 +117,19 @@
   "tests_passing": 15823,
   "flow": {
    "merges_24h": 77,
-   "commits_24h": 77,
+   "commits_24h": 76,
    "built_24h": 53,
    "build_failed_24h": 7,
    "reviews_passed_24h": 64,
    "reviews_changes_24h": 22,
    "commits_by_hour": [
+    1,
+    1,
     2,
+    10,
     0,
-    3,
-    7,
-    3,
-    7,
-    2,
+    9,
+    0,
     3,
     0,
     0,
@@ -138,10 +138,10 @@
     13,
     0,
     0,
-    3,
-    9,
-    3,
-    3,
+    5,
+    7,
+    4,
+    2,
     2,
     2,
     3,
@@ -216,7 +216,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T00:15:02Z",
+    "last_check_at": "2026-10-23T00:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -239,7 +239,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 386,
+    "runs_total": 387,
     "last_run_at": "2026-10-23T00:15:01Z",
     "last_ok": true,
     "last_kind": "routine",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-23T00:15:01Z",
-   "heartbeat_at": "2026-10-23T00:15:01Z",
+   "status_at": "2026-10-23T00:20:01Z",
+   "heartbeat_at": "2026-10-23T00:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T00:10:46Z",
+    "last_scan_at": "2026-10-23T00:16:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T00:10:46Z",
+    "updated_at": "2026-10-23T00:16:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T00:14:13Z",
+    "updated_at": "2026-10-23T00:18:14Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-22T23:17:03Z",
+   "updated_at": "2026-10-23T00:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
