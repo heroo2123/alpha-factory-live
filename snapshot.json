@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T07:40:02Z",
+ "generated_at": "2026-10-23T07:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 41,
     "unit": "queued",
     "active": false,
-    "detail": "44 ready to build"
+    "detail": "43 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e210bdd2",
     "task": "LIVE-15 Derive CustodyGateResult from the actual custody-gate JUnit report so skipped…",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_3f43dbe4",
-    "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 29
+    "task_id": "t_a79f68c3",
+    "task": "PAPER-09 Apply current-normalization checks to every PWS row in the QC receipt window",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
@@ -120,29 +120,29 @@
    "commits_24h": 58,
    "built_24h": 75,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 35,
-   "reviews_changes_24h": 41,
+   "reviews_passed_24h": 34,
+   "reviews_changes_24h": 42,
    "commits_by_hour": [
     3,
     0,
-    3,
-    3,
-    3,
-    10,
+    6,
     0,
-    0,
-    9,
-    4,
-    4,
-    2,
-    1,
-    2,
     5,
-    2,
-    2,
+    8,
     0,
+    0,
+    10,
+    3,
+    4,
     2,
+    2,
+    2,
+    4,
+    3,
     1,
+    0,
+    3,
+    0,
     1,
     0,
     0,
@@ -157,7 +157,7 @@
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 451,
-    "parked": 276
+    "parked": 277
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T07:40:03Z",
+    "last_check_at": "2026-10-23T07:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +231,7 @@
      "flow main refuses published rules",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T07:30:03Z",
+    "last_check_at": "2026-10-23T07:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T07:43:17Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Seal ASOS availability time alongside the IEM cross-check…”: changes required"
+   },
+   {
+    "at": "2026-10-23T07:40:55Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Seal ASOS availability time alongside the IEM cross-check…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T07:35:03Z",
     "kind": "release",
@@ -351,16 +361,6 @@
     "at": "2026-10-23T06:40:03Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
-    "at": "2026-10-23T06:35:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
-   },
-   {
-    "at": "2026-10-23T06:24:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_b8980144 55347ab2e0fe”: changes required"
    }
   ]
  },
@@ -371,8 +371,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T07:39:18Z",
-   "heartbeat_at": "2026-10-23T07:40:02Z",
+   "status_at": "2026-10-23T07:44:19Z",
+   "heartbeat_at": "2026-10-23T07:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -381,7 +381,7 @@
     "weather_events": 426,
     "markets": 4234,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T07:38:59Z",
+    "last_scan_at": "2026-10-23T07:44:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T07:38:59Z",
+    "updated_at": "2026-10-23T07:44:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T07:39:13Z",
+    "updated_at": "2026-10-23T07:43:15Z",
     "detail": "observations retained"
    },
    {
@@ -638,7 +638,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 53,
-     "open_tasks": 6
+     "open_tasks": 5
     },
     {
      "id": "CODE-02",
