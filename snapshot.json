@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T11:40:02Z",
+ "generated_at": "2026-10-23T11:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "77 built in 24h"
@@ -25,16 +25,16 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "55 merged in 24h"
+    "detail": "56 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_55fc8599",
+    "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_e0e2b720",
     "task": "CODE-01 Honor basket leg expiries even when a top-level expiry exists",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_001e587e",
-    "task": "FLEX candidate t_83d959d3 b1b6d3141539",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,49 +116,48 @@
   },
   "tests_passing": 15935,
   "flow": {
-   "merges_24h": 55,
-   "commits_24h": 55,
+   "merges_24h": 56,
+   "commits_24h": 56,
    "built_24h": 77,
    "build_failed_24h": 2,
    "reviews_passed_24h": 29,
    "reviews_changes_24h": 47,
    "commits_by_hour": [
-    3,
-    10,
-    0,
-    0,
-    9,
-    4,
-    4,
-    2,
-    1,
-    2,
     5,
-    2,
-    2,
-    0,
-    2,
-    1,
-    1,
+    8,
     0,
     0,
-    1,
-    1,
+    10,
+    3,
+    4,
+    2,
+    2,
+    2,
+    4,
     3,
     1,
-    1
+    0,
+    3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
+    2
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 16,
-    "building": 1,
+    "queued": 12,
+    "building": 2,
     "in_review": 1,
-    "awaiting_merge": 3,
-    "merged": 457,
-    "parked": 318
+    "awaiting_merge": 2,
+    "merged": 458,
+    "parked": 321
    }
   },
   "architect": {
@@ -168,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-23T11:42:22Z",
+    "title": "LEARNING-SOURCES Historical held-out backfill with the forward capture method: GEFS S3 +…",
+    "area": "Forecast brain"
+   },
    {
     "at": "2026-10-23T10:33:13Z",
     "title": "CODE-01 Tag events without a fresh brain probability as BRAIN_UNCOVERED",
@@ -202,11 +206,6 @@
     "at": "2026-10-23T02:05:08Z",
     "title": "Historical backfill strict-rule caller matches current harvester signature",
     "area": "Test repairs"
-   },
-   {
-    "at": "2026-10-22T23:52:27Z",
-    "title": "CODE-01 Persist and re-verify the R31 contract-finality verdict and residual-risk…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T11:40:02Z",
+    "last_check_at": "2026-10-23T11:44:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +232,7 @@
      "flow queued scope needless pin fixture",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T11:30:04Z",
+    "last_check_at": "2026-10-23T11:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T11:42:22Z",
+    "kind": "merge",
+    "text": "Merged “LEARNING-SOURCES Historical held-out backfill with the forward…” into the main build"
+   },
    {
     "at": "2026-10-23T11:40:02Z",
     "kind": "heal",
@@ -358,11 +362,6 @@
     "at": "2026-10-23T10:44:14Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_ebd0377d 469d0d4c7a0f”: changes required"
-   },
-   {
-    "at": "2026-10-23T10:42:15Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “FLEX candidate t_1736d1ac cb4c821bfa99” → sent to independent review"
    }
   ]
  },
@@ -373,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T11:39:32Z",
-   "heartbeat_at": "2026-10-23T11:40:02Z",
+   "status_at": "2026-10-23T11:44:32Z",
+   "heartbeat_at": "2026-10-23T11:45:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T11:38:39Z",
+    "updated_at": "2026-10-23T11:44:41Z",
     "detail": "observations retained"
    },
    {
@@ -545,6 +544,11 @@
   },
   "skills": [
    {
+    "title": "LEARNING-SOURCES Historical held-out backfill with the forward capture method: GEFS S3 +…",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-23T11:42:22Z"
+   },
+   {
     "title": "Candidate model #1: station-bias correction + multi-model blend + calibrated spread (new…",
     "area": "Forecast brain",
     "merged_at": "2026-10-22T17:26:38Z"
@@ -588,11 +592,6 @@
     "title": "New evidence-only merge/NegRisk-conversion screen over normalized public books",
     "area": "Position management",
     "merged_at": "2026-10-19T00:42:01Z"
-   },
-   {
-    "title": "Spec 6A safety modes step 3: owner panel commands",
-    "area": "Pre-funding checks",
-    "merged_at": "2026-10-19T00:00:36Z"
    }
   ],
   "readiness": {
@@ -640,7 +639,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 55,
-     "open_tasks": 5
+     "open_tasks": 1
     },
     {
      "id": "CODE-02",
