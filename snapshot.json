@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T10:20:02Z",
+ "generated_at": "2026-10-23T10:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_5f9df8b0",
     "task": "METAR 30 h window: daily-review publisher/authority, multimodel panel and offline…",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Claude Sonnet",
-    "family": "Anthropic",
-    "task_id": "t_3f43dbe4",
-    "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 20
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -128,23 +128,23 @@
     13,
     0,
     0,
-    5,
+    6,
     7,
-    4,
-    2,
-    2,
-    2,
     3,
+    3,
+    1,
+    2,
     4,
+    3,
     2,
     0,
-    1,
     2,
     1,
-    0,
+    1,
     0,
     0,
     1,
+    0,
     4,
     0
    ],
@@ -210,27 +210,26 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T10:20:03Z",
+    "last_check_at": "2026-10-23T10:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 3
+     "P2": 2
     },
     "codes": [
      "flow brain capture missed",
      "flow release needs release",
-     "flow dispatched scope unmergeable",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T10:10:03Z",
+    "last_check_at": "2026-10-23T10:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -370,8 +369,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T10:19:28Z",
-   "heartbeat_at": "2026-10-23T10:20:02Z",
+   "status_at": "2026-10-23T10:24:28Z",
+   "heartbeat_at": "2026-10-23T10:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +379,7 @@
     "weather_events": 423,
     "markets": 4201,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T10:16:37Z",
+    "last_scan_at": "2026-10-23T10:22:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T10:16:37Z",
+    "updated_at": "2026-10-23T10:22:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T10:18:12Z",
+    "updated_at": "2026-10-23T10:24:14Z",
     "detail": "observations retained"
    },
    {
