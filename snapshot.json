@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T11:05:01Z",
+ "generated_at": "2026-10-23T11:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
+    "active": false,
     "detail": "current release ab3a103"
    },
    {
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_55fc8599",
     "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Builder 2",
@@ -78,24 +78,24 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_08446fe7",
-    "task": "CODE-01 PAPER reward maker capture fixes: live Gamma page size over response limit…",
-    "elapsed_min": 8
+    "task_id": "t_e604b586",
+    "task": "LEARNING-SOURCES Historical held-out backfill with the forward capture method: GEFS S3 +…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_08446fe7",
+    "task": "CODE-01 PAPER reward maker capture fixes: live Gamma page size over response limit…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,17 +120,17 @@
    "commits_24h": 55,
    "built_24h": 77,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 28,
-   "reviews_changes_24h": 49,
+   "reviews_passed_24h": 29,
+   "reviews_changes_24h": 48,
    "commits_by_hour": [
     0,
-    12,
-    1,
+    13,
     0,
     0,
+    0,
     12,
-    2,
-    4,
+    3,
+    3,
     2,
     2,
     2,
@@ -139,8 +139,8 @@
     0,
     1,
     2,
-    0,
     1,
+    0,
     0,
     0,
     1,
@@ -149,7 +149,7 @@
     2
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 18,
@@ -157,7 +157,7 @@
     "in_review": 1,
     "awaiting_merge": 1,
     "merged": 457,
-    "parked": 315
+    "parked": 316
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T11:04:02Z",
+    "last_check_at": "2026-10-23T11:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -252,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T11:09:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 PAPER reward maker capture fixes: live Gamma page size over…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T11:05:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_6e08e1fe d473dfafe748”: passed"
+   },
    {
     "at": "2026-10-23T11:01:21Z",
     "kind": "warn",
@@ -351,16 +361,6 @@
     "at": "2026-10-23T09:44:59Z",
     "kind": "qa",
     "text": "Full test suite finished: 15935 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-23T09:35:20Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_65673659 513ac1e63b36”: changes required"
-   },
-   {
-    "at": "2026-10-23T09:33:17Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “FLEX candidate t_7a3b6b25 8150c5e8545e” → sent to independent review"
    }
   ]
  },
@@ -371,17 +371,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T11:04:30Z",
-   "heartbeat_at": "2026-10-23T11:05:00Z",
+   "status_at": "2026-10-23T11:09:30Z",
+   "heartbeat_at": "2026-10-23T11:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 426,
-    "markets": 4234,
+    "weather_events": 429,
+    "markets": 4267,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T11:01:21Z",
+    "last_scan_at": "2026-10-23T11:06:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T11:01:21Z",
+    "updated_at": "2026-10-23T11:06:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T11:04:27Z",
+    "updated_at": "2026-10-23T11:08:29Z",
     "detail": "observations retained"
    },
    {
