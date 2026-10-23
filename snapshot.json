@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T10:00:02Z",
+ "generated_at": "2026-10-23T10:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "41 ready to build"
+    "detail": "40 ready to build"
    },
    {
     "key": "build",
@@ -66,11 +66,11 @@
     "slot": "Builder 1",
     "role": "build",
     "state": "working",
-    "model": "Claude Sonnet",
+    "model": "Claude Opus",
     "family": "Anthropic",
-    "task_id": "t_83d959d3",
-    "task": "LIVE-15 Withhold READY when a guardian cycle has not revalidated every retained resting…",
-    "elapsed_min": 26
+    "task_id": "t_5f9df8b0",
+    "task": "METAR 30 h window: daily-review publisher/authority, multimodel panel and offline…",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_3f43dbe4",
     "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
@@ -88,8 +88,8 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_17c7c365",
-    "task": "FLEX candidate t_ea2dd72e 0664c91438e5",
+    "task_id": "t_001e587e",
+    "task": "FLEX candidate t_83d959d3 b1b6d3141539",
     "elapsed_min": 0
    },
    {
@@ -120,33 +120,33 @@
    "commits_24h": 59,
    "built_24h": 77,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 30,
-   "reviews_changes_24h": 47,
+   "reviews_passed_24h": 29,
+   "reviews_changes_24h": 48,
    "commits_by_hour": [
     6,
     0,
-    10,
-    3,
+    12,
+    1,
     0,
     0,
-    11,
-    3,
+    12,
+    2,
     4,
     2,
-    1,
-    3,
-    4,
-    3,
-    0,
-    0,
-    3,
-    0,
-    1,
-    0,
+    2,
+    2,
+    5,
+    2,
     0,
     1,
     2,
-    2
+    0,
+    1,
+    0,
+    0,
+    1,
+    3,
+    1
    ],
    "merge_holds": [
     "disallowed path set"
@@ -157,7 +157,7 @@
     "in_review": 1,
     "awaiting_merge": 1,
     "merged": 455,
-    "parked": 288
+    "parked": 289
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T10:00:03Z",
+    "last_check_at": "2026-10-23T10:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +230,15 @@
      "flow queued scope unmergeable",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T09:50:03Z",
+    "last_check_at": "2026-10-23T10:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 420,
-    "last_run_at": "2026-10-23T09:10:02Z",
-    "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "runs_total": 421,
+    "last_run_at": "2026-10-23T10:05:02Z",
+    "last_ok": false,
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T10:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-23T10:04:14Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “LIVE-15 Withhold READY when a guardian cycle has not revalidated…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T10:01:18Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_ea2dd72e 0664c91438e5”: changes required"
+   },
    {
     "at": "2026-10-23T09:59:15Z",
     "kind": "build",
@@ -345,21 +360,6 @@
     "at": "2026-10-23T08:49:15Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 Tag events without a fresh brain probability as…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T08:46:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_72089dda e67deeec9578”: changes required"
-   },
-   {
-    "at": "2026-10-23T08:44:12Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “FLEX candidate t_e210bdd2 54236d5309d9” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T08:42:18Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Refuse a root or privileged candidate principal in…” into the main build"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T09:59:26Z",
-   "heartbeat_at": "2026-10-23T10:00:04Z",
+   "status_at": "2026-10-23T10:04:27Z",
+   "heartbeat_at": "2026-10-23T10:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T09:58:01Z",
+    "updated_at": "2026-10-23T10:04:07Z",
     "detail": "observations retained"
    },
    {
