@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T07:30:02Z",
+ "generated_at": "2026-10-23T07:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 35,
+    "count": 40,
     "unit": "queued",
     "active": false,
-    "detail": "23 ready to build"
+    "detail": "28 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e210bdd2",
     "task": "LIVE-15 Derive CustodyGateResult from the actual custody-gate JUnit report so skipped…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_3f43dbe4",
     "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Reviewer 1",
@@ -125,16 +125,16 @@
    "commits_by_hour": [
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6,
     7,
-    3,
-    3,
+    6,
+    4,
+    2,
     1,
     2,
     4,
@@ -149,11 +149,10 @@
     1
    ],
    "merge_holds": [
-    "targeted tests failed recently backoff",
-    "targeted tests failed"
+    "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 35,
+    "queued": 40,
     "building": 2,
     "in_review": 0,
     "awaiting_merge": 2,
@@ -163,7 +162,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-23T06:40:16Z",
+   "last_run_at": "2026-10-23T07:30:22Z",
    "last_planned": 6,
    "model": "Claude Opus"
   },
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T07:30:03Z",
+    "last_check_at": "2026-10-23T07:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +231,7 @@
      "flow main refuses published rules",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T07:20:02Z",
+    "last_check_at": "2026-10-23T07:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T07:30:22Z",
+    "kind": "plan",
+    "text": "Architect (Claude Opus) planned 6 new tasks"
+   },
    {
     "at": "2026-10-23T07:28:01Z",
     "kind": "heal",
@@ -357,11 +361,6 @@
     "at": "2026-10-23T06:22:12Z",
     "kind": "build",
     "text": "Claude Sonnet built “FLEX candidate t_e7a00d3a dea42032fd88” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T06:12:17Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Station metadata currency: flag datasets/derived artifacts…”: changes required"
    }
   ]
  },
@@ -382,7 +381,7 @@
     "weather_events": 418,
     "markets": 4146,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T07:27:50Z",
+    "last_scan_at": "2026-10-23T07:33:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T07:27:50Z",
+    "updated_at": "2026-10-23T07:33:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T07:29:10Z",
+    "updated_at": "2026-10-23T07:33:12Z",
     "detail": "observations retained"
    },
    {
@@ -639,7 +638,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 53,
-     "open_tasks": 3
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
@@ -738,7 +737,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 27,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-10",
@@ -1017,7 +1016,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 23,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "LIVE-16",
