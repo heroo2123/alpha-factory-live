@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T05:30:02Z",
+ "generated_at": "2026-10-23T05:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 32,
     "unit": "queued",
     "active": false,
-    "detail": "34 ready to build"
+    "detail": "35 ready to build"
    },
    {
     "key": "build",
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
+    "active": true,
     "detail": "current release b603a22"
    },
    {
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_e7a00d3a",
     "task": "CODE-01/PAPER-09 PWS score audit: official confirmation rate with stated denominator +…",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_ea2dd72e",
     "task": "CODE-01 Feed an optional cited IEM ASOS cross-check into the result-lag…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 1",
@@ -127,16 +127,16 @@
     0,
     3,
     0,
+    2,
+    4,
     1,
-    5,
-    0,
-    13,
+    12,
     0,
     0,
-    6,
     7,
-    3,
-    3,
+    6,
+    4,
+    2,
     1,
     2,
     4,
@@ -214,25 +214,25 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T05:30:02Z",
+    "last_check_at": "2026-10-23T05:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 7,
     "by_severity": {
      "P0": 0,
-     "P1": 4,
+     "P1": 5,
      "P2": 1
     },
     "codes": [
      "flow integration candidate persistently red",
      "flow green release failed",
      "flow green release failed",
+     "flow green release failed",
      "flow pws ingest gated",
-     "flow brain capture missed",
-     "flow acceptance followthrough required"
+     "flow brain capture missed"
     ],
-    "last_check_at": "2026-10-23T05:20:03Z",
+    "last_check_at": "2026-10-23T05:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T05:29:07Z",
-   "heartbeat_at": "2026-10-23T05:30:02Z",
+   "status_at": "2026-10-23T05:34:07Z",
+   "heartbeat_at": "2026-10-23T05:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 461,
-    "markets": 4619,
+    "weather_events": 458,
+    "markets": 4586,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T05:25:35Z",
+    "last_scan_at": "2026-10-23T05:31:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T05:25:35Z",
+    "updated_at": "2026-10-23T05:31:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T05:29:54Z",
+    "updated_at": "2026-10-23T05:33:55Z",
     "detail": "gated"
    },
    {
