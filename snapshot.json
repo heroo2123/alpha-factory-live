@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T23:20:02Z",
+ "generated_at": "2026-10-23T23:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "38 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_eea2f842",
     "task": "CODE-01 Prevent partial fills from reusing horizon depth",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_56b74669",
     "task": "CODE-01 Validate IEM provenance before emitting corroboration",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 1",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16253,
   "flow": {
-   "merges_24h": 38,
-   "commits_24h": 38,
+   "merges_24h": 39,
+   "commits_24h": 39,
    "built_24h": 74,
    "build_failed_24h": 5,
    "reviews_passed_24h": 55,
@@ -125,28 +125,28 @@
    "commits_by_hour": [
     2,
     0,
-    1,
     2,
     1,
-    0,
+    1,
     0,
     0,
     1,
+    0,
     4,
     0,
     2,
     3,
     0,
     2,
-    2,
     3,
-    1,
-    1,
-    4,
+    3,
+    0,
     2,
     3,
     2,
-    2
+    3,
+    2,
+    3
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
@@ -156,8 +156,8 @@
     "queued": 9,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 4,
-    "merged": 482,
+    "awaiting_merge": 3,
+    "merged": 483,
     "parked": 360
    }
   },
@@ -168,6 +168,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-23T23:23:18Z",
+    "title": "CODE-01 Remove daylight dependencies from daylight ablations",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-23T22:52:50Z",
     "title": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
@@ -202,11 +207,6 @@
     "at": "2026-10-23T20:33:29Z",
     "title": "CODE-01 Include archived public trades in maker runtime features",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-23T20:03:33Z",
-    "title": "CODE-01 Bind maker markouts to the entry evidence class",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,14 +215,14 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-23T23:20:02Z",
+    "last_check_at": "2026-10-23T23:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 8,
     "by_severity": {
      "P0": 0,
-     "P1": 4,
+     "P1": 3,
      "P2": 3
     },
     "codes": [
@@ -230,10 +230,10 @@
      "flow green release failed",
      "flow shadow stuck waiting",
      "flow brain capture missed",
-     "flow published rules changed",
-     "flow release needs release"
+     "flow release needs release",
+     "flow brain harvest incomplete"
     ],
-    "last_check_at": "2026-10-23T23:10:02Z",
+    "last_check_at": "2026-10-23T23:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T23:23:18Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Remove daylight dependencies from daylight ablations” into the main build"
+   },
    {
     "at": "2026-10-23T23:15:18Z",
     "kind": "review",
@@ -358,11 +363,6 @@
     "at": "2026-10-23T22:16:29Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Prevent omitted book receipts from hiding stream resets”: changes required"
-   },
-   {
-    "at": "2026-10-23T22:16:20Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Gate simulated settlement marks on label availability” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T23:19:16Z",
-   "heartbeat_at": "2026-10-23T23:20:02Z",
+   "status_at": "2026-10-23T23:24:17Z",
+   "heartbeat_at": "2026-10-23T23:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 380,
     "markets": 3745,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T23:18:05Z",
+    "last_scan_at": "2026-10-23T23:23:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T23:18:05Z",
+    "updated_at": "2026-10-23T23:23:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T23:19:08Z",
+    "updated_at": "2026-10-23T23:23:10Z",
     "detail": "observations retained"
    },
    {
@@ -639,8 +639,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 73,
-     "open_tasks": 8
+     "merged_tasks": 74,
+     "open_tasks": 7
     },
     {
      "id": "CODE-02",
