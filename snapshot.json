@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T23:45:02Z",
+ "generated_at": "2026-10-23T23:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "39 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_a12bfc82",
     "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_42588281",
     "task": "CODE-01 Require the exact WRH source family for observation-close derivation",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Reviewer 1",
@@ -95,12 +95,12 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_eea2f842",
-    "task": "CODE-01 Prevent partial fills from reusing horizon depth",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -120,8 +120,8 @@
    "commits_24h": 39,
    "built_24h": 75,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 55,
-   "reviews_changes_24h": 21,
+   "reviews_passed_24h": 56,
+   "reviews_changes_24h": 20,
    "commits_by_hour": [
     1,
     0,
@@ -155,8 +155,8 @@
    "stage_totals": {
     "queued": 8,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 3,
     "merged": 484,
     "parked": 361
    }
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-23T23:45:02Z",
+    "last_check_at": "2026-10-23T23:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T23:48:17Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Prevent partial fills from reusing horizon depth”: passed"
+   },
    {
     "at": "2026-10-23T23:42:17Z",
     "kind": "review",
@@ -358,11 +363,6 @@
     "at": "2026-10-23T22:44:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Group fill-markout sufficiency by rule-bound station-day” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T22:40:07Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T23:44:18Z",
-   "heartbeat_at": "2026-10-23T23:45:03Z",
+   "status_at": "2026-10-23T23:49:18Z",
+   "heartbeat_at": "2026-10-23T23:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 380,
     "markets": 3745,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T23:40:23Z",
+    "last_scan_at": "2026-10-23T23:45:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T23:40:23Z",
+    "updated_at": "2026-10-23T23:45:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T23:43:16Z",
+    "updated_at": "2026-10-23T23:49:18Z",
     "detail": "observations retained"
    },
    {
