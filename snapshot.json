@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T09:55:02Z",
+ "generated_at": "2026-10-23T10:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 37,
     "unit": "queued",
     "active": false,
     "detail": "41 ready to build"
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "76 built in 24h"
+    "detail": "77 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_83d959d3",
     "task": "LIVE-15 Withhold READY when a guardian cycle has not revalidated every retained resting…",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_ea2dd72e",
-    "task": "CODE-01 Feed an optional cited IEM ASOS cross-check into the result-lag…",
-    "elapsed_min": 26
+    "task_id": "t_3f43dbe4",
+    "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_17c7c365",
+    "task": "FLEX candidate t_ea2dd72e 0664c91438e5",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -118,21 +118,21 @@
   "flow": {
    "merges_24h": 59,
    "commits_24h": 59,
-   "built_24h": 76,
+   "built_24h": 77,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 31,
+   "reviews_passed_24h": 30,
    "reviews_changes_24h": 47,
    "commits_by_hour": [
     6,
     0,
-    9,
-    4,
+    10,
+    3,
     0,
     0,
     11,
-    2,
-    4,
     3,
+    4,
+    2,
     1,
     3,
     4,
@@ -152,9 +152,9 @@
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 38,
+    "queued": 37,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 455,
     "parked": 288
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T09:55:02Z",
+    "last_check_at": "2026-10-23T10:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T09:59:15Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Feed an optional cited IEM ASOS cross-check into the…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T09:44:59Z",
     "kind": "qa",
@@ -355,11 +360,6 @@
     "at": "2026-10-23T08:42:18Z",
     "kind": "merge",
     "text": "Merged “LIVE-15 Refuse a root or privileged candidate principal in…” into the main build"
-   },
-   {
-    "at": "2026-10-23T08:38:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_7a3b6b25 8150c5e8545e”: changes required"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T09:54:26Z",
-   "heartbeat_at": "2026-10-23T09:55:02Z",
+   "status_at": "2026-10-23T09:59:26Z",
+   "heartbeat_at": "2026-10-23T10:00:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 424,
     "markets": 4212,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T09:54:22Z",
+    "last_scan_at": "2026-10-23T09:59:55Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T09:54:22Z",
+    "updated_at": "2026-10-23T09:59:55Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T09:54:00Z",
+    "updated_at": "2026-10-23T09:58:01Z",
     "detail": "observations retained"
    },
    {
