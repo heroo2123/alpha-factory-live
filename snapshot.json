@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T07:10:02Z",
+ "generated_at": "2026-10-23T07:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 37,
+    "count": 35,
     "unit": "queued",
     "active": false,
-    "detail": "38 ready to build"
+    "detail": "24 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "74 built in 24h"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "57 merged in 24h"
@@ -70,22 +70,22 @@
     "family": "Anthropic",
     "task_id": "t_e210bdd2",
     "task": "LIVE-15 Derive CustodyGateResult from the actual custody-gate JUnit report so skipped…",
-    "elapsed_min": 23
+    "elapsed_min": 28
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Sonnet",
+    "family": "Anthropic",
+    "task_id": "t_3f43dbe4",
+    "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -123,22 +123,22 @@
    "reviews_passed_24h": 36,
    "reviews_changes_24h": 40,
    "commits_by_hour": [
-    0,
     3,
+    0,
     0,
     6,
     0,
     13,
     0,
     0,
-    0,
-    12,
+    3,
+    9,
     3,
     3,
     2,
     2,
-    2,
-    5,
+    3,
+    4,
     2,
     0,
     1,
@@ -149,15 +149,16 @@
     0
    ],
    "merge_holds": [
+    "protected code: waiting for a second review",
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 37,
-    "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 2,
+    "queued": 35,
+    "building": 2,
+    "in_review": 0,
+    "awaiting_merge": 3,
     "merged": 450,
-    "parked": 274
+    "parked": 275
    }
   },
   "architect": {
@@ -210,29 +211,28 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T07:10:03Z",
+    "last_check_at": "2026-10-23T07:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 5,
     "by_severity": {
      "P0": 0,
-     "P1": 3,
+     "P1": 2,
      "P2": 2
     },
     "codes": [
      "flow integration candidate persistently red",
      "flow qa resource blocked",
-     "flow pws ingest gated",
      "flow brain capture missed",
      "flow main refuses published rules",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T07:00:05Z",
+    "last_check_at": "2026-10-23T07:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T07:10:29Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “METAR strict contract must accept the published 30 h AWC lookup window”: passed"
+   },
    {
     "at": "2026-10-23T07:08:13Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T05:56:16Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Feed an optional cited IEM ASOS cross-check into the…”: changes required"
-   },
-   {
-    "at": "2026-10-23T05:54:15Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Feed an optional cited IEM ASOS cross-check into the…” → sent to independent review"
    }
   ]
  },
@@ -382,7 +382,7 @@
     "weather_events": 418,
     "markets": 4146,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T07:05:27Z",
+    "last_scan_at": "2026-10-23T07:11:07Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T07:05:27Z",
+    "updated_at": "2026-10-23T07:11:07Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T07:09:03Z",
+    "updated_at": "2026-10-23T07:13:04Z",
     "detail": "observations retained"
    },
    {
@@ -1017,7 +1017,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 23,
-     "open_tasks": 2
+     "open_tasks": 1
     },
     {
      "id": "LIVE-16",
