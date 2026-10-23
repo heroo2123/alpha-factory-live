@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T20:10:02Z",
+ "generated_at": "2026-10-23T20:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 12,
+    "count": 11,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "75 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 53,
+    "count": 63,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_88b3bc40",
     "task": "CODE-01 Reject omitted causal corrections in nowcast inputs",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_5397e86c",
-    "task": "CODE-01 Include archived public trades in maker runtime features",
-    "elapsed_min": 22
+    "task_id": "t_9693bebb",
+    "task": "CODE-01 Bind supplied performance snapshots to archived records",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
@@ -90,22 +90,22 @@
     "family": "DeepSeek",
     "task_id": "t_26b8e2e5",
     "task": "FLEX candidate t_1e3d458a d23ca00c9924",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_5397e86c",
+    "task": "CODE-01 Include archived public trades in maker runtime features",
+    "elapsed_min": 3
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 53,
+   "progress_pct": 63,
    "last_finished_at": "2026-10-23T17:10:43Z",
    "last_passed": 16016,
    "last_failed": 0,
@@ -118,41 +118,41 @@
   "flow": {
    "merges_24h": 40,
    "commits_24h": 40,
-   "built_24h": 74,
+   "built_24h": 75,
    "build_failed_24h": 5,
    "reviews_passed_24h": 41,
-   "reviews_changes_24h": 34,
+   "reviews_changes_24h": 33,
    "commits_by_hour": [
     2,
-    2,
-    5,
-    2,
-    0,
-    1,
-    2,
-    1,
-    0,
-    0,
-    0,
-    1,
     3,
+    4,
+    2,
+    0,
     1,
     2,
-    2,
     1,
-    2,
+    0,
+    0,
+    0,
+    1,
+    4,
+    0,
     2,
     3,
-    1,
-    1,
+    0,
+    2,
+    2,
     3,
-    3
+    1,
+    1,
+    4,
+    2
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 12,
+    "queued": 11,
     "building": 2,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 475,
     "parked": 357
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T20:10:03Z",
+    "last_check_at": "2026-10-23T20:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +230,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T20:00:03Z",
+    "last_check_at": "2026-10-23T20:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 478,
-    "last_run_at": "2026-10-23T19:55:01Z",
+    "runs_total": 479,
+    "last_run_at": "2026-10-23T20:15:02Z",
     "last_ok": true,
-    "last_kind": "flow release needs release",
+    "last_kind": "flow unmergeable reviewed work",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T20:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow unmergeable reviewed work"
+   },
+   {
+    "at": "2026-10-23T20:11:54Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Include archived public trades in maker runtime features” → sent to independent review"
+   },
    {
     "at": "2026-10-23T20:07:14Z",
     "kind": "build",
@@ -307,11 +317,6 @@
     "text": "Operator AI (Claude Opus) audit run: flow green release failed"
    },
    {
-    "at": "2026-10-23T19:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Sonnet) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-23T19:29:27Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Apply consistent event weighting to reliability bins”: passed"
@@ -355,11 +360,6 @@
     "at": "2026-10-23T18:59:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Restore frozen METAR delta and repair WRH URL binding” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T18:53:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject contradictory METAR physical feature groups”: passed"
    }
   ]
  },
@@ -370,17 +370,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T20:09:06Z",
-   "heartbeat_at": "2026-10-23T20:10:03Z",
+   "status_at": "2026-10-23T20:14:06Z",
+   "heartbeat_at": "2026-10-23T20:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 410,
-    "markets": 4073,
+    "weather_events": 408,
+    "markets": 4053,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T20:04:38Z",
+    "last_scan_at": "2026-10-23T20:10:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T20:04:38Z",
+    "updated_at": "2026-10-23T20:10:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T20:08:04Z",
+    "updated_at": "2026-10-23T20:14:07Z",
     "detail": "observations retained"
    },
    {
