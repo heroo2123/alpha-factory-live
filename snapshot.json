@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T18:40:02Z",
+ "generated_at": "2026-10-23T18:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "39 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_14378e0e",
     "task": "Restore frozen METAR delta and repair WRH URL binding",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_bb964e7b",
     "task": "CODE-01 Reject contradictory METAR physical feature groups",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5cfda2a3",
-    "task": "CODE-01 Rank basket opportunities using exact economic ratios",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,27 +120,27 @@
    "commits_24h": 39,
    "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 36,
-   "reviews_changes_24h": 39,
+   "reviews_passed_24h": 37,
+   "reviews_changes_24h": 38,
    "commits_by_hour": [
     2,
-    1,
-    2,
-    5,
     2,
     2,
-    0,
-    2,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
+    4,
     3,
     1,
-    1,
+    0,
     3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
+    2,
+    2,
     0,
     2,
     3,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 9,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 1,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 471,
     "parked": 353
    }
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T18:40:02Z",
+    "last_check_at": "2026-10-23T18:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow brain capture missed",
      "flow release needs release"
     ],
-    "last_check_at": "2026-10-23T18:30:03Z",
+    "last_check_at": "2026-10-23T18:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T18:44:57Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Rank basket opportunities using exact economic ratios”: passed"
+   },
    {
     "at": "2026-10-23T18:36:16Z",
     "kind": "build",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T17:21:17Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Validate book health and evidence class in PWS timing scores”: changes required"
-   },
-   {
-    "at": "2026-10-23T17:14:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “PAPER-09 Validate book health and evidence class in PWS timing scores” → sent to independent review"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T18:40:00Z",
-   "heartbeat_at": "2026-10-23T18:40:03Z",
+   "status_at": "2026-10-23T18:45:00Z",
+   "heartbeat_at": "2026-10-23T18:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 412,
     "markets": 4095,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T18:38:51Z",
+    "last_scan_at": "2026-10-23T18:44:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T18:38:51Z",
+    "updated_at": "2026-10-23T18:44:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T18:39:34Z",
+    "updated_at": "2026-10-23T18:43:35Z",
     "detail": "observations retained"
    },
    {
