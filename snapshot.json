@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T17:55:02Z",
+ "generated_at": "2026-10-23T18:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 4,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_82f9389d",
     "task": "CODE-01 Validate schedule provenance before attaching release timing",
-    "elapsed_min": 22
+    "elapsed_min": 27
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_82788fc5",
     "task": "CODE-01 Exclude the best station even when every station loses",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
@@ -116,15 +116,15 @@
   },
   "tests_passing": 16016,
   "flow": {
-   "merges_24h": 40,
-   "commits_24h": 40,
+   "merges_24h": 39,
+   "commits_24h": 39,
    "built_24h": 73,
    "build_failed_24h": 5,
    "reviews_passed_24h": 35,
    "reviews_changes_24h": 41,
    "commits_by_hour": [
     4,
-    3,
+    2,
     1,
     3,
     4,
@@ -143,13 +143,14 @@
     2,
     1,
     0,
-    3,
+    4,
     2,
-    3,
+    2,
     0
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 10,
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T17:55:02Z",
+    "last_check_at": "2026-10-23T18:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 468,
-    "last_run_at": "2026-10-23T17:55:02Z",
+    "runs_total": 469,
+    "last_run_at": "2026-10-23T18:00:02Z",
     "last_ok": true,
-    "last_kind": "engineering regression selftest failed",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T18:00:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
+   },
    {
     "at": "2026-10-23T17:55:02Z",
     "kind": "heal",
@@ -334,11 +340,6 @@
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    },
    {
-    "at": "2026-10-23T16:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-23T16:48:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Reject superseded books in standalone valuations” → sent to independent review"
@@ -372,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T17:54:57Z",
-   "heartbeat_at": "2026-10-23T17:55:02Z",
+   "status_at": "2026-10-23T17:59:58Z",
+   "heartbeat_at": "2026-10-23T18:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +383,7 @@
     "weather_events": 410,
     "markets": 4079,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T17:49:25Z",
+    "last_scan_at": "2026-10-23T17:55:08Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T17:49:25Z",
+    "updated_at": "2026-10-23T17:55:08Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T17:53:15Z",
+    "updated_at": "2026-10-23T17:59:22Z",
     "detail": "observations retained"
    },
    {
