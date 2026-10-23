@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T22:20:02Z",
+ "generated_at": "2026-10-23T22:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 7,
     "unit": "queued",
     "active": false,
-    "detail": "7 ready to build"
+    "detail": "8 ready to build"
    },
    {
     "key": "build",
@@ -23,18 +23,18 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_eb50401e",
     "task": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_a12bfc82",
     "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5cfda2a3",
-    "task": "CODE-01 Rank basket opportunities using exact economic ratios",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,34 +116,34 @@
   },
   "tests_passing": 16253,
   "flow": {
-   "merges_24h": 40,
-   "commits_24h": 40,
+   "merges_24h": 39,
+   "commits_24h": 39,
    "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 50,
-   "reviews_changes_24h": 25,
+   "reviews_passed_24h": 51,
+   "reviews_changes_24h": 24,
    "commits_by_hour": [
-    4,
+    3,
     2,
     0,
-    1,
     2,
     1,
-    0,
+    1,
     0,
     0,
     1,
+    0,
     4,
     0,
     2,
     3,
     0,
     2,
+    3,
+    3,
+    0,
     2,
     3,
-    1,
-    1,
-    4,
     2,
     3,
     2
@@ -155,8 +155,8 @@
    "stage_totals": {
     "queued": 7,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 3,
     "merged": 480,
     "parked": 359
    }
@@ -214,8 +214,8 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 10,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-23T22:20:02Z",
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-23T22:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
      "flow release needs release",
      "flow brain harvest incomplete"
     ],
-    "last_check_at": "2026-10-23T22:10:03Z",
+    "last_check_at": "2026-10-23T22:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T22:21:16Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Rank basket opportunities using exact economic ratios”: passed"
+   },
    {
     "at": "2026-10-23T22:20:02Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-23T21:15:15Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Propagate synthetic provenance into release assessments” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T21:13:18Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Reject omitted causal corrections in nowcast inputs” into the main build"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T22:19:13Z",
-   "heartbeat_at": "2026-10-23T22:20:03Z",
+   "status_at": "2026-10-23T22:24:13Z",
+   "heartbeat_at": "2026-10-23T22:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T22:18:48Z",
+    "updated_at": "2026-10-23T22:24:50Z",
     "detail": "observations retained"
    },
    {
