@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T22:40:02Z",
+ "generated_at": "2026-10-23T22:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 8,
+    "count": 7,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "75 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_eb50401e",
-    "task": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
-    "elapsed_min": 23
+    "task_id": "t_0c549268",
+    "task": "CODE-01 Remove daylight dependencies from daylight ablations",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -78,29 +78,29 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_a12bfc82",
-    "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 23
+    "task_id": "t_6908db19",
+    "task": "CODE-01 Measure bid-only liquidation markouts",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_eb50401e",
+    "task": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_a12bfc82",
+    "task": "CODE-01 Propagate synthetic provenance into release assessments",
+    "elapsed_min": 0
    }
   ],
   "qa": {
@@ -118,33 +118,33 @@
   "flow": {
    "merges_24h": 39,
    "commits_24h": 39,
-   "built_24h": 74,
+   "built_24h": 75,
    "build_failed_24h": 5,
    "reviews_passed_24h": 51,
-   "reviews_changes_24h": 24,
+   "reviews_changes_24h": 23,
    "commits_by_hour": [
+    3,
+    1,
+    0,
+    3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
     2,
     2,
     0,
     2,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
-    3,
-    1,
-    1,
-    3,
-    0,
-    2,
     3,
     3,
     0,
+    3,
     3,
     2,
-    3,
     2,
     3
    ],
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 8,
+    "queued": 7,
     "building": 2,
-    "in_review": 0,
+    "in_review": 2,
     "awaiting_merge": 2,
     "merged": 481,
     "parked": 359
@@ -162,7 +162,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-23T22:30:10Z",
+   "last_run_at": "2026-10-23T22:40:07Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -213,8 +213,8 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 9,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-10-23T22:40:02Z",
+    "recoveries_24h": 8,
+    "last_check_at": "2026-10-23T22:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +232,15 @@
      "flow release needs release",
      "flow brain harvest incomplete"
     ],
-    "last_check_at": "2026-10-23T22:30:02Z",
+    "last_check_at": "2026-10-23T22:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 494,
-    "last_run_at": "2026-10-23T22:40:02Z",
+    "runs_total": 495,
+    "last_run_at": "2026-10-23T22:45:02Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "flow green release failed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T22:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-23T22:44:20Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Propagate synthetic provenance into release assessments” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T22:44:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Group fill-markout sufficiency by rule-bound station-day” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T22:40:07Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-23T22:40:02Z",
     "kind": "heal",
@@ -324,11 +344,6 @@
     "text": "Merged “CODE-01 Reject ASOS day evidence with an impossible causal cutoff” into the main build"
    },
    {
-    "at": "2026-10-23T22:00:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
-   },
-   {
     "at": "2026-10-23T21:52:18Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Revalidate ASOS series before deriving observations” into the main build"
@@ -347,21 +362,6 @@
     "at": "2026-10-23T21:45:31Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T21:45:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Reject ASOS day evidence with an impossible causal cutoff” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T21:43:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Revalidate ASOS series before deriving observations”: passed"
-   },
-   {
-    "at": "2026-10-23T21:39:19Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Revalidate ASOS series before deriving observations” → sent to independent review"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T22:39:14Z",
-   "heartbeat_at": "2026-10-23T22:40:03Z",
+   "status_at": "2026-10-23T22:44:14Z",
+   "heartbeat_at": "2026-10-23T22:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 392,
-    "markets": 3877,
+    "weather_events": 387,
+    "markets": 3822,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T22:37:29Z",
+    "last_scan_at": "2026-10-23T22:43:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T22:37:29Z",
+    "updated_at": "2026-10-23T22:43:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T22:38:55Z",
+    "updated_at": "2026-10-23T22:44:57Z",
     "detail": "observations retained"
    },
    {
@@ -639,7 +639,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 72,
-     "open_tasks": 5
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
