@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T06:10:01Z",
+ "generated_at": "2026-10-23T06:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "61 merged in 24h"
+    "detail": "59 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Claude Opus",
+    "family": "Anthropic",
+    "task_id": "t_fdd0e2df",
+    "task": "METAR strict contract must accept the published 30 h AWC lookup window",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_b8980144",
     "task": "FLEX candidate t_e7a00d3a dea42032fd88",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Reviewer 1",
@@ -116,30 +116,30 @@
   },
   "tests_passing": 15901,
   "flow": {
-   "merges_24h": 61,
-   "commits_24h": 60,
+   "merges_24h": 59,
+   "commits_24h": 59,
    "built_24h": 75,
    "build_failed_24h": 3,
    "reviews_passed_24h": 36,
    "reviews_changes_24h": 41,
    "commits_by_hour": [
+    2,
     3,
     0,
-    3,
     0,
     6,
     0,
     13,
     0,
     0,
-    0,
-    12,
+    3,
+    9,
     3,
     3,
     2,
     2,
-    2,
-    5,
+    3,
+    4,
     2,
     0,
     1,
@@ -157,7 +157,7 @@
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 450,
-    "parked": 271
+    "parked": 272
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T06:10:02Z",
+    "last_check_at": "2026-10-23T06:14:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow main refuses published rules",
      "flow queued scope missing pin fixture"
     ],
-    "last_check_at": "2026-10-23T06:09:53Z",
+    "last_check_at": "2026-10-23T06:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T06:12:17Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Station metadata currency: flag datasets/derived artifacts…”: changes required"
+   },
+   {
+    "at": "2026-10-23T06:10:13Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Station metadata currency: flag datasets/derived artifacts…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T06:09:01Z",
     "kind": "warn",
@@ -352,16 +362,6 @@
     "at": "2026-10-23T04:51:15Z",
     "kind": "build",
     "text": "Claude Sonnet built “FLEX candidate t_80289bf1 d9885f7a8270” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T04:50:24Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01/PAPER-09 PWS score audit: official confirmation rate with…”: changes required"
-   },
-   {
-    "at": "2026-10-23T04:48:22Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01/PAPER-09 PWS score audit: official confirmation rate with…” → sent to independent review"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T06:09:39Z",
-   "heartbeat_at": "2026-10-23T06:10:02Z",
+   "status_at": "2026-10-23T06:14:39Z",
+   "heartbeat_at": "2026-10-23T06:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 433,
-    "markets": 4311,
+    "weather_events": 429,
+    "markets": 4267,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T06:04:32Z",
+    "last_scan_at": "2026-10-23T06:10:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T06:04:32Z",
+    "updated_at": "2026-10-23T06:10:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T06:08:08Z",
+    "updated_at": "2026-10-23T06:14:10Z",
     "detail": "gated"
    },
    {
