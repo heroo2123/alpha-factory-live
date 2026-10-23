@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T21:35:02Z",
+ "generated_at": "2026-10-23T21:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 10,
+    "count": 9,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_06800754",
-    "task": "CODE-01 Revalidate ASOS series before deriving observations",
-    "elapsed_min": 30
+    "task_id": "t_1e3d458a",
+    "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_fc7fda81",
     "task": "CODE-01 Reject ASOS day evidence with an impossible causal cutoff",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_06800754",
+    "task": "CODE-01 Revalidate ASOS series before deriving observations",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -123,8 +123,8 @@
    "reviews_passed_24h": 46,
    "reviews_changes_24h": 29,
    "commits_by_hour": [
-    4,
-    3,
+    5,
+    2,
     2,
     0,
     2,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 10,
+    "queued": 9,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 478,
     "parked": 357
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T21:35:02Z",
+    "last_check_at": "2026-10-23T21:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T21:39:19Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Revalidate ASOS series before deriving observations” → sent to independent review"
+   },
    {
     "at": "2026-10-23T21:19:20Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T19:59:59Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Bind maker markouts to the entry evidence class”: passed"
-   },
-   {
-    "at": "2026-10-23T19:57:19Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Bind maker markouts to the entry evidence class” → sent to independent review"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T21:34:11Z",
-   "heartbeat_at": "2026-10-23T21:35:02Z",
+   "status_at": "2026-10-23T21:39:11Z",
+   "heartbeat_at": "2026-10-23T21:40:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 404,
-    "markets": 4009,
+    "weather_events": 402,
+    "markets": 3987,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T21:32:43Z",
+    "last_scan_at": "2026-10-23T21:38:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-23T20:37:02Z",
+    "updated_at": "2026-10-23T21:37:03Z",
     "detail": "multi-city capture collecting"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T21:32:43Z",
+    "updated_at": "2026-10-23T21:38:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T21:34:34Z",
+    "updated_at": "2026-10-23T21:38:36Z",
     "detail": "observations retained"
    },
    {
