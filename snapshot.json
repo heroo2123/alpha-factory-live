@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T07:20:02Z",
+ "generated_at": "2026-10-23T07:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 35,
     "unit": "queued",
     "active": false,
-    "detail": "23 ready to build"
+    "detail": "24 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_85204014",
     "task": "CODE-01/LIVE-11 PWS lead degradation: fail-closed reduce/demote/suspend verdict from…",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_3f43dbe4",
     "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
@@ -131,18 +131,18 @@
     13,
     0,
     0,
-    5,
+    6,
     7,
-    4,
-    2,
-    2,
-    2,
     3,
-    4,
-    2,
-    0,
+    3,
     1,
     2,
+    4,
+    3,
+    2,
+    0,
+    2,
+    1,
     1,
     0,
     0,
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T07:20:03Z",
+    "last_check_at": "2026-10-23T07:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow main refuses published rules",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T07:10:02Z",
+    "last_check_at": "2026-10-23T07:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -382,7 +382,7 @@
     "weather_events": 418,
     "markets": 4146,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T07:16:52Z",
+    "last_scan_at": "2026-10-23T07:22:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T07:16:52Z",
+    "updated_at": "2026-10-23T07:22:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T07:19:07Z",
+    "updated_at": "2026-10-23T07:23:08Z",
     "detail": "observations retained"
    },
    {
