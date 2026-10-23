@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T17:10:02Z",
+ "generated_at": "2026-10-23T17:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
     "detail": "14 ready to build"
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "73 built in 24h"
+    "detail": "74 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 96,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -66,11 +66,11 @@
     "slot": "Builder 1",
     "role": "build",
     "state": "working",
-    "model": "Codex (GPT-6 Sol)",
+    "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_2c916309",
-    "task": "PAPER-09 Validate book health and evidence class in PWS timing scores",
-    "elapsed_min": 27
+    "task_id": "t_14378e0e",
+    "task": "Restore frozen METAR delta and repair WRH URL binding",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_b1c81657",
     "task": "CODE-01 Prevent omitted book receipts from hiding stream resets",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_2c916309",
+    "task": "PAPER-09 Validate book health and evidence class in PWS timing scores",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 96,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-23T14:04:15Z",
    "last_passed": 15950,
    "last_failed": 1,
@@ -118,31 +118,31 @@
   "flow": {
    "merges_24h": 41,
    "commits_24h": 41,
-   "built_24h": 73,
+   "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 35,
+   "reviews_passed_24h": 34,
    "reviews_changes_24h": 40,
    "commits_by_hour": [
     3,
     3,
     2,
     2,
-    2,
-    5,
-    2,
-    0,
-    1,
-    2,
-    1,
-    0,
-    0,
-    0,
-    1,
     3,
+    4,
+    2,
+    0,
     1,
     2,
-    2,
     1,
+    0,
+    0,
+    0,
+    1,
+    4,
+    0,
+    2,
+    3,
+    0,
     2,
     2,
     3,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 12,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 468,
     "parked": 350
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T17:10:02Z",
+    "last_check_at": "2026-10-23T17:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T17:00:03Z",
+    "last_check_at": "2026-10-23T17:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T17:14:14Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “PAPER-09 Validate book health and evidence class in PWS timing scores” → sent to independent review"
+   },
    {
     "at": "2026-10-23T17:00:02Z",
     "kind": "heal",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T15:55:53Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Keep overdue unconfirmed release schedules fail-closed” into the main build"
-   },
-   {
-    "at": "2026-10-23T15:44:43Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Require matching collateral on every transform book”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T17:09:55Z",
-   "heartbeat_at": "2026-10-23T17:10:02Z",
+   "status_at": "2026-10-23T17:14:55Z",
+   "heartbeat_at": "2026-10-23T17:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 410,
     "markets": 4079,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T17:08:07Z",
+    "last_scan_at": "2026-10-23T17:13:56Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T17:08:07Z",
+    "updated_at": "2026-10-23T17:13:56Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T17:08:58Z",
+    "updated_at": "2026-10-23T17:15:00Z",
     "detail": "observations retained"
    },
    {
