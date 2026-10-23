@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T12:00:02Z",
+ "generated_at": "2026-10-23T12:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
     "detail": "57 merged in 24h"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_55fc8599",
     "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_e0e2b720",
     "task": "CODE-01 Honor basket leg expiries even when a top-level expiry exists",
-    "elapsed_min": 20
+    "elapsed_min": 25
    },
    {
     "slot": "Reviewer 1",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-23T09:44:59Z",
    "last_passed": 15935,
@@ -123,28 +123,28 @@
    "reviews_passed_24h": 30,
    "reviews_changes_24h": 47,
    "commits_by_hour": [
-    10,
-    3,
+    12,
+    1,
     0,
     0,
-    11,
-    3,
+    12,
+    2,
     4,
     2,
-    1,
-    3,
-    4,
-    3,
-    0,
-    0,
-    3,
-    0,
-    1,
-    0,
+    2,
+    2,
+    5,
+    2,
     0,
     1,
     2,
-    2,
+    0,
+    1,
+    0,
+    0,
+    1,
+    3,
+    1,
     2,
     2
    ],
@@ -152,17 +152,17 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 19,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 1,
+    "awaiting_merge": 0,
     "merged": 459,
-    "parked": 322
+    "parked": 323
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-23T11:00:18Z",
+   "last_run_at": "2026-10-23T12:00:22Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -214,25 +214,25 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T12:00:03Z",
+    "last_check_at": "2026-10-23T12:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 3,
-     "P2": 2
+     "P2": 3
     },
     "codes": [
      "flow green release failed",
      "flow shadow stuck waiting",
      "flow brain capture missed",
      "flow release needs release",
-     "flow queued scope needless pin fixture",
-     "flow acceptance followthrough required"
+     "flow queued scope unmergeable",
+     "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-23T11:50:02Z",
+    "last_check_at": "2026-10-23T12:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T12:00:22Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-23T11:45:30Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T10:50:02Z",
     "kind": "heal",
     "text": "Operator AI (Claude Opus) audit run: flow release needs release"
-   },
-   {
-    "at": "2026-10-23T10:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T11:59:33Z",
-   "heartbeat_at": "2026-10-23T12:00:02Z",
+   "status_at": "2026-10-23T12:04:34Z",
+   "heartbeat_at": "2026-10-23T12:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 428,
     "markets": 4259,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T11:56:49Z",
+    "last_scan_at": "2026-10-23T12:02:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T11:56:49Z",
+    "updated_at": "2026-10-23T12:02:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T11:58:46Z",
+    "updated_at": "2026-10-23T12:04:49Z",
     "detail": "observations retained"
    },
    {
@@ -639,7 +639,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 55,
-     "open_tasks": 1
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
