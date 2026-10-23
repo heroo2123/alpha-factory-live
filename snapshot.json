@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T05:50:01Z",
+ "generated_at": "2026-10-23T05:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 32,
+    "count": 31,
     "unit": "queued",
     "active": false,
     "detail": "35 ready to build"
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "75 built in 24h"
+    "detail": "76 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_073d1fd4",
     "task": "CODE-01 Split event evaluation latency into feature, decision and CLOB-validation stages",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_ea2dd72e",
-    "task": "CODE-01 Feed an optional cited IEM ASOS cross-check into the result-lag…",
-    "elapsed_min": 24
+    "task_id": "t_b8980144",
+    "task": "FLEX candidate t_e7a00d3a dea42032fd88",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_ea2dd72e",
+    "task": "CODE-01 Feed an optional cited IEM ASOS cross-check into the result-lag…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 66,
    "commits_24h": 66,
-   "built_24h": 75,
+   "built_24h": 76,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 38,
+   "reviews_passed_24h": 37,
    "reviews_changes_24h": 39,
    "commits_by_hour": [
     9,
@@ -129,19 +129,19 @@
     0,
     6,
     0,
-    6,
-    7,
-    0,
-    0,
-    10,
-    3,
+    9,
     4,
-    2,
-    2,
+    0,
+    0,
+    11,
     2,
     4,
     3,
     1,
+    3,
+    4,
+    3,
+    0,
     0,
     3,
     0,
@@ -149,12 +149,13 @@
     0
    ],
    "merge_holds": [
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 32,
+    "queued": 31,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 450,
     "parked": 269
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T05:50:02Z",
+    "last_check_at": "2026-10-23T05:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +232,7 @@
      "flow brain capture missed",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T05:40:03Z",
+    "last_check_at": "2026-10-23T05:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T05:54:15Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01 Feed an optional cited IEM ASOS cross-check into the…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T05:40:16Z",
     "kind": "warn",
@@ -356,11 +362,6 @@
     "at": "2026-10-23T04:38:20Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_a4b6d59e b4b78e577002”: changes required"
-   },
-   {
-    "at": "2026-10-23T04:36:16Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “FLEX candidate t_de6640b9 48f3e868261f” → sent to independent review"
    }
   ]
  },
@@ -371,8 +372,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T05:49:08Z",
-   "heartbeat_at": "2026-10-23T05:50:02Z",
+   "status_at": "2026-10-23T05:54:08Z",
+   "heartbeat_at": "2026-10-23T05:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -381,7 +382,7 @@
     "weather_events": 439,
     "markets": 4377,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T05:47:55Z",
+    "last_scan_at": "2026-10-23T05:53:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T05:47:55Z",
+    "updated_at": "2026-10-23T05:53:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T05:49:59Z",
+    "updated_at": "2026-10-23T05:54:00Z",
     "detail": "gated"
    },
    {
