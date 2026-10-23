@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T10:40:02Z",
+ "generated_at": "2026-10-23T10:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 12,
+    "count": 13,
     "unit": "queued",
     "active": false,
     "detail": "6 ready to build"
@@ -15,10 +15,10 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "76 built in 24h"
+    "detail": "77 built in 24h"
    },
    {
     "key": "review",
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "57 merged in 24h"
+    "detail": "55 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,17 +70,17 @@
     "family": "Anthropic",
     "task_id": "t_5f9df8b0",
     "task": "METAR 30 h window: daily-review publisher/authority, multimodel panel and offline…",
-    "elapsed_min": 35
+    "elapsed_min": 40
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_ebd0377d",
-    "task": "FLEX candidate t_1736d1ac cb4c821bfa99",
-    "elapsed_min": 14
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -116,48 +116,48 @@
   },
   "tests_passing": 15935,
   "flow": {
-   "merges_24h": 57,
-   "commits_24h": 57,
-   "built_24h": 76,
+   "merges_24h": 55,
+   "commits_24h": 54,
+   "built_24h": 77,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 30,
+   "reviews_passed_24h": 29,
    "reviews_changes_24h": 48,
    "commits_by_hour": [
-    3,
-    3,
-    10,
     0,
-    0,
-    9,
-    4,
-    4,
-    2,
-    1,
-    2,
     5,
-    2,
-    2,
-    0,
-    2,
-    1,
-    1,
+    8,
     0,
     0,
-    1,
-    1,
+    10,
     3,
+    4,
+    2,
+    2,
+    2,
+    4,
+    3,
+    1,
+    0,
+    3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
     1
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 12,
-    "building": 2,
+    "queued": 13,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 456,
-    "parked": 313
+    "parked": 314
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T10:40:02Z",
+    "last_check_at": "2026-10-23T10:45:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,17 +229,17 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T10:30:03Z",
+    "last_check_at": "2026-10-23T10:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 422,
-    "last_run_at": "2026-10-23T10:10:02Z",
+    "runs_total": 423,
+    "last_run_at": "2026-10-23T10:45:02Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
-    "model": "Claude Sonnet",
+    "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -250,6 +250,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T10:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-23T10:44:14Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_ebd0377d 469d0d4c7a0f”: changes required"
+   },
+   {
+    "at": "2026-10-23T10:42:15Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “FLEX candidate t_1736d1ac cb4c821bfa99” → sent to independent review"
+   },
    {
     "at": "2026-10-23T10:33:13Z",
     "kind": "merge",
@@ -344,21 +359,6 @@
     "at": "2026-10-23T09:03:30Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_20e5fe45 b8f9bb1546fe”: passed"
-   },
-   {
-    "at": "2026-10-23T09:03:16Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “LIVE-15 Withhold READY when a guardian cycle has not revalidated…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T09:01:22Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Record R31 contract-finality verdict and residual-risk…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T08:57:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Never let the CONSERVATIVE queue start ahead of the visible…”: changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T10:39:29Z",
-   "heartbeat_at": "2026-10-23T10:40:02Z",
+   "status_at": "2026-10-23T10:44:29Z",
+   "heartbeat_at": "2026-10-23T10:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +379,7 @@
     "weather_events": 426,
     "markets": 4234,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T10:38:43Z",
+    "last_scan_at": "2026-10-23T10:44:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T10:38:43Z",
+    "updated_at": "2026-10-23T10:44:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T10:38:19Z",
+    "updated_at": "2026-10-23T10:44:21Z",
     "detail": "observations retained"
    },
    {
