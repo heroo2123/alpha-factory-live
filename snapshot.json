@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T11:25:02Z",
+ "generated_at": "2026-10-23T11:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "12 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "78 built in 24h"
+    "detail": "76 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -80,22 +80,22 @@
     "family": "OpenAI",
     "task_id": "t_83d959d3",
     "task": "LIVE-15 Withhold READY when a guardian cycle has not revalidated every retained resting…",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_55fc8599",
+    "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 55,
    "commits_24h": 55,
-   "built_24h": 78,
-   "build_failed_24h": 1,
+   "built_24h": 76,
+   "build_failed_24h": 2,
    "reviews_passed_24h": 30,
    "reviews_changes_24h": 47,
    "commits_by_hour": [
@@ -153,8 +153,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 15,
-    "building": 2,
+    "queued": 16,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 457,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T11:25:02Z",
+    "last_check_at": "2026-10-23T11:30:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T11:25:11Z",
+    "kind": "warn",
+    "text": "GLM 5.3 build attempt ended: quota hold"
+   },
+   {
+    "at": "2026-10-23T11:25:11Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-23T11:24:21Z",
     "kind": "review",
@@ -353,16 +363,6 @@
     "at": "2026-10-23T10:25:16Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 Seal ASOS availability time alongside the IEM cross-check…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T10:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Sonnet) audit run: flow brain capture missed"
-   },
-   {
-    "at": "2026-10-23T10:06:27Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_83d959d3 b1b6d3141539”: passed"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T11:24:31Z",
-   "heartbeat_at": "2026-10-23T11:25:02Z",
+   "status_at": "2026-10-23T11:29:32Z",
+   "heartbeat_at": "2026-10-23T11:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 430,
     "markets": 4281,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T11:23:13Z",
+    "last_scan_at": "2026-10-23T11:28:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T11:23:13Z",
+    "updated_at": "2026-10-23T11:28:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T11:24:34Z",
+    "updated_at": "2026-10-23T11:28:35Z",
     "detail": "observations retained"
    },
    {
