@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T05:35:01Z",
+ "generated_at": "2026-10-23T05:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 32,
+    "count": 31,
     "unit": "queued",
     "active": false,
-    "detail": "35 ready to build"
+    "detail": "34 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "75 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_e7a00d3a",
-    "task": "CODE-01/PAPER-09 PWS score audit: official confirmation rate with stated denominator +…",
-    "elapsed_min": 26
+    "task_id": "t_073d1fd4",
+    "task": "CODE-01 Split event evaluation latency into feature, decision and CLOB-validation stages",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,12 +80,12 @@
     "family": "Anthropic",
     "task_id": "t_ea2dd72e",
     "task": "CODE-01 Feed an optional cited IEM ASOS cross-check into the result-lag…",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,29 +118,29 @@
   "flow": {
    "merges_24h": 66,
    "commits_24h": 66,
-   "built_24h": 74,
+   "built_24h": 75,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 40,
+   "reviews_passed_24h": 39,
    "reviews_changes_24h": 38,
    "commits_by_hour": [
     9,
     0,
     3,
     0,
-    2,
-    4,
-    1,
-    12,
-    0,
-    0,
-    7,
-    6,
-    4,
-    2,
-    1,
-    2,
-    4,
     3,
+    3,
+    3,
+    10,
+    0,
+    0,
+    9,
+    4,
+    4,
+    2,
+    1,
+    2,
+    5,
+    2,
     2,
     0,
     2,
@@ -152,9 +152,9 @@
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 32,
+    "queued": 31,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 450,
     "parked": 268
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T05:34:01Z",
+    "last_check_at": "2026-10-23T05:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T05:38:15Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01/PAPER-09 PWS score audit: official confirmation rate with…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T05:30:02Z",
     "kind": "heal",
@@ -357,11 +362,6 @@
     "at": "2026-10-23T04:12:16Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_f7919dca 83e”: changes required"
-   },
-   {
-    "at": "2026-10-23T04:10:13Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01/PAPER-09 Performance: add official-quality slice from…” → sent to independent review"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T05:34:07Z",
-   "heartbeat_at": "2026-10-23T05:35:01Z",
+   "status_at": "2026-10-23T05:39:07Z",
+   "heartbeat_at": "2026-10-23T05:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 458,
-    "markets": 4586,
+    "weather_events": 456,
+    "markets": 4564,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T05:31:16Z",
+    "last_scan_at": "2026-10-23T05:36:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-23T04:37:03Z",
+    "updated_at": "2026-10-23T05:37:02Z",
     "detail": "multi-city capture collecting"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T05:31:16Z",
+    "updated_at": "2026-10-23T05:36:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T05:33:55Z",
+    "updated_at": "2026-10-23T05:39:57Z",
     "detail": "gated"
    },
    {
