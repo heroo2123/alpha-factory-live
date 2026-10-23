@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T19:45:02Z",
+ "generated_at": "2026-10-23T19:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 12,
+    "count": 11,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 28,
+    "count": 37,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_f4643b16",
     "task": "CODE-01 Bind maker markouts to the entry evidence class",
-    "elapsed_min": 18
+    "elapsed_min": 23
    },
    {
     "slot": "Builder 2",
@@ -78,14 +78,14 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_d2629d21",
-    "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 26
+    "task_id": "t_5397e86c",
+    "task": "CODE-01 Include archived public trades in maker runtime features",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 28,
+   "progress_pct": 37,
    "last_finished_at": "2026-10-23T17:10:43Z",
    "last_passed": 16016,
    "last_failed": 0,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 12,
+    "queued": 11,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 474,
     "parked": 354
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T19:45:02Z",
+    "last_check_at": "2026-10-23T19:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 476,
-    "last_run_at": "2026-10-23T19:45:01Z",
+    "runs_total": 477,
+    "last_run_at": "2026-10-23T19:50:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow stuck waiting",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T19:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-23T19:47:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
+   },
    {
     "at": "2026-10-23T19:45:01Z",
     "kind": "heal",
@@ -344,11 +354,6 @@
     "text": "Codex (GPT-6 Sol) built “CODE-01 Rank basket opportunities using exact economic ratios” → sent to independent review"
    },
    {
-    "at": "2026-10-23T18:35:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-23T18:33:33Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Exclude the best station even when every station loses” into the main build"
@@ -357,11 +362,6 @@
     "at": "2026-10-23T18:23:44Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Validate schedule provenance before attaching release timing” into the main build"
-   },
-   {
-    "at": "2026-10-23T18:22:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Exclude the best station even when every station loses”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T19:44:04Z",
-   "heartbeat_at": "2026-10-23T19:45:03Z",
+   "status_at": "2026-10-23T19:49:04Z",
+   "heartbeat_at": "2026-10-23T19:50:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 410,
     "markets": 4073,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T19:40:23Z",
+    "last_scan_at": "2026-10-23T19:46:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T19:40:23Z",
+    "updated_at": "2026-10-23T19:46:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T19:43:55Z",
+    "updated_at": "2026-10-23T19:49:57Z",
     "detail": "observations retained"
    },
    {
