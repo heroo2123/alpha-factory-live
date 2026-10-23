@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T01:00:02Z",
+ "generated_at": "2026-10-23T01:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 24,
     "unit": "queued",
     "active": false,
     "detail": "25 ready to build"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_9d206335",
     "task": "CODE-01 PWS score audit: usable lead net of latency, per-source/station lead verdict…",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_4988bd8f",
     "task": "CODE-01 Record source issue time, first receipt, provider, revision and freshness in the…",
-    "elapsed_min": 34
+    "elapsed_min": 39
    },
    {
     "slot": "Reviewer 1",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -121,44 +121,45 @@
    "built_24h": 54,
    "build_failed_24h": 5,
    "reviews_passed_24h": 62,
-   "reviews_changes_24h": 24,
+   "reviews_changes_24h": 25,
    "commits_by_hour": [
     0,
     3,
-    0,
-    10,
-    0,
+    1,
     9,
+    3,
+    6,
     0,
     3,
     0,
     6,
     0,
-    10,
-    3,
+    12,
+    1,
     0,
     0,
-    11,
-    3,
+    12,
+    2,
     4,
     2,
-    1,
-    3,
-    4,
-    3,
+    2,
+    2,
+    5,
+    2,
     0
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
+    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
-    "queued": 23,
+    "queued": 24,
     "building": 2,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 4,
     "merged": 446,
-    "parked": 243
+    "parked": 244
    }
   },
   "architect": {
@@ -215,33 +216,33 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T01:00:02Z",
+    "last_check_at": "2026-10-23T01:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 4,
-     "P2": 3
+     "P2": 2
     },
     "codes": [
      "flow integration candidate persistently red",
-     "flow handoff ignores deployed green qa",
      "flow green release failed",
      "flow green release failed",
      "flow green release failed",
-     "flow release repeated same failure"
+     "flow release repeated same failure",
+     "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-23T00:50:03Z",
+    "last_check_at": "2026-10-23T01:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 392,
-    "last_run_at": "2026-10-23T00:55:01Z",
+    "runs_total": 393,
+    "last_run_at": "2026-10-23T01:05:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow evals all gated",
+    "last_kind": "flow handoff ignores deployed green qa",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +255,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T01:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow handoff ignores deployed green qa"
+   },
+   {
+    "at": "2026-10-23T01:00:15Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_c5e4e50f 684e9636c5fd”: changes required"
+   },
    {
     "at": "2026-10-23T00:55:01Z",
     "kind": "heal",
@@ -305,11 +316,6 @@
     "text": "DeepSeek V4 Pro built “CODE-01 Require a satisfied R31 contract-finality verdict before any…” → sent to independent review"
    },
    {
-    "at": "2026-10-23T00:25:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
-   },
-   {
     "at": "2026-10-23T00:21:13Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “LEARNING-SOURCES Model-update-lag study : read-only collector of…”: changes required"
@@ -358,11 +364,6 @@
     "at": "2026-10-22T23:52:18Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 PWS score audit: usable lead net of latency…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T23:42:51Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Regression-test PWS discovery box from exact station lat/lon…” into the main build"
    }
   ]
  },
@@ -373,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-23T01:00:01Z",
-   "heartbeat_at": "2026-10-23T01:00:03Z",
+   "status_at": "2026-10-23T01:04:59Z",
+   "heartbeat_at": "2026-10-23T01:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +384,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T00:55:27Z",
+    "last_scan_at": "2026-10-23T01:00:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T00:55:27Z",
+    "updated_at": "2026-10-23T01:00:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T00:58:26Z",
+    "updated_at": "2026-10-23T01:04:28Z",
     "detail": "observations retained"
    },
    {
