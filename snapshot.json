@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T00:10:02Z",
+ "generated_at": "2026-10-23T00:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "23 ready to build"
@@ -18,23 +18,23 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "52 built in 24h"
+    "detail": "53 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "78 merged in 24h"
+    "detail": "77 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_ab6de61c",
-    "task": "LEARNING-SOURCES Model-update-lag study : read-only collector of GEFS/GFS run…",
-    "elapsed_min": 4
+    "task_id": "t_c353770f",
+    "task": "CODE-01 Station registry: current-state/quarantine-history summary and…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_1736d1ac",
     "task": "CODE-01 Require a satisfied R31 contract-finality verdict before any…",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ab6de61c",
+    "task": "LEARNING-SOURCES Model-update-lag study : read-only collector of GEFS/GFS run…",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -116,47 +116,48 @@
   },
   "tests_passing": 15823,
   "flow": {
-   "merges_24h": 78,
-   "commits_24h": 78,
-   "built_24h": 52,
+   "merges_24h": 77,
+   "commits_24h": 77,
+   "built_24h": 53,
    "build_failed_24h": 7,
    "reviews_passed_24h": 64,
-   "reviews_changes_24h": 23,
+   "reviews_changes_24h": 22,
    "commits_by_hour": [
-    3,
+    2,
     0,
     3,
-    4,
-    6,
-    6,
+    7,
+    3,
+    7,
+    2,
     3,
     0,
-    3,
     0,
     6,
     0,
     13,
     0,
     0,
-    0,
-    12,
+    3,
+    9,
     3,
     3,
     2,
     2,
-    2,
-    5,
+    3,
+    4,
     2
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
+    "protected code: waiting for a second review",
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 22,
+    "queued": 21,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 4,
+    "awaiting_merge": 5,
     "merged": 446,
     "parked": 240
    }
@@ -215,7 +216,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T00:09:01Z",
+    "last_check_at": "2026-10-23T00:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,15 +234,15 @@
      "flow release repeated same failure",
      "flow shadow evals all gated"
     ],
-    "last_check_at": "2026-10-23T00:00:03Z",
+    "last_check_at": "2026-10-23T00:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 386,
-    "last_run_at": "2026-10-23T00:10:02Z",
+    "last_run_at": "2026-10-23T00:15:01Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "routine",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +255,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T00:15:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: routine"
+   },
+   {
+    "at": "2026-10-23T00:13:14Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “LEARNING-SOURCES Model-update-lag study : read-only collector of…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T00:10:25Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Produce first-class SOURCE_SCHEDULE release events with…”: passed"
+   },
+   {
+    "at": "2026-10-23T00:10:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
    {
     "at": "2026-10-23T00:10:02Z",
     "kind": "heal",
@@ -305,11 +326,6 @@
     "text": "Claude Sonnet built “CODE-01 PWS score audit: usable lead net of latency…” → sent to independent review"
    },
    {
-    "at": "2026-10-22T23:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-22T23:42:51Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Regression-test PWS discovery box from exact station lat/lon…” into the main build"
@@ -348,21 +364,6 @@
     "at": "2026-10-22T23:11:19Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Re-derive IEM ASOS cross-check values so a forged agreement…”: changes required"
-   },
-   {
-    "at": "2026-10-22T23:09:16Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Re-derive IEM ASOS cross-check values so a forged agreement…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T23:04:06Z",
-    "kind": "merge",
-    "text": "Merged “LIVE-15 Bind commission unit digests, socket and archive paths to…” into the main build"
-   },
-   {
-    "at": "2026-10-22T23:02:17Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_c5cc326a ad09e468c7c9”: changes required"
    }
   ]
  },
@@ -373,8 +374,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-23T00:09:59Z",
-   "heartbeat_at": "2026-10-23T00:10:02Z",
+   "status_at": "2026-10-23T00:15:01Z",
+   "heartbeat_at": "2026-10-23T00:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +384,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T00:05:10Z",
+    "last_scan_at": "2026-10-23T00:10:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T00:05:10Z",
+    "updated_at": "2026-10-23T00:10:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T00:08:11Z",
+    "updated_at": "2026-10-23T00:14:13Z",
     "detail": "observations retained"
    },
    {
