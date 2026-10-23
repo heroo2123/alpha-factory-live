@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T04:05:02Z",
+ "generated_at": "2026-10-23T04:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 32,
     "unit": "queued",
     "active": false,
-    "detail": "33 ready to build"
+    "detail": "34 ready to build"
    },
    {
     "key": "build",
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "74 merged in 24h"
+    "detail": "72 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 47,
+    "count": 53,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_a4b6d59e",
     "task": "FLEX candidate t_de6640b9 48f3e868261f",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_f7919dca",
     "task": "CODE-01/PAPER-09 Performance: add official-quality slice from admission OFFICIAL source…",
-    "elapsed_min": 22
+    "elapsed_min": 27
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 47,
+   "progress_pct": 53,
    "last_finished_at": "2026-10-23T03:18:21Z",
    "last_passed": 15864,
    "last_failed": 0,
@@ -116,28 +116,28 @@
   },
   "tests_passing": 15864,
   "flow": {
-   "merges_24h": 74,
-   "commits_24h": 74,
+   "merges_24h": 72,
+   "commits_24h": 72,
    "built_24h": 70,
    "build_failed_24h": 5,
    "reviews_passed_24h": 47,
    "reviews_changes_24h": 31,
    "commits_by_hour": [
-    9,
-    3,
     6,
-    0,
+    6,
     3,
     0,
+    3,
+    0,
     6,
     0,
-    12,
-    1,
+    13,
     0,
     0,
+    0,
     12,
-    2,
-    4,
+    3,
+    3,
     2,
     2,
     2,
@@ -146,18 +146,15 @@
     0,
     1,
     2,
-    0
+    1
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review",
-    "targeted tests failed recently backoff"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 32,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 3,
-    "merged": 449,
+    "awaiting_merge": 2,
+    "merged": 450,
     "parked": 260
    }
   },
@@ -215,7 +212,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T04:05:02Z",
+    "last_check_at": "2026-10-23T04:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -373,8 +370,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T04:05:01Z",
-   "heartbeat_at": "2026-10-23T04:05:02Z",
+   "status_at": "2026-10-23T04:10:02Z",
+   "heartbeat_at": "2026-10-23T04:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +380,7 @@
     "weather_events": 432,
     "markets": 4305,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T03:59:48Z",
+    "last_scan_at": "2026-10-23T04:05:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T03:59:48Z",
+    "updated_at": "2026-10-23T04:05:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T04:03:33Z",
+    "updated_at": "2026-10-23T04:09:35Z",
     "detail": "gated"
    },
    {
