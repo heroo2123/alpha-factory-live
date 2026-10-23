@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T02:15:02Z",
+ "generated_at": "2026-10-23T02:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "23 ready to build"
+    "detail": "25 ready to build"
    },
    {
     "key": "build",
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "76 merged in 24h"
+    "detail": "75 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 38,
+    "count": 44,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_057db1b5",
     "task": "As-issued extra model inputs per city-day: GEFS lagged cycles, NBM, HRRR, LAMP for…",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_03e94d0f",
     "task": "CODE-01 Bind the METAR R31 verdict to its event and require a bounded cutoff bracket",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
@@ -100,12 +100,12 @@
     "family": "DeepSeek",
     "task_id": "t_1e3d458a",
     "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
-    "elapsed_min": 2
+    "elapsed_min": 7
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 38,
+   "progress_pct": 44,
    "last_finished_at": "2026-10-23T00:06:35Z",
    "last_passed": 15823,
    "last_failed": 1,
@@ -116,18 +116,18 @@
   },
   "tests_passing": 15823,
   "flow": {
-   "merges_24h": 76,
-   "commits_24h": 76,
+   "merges_24h": 75,
+   "commits_24h": 75,
    "built_24h": 62,
    "build_failed_24h": 5,
    "reviews_passed_24h": 62,
    "reviews_changes_24h": 24,
    "commits_by_hour": [
-    3,
-    7,
-    3,
-    7,
     2,
+    10,
+    0,
+    9,
+    0,
     3,
     0,
     0,
@@ -136,10 +136,10 @@
     13,
     0,
     0,
-    3,
-    9,
-    3,
-    3,
+    5,
+    7,
+    4,
+    2,
     2,
     2,
     3,
@@ -155,12 +155,12 @@
     "conflicts with newer code, being rebuilt"
    ],
    "stage_totals": {
-    "queued": 21,
+    "queued": 22,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 7,
+    "awaiting_merge": 6,
     "merged": 447,
-    "parked": 247
+    "parked": 248
    }
   },
   "architect": {
@@ -217,7 +217,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-23T02:15:02Z",
+    "last_check_at": "2026-10-23T02:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -240,7 +240,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 400,
+    "runs_total": 401,
     "last_run_at": "2026-10-23T02:15:02Z",
     "last_ok": true,
     "last_kind": "flow green release failed",
@@ -375,8 +375,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-23T02:14:59Z",
-   "heartbeat_at": "2026-10-23T02:15:02Z",
+   "status_at": "2026-10-23T02:19:59Z",
+   "heartbeat_at": "2026-10-23T02:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -385,7 +385,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T02:13:31Z",
+    "last_scan_at": "2026-10-23T02:19:07Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T02:13:31Z",
+    "updated_at": "2026-10-23T02:19:07Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T02:14:53Z",
+    "updated_at": "2026-10-23T02:18:54Z",
     "detail": "observations retained"
    },
    {
@@ -513,7 +513,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-23T01:17:03Z",
+   "updated_at": "2026-10-23T02:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
