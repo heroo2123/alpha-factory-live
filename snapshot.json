@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T09:10:02Z",
+ "generated_at": "2026-10-23T09:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "58 merged in 24h"
+    "detail": "59 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 66,
+    "count": 69,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_65673659",
     "task": "FLEX candidate t_7a3b6b25 8150c5e8545e",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_acb9f3da",
     "task": "CODE-01 Re-derive IEM ASOS cross-check values so a forged agreement cannot mask a…",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 66,
+   "progress_pct": 69,
    "last_finished_at": "2026-10-23T04:58:31Z",
    "last_passed": 15901,
    "last_failed": 0,
@@ -116,8 +116,8 @@
   },
   "tests_passing": 15901,
   "flow": {
-   "merges_24h": 58,
-   "commits_24h": 58,
+   "merges_24h": 59,
+   "commits_24h": 59,
    "built_24h": 76,
    "build_failed_24h": 2,
    "reviews_passed_24h": 32,
@@ -129,14 +129,14 @@
     13,
     0,
     0,
-    0,
-    12,
+    3,
+    9,
     3,
     3,
     2,
     2,
-    2,
-    5,
+    3,
+    4,
     2,
     0,
     1,
@@ -146,20 +146,18 @@
     0,
     0,
     1,
-    3
+    4
    ],
    "merge_holds": [
     "disallowed path set",
-    "protected code: waiting for a second review",
-    "targeted tests failed recently backoff",
     "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 37,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 4,
-    "merged": 454,
+    "awaiting_merge": 3,
+    "merged": 455,
     "parked": 282
    }
   },
@@ -217,23 +215,22 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T09:10:02Z",
+    "last_check_at": "2026-10-23T09:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 3,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 2
+     "P2": 1
     },
     "codes": [
      "flow integration candidate persistently red",
      "flow brain capture missed",
-     "flow maintenance review packet invalid",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T09:00:03Z",
+    "last_check_at": "2026-10-23T09:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -373,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T09:09:24Z",
-   "heartbeat_at": "2026-10-23T09:10:01Z",
+   "status_at": "2026-10-23T09:14:24Z",
+   "heartbeat_at": "2026-10-23T09:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T09:09:44Z",
+    "updated_at": "2026-10-23T09:13:46Z",
     "detail": "observations retained"
    },
    {
