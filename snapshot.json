@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T19:35:02Z",
+ "generated_at": "2026-10-23T19:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 17,
+    "count": 25,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_f4643b16",
     "task": "CODE-01 Bind maker markouts to the entry evidence class",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_d2629d21",
     "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 17,
+   "progress_pct": 25,
    "last_finished_at": "2026-10-23T17:10:43Z",
    "last_passed": 16016,
    "last_failed": 0,
@@ -125,8 +125,8 @@
    "commits_by_hour": [
     1,
     2,
-    4,
-    3,
+    5,
+    2,
     2,
     0,
     2,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T19:35:02Z",
+    "last_check_at": "2026-10-23T19:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,12 +238,12 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 474,
-    "last_run_at": "2026-10-23T19:35:02Z",
+    "runs_total": 475,
+    "last_run_at": "2026-10-23T19:40:03Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "flow green release failed",
     "running": false,
-    "model": "Claude Sonnet",
+    "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T19:40:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
+   },
    {
     "at": "2026-10-23T19:35:02Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-23T18:16:21Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Validate schedule provenance before attaching release timing”: passed"
-   },
-   {
-    "at": "2026-10-23T18:10:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T19:34:03Z",
-   "heartbeat_at": "2026-10-23T19:35:02Z",
+   "status_at": "2026-10-23T19:40:04Z",
+   "heartbeat_at": "2026-10-23T19:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -399,7 +399,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-23T18:37:03Z",
+    "updated_at": "2026-10-23T19:37:03Z",
     "detail": "multi-city capture collecting"
    },
    {
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T19:33:52Z",
+    "updated_at": "2026-10-23T19:39:54Z",
     "detail": "observations retained"
    },
    {
