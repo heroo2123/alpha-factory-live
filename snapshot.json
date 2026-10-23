@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T17:40:02Z",
+ "generated_at": "2026-10-23T17:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "40 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_82f9389d",
     "task": "CODE-01 Validate schedule provenance before attaching release timing",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_796127dc",
     "task": "CODE-01 Measure exit markouts from valid bid-only books",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_14378e0e",
-    "task": "Restore frozen METAR delta and repair WRH URL binding",
-    "elapsed_min": 7
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -125,23 +125,23 @@
    "commits_by_hour": [
     4,
     2,
-    1,
-    2,
-    5,
     2,
     2,
-    0,
-    2,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
+    4,
     3,
     1,
-    1,
+    0,
     3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
+    2,
+    2,
     0,
     2,
     3,
@@ -149,14 +149,14 @@
     0
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: waiting for a second review",
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 11,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 2,
+    "in_review": 0,
+    "awaiting_merge": 3,
     "merged": 468,
     "parked": 351
    }
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T17:40:02Z",
+    "last_check_at": "2026-10-23T17:44:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T17:30:03Z",
+    "last_check_at": "2026-10-23T17:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T17:43:22Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “Restore frozen METAR delta and repair WRH URL binding”: passed"
+   },
    {
     "at": "2026-10-23T17:32:14Z",
     "kind": "build",
@@ -358,11 +363,6 @@
     "at": "2026-10-23T16:20:13Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-23T16:17:58Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Restore frozen METAR delta and repair WRH URL binding” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T17:39:56Z",
-   "heartbeat_at": "2026-10-23T17:40:03Z",
+   "status_at": "2026-10-23T17:44:57Z",
+   "heartbeat_at": "2026-10-23T17:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 410,
     "markets": 4079,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T17:37:53Z",
+    "last_scan_at": "2026-10-23T17:43:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T17:37:53Z",
+    "updated_at": "2026-10-23T17:43:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T17:39:10Z",
+    "updated_at": "2026-10-23T17:43:11Z",
     "detail": "observations retained"
    },
    {
