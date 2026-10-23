@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T16:40:02Z",
+ "generated_at": "2026-10-23T16:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 6,
+    "count": 8,
     "unit": "queued",
     "active": false,
-    "detail": "8 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,12 +34,12 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "45 merged in 24h"
+    "detail": "43 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 66,
+    "count": 69,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_4252cf3d",
-    "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 27
+    "task_id": "t_2c916309",
+    "task": "PAPER-09 Validate book health and evidence class in PWS timing scores",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_1bdb24f5",
     "task": "CODE-01 Reject superseded books in standalone valuations",
-    "elapsed_min": 22
+    "elapsed_min": 27
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_4252cf3d",
+    "task": "CODE-01 Require covered IEM agreement for contract finality",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 66,
+   "progress_pct": 69,
    "last_finished_at": "2026-10-23T14:04:15Z",
    "last_passed": 15950,
    "last_failed": 1,
@@ -116,33 +116,33 @@
   },
   "tests_passing": 15950,
   "flow": {
-   "merges_24h": 45,
-   "commits_24h": 44,
+   "merges_24h": 43,
+   "commits_24h": 43,
    "built_24h": 73,
    "build_failed_24h": 5,
    "reviews_passed_24h": 37,
    "reviews_changes_24h": 38,
    "commits_by_hour": [
+    3,
     4,
+    2,
+    2,
+    2,
     4,
-    2,
-    1,
-    2,
-    5,
-    2,
-    2,
-    0,
-    2,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
     3,
     1,
-    1,
+    0,
     3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
+    2,
+    2,
     0,
     2,
     3,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 6,
+    "queued": 8,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 468,
     "parked": 347
@@ -162,7 +162,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-23T16:20:13Z",
+   "last_run_at": "2026-10-23T16:40:16Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T16:40:03Z",
+    "last_check_at": "2026-10-23T16:45:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +232,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T16:30:02Z",
+    "last_check_at": "2026-10-23T16:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 462,
-    "last_run_at": "2026-10-23T16:35:02Z",
+    "runs_total": 463,
+    "last_run_at": "2026-10-23T16:45:03Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow release needs release",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T16:45:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow release needs release"
+   },
+   {
+    "at": "2026-10-23T16:42:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T16:40:16Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-23T16:35:02Z",
     "kind": "heal",
@@ -314,11 +329,6 @@
     "text": "Codex (GPT-6 Sol) built “CODE-01 Prevent mixed synthetic and observed microstructure…” → sent to independent review"
    },
    {
-    "at": "2026-10-23T16:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-23T16:02:29Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Require matching collateral on every transform book” into the main build"
@@ -352,16 +362,6 @@
     "at": "2026-10-23T15:38:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: full suite not green"
-   },
-   {
-    "at": "2026-10-23T15:37:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Keep overdue unconfirmed release schedules fail-closed” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T15:31:12Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro's build of “Restore frozen METAR delta and repair WRH URL binding” failed its tests; it will be retried"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T16:39:53Z",
-   "heartbeat_at": "2026-10-23T16:40:03Z",
+   "status_at": "2026-10-23T16:44:53Z",
+   "heartbeat_at": "2026-10-23T16:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 418,
-    "markets": 4163,
+    "weather_events": 411,
+    "markets": 4086,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T16:38:44Z",
+    "last_scan_at": "2026-10-23T16:44:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T16:38:44Z",
+    "updated_at": "2026-10-23T16:44:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T16:38:48Z",
+    "updated_at": "2026-10-23T16:44:50Z",
     "detail": "observations retained"
    },
    {
@@ -639,7 +639,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 60,
-     "open_tasks": 8
+     "open_tasks": 10
     },
     {
      "id": "CODE-02",
@@ -738,7 +738,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 28,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-10",
