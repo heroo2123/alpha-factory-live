@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T11:15:01Z",
+ "generated_at": "2026-10-23T11:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,27 +70,27 @@
     "family": "DeepSeek",
     "task_id": "t_55fc8599",
     "task": "PAPER-09 Validate exact book evidence before reporting PWS market timing",
-    "elapsed_min": 22
+    "elapsed_min": 27
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_e604b586",
-    "task": "LEARNING-SOURCES Historical held-out backfill with the forward capture method: GEFS S3 +…",
-    "elapsed_min": 5
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_08446fe7",
-    "task": "CODE-01 PAPER reward maker capture fixes: live Gamma page size over response limit…",
-    "elapsed_min": 5
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -127,10 +127,10 @@
     13,
     0,
     0,
-    3,
-    9,
-    3,
-    3,
+    5,
+    7,
+    4,
+    2,
     2,
     2,
     3,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T11:15:02Z",
+    "last_check_at": "2026-10-23T11:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T11:14:31Z",
-   "heartbeat_at": "2026-10-23T11:15:01Z",
+   "status_at": "2026-10-23T11:19:31Z",
+   "heartbeat_at": "2026-10-23T11:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 429,
-    "markets": 4267,
+    "weather_events": 430,
+    "markets": 4281,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T11:12:25Z",
+    "last_scan_at": "2026-10-23T11:17:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T11:12:25Z",
+    "updated_at": "2026-10-23T11:17:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T11:14:31Z",
+    "updated_at": "2026-10-23T11:18:32Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +510,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-23T10:17:02Z",
+   "updated_at": "2026-10-23T11:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
