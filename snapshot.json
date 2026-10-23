@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T07:25:02Z",
+ "generated_at": "2026-10-23T07:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 35,
     "unit": "queued",
     "active": false,
-    "detail": "24 ready to build"
+    "detail": "23 ready to build"
    },
    {
     "key": "build",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "57 merged in 24h"
+    "detail": "58 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Claude Sonnet",
     "family": "Anthropic",
-    "task_id": "t_85204014",
-    "task": "CODE-01/LIVE-11 PWS lead degradation: fail-closed reduce/demote/suspend verdict from…",
-    "elapsed_min": 8
+    "task_id": "t_e210bdd2",
+    "task": "LIVE-15 Derive CustodyGateResult from the actual custody-gate JUnit report so skipped…",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_3f43dbe4",
     "task": "CODE-01 Seal ASOS availability time alongside the IEM cross-check without changing its…",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Reviewer 1",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 15901,
   "flow": {
-   "merges_24h": 57,
-   "commits_24h": 57,
+   "merges_24h": 58,
+   "commits_24h": 58,
    "built_24h": 75,
    "build_failed_24h": 3,
    "reviews_passed_24h": 35,
@@ -125,8 +125,8 @@
    "commits_by_hour": [
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -146,19 +146,19 @@
     1,
     0,
     0,
-    0
+    1
    ],
    "merge_holds": [
-    "protected code: waiting for a second review",
-    "targeted tests failed recently backoff"
+    "targeted tests failed recently backoff",
+    "targeted tests failed"
    ],
    "stage_totals": {
     "queued": 35,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 3,
-    "merged": 450,
-    "parked": 276
+    "awaiting_merge": 2,
+    "merged": 451,
+    "parked": 277
    }
   },
   "architect": {
@@ -168,6 +168,11 @@
    "model": "Claude Opus"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-23T07:25:05Z",
+    "title": "METAR strict contract must accept the published 30 h AWC lookup window",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-23T02:22:12Z",
     "title": "CODE-01 Station registry: current-state/quarantine-history summary and…",
@@ -202,20 +207,15 @@
     "at": "2026-10-22T22:24:17Z",
     "title": "Account-replay allocation-reject fixture must survive dynamic sizing (t_2f00f55e shrinks…",
     "area": "Test repairs"
-   },
-   {
-    "at": "2026-10-22T22:14:13Z",
-    "title": "Release census must bind the day rule's source_family",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T07:25:02Z",
+    "last_check_at": "2026-10-23T07:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T07:28:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-10-23T07:27:17Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01/LIVE-11 PWS lead degradation: fail-closed…”: changes required"
+   },
+   {
+    "at": "2026-10-23T07:25:53Z",
+    "kind": "build",
+    "text": "Claude Sonnet built “CODE-01/LIVE-11 PWS lead degradation: fail-closed…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T07:25:05Z",
+    "kind": "merge",
+    "text": "Merged “METAR strict contract must accept the published 30 h AWC lookup window” into the main build"
+   },
    {
     "at": "2026-10-23T07:18:17Z",
     "kind": "warn",
@@ -342,26 +362,6 @@
     "at": "2026-10-23T06:12:17Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Station metadata currency: flag datasets/derived artifacts…”: changes required"
-   },
-   {
-    "at": "2026-10-23T06:10:13Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Station metadata currency: flag datasets/derived artifacts…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T06:09:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-23T06:08:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Split event evaluation latency into feature, decision and…”: changes required"
-   },
-   {
-    "at": "2026-10-23T06:06:15Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Split event evaluation latency into feature, decision and…” → sent to independent review"
    }
   ]
  },
@@ -382,7 +382,7 @@
     "weather_events": 418,
     "markets": 4146,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T07:22:24Z",
+    "last_scan_at": "2026-10-23T07:27:50Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T07:22:24Z",
+    "updated_at": "2026-10-23T07:27:50Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T07:23:08Z",
+    "updated_at": "2026-10-23T07:29:10Z",
     "detail": "observations retained"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 36 untouched city-days (11 cities, 4 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 40 untouched city-days (11 cities, 4 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 61,
    "waiting_city_days": 4,
