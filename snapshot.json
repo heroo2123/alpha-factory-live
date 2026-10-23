@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T20:50:01Z",
+ "generated_at": "2026-10-23T20:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 86,
+    "count": 99,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_88b3bc40",
     "task": "CODE-01 Reject omitted causal corrections in nowcast inputs",
-    "elapsed_min": 42
+    "elapsed_min": 47
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_a12bfc82",
     "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 86,
+   "progress_pct": 99,
    "last_finished_at": "2026-10-23T17:10:43Z",
    "last_passed": 16016,
    "last_failed": 0,
@@ -123,10 +123,10 @@
    "reviews_passed_24h": 44,
    "reviews_changes_24h": 31,
    "commits_by_hour": [
-    2,
+    3,
     4,
     3,
-    1,
+    0,
     0,
     3,
     0,
@@ -136,12 +136,12 @@
     1,
     2,
     2,
+    2,
+    2,
     1,
-    2,
-    2,
     0,
-    2,
     3,
+    2,
     3,
     0,
     3,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T20:50:02Z",
+    "last_check_at": "2026-10-23T20:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,15 +233,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T20:40:03Z",
+    "last_check_at": "2026-10-23T20:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 482,
-    "last_run_at": "2026-10-23T20:50:02Z",
+    "runs_total": 483,
+    "last_run_at": "2026-10-23T20:55:02Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow shadow stuck waiting",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T20:55:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
+   },
    {
     "at": "2026-10-23T20:50:02Z",
     "kind": "heal",
@@ -325,11 +330,6 @@
     "text": "Codex (GPT-6 Sol) built “CODE-01 Bind maker markouts to the entry evidence class” → sent to independent review"
    },
    {
-    "at": "2026-10-23T19:55:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow release needs release"
-   },
-   {
     "at": "2026-10-23T19:50:29Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Require covered IEM agreement for contract finality”: changes required"
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T20:49:08Z",
-   "heartbeat_at": "2026-10-23T20:50:02Z",
+   "status_at": "2026-10-23T20:54:08Z",
+   "heartbeat_at": "2026-10-23T20:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 406,
     "markets": 4031,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T20:46:50Z",
+    "last_scan_at": "2026-10-23T20:52:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T20:46:50Z",
+    "updated_at": "2026-10-23T20:52:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T20:48:19Z",
+    "updated_at": "2026-10-23T20:54:21Z",
     "detail": "observations retained"
    },
    {
