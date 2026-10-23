@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T19:00:02Z",
+ "generated_at": "2026-10-23T19:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "39 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_002f260a",
     "task": "CODE-01 Apply consistent event weighting to reliability bins",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_eb50401e",
     "task": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_14378e0e",
     "task": "Restore frozen METAR delta and repair WRH URL binding",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 2",
@@ -117,47 +117,46 @@
   "tests_passing": 16016,
   "flow": {
    "merges_24h": 39,
-   "commits_24h": 38,
+   "commits_24h": 39,
    "built_24h": 74,
    "build_failed_24h": 5,
    "reviews_passed_24h": 38,
    "reviews_changes_24h": 37,
    "commits_by_hour": [
     2,
+    2,
+    2,
+    5,
+    2,
+    0,
+    1,
+    2,
+    0,
+    1,
+    0,
+    0,
     1,
     3,
-    4,
+    1,
+    2,
+    2,
+    1,
+    1,
     3,
-    0,
-    0,
     3,
-    0,
     1,
-    0,
-    0,
     1,
-    2,
-    2,
-    2,
-    2,
-    1,
-    0,
-    4,
-    2,
-    2,
-    0,
     3
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 7,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 3,
-    "merged": 471,
+    "awaiting_merge": 2,
+    "merged": 472,
     "parked": 353
    }
   },
@@ -168,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-23T19:03:19Z",
+    "title": "CODE-01 Reject contradictory METAR physical feature groups",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-23T18:33:33Z",
     "title": "CODE-01 Exclude the best station even when every station loses",
@@ -202,11 +206,6 @@
     "at": "2026-10-23T15:21:19Z",
     "title": "CODE-01 Bind IEM coverage to the actual local calendar day",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-23T15:00:23Z",
-    "title": "Make guardian lost-response replay proof deterministic across idle safety ticks",
-    "area": "Test repairs"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T19:00:03Z",
+    "last_check_at": "2026-10-23T19:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +232,7 @@
      "flow brain capture missed",
      "flow release needs release"
     ],
-    "last_check_at": "2026-10-23T18:50:03Z",
+    "last_check_at": "2026-10-23T19:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T19:03:19Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Reject contradictory METAR physical feature groups” into the main build"
+   },
    {
     "at": "2026-10-23T18:59:14Z",
     "kind": "build",
@@ -358,11 +362,6 @@
     "at": "2026-10-23T17:43:22Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “Restore frozen METAR delta and repair WRH URL binding”: passed"
-   },
-   {
-    "at": "2026-10-23T17:32:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Restore frozen METAR delta and repair WRH URL binding” → sent to independent review"
    }
   ]
  },
@@ -373,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T19:00:01Z",
-   "heartbeat_at": "2026-10-23T19:00:02Z",
+   "status_at": "2026-10-23T19:05:02Z",
+   "heartbeat_at": "2026-10-23T19:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +382,7 @@
     "weather_events": 412,
     "markets": 4095,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T18:57:06Z",
+    "last_scan_at": "2026-10-23T19:03:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T18:57:06Z",
+    "updated_at": "2026-10-23T19:03:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T18:59:40Z",
+    "updated_at": "2026-10-23T19:03:41Z",
     "detail": "observations retained"
    },
    {
@@ -639,8 +638,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 63,
-     "open_tasks": 8
+     "merged_tasks": 64,
+     "open_tasks": 7
     },
     {
      "id": "CODE-02",
