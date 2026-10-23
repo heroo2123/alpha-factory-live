@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T16:50:02Z",
+ "generated_at": "2026-10-23T16:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 8,
+    "count": 11,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -34,12 +34,12 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "43 merged in 24h"
+    "detail": "42 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 72,
+    "count": 79,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2c916309",
     "task": "PAPER-09 Validate book health and evidence class in PWS timing scores",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_b1c81657",
     "task": "CODE-01 Prevent omitted book receipts from hiding stream resets",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_1bdb24f5",
     "task": "CODE-01 Reject superseded books in standalone valuations",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 72,
+   "progress_pct": 79,
    "last_finished_at": "2026-10-23T14:04:15Z",
    "last_passed": 15950,
    "last_failed": 1,
@@ -116,21 +116,21 @@
   },
   "tests_passing": 15950,
   "flow": {
-   "merges_24h": 43,
-   "commits_24h": 43,
+   "merges_24h": 42,
+   "commits_24h": 42,
    "built_24h": 73,
    "build_failed_24h": 5,
    "reviews_passed_24h": 36,
    "reviews_changes_24h": 39,
    "commits_by_hour": [
-    3,
-    4,
-    2,
-    2,
     2,
     4,
     3,
     1,
+    3,
+    4,
+    3,
+    0,
     0,
     3,
     0,
@@ -140,19 +140,19 @@
     1,
     2,
     2,
+    2,
+    2,
     1,
-    2,
-    2,
     0,
-    2,
     3,
+    2,
     3
    ],
    "merge_holds": [
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 8,
+    "queued": 11,
     "building": 2,
     "in_review": 1,
     "awaiting_merge": 2,
@@ -162,7 +162,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-23T16:40:16Z",
+   "last_run_at": "2026-10-23T16:50:14Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T16:50:02Z",
+    "last_check_at": "2026-10-23T16:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +232,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T16:40:03Z",
+    "last_check_at": "2026-10-23T16:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 464,
-    "last_run_at": "2026-10-23T16:50:02Z",
+    "runs_total": 465,
+    "last_run_at": "2026-10-23T16:55:01Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T16:55:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-23T16:50:14Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-23T16:50:02Z",
     "kind": "heal",
@@ -324,16 +334,6 @@
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Prevent mixed synthetic and observed microstructure…”: passed"
    },
    {
-    "at": "2026-10-23T16:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow stuck waiting"
-   },
-   {
-    "at": "2026-10-23T16:10:22Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
     "at": "2026-10-23T16:08:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Prevent mixed synthetic and observed microstructure…” → sent to independent review"
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T16:49:53Z",
-   "heartbeat_at": "2026-10-23T16:50:02Z",
+   "status_at": "2026-10-23T16:54:54Z",
+   "heartbeat_at": "2026-10-23T16:55:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 411,
     "markets": 4086,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T16:44:31Z",
+    "last_scan_at": "2026-10-23T16:50:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T16:44:31Z",
+    "updated_at": "2026-10-23T16:50:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T16:48:52Z",
+    "updated_at": "2026-10-23T16:54:54Z",
     "detail": "observations retained"
    },
    {
@@ -639,7 +639,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 60,
-     "open_tasks": 9
+     "open_tasks": 12
     },
     {
      "id": "CODE-02",
