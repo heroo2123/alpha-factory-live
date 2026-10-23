@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T06:25:02Z",
+ "generated_at": "2026-10-23T06:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 34,
     "unit": "queued",
     "active": false,
-    "detail": "36 ready to build"
+    "detail": "37 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "Anthropic",
     "task_id": "t_fdd0e2df",
     "task": "METAR strict contract must accept the published 30 h AWC lookup window",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "Anthropic",
     "task_id": "t_7a3b6b25",
     "task": "PAPER-02 METAR daily-review publisher/authority + multimodel panel accept the published…",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
@@ -126,8 +126,8 @@
     0,
     3,
     0,
-    0,
-    6,
+    1,
+    5,
     0,
     13,
     0,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T06:25:02Z",
+    "last_check_at": "2026-10-23T06:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-23",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T06:24:40Z",
-   "heartbeat_at": "2026-10-23T06:25:02Z",
+   "status_at": "2026-10-23T06:29:40Z",
+   "heartbeat_at": "2026-10-23T06:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 423,
-    "markets": 4201,
+    "weather_events": 419,
+    "markets": 4157,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T06:20:57Z",
+    "last_scan_at": "2026-10-23T06:26:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T06:20:57Z",
+    "updated_at": "2026-10-23T06:26:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T06:24:25Z",
+    "updated_at": "2026-10-23T06:28:33Z",
     "detail": "gated"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 33 untouched city-days (11 cities, 3 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 36 untouched city-days (11 cities, 4 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 57,
    "waiting_city_days": 8,
@@ -535,7 +535,7 @@
     },
     {
      "item": "Not worse than the market on new untouched days",
-     "have": 3,
+     "have": 4,
      "need": 10,
      "done": false,
      "detail": "waiting for a frozen candidate"
@@ -1090,7 +1090,7 @@
    {
     "step": "Forecast brain passes a preregistered historical test and is not worse than the market on new days",
     "state": "active",
-    "detail": "0 of 3 candidate models used · 3 of 10 untouched days"
+    "detail": "0 of 3 candidate models used · 4 of 10 untouched days"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
