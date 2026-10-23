@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T17:25:02Z",
+ "generated_at": "2026-10-23T17:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -18,23 +18,23 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "73 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "41 merged in 24h"
+    "detail": "40 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_14378e0e",
     "task": "Restore frozen METAR delta and repair WRH URL binding",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_796127dc",
     "task": "CODE-01 Measure exit markouts from valid bid-only books",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_b1c81657",
-    "task": "CODE-01 Prevent omitted book receipts from hiding stream resets",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 16016,
   "flow": {
-   "merges_24h": 41,
+   "merges_24h": 40,
    "commits_24h": 40,
-   "built_24h": 74,
+   "built_24h": 73,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 34,
+   "reviews_passed_24h": 35,
    "reviews_changes_24h": 41,
    "commits_by_hour": [
     3,
@@ -149,13 +149,14 @@
     0
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 12,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 1,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 468,
     "parked": 351
    }
@@ -214,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T17:25:02Z",
+    "last_check_at": "2026-10-23T17:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T17:26:28Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Prevent omitted book receipts from hiding stream resets”: passed"
+   },
    {
     "at": "2026-10-23T17:25:02Z",
     "kind": "heal",
@@ -357,11 +363,6 @@
     "at": "2026-10-23T16:15:29Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Prevent mixed synthetic and observed microstructure…”: passed"
-   },
-   {
-    "at": "2026-10-23T16:08:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Prevent mixed synthetic and observed microstructure…” → sent to independent review"
    }
   ]
  },
@@ -372,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T17:24:55Z",
-   "heartbeat_at": "2026-10-23T17:25:01Z",
+   "status_at": "2026-10-23T17:29:56Z",
+   "heartbeat_at": "2026-10-23T17:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +383,7 @@
     "weather_events": 410,
     "markets": 4079,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T17:19:57Z",
+    "last_scan_at": "2026-10-23T17:25:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T17:19:57Z",
+    "updated_at": "2026-10-23T17:25:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T17:23:04Z",
+    "updated_at": "2026-10-23T17:29:06Z",
     "detail": "observations retained"
    },
    {
