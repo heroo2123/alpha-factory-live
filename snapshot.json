@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T22:55:01Z",
+ "generated_at": "2026-10-23T23:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0c549268",
     "task": "CODE-01 Remove daylight dependencies from daylight ablations",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_6908db19",
     "task": "CODE-01 Measure bid-only liquidation markouts",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Reviewer 1",
@@ -138,9 +138,9 @@
     2,
     1,
     0,
-    3,
+    4,
     2,
-    3,
+    2,
     0,
     3,
     3,
@@ -148,7 +148,10 @@
     3,
     3
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
     "queued": 8,
     "building": 2,
@@ -212,7 +215,7 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-23T22:55:01Z",
+    "last_check_at": "2026-10-23T23:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 497,
-    "last_run_at": "2026-10-23T22:55:01Z",
+    "runs_total": 498,
+    "last_run_at": "2026-10-23T23:00:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow release needs release",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T23:00:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release needs release"
+   },
    {
     "at": "2026-10-23T22:55:01Z",
     "kind": "heal",
@@ -317,11 +325,6 @@
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Rank basket opportunities using exact economic ratios”: passed"
    },
    {
-    "at": "2026-10-23T22:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-23T22:18:16Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Gate simulated settlement marks on label availability”: passed"
@@ -370,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T22:54:15Z",
-   "heartbeat_at": "2026-10-23T22:55:02Z",
+   "status_at": "2026-10-23T22:59:15Z",
+   "heartbeat_at": "2026-10-23T23:00:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T22:55:00Z",
+    "updated_at": "2026-10-23T22:59:01Z",
     "detail": "observations retained"
    },
    {
