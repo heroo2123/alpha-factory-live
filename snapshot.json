@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T18:05:01Z",
+ "generated_at": "2026-10-23T18:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 10,
+    "count": 9,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "73 built in 24h"
+    "detail": "74 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_82f9389d",
-    "task": "CODE-01 Validate schedule provenance before attaching release timing",
-    "elapsed_min": 32
+    "task_id": "t_5cfda2a3",
+    "task": "CODE-01 Rank basket opportunities using exact economic ratios",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_82788fc5",
     "task": "CODE-01 Exclude the best station even when every station loses",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_82f9389d",
+    "task": "CODE-01 Validate schedule provenance before attaching release timing",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 16016,
   "flow": {
-   "merges_24h": 40,
-   "commits_24h": 40,
-   "built_24h": 73,
+   "merges_24h": 39,
+   "commits_24h": 39,
+   "built_24h": 74,
    "build_failed_24h": 5,
    "reviews_passed_24h": 35,
-   "reviews_changes_24h": 41,
+   "reviews_changes_24h": 40,
    "commits_by_hour": [
-    4,
+    3,
     2,
     2,
     2,
@@ -132,8 +132,8 @@
     0,
     1,
     2,
-    0,
     1,
+    0,
     0,
     0,
     1,
@@ -142,8 +142,8 @@
     2,
     2,
     1,
-    1,
-    3,
+    2,
+    2,
     3,
     1,
     1
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 10,
+    "queued": 9,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 469,
     "parked": 351
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T18:05:02Z",
+    "last_check_at": "2026-10-23T18:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 470,
-    "last_run_at": "2026-10-23T18:05:01Z",
+    "runs_total": 471,
+    "last_run_at": "2026-10-23T18:10:03Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow shadow stuck waiting",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T18:10:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
+   },
+   {
+    "at": "2026-10-23T18:08:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Validate schedule provenance before attaching release timing” → sent to independent review"
+   },
    {
     "at": "2026-10-23T18:05:01Z",
     "kind": "heal",
@@ -329,11 +339,6 @@
     "text": "Full test suite finished: 16016 passed, 0 failed"
    },
    {
-    "at": "2026-10-23T17:00:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-23T16:57:19Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject superseded books in standalone valuations”: changes required"
@@ -357,11 +362,6 @@
     "at": "2026-10-23T16:42:17Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T16:40:16Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T18:04:58Z",
-   "heartbeat_at": "2026-10-23T18:05:01Z",
+   "status_at": "2026-10-23T18:09:58Z",
+   "heartbeat_at": "2026-10-23T18:10:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 410,
     "markets": 4079,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T18:01:13Z",
+    "last_scan_at": "2026-10-23T18:07:29Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T18:01:13Z",
+    "updated_at": "2026-10-23T18:07:29Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T18:03:23Z",
+    "updated_at": "2026-10-23T18:09:25Z",
     "detail": "observations retained"
    },
    {
