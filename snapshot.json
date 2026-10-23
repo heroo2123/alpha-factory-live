@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T00:40:02Z",
+ "generated_at": "2026-10-23T00:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 23,
     "unit": "queued",
     "active": false,
-    "detail": "26 ready to build"
+    "detail": "25 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_c5e4e50f",
+    "task": "CODE-01 PAPER reward maker : causal per-minute paper runner with variants over captured…",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_4988bd8f",
     "task": "CODE-01 Record source issue time, first receipt, provider, revision and freshness in the…",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Reviewer 1",
@@ -120,7 +120,7 @@
    "commits_24h": 75,
    "built_24h": 53,
    "build_failed_24h": 7,
-   "reviews_passed_24h": 62,
+   "reviews_passed_24h": 61,
    "reviews_changes_24h": 24,
    "commits_by_hour": [
     0,
@@ -132,30 +132,30 @@
     0,
     3,
     0,
-    3,
-    3,
-    3,
-    10,
+    6,
     0,
-    0,
-    9,
-    4,
-    4,
-    2,
-    1,
-    2,
     5,
+    8,
+    0,
+    0,
+    10,
+    3,
+    4,
     2,
-    2
+    2,
+    2,
+    4,
+    3,
+    1
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
     "targeted tests failed recently backoff"
    ],
    "stage_totals": {
-    "queued": 24,
+    "queued": 23,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 4,
     "merged": 446,
     "parked": 242
@@ -212,14 +212,14 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T00:40:02Z",
+    "last_check_at": "2026-10-23T00:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 8,
     "by_severity": {
      "P0": 0,
      "P1": 4,
@@ -233,15 +233,15 @@
      "flow green release failed",
      "flow release repeated same failure"
     ],
-    "last_check_at": "2026-10-23T00:30:02Z",
+    "last_check_at": "2026-10-23T00:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 389,
-    "last_run_at": "2026-10-23T00:40:02Z",
+    "runs_total": 390,
+    "last_run_at": "2026-10-23T00:45:01Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow release repeated same failure",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T00:45:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow release repeated same failure"
+   },
+   {
+    "at": "2026-10-23T00:42:07Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-23T00:40:19Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Station registry: current-state/quarantine-history summary…” → sent to independent review"
+   },
    {
     "at": "2026-10-23T00:40:02Z",
     "kind": "heal",
@@ -315,11 +330,6 @@
     "text": "Codex (GPT-6 Sol) built “CODE-01 Produce first-class SOURCE_SCHEDULE release events with…” → sent to independent review"
    },
    {
-    "at": "2026-10-23T00:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow evals all gated"
-   },
-   {
     "at": "2026-10-23T00:00:11Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro build attempt ended: no code change"
@@ -353,16 +363,6 @@
     "at": "2026-10-22T23:33:17Z",
     "kind": "build",
     "text": "Claude Sonnet built “CODE-01 Persist and re-verify the R31 contract-finality verdict and…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-22T23:24:19Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Regression-test PWS discovery box from exact station lat/lon…”: passed"
-   },
-   {
-    "at": "2026-10-22T23:22:17Z",
-    "kind": "build",
-    "text": "Claude Sonnet built “CODE-01 Regression-test PWS discovery box from exact station lat/lon…” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-21T12:15:02Z",
    "day": "2026-10-22",
    "state": "census service",
-   "status_at": "2026-10-23T00:39:59Z",
-   "heartbeat_at": "2026-10-23T00:40:01Z",
+   "status_at": "2026-10-23T00:44:59Z",
+   "heartbeat_at": "2026-10-23T00:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 435,
     "markets": 4352,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T00:38:38Z",
+    "last_scan_at": "2026-10-23T00:44:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T00:38:38Z",
+    "updated_at": "2026-10-23T00:44:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T00:38:20Z",
+    "updated_at": "2026-10-23T00:44:22Z",
     "detail": "observations retained"
    },
    {
