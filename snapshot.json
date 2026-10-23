@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T16:45:02Z",
+ "generated_at": "2026-10-23T16:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 8,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 69,
+    "count": 72,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2c916309",
     "task": "PAPER-09 Validate book health and evidence class in PWS timing scores",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_1bdb24f5",
-    "task": "CODE-01 Reject superseded books in standalone valuations",
-    "elapsed_min": 27
+    "task_id": "t_b1c81657",
+    "task": "CODE-01 Prevent omitted book receipts from hiding stream resets",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_4252cf3d",
-    "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 2
+    "task_id": "t_1bdb24f5",
+    "task": "CODE-01 Reject superseded books in standalone valuations",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 69,
+   "progress_pct": 72,
    "last_finished_at": "2026-10-23T14:04:15Z",
    "last_passed": 15950,
    "last_failed": 1,
@@ -120,8 +120,8 @@
    "commits_24h": 43,
    "built_24h": 73,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 37,
-   "reviews_changes_24h": 38,
+   "reviews_passed_24h": 36,
+   "reviews_changes_24h": 39,
    "commits_by_hour": [
     3,
     4,
@@ -157,7 +157,7 @@
     "in_review": 1,
     "awaiting_merge": 2,
     "merged": 468,
-    "parked": 347
+    "parked": 348
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T16:45:03Z",
+    "last_check_at": "2026-10-23T16:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 463,
-    "last_run_at": "2026-10-23T16:45:03Z",
+    "runs_total": 464,
+    "last_run_at": "2026-10-23T16:50:02Z",
     "last_ok": true,
-    "last_kind": "flow release needs release",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T16:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-23T16:48:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Reject superseded books in standalone valuations” → sent to independent review"
+   },
+   {
+    "at": "2026-10-23T16:46:18Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Require covered IEM agreement for contract finality”: changes required"
+   },
    {
     "at": "2026-10-23T16:45:03Z",
     "kind": "heal",
@@ -319,11 +334,6 @@
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    },
    {
-    "at": "2026-10-23T16:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-23T16:08:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Prevent mixed synthetic and observed microstructure…” → sent to independent review"
@@ -352,16 +362,6 @@
     "at": "2026-10-23T15:44:25Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Keep overdue unconfirmed release schedules fail-closed”: passed"
-   },
-   {
-    "at": "2026-10-23T15:41:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Require matching collateral on every transform book” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T15:38:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: full suite not green"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T16:44:53Z",
-   "heartbeat_at": "2026-10-23T16:45:03Z",
+   "status_at": "2026-10-23T16:49:53Z",
+   "heartbeat_at": "2026-10-23T16:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T16:44:50Z",
+    "updated_at": "2026-10-23T16:48:52Z",
     "detail": "observations retained"
    },
    {
@@ -639,7 +639,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 60,
-     "open_tasks": 10
+     "open_tasks": 9
     },
     {
      "id": "CODE-02",
