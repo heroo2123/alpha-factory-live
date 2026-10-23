@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T21:50:02Z",
+ "generated_at": "2026-10-23T21:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 7,
+    "count": 8,
     "unit": "queued",
     "active": false,
-    "detail": "8 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "41 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_5cfda2a3",
     "task": "CODE-01 Rank basket opportunities using exact economic ratios",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_b1c81657",
     "task": "CODE-01 Prevent omitted book receipts from hiding stream resets",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 1",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,16 +116,16 @@
   },
   "tests_passing": 16253,
   "flow": {
-   "merges_24h": 40,
+   "merges_24h": 41,
    "commits_24h": 40,
    "built_24h": 74,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 48,
-   "reviews_changes_24h": 27,
+   "reviews_passed_24h": 49,
+   "reviews_changes_24h": 26,
    "commits_by_hour": [
     4,
     3,
-    1,
+    0,
     0,
     3,
     0,
@@ -135,30 +135,29 @@
     1,
     2,
     2,
+    2,
+    2,
     1,
-    2,
-    2,
     0,
-    2,
     3,
+    2,
     3,
     0,
     3,
     3,
     2,
-    2
+    3
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 7,
+    "queued": 8,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 3,
-    "merged": 478,
-    "parked": 357
+    "in_review": 0,
+    "awaiting_merge": 2,
+    "merged": 479,
+    "parked": 358
    }
   },
   "architect": {
@@ -168,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-23T21:52:18Z",
+    "title": "CODE-01 Revalidate ASOS series before deriving observations",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-23T21:13:18Z",
     "title": "CODE-01 Reject omitted causal corrections in nowcast inputs",
@@ -202,11 +206,6 @@
     "at": "2026-10-23T18:33:33Z",
     "title": "CODE-01 Exclude the best station even when every station loses",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-23T18:23:44Z",
-    "title": "CODE-01 Validate schedule provenance before attaching release timing",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-23T21:50:03Z",
+    "last_check_at": "2026-10-23T21:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,15 +232,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-23T21:40:03Z",
+    "last_check_at": "2026-10-23T21:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 488,
-    "last_run_at": "2026-10-23T21:50:02Z",
+    "runs_total": 489,
+    "last_run_at": "2026-10-23T21:55:01Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "flow green release failed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T21:55:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
+   },
+   {
+    "at": "2026-10-23T21:52:18Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Revalidate ASOS series before deriving observations” into the main build"
+   },
+   {
+    "at": "2026-10-23T21:51:16Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1e3d458a d23ca00c9924”: passed"
+   },
    {
     "at": "2026-10-23T21:50:02Z",
     "kind": "heal",
@@ -320,11 +334,6 @@
     "text": "Operator AI (Claude Opus) audit run: flow release needs release"
    },
    {
-    "at": "2026-10-23T21:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-23T21:04:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Reject omitted causal corrections in nowcast inputs” → sent to independent review"
@@ -353,16 +362,6 @@
     "at": "2026-10-23T20:33:29Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Include archived public trades in maker runtime features” into the main build"
-   },
-   {
-    "at": "2026-10-23T20:18:00Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Include archived public trades in maker runtime features”: passed"
-   },
-   {
-    "at": "2026-10-23T20:16:23Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1e3d458a d23ca00c9924”: passed"
    }
   ]
  },
@@ -373,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T21:49:12Z",
-   "heartbeat_at": "2026-10-23T21:50:04Z",
+   "status_at": "2026-10-23T21:54:12Z",
+   "heartbeat_at": "2026-10-23T21:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T21:48:39Z",
+    "updated_at": "2026-10-23T21:54:41Z",
     "detail": "observations retained"
    },
    {
@@ -639,8 +638,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 69,
-     "open_tasks": 7
+     "merged_tasks": 70,
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
