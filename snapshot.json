@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T23:40:01Z",
+ "generated_at": "2026-10-23T23:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 9,
+    "count": 8,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "40 merged in 24h"
+    "detail": "39 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_a12bfc82",
+    "task": "CODE-01 Propagate synthetic provenance into release assessments",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -80,20 +80,10 @@
     "family": "OpenAI",
     "task_id": "t_42588281",
     "task": "CODE-01 Require the exact WRH source family for observation-close derivation",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
-    "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_56b74669",
-    "task": "CODE-01 Validate IEM provenance before emitting corroboration",
-    "elapsed_min": 0
-   },
-   {
-    "slot": "Reviewer 2",
     "role": "review",
     "state": "waiting",
     "model": "",
@@ -101,6 +91,16 @@
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 2",
+    "role": "review",
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_eea2f842",
+    "task": "CODE-01 Prevent partial fills from reusing horizon depth",
+    "elapsed_min": 4
    }
   ],
   "qa": {
@@ -116,46 +116,47 @@
   },
   "tests_passing": 16253,
   "flow": {
-   "merges_24h": 40,
-   "commits_24h": 40,
+   "merges_24h": 39,
+   "commits_24h": 39,
    "built_24h": 75,
    "build_failed_24h": 5,
    "reviews_passed_24h": 55,
    "reviews_changes_24h": 21,
    "commits_by_hour": [
+    1,
+    0,
+    3,
+    0,
+    1,
+    0,
+    0,
+    1,
+    2,
+    2,
+    1,
+    2,
     2,
     0,
     2,
-    1,
-    1,
-    0,
-    0,
-    1,
-    1,
-    3,
-    1,
-    1,
-    3,
-    0,
-    2,
     3,
     3,
     0,
+    3,
     3,
     2,
-    3,
     2,
     3,
     3
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 9,
+    "queued": 8,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 1,
+    "awaiting_merge": 2,
     "merged": 484,
     "parked": 361
    }
@@ -210,19 +211,19 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-23T23:40:02Z",
+    "last_check_at": "2026-10-23T23:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 9,
     "by_severity": {
      "P0": 0,
      "P1": 3,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
      "flow glm plan lane dead",
@@ -232,7 +233,7 @@
      "flow release needs release",
      "flow brain harvest incomplete"
     ],
-    "last_check_at": "2026-10-23T23:30:03Z",
+    "last_check_at": "2026-10-23T23:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +254,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T23:42:17Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Validate IEM provenance before emitting corroboration”: passed"
+   },
+   {
+    "at": "2026-10-23T23:40:18Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Prevent partial fills from reusing horizon depth” → sent to independent review"
+   },
    {
     "at": "2026-10-23T23:39:15Z",
     "kind": "build",
@@ -352,16 +363,6 @@
     "at": "2026-10-23T22:40:07Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-23T22:34:27Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Rank basket opportunities using exact economic ratios” into the main build"
-   },
-   {
-    "at": "2026-10-23T22:21:16Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Rank basket opportunities using exact economic ratios”: passed"
    }
   ]
  },
@@ -372,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T23:39:18Z",
-   "heartbeat_at": "2026-10-23T23:40:02Z",
+   "status_at": "2026-10-23T23:44:18Z",
+   "heartbeat_at": "2026-10-23T23:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +383,7 @@
     "weather_events": 380,
     "markets": 3745,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T23:34:48Z",
+    "last_scan_at": "2026-10-23T23:40:23Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T23:34:48Z",
+    "updated_at": "2026-10-23T23:40:23Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T23:39:14Z",
+    "updated_at": "2026-10-23T23:43:16Z",
     "detail": "observations retained"
    },
    {
