@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T17:35:02Z",
+ "generated_at": "2026-10-23T17:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_82f9389d",
     "task": "CODE-01 Validate schedule provenance before attaching release timing",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_796127dc",
     "task": "CODE-01 Measure exit markouts from valid bid-only books",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Reviewer 1",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_14378e0e",
     "task": "Restore frozen METAR delta and repair WRH URL binding",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 2",
@@ -127,8 +127,8 @@
     2,
     1,
     2,
-    4,
-    3,
+    5,
+    2,
     2,
     0,
     2,
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-23T17:35:02Z",
+    "last_check_at": "2026-10-23T17:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T17:34:56Z",
-   "heartbeat_at": "2026-10-23T17:35:02Z",
+   "status_at": "2026-10-23T17:39:56Z",
+   "heartbeat_at": "2026-10-23T17:40:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 410,
     "markets": 4079,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T17:31:58Z",
+    "last_scan_at": "2026-10-23T17:37:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,21 +399,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-23T16:37:03Z",
+    "updated_at": "2026-10-23T17:37:02Z",
     "detail": "multi-city capture collecting"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T17:31:58Z",
+    "updated_at": "2026-10-23T17:37:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T17:33:08Z",
+    "updated_at": "2026-10-23T17:39:10Z",
     "detail": "observations retained"
    },
    {
