@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T21:55:01Z",
+ "generated_at": "2026-10-23T22:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "41 merged in 24h"
+    "detail": "40 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_5cfda2a3",
     "task": "CODE-01 Rank basket opportunities using exact economic ratios",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_b1c81657",
     "task": "CODE-01 Prevent omitted book receipts from hiding stream resets",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
@@ -116,7 +116,7 @@
   },
   "tests_passing": 16253,
   "flow": {
-   "merges_24h": 41,
+   "merges_24h": 40,
    "commits_24h": 40,
    "built_24h": 74,
    "build_failed_24h": 5,
@@ -139,9 +139,9 @@
     2,
     1,
     0,
-    3,
+    4,
     2,
-    3,
+    2,
     0,
     3,
     3,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 10,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-23T21:55:02Z",
+    "last_check_at": "2026-10-23T22:00:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 489,
-    "last_run_at": "2026-10-23T21:55:01Z",
+    "runs_total": 490,
+    "last_run_at": "2026-10-23T22:00:03Z",
     "last_ok": true,
-    "last_kind": "flow green release failed",
+    "last_kind": "flow shadow stuck waiting",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-23T22:00:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
+   },
    {
     "at": "2026-10-23T21:55:01Z",
     "kind": "heal",
@@ -329,11 +334,6 @@
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject omitted causal corrections in nowcast inputs”: passed"
    },
    {
-    "at": "2026-10-23T21:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow release needs release"
-   },
-   {
     "at": "2026-10-23T21:04:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Reject omitted causal corrections in nowcast inputs” → sent to independent review"
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T21:54:12Z",
-   "heartbeat_at": "2026-10-23T21:55:02Z",
+   "status_at": "2026-10-23T21:59:12Z",
+   "heartbeat_at": "2026-10-23T22:00:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 398,
-    "markets": 3943,
+    "weather_events": 397,
+    "markets": 3932,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T21:49:49Z",
+    "last_scan_at": "2026-10-23T21:55:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T21:49:49Z",
+    "updated_at": "2026-10-23T21:55:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T21:54:41Z",
+    "updated_at": "2026-10-23T21:58:42Z",
     "detail": "observations retained"
    },
    {
