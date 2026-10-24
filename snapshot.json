@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T17:25:02Z",
+ "generated_at": "2026-10-24T17:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 36,
+    "count": 35,
     "unit": "queued",
     "active": false,
     "detail": "38 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "69 built in 24h"
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "50 merged in 24h"
@@ -66,31 +66,31 @@
     "slot": "Builder 1",
     "role": "build",
     "state": "working",
-    "model": "Codex (GPT-6 Sol)",
+    "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_477fc701",
-    "task": "CODE-01 Gate paper quotes on book freshness",
-    "elapsed_min": 2
+    "task_id": "t_60b157ce",
+    "task": "Refuse historical causal READY without predecision rule provenance",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_40cec15f",
-    "task": "CODE-01 Measure fill markouts when only the required horizon side exists",
-    "elapsed_min": 26
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_477fc701",
+    "task": "CODE-01 Gate paper quotes on book freshness",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -120,8 +120,8 @@
    "commits_24h": 50,
    "built_24h": 69,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 57,
-   "reviews_changes_24h": 28,
+   "reviews_passed_24h": 58,
+   "reviews_changes_24h": 27,
    "commits_by_hour": [
     2,
     3,
@@ -150,10 +150,10 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 36,
-    "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 0,
+    "queued": 35,
+    "building": 1,
+    "in_review": 2,
+    "awaiting_merge": 1,
     "merged": 518,
     "parked": 380
    }
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 4,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T17:25:02Z",
+    "last_check_at": "2026-10-24T17:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,7 +235,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 615,
+    "runs_total": 616,
     "last_run_at": "2026-10-24T17:25:02Z",
     "last_ok": true,
     "last_kind": "flow code drift frozen copy",
@@ -250,6 +250,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T17:29:29Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Measure fill markouts when only the required horizon side…”: passed"
+   },
+   {
+    "at": "2026-10-24T17:29:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Gate paper quotes on book freshness” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T17:27:22Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Measure fill markouts when only the required horizon side…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T17:25:02Z",
     "kind": "heal",
@@ -344,21 +359,6 @@
     "at": "2026-10-24T16:12:19Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Build bounded V11_PAPER health frontier”: changes required"
-   },
-   {
-    "at": "2026-10-24T16:10:27Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Build bounded V11_PAPER health frontier” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T16:03:48Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Recheck forecast freshness when resuming partial preparation” into the main build"
-   },
-   {
-    "at": "2026-10-24T15:58:56Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T17:25:01Z",
-   "heartbeat_at": "2026-10-24T17:25:02Z",
+   "status_at": "2026-10-24T17:30:03Z",
+   "heartbeat_at": "2026-10-24T17:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +379,7 @@
     "weather_events": 366,
     "markets": 3589,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T17:22:31Z",
+    "last_scan_at": "2026-10-24T17:28:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T17:22:31Z",
+    "updated_at": "2026-10-24T17:28:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T17:24:52Z",
+    "updated_at": "2026-10-24T17:28:54Z",
     "detail": "observations retained"
    },
    {
