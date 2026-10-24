@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T03:25:01Z",
+ "generated_at": "2026-10-24T03:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_68651d84",
     "task": "CODE-01 Reject superseded daylight inputs at the feature cutoff",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_44b74d15",
     "task": "CODE-01 Bind performance attribution to admission valid at entry valuation",
-    "elapsed_min": 30
+    "elapsed_min": 35
    },
    {
     "slot": "Reviewer 1",
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T03:25:02Z",
+    "last_check_at": "2026-10-24T03:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,10 +235,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 525,
-    "last_run_at": "2026-10-24T03:25:02Z",
+    "runs_total": 526,
+    "last_run_at": "2026-10-24T03:30:02Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "flow green release failed",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T03:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow green release failed"
+   },
    {
     "at": "2026-10-24T03:25:02Z",
     "kind": "heal",
@@ -321,11 +326,6 @@
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    },
    {
-    "at": "2026-10-24T02:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-24T02:48:22Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Expose infinite-loss regressions in PWS score summaries”: passed"
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T03:24:30Z",
-   "heartbeat_at": "2026-10-24T03:25:01Z",
+   "status_at": "2026-10-24T03:29:31Z",
+   "heartbeat_at": "2026-10-24T03:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +379,7 @@
     "weather_events": 375,
     "markets": 3676,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T03:23:33Z",
+    "last_scan_at": "2026-10-24T03:29:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T03:23:33Z",
+    "updated_at": "2026-10-24T03:29:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T03:24:31Z",
+    "updated_at": "2026-10-24T03:28:32Z",
     "detail": "observations retained"
    },
    {
