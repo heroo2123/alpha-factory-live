@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T23:25:02Z",
+ "generated_at": "2026-10-24T23:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 25,
     "unit": "queued",
     "active": false,
     "detail": "28 ready to build"
@@ -15,23 +15,23 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "65 built in 24h"
+    "detail": "63 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "46 merged in 24h"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_5d0a024a",
-    "task": "Finish atomic fee capture raw-rule CAS, append deadline and failure receipts",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "DeepSeek",
     "task_id": "t_4d47bbfb",
     "task": "CODE-01 Make cost aggregation and EV arithmetic context-independent",
-    "elapsed_min": 27
+    "elapsed_min": 32
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_e05c2528",
-    "task": "a build task",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_e891bfbe",
-    "task": "FLEX candidate t_e2e6cd65 0ce67d38a7c0",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 46,
    "commits_24h": 46,
-   "built_24h": 65,
-   "build_failed_24h": 7,
-   "reviews_passed_24h": 55,
+   "built_24h": 63,
+   "build_failed_24h": 8,
+   "reviews_passed_24h": 56,
    "reviews_changes_24h": 32,
    "commits_by_hour": [
     3,
@@ -152,10 +152,10 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 24,
-    "building": 2,
-    "in_review": 2,
-    "awaiting_merge": 1,
+    "queued": 25,
+    "building": 1,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 529,
     "parked": 400
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T23:25:02Z",
+    "last_check_at": "2026-10-24T23:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,7 +237,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 652,
+    "runs_total": 653,
     "last_run_at": "2026-10-24T23:25:02Z",
     "last_ok": true,
     "last_kind": "flow brain harvest incomplete",
@@ -252,6 +252,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T23:29:27Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_e2e6cd65 0ce67d38a7c0”: passed"
+   },
+   {
+    "at": "2026-10-24T23:29:12Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-24T23:26:17Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-24T23:25:02Z",
     "kind": "heal",
@@ -346,21 +361,6 @@
     "at": "2026-10-24T22:18:19Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-24T22:18:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed development milestone alerts"
-   },
-   {
-    "at": "2026-10-24T22:06:40Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-24T22:06:33Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_47532602 2223b28e4f03”: passed"
    }
   ]
  },
@@ -371,17 +371,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T23:25:03Z",
-   "heartbeat_at": "2026-10-24T23:25:02Z",
+   "status_at": "2026-10-24T23:30:00Z",
+   "heartbeat_at": "2026-10-24T23:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 320,
-    "markets": 3085,
+    "weather_events": 317,
+    "markets": 3052,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T23:20:10Z",
+    "last_scan_at": "2026-10-24T23:26:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T23:20:10Z",
+    "updated_at": "2026-10-24T23:26:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T23:23:25Z",
+    "updated_at": "2026-10-24T23:29:28Z",
     "detail": "observations retained"
    },
    {
