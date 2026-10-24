@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T05:50:02Z",
+ "generated_at": "2026-10-24T05:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 28,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "24 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "75 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_6c861bbd",
-    "task": "CODE-01 Reject malformed ask containers in sale valuations",
-    "elapsed_min": 22
+    "task_id": "t_d26b025d",
+    "task": "Freeze-and-register a candidate in the preregistered holdout registry before any…",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_6c861bbd",
+    "task": "CODE-01 Reject malformed ask containers in sale valuations",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -118,46 +118,46 @@
   "flow": {
    "merges_24h": 51,
    "commits_24h": 51,
-   "built_24h": 74,
+   "built_24h": 75,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 63,
+   "reviews_passed_24h": 62,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
     0,
     1,
     2,
     2,
+    2,
+    2,
     1,
-    2,
-    2,
     0,
-    2,
     3,
+    2,
     3,
     0,
     3,
     3,
     2,
+    3,
+    3,
     2,
-    3,
-    3,
-    3,
+    4,
     5,
     4,
     3,
-    1,
+    0,
     1
    ],
    "merge_holds": [
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 15,
+    "queued": 28,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 501,
-    "parked": 370
+    "parked": 356
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T05:50:02Z",
+    "last_check_at": "2026-10-24T05:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,10 +228,10 @@
      "flow glm plan lane dead",
      "flow pws ingest gated",
      "flow brain capture missed",
-     "flow release needs release",
+     "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T05:40:03Z",
+    "last_check_at": "2026-10-24T05:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T05:53:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Reject malformed ask containers in sale valuations” → sent to independent review"
+   },
    {
     "at": "2026-10-24T05:50:03Z",
     "kind": "release",
@@ -355,11 +360,6 @@
     "at": "2026-10-24T03:59:52Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Make settlement rounding independent of Decimal context” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T03:54:33Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Bind performance attribution to admission valid at entry…” into the main build"
    }
   ]
  },
@@ -369,9 +369,9 @@
    "release": "b55e511",
    "commissioned_at": "2026-10-24T05:45:02Z",
    "day": "2026-10-25",
-   "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-24T05:49:56Z",
-   "heartbeat_at": "2026-10-24T05:50:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-24T05:51:16Z",
+   "heartbeat_at": "2026-10-24T05:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 362,
     "markets": 3528,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T05:45:32Z",
+    "last_scan_at": "2026-10-24T05:51:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T05:45:32Z",
+    "updated_at": "2026-10-24T05:51:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T05:49:07Z",
+    "updated_at": "2026-10-24T05:53:08Z",
     "detail": "gated"
    },
    {
@@ -637,7 +637,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 88,
-     "open_tasks": 5
+     "open_tasks": 9
     },
     {
      "id": "CODE-02",
@@ -682,7 +682,7 @@
      "status": "accepted",
      "detail": "accepted by an independent reviewer",
      "merged_tasks": 2,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-04",
