@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T09:00:03Z",
+ "generated_at": "2026-10-24T09:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "53 merged in 24h"
+    "detail": "52 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_a4b22808",
     "task": "PAPER-02 runtime-origin and candidate-variant provenance design repair",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -116,37 +116,37 @@
   },
   "tests_passing": 16075,
   "flow": {
-   "merges_24h": 53,
-   "commits_24h": 53,
+   "merges_24h": 52,
+   "commits_24h": 52,
    "built_24h": 74,
    "build_failed_24h": 6,
    "reviews_passed_24h": 63,
    "reviews_changes_24h": 16,
    "commits_by_hour": [
-    2,
+    1,
     2,
     2,
     1,
-    0,
-    4,
-    2,
-    2,
-    0,
+    1,
+    3,
+    3,
+    1,
+    1,
     3,
     3,
     2,
     3,
-    3,
     2,
+    3,
     4,
     5,
-    4,
+    3,
     3,
     0,
     1,
+    3,
     2,
-    2,
-    1
+    0
    ],
    "merge_holds": [],
    "stage_totals": {
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 5,
     "recoveries_24h": 3,
-    "last_check_at": "2026-10-24T09:00:03Z",
+    "last_check_at": "2026-10-24T09:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +230,15 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T08:50:02Z",
+    "last_check_at": "2026-10-24T09:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 561,
-    "last_run_at": "2026-10-24T08:45:02Z",
+    "runs_total": 562,
+    "last_run_at": "2026-10-24T09:05:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow code drift frozen copy",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T09:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow code drift frozen copy"
+   },
    {
     "at": "2026-10-24T08:45:02Z",
     "kind": "heal",
@@ -279,11 +284,6 @@
     "at": "2026-10-24T08:30:03Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
-   },
-   {
-    "at": "2026-10-24T08:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
    },
    {
     "at": "2026-10-24T08:10:20Z",
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T08:59:58Z",
-   "heartbeat_at": "2026-10-24T09:00:04Z",
+   "status_at": "2026-10-24T09:05:02Z",
+   "heartbeat_at": "2026-10-24T09:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +379,7 @@
     "weather_events": 361,
     "markets": 3517,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T08:58:29Z",
+    "last_scan_at": "2026-10-24T09:04:09Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T08:58:29Z",
+    "updated_at": "2026-10-24T09:04:09Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T08:59:30Z",
+    "updated_at": "2026-10-24T09:03:32Z",
     "detail": "observations retained"
    },
    {
