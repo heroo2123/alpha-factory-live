@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T18:25:01Z",
+ "generated_at": "2026-10-24T18:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 16,
+    "count": 18,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_50230f16",
     "task": "Complete public socket stream to real risk adapter with causal checksum evidence",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_2f495c0d",
     "task": "CODE-01 Make settlement rounding independent of Decimal context",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 16,
+   "progress_pct": 18,
    "last_finished_at": "2026-10-24T15:04:40Z",
    "last_passed": 16563,
    "last_failed": 0,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T18:25:01Z",
+    "last_check_at": "2026-10-24T18:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,10 +236,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 622,
-    "last_run_at": "2026-10-24T18:25:02Z",
+    "runs_total": 623,
+    "last_run_at": "2026-10-24T18:30:03Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "flow shadow census churn",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T18:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow census churn"
+   },
    {
     "at": "2026-10-24T18:25:02Z",
     "kind": "heal",
@@ -327,11 +332,6 @@
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Invalidate cached marks across inventory mutations”: changes required"
    },
    {
-    "at": "2026-10-24T17:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow census churn"
-   },
-   {
     "at": "2026-10-24T17:39:25Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Invalidate cached marks across inventory mutations” → sent to independent review"
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T18:24:59Z",
-   "heartbeat_at": "2026-10-24T18:25:02Z",
+   "status_at": "2026-10-24T18:30:02Z",
+   "heartbeat_at": "2026-10-24T18:30:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 356,
     "markets": 3479,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T18:22:16Z",
+    "last_scan_at": "2026-10-24T18:28:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T18:22:16Z",
+    "updated_at": "2026-10-24T18:28:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T18:23:16Z",
+    "updated_at": "2026-10-24T18:29:18Z",
     "detail": "observations retained"
    },
    {
