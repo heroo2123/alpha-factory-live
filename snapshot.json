@@ -1,31 +1,31 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T00:20:02Z",
+ "generated_at": "2026-10-24T00:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 12,
+    "count": 10,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "75 built in 24h"
+    "detail": "74 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,12 +34,12 @@
     "count": 4,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "39 merged in 24h"
+    "detail": "40 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 18,
+    "count": 25,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_76a65704",
+    "task": "CODE-01 Floor sizing from the exact reducer product",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_04c428f0",
     "task": "CODE-01 Revalidate CLI report chronology before deriving labels",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_a12bfc82",
-    "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 18,
+   "progress_pct": 25,
    "last_finished_at": "2026-10-23T20:55:21Z",
    "last_passed": 16253,
    "last_failed": 0,
@@ -116,36 +116,36 @@
   },
   "tests_passing": 16253,
   "flow": {
-   "merges_24h": 39,
-   "commits_24h": 39,
-   "built_24h": 75,
+   "merges_24h": 40,
+   "commits_24h": 40,
+   "built_24h": 74,
    "build_failed_24h": 6,
-   "reviews_passed_24h": 58,
+   "reviews_passed_24h": 59,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
     0,
-    1,
     2,
     1,
-    0,
+    1,
     0,
     0,
     1,
+    0,
     4,
     0,
     2,
     3,
     0,
     2,
-    2,
     3,
-    1,
-    1,
-    4,
+    3,
+    0,
     2,
     3,
     2,
+    3,
     2,
+    3,
     3
    ],
    "merge_holds": [
@@ -153,12 +153,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 12,
-    "building": 1,
-    "in_review": 1,
+    "queued": 10,
+    "building": 2,
+    "in_review": 0,
     "awaiting_merge": 4,
-    "merged": 485,
-    "parked": 361
+    "merged": 486,
+    "parked": 362
    }
   },
   "architect": {
@@ -168,6 +168,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T00:23:25Z",
+    "title": "CODE-01 Require the exact WRH source family for observation-close derivation",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T00:02:19Z",
     "title": "CODE-01 Validate IEM provenance before emitting corroboration",
@@ -202,20 +207,15 @@
     "at": "2026-10-23T21:52:18Z",
     "title": "CODE-01 Revalidate ASOS series before deriving observations",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-23T21:13:18Z",
-    "title": "CODE-01 Reject omitted causal corrections in nowcast inputs",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-24T00:20:02Z",
+    "last_check_at": "2026-10-24T00:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -223,25 +223,25 @@
     "by_severity": {
      "P0": 0,
      "P1": 3,
-     "P2": 2
+     "P2": 3
     },
     "codes": [
+     "flow unmergeable reviewed work",
      "flow glm plan lane dead",
      "flow green release failed",
      "flow shadow stuck waiting",
      "flow brain capture missed",
-     "flow release needs release",
-     "flow ecmwf history incomplete"
+     "flow release needs release"
     ],
-    "last_check_at": "2026-10-24T00:10:02Z",
+    "last_check_at": "2026-10-24T00:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 505,
-    "last_run_at": "2026-10-24T00:20:02Z",
+    "runs_total": 506,
+    "last_run_at": "2026-10-24T00:25:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow release needs release",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T00:25:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow release needs release"
+   },
+   {
+    "at": "2026-10-24T00:23:25Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Require the exact WRH source family for observation-close…” into the main build"
+   },
+   {
+    "at": "2026-10-24T00:22:22Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Propagate synthetic provenance into release assessments”: passed"
+   },
    {
     "at": "2026-10-24T00:20:02Z",
     "kind": "heal",
@@ -310,11 +325,6 @@
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    },
    {
-    "at": "2026-10-24T00:00:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-23T23:56:21Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Require the exact WRH source family for observation-close…”: passed"
@@ -353,16 +363,6 @@
     "at": "2026-10-23T23:23:18Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Remove daylight dependencies from daylight ablations” into the main build"
-   },
-   {
-    "at": "2026-10-23T23:15:18Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Measure bid-only liquidation markouts”: passed"
-   },
-   {
-    "at": "2026-10-23T23:14:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Remove daylight dependencies from daylight ablations”: passed"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T00:19:20Z",
-   "heartbeat_at": "2026-10-24T00:20:02Z",
+   "status_at": "2026-10-24T00:24:20Z",
+   "heartbeat_at": "2026-10-24T00:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 378,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T00:14:42Z",
+    "last_scan_at": "2026-10-24T00:20:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T00:14:42Z",
+    "updated_at": "2026-10-24T00:20:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T00:19:27Z",
+    "updated_at": "2026-10-24T00:23:29Z",
     "detail": "observations retained"
    },
    {
@@ -639,8 +639,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 76,
-     "open_tasks": 11
+     "merged_tasks": 77,
+     "open_tasks": 9
     },
     {
      "id": "CODE-02",
