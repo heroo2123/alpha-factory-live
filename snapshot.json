@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T21:20:02Z",
+ "generated_at": "2026-10-24T21:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 28,
+    "count": 27,
     "unit": "queued",
     "active": false,
-    "detail": "31 ready to build"
+    "detail": "30 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "67 built in 24h"
+    "detail": "68 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 26,
+    "count": 28,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_d28c1ed5",
     "task": "FLEX candidate t_1605c84d 5930bd53c9bb",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -78,34 +78,34 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_c13c3ec7",
-    "task": "Write honest synthetic PAPER fill receipts from admitted intents",
-    "elapsed_min": 10
+    "task_id": "t_cf2c958a",
+    "task": "Prepare truthful next-day commissioning inputs instead of stale same-day forecast",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_a3286e38",
+    "task": "a build task",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_d9df67a0",
+    "task": "FLEX candidate t_c13c3ec7 eea9ad4fbf8c",
+    "elapsed_min": 2
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 26,
+   "progress_pct": 28,
    "last_finished_at": "2026-10-24T19:50:12Z",
    "last_passed": 16665,
    "last_failed": 0,
@@ -118,28 +118,28 @@
   "flow": {
    "merges_24h": 46,
    "commits_24h": 46,
-   "built_24h": 67,
+   "built_24h": 68,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 53,
+   "reviews_passed_24h": 52,
    "reviews_changes_24h": 34,
    "commits_by_hour": [
     2,
-    2,
+    3,
     3,
     5,
     4,
-    4,
-    2,
-    1,
-    1,
-    2,
-    2,
-    0,
-    2,
-    0,
-    0,
-    2,
     3,
+    2,
+    1,
+    2,
+    1,
+    2,
+    0,
+    2,
+    0,
+    0,
+    3,
+    2,
     2,
     2,
     1,
@@ -153,9 +153,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 28,
+    "queued": 27,
     "building": 2,
-    "in_review": 0,
+    "in_review": 2,
     "awaiting_merge": 2,
     "merged": 524,
     "parked": 397
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T21:20:03Z",
+    "last_check_at": "2026-10-24T21:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
      "flow code drift frozen copy",
      "flow maintenance review packet invalid"
     ],
-    "last_check_at": "2026-10-24T21:10:03Z",
+    "last_check_at": "2026-10-24T21:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T21:22:20Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “Write honest synthetic PAPER fill receipts from admitted intents” → sent to independent review"
+   },
    {
     "at": "2026-10-24T21:17:41Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-24T19:44:15Z",
     "kind": "merge",
     "text": "Merged “Preserve periodic census generation across provider cooldown retries” into the main build"
-   },
-   {
-    "at": "2026-10-24T19:38:24Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Preserve periodic census generation across provider cooldown retries”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T21:20:02Z",
-   "heartbeat_at": "2026-10-24T21:20:05Z",
+   "status_at": "2026-10-24T21:25:00Z",
+   "heartbeat_at": "2026-10-24T21:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T21:18:27Z",
+    "updated_at": "2026-10-24T21:24:31Z",
     "detail": "observations retained"
    },
    {
