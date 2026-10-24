@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T20:05:02Z",
+ "generated_at": "2026-10-24T20:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,20 +10,20 @@
     "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "40 ready to build"
+    "detail": "39 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "68 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -75,12 +75,12 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_40cec15f",
-    "task": "CODE-01 Measure fill markouts when only the required horizon side exists",
-    "elapsed_min": 26
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
@@ -154,8 +154,8 @@
    ],
    "stage_totals": {
     "queued": 37,
-    "building": 1,
-    "in_review": 0,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 521,
     "parked": 392
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T20:05:02Z",
+    "last_check_at": "2026-10-24T20:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,10 +236,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 632,
-    "last_run_at": "2026-10-24T19:55:02Z",
+    "runs_total": 633,
+    "last_run_at": "2026-10-24T20:10:02Z",
     "last_ok": true,
-    "last_kind": "flow code drift frozen copy",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T20:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-24T20:07:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Measure fill markouts when only the required horizon side…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T19:55:02Z",
     "kind": "heal",
@@ -307,11 +317,6 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow census churn"
    },
    {
-    "at": "2026-10-24T19:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-24T19:07:19Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Write honest synthetic PAPER fill receipts from admitted intents”: changes required"
@@ -355,11 +360,6 @@
     "at": "2026-10-24T18:43:23Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Quarantine conflicting duplicate book responses” into the main build"
-   },
-   {
-    "at": "2026-10-24T18:42:19Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Make settlement rounding independent of Decimal context” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T20:02:55Z",
-   "heartbeat_at": "2026-10-24T20:05:02Z",
+   "status_at": "2026-10-24T20:08:28Z",
+   "heartbeat_at": "2026-10-24T20:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 345,
     "markets": 3358,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T20:00:20Z",
+    "last_scan_at": "2026-10-24T20:06:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T20:00:20Z",
+    "updated_at": "2026-10-24T20:06:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T20:03:50Z",
+    "updated_at": "2026-10-24T20:09:52Z",
     "detail": "observations retained"
    },
    {
