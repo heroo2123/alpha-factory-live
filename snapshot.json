@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T13:50:02Z",
+ "generated_at": "2026-10-24T13:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 36,
+    "count": 35,
     "unit": "queued",
     "active": false,
     "detail": "34 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "72 built in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 27,
+    "count": 33,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,17 +70,17 @@
     "family": "OpenAI",
     "task_id": "t_47281e9d",
     "task": "CODE-01 Preserve decision provenance in markout measurements",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_1095ef83",
+    "task": "Import available public fee evidence into Shadow pricing",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 27,
+   "progress_pct": 33,
    "last_finished_at": "2026-10-24T11:18:19Z",
    "last_passed": 16556,
    "last_failed": 0,
@@ -123,21 +123,21 @@
    "reviews_passed_24h": 64,
    "reviews_changes_24h": 19,
    "commits_by_hour": [
-    2,
     3,
+    2,
     3,
     0,
     3,
     3,
     2,
+    3,
+    3,
     2,
-    3,
-    3,
-    3,
+    4,
     5,
     4,
     3,
-    1,
+    0,
     1,
     2,
     2,
@@ -148,12 +148,10 @@
     1,
     3
    ],
-   "merge_holds": [
-    "lock busy"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 36,
-    "building": 1,
+    "queued": 35,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 0,
     "merged": 512,
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T13:50:02Z",
+    "last_check_at": "2026-10-24T13:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +228,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T13:40:02Z",
+    "last_check_at": "2026-10-24T13:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -369,8 +367,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T13:50:00Z",
-   "heartbeat_at": "2026-10-24T13:50:03Z",
+   "status_at": "2026-10-24T13:55:00Z",
+   "heartbeat_at": "2026-10-24T13:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +377,7 @@
     "weather_events": 375,
     "markets": 3688,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T13:46:40Z",
+    "last_scan_at": "2026-10-24T13:52:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T13:46:40Z",
+    "updated_at": "2026-10-24T13:52:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T13:49:36Z",
+    "updated_at": "2026-10-24T13:53:37Z",
     "detail": "observations retained"
    },
    {
