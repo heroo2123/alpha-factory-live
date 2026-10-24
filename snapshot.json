@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T17:45:01Z",
+ "generated_at": "2026-10-24T17:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "39 ready to build"
+    "detail": "40 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_4c553c56",
     "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_55dd7ae7",
     "task": "Finish health frontier publication expiry guard with preserved tested phase1",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
@@ -155,7 +155,7 @@
    "stage_totals": {
     "queued": 37,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 519,
     "parked": 382
@@ -214,8 +214,8 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 5,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T17:45:02Z",
+    "recoveries_24h": 5,
+    "last_check_at": "2026-10-24T17:50:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,7 +237,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 618,
+    "runs_total": 619,
     "last_run_at": "2026-10-24T17:45:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -371,8 +371,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T17:44:59Z",
-   "heartbeat_at": "2026-10-24T17:45:02Z",
+   "status_at": "2026-10-24T17:49:59Z",
+   "heartbeat_at": "2026-10-24T17:50:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -381,7 +381,7 @@
     "weather_events": 366,
     "markets": 3589,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T17:39:59Z",
+    "last_scan_at": "2026-10-24T17:46:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T17:39:59Z",
+    "updated_at": "2026-10-24T17:46:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T17:45:00Z",
+    "updated_at": "2026-10-24T17:49:01Z",
     "detail": "observations retained"
    },
    {
