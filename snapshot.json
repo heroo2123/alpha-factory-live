@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T10:25:01Z",
+ "generated_at": "2026-10-24T10:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "20 ready to build"
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "73 built in 24h"
+    "detail": "74 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 46,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_7aeb2ad5",
-    "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 25
+    "task_id": "t_1605c84d",
+    "task": "CODE-01 Gate simulated settlement marks on label availability",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_47532602",
+    "task": "FLEX candidate t_7aeb2ad5 24dc7345195d",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 46,
    "last_finished_at": "2026-10-24T08:01:28Z",
    "last_passed": 16075,
    "last_failed": 353,
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 53,
    "commits_24h": 53,
-   "built_24h": 73,
-   "build_failed_24h": 6,
+   "built_24h": 74,
+   "build_failed_24h": 5,
    "reviews_passed_24h": 63,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 22,
+    "queued": 21,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 508,
     "parked": 371
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T10:25:02Z",
+    "last_check_at": "2026-10-24T10:30:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T10:29:14Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
+   },
    {
     "at": "2026-10-24T10:25:02Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-24T08:04:24Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Recognize unknown vertical visibility when checking sky…” into the main build"
-   },
-   {
-    "at": "2026-10-24T08:01:28Z",
-    "kind": "warn",
-    "text": "Full test suite finished: 16075 passed, 353 failed"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T10:24:53Z",
-   "heartbeat_at": "2026-10-24T10:25:02Z",
+   "status_at": "2026-10-24T10:29:56Z",
+   "heartbeat_at": "2026-10-24T10:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 361,
     "markets": 3517,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T10:21:57Z",
+    "last_scan_at": "2026-10-24T10:27:18Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T10:21:57Z",
+    "updated_at": "2026-10-24T10:27:18Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T10:23:58Z",
+    "updated_at": "2026-10-24T10:30:00Z",
     "detail": "observations retained"
    },
    {
