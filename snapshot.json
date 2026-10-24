@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T13:20:02Z",
+ "generated_at": "2026-10-24T13:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 36,
     "unit": "queued",
     "active": false,
-    "detail": "32 ready to build"
+    "detail": "33 ready to build"
    },
    {
     "key": "build",
@@ -31,18 +31,18 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "50 merged in 24h"
+    "detail": "51 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_3db065c2",
     "task": "CODE-01 Refuse mixed public and synthetic basket-book economics",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-24T11:18:19Z",
    "last_passed": 16556,
@@ -116,47 +116,45 @@
   },
   "tests_passing": 16556,
   "flow": {
-   "merges_24h": 50,
-   "commits_24h": 50,
+   "merges_24h": 51,
+   "commits_24h": 51,
    "built_24h": 73,
    "build_failed_24h": 4,
    "reviews_passed_24h": 62,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     2,
-    2,
     3,
-    1,
-    1,
-    4,
+    3,
+    0,
     2,
     3,
     2,
+    3,
     2,
+    3,
     3,
     5,
     4,
-    4,
+    3,
     2,
     1,
+    2,
     1,
     2,
-    2,
     0,
     2,
     0,
     0,
-    2
+    3
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 36,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 510,
+    "awaiting_merge": 0,
+    "merged": 511,
     "parked": 366
    }
   },
@@ -167,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T13:22:23Z",
+    "title": "CODE-01 Guard valuation persistence against racing book updates",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T13:13:18Z",
     "title": "PAPER-02 cross-release capability collision EXISTING_REVIEW_PROOF_HASH",
@@ -201,11 +204,6 @@
     "at": "2026-10-24T06:25:31Z",
     "title": "LEARNING-SOURCES Bind resumed historical artifacts to original capture evidence",
     "area": "Forecast brain"
-   },
-   {
-    "at": "2026-10-24T06:13:18Z",
-    "title": "CODE-01 Reject malformed ask containers in sale valuations",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T13:20:02Z",
+    "last_check_at": "2026-10-24T13:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,15 +229,15 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T13:10:02Z",
+    "last_check_at": "2026-10-24T13:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 592,
-    "last_run_at": "2026-10-24T13:20:02Z",
+    "last_run_at": "2026-10-24T13:25:02Z",
     "last_ok": true,
-    "last_kind": "flow brain harvest gated",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T13:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-24T13:22:23Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Guard valuation persistence against racing book updates” into the main build"
+   },
    {
     "at": "2026-10-24T13:20:02Z",
     "kind": "heal",
@@ -302,11 +310,6 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
    },
    {
-    "at": "2026-10-24T12:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-24T12:37:21Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
@@ -355,11 +358,6 @@
     "at": "2026-10-24T11:51:21Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_2f495c0d 4f944b1925c6”: passed"
-   },
-   {
-    "at": "2026-10-24T11:50:13Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -370,8 +368,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T13:18:01Z",
-   "heartbeat_at": "2026-10-24T13:20:02Z",
+   "status_at": "2026-10-24T13:23:25Z",
+   "heartbeat_at": "2026-10-24T13:25:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +378,7 @@
     "weather_events": 375,
     "markets": 3688,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T13:16:48Z",
+    "last_scan_at": "2026-10-24T13:22:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T13:16:48Z",
+    "updated_at": "2026-10-24T13:22:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T13:19:26Z",
+    "updated_at": "2026-10-24T13:23:27Z",
     "detail": "observations retained"
    },
    {
@@ -636,8 +634,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 91,
-     "open_tasks": 15
+     "merged_tasks": 92,
+     "open_tasks": 14
     },
     {
      "id": "CODE-02",
