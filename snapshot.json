@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T05:40:02Z",
+ "generated_at": "2026-10-24T05:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_6c861bbd",
     "task": "CODE-01 Reject malformed ask containers in sale valuations",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Builder 2",
@@ -125,27 +125,27 @@
    "commits_by_hour": [
     0,
     1,
+    2,
+    2,
     1,
-    3,
-    1,
-    1,
-    3,
+    2,
+    2,
     0,
     2,
     3,
     3,
     0,
     3,
-    2,
     3,
     2,
-    3,
-    3,
     2,
+    3,
+    3,
+    3,
     5,
     4,
     3,
-    2,
+    1,
     1
    ],
    "merge_holds": [
@@ -214,33 +214,32 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T05:40:03Z",
+    "last_check_at": "2026-10-24T05:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 5,
     "by_severity": {
      "P0": 0,
-     "P1": 3,
+     "P1": 2,
      "P2": 2
     },
     "codes": [
      "flow glm plan lane dead",
-     "flow green release failed",
      "flow pws ingest gated",
      "flow brain capture missed",
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T05:30:03Z",
+    "last_check_at": "2026-10-24T05:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 541,
-    "last_run_at": "2026-10-24T05:40:02Z",
+    "last_run_at": "2026-10-24T05:45:02Z",
     "last_ok": true,
-    "last_kind": "flow release needs release",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T05:45:02Z",
+    "kind": "release",
+    "text": "Release b55e511 installed by the release manager"
+   },
+   {
+    "at": "2026-10-24T05:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
+   },
    {
     "at": "2026-10-24T05:40:02Z",
     "kind": "heal",
@@ -291,11 +300,6 @@
     "at": "2026-10-24T05:12:22Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “LEARNING-SOURCES b007fe4c6f76 resume artifact validation”: passed"
-   },
-   {
-    "at": "2026-10-24T05:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
    },
    {
     "at": "2026-10-24T05:01:21Z",
@@ -356,11 +360,6 @@
     "at": "2026-10-24T03:42:18Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Reject superseded daylight inputs at the feature cutoff” into the main build"
-   },
-   {
-    "at": "2026-10-24T03:37:34Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Bind performance attribution to admission valid at entry…”: passed"
    }
   ]
  },
@@ -369,10 +368,10 @@
    "service": "running",
    "release": "ab3a103",
    "commissioned_at": "2026-10-23T07:05:02Z",
-   "day": "2026-10-25",
-   "state": "waiting prepared day",
-   "status_at": "2026-10-24T05:39:38Z",
-   "heartbeat_at": "2026-10-24T05:40:04Z",
+   "day": "2026-10-24",
+   "state": "owner stopped or rolling back",
+   "status_at": "2026-10-24T05:40:06Z",
+   "heartbeat_at": null,
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -411,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T05:39:05Z",
+    "updated_at": "2026-10-24T05:43:05Z",
     "detail": "gated"
    },
    {
