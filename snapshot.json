@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T23:20:02Z",
+ "generated_at": "2026-10-24T23:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 25,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "29 ready to build"
+    "detail": "28 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "64 built in 24h"
+    "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "47 merged in 24h"
+    "detail": "46 merged in 24h"
    },
    {
     "key": "qa",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_e2e6cd65",
-    "task": "CODE-01 Reject nowcasts that omit a newer available official observation",
-    "elapsed_min": 31
+    "task_id": "t_5d0a024a",
+    "task": "Finish atomic fee capture raw-rule CAS, append deadline and failure receipts",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,27 +80,27 @@
     "family": "DeepSeek",
     "task_id": "t_4d47bbfb",
     "task": "CODE-01 Make cost aggregation and EV arithmetic context-independent",
-    "elapsed_min": 22
+    "elapsed_min": 27
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_e05c2528",
+    "task": "a build task",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_e891bfbe",
+    "task": "FLEX candidate t_e2e6cd65 0ce67d38a7c0",
+    "elapsed_min": 2
    }
   ],
   "qa": {
@@ -116,28 +116,28 @@
   },
   "tests_passing": 16714,
   "flow": {
-   "merges_24h": 47,
-   "commits_24h": 47,
-   "built_24h": 64,
+   "merges_24h": 46,
+   "commits_24h": 46,
+   "built_24h": 65,
    "build_failed_24h": 7,
    "reviews_passed_24h": 55,
-   "reviews_changes_24h": 33,
+   "reviews_changes_24h": 32,
    "commits_by_hour": [
     3,
     5,
     4,
-    4,
-    2,
-    1,
-    1,
-    2,
-    2,
-    0,
-    2,
-    0,
-    0,
-    2,
     3,
+    2,
+    1,
+    2,
+    1,
+    2,
+    0,
+    2,
+    0,
+    0,
+    3,
+    2,
     2,
     2,
     1,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 25,
+    "queued": 24,
     "building": 2,
-    "in_review": 0,
+    "in_review": 2,
     "awaiting_merge": 1,
     "merged": 529,
     "parked": 400
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T23:20:03Z",
+    "last_check_at": "2026-10-24T23:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +232,15 @@
      "flow brain capture missed",
      "flow brain harvest incomplete"
     ],
-    "last_check_at": "2026-10-24T23:10:03Z",
+    "last_check_at": "2026-10-24T23:20:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 652,
-    "last_run_at": "2026-10-24T23:15:02Z",
+    "last_run_at": "2026-10-24T23:25:02Z",
     "last_ok": true,
-    "last_kind": "flow source card wrong status",
+    "last_kind": "flow brain harvest incomplete",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T23:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow brain harvest incomplete"
+   },
+   {
+    "at": "2026-10-24T23:22:18Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Reject nowcasts that omit a newer available official…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T23:15:02Z",
     "kind": "heal",
@@ -296,11 +306,6 @@
     "at": "2026-10-24T22:55:02Z",
     "kind": "heal",
     "text": "Operator AI (DeepSeek V4 Pro) audit run: flow maintenance review packet invalid"
-   },
-   {
-    "at": "2026-10-24T22:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow brain capture missed"
    },
    {
     "at": "2026-10-24T22:42:53Z",
@@ -356,11 +361,6 @@
     "at": "2026-10-24T22:06:33Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_47532602 2223b28e4f03”: passed"
-   },
-   {
-    "at": "2026-10-24T22:04:23Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “FLEX candidate t_7aeb2ad5 24dc7345195d” → sent to independent review"
    }
   ]
  },
@@ -371,17 +371,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T23:20:00Z",
-   "heartbeat_at": "2026-10-24T23:20:03Z",
+   "status_at": "2026-10-24T23:25:03Z",
+   "heartbeat_at": "2026-10-24T23:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 324,
-    "markets": 3129,
+    "weather_events": 320,
+    "markets": 3085,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T23:13:57Z",
+    "last_scan_at": "2026-10-24T23:20:10Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T23:13:57Z",
+    "updated_at": "2026-10-24T23:20:10Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T23:19:24Z",
+    "updated_at": "2026-10-24T23:23:25Z",
     "detail": "observations retained"
    },
    {
