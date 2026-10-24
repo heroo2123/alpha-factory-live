@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T15:30:01Z",
+ "generated_at": "2026-10-24T15:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 36,
     "unit": "queued",
     "active": false,
-    "detail": "35 ready to build"
+    "detail": "36 ready to build"
    },
    {
     "key": "build",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "50 merged in 24h"
+    "detail": "51 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0a1bbbb1",
     "task": "Build bounded V11_PAPER health frontier",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_3a661433",
     "task": "CODE-01 Recheck forecast freshness when resuming partial preparation",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Reviewer 1",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16563,
   "flow": {
-   "merges_24h": 50,
-   "commits_24h": 50,
+   "merges_24h": 51,
+   "commits_24h": 51,
    "built_24h": 71,
    "build_failed_24h": 4,
    "reviews_passed_24h": 60,
@@ -125,38 +125,36 @@
    "commits_by_hour": [
     3,
     0,
-    2,
     3,
     2,
     3,
     2,
     3,
     3,
+    2,
     5,
     4,
     3,
     2,
     1,
     2,
+    2,
+    1,
+    0,
+    2,
+    0,
     1,
     2,
-    0,
     2,
-    0,
-    0,
-    3,
-    2,
-    2
+    3
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 36,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 515,
+    "awaiting_merge": 0,
+    "merged": 516,
     "parked": 376
    }
   },
@@ -168,8 +166,13 @@
   },
   "recent_merges": [
    {
+    "at": "2026-10-24T15:32:28Z",
+    "title": "Repair authoritative Wunderground provenance for historical source view",
+    "area": "Core build"
+   },
+   {
     "at": "2026-10-24T14:44:01Z",
-    "title": "Bootstrap a fresh genuine PAPER ledger without relabelling Shadow history",
+    "title": "Finish fresh PAPER ledger bootstrap after merged profile precheck",
     "area": "Core build"
    },
    {
@@ -201,11 +204,6 @@
     "at": "2026-10-24T10:04:21Z",
     "title": "CODE-01 Refuse WRH finality claims from rejected rule semantics",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T09:41:23Z",
-    "title": "PAPER-02 runtime-origin and candidate-variant provenance design repair",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T15:30:02Z",
+    "last_check_at": "2026-10-24T15:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +229,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T15:20:03Z",
+    "last_check_at": "2026-10-24T15:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T15:32:28Z",
+    "kind": "merge",
+    "text": "Merged “Repair authoritative Wunderground provenance for historical source…” into the main build"
+   },
    {
     "at": "2026-10-24T15:27:30Z",
     "kind": "warn",
@@ -344,7 +347,7 @@
    {
     "at": "2026-10-24T14:44:01Z",
     "kind": "merge",
-    "text": "Merged “Bootstrap a fresh genuine PAPER ledger without relabelling Shadow…” into the main build"
+    "text": "Merged “Finish fresh PAPER ledger bootstrap after merged profile precheck” into the main build"
    },
    {
     "at": "2026-10-24T14:43:22Z",
@@ -354,12 +357,7 @@
    {
     "at": "2026-10-24T14:42:23Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Bootstrap a fresh genuine PAPER ledger without relabelling Shadow…”: passed"
-   },
-   {
-    "at": "2026-10-24T14:41:17Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Bootstrap a fresh genuine PAPER ledger without relabelling Shadow…” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) reviewed “Finish fresh PAPER ledger bootstrap after merged profile precheck”: passed"
    }
   ]
  },
@@ -369,9 +367,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-24T15:29:59Z",
-   "heartbeat_at": "2026-10-24T15:30:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-24T15:30:46Z",
+   "heartbeat_at": "2026-10-24T15:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T15:28:13Z",
+    "updated_at": "2026-10-24T15:34:15Z",
     "detail": "observations retained"
    },
    {
