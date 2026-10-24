@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T00:15:02Z",
+ "generated_at": "2026-10-24T00:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,12 +10,12 @@
     "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "75 built in 24h"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 15,
+    "count": 18,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_a12bfc82",
-    "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 34
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_04c428f0",
     "task": "CODE-01 Revalidate CLI report chronology before deriving labels",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_a12bfc82",
+    "task": "CODE-01 Propagate synthetic provenance into release assessments",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 15,
+   "progress_pct": 18,
    "last_finished_at": "2026-10-23T20:55:21Z",
    "last_passed": 16253,
    "last_failed": 0,
@@ -119,9 +119,9 @@
    "merges_24h": 39,
    "commits_24h": 39,
    "built_24h": 75,
-   "build_failed_24h": 5,
+   "build_failed_24h": 6,
    "reviews_passed_24h": 58,
-   "reviews_changes_24h": 18,
+   "reviews_changes_24h": 17,
    "commits_by_hour": [
     0,
     1,
@@ -154,8 +154,8 @@
    ],
    "stage_totals": {
     "queued": 12,
-    "building": 2,
-    "in_review": 0,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 4,
     "merged": 485,
     "parked": 361
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-24T00:15:02Z",
+    "last_check_at": "2026-10-24T00:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 504,
-    "last_run_at": "2026-10-24T00:15:02Z",
+    "runs_total": 505,
+    "last_run_at": "2026-10-24T00:20:02Z",
     "last_ok": true,
-    "last_kind": "flow shadow stuck waiting",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T00:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-24T00:18:10Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-24T00:17:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Propagate synthetic provenance into release assessments” → sent to independent review"
+   },
    {
     "at": "2026-10-24T00:15:02Z",
     "kind": "heal",
@@ -345,24 +360,9 @@
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Measure bid-only liquidation markouts”: passed"
    },
    {
-    "at": "2026-10-23T23:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow published rules changed"
-   },
-   {
     "at": "2026-10-23T23:14:20Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Remove daylight dependencies from daylight ablations”: passed"
-   },
-   {
-    "at": "2026-10-23T23:12:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Measure bid-only liquidation markouts” → sent to independent review"
-   },
-   {
-    "at": "2026-10-23T23:11:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Remove daylight dependencies from daylight ablations” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T00:14:20Z",
-   "heartbeat_at": "2026-10-24T00:15:01Z",
+   "status_at": "2026-10-24T00:19:20Z",
+   "heartbeat_at": "2026-10-24T00:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T00:13:25Z",
+    "updated_at": "2026-10-24T00:19:27Z",
     "detail": "observations retained"
    },
    {
@@ -511,7 +511,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-23T23:17:02Z",
+   "updated_at": "2026-10-24T00:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
