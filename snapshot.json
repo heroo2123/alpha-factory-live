@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T15:35:02Z",
+ "generated_at": "2026-10-24T15:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 36,
     "unit": "queued",
     "active": false,
-    "detail": "36 ready to build"
+    "detail": "37 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "71 built in 24h"
+    "detail": "70 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0a1bbbb1",
     "task": "Build bounded V11_PAPER health frontier",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_3a661433",
     "task": "CODE-01 Recheck forecast freshness when resuming partial preparation",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 1",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 51,
    "commits_24h": 51,
-   "built_24h": 71,
+   "built_24h": 70,
    "build_failed_24h": 4,
    "reviews_passed_24h": 60,
    "reviews_changes_24h": 24,
@@ -140,8 +140,8 @@
     2,
     2,
     1,
-    0,
-    2,
+    1,
+    1,
     0,
     1,
     2,
@@ -152,7 +152,7 @@
    "stage_totals": {
     "queued": 36,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 516,
     "parked": 376
@@ -211,8 +211,8 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 5,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T15:35:02Z",
+    "recoveries_24h": 5,
+    "last_check_at": "2026-10-24T15:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T15:37:50Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
    {
     "at": "2026-10-24T15:32:28Z",
     "kind": "merge",
@@ -353,11 +358,6 @@
     "at": "2026-10-24T14:43:22Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Expire census coverage at the rule receipt deadline” into the main build"
-   },
-   {
-    "at": "2026-10-24T14:42:23Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Finish fresh PAPER ledger bootstrap after merged profile precheck”: passed"
    }
   ]
  },
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T15:30:46Z",
-   "heartbeat_at": "2026-10-24T15:35:01Z",
+   "status_at": "2026-10-24T15:36:15Z",
+   "heartbeat_at": "2026-10-24T15:40:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 371,
-    "markets": 3644,
+    "weather_events": 370,
+    "markets": 3633,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T15:28:59Z",
+    "last_scan_at": "2026-10-24T15:35:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -394,21 +394,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-24T14:37:03Z",
+    "updated_at": "2026-10-24T15:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T15:28:59Z",
+    "updated_at": "2026-10-24T15:35:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T15:34:15Z",
+    "updated_at": "2026-10-24T15:38:17Z",
     "detail": "observations retained"
    },
    {
