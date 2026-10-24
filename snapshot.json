@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T07:20:02Z",
+ "generated_at": "2026-10-24T07:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "74 built in 24h"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 62,
+    "count": 65,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,27 +70,27 @@
     "family": "OpenAI",
     "task_id": "t_62267ebf",
     "task": "PAPER-02 Shadow first forecast replan RUNTIME_CONFIGURATION_CHANGED_REVIEW_REQUIRED",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_164e4bca",
-    "task": "Accept reviewed METAR whole-F precision in forecast probability buckets",
-    "elapsed_min": 22
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_164e4bca",
+    "task": "Accept reviewed METAR whole-F precision in forecast probability buckets",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 62,
+   "progress_pct": 65,
    "last_finished_at": "2026-10-24T03:16:10Z",
    "last_passed": 16377,
    "last_failed": 0,
@@ -117,42 +117,42 @@
   "tests_passing": 16377,
   "flow": {
    "merges_24h": 54,
-   "commits_24h": 54,
+   "commits_24h": 53,
    "built_24h": 74,
    "build_failed_24h": 7,
    "reviews_passed_24h": 63,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
-    1,
+    0,
     4,
     0,
     2,
     3,
     0,
     2,
-    2,
     3,
-    1,
-    1,
-    4,
+    3,
+    0,
     2,
     3,
     2,
+    3,
     2,
+    3,
     3,
     5,
     4,
-    4,
+    3,
     2,
     1,
-    1,
-    2
+    2,
+    1
    ],
    "merge_holds": [],
    "stage_totals": {
     "queued": 27,
-    "building": 2,
-    "in_review": 0,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 504,
     "parked": 364
@@ -212,31 +212,33 @@
     "active": 0,
     "alerts_24h": 4,
     "recoveries_24h": 4,
-    "last_check_at": "2026-10-24T07:20:03Z",
+    "last_check_at": "2026-10-24T07:25:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 6,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
-     "P2": 2
+     "P1": 2,
+     "P2": 3
     },
     "codes": [
      "flow glm plan lane dead",
+     "flow brain capture gated",
      "flow brain capture missed",
      "flow code drift frozen copy",
+     "flow coding card priority stranded",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T07:10:03Z",
+    "last_check_at": "2026-10-24T07:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 550,
-    "last_run_at": "2026-10-24T07:05:02Z",
+    "last_run_at": "2026-10-24T07:25:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow code drift frozen copy",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +250,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T07:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow code drift frozen copy"
+   },
+   {
+    "at": "2026-10-24T07:24:53Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Accept reviewed METAR whole-F precision in forecast probability…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T07:20:03Z",
     "kind": "release",
@@ -309,11 +321,6 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
    },
    {
-    "at": "2026-10-24T06:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-24T06:25:31Z",
     "kind": "merge",
     "text": "Merged “LEARNING-SOURCES Bind resumed historical artifacts to original…” into the main build"
@@ -352,11 +359,6 @@
     "at": "2026-10-24T05:58:27Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject malformed ask containers in sale valuations”: passed"
-   },
-   {
-    "at": "2026-10-24T05:58:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Brain freeze registry executable identity and receipt binding” → sent to independent review"
    }
   ]
  },
@@ -374,10 +376,10 @@
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 362,
-    "markets": 3528,
+    "weather_events": 359,
+    "markets": 3495,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T07:16:05Z",
+    "last_scan_at": "2026-10-24T07:21:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T07:16:05Z",
+    "updated_at": "2026-10-24T07:21:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T07:19:28Z",
+    "updated_at": "2026-10-24T07:23:29Z",
     "detail": "observations retained"
    },
    {
