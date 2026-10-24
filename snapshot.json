@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T17:30:02Z",
+ "generated_at": "2026-10-24T17:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,12 +10,12 @@
     "count": 35,
     "unit": "queued",
     "active": false,
-    "detail": "38 ready to build"
+    "detail": "37 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "69 built in 24h"
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "50 merged in 24h"
@@ -65,16 +65,6 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_60b157ce",
-    "task": "Refuse historical causal READY without predecision rule provenance",
-    "elapsed_min": 0
-   },
-   {
-    "slot": "Builder 2",
-    "role": "build",
     "state": "idle",
     "model": "",
     "family": "",
@@ -83,14 +73,24 @@
     "elapsed_min": null
    },
    {
+    "slot": "Builder 2",
+    "role": "build",
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_55dd7ae7",
+    "task": "Finish health frontier publication expiry guard with preserved tested phase1",
+    "elapsed_min": 1
+   },
+   {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_477fc701",
-    "task": "CODE-01 Gate paper quotes on book freshness",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,42 +120,45 @@
    "commits_24h": 50,
    "built_24h": 69,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 58,
-   "reviews_changes_24h": 27,
+   "reviews_passed_24h": 57,
+   "reviews_changes_24h": 28,
    "commits_by_hour": [
-    2,
     3,
     2,
     3,
     2,
     3,
     3,
+    2,
     5,
     4,
     3,
     2,
     1,
     2,
+    2,
+    1,
+    0,
+    2,
+    0,
     1,
     2,
-    0,
     2,
-    0,
-    0,
     3,
     2,
-    2,
-    2,
-    1
+    0
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
     "queued": 35,
-    "building": 1,
-    "in_review": 2,
-    "awaiting_merge": 1,
+    "building": 2,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 518,
-    "parked": 380
+    "parked": 381
    }
   },
   "architect": {
@@ -210,9 +213,9 @@
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 4,
+    "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T17:30:02Z",
+    "last_check_at": "2026-10-24T17:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +233,15 @@
      "flow review oversized",
      "flow fixture locked by pending"
     ],
-    "last_check_at": "2026-10-24T17:20:03Z",
+    "last_check_at": "2026-10-24T17:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 616,
-    "last_run_at": "2026-10-24T17:25:02Z",
+    "runs_total": 617,
+    "last_run_at": "2026-10-24T17:35:02Z",
     "last_ok": true,
-    "last_kind": "flow code drift frozen copy",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +253,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T17:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-24T17:33:18Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Finish atomic fee capture raw-rule CAS, append deadline and failure…”: changes required"
+   },
+   {
+    "at": "2026-10-24T17:33:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-24T17:30:31Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Gate paper quotes on book freshness”: passed"
+   },
    {
     "at": "2026-10-24T17:29:29Z",
     "kind": "review",
@@ -321,11 +344,6 @@
     "text": "Codex (GPT-6 Astra) built “Refuse historical causal READY without predecision rule provenance” → sent to independent review"
    },
    {
-    "at": "2026-10-24T16:45:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-24T16:34:23Z",
     "kind": "merge",
     "text": "Merged “PAPER-02 Empty METAR receipt replay after completed census must not…” into the main build"
@@ -344,21 +362,6 @@
     "at": "2026-10-24T16:29:22Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “PAPER-02 Empty METAR receipt replay after completed census must not…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T16:29:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Finish atomic fee capture raw-rule CAS, append deadline and failure…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T16:14:15Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-24T16:12:19Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Build bounded V11_PAPER health frontier”: changes required"
    }
   ]
  },
@@ -369,8 +372,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T17:30:03Z",
-   "heartbeat_at": "2026-10-24T17:30:03Z",
+   "status_at": "2026-10-24T17:35:02Z",
+   "heartbeat_at": "2026-10-24T17:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +382,7 @@
     "weather_events": 366,
     "markets": 3589,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T17:28:21Z",
+    "last_scan_at": "2026-10-24T17:34:23Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T17:28:21Z",
+    "updated_at": "2026-10-24T17:34:23Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T17:28:54Z",
+    "updated_at": "2026-10-24T17:34:56Z",
     "detail": "observations retained"
    },
    {
