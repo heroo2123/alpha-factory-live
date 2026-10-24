@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T20:55:01Z",
+ "generated_at": "2026-10-24T21:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 31,
+    "count": 30,
     "unit": "queued",
     "active": false,
     "detail": "34 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 5,
+    "count": 13,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_4c553c56",
     "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
-    "elapsed_min": 26
+    "elapsed_min": 31
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_e9bdd705",
-    "task": "CODE-01 Scope current-release checks to the exact official channel",
-    "elapsed_min": 26
+    "task_id": "t_5d0a024a",
+    "task": "Finish atomic fee capture raw-rule CAS, append deadline and failure receipts",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_26018592",
+    "task": "FLEX candidate t_e9bdd705 34e7d9d1cd9d",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 5,
+   "progress_pct": 13,
    "last_finished_at": "2026-10-24T19:50:12Z",
    "last_passed": 16665,
    "last_failed": 0,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 31,
+    "queued": 30,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 523,
     "parked": 396
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T20:55:02Z",
+    "last_check_at": "2026-10-24T21:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T20:57:20Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Scope current-release checks to the exact official channel” → sent to independent review"
+   },
    {
     "at": "2026-10-24T20:50:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-24T19:02:15Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Complete public socket stream to real risk adapter with causal…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T19:00:15Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T20:49:57Z",
-   "heartbeat_at": "2026-10-24T20:55:01Z",
+   "status_at": "2026-10-24T20:56:53Z",
+   "heartbeat_at": "2026-10-24T21:00:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T20:54:13Z",
+    "updated_at": "2026-10-24T20:58:14Z",
     "detail": "observations retained"
    },
    {
