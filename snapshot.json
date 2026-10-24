@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T15:05:02Z",
+ "generated_at": "2026-10-24T15:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
+    "active": true,
     "detail": "current release 0fdbe42"
    },
    {
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_693200e0",
     "task": "CODE-01 Verify normalized forecast identity on idempotent replay",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_2a6c11fa",
     "task": "Price quiet current books with PAPER fee receipt semantics",
-    "elapsed_min": 22
+    "elapsed_min": 27
    },
    {
     "slot": "Reviewer 1",
@@ -106,15 +106,15 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-24T11:18:19Z",
-   "last_passed": 16556,
+   "last_finished_at": "2026-10-24T15:04:40Z",
+   "last_passed": 16563,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-24T11:18:19Z",
-   "last_minutes": 95
+   "last_green_at": "2026-10-24T15:04:40Z",
+   "last_minutes": 104
   },
-  "tests_passing": 16556,
+  "tests_passing": 16563,
   "flow": {
    "merges_24h": 51,
    "commits_24h": 51,
@@ -155,7 +155,7 @@
     "in_review": 0,
     "awaiting_merge": 0,
     "merged": 515,
-    "parked": 372
+    "parked": 373
    }
   },
   "architect": {
@@ -212,24 +212,23 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T15:05:02Z",
+    "last_check_at": "2026-10-24T15:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 4,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 3
+     "P2": 2
     },
     "codes": [
      "flow glm plan lane dead",
+     "flow shadow observation unavailable",
      "flow brain capture missed",
-     "flow code drift frozen copy",
-     "flow queued scope unmergeable",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T15:00:03Z",
+    "last_check_at": "2026-10-24T15:08:39Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +252,11 @@
     "at": "2026-10-24T15:05:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-24T15:04:40Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 16563 passed, 0 failed"
    },
    {
     "at": "2026-10-24T14:55:02Z",
@@ -353,11 +357,6 @@
     "at": "2026-10-24T14:10:23Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Import available public fee evidence into Shadow pricing” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T14:06:22Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Preserve decision provenance in markout measurements”: passed"
    }
   ]
  },
@@ -367,9 +366,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-24T15:04:59Z",
-   "heartbeat_at": "2026-10-24T15:05:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-24T15:07:40Z",
+   "heartbeat_at": "2026-10-24T15:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +377,7 @@
     "weather_events": 374,
     "markets": 3677,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T14:58:43Z",
+    "last_scan_at": "2026-10-24T15:05:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T14:58:43Z",
+    "updated_at": "2026-10-24T15:05:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T15:04:03Z",
+    "updated_at": "2026-10-24T15:08:05Z",
     "detail": "observations retained"
    },
    {
