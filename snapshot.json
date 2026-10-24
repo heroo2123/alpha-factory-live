@@ -1,31 +1,31 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T16:25:02Z",
+ "generated_at": "2026-10-24T16:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "40 ready to build"
+    "detail": "41 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "69 built in 24h"
+    "detail": "70 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,29 +68,29 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_5d0a024a",
-    "task": "Finish atomic fee capture raw-rule CAS, append deadline and failure receipts",
-    "elapsed_min": 10
+    "task_id": "t_60b157ce",
+    "task": "Refuse historical causal READY without predecision rule provenance",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_1517e311",
-    "task": "PAPER-02 Empty METAR receipt replay after completed census must not restart GEFS…",
-    "elapsed_min": 26
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_1517e311",
+    "task": "PAPER-02 Empty METAR receipt replay after completed census must not restart GEFS…",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 49,
    "commits_24h": 49,
-   "built_24h": 69,
+   "built_24h": 70,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 59,
+   "reviews_passed_24h": 58,
    "reviews_changes_24h": 26,
    "commits_by_hour": [
     0,
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 38,
-    "building": 2,
-    "in_review": 0,
+    "queued": 37,
+    "building": 1,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 517,
     "parked": 377
@@ -160,7 +160,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-24T12:20:11Z",
+   "last_run_at": "2026-10-24T16:30:04Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
@@ -210,9 +210,9 @@
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 5,
+    "alerts_24h": 4,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T16:25:02Z",
+    "last_check_at": "2026-10-24T16:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,7 +234,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 609,
+    "runs_total": 610,
     "last_run_at": "2026-10-24T16:15:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -249,6 +249,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T16:30:04Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
+   {
+    "at": "2026-10-24T16:29:22Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “PAPER-02 Empty METAR receipt replay after completed census must not…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T16:29:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Finish atomic fee capture raw-rule CAS, append deadline and failure…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T16:15:02Z",
     "kind": "heal",
@@ -343,21 +358,6 @@
     "at": "2026-10-24T15:19:25Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Verify normalized forecast identity on idempotent replay”: changes required"
-   },
-   {
-    "at": "2026-10-24T15:19:17Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Price quiet current books with PAPER fee receipt semantics”: changes required"
-   },
-   {
-    "at": "2026-10-24T15:18:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Verify normalized forecast identity on idempotent replay” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T15:16:55Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Price quiet current books with PAPER fee receipt semantics” → sent to independent review"
    }
   ]
  },
@@ -367,9 +367,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-24T16:24:59Z",
-   "heartbeat_at": "2026-10-24T16:25:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-24T16:27:16Z",
+   "heartbeat_at": "2026-10-24T16:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 367,
     "markets": 3600,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T16:23:49Z",
+    "last_scan_at": "2026-10-24T16:29:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T16:23:49Z",
+    "updated_at": "2026-10-24T16:29:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T16:24:32Z",
+    "updated_at": "2026-10-24T16:28:33Z",
     "detail": "observations retained"
    },
    {
