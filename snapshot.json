@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T03:50:02Z",
+ "generated_at": "2026-10-24T03:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 8,
+    "count": 9,
     "unit": "queued",
     "active": false,
     "detail": "9 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "74 built in 24h"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "50 merged in 24h"
+    "detail": "51 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,22 +70,22 @@
     "family": "OpenAI",
     "task_id": "t_2f495c0d",
     "task": "CODE-01 Make settlement rounding independent of Decimal context",
-    "elapsed_min": 17
+    "elapsed_min": 22
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_e9bdd705",
-    "task": "CODE-01 Scope current-release checks to the exact official channel",
-    "elapsed_min": 17
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16377,
   "flow": {
-   "merges_24h": 50,
-   "commits_24h": 50,
+   "merges_24h": 51,
+   "commits_24h": 51,
    "built_24h": 74,
    "build_failed_24h": 6,
    "reviews_passed_24h": 64,
@@ -129,34 +129,32 @@
     1,
     2,
     2,
+    2,
+    2,
     1,
-    2,
-    2,
     0,
-    2,
     3,
+    2,
     3,
     0,
     3,
     3,
     2,
+    3,
+    3,
     2,
-    3,
-    3,
-    3,
+    4,
     5,
     4,
     3
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 8,
-    "building": 2,
+    "queued": 9,
+    "building": 1,
     "in_review": 1,
-    "awaiting_merge": 1,
-    "merged": 499,
+    "awaiting_merge": 0,
+    "merged": 500,
     "parked": 367
    }
   },
@@ -167,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T03:54:33Z",
+    "title": "CODE-01 Bind performance attribution to admission valid at entry valuation",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T03:42:18Z",
     "title": "CODE-01 Reject superseded daylight inputs at the feature cutoff",
@@ -201,20 +204,15 @@
     "at": "2026-10-24T01:42:53Z",
     "title": "CODE-01 Prevent partial fills from reusing horizon depth",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T01:21:25Z",
-    "title": "CODE-01 Floor sizing from the exact reducer product",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T03:50:02Z",
+    "last_check_at": "2026-10-24T03:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +230,7 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T03:40:02Z",
+    "last_check_at": "2026-10-24T03:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T03:54:33Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Bind performance attribution to admission valid at entry…” into the main build"
+   },
    {
     "at": "2026-10-24T03:50:02Z",
     "kind": "heal",
@@ -356,11 +359,6 @@
     "at": "2026-10-24T02:48:22Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Expose infinite-loss regressions in PWS score summaries”: passed"
-   },
-   {
-    "at": "2026-10-24T02:43:17Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1e3d458a d23ca00c9924”: changes required"
    }
   ]
  },
@@ -371,8 +369,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T03:49:32Z",
-   "heartbeat_at": "2026-10-24T03:50:01Z",
+   "status_at": "2026-10-24T03:54:32Z",
+   "heartbeat_at": "2026-10-24T03:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -381,7 +379,7 @@
     "weather_events": 373,
     "markets": 3654,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T03:46:06Z",
+    "last_scan_at": "2026-10-24T03:51:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T03:46:06Z",
+    "updated_at": "2026-10-24T03:51:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T03:48:38Z",
+    "updated_at": "2026-10-24T03:54:40Z",
     "detail": "observations retained"
    },
    {
@@ -637,8 +635,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 87,
-     "open_tasks": 5
+     "merged_tasks": 88,
+     "open_tasks": 4
     },
     {
      "id": "CODE-02",
