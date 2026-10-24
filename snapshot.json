@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-23T23:55:02Z",
+ "generated_at": "2026-10-24T00:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "38 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_a12bfc82",
     "task": "CODE-01 Propagate synthetic provenance into release assessments",
-    "elapsed_min": 14
+    "elapsed_min": 19
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_1605c84d",
     "task": "CODE-01 Gate simulated settlement marks on label availability",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_42588281",
-    "task": "CODE-01 Require the exact WRH source family for observation-close derivation",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,8 +120,8 @@
    "commits_24h": 38,
    "built_24h": 75,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 56,
-   "reviews_changes_24h": 20,
+   "reviews_passed_24h": 57,
+   "reviews_changes_24h": 19,
    "commits_by_hour": [
     0,
     0,
@@ -137,9 +137,9 @@
     2,
     1,
     0,
-    3,
+    4,
     2,
-    3,
+    2,
     0,
     3,
     3,
@@ -155,8 +155,8 @@
    "stage_totals": {
     "queued": 7,
     "building": 2,
-    "in_review": 1,
-    "awaiting_merge": 3,
+    "in_review": 0,
+    "awaiting_merge": 4,
     "merged": 484,
     "parked": 361
    }
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 9,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-23T23:54:02Z",
+    "last_check_at": "2026-10-23T23:59:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 500,
-    "last_run_at": "2026-10-23T23:15:02Z",
+    "runs_total": 501,
+    "last_run_at": "2026-10-24T00:00:02Z",
     "last_ok": true,
-    "last_kind": "flow published rules changed",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T00:00:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-23T23:56:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Require the exact WRH source family for observation-close…”: passed"
+   },
    {
     "at": "2026-10-23T23:53:14Z",
     "kind": "build",
@@ -345,11 +355,6 @@
     "text": "Merged “CODE-01 Group fill-markout sufficiency by rule-bound station-day” into the main build"
    },
    {
-    "at": "2026-10-23T22:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow shadow stuck waiting"
-   },
-   {
     "at": "2026-10-23T22:48:34Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Propagate synthetic provenance into release assessments”: passed"
@@ -358,11 +363,6 @@
     "at": "2026-10-23T22:48:21Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Group fill-markout sufficiency by rule-bound station-day”: passed"
-   },
-   {
-    "at": "2026-10-23T22:44:20Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Propagate synthetic provenance into release assessments” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-23T23:54:18Z",
-   "heartbeat_at": "2026-10-23T23:55:02Z",
+   "status_at": "2026-10-23T23:59:19Z",
+   "heartbeat_at": "2026-10-24T00:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +383,7 @@
     "weather_events": 378,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-23T23:51:28Z",
+    "last_scan_at": "2026-10-23T23:57:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-23T23:51:28Z",
+    "updated_at": "2026-10-23T23:57:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-23T23:53:19Z",
+    "updated_at": "2026-10-23T23:59:21Z",
     "detail": "observations retained"
    },
    {
