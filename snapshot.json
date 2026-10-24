@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T06:05:01Z",
+ "generated_at": "2026-10-24T06:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 30,
+    "count": 28,
     "unit": "queued",
     "active": false,
-    "detail": "25 ready to build"
+    "detail": "24 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "75 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_47281e9d",
+    "task": "CODE-01 Preserve decision provenance in markout measurements",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -90,7 +90,7 @@
     "family": "DeepSeek",
     "task_id": "t_da0cafea",
     "task": "LEARNING-SOURCES Bind resumed historical artifacts to original capture evidence",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 2",
@@ -130,8 +130,8 @@
     2,
     2,
     1,
-    1,
-    3,
+    2,
+    2,
     3,
     1,
     1,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 30,
-    "building": 0,
+    "queued": 28,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 2,
     "merged": 501,
-    "parked": 359
+    "parked": 360
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
-    "alerts_24h": 6,
+    "state": "healthy",
+    "active": 0,
+    "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T06:05:01Z",
+    "last_check_at": "2026-10-24T06:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -369,9 +369,9 @@
    "release": "b55e511",
    "commissioned_at": "2026-10-24T05:45:02Z",
    "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-24T06:04:59Z",
-   "heartbeat_at": "2026-10-24T06:05:01Z",
+   "state": "day gated",
+   "status_at": "2026-10-24T06:09:58Z",
+   "heartbeat_at": "2026-10-24T06:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 362,
     "markets": 3528,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T06:02:43Z",
+    "last_scan_at": "2026-10-24T06:08:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,15 +403,15 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T06:02:43Z",
+    "updated_at": "2026-10-24T06:08:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T06:03:10Z",
-    "detail": "gated"
+    "updated_at": "2026-10-24T06:09:03Z",
+    "detail": "observations retained"
    },
    {
     "name": "ECMWF IFS / AIFS",
@@ -637,7 +637,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 88,
-     "open_tasks": 11
+     "open_tasks": 10
     },
     {
      "id": "CODE-02",
