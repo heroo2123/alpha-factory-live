@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T08:25:01Z",
+ "generated_at": "2026-10-24T08:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_62267ebf",
     "task": "PAPER-02 Shadow first forecast replan RUNTIME_CONFIGURATION_CHANGED_REVIEW_REQUIRED",
-    "elapsed_min": 18
+    "elapsed_min": 23
    },
    {
     "slot": "Builder 2",
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 5,
     "recoveries_24h": 3,
-    "last_check_at": "2026-10-24T08:25:02Z",
+    "last_check_at": "2026-10-24T08:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,10 +234,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 557,
-    "last_run_at": "2026-10-24T08:25:02Z",
+    "runs_total": 558,
+    "last_run_at": "2026-10-24T08:30:03Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "full suite not green",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T08:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
+   },
    {
     "at": "2026-10-24T08:25:02Z",
     "kind": "heal",
@@ -320,11 +325,6 @@
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    },
    {
-    "at": "2026-10-24T07:40:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-24T07:34:23Z",
     "kind": "merge",
     "text": "Merged “Accept reviewed METAR whole-F precision in forecast probability…” into the main build"
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T08:24:54Z",
-   "heartbeat_at": "2026-10-24T08:25:02Z",
+   "status_at": "2026-10-24T08:29:57Z",
+   "heartbeat_at": "2026-10-24T08:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T08:23:19Z",
+    "updated_at": "2026-10-24T08:29:21Z",
     "detail": "observations retained"
    },
    {
