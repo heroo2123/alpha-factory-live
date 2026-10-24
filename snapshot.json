@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T13:15:02Z",
+ "generated_at": "2026-10-24T13:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 26,
+    "count": 36,
     "unit": "queued",
     "active": false,
-    "detail": "24 ready to build"
+    "detail": "32 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "73 built in 24h"
    },
    {
     "key": "review",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_3db065c2",
     "task": "CODE-01 Refuse mixed public and synthetic basket-book economics",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 50,
    "commits_24h": 50,
-   "built_24h": 74,
+   "built_24h": 73,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 61,
+   "reviews_passed_24h": 62,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     2,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 26,
+    "queued": 36,
     "building": 1,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 510,
-    "parked": 375
+    "parked": 366
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T13:15:02Z",
+    "last_check_at": "2026-10-24T13:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,10 +236,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 591,
-    "last_run_at": "2026-10-24T13:15:02Z",
+    "runs_total": 592,
+    "last_run_at": "2026-10-24T13:20:02Z",
     "last_ok": true,
-    "last_kind": "flow code drift frozen copy",
+    "last_kind": "flow brain harvest gated",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T13:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain harvest gated"
+   },
+   {
+    "at": "2026-10-24T13:17:14Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-24T13:15:02Z",
     "kind": "heal",
@@ -302,11 +312,6 @@
     "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
    },
    {
-    "at": "2026-10-24T12:35:01Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-24T12:34:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: no verified code delivery 2h"
@@ -355,11 +360,6 @@
     "at": "2026-10-24T11:50:13Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-24T11:49:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Make settlement rounding independent of Decimal context” → sent to independent review"
    }
   ]
  },
@@ -369,9 +369,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-24T13:15:01Z",
-   "heartbeat_at": "2026-10-24T13:15:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-24T13:18:01Z",
+   "heartbeat_at": "2026-10-24T13:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 375,
     "markets": 3688,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T13:11:09Z",
+    "last_scan_at": "2026-10-24T13:16:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T13:11:09Z",
+    "updated_at": "2026-10-24T13:16:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T13:13:24Z",
+    "updated_at": "2026-10-24T13:19:26Z",
     "detail": "observations retained"
    },
    {
@@ -501,14 +501,14 @@
    "verdict": "Brain does not beat the market yet: on 44 untouched city-days (11 cities, 4 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 65,
-   "waiting_city_days": 0,
+   "waiting_city_days": 10,
    "labelled_days": 10,
    "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-24T12:17:02Z",
+   "updated_at": "2026-10-24T13:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
@@ -637,7 +637,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 91,
-     "open_tasks": 9
+     "open_tasks": 15
     },
     {
      "id": "CODE-02",
