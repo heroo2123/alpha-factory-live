@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T02:30:02Z",
+ "generated_at": "2026-10-24T02:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 9,
+    "count": 8,
     "unit": "queued",
     "active": false,
     "detail": "10 ready to build"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "47 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 53,
+    "count": 62,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_1e3d458a",
-    "task": "Historical backfill: accept Wunderground-era (pre-switch) closed events through a narrow…",
-    "elapsed_min": 5
+    "task_id": "t_2b86dd9f",
+    "task": "CODE-01 Validate IEM provenance before bracket corroboration",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_601f22f6",
     "task": "PAPER-09 Expose infinite-loss regressions in PWS score summaries",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Reviewer 1",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_6d7d522c",
-    "task": "FLEX candidate t_1bdb24f5 35fe37530cfc",
-    "elapsed_min": 5
+    "task_id": "t_26b8e2e5",
+    "task": "FLEX candidate t_1e3d458a d23ca00c9924",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 53,
+   "progress_pct": 62,
    "last_finished_at": "2026-10-24T01:39:45Z",
    "last_passed": 16315,
    "last_failed": 0,
@@ -120,40 +120,42 @@
    "commits_24h": 47,
    "built_24h": 75,
    "build_failed_24h": 6,
-   "reviews_passed_24h": 62,
-   "reviews_changes_24h": 13,
+   "reviews_passed_24h": 63,
+   "reviews_changes_24h": 12,
    "commits_by_hour": [
     1,
     1,
     0,
     0,
     1,
-    0,
-    4,
-    0,
-    2,
+    1,
+    3,
+    1,
+    1,
     3,
     0,
     2,
     3,
     3,
     0,
-    2,
     3,
     2,
     3,
     2,
     3,
     3,
+    2,
     5,
     4
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 9,
+    "queued": 8,
     "building": 2,
     "in_review": 1,
-    "awaiting_merge": 0,
+    "awaiting_merge": 1,
     "merged": 495,
     "parked": 365
    }
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T02:30:03Z",
+    "last_check_at": "2026-10-24T02:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +232,15 @@
      "flow release needs release",
      "flow maintenance review packet invalid"
     ],
-    "last_check_at": "2026-10-24T02:20:03Z",
+    "last_check_at": "2026-10-24T02:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 517,
-    "last_run_at": "2026-10-24T02:30:03Z",
+    "runs_total": 518,
+    "last_run_at": "2026-10-24T02:35:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "flow brain capture missed",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T02:35:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow brain capture missed"
+   },
+   {
+    "at": "2026-10-24T02:34:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Historical backfill: accept Wunderground-era (pre-switch) closed…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T02:31:20Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1bdb24f5 35fe37530cfc”: passed"
+   },
    {
     "at": "2026-10-24T02:30:03Z",
     "kind": "heal",
@@ -322,11 +339,6 @@
     "text": "Merged “CODE-01 Integrate remaining quote size when measuring fill rates” into the main build"
    },
    {
-    "at": "2026-10-24T01:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-24T01:49:15Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “PAPER-09 Require temporal comparability for official-PWS divergence” → sent to independent review"
@@ -350,16 +362,6 @@
     "at": "2026-10-24T01:39:45Z",
     "kind": "qa",
     "text": "Full test suite finished: 16315 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-24T01:38:58Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Prevent partial fills from reusing horizon depth”: passed"
-   },
-   {
-    "at": "2026-10-24T01:29:53Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Prevent partial fills from reusing horizon depth” → sent to independent review"
    }
   ]
  },
@@ -370,8 +372,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T02:29:27Z",
-   "heartbeat_at": "2026-10-24T02:30:04Z",
+   "status_at": "2026-10-24T02:34:28Z",
+   "heartbeat_at": "2026-10-24T02:35:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +382,7 @@
     "weather_events": 378,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T02:24:45Z",
+    "last_scan_at": "2026-10-24T02:31:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T02:24:45Z",
+    "updated_at": "2026-10-24T02:31:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T02:28:11Z",
+    "updated_at": "2026-10-24T02:34:14Z",
     "detail": "observations retained"
    },
    {
