@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T03:10:02Z",
+ "generated_at": "2026-10-24T03:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 11,
+    "count": 12,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "48 merged in 24h"
+    "detail": "49 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 85,
+    "count": 92,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_68651d84",
     "task": "CODE-01 Reject superseded daylight inputs at the feature cutoff",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_44b74d15",
     "task": "CODE-01 Bind performance attribution to admission valid at entry valuation",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 85,
+   "progress_pct": 92,
    "last_finished_at": "2026-10-24T01:39:45Z",
    "last_passed": 16315,
    "last_failed": 0,
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16315,
   "flow": {
-   "merges_24h": 48,
-   "commits_24h": 48,
+   "merges_24h": 49,
+   "commits_24h": 49,
    "built_24h": 74,
    "build_failed_24h": 6,
    "reviews_passed_24h": 63,
@@ -128,33 +128,33 @@
     0,
     0,
     1,
-    3,
-    1,
-    2,
-    2,
-    1,
-    2,
-    2,
-    3,
-    1,
-    1,
-    3,
-    3,
-    2,
-    3,
-    2,
-    3,
     4,
+    0,
+    2,
+    3,
+    0,
+    2,
+    2,
+    3,
+    1,
+    1,
+    4,
+    2,
+    3,
+    2,
+    2,
+    3,
     5,
-    3
+    4,
+    4
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 11,
+    "queued": 12,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 497,
+    "awaiting_merge": 0,
+    "merged": 498,
     "parked": 367
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T03:12:18Z",
+    "title": "CODE-01 Validate IEM provenance before bracket corroboration",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T02:53:57Z",
     "title": "PAPER-09 Expose infinite-loss regressions in PWS score summaries",
@@ -199,11 +204,6 @@
     "at": "2026-10-24T01:12:17Z",
     "title": "CODE-01 Rank conversion legs by executable acquisition cost",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T01:03:19Z",
-    "title": "CODE-01 Refuse crossed and duplicated ledger mark depth",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T03:10:03Z",
+    "last_check_at": "2026-10-24T03:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T03:00:02Z",
+    "last_check_at": "2026-10-24T03:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T03:12:18Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Validate IEM provenance before bracket corroboration” into the main build"
+   },
    {
     "at": "2026-10-24T03:09:21Z",
     "kind": "review",
@@ -354,11 +359,6 @@
     "at": "2026-10-24T02:24:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: worker finished result unreconciled develop"
-   },
-   {
-    "at": "2026-10-24T02:23:18Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Remove dependent residuals when ablating official temperature” into the main build"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T03:09:30Z",
-   "heartbeat_at": "2026-10-24T03:10:04Z",
+   "status_at": "2026-10-24T03:14:30Z",
+   "heartbeat_at": "2026-10-24T03:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +379,7 @@
     "weather_events": 378,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T03:06:43Z",
+    "last_scan_at": "2026-10-24T03:12:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T03:06:43Z",
+    "updated_at": "2026-10-24T03:12:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T03:08:26Z",
+    "updated_at": "2026-10-24T03:14:27Z",
     "detail": "observations retained"
    },
    {
@@ -635,8 +635,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 85,
-     "open_tasks": 7
+     "merged_tasks": 86,
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
