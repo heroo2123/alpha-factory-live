@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T21:10:02Z",
+ "generated_at": "2026-10-24T21:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 29,
+    "count": 28,
     "unit": "queued",
     "active": false,
     "detail": "32 ready to build"
@@ -18,14 +18,14 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "67 built in 24h"
+    "detail": "68 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,12 +34,12 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "46 merged in 24h"
+    "detail": "45 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 17,
+    "count": 22,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_4c553c56",
-    "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
-    "elapsed_min": 41
+    "task_id": "t_d28c1ed5",
+    "task": "FLEX candidate t_1605c84d 5930bd53c9bb",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_c13c3ec7",
     "task": "Write honest synthetic PAPER fill receipts from admitted intents",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_4c553c56",
+    "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 17,
+   "progress_pct": 22,
    "last_finished_at": "2026-10-24T19:50:12Z",
    "last_passed": 16665,
    "last_failed": 0,
@@ -116,31 +116,31 @@
   },
   "tests_passing": 16665,
   "flow": {
-   "merges_24h": 46,
-   "commits_24h": 46,
-   "built_24h": 67,
+   "merges_24h": 45,
+   "commits_24h": 45,
+   "built_24h": 68,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 53,
+   "reviews_passed_24h": 52,
    "reviews_changes_24h": 34,
    "commits_by_hour": [
-    3,
+    2,
     2,
     3,
-    4,
     5,
-    3,
-    3,
-    0,
+    4,
+    4,
+    2,
     1,
-    3,
+    1,
+    2,
     2,
     0,
     2,
     0,
     0,
-    1,
+    2,
     3,
-    3,
+    2,
     2,
     1,
     1,
@@ -153,9 +153,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 29,
+    "queued": 28,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 523,
     "parked": 397
@@ -211,37 +211,37 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 6,
-    "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T21:10:03Z",
+    "recoveries_24h": 6,
+    "last_check_at": "2026-10-24T21:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 8,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 4
+     "P2": 6
     },
     "codes": [
+     "flow unmergeable reviewed work",
      "flow glm plan lane dead",
      "flow shadow census churn",
      "flow brain capture missed",
      "flow code drift frozen copy",
-     "flow source card wrong status",
-     "flow acceptance followthrough required"
+     "flow maintenance review packet invalid"
     ],
-    "last_check_at": "2026-10-24T21:00:04Z",
+    "last_check_at": "2026-10-24T21:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 638,
-    "last_run_at": "2026-10-24T21:10:03Z",
+    "runs_total": 639,
+    "last_run_at": "2026-10-24T21:15:01Z",
     "last_ok": true,
-    "last_kind": "agent4 qa pipeline subsystem failed",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T21:15:01Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-24T21:13:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: agent4 qa pipeline subsystem failed"
+   },
+   {
+    "at": "2026-10-24T21:12:17Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “Ignore still-fresh old MODEL replay already covered by a completed…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T21:10:03Z",
     "kind": "heal",
@@ -309,11 +324,6 @@
     "text": "Operator AI (DeepSeek V4 Pro) audit run: flow acceptance followthrough required"
    },
    {
-    "at": "2026-10-24T20:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-24T20:07:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Measure fill markouts when only the required horizon side…” → sent to independent review"
@@ -352,16 +362,6 @@
     "at": "2026-10-24T19:36:17Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Preserve periodic census generation across provider cooldown retries” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T19:07:19Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Write honest synthetic PAPER fill receipts from admitted intents”: changes required"
-   },
-   {
-    "at": "2026-10-24T19:06:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Write honest synthetic PAPER fill receipts from admitted intents” → sent to independent review"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T21:09:59Z",
-   "heartbeat_at": "2026-10-24T21:10:03Z",
+   "status_at": "2026-10-24T21:15:01Z",
+   "heartbeat_at": "2026-10-24T21:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 340,
     "markets": 3305,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T21:06:46Z",
+    "last_scan_at": "2026-10-24T21:12:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T21:06:46Z",
+    "updated_at": "2026-10-24T21:12:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T21:08:21Z",
+    "updated_at": "2026-10-24T21:14:24Z",
     "detail": "observations retained"
    },
    {
