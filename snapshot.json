@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T16:05:01Z",
+ "generated_at": "2026-10-24T16:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_0a1bbbb1",
-    "task": "Build bounded V11_PAPER health frontier",
-    "elapsed_min": 37
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_1517e311",
     "task": "PAPER-02 Empty METAR receipt replay after completed census must not restart GEFS…",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Reviewer 1",
@@ -152,7 +152,7 @@
    "stage_totals": {
     "queued": 38,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 517,
     "parked": 376
@@ -208,11 +208,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T16:05:01Z",
+    "last_check_at": "2026-10-24T16:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,10 +234,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 608,
-    "last_run_at": "2026-10-24T16:05:01Z",
+    "runs_total": 609,
+    "last_run_at": "2026-10-24T16:10:02Z",
     "last_ok": true,
-    "last_kind": "independent review changes required",
+    "last_kind": "routine",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T16:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: routine"
+   },
    {
     "at": "2026-10-24T16:05:01Z",
     "kind": "heal",
@@ -320,11 +325,6 @@
     "text": "Codex (GPT-6 Astra) built “Repair authoritative Wunderground provenance for historical source…” → sent to independent review"
    },
    {
-    "at": "2026-10-24T15:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-24T15:19:25Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Verify normalized forecast identity on idempotent replay”: changes required"
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T16:05:01Z",
-   "heartbeat_at": "2026-10-24T16:05:02Z",
+   "status_at": "2026-10-24T16:10:00Z",
+   "heartbeat_at": "2026-10-24T16:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 367,
     "markets": 3600,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T15:58:36Z",
+    "last_scan_at": "2026-10-24T16:05:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T15:58:36Z",
+    "updated_at": "2026-10-24T16:05:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T16:04:25Z",
+    "updated_at": "2026-10-24T16:08:26Z",
     "detail": "observations retained"
    },
    {
