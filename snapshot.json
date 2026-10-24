@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T02:50:01Z",
+ "generated_at": "2026-10-24T02:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 8,
+    "count": 9,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -18,28 +18,28 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "75 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "47 merged in 24h"
+    "detail": "48 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 70,
+    "count": 76,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2b86dd9f",
     "task": "CODE-01 Validate IEM provenance before bracket corroboration",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_1605c84d",
-    "task": "CODE-01 Gate simulated settlement marks on label availability",
-    "elapsed_min": 7
+    "task_id": "t_44b74d15",
+    "task": "CODE-01 Bind performance attribution to admission valid at entry valuation",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "GLM 5.3",
+    "family": "Zhipu",
+    "task_id": "t_1605c84d",
+    "task": "CODE-01 Gate simulated settlement marks on label availability",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 70,
+   "progress_pct": 76,
    "last_finished_at": "2026-10-24T01:39:45Z",
    "last_passed": 16315,
    "last_failed": 0,
@@ -116,11 +116,11 @@
   },
   "tests_passing": 16315,
   "flow": {
-   "merges_24h": 47,
-   "commits_24h": 47,
-   "built_24h": 74,
+   "merges_24h": 48,
+   "commits_24h": 48,
+   "built_24h": 75,
    "build_failed_24h": 6,
-   "reviews_passed_24h": 64,
+   "reviews_passed_24h": 63,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
     0,
@@ -130,43 +130,46 @@
     1,
     2,
     2,
+    2,
+    2,
     1,
-    2,
-    2,
     0,
-    2,
     3,
+    2,
     3,
     0,
     3,
     3,
     2,
+    3,
+    3,
     2,
-    3,
-    3,
-    3,
+    4,
     5,
     4
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 8,
+    "queued": 9,
     "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 496,
+    "in_review": 1,
+    "awaiting_merge": 0,
+    "merged": 497,
     "parked": 366
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-24T02:10:10Z",
+   "last_run_at": "2026-10-24T02:50:11Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T02:53:57Z",
+    "title": "PAPER-09 Expose infinite-loss regressions in PWS score summaries",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T02:23:18Z",
     "title": "CODE-01 Remove dependent residuals when ablating official temperature",
@@ -201,11 +204,6 @@
     "at": "2026-10-24T01:03:19Z",
     "title": "CODE-01 Refuse crossed and duplicated ledger mark depth",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T00:54:19Z",
-    "title": "CODE-01 Revalidate CLI report chronology before deriving labels",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T02:50:02Z",
+    "last_check_at": "2026-10-24T02:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,15 +230,15 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T02:40:03Z",
+    "last_check_at": "2026-10-24T02:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 521,
-    "last_run_at": "2026-10-24T02:50:02Z",
+    "runs_total": 522,
+    "last_run_at": "2026-10-24T02:55:01Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow release needs release",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +251,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T02:55:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow release needs release"
+   },
+   {
+    "at": "2026-10-24T02:54:09Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Gate simulated settlement marks on label availability” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T02:53:57Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Expose infinite-loss regressions in PWS score summaries” into the main build"
+   },
+   {
+    "at": "2026-10-24T02:50:11Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-24T02:50:02Z",
     "kind": "heal",
@@ -299,11 +317,6 @@
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1bdb24f5 35fe37530cfc”: passed"
    },
    {
-    "at": "2026-10-24T02:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-24T02:27:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
@@ -347,21 +360,6 @@
     "at": "2026-10-24T01:53:21Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Require temporal comparability for official-PWS divergence”: passed"
-   },
-   {
-    "at": "2026-10-24T01:52:16Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Integrate remaining quote size when measuring fill rates” into the main build"
-   },
-   {
-    "at": "2026-10-24T01:49:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “PAPER-09 Require temporal comparability for official-PWS divergence” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T01:46:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Integrate remaining quote size when measuring fill rates”: passed"
    }
   ]
  },
@@ -372,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T02:49:28Z",
-   "heartbeat_at": "2026-10-24T02:50:02Z",
+   "status_at": "2026-10-24T02:54:29Z",
+   "heartbeat_at": "2026-10-24T02:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +380,7 @@
     "weather_events": 378,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T02:48:57Z",
+    "last_scan_at": "2026-10-24T02:55:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T02:48:57Z",
+    "updated_at": "2026-10-24T02:55:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T02:48:19Z",
+    "updated_at": "2026-10-24T02:54:21Z",
     "detail": "observations retained"
    },
    {
@@ -639,7 +637,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 85,
-     "open_tasks": 4
+     "open_tasks": 6
     },
     {
      "id": "CODE-02",
@@ -737,8 +735,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 29,
-     "open_tasks": 1
+     "merged_tasks": 30,
+     "open_tasks": 0
     },
     {
      "id": "PAPER-10",
