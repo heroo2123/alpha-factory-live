@@ -1,31 +1,31 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T23:30:02Z",
+ "generated_at": "2026-10-24T23:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 25,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "28 ready to build"
+    "detail": "26 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "63 built in 24h"
+    "active": false,
+    "detail": "64 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "46 merged in 24h"
+    "detail": "45 merged in 24h"
    },
    {
     "key": "qa",
@@ -75,22 +75,22 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_4d47bbfb",
-    "task": "CODE-01 Make cost aggregation and EV arithmetic context-independent",
-    "elapsed_min": 32
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_c3e89ae6",
+    "task": "FLEX candidate t_4d47bbfb 9ef6ccdb8efb",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -116,31 +116,31 @@
   },
   "tests_passing": 16714,
   "flow": {
-   "merges_24h": 46,
-   "commits_24h": 46,
-   "built_24h": 63,
+   "merges_24h": 45,
+   "commits_24h": 45,
+   "built_24h": 64,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 56,
+   "reviews_passed_24h": 55,
    "reviews_changes_24h": 32,
    "commits_by_hour": [
-    3,
+    2,
     5,
     4,
     3,
     2,
     1,
     2,
+    2,
+    1,
+    0,
+    2,
+    0,
     1,
     2,
-    0,
     2,
-    0,
-    0,
     3,
     2,
-    2,
-    2,
-    1,
+    0,
     1,
     1,
     1,
@@ -149,15 +149,16 @@
     2
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 25,
-    "building": 1,
-    "in_review": 0,
+    "queued": 24,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 529,
-    "parked": 400
+    "parked": 401
    }
   },
   "architect": {
@@ -210,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T23:30:02Z",
+    "last_check_at": "2026-10-24T23:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +233,7 @@
      "flow brain capture missed",
      "flow brain harvest incomplete"
     ],
-    "last_check_at": "2026-10-24T23:20:04Z",
+    "last_check_at": "2026-10-24T23:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -252,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T23:32:20Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “CODE-01 Make cost aggregation and EV arithmetic context-independent” → sent to independent review"
+   },
    {
     "at": "2026-10-24T23:29:27Z",
     "kind": "review",
@@ -356,11 +362,6 @@
     "at": "2026-10-24T22:21:19Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “Rebuild the pre-June training pool with the daily forward capture…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T22:18:19Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
    }
   ]
  },
@@ -370,18 +371,18 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-24T23:30:00Z",
-   "heartbeat_at": "2026-10-24T23:30:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-24T23:34:29Z",
+   "heartbeat_at": "2026-10-24T23:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 317,
-    "markets": 3052,
+    "weather_events": 313,
+    "markets": 3008,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T23:26:24Z",
+    "last_scan_at": "2026-10-24T23:32:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T23:26:24Z",
+    "updated_at": "2026-10-24T23:32:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T23:29:28Z",
+    "updated_at": "2026-10-24T23:33:29Z",
     "detail": "observations retained"
    },
    {
