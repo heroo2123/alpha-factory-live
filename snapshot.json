@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T05:00:02Z",
+ "generated_at": "2026-10-24T05:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 14,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "50 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_e9bdd705",
     "task": "CODE-01 Scope current-release checks to the exact official channel",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_7ba58e40",
-    "task": "PAPER-09 Refuse superseded PWS captures during feature assembly",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -100,7 +100,7 @@
     "family": "DeepSeek",
     "task_id": "t_6bffea9a",
     "task": "LEARNING-SOURCES b007fe4c6f76 resume artifact validation",
-    "elapsed_min": 0
+    "elapsed_min": 5
    }
   ],
   "qa": {
@@ -120,40 +120,42 @@
    "commits_24h": 50,
    "built_24h": 75,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 62,
-   "reviews_changes_24h": 14,
+   "reviews_passed_24h": 63,
+   "reviews_changes_24h": 13,
    "commits_by_hour": [
     0,
     0,
     1,
-    2,
-    2,
+    3,
+    1,
     2,
     2,
     1,
-    0,
-    4,
-    2,
-    2,
-    0,
+    1,
+    3,
+    3,
+    1,
+    1,
     3,
     3,
     2,
     3,
-    3,
     2,
+    3,
     4,
     5,
-    4,
+    3,
     3,
     0
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
     "queued": 14,
     "building": 1,
-    "in_review": 2,
-    "awaiting_merge": 0,
+    "in_review": 1,
+    "awaiting_merge": 1,
     "merged": 500,
     "parked": 370
    }
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T05:00:02Z",
+    "last_check_at": "2026-10-24T05:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +231,7 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T04:50:02Z",
+    "last_check_at": "2026-10-24T05:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T05:01:21Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “PAPER-09 Refuse superseded PWS captures during feature assembly”: passed"
+   },
    {
     "at": "2026-10-24T04:59:14Z",
     "kind": "build",
@@ -353,11 +360,6 @@
     "at": "2026-10-24T03:16:10Z",
     "kind": "qa",
     "text": "Full test suite finished: 16377 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-24T03:12:18Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Validate IEM provenance before bracket corroboration” into the main build"
    }
   ]
  },
@@ -368,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-25",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T04:59:36Z",
-   "heartbeat_at": "2026-10-24T05:00:04Z",
+   "status_at": "2026-10-24T05:04:36Z",
+   "heartbeat_at": "2026-10-24T05:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -408,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T04:58:54Z",
+    "updated_at": "2026-10-24T05:04:55Z",
     "detail": "gated"
    },
    {
