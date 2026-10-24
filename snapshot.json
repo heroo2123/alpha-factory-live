@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T04:35:02Z",
+ "generated_at": "2026-10-24T04:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 16,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_7ba58e40",
     "task": "PAPER-09 Refuse superseded PWS captures during feature assembly",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T04:35:02Z",
+    "last_check_at": "2026-10-24T04:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,10 +234,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 534,
-    "last_run_at": "2026-10-24T04:25:01Z",
+    "runs_total": 535,
+    "last_run_at": "2026-10-24T04:40:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow release needs release",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T04:40:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow release needs release"
+   },
    {
     "at": "2026-10-24T04:31:18Z",
     "kind": "warn",
@@ -310,11 +315,6 @@
     "text": "Merged “CODE-01 Bind performance attribution to admission valid at entry…” into the main build"
    },
    {
-    "at": "2026-10-24T03:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-24T03:42:18Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Reject superseded daylight inputs at the feature cutoff” into the main build"
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-25",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T04:34:34Z",
-   "heartbeat_at": "2026-10-24T04:35:02Z",
+   "status_at": "2026-10-24T04:39:35Z",
+   "heartbeat_at": "2026-10-24T04:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 356,
-    "markets": 3462,
+    "weather_events": 373,
+    "markets": 3649,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T04:31:31Z",
+    "last_scan_at": "2026-10-24T04:37:08Z",
     "mode": "silent paper scan"
    }
   },
@@ -394,21 +394,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-24T03:37:02Z",
+    "updated_at": "2026-10-24T04:37:03Z",
     "detail": "multi-city capture collecting"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T04:31:31Z",
+    "updated_at": "2026-10-24T04:37:08Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T04:34:49Z",
+    "updated_at": "2026-10-24T04:38:50Z",
     "detail": "gated"
    },
    {
