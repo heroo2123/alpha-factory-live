@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T19:55:02Z",
+ "generated_at": "2026-10-24T20:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_40cec15f",
     "task": "CODE-01 Measure fill markouts when only the required horizon side exists",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Reviewer 1",
@@ -106,15 +106,15 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-24T15:04:40Z",
-   "last_passed": 16563,
+   "last_finished_at": "2026-10-24T19:50:12Z",
+   "last_passed": 16665,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-24T15:04:40Z",
-   "last_minutes": 104
+   "last_green_at": "2026-10-24T19:50:12Z",
+   "last_minutes": 105
   },
-  "tests_passing": 16563,
+  "tests_passing": 16665,
   "flow": {
    "merges_24h": 47,
    "commits_24h": 47,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T19:55:02Z",
+    "last_check_at": "2026-10-24T20:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 631,
+    "runs_total": 632,
     "last_run_at": "2026-10-24T19:55:02Z",
     "last_ok": true,
     "last_kind": "flow code drift frozen copy",
@@ -260,6 +260,11 @@
     "at": "2026-10-24T19:50:22Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-24T19:50:12Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 16665 passed, 0 failed"
    },
    {
     "at": "2026-10-24T19:48:25Z",
@@ -355,11 +360,6 @@
     "at": "2026-10-24T18:42:19Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Make settlement rounding independent of Decimal context” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T18:15:21Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Quarantine conflicting duplicate book responses”: passed"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T19:51:51Z",
-   "heartbeat_at": "2026-10-24T19:55:01Z",
+   "status_at": "2026-10-24T19:57:25Z",
+   "heartbeat_at": "2026-10-24T20:00:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T19:53:47Z",
+    "updated_at": "2026-10-24T19:59:49Z",
     "detail": "observations retained"
    },
    {
