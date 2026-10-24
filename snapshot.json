@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T17:55:02Z",
+ "generated_at": "2026-10-24T18:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_4c553c56",
     "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_55dd7ae7",
     "task": "Finish health frontier publication expiry guard with preserved tested phase1",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Reviewer 1",
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T17:55:02Z",
+    "last_check_at": "2026-10-24T18:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -370,17 +370,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T17:54:59Z",
-   "heartbeat_at": "2026-10-24T17:55:01Z",
+   "status_at": "2026-10-24T18:00:00Z",
+   "heartbeat_at": "2026-10-24T18:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 363,
-    "markets": 3556,
+    "weather_events": 358,
+    "markets": 3501,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T17:52:11Z",
+    "last_scan_at": "2026-10-24T17:57:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T17:52:11Z",
+    "updated_at": "2026-10-24T17:57:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T17:53:04Z",
+    "updated_at": "2026-10-24T17:59:06Z",
     "detail": "observations retained"
    },
    {
