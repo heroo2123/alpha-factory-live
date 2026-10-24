@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T16:00:02Z",
+ "generated_at": "2026-10-24T16:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 37,
+    "count": 38,
     "unit": "queued",
     "active": false,
-    "detail": "38 ready to build"
+    "detail": "40 ready to build"
    },
    {
     "key": "build",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
     "detail": "50 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0a1bbbb1",
     "task": "Build bounded V11_PAPER health frontier",
-    "elapsed_min": 32
+    "elapsed_min": 37
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_1517e311",
     "task": "PAPER-02 Empty METAR receipt replay after completed census must not restart GEFS…",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
@@ -123,40 +123,38 @@
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 25,
    "commits_by_hour": [
-    2,
-    0,
+    1,
+    1,
     3,
     3,
     2,
     3,
-    3,
     2,
+    3,
     4,
     5,
-    4,
+    3,
     3,
     0,
     1,
+    3,
     2,
+    0,
     2,
-    1,
-    1,
-    1,
+    0,
     0,
     1,
     3,
     3,
-    1
+    2
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 37,
+    "queued": 38,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 516,
+    "awaiting_merge": 0,
+    "merged": 517,
     "parked": 376
    }
   },
@@ -167,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T16:03:48Z",
+    "title": "CODE-01 Recheck forecast freshness when resuming partial preparation",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T15:32:28Z",
     "title": "Repair authoritative Wunderground provenance for historical source view",
@@ -201,11 +204,6 @@
     "at": "2026-10-24T13:13:18Z",
     "title": "PAPER-02 cross-release capability collision EXISTING_REVIEW_PROOF_HASH",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T10:04:21Z",
-    "title": "CODE-01 Refuse WRH finality claims from rejected rule semantics",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,33 +212,32 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T16:00:03Z",
+    "last_check_at": "2026-10-24T16:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 5,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 4
+     "P2": 3
     },
     "codes": [
      "flow glm plan lane dead",
      "flow shadow census churn",
      "flow brain capture missed",
      "flow code drift frozen copy",
-     "flow queued scope unmergeable",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T15:50:03Z",
+    "last_check_at": "2026-10-24T16:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 607,
-    "last_run_at": "2026-10-24T16:00:02Z",
+    "runs_total": 608,
+    "last_run_at": "2026-10-24T16:05:01Z",
     "last_ok": true,
-    "last_kind": "flow shadow census churn",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T16:05:01Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-24T16:03:48Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Recheck forecast freshness when resuming partial preparation” into the main build"
+   },
    {
     "at": "2026-10-24T16:00:02Z",
     "kind": "heal",
@@ -318,11 +325,6 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
    },
    {
-    "at": "2026-10-24T15:20:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-24T15:19:25Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Verify normalized forecast identity on idempotent replay”: changes required"
@@ -356,11 +358,6 @@
     "at": "2026-10-24T14:49:52Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-24T14:48:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Refuse smoke-only or incomplete economic Shadow before release”: changes required"
    }
   ]
  },
@@ -370,9 +367,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T15:55:32Z",
-   "heartbeat_at": "2026-10-24T16:00:02Z",
+   "state": "census service",
+   "status_at": "2026-10-24T16:05:01Z",
+   "heartbeat_at": "2026-10-24T16:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -411,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T15:58:23Z",
+    "updated_at": "2026-10-24T16:04:25Z",
     "detail": "observations retained"
    },
    {
@@ -637,8 +634,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 95,
-     "open_tasks": 10
+     "merged_tasks": 96,
+     "open_tasks": 9
     },
     {
      "id": "CODE-02",
