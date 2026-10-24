@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T12:40:02Z",
+ "generated_at": "2026-10-24T12:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_7bd5f283",
     "task": "CODE-01 Guard valuation persistence against racing book updates",
-    "elapsed_min": 6
+    "elapsed_min": 11
    },
    {
     "slot": "Builder 2",
@@ -129,16 +129,16 @@
     3,
     0,
     3,
-    2,
     3,
     2,
-    3,
-    3,
     2,
+    3,
+    3,
+    3,
     5,
     4,
     3,
-    2,
+    1,
     1,
     2,
     2,
@@ -212,31 +212,32 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T12:40:03Z",
+    "last_check_at": "2026-10-24T12:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 5,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 2
+     "P2": 3
     },
     "codes": [
      "flow glm plan lane dead",
      "flow brain capture missed",
+     "flow brain harvest gated",
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T12:30:03Z",
+    "last_check_at": "2026-10-24T12:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 587,
-    "last_run_at": "2026-10-24T12:35:01Z",
+    "last_run_at": "2026-10-24T12:45:02Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T12:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
+   },
    {
     "at": "2026-10-24T12:37:21Z",
     "kind": "review",
@@ -309,11 +315,6 @@
     "text": "New Shadow release 0fdbe42 went live (paper only)"
    },
    {
-    "at": "2026-10-24T11:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture gated"
-   },
-   {
     "at": "2026-10-24T11:52:53Z",
     "kind": "release",
     "text": "Release 0fdbe42 installed by the release manager"
@@ -367,8 +368,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-24T12:40:00Z",
-   "heartbeat_at": "2026-10-24T12:40:02Z",
+   "status_at": "2026-10-24T12:45:00Z",
+   "heartbeat_at": "2026-10-24T12:45:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -377,7 +378,7 @@
     "weather_events": 370,
     "markets": 3633,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T12:37:53Z",
+    "last_scan_at": "2026-10-24T12:43:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T12:37:53Z",
+    "updated_at": "2026-10-24T12:43:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T12:39:13Z",
+    "updated_at": "2026-10-24T12:43:15Z",
     "detail": "observations retained"
    },
    {
