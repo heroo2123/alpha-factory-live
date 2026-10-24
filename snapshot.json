@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T20:25:02Z",
+ "generated_at": "2026-10-24T20:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 37,
+    "count": 35,
     "unit": "queued",
     "active": false,
     "detail": "39 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 2,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "68 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,32 +65,32 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_4c553c56",
+    "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_e9bdd705",
+    "task": "CODE-01 Scope current-release checks to the exact official channel",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_40cec15f",
+    "task": "CODE-01 Measure fill markouts when only the required horizon side exists",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -153,8 +153,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 37,
-    "building": 0,
+    "queued": 35,
+    "building": 2,
     "in_review": 1,
     "awaiting_merge": 2,
     "merged": 521,
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T20:25:02Z",
+    "last_check_at": "2026-10-24T20:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T20:22:06Z",
-   "heartbeat_at": "2026-10-24T20:25:02Z",
+   "status_at": "2026-10-24T20:27:36Z",
+   "heartbeat_at": "2026-10-24T20:30:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T20:23:56Z",
+    "updated_at": "2026-10-24T20:29:58Z",
     "detail": "observations retained"
    },
    {
