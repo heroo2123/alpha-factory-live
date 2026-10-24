@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T18:10:02Z",
+ "generated_at": "2026-10-24T18:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 38,
+    "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "40 ready to build"
+    "detail": "39 ready to build"
    },
    {
     "key": "build",
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "50 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 5,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,6 +65,16 @@
    {
     "slot": "Builder 1",
     "role": "build",
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_50230f16",
+    "task": "Complete public socket stream to real risk adapter with causal checksum evidence",
+    "elapsed_min": 0
+   },
+   {
+    "slot": "Builder 2",
+    "role": "build",
     "state": "idle",
     "model": "",
     "family": "",
@@ -73,23 +83,13 @@
     "elapsed_min": null
    },
    {
-    "slot": "Builder 2",
-    "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_bd8e6155",
-    "task": "Finish fee refusal retention near capacity and during CLI alarm",
-    "elapsed_min": 3
-   },
-   {
     "slot": "Reviewer 1",
     "role": "review",
     "state": "working",
-    "model": "Codex (GPT-6 Astra)",
+    "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_4c553c56",
-    "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
+    "task_id": "t_7c526264",
+    "task": "CODE-01 Quarantine conflicting duplicate book responses",
     "elapsed_min": 0
    },
    {
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 5,
    "last_finished_at": "2026-10-24T15:04:40Z",
    "last_passed": 16563,
    "last_failed": 0,
@@ -120,44 +120,45 @@
    "commits_24h": 50,
    "built_24h": 69,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 55,
-   "reviews_changes_24h": 30,
+   "reviews_passed_24h": 54,
+   "reviews_changes_24h": 31,
    "commits_by_hour": [
-    3,
-    3,
-    2,
-    3,
-    2,
-    3,
     4,
+    2,
+    3,
+    2,
+    2,
+    3,
     5,
-    3,
-    3,
-    0,
+    4,
+    4,
+    2,
     1,
-    3,
+    1,
+    2,
     2,
     0,
     2,
     0,
     0,
-    1,
+    2,
     3,
-    3,
+    2,
     2,
     1,
     1
    ],
    "merge_holds": [
-    "protected code: second review asked for changes"
+    "protected code: second review asked for changes",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 38,
+    "queued": 37,
     "building": 1,
     "in_review": 1,
-    "awaiting_merge": 1,
+    "awaiting_merge": 2,
     "merged": 519,
-    "parked": 384
+    "parked": 385
    }
   },
   "architect": {
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T18:10:02Z",
+    "last_check_at": "2026-10-24T18:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,15 +232,15 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T18:00:02Z",
+    "last_check_at": "2026-10-24T18:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 620,
-    "last_run_at": "2026-10-24T17:55:02Z",
+    "last_run_at": "2026-10-24T18:15:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow code drift frozen copy",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +252,31 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T18:15:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow code drift frozen copy"
+   },
+   {
+    "at": "2026-10-24T18:14:25Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Finish fee refusal retention near capacity and during CLI alarm”: changes required"
+   },
+   {
+    "at": "2026-10-24T18:14:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Quarantine conflicting duplicate book responses” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T18:12:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Finish fee refusal retention near capacity and during CLI alarm” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T18:11:31Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “Ignore still-fresh old MODEL replay already covered by a completed…”: passed"
+   },
    {
     "at": "2026-10-24T18:09:16Z",
     "kind": "build",
@@ -335,31 +361,6 @@
     "at": "2026-10-24T17:30:31Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Gate paper quotes on book freshness”: passed"
-   },
-   {
-    "at": "2026-10-24T17:29:29Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Measure fill markouts when only the required horizon side…”: passed"
-   },
-   {
-    "at": "2026-10-24T17:29:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Gate paper quotes on book freshness” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T17:27:22Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Measure fill markouts when only the required horizon side…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T17:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow code drift frozen copy"
-   },
-   {
-    "at": "2026-10-24T17:22:19Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Make cost aggregation and EV arithmetic context-independent”: changes required"
    }
   ]
  },
@@ -369,9 +370,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T18:09:28Z",
-   "heartbeat_at": "2026-10-24T18:10:03Z",
+   "state": "census service",
+   "status_at": "2026-10-24T18:15:00Z",
+   "heartbeat_at": "2026-10-24T18:15:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +381,7 @@
     "weather_events": 356,
     "markets": 3479,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T18:04:48Z",
+    "last_scan_at": "2026-10-24T18:10:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T18:04:48Z",
+    "updated_at": "2026-10-24T18:10:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T18:09:10Z",
+    "updated_at": "2026-10-24T18:13:11Z",
     "detail": "observations retained"
    },
    {
