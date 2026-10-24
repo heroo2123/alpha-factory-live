@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T20:40:03Z",
+ "generated_at": "2026-10-24T20:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "46 merged in 24h"
+    "detail": "47 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_4c553c56",
     "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_e9bdd705",
     "task": "CODE-01 Scope current-release checks to the exact official channel",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Reviewer 1",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16665,
   "flow": {
-   "merges_24h": 46,
-   "commits_24h": 46,
+   "merges_24h": 47,
+   "commits_24h": 47,
    "built_24h": 68,
    "build_failed_24h": 3,
    "reviews_passed_24h": 53,
@@ -126,11 +126,11 @@
     2,
     3,
     3,
-    2,
+    3,
     5,
     4,
     3,
-    2,
+    1,
     1,
     2,
     2,
@@ -139,11 +139,11 @@
     1,
     0,
     1,
-    2,
-    2,
     3,
+    3,
+    1,
     2,
-    0,
+    1,
     1,
     1,
     2
@@ -153,8 +153,8 @@
     "queued": 31,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 522,
+    "awaiting_merge": 1,
+    "merged": 523,
     "parked": 396
    }
   },
@@ -165,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T20:44:11Z",
+    "title": "CODE-01 Measure fill markouts when only the required horizon side exists",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T20:39:58Z",
     "title": "Enforce health expiry after actual SQLite lock acquisition",
@@ -199,36 +204,32 @@
     "at": "2026-10-24T15:32:28Z",
     "title": "Repair authoritative Wunderground provenance for historical source view",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T14:44:01Z",
-    "title": "Finish fresh PAPER ledger bootstrap after merged profile precheck",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 5,
+    "state": "p1",
+    "active": 1,
+    "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T20:40:03Z",
+    "last_check_at": "2026-10-24T20:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 4,
+    "active": 5,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 2
+     "P2": 3
     },
     "codes": [
      "flow glm plan lane dead",
      "flow brain capture missed",
      "flow code drift frozen copy",
+     "flow source card wrong status",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T20:30:03Z",
+    "last_check_at": "2026-10-24T20:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -248,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T20:44:11Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Measure fill markouts when only the required horizon side…” into the main build"
+   },
+   {
+    "at": "2026-10-24T20:42:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: agent4 qa pipeline subsystem failed"
+   },
    {
     "at": "2026-10-24T20:39:58Z",
     "kind": "merge",
@@ -347,16 +358,6 @@
     "at": "2026-10-24T19:00:15Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-24T18:58:25Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Refuse historical causal READY without predecision rule provenance”: passed"
-   },
-   {
-    "at": "2026-10-24T18:56:18Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Refuse historical causal READY without predecision rule provenance” → sent to independent review"
    }
   ]
  },
@@ -367,8 +368,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T20:38:45Z",
-   "heartbeat_at": "2026-10-24T20:40:04Z",
+   "status_at": "2026-10-24T20:44:26Z",
+   "heartbeat_at": "2026-10-24T20:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -377,7 +378,7 @@
     "weather_events": 340,
     "markets": 3305,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T20:36:38Z",
+    "last_scan_at": "2026-10-24T20:42:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T20:36:38Z",
+    "updated_at": "2026-10-24T20:42:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T20:38:03Z",
+    "updated_at": "2026-10-24T20:44:08Z",
     "detail": "observations retained"
    },
    {
@@ -633,8 +634,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 98,
-     "open_tasks": 4
+     "merged_tasks": 99,
+     "open_tasks": 3
     },
     {
      "id": "CODE-02",
