@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T16:20:02Z",
+ "generated_at": "2026-10-24T16:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "50 merged in 24h"
+    "detail": "49 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_5d0a024a",
     "task": "Finish atomic fee capture raw-rule CAS, append deadline and failure receipts",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_1517e311",
     "task": "PAPER-02 Empty METAR receipt replay after completed census must not restart GEFS…",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Reviewer 1",
@@ -116,35 +116,35 @@
   },
   "tests_passing": 16563,
   "flow": {
-   "merges_24h": 50,
-   "commits_24h": 50,
+   "merges_24h": 49,
+   "commits_24h": 49,
    "built_24h": 69,
    "build_failed_24h": 4,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 26,
    "commits_by_hour": [
-    1,
-    1,
-    4,
+    0,
     2,
     3,
     2,
+    3,
     2,
+    3,
     3,
     5,
     4,
-    4,
-    2,
-    1,
-    1,
-    2,
-    2,
-    0,
-    2,
-    0,
-    0,
-    2,
     3,
+    2,
+    1,
+    2,
+    1,
+    2,
+    0,
+    2,
+    0,
+    0,
+    3,
+    2,
     2,
     2
    ],
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T16:20:02Z",
+    "last_check_at": "2026-10-24T16:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T16:10:03Z",
+    "last_check_at": "2026-10-24T16:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T16:20:02Z",
-   "heartbeat_at": "2026-10-24T16:20:04Z",
+   "status_at": "2026-10-24T16:24:59Z",
+   "heartbeat_at": "2026-10-24T16:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 367,
     "markets": 3600,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T16:17:34Z",
+    "last_scan_at": "2026-10-24T16:23:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T16:17:34Z",
+    "updated_at": "2026-10-24T16:23:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T16:18:30Z",
+    "updated_at": "2026-10-24T16:24:32Z",
     "detail": "observations retained"
    },
    {
