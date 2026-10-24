@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T13:35:01Z",
+ "generated_at": "2026-10-24T13:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 35,
+    "count": 34,
     "unit": "queued",
     "active": false,
-    "detail": "34 ready to build"
+    "detail": "33 ready to build"
    },
    {
     "key": "build",
@@ -25,13 +25,13 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "51 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 15,
+    "count": 16,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_1d83aff7",
-    "task": "Brain freeze registry executable identity and receipt binding",
-    "elapsed_min": 1
+    "task_id": "t_47281e9d",
+    "task": "CODE-01 Preserve decision provenance in markout measurements",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_1d83aff7",
+    "task": "Brain freeze registry executable identity and receipt binding",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 15,
+   "progress_pct": 16,
    "last_finished_at": "2026-10-24T11:18:19Z",
    "last_passed": 16556,
    "last_failed": 0,
@@ -120,8 +120,8 @@
    "commits_24h": 51,
    "built_24h": 73,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 62,
-   "reviews_changes_24h": 20,
+   "reviews_passed_24h": 63,
+   "reviews_changes_24h": 19,
    "commits_by_hour": [
     2,
     3,
@@ -142,18 +142,20 @@
     2,
     2,
     1,
-    0,
-    2,
+    1,
+    1,
     0,
     1,
     2
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 35,
+    "queued": 34,
     "building": 1,
     "in_review": 1,
-    "awaiting_merge": 0,
+    "awaiting_merge": 1,
     "merged": 511,
     "parked": 367
    }
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T13:35:02Z",
+    "last_check_at": "2026-10-24T13:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,7 +236,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 593,
+    "runs_total": 594,
     "last_run_at": "2026-10-24T13:35:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -249,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T13:39:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Brain freeze registry executable identity and receipt binding” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T13:35:25Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Refuse mixed public and synthetic basket-book economics”: passed"
+   },
    {
     "at": "2026-10-24T13:35:02Z",
     "kind": "heal",
@@ -348,16 +360,6 @@
     "at": "2026-10-24T12:15:19Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “FLEX candidate t_d2629d21 dc98b7c19067” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T12:06:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-24T11:55:03Z",
-    "kind": "release",
-    "text": "New Shadow release 0fdbe42 went live (paper only)"
    }
   ]
  },
@@ -368,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T13:29:47Z",
-   "heartbeat_at": "2026-10-24T13:35:01Z",
+   "status_at": "2026-10-24T13:35:08Z",
+   "heartbeat_at": "2026-10-24T13:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -394,7 +396,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-24T12:37:57Z",
+    "updated_at": "2026-10-24T13:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -408,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T13:33:31Z",
+    "updated_at": "2026-10-24T13:39:33Z",
     "detail": "observations retained"
    },
    {
