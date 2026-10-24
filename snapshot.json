@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T02:00:02Z",
+ "generated_at": "2026-10-24T02:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 8,
+    "count": 9,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "47 merged in 24h"
+    "detail": "48 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 23,
+    "count": 27,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_1bdb24f5",
     "task": "CODE-01 Reject superseded books in standalone valuations",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_8ffc5f9b",
     "task": "CODE-01 Remove dependent residuals when ablating official temperature",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 23,
+   "progress_pct": 27,
    "last_finished_at": "2026-10-24T01:39:45Z",
    "last_passed": 16315,
    "last_failed": 0,
@@ -116,49 +116,46 @@
   },
   "tests_passing": 16315,
   "flow": {
-   "merges_24h": 47,
+   "merges_24h": 48,
    "commits_24h": 47,
    "built_24h": 74,
    "build_failed_24h": 6,
    "reviews_passed_24h": 61,
    "reviews_changes_24h": 15,
    "commits_by_hour": [
-    3,
+    2,
     0,
     1,
     0,
     0,
     1,
-    2,
-    2,
+    3,
+    1,
     2,
     2,
     1,
-    0,
-    4,
-    2,
-    2,
-    0,
+    1,
+    3,
+    3,
+    1,
+    1,
     3,
     3,
     2,
     3,
-    3,
     2,
+    3,
     4,
     5
    ],
-   "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
-    "queued": 8,
+    "queued": 9,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 493,
-    "parked": 364
+    "awaiting_merge": 0,
+    "merged": 494,
+    "parked": 365
    }
   },
   "architect": {
@@ -168,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T02:04:47Z",
+    "title": "PAPER-09 Require temporal comparability for official-PWS divergence",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T01:52:16Z",
     "title": "CODE-01 Integrate remaining quote size when measuring fill rates",
@@ -202,11 +204,6 @@
     "at": "2026-10-24T00:44:49Z",
     "title": "CODE-01 Propagate synthetic provenance into release assessments",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T00:23:25Z",
-    "title": "CODE-01 Require the exact WRH source family for observation-close derivation",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-24T02:00:02Z",
+    "last_check_at": "2026-10-24T02:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,15 +230,15 @@
      "flow brain capture missed",
      "flow release needs release"
     ],
-    "last_check_at": "2026-10-24T01:50:03Z",
+    "last_check_at": "2026-10-24T02:02:33Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 515,
-    "last_run_at": "2026-10-24T02:00:02Z",
+    "runs_total": 516,
+    "last_run_at": "2026-10-24T02:05:02Z",
     "last_ok": true,
-    "last_kind": "flow release needs release",
+    "last_kind": "flow unmergeable reviewed work",
     "running": false,
     "model": "Claude Opus",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T02:05:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Claude Opus) audit run: flow unmergeable reviewed work"
+   },
+   {
+    "at": "2026-10-24T02:04:47Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Require temporal comparability for official-PWS divergence” into the main build"
+   },
    {
     "at": "2026-10-24T02:00:02Z",
     "kind": "heal",
@@ -305,11 +312,6 @@
     "text": "Merged “CODE-01 Prevent partial fills from reusing horizon depth” into the main build"
    },
    {
-    "at": "2026-10-24T01:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Claude Opus) audit run: flow acceptance followthrough required"
-   },
-   {
     "at": "2026-10-24T01:39:45Z",
     "kind": "qa",
     "text": "Full test suite finished: 16315 passed, 0 failed"
@@ -358,11 +360,6 @@
     "at": "2026-10-24T00:56:34Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Floor sizing from the exact reducer product”: passed"
-   },
-   {
-    "at": "2026-10-24T00:56:21Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Rank conversion legs by executable acquisition cost”: passed"
    }
   ]
  },
@@ -373,8 +370,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T01:59:26Z",
-   "heartbeat_at": "2026-10-24T02:00:03Z",
+   "status_at": "2026-10-24T02:04:26Z",
+   "heartbeat_at": "2026-10-24T02:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -383,7 +380,7 @@
     "weather_events": 378,
     "markets": 3723,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T01:54:24Z",
+    "last_scan_at": "2026-10-24T02:00:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T01:54:24Z",
+    "updated_at": "2026-10-24T02:00:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T02:00:00Z",
+    "updated_at": "2026-10-24T02:04:03Z",
     "detail": "observations retained"
    },
    {
@@ -738,8 +735,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 28,
-     "open_tasks": 1
+     "merged_tasks": 29,
+     "open_tasks": 0
     },
     {
      "id": "PAPER-10",
