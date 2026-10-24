@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T09:15:02Z",
+ "generated_at": "2026-10-24T09:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_a4b22808",
     "task": "PAPER-02 runtime-origin and candidate-variant provenance design repair",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -212,7 +212,7 @@
     "active": 1,
     "alerts_24h": 5,
     "recoveries_24h": 3,
-    "last_check_at": "2026-10-24T09:15:03Z",
+    "last_check_at": "2026-10-24T09:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,10 +234,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 564,
-    "last_run_at": "2026-10-24T09:15:02Z",
+    "runs_total": 565,
+    "last_run_at": "2026-10-24T09:20:02Z",
     "last_ok": true,
-    "last_kind": "flow brain capture missed",
+    "last_kind": "full suite not green",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T09:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
+   },
    {
     "at": "2026-10-24T09:15:02Z",
     "kind": "heal",
@@ -268,11 +273,6 @@
     "at": "2026-10-24T08:45:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-24T08:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
    },
    {
     "at": "2026-10-24T08:38:17Z",
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T09:14:53Z",
-   "heartbeat_at": "2026-10-24T09:15:03Z",
+   "status_at": "2026-10-24T09:19:56Z",
+   "heartbeat_at": "2026-10-24T09:20:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 361,
     "markets": 3517,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T09:09:37Z",
+    "last_scan_at": "2026-10-24T09:15:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T09:09:37Z",
+    "updated_at": "2026-10-24T09:15:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T09:13:35Z",
+    "updated_at": "2026-10-24T09:19:37Z",
     "detail": "observations retained"
    },
    {
@@ -506,7 +506,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-24T08:17:02Z",
+   "updated_at": "2026-10-24T09:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
