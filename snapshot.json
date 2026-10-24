@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T11:45:02Z",
+ "generated_at": "2026-10-24T11:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "20 ready to build"
@@ -18,14 +18,14 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "75 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_2f495c0d",
-    "task": "CODE-01 Make settlement rounding independent of Decimal context",
-    "elapsed_min": 45
+    "task_id": "t_3f7d8b2d",
+    "task": "FLEX candidate t_d2629d21 dc98b7c19067",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_75670ba7",
+    "task": "FLEX candidate t_2f495c0d 4f944b1925c6",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 50,
    "commits_24h": 50,
-   "built_24h": 74,
-   "build_failed_24h": 5,
+   "built_24h": 75,
+   "build_failed_24h": 4,
    "reviews_passed_24h": 60,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 22,
+    "queued": 21,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 508,
     "parked": 374
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T11:45:02Z",
+    "last_check_at": "2026-10-24T11:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,7 +234,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 581,
+    "runs_total": 582,
     "last_run_at": "2026-10-24T11:45:02Z",
     "last_ok": true,
     "last_kind": "flow brain capture missed",
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T11:49:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Make settlement rounding independent of Decimal context” → sent to independent review"
+   },
    {
     "at": "2026-10-24T11:45:02Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-24T09:36:02Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “PAPER-02 runtime-origin and candidate-variant provenance design repair”: passed"
-   },
-   {
-    "at": "2026-10-24T09:33:07Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “PAPER-02 runtime-origin and candidate-variant provenance design repair” → sent to independent review"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T11:44:52Z",
-   "heartbeat_at": "2026-10-24T11:45:02Z",
+   "status_at": "2026-10-24T11:49:56Z",
+   "heartbeat_at": "2026-10-24T11:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 365,
     "markets": 3564,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T11:43:48Z",
+    "last_scan_at": "2026-10-24T11:49:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T11:43:48Z",
+    "updated_at": "2026-10-24T11:49:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T11:44:28Z",
+    "updated_at": "2026-10-24T11:48:30Z",
     "detail": "observations retained"
    },
    {
