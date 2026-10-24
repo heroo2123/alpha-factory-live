@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T14:15:02Z",
+ "generated_at": "2026-10-24T14:20:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 38,
     "unit": "queued",
     "active": false,
-    "detail": "32 ready to build"
+    "detail": "38 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 53,
+    "count": 56,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_586d5564",
     "task": "CODE-01 Expire census coverage at the rule receipt deadline",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_08446fe7",
-    "task": "CODE-01 PAPER reward maker capture fixes: live Gamma page size over response limit…",
-    "elapsed_min": 2
+    "task_id": "t_82faf0b6",
+    "task": "Atomically bind public fee import to current rule and book",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 53,
+   "progress_pct": 56,
    "last_finished_at": "2026-10-24T11:18:19Z",
    "last_passed": 16556,
    "last_failed": 0,
@@ -152,10 +152,10 @@
    "stage_totals": {
     "queued": 38,
     "building": 2,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 513,
-    "parked": 369
+    "parked": 370
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T14:15:02Z",
+    "last_check_at": "2026-10-24T14:20:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 596,
+    "runs_total": 597,
     "last_run_at": "2026-10-24T14:15:02Z",
     "last_ok": true,
     "last_kind": "flow brain capture missed",
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T14:15:02Z",
-   "heartbeat_at": "2026-10-24T14:15:01Z",
+   "status_at": "2026-10-24T14:20:00Z",
+   "heartbeat_at": "2026-10-24T14:20:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -377,7 +377,7 @@
     "weather_events": 375,
     "markets": 3688,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T14:10:35Z",
+    "last_scan_at": "2026-10-24T14:16:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T14:10:35Z",
+    "updated_at": "2026-10-24T14:16:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T14:13:44Z",
+    "updated_at": "2026-10-24T14:19:46Z",
     "detail": "observations retained"
    },
    {
@@ -505,7 +505,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-24T13:17:03Z",
+   "updated_at": "2026-10-24T14:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
