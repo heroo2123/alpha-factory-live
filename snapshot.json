@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T08:00:02Z",
+ "generated_at": "2026-10-24T08:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,18 +31,18 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "54 merged in 24h"
+    "detail": "55 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 92,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_3a661433",
     "task": "CODE-01 Recheck forecast freshness when resuming partial preparation",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_4d47bbfb",
     "task": "CODE-01 Make cost aggregation and EV arithmetic context-independent",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Reviewer 1",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 92,
+   "running": false,
+   "progress_pct": null,
    "last_finished_at": "2026-10-24T03:16:10Z",
    "last_passed": 16377,
    "last_failed": 0,
@@ -116,47 +116,45 @@
   },
   "tests_passing": 16377,
   "flow": {
-   "merges_24h": 54,
-   "commits_24h": 54,
+   "merges_24h": 55,
+   "commits_24h": 55,
    "built_24h": 74,
    "build_failed_24h": 6,
    "reviews_passed_24h": 64,
    "reviews_changes_24h": 15,
    "commits_by_hour": [
-    2,
-    2,
+    3,
+    1,
     2,
     2,
     1,
-    0,
-    4,
-    2,
-    2,
-    0,
+    1,
+    3,
+    3,
+    1,
+    1,
     3,
     3,
     2,
     3,
-    3,
     2,
+    3,
     4,
     5,
-    4,
+    3,
     3,
     0,
     1,
-    2,
+    3,
     2
    ],
-   "merge_holds": [
-    "protected code: waiting for a second review"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 26,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 1,
-    "merged": 505,
+    "awaiting_merge": 0,
+    "merged": 506,
     "parked": 366
    }
   },
@@ -167,6 +165,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T08:04:24Z",
+    "title": "CODE-01 Recognize unknown vertical visibility when checking sky conflicts",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T07:34:23Z",
     "title": "Accept reviewed METAR whole-F precision in forecast probability buckets",
@@ -201,11 +204,6 @@
     "at": "2026-10-24T03:42:18Z",
     "title": "CODE-01 Reject superseded daylight inputs at the feature cutoff",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T03:12:18Z",
-    "title": "CODE-01 Validate IEM provenance before bracket corroboration",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 4,
     "recoveries_24h": 3,
-    "last_check_at": "2026-10-24T08:00:03Z",
+    "last_check_at": "2026-10-24T08:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +229,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T07:50:03Z",
+    "last_check_at": "2026-10-24T08:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T08:04:24Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Recognize unknown vertical visibility when checking sky…” into the main build"
+   },
    {
     "at": "2026-10-24T07:56:23Z",
     "kind": "review",
@@ -355,11 +358,6 @@
     "at": "2026-10-24T06:56:28Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “PAPER-02 repair basket Check causal book view TypeError as_of”: passed"
-   },
-   {
-    "at": "2026-10-24T06:54:40Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Restore original closed Wunderground training-source support with…” → sent to independent review"
    }
   ]
  },
@@ -370,17 +368,17 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T07:59:56Z",
-   "heartbeat_at": "2026-10-24T08:00:04Z",
+   "status_at": "2026-10-24T08:04:58Z",
+   "heartbeat_at": "2026-10-24T08:05:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 366,
-    "markets": 3572,
+    "weather_events": 367,
+    "markets": 3583,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T07:56:14Z",
+    "last_scan_at": "2026-10-24T08:02:08Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T07:56:14Z",
+    "updated_at": "2026-10-24T08:02:08Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T07:59:12Z",
+    "updated_at": "2026-10-24T08:03:13Z",
     "detail": "observations retained"
    },
    {
@@ -636,8 +634,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 89,
-     "open_tasks": 8
+     "merged_tasks": 90,
+     "open_tasks": 7
     },
     {
      "id": "CODE-02",
