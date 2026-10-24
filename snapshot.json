@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T04:25:01Z",
+ "generated_at": "2026-10-24T04:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_d2629d21",
-    "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 25
+    "task_id": "t_7ba58e40",
+    "task": "PAPER-09 Refuse superseded PWS captures during feature assembly",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_3f7d8b2d",
+    "task": "FLEX candidate t_d2629d21 dc98b7c19067",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -150,9 +150,9 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 16,
+    "queued": 15,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 500,
     "parked": 369
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T04:25:01Z",
+    "last_check_at": "2026-10-24T04:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,7 +234,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 533,
+    "runs_total": 534,
     "last_run_at": "2026-10-24T04:25:01Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T04:28:14Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
+   },
    {
     "at": "2026-10-24T04:25:01Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-24T03:05:53Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Validate IEM provenance before bracket corroboration” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T03:00:15Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-25",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T04:24:34Z",
-   "heartbeat_at": "2026-10-24T04:25:01Z",
+   "status_at": "2026-10-24T04:29:34Z",
+   "heartbeat_at": "2026-10-24T04:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 374,
-    "markets": 3660,
+    "weather_events": 372,
+    "markets": 3638,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T04:19:57Z",
+    "last_scan_at": "2026-10-24T04:25:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T04:19:57Z",
+    "updated_at": "2026-10-24T04:25:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T04:24:47Z",
+    "updated_at": "2026-10-24T04:28:48Z",
     "detail": "gated"
    },
    {
