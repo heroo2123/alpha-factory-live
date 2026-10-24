@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T01:00:02Z",
+ "generated_at": "2026-10-24T01:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 5,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "42 merged in 24h"
+    "detail": "43 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 64,
+    "count": 66,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_4252cf3d",
     "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_eea2f842",
     "task": "CODE-01 Prevent partial fills from reusing horizon depth",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 64,
+   "progress_pct": 66,
    "last_finished_at": "2026-10-23T20:55:21Z",
    "last_passed": 16253,
    "last_failed": 0,
@@ -116,36 +116,36 @@
   },
   "tests_passing": 16253,
   "flow": {
-   "merges_24h": 42,
-   "commits_24h": 42,
+   "merges_24h": 43,
+   "commits_24h": 43,
    "built_24h": 74,
    "build_failed_24h": 6,
    "reviews_passed_24h": 61,
    "reviews_changes_24h": 15,
    "commits_by_hour": [
-    0,
-    3,
+    1,
+    2,
     0,
     1,
     0,
     0,
     1,
-    2,
-    2,
+    3,
+    1,
     2,
     2,
     1,
-    0,
-    4,
-    2,
-    2,
-    0,
+    1,
+    3,
+    3,
+    1,
+    1,
     3,
     3,
     2,
     3,
-    3,
     2,
+    3,
     4
    ],
    "merge_holds": [
@@ -156,8 +156,8 @@
     "queued": 8,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 5,
-    "merged": 488,
+    "awaiting_merge": 4,
+    "merged": 489,
     "parked": 362
    }
   },
@@ -168,6 +168,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T01:03:19Z",
+    "title": "CODE-01 Refuse crossed and duplicated ledger mark depth",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T00:54:19Z",
     "title": "CODE-01 Revalidate CLI report chronology before deriving labels",
@@ -202,11 +207,6 @@
     "at": "2026-10-23T22:52:50Z",
     "title": "CODE-01 Group fill-markout sufficiency by rule-bound station-day",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-23T22:34:27Z",
-    "title": "CODE-01 Rank basket opportunities using exact economic ratios",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,15 +215,15 @@
     "active": 0,
     "alerts_24h": 8,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-24T00:59:01Z",
+    "last_check_at": "2026-10-24T01:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 7,
+    "active": 8,
     "by_severity": {
      "P0": 0,
      "P1": 3,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
      "flow unmergeable reviewed work",
@@ -233,7 +233,7 @@
      "flow brain capture missed",
      "flow release needs release"
     ],
-    "last_check_at": "2026-10-24T00:50:03Z",
+    "last_check_at": "2026-10-24T01:00:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T01:03:19Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Refuse crossed and duplicated ledger mark depth” into the main build"
+   },
    {
     "at": "2026-10-24T01:00:03Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-24T00:10:13Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-24T00:06:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Gate simulated settlement marks on label availability” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-24",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T00:59:22Z",
-   "heartbeat_at": "2026-10-24T01:00:02Z",
+   "status_at": "2026-10-24T01:04:22Z",
+   "heartbeat_at": "2026-10-24T01:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T00:59:40Z",
+    "updated_at": "2026-10-24T01:03:42Z",
     "detail": "observations retained"
    },
    {
@@ -639,8 +639,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 79,
-     "open_tasks": 8
+     "merged_tasks": 80,
+     "open_tasks": 7
     },
     {
      "id": "CODE-02",
