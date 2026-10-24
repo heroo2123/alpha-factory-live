@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T12:25:02Z",
+ "generated_at": "2026-10-24T12:30:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 27,
+    "count": 28,
     "unit": "queued",
     "active": false,
     "detail": "25 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "74 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_16e1bee5",
-    "task": "PAPER-02 cross-release capability collision EXISTING_REVIEW_PROOF_HASH",
-    "elapsed_min": 9
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -119,8 +119,8 @@
    "merges_24h": 48,
    "commits_24h": 48,
    "built_24h": 74,
-   "build_failed_24h": 4,
-   "reviews_passed_24h": 61,
+   "build_failed_24h": 5,
+   "reviews_passed_24h": 60,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     0,
@@ -153,8 +153,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 27,
-    "building": 1,
+    "queued": 28,
+    "building": 0,
     "in_review": 0,
     "awaiting_merge": 2,
     "merged": 508,
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 7,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T12:25:02Z",
+    "last_check_at": "2026-10-24T12:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 585,
+    "runs_total": 586,
     "last_run_at": "2026-10-24T12:25:02Z",
     "last_ok": true,
     "last_kind": "flow code drift frozen copy",
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T12:27:49Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra)'s build of “PAPER-02 cross-release capability collision EXISTING_REVIEW_PROOF_HASH” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-24T12:25:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-24T10:29:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Require covered IEM agreement for contract finality” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T10:07:14Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-10-24T12:24:59Z",
-   "heartbeat_at": "2026-10-24T12:25:03Z",
+   "status_at": "2026-10-24T12:29:59Z",
+   "heartbeat_at": "2026-10-24T12:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 366,
     "markets": 3589,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T12:21:49Z",
+    "last_scan_at": "2026-10-24T12:27:08Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T12:21:49Z",
+    "updated_at": "2026-10-24T12:27:08Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T12:23:08Z",
+    "updated_at": "2026-10-24T12:29:10Z",
     "detail": "observations retained"
    },
    {
