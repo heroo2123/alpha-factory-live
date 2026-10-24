@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T06:20:02Z",
+ "generated_at": "2026-10-24T06:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 28,
+    "count": 31,
     "unit": "queued",
     "active": false,
     "detail": "24 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "75 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 1,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "52 merged in 24h"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_47281e9d",
-    "task": "CODE-01 Preserve decision provenance in markout measurements",
-    "elapsed_min": 10
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-24T03:16:10Z",
    "last_passed": 16377,
@@ -123,41 +123,42 @@
    "reviews_passed_24h": 63,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
-    0,
     1,
+    0,
     4,
     0,
     2,
     3,
     0,
     2,
-    2,
     3,
-    1,
-    1,
-    4,
+    3,
+    0,
     2,
     3,
     2,
+    3,
     2,
+    3,
     3,
     5,
     4,
-    4,
+    3,
     2,
     1,
     1
    ],
    "merge_holds": [
+    "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 28,
-    "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 1,
+    "queued": 31,
+    "building": 0,
+    "in_review": 0,
+    "awaiting_merge": 2,
     "merged": 502,
-    "parked": 362
+    "parked": 360
    }
   },
   "architect": {
@@ -210,28 +211,27 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T06:20:02Z",
+    "last_check_at": "2026-10-24T06:25:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 4,
     "by_severity": {
      "P0": 0,
-     "P1": 2,
+     "P1": 1,
      "P2": 2
     },
     "codes": [
      "flow glm plan lane dead",
-     "flow brain capture gated",
      "flow brain capture missed",
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T06:10:02Z",
+    "last_check_at": "2026-10-24T06:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T06:20:37Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “LEARNING-SOURCES Bind resumed historical artifacts to original…”: passed"
+   },
    {
     "at": "2026-10-24T06:15:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-24T04:59:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “LEARNING-SOURCES b007fe4c6f76 resume artifact validation” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T04:55:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “PAPER-09 Refuse superseded PWS captures during feature assembly” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T05:45:02Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T06:20:04Z",
-   "heartbeat_at": "2026-10-24T06:20:03Z",
+   "status_at": "2026-10-24T06:24:52Z",
+   "heartbeat_at": "2026-10-24T06:25:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 358,
     "markets": 3484,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T06:19:24Z",
+    "last_scan_at": "2026-10-24T06:24:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T06:19:24Z",
+    "updated_at": "2026-10-24T06:24:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T06:19:07Z",
+    "updated_at": "2026-10-24T06:23:09Z",
     "detail": "observations retained"
    },
    {
@@ -637,7 +637,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 89,
-     "open_tasks": 9
+     "open_tasks": 8
     },
     {
      "id": "CODE-02",
