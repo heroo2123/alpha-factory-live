@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T21:55:01Z",
+ "generated_at": "2026-10-24T22:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,18 +23,18 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "45 merged in 24h"
+    "detail": "46 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,27 +70,27 @@
     "family": "DeepSeek",
     "task_id": "t_47532602",
     "task": "FLEX candidate t_7aeb2ad5 24dc7345195d",
-    "elapsed_min": 21
+    "elapsed_min": 26
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_5d0a024a",
+    "task": "Finish atomic fee capture raw-rule CAS, append deadline and failure receipts",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_ee607fea",
+    "task": "FLEX candidate t_d9df67a0 5b68e75a3c18",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16665,
   "flow": {
-   "merges_24h": 45,
-   "commits_24h": 45,
+   "merges_24h": 46,
+   "commits_24h": 46,
    "built_24h": 66,
    "build_failed_24h": 5,
    "reviews_passed_24h": 52,
@@ -146,19 +146,18 @@
     1,
     1,
     2,
-    1
+    2
    ],
    "merge_holds": [
-    "protected code: waiting for a second review",
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 27,
     "building": 2,
-    "in_review": 0,
-    "awaiting_merge": 3,
-    "merged": 524,
-    "parked": 398
+    "in_review": 1,
+    "awaiting_merge": 2,
+    "merged": 525,
+    "parked": 397
    }
   },
   "architect": {
@@ -168,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T21:58:29Z",
+    "title": "Prepare truthful next-day commissioning inputs instead of stale same-day forecast",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T20:44:11Z",
     "title": "CODE-01 Measure fill markouts when only the required horizon side exists",
@@ -202,11 +206,6 @@
     "at": "2026-10-24T16:03:48Z",
     "title": "CODE-01 Recheck forecast freshness when resuming partial preparation",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T15:32:28Z",
-    "title": "Repair authoritative Wunderground provenance for historical source view",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T21:55:02Z",
+    "last_check_at": "2026-10-24T22:00:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T21:58:29Z",
+    "kind": "merge",
+    "text": "Merged “Prepare truthful next-day commissioning inputs instead of stale…” into the main build"
+   },
+   {
+    "at": "2026-10-24T21:55:25Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “FLEX candidate t_c13c3ec7 eea9ad4fbf8c” → sent to independent review"
+   },
    {
     "at": "2026-10-24T21:50:03Z",
     "kind": "heal",
@@ -352,16 +361,6 @@
     "at": "2026-10-24T20:39:58Z",
     "kind": "merge",
     "text": "Merged “Enforce health expiry after actual SQLite lock acquisition” into the main build"
-   },
-   {
-    "at": "2026-10-24T20:33:27Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Measure fill markouts when only the required horizon side…”: passed"
-   },
-   {
-    "at": "2026-10-24T20:07:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Measure fill markouts when only the required horizon side…” → sent to independent review"
    }
   ]
  },
@@ -372,8 +371,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T21:50:17Z",
-   "heartbeat_at": "2026-10-24T21:55:02Z",
+   "status_at": "2026-10-24T21:56:22Z",
+   "heartbeat_at": "2026-10-24T22:00:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +381,7 @@
     "weather_events": 339,
     "markets": 3294,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T21:50:44Z",
+    "last_scan_at": "2026-10-24T21:57:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T21:50:44Z",
+    "updated_at": "2026-10-24T21:57:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T21:54:45Z",
+    "updated_at": "2026-10-24T21:58:47Z",
     "detail": "observations retained"
    },
    {
