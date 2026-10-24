@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T19:25:02Z",
+ "generated_at": "2026-10-24T19:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 70,
+    "count": 76,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_6a091850",
     "task": "Enforce health expiry after actual SQLite lock acquisition",
-    "elapsed_min": 18
+    "elapsed_min": 23
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_7402226b",
     "task": "Preserve periodic census generation across provider cooldown retries",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 70,
+   "progress_pct": 76,
    "last_finished_at": "2026-10-24T15:04:40Z",
    "last_passed": 16563,
    "last_failed": 0,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T19:25:02Z",
+    "last_check_at": "2026-10-24T19:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 629,
+    "runs_total": 630,
     "last_run_at": "2026-10-24T19:25:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T19:23:55Z",
-   "heartbeat_at": "2026-10-24T19:25:02Z",
+   "status_at": "2026-10-24T19:29:26Z",
+   "heartbeat_at": "2026-10-24T19:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T19:23:36Z",
+    "updated_at": "2026-10-24T19:29:38Z",
     "detail": "observations retained"
    },
    {
