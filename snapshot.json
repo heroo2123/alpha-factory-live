@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T10:05:02Z",
+ "generated_at": "2026-10-24T10:10:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "74 built in 24h"
+    "detail": "73 built in 24h"
    },
    {
     "key": "review",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 18,
+    "count": 26,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_7aeb2ad5",
     "task": "CODE-01 Require covered IEM agreement for contract finality",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 18,
+   "progress_pct": 26,
    "last_finished_at": "2026-10-24T08:01:28Z",
    "last_passed": 16075,
    "last_failed": 353,
@@ -118,16 +118,16 @@
   "flow": {
    "merges_24h": 53,
    "commits_24h": 53,
-   "built_24h": 74,
+   "built_24h": 73,
    "build_failed_24h": 6,
-   "reviews_passed_24h": 62,
+   "reviews_passed_24h": 63,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
     2,
     2,
     1,
-    1,
-    3,
+    2,
+    2,
     3,
     1,
     1,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T10:05:02Z",
+    "last_check_at": "2026-10-24T10:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -234,7 +234,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 571,
+    "runs_total": 572,
     "last_run_at": "2026-10-24T10:05:02Z",
     "last_ok": true,
     "last_kind": "flow brain capture missed",
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T10:07:14Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-24T10:05:02Z",
     "kind": "heal",
@@ -353,11 +358,6 @@
     "at": "2026-10-24T08:01:28Z",
     "kind": "warn",
     "text": "Full test suite finished: 16075 passed, 353 failed"
-   },
-   {
-    "at": "2026-10-24T07:56:23Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Recognize unknown vertical visibility when checking sky…”: passed"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T10:04:54Z",
-   "heartbeat_at": "2026-10-24T10:05:02Z",
+   "status_at": "2026-10-24T10:09:58Z",
+   "heartbeat_at": "2026-10-24T10:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 361,
     "markets": 3517,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T09:59:32Z",
+    "last_scan_at": "2026-10-24T10:05:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T09:59:32Z",
+    "updated_at": "2026-10-24T10:05:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T10:03:51Z",
+    "updated_at": "2026-10-24T10:09:53Z",
     "detail": "observations retained"
    },
    {
