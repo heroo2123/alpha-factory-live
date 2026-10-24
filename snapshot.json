@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T15:40:02Z",
+ "generated_at": "2026-10-24T15:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_0a1bbbb1",
     "task": "Build bounded V11_PAPER health frontier",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_3a661433",
     "task": "CODE-01 Recheck forecast freshness when resuming partial preparation",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Reviewer 1",
@@ -126,16 +126,16 @@
     3,
     0,
     3,
-    2,
     3,
     2,
-    3,
-    3,
     2,
+    3,
+    3,
+    3,
     5,
     4,
     3,
-    2,
+    1,
     1,
     2,
     2,
@@ -144,9 +144,9 @@
     1,
     0,
     1,
-    2,
-    2,
-    3
+    3,
+    3,
+    1
    ],
    "merge_holds": [],
    "stage_totals": {
@@ -212,29 +212,30 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T15:40:03Z",
+    "last_check_at": "2026-10-24T15:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 6,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
      "flow glm plan lane dead",
      "flow shadow census churn",
      "flow brain capture missed",
      "flow code drift frozen copy",
+     "flow queued scope unmergeable",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T15:30:03Z",
+    "last_check_at": "2026-10-24T15:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 603,
+    "runs_total": 604,
     "last_run_at": "2026-10-24T15:25:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -368,17 +369,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T15:36:15Z",
-   "heartbeat_at": "2026-10-24T15:40:04Z",
+   "status_at": "2026-10-24T15:41:42Z",
+   "heartbeat_at": "2026-10-24T15:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 370,
-    "markets": 3633,
+    "weather_events": 367,
+    "markets": 3600,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T15:35:15Z",
+    "last_scan_at": "2026-10-24T15:40:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T15:35:15Z",
+    "updated_at": "2026-10-24T15:40:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T15:38:17Z",
+    "updated_at": "2026-10-24T15:44:19Z",
     "detail": "observations retained"
    },
    {
