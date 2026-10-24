@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T04:30:03Z",
+ "generated_at": "2026-10-24T04:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 16,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_7ba58e40",
     "task": "PAPER-09 Refuse superseded PWS captures during feature assembly",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_3f7d8b2d",
-    "task": "FLEX candidate t_d2629d21 dc98b7c19067",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,29 +120,29 @@
    "commits_24h": 50,
    "built_24h": 73,
    "build_failed_24h": 6,
-   "reviews_passed_24h": 63,
-   "reviews_changes_24h": 13,
+   "reviews_passed_24h": 62,
+   "reviews_changes_24h": 14,
    "commits_by_hour": [
     0,
     0,
     1,
-    0,
-    4,
-    0,
-    2,
+    1,
+    3,
+    1,
+    1,
     3,
     0,
     2,
     3,
     3,
     0,
-    2,
     3,
     2,
     3,
     2,
     3,
     3,
+    2,
     5,
     4,
     3,
@@ -150,12 +150,12 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 15,
+    "queued": 16,
     "building": 1,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 0,
     "merged": 500,
-    "parked": 369
+    "parked": 370
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T04:30:03Z",
+    "last_check_at": "2026-10-24T04:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow release needs release",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T04:20:02Z",
+    "last_check_at": "2026-10-24T04:32:10Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T04:31:18Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_d2629d21 dc98b7c19067”: changes required"
+   },
    {
     "at": "2026-10-24T04:28:14Z",
     "kind": "build",
@@ -353,11 +358,6 @@
     "at": "2026-10-24T03:08:17Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Gate simulated settlement marks on label availability”: changes required"
-   },
-   {
-    "at": "2026-10-24T03:05:53Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Validate IEM provenance before bracket corroboration” → sent to independent review"
    }
   ]
  },
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-23T07:05:02Z",
    "day": "2026-10-25",
    "state": "waiting prepared day",
-   "status_at": "2026-10-24T04:29:34Z",
-   "heartbeat_at": "2026-10-24T04:30:03Z",
+   "status_at": "2026-10-24T04:34:34Z",
+   "heartbeat_at": "2026-10-24T04:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 372,
-    "markets": 3638,
+    "weather_events": 356,
+    "markets": 3462,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T04:25:37Z",
+    "last_scan_at": "2026-10-24T04:31:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T04:25:37Z",
+    "updated_at": "2026-10-24T04:31:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T04:28:48Z",
+    "updated_at": "2026-10-24T04:34:49Z",
     "detail": "gated"
    },
    {
