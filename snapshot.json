@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T06:25:02Z",
+ "generated_at": "2026-10-24T06:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,14 +10,14 @@
     "count": 31,
     "unit": "queued",
     "active": false,
-    "detail": "24 ready to build"
+    "detail": "25 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 2,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "75 built in 24h"
    },
    {
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "52 merged in 24h"
+    "detail": "53 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
+    "count": 3,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,22 +65,22 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_15f38a14",
+    "task": "PAPER-02 repair basket Check causal book view TypeError as_of",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_62267ebf",
+    "task": "PAPER-02 Shadow first forecast replan RUNTIME_CONFIGURATION_CHANGED_REVIEW_REQUIRED",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": null,
+   "progress_pct": 3,
    "last_finished_at": "2026-10-24T03:16:10Z",
    "last_passed": 16377,
    "last_failed": 0,
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16377,
   "flow": {
-   "merges_24h": 52,
-   "commits_24h": 52,
+   "merges_24h": 53,
+   "commits_24h": 53,
    "built_24h": 75,
    "build_failed_24h": 6,
    "reviews_passed_24h": 63,
@@ -146,19 +146,18 @@
     3,
     2,
     1,
-    1
+    2
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 31,
-    "building": 0,
+    "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 502,
-    "parked": 360
+    "awaiting_merge": 1,
+    "merged": 503,
+    "parked": 358
    }
   },
   "architect": {
@@ -168,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-24T06:25:31Z",
+    "title": "LEARNING-SOURCES Bind resumed historical artifacts to original capture evidence",
+    "area": "Forecast brain"
+   },
    {
     "at": "2026-10-24T06:13:18Z",
     "title": "CODE-01 Reject malformed ask containers in sale valuations",
@@ -202,20 +206,15 @@
     "at": "2026-10-24T02:23:18Z",
     "title": "CODE-01 Remove dependent residuals when ablating official temperature",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T02:04:47Z",
-    "title": "PAPER-09 Require temporal comparability for official-PWS divergence",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T06:25:03Z",
+    "last_check_at": "2026-10-24T06:30:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T06:25:31Z",
+    "kind": "merge",
+    "text": "Merged “LEARNING-SOURCES Bind resumed historical artifacts to original…” into the main build"
+   },
    {
     "at": "2026-10-24T06:20:37Z",
     "kind": "review",
@@ -355,11 +359,6 @@
     "at": "2026-10-24T05:01:21Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “PAPER-09 Refuse superseded PWS captures during feature assembly”: passed"
-   },
-   {
-    "at": "2026-10-24T04:59:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “LEARNING-SOURCES b007fe4c6f76 resume artifact validation” → sent to independent review"
    }
   ]
  },
@@ -370,8 +369,8 @@
    "commissioned_at": "2026-10-24T05:45:02Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T06:24:52Z",
-   "heartbeat_at": "2026-10-24T06:25:03Z",
+   "status_at": "2026-10-24T06:29:54Z",
+   "heartbeat_at": "2026-10-24T06:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T06:23:09Z",
+    "updated_at": "2026-10-24T06:29:11Z",
     "detail": "observations retained"
    },
    {
@@ -542,6 +541,11 @@
   },
   "skills": [
    {
+    "title": "LEARNING-SOURCES Bind resumed historical artifacts to original capture evidence",
+    "area": "Forecast brain",
+    "merged_at": "2026-10-24T06:25:31Z"
+   },
+   {
     "title": "LEARNING-SOURCES Historical held-out backfill with the forward capture method: GEFS S3 +…",
     "area": "Forecast brain",
     "merged_at": "2026-10-23T11:42:22Z"
@@ -585,11 +589,6 @@
     "title": "offline_learning: flag challenger selected on the preregistered grid edge (root cause of…",
     "area": "Forecast brain",
     "merged_at": "2026-10-19T00:46:09Z"
-   },
-   {
-    "title": "New evidence-only merge/NegRisk-conversion screen over normalized public books",
-    "area": "Position management",
-    "merged_at": "2026-10-19T00:42:01Z"
    }
   ],
   "readiness": {
