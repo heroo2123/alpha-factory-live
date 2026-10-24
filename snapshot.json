@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T19:05:02Z",
+ "generated_at": "2026-10-24T19:10:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,12 +10,12 @@
     "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "38 ready to build"
+    "detail": "40 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "68 built in 24h"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "48 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 53,
+    "count": 62,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -68,19 +68,19 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_c13c3ec7",
-    "task": "Write honest synthetic PAPER fill receipts from admitted intents",
-    "elapsed_min": 2
+    "task_id": "t_6a091850",
+    "task": "Enforce health expiry after actual SQLite lock acquisition",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_7402226b",
+    "task": "Preserve periodic census generation across provider cooldown retries",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 53,
+   "progress_pct": 62,
    "last_finished_at": "2026-10-24T15:04:40Z",
    "last_passed": 16563,
    "last_failed": 0,
@@ -120,8 +120,8 @@
    "commits_24h": 48,
    "built_24h": 68,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 53,
-   "reviews_changes_24h": 34,
+   "reviews_passed_24h": 52,
+   "reviews_changes_24h": 35,
    "commits_by_hour": [
     3,
     2,
@@ -153,11 +153,11 @@
    ],
    "stage_totals": {
     "queued": 37,
-    "building": 1,
+    "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
+    "awaiting_merge": 1,
     "merged": 520,
-    "parked": 389
+    "parked": 392
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T19:05:02Z",
+    "last_check_at": "2026-10-24T19:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,10 +236,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 626,
-    "last_run_at": "2026-10-24T19:05:02Z",
+    "runs_total": 627,
+    "last_run_at": "2026-10-24T19:10:03Z",
     "last_ok": true,
-    "last_kind": "flow code drift frozen copy",
+    "last_kind": "routine",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T19:10:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: routine"
+   },
+   {
+    "at": "2026-10-24T19:07:19Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Write honest synthetic PAPER fill receipts from admitted intents”: changes required"
+   },
+   {
+    "at": "2026-10-24T19:06:12Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Write honest synthetic PAPER fill receipts from admitted intents” → sent to independent review"
+   },
    {
     "at": "2026-10-24T19:05:02Z",
     "kind": "heal",
@@ -312,11 +327,6 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow shadow census churn"
    },
    {
-    "at": "2026-10-24T18:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture missed"
-   },
-   {
     "at": "2026-10-24T18:15:21Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Quarantine conflicting duplicate book responses”: passed"
@@ -350,16 +360,6 @@
     "at": "2026-10-24T18:06:12Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-24T18:05:24Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Finish health frontier publication expiry guard with preserved…”: changes required"
-   },
-   {
-    "at": "2026-10-24T18:03:17Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Finish health frontier publication expiry guard with preserved…” → sent to independent review"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T19:01:39Z",
-   "heartbeat_at": "2026-10-24T19:05:02Z",
+   "status_at": "2026-10-24T19:07:11Z",
+   "heartbeat_at": "2026-10-24T19:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 349,
     "markets": 3402,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T18:59:19Z",
+    "last_scan_at": "2026-10-24T19:05:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T18:59:19Z",
+    "updated_at": "2026-10-24T19:05:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T19:03:30Z",
+    "updated_at": "2026-10-24T19:09:32Z",
     "detail": "observations retained"
    },
    {
