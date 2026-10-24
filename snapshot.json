@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T10:40:02Z",
+ "generated_at": "2026-10-24T10:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 53,
+    "count": 64,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b7b1407d",
     "task": "FLEX candidate t_4252cf3d 73bd83efae8f",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 53,
+   "progress_pct": 64,
    "last_finished_at": "2026-10-24T08:01:28Z",
    "last_passed": 16075,
    "last_failed": 353,
@@ -123,24 +123,24 @@
    "reviews_passed_24h": 62,
    "reviews_changes_24h": 19,
    "commits_by_hour": [
-    1,
-    3,
+    2,
+    2,
     0,
     2,
     3,
     3,
     0,
     3,
-    2,
     3,
     2,
-    3,
-    3,
     2,
+    3,
+    3,
+    3,
     5,
     4,
     3,
-    2,
+    1,
     1,
     2,
     2,
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T10:40:03Z",
+    "last_check_at": "2026-10-24T10:45:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,15 +229,15 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T10:30:03Z",
+    "last_check_at": "2026-10-24T10:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
     "runs_total": 575,
-    "last_run_at": "2026-10-24T10:25:02Z",
+    "last_run_at": "2026-10-24T10:45:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow code drift frozen copy",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T10:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow code drift frozen copy"
+   },
    {
     "at": "2026-10-24T10:33:54Z",
     "kind": "warn",
@@ -303,11 +308,6 @@
     "at": "2026-10-24T10:00:32Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Refuse WRH finality claims from rejected rule semantics”: passed"
-   },
-   {
-    "at": "2026-10-24T10:00:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: routine"
    },
    {
     "at": "2026-10-24T09:59:14Z",
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T10:39:48Z",
-   "heartbeat_at": "2026-10-24T10:40:03Z",
+   "status_at": "2026-10-24T10:44:52Z",
+   "heartbeat_at": "2026-10-24T10:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -378,7 +378,7 @@
     "weather_events": 364,
     "markets": 3550,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T10:38:30Z",
+    "last_scan_at": "2026-10-24T10:43:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T10:38:30Z",
+    "updated_at": "2026-10-24T10:43:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T10:38:04Z",
+    "updated_at": "2026-10-24T10:44:07Z",
     "detail": "observations retained"
    },
    {
