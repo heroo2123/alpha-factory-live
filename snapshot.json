@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T18:05:02Z",
+ "generated_at": "2026-10-24T18:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 37,
+    "count": 38,
     "unit": "queued",
     "active": false,
     "detail": "40 ready to build"
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "50 merged in 24h"
@@ -40,9 +40,9 @@
     "key": "qa",
     "name": "Full QA",
     "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -65,32 +65,32 @@
    {
     "slot": "Builder 1",
     "role": "build",
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
+   },
+   {
+    "slot": "Builder 2",
+    "role": "build",
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_bd8e6155",
+    "task": "Finish fee refusal retention near capacity and during CLI alarm",
+    "elapsed_min": 3
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
     "task_id": "t_4c553c56",
     "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
-    "elapsed_min": 23
-   },
-   {
-    "slot": "Builder 2",
-    "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -104,7 +104,7 @@
    }
   ],
   "qa": {
-   "running": false,
+   "running": true,
    "progress_pct": null,
    "last_finished_at": "2026-10-24T15:04:40Z",
    "last_passed": 16563,
@@ -120,8 +120,8 @@
    "commits_24h": 50,
    "built_24h": 69,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 56,
-   "reviews_changes_24h": 29,
+   "reviews_passed_24h": 55,
+   "reviews_changes_24h": 30,
    "commits_by_hour": [
     3,
     3,
@@ -152,12 +152,12 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 37,
+    "queued": 38,
     "building": 1,
-    "in_review": 2,
-    "awaiting_merge": 2,
+    "in_review": 1,
+    "awaiting_merge": 1,
     "merged": 519,
-    "parked": 382
+    "parked": 384
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T18:05:02Z",
+    "last_check_at": "2026-10-24T18:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 619,
+    "runs_total": 620,
     "last_run_at": "2026-10-24T17:55:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -251,6 +251,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T18:09:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Ignore still-fresh old MODEL replay already covered by a completed…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T18:06:12Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-24T18:05:24Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Finish health frontier publication expiry guard with preserved…”: changes required"
+   },
    {
     "at": "2026-10-24T18:03:17Z",
     "kind": "build",
@@ -345,21 +360,6 @@
     "at": "2026-10-24T17:22:19Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Make cost aggregation and EV arithmetic context-independent”: changes required"
-   },
-   {
-    "at": "2026-10-24T17:20:15Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Make cost aggregation and EV arithmetic context-independent” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T16:58:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Reject nowcasts that omit a newer available official…”: changes required"
-   },
-   {
-    "at": "2026-10-24T16:57:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Reject nowcasts that omit a newer available official…” → sent to independent review"
    }
   ]
  },
@@ -369,9 +369,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-24T18:04:59Z",
-   "heartbeat_at": "2026-10-24T18:05:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-24T18:09:28Z",
+   "heartbeat_at": "2026-10-24T18:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T18:03:07Z",
+    "updated_at": "2026-10-24T18:09:10Z",
     "detail": "observations retained"
    },
    {
