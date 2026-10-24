@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T15:25:02Z",
+ "generated_at": "2026-10-24T15:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 37,
+    "count": 36,
     "unit": "queued",
     "active": false,
-    "detail": "37 ready to build"
+    "detail": "35 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 2,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "71 built in 24h"
    },
    {
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "50 merged in 24h"
@@ -65,22 +65,22 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_0a1bbbb1",
+    "task": "Build bounded V11_PAPER health frontier",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_3a661433",
+    "task": "CODE-01 Recheck forecast freshness when resuming partial preparation",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 1",
@@ -148,14 +148,16 @@
     2,
     2
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 37,
+    "queued": 36,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 0,
+    "awaiting_merge": 1,
     "merged": 515,
-    "parked": 375
+    "parked": 376
    }
   },
   "architect": {
@@ -212,7 +214,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T15:25:02Z",
+    "last_check_at": "2026-10-24T15:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +251,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T15:27:30Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Persist verified public book stream for Shadow risk inputs”: changes required"
+   },
+   {
+    "at": "2026-10-24T15:27:21Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “Repair authoritative Wunderground provenance for historical source…”: passed"
+   },
+   {
+    "at": "2026-10-24T15:25:24Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Persist verified public book stream for Shadow risk inputs” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T15:25:18Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Repair authoritative Wunderground provenance for historical source…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T15:25:02Z",
     "kind": "heal",
@@ -338,26 +360,6 @@
     "at": "2026-10-24T14:41:17Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Bootstrap a fresh genuine PAPER ledger without relabelling Shadow…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T14:35:24Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-24T14:35:21Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Expire census coverage at the rule receipt deadline”: passed"
-   },
-   {
-    "at": "2026-10-24T14:34:25Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Atomically bind public fee import to current rule and book”: changes required"
-   },
-   {
-    "at": "2026-10-24T14:34:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Expire census coverage at the rule receipt deadline” → sent to independent review"
    }
   ]
  },
@@ -368,17 +370,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T15:25:03Z",
-   "heartbeat_at": "2026-10-24T15:25:02Z",
+   "status_at": "2026-10-24T15:29:59Z",
+   "heartbeat_at": "2026-10-24T15:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 374,
-    "markets": 3677,
+    "weather_events": 371,
+    "markets": 3644,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T15:23:07Z",
+    "last_scan_at": "2026-10-24T15:28:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T15:23:07Z",
+    "updated_at": "2026-10-24T15:28:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T15:24:11Z",
+    "updated_at": "2026-10-24T15:28:13Z",
     "detail": "observations retained"
    },
    {
