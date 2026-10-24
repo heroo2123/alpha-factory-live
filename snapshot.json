@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T07:25:02Z",
+ "generated_at": "2026-10-24T07:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 27,
+    "count": 26,
     "unit": "queued",
     "active": false,
     "detail": "23 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "74 built in 24h"
@@ -23,23 +23,23 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 0,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "54 merged in 24h"
+    "detail": "53 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 65,
+    "count": 67,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -49,8 +49,8 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": true,
-    "detail": "current release b55e511"
+    "active": false,
+    "detail": "current release 11ee9a8"
    },
    {
     "key": "shadow",
@@ -70,27 +70,27 @@
     "family": "OpenAI",
     "task_id": "t_62267ebf",
     "task": "PAPER-02 Shadow first forecast replan RUNTIME_CONFIGURATION_CHANGED_REVIEW_REQUIRED",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_c5f270ce",
+    "task": "CODE-01 Recognize unknown vertical visibility when checking sky conflicts",
+    "elapsed_min": 3
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_164e4bca",
-    "task": "Accept reviewed METAR whole-F precision in forecast probability buckets",
-    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 65,
+   "progress_pct": 67,
    "last_finished_at": "2026-10-24T03:16:10Z",
    "last_passed": 16377,
    "last_failed": 0,
@@ -116,12 +116,12 @@
   },
   "tests_passing": 16377,
   "flow": {
-   "merges_24h": 54,
+   "merges_24h": 53,
    "commits_24h": 53,
    "built_24h": 74,
    "build_failed_24h": 7,
-   "reviews_passed_24h": 63,
-   "reviews_changes_24h": 14,
+   "reviews_passed_24h": 64,
+   "reviews_changes_24h": 13,
    "commits_by_hour": [
     0,
     4,
@@ -148,12 +148,14 @@
     2,
     1
    ],
-   "merge_holds": [],
+   "merge_holds": [
+    "protected code: waiting for a second review"
+   ],
    "stage_totals": {
-    "queued": 27,
-    "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 0,
+    "queued": 26,
+    "building": 2,
+    "in_review": 0,
+    "awaiting_merge": 1,
     "merged": 504,
     "parked": 364
    }
@@ -211,8 +213,8 @@
     "state": "healthy",
     "active": 0,
     "alerts_24h": 4,
-    "recoveries_24h": 4,
-    "last_check_at": "2026-10-24T07:25:03Z",
+    "recoveries_24h": 3,
+    "last_check_at": "2026-10-24T07:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,7 +237,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 550,
+    "runs_total": 551,
     "last_run_at": "2026-10-24T07:25:02Z",
     "last_ok": true,
     "last_kind": "flow code drift frozen copy",
@@ -250,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T07:26:23Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “Accept reviewed METAR whole-F precision in forecast probability…”: passed"
+   },
+   {
+    "at": "2026-10-24T07:25:05Z",
+    "kind": "release",
+    "text": "New Shadow release 11ee9a8 went live (paper only)"
+   },
    {
     "at": "2026-10-24T07:25:02Z",
     "kind": "heal",
@@ -349,28 +361,18 @@
     "at": "2026-10-24T06:02:23Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “Brain freeze registry executable identity and receipt binding”: passed"
-   },
-   {
-    "at": "2026-10-24T06:00:16Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-24T05:58:27Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject malformed ask containers in sale valuations”: passed"
    }
   ]
  },
  "alpha": {
   "shadow": {
    "service": "running",
-   "release": "b55e511",
-   "commissioned_at": "2026-10-24T05:45:02Z",
-   "day": "2026-10-24",
-   "state": "owner stopped or rolling back",
-   "status_at": "2026-10-24T07:15:05Z",
-   "heartbeat_at": null,
+   "release": "11ee9a8",
+   "commissioned_at": "2026-10-24T07:20:03Z",
+   "day": "2026-10-25",
+   "state": "census service",
+   "status_at": "2026-10-24T07:30:03Z",
+   "heartbeat_at": "2026-10-24T07:30:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +381,7 @@
     "weather_events": 359,
     "markets": 3495,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T07:21:52Z",
+    "last_scan_at": "2026-10-24T07:27:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T07:21:52Z",
+    "updated_at": "2026-10-24T07:27:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T07:23:29Z",
+    "updated_at": "2026-10-24T07:29:32Z",
     "detail": "observations retained"
    },
    {
