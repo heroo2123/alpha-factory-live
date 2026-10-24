@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T05:55:02Z",
+ "generated_at": "2026-10-24T06:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
+    "active": true,
     "detail": "current release b55e511"
    },
    {
@@ -68,8 +68,8 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_d26b025d",
-    "task": "Freeze-and-register a candidate in the preregistered holdout registry before any…",
+    "task_id": "t_da0cafea",
+    "task": "LEARNING-SOURCES Bind resumed historical artifacts to original capture evidence",
     "elapsed_min": 1
    },
    {
@@ -88,8 +88,8 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_6c861bbd",
-    "task": "CODE-01 Reject malformed ask containers in sale valuations",
+    "task_id": "t_1d83aff7",
+    "task": "FLEX candidate t_d26b025d 1fbc38e5bfe5",
     "elapsed_min": 1
    },
    {
@@ -120,7 +120,7 @@
    "commits_24h": 51,
    "built_24h": 75,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 62,
+   "reviews_passed_24h": 63,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
     0,
@@ -131,9 +131,9 @@
     2,
     1,
     0,
-    3,
+    4,
     2,
-    3,
+    2,
     0,
     3,
     3,
@@ -148,16 +148,14 @@
     0,
     1
    ],
-   "merge_holds": [
-    "protected code: second review asked for changes"
-   ],
+   "merge_holds": [],
    "stage_totals": {
     "queued": 28,
     "building": 1,
     "in_review": 1,
     "awaiting_merge": 1,
     "merged": 501,
-    "parked": 356
+    "parked": 358
    }
   },
   "architect": {
@@ -214,7 +212,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T05:55:02Z",
+    "last_check_at": "2026-10-24T06:00:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T05:58:27Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Reject malformed ask containers in sale valuations”: passed"
+   },
+   {
+    "at": "2026-10-24T05:58:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Freeze-and-register a candidate in the preregistered holdout…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T05:53:17Z",
     "kind": "build",
@@ -350,16 +358,6 @@
     "at": "2026-10-24T04:06:16Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_1e3d458a d23ca00c9924”: changes required"
-   },
-   {
-    "at": "2026-10-24T04:00:15Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-24T03:59:52Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Make settlement rounding independent of Decimal context” → sent to independent review"
    }
   ]
  },
@@ -369,9 +367,9 @@
    "release": "b55e511",
    "commissioned_at": "2026-10-24T05:45:02Z",
    "day": "2026-10-25",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T05:51:16Z",
-   "heartbeat_at": "2026-10-24T05:55:02Z",
+   "state": "census service",
+   "status_at": "2026-10-24T06:00:03Z",
+   "heartbeat_at": "2026-10-24T06:00:05Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +378,7 @@
     "weather_events": 362,
     "markets": 3528,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T05:51:13Z",
+    "last_scan_at": "2026-10-24T05:56:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T05:51:13Z",
+    "updated_at": "2026-10-24T05:56:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T05:53:08Z",
+    "updated_at": "2026-10-24T05:59:10Z",
     "detail": "gated"
    },
    {
