@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T18:00:03Z",
+ "generated_at": "2026-10-24T18:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "69 built in 24h"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 2,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "51 merged in 24h"
+    "detail": "50 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,22 +70,22 @@
     "family": "OpenAI",
     "task_id": "t_4c553c56",
     "task": "Ignore still-fresh old MODEL replay already covered by a completed census",
-    "elapsed_min": 18
+    "elapsed_min": 23
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_55dd7ae7",
-    "task": "Finish health frontier publication expiry guard with preserved tested phase1",
-    "elapsed_min": 26
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16563,
   "flow": {
-   "merges_24h": 51,
-   "commits_24h": 51,
+   "merges_24h": 50,
+   "commits_24h": 50,
    "built_24h": 69,
    "build_failed_24h": 4,
    "reviews_passed_24h": 56,
@@ -127,25 +127,25 @@
     3,
     2,
     3,
-    3,
     2,
+    3,
     4,
     5,
-    4,
+    3,
     3,
     0,
     1,
+    3,
     2,
+    0,
     2,
-    1,
-    1,
-    1,
+    0,
     0,
     1,
     3,
     3,
-    1,
     2,
+    1,
     1
    ],
    "merge_holds": [
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 37,
-    "building": 2,
-    "in_review": 1,
+    "building": 1,
+    "in_review": 2,
     "awaiting_merge": 2,
     "merged": 519,
     "parked": 382
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T18:00:03Z",
+    "last_check_at": "2026-10-24T18:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -231,7 +231,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T17:50:03Z",
+    "last_check_at": "2026-10-24T18:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T18:03:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Finish health frontier publication expiry guard with preserved…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T17:55:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-24T16:57:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Reject nowcasts that omit a newer available official…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T16:50:14Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
    }
   ]
  },
@@ -370,17 +370,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T18:00:00Z",
-   "heartbeat_at": "2026-10-24T18:00:03Z",
+   "status_at": "2026-10-24T18:04:59Z",
+   "heartbeat_at": "2026-10-24T18:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
    "days_with_paper_decisions": 0,
    "scanner": {
-    "weather_events": 358,
-    "markets": 3501,
+    "weather_events": 356,
+    "markets": 3479,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T17:57:59Z",
+    "last_scan_at": "2026-10-24T18:04:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T17:57:59Z",
+    "updated_at": "2026-10-24T18:04:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T17:59:06Z",
+    "updated_at": "2026-10-24T18:03:07Z",
     "detail": "observations retained"
    },
    {
