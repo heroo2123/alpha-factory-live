@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T09:05:02Z",
+ "generated_at": "2026-10-24T09:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_a4b22808",
     "task": "PAPER-02 runtime-origin and candidate-variant provenance design repair",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -127,8 +127,8 @@
     2,
     2,
     1,
-    1,
-    3,
+    2,
+    2,
     3,
     1,
     1,
@@ -178,7 +178,7 @@
    {
     "at": "2026-10-24T07:01:04Z",
     "title": "PAPER-02 repair basket Check causal book view TypeError as_of",
-    "area": "Core build"
+    "area": "Test repairs"
    },
    {
     "at": "2026-10-24T06:25:31Z",
@@ -212,33 +212,32 @@
     "active": 1,
     "alerts_24h": 5,
     "recoveries_24h": 3,
-    "last_check_at": "2026-10-24T09:05:02Z",
+    "last_check_at": "2026-10-24T09:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 5,
     "by_severity": {
      "P0": 0,
-     "P1": 3,
+     "P1": 2,
      "P2": 2
     },
     "codes": [
-     "flow qa red without repair",
      "flow glm plan lane dead",
+     "flow shadow observation unavailable",
      "flow brain capture gated",
      "flow brain capture missed",
-     "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-24T09:00:03Z",
+    "last_check_at": "2026-10-24T09:06:45Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 562,
-    "last_run_at": "2026-10-24T09:05:02Z",
+    "runs_total": 563,
+    "last_run_at": "2026-10-24T09:10:02Z",
     "last_ok": true,
-    "last_kind": "flow code drift frozen copy",
+    "last_kind": "flow qa red without repair",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T09:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow qa red without repair"
+   },
    {
     "at": "2026-10-24T09:05:02Z",
     "kind": "heal",
@@ -279,11 +283,6 @@
     "at": "2026-10-24T08:35:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow brain capture gated"
-   },
-   {
-    "at": "2026-10-24T08:30:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
    },
    {
     "at": "2026-10-24T08:10:20Z",
@@ -369,8 +368,8 @@
    "commissioned_at": "2026-10-24T07:20:03Z",
    "day": "2026-10-25",
    "state": "day gated",
-   "status_at": "2026-10-24T09:05:02Z",
-   "heartbeat_at": "2026-10-24T09:05:02Z",
+   "status_at": "2026-10-24T09:09:50Z",
+   "heartbeat_at": "2026-10-24T09:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -379,7 +378,7 @@
     "weather_events": 361,
     "markets": 3517,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T09:04:09Z",
+    "last_scan_at": "2026-10-24T09:09:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T09:04:09Z",
+    "updated_at": "2026-10-24T09:09:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T09:03:32Z",
+    "updated_at": "2026-10-24T09:09:34Z",
     "detail": "observations retained"
    },
    {
