@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T15:15:01Z",
+ "generated_at": "2026-10-24T15:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 37,
     "unit": "queued",
     "active": false,
-    "detail": "37 ready to build"
+    "detail": "35 ready to build"
    },
    {
     "key": "build",
@@ -66,11 +66,11 @@
     "slot": "Builder 1",
     "role": "build",
     "state": "working",
-    "model": "Codex (GPT-6 Sol)",
+    "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_693200e0",
-    "task": "CODE-01 Verify normalized forecast identity on idempotent replay",
-    "elapsed_min": 23
+    "task_id": "t_4a5fa6e7",
+    "task": "Repair authoritative Wunderground provenance for historical source view",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_2a6c11fa",
-    "task": "Price quiet current books with PAPER fee receipt semantics",
-    "elapsed_min": 32
+    "task_id": "t_61fd0a3a",
+    "task": "Persist verified public book stream for Shadow risk inputs",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
@@ -120,8 +120,8 @@
    "commits_24h": 51,
    "built_24h": 71,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 62,
-   "reviews_changes_24h": 22,
+   "reviews_passed_24h": 60,
+   "reviews_changes_24h": 24,
    "commits_by_hour": [
     3,
     1,
@@ -155,7 +155,7 @@
     "in_review": 0,
     "awaiting_merge": 0,
     "merged": 515,
-    "parked": 373
+    "parked": 375
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 0,
     "alerts_24h": 5,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-24T15:15:02Z",
+    "last_check_at": "2026-10-24T15:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,10 +233,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 602,
-    "last_run_at": "2026-10-24T15:15:01Z",
+    "runs_total": 603,
+    "last_run_at": "2026-10-24T15:20:02Z",
     "last_ok": true,
-    "last_kind": "flow queued scope unmergeable",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -248,6 +248,31 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T15:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-24T15:19:25Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Verify normalized forecast identity on idempotent replay”: changes required"
+   },
+   {
+    "at": "2026-10-24T15:19:17Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Price quiet current books with PAPER fee receipt semantics”: changes required"
+   },
+   {
+    "at": "2026-10-24T15:18:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Verify normalized forecast identity on idempotent replay” → sent to independent review"
+   },
+   {
+    "at": "2026-10-24T15:16:55Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Price quiet current books with PAPER fee receipt semantics” → sent to independent review"
+   },
    {
     "at": "2026-10-24T15:15:01Z",
     "kind": "heal",
@@ -332,31 +357,6 @@
     "at": "2026-10-24T14:34:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Expire census coverage at the rule receipt deadline” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T14:32:19Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Atomically bind public fee import to current rule and book” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T14:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-24T14:13:19Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Preserve decision provenance in markout measurements” into the main build"
-   },
-   {
-    "at": "2026-10-24T14:12:18Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Import available public fee evidence into Shadow pricing”: changes required"
-   },
-   {
-    "at": "2026-10-24T14:10:23Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Import available public fee evidence into Shadow pricing” → sent to independent review"
    }
   ]
  },
@@ -366,9 +366,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-24T15:13:04Z",
-   "heartbeat_at": "2026-10-24T15:15:01Z",
+   "state": "census service",
+   "status_at": "2026-10-24T15:20:00Z",
+   "heartbeat_at": "2026-10-24T15:20:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -377,7 +377,7 @@
     "weather_events": 374,
     "markets": 3677,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T15:11:25Z",
+    "last_scan_at": "2026-10-24T15:17:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T15:11:25Z",
+    "updated_at": "2026-10-24T15:17:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T15:14:08Z",
+    "updated_at": "2026-10-24T15:18:09Z",
     "detail": "observations retained"
    },
    {
@@ -505,7 +505,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-24T14:17:02Z",
+   "updated_at": "2026-10-24T15:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
@@ -634,7 +634,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 95,
-     "open_tasks": 11
+     "open_tasks": 10
     },
     {
      "id": "CODE-02",
