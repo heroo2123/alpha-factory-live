@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-24T16:55:02Z",
+ "generated_at": "2026-10-24T17:00:03Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 35,
     "unit": "queued",
     "active": false,
-    "detail": "38 ready to build"
+    "detail": "37 ready to build"
    },
    {
     "key": "build",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_4d47bbfb",
     "task": "CODE-01 Make cost aggregation and EV arithmetic context-independent",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -78,9 +78,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_e2e6cd65",
-    "task": "CODE-01 Reject nowcasts that omit a newer available official observation",
-    "elapsed_min": 24
+    "task_id": "t_40cec15f",
+    "task": "CODE-01 Measure fill markouts when only the required horizon side exists",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -120,8 +120,8 @@
    "commits_24h": 50,
    "built_24h": 69,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 59,
-   "reviews_changes_24h": 26,
+   "reviews_passed_24h": 58,
+   "reviews_changes_24h": 27,
    "commits_by_hour": [
     0,
     3,
@@ -157,7 +157,7 @@
     "in_review": 1,
     "awaiting_merge": 1,
     "merged": 518,
-    "parked": 377
+    "parked": 378
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 4,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-24T16:55:03Z",
+    "last_check_at": "2026-10-24T17:00:04Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 613,
+    "runs_total": 614,
     "last_run_at": "2026-10-24T16:55:02Z",
     "last_ok": true,
     "last_kind": "independent review changes required",
@@ -251,6 +251,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-24T16:58:18Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “CODE-01 Reject nowcasts that omit a newer available official…”: changes required"
+   },
+   {
+    "at": "2026-10-24T16:57:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Reject nowcasts that omit a newer available official…” → sent to independent review"
+   },
    {
     "at": "2026-10-24T16:55:02Z",
     "kind": "heal",
@@ -350,16 +360,6 @@
     "at": "2026-10-24T15:55:53Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Recheck forecast freshness when resuming partial preparation” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T15:37:50Z",
-    "kind": "review",
-    "text": "GLM 5.3 review ended: quota hold"
-   },
-   {
-    "at": "2026-10-24T15:32:28Z",
-    "kind": "merge",
-    "text": "Merged “Repair authoritative Wunderground provenance for historical source…” into the main build"
    }
   ]
  },
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-24T16:55:01Z",
-   "heartbeat_at": "2026-10-24T16:55:03Z",
+   "status_at": "2026-10-24T17:00:05Z",
+   "heartbeat_at": "2026-10-24T17:00:06Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -380,7 +380,7 @@
     "weather_events": 367,
     "markets": 3600,
     "opportunities": 0,
-    "last_scan_at": "2026-10-24T16:53:56Z",
+    "last_scan_at": "2026-10-24T16:59:40Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-24T16:53:56Z",
+    "updated_at": "2026-10-24T16:59:40Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-24T16:54:42Z",
+    "updated_at": "2026-10-24T16:58:44Z",
     "detail": "observations retained"
    },
    {
@@ -637,7 +637,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 96,
-     "open_tasks": 9
+     "open_tasks": 8
     },
     {
      "id": "CODE-02",
