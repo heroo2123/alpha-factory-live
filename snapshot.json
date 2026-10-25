@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T11:15:02Z",
+ "generated_at": "2026-10-25T11:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "63 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_60b157ce",
-    "task": "Repair historical capture quarantine destination collision",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_b297d170",
-    "task": "Preserve receipt-time stream reconnect history",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -134,8 +134,8 @@
     1,
     3,
     3,
-    1,
-    4,
+    2,
+    3,
     2,
     0,
     0,
@@ -150,8 +150,8 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 13,
-    "building": 1,
+    "queued": 14,
+    "building": 0,
     "in_review": 2,
     "awaiting_merge": 0,
     "merged": 543,
@@ -211,8 +211,8 @@
     "state": "p1",
     "active": 2,
     "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-25T11:14:02Z",
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-25T11:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T11:15:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-25T11:14:11Z",
     "kind": "warn",
@@ -321,11 +326,6 @@
     "text": "Guardian raised an alert: worker receipt untrusted review"
    },
    {
-    "at": "2026-10-25T10:01:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
-   },
-   {
     "at": "2026-10-25T09:25:34Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Implement real synthetic receipt production and reconciliation”: changes required"
@@ -369,17 +369,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "census service",
-   "status_at": "2026-10-25T11:15:00Z",
-   "heartbeat_at": "2026-10-25T11:15:03Z",
+   "status_at": "2026-10-25T11:20:01Z",
+   "heartbeat_at": "2026-10-25T11:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 363,
-    "markets": 3539,
+    "weather_events": 364,
+    "markets": 3553,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T11:09:12Z",
+    "last_scan_at": "2026-10-25T11:15:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T11:09:12Z",
+    "updated_at": "2026-10-25T11:15:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T11:14:18Z",
+    "updated_at": "2026-10-25T11:18:19Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +507,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-25T10:17:02Z",
+   "updated_at": "2026-10-25T11:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
