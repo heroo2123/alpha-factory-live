@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T03:15:02Z",
+ "generated_at": "2026-10-25T03:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 38,
+    "count": 45,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 38,
+   "progress_pct": 45,
    "last_finished_at": "2026-10-25T02:31:00Z",
    "last_passed": 16811,
    "last_failed": 0,
@@ -142,8 +142,8 @@
     1,
     3,
     3,
-    1,
-    4,
+    2,
+    3,
     2,
     0,
     0
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-25T03:15:03Z",
+    "last_check_at": "2026-10-25T03:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -371,17 +371,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "census service",
-   "status_at": "2026-10-25T03:15:00Z",
-   "heartbeat_at": "2026-10-25T03:15:02Z",
+   "status_at": "2026-10-25T03:20:01Z",
+   "heartbeat_at": "2026-10-25T03:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 309,
-    "markets": 2964,
+    "weather_events": 308,
+    "markets": 2939,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T03:10:21Z",
+    "last_scan_at": "2026-10-25T03:15:55Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T03:10:21Z",
+    "updated_at": "2026-10-25T03:15:55Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T03:14:42Z",
+    "updated_at": "2026-10-25T03:18:43Z",
     "detail": "observations retained"
    },
    {
@@ -509,7 +509,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-25T02:17:02Z",
+   "updated_at": "2026-10-25T03:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
