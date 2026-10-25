@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T18:30:02Z",
+ "generated_at": "2026-10-25T18:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "65 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_43d01767",
+    "task": "Keep external historical annotations out of trusted derivation provenance",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -136,8 +136,8 @@
     2,
     0,
     2,
-    1,
-    4,
+    2,
+    3,
     0,
     0,
     0,
@@ -151,8 +151,8 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 27,
-    "building": 0,
-    "in_review": 3,
+    "building": 1,
+    "in_review": 2,
     "awaiting_merge": 0,
     "merged": 544,
     "parked": 433
@@ -210,9 +210,9 @@
    "guardian": {
     "state": "p1",
     "active": 3,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-25T18:30:03Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-25T18:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T18:20:02Z",
+    "last_check_at": "2026-10-25T18:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-25T18:33:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-10-25T18:32:57Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Keep external historical annotations out of trusted derivation…”: changes required"
+   },
+   {
     "at": "2026-10-25T18:27:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
@@ -256,7 +266,7 @@
    {
     "at": "2026-10-25T18:24:17Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Preserve completed captures during parser reconsideration” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Keep external historical annotations out of trusted derivation…” → sent to independent review"
    },
    {
     "at": "2026-10-25T18:16:27Z",
@@ -286,12 +296,12 @@
    {
     "at": "2026-10-25T17:29:47Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Preserve completed captures during parser reconsideration”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Keep external historical annotations out of trusted derivation…”: changes required"
    },
    {
     "at": "2026-10-25T17:24:24Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Preserve completed captures during parser reconsideration” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Keep external historical annotations out of trusted derivation…” → sent to independent review"
    },
    {
     "at": "2026-10-25T17:18:23Z",
@@ -309,14 +319,9 @@
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
-    "at": "2026-10-25T17:08:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop…"
-   },
-   {
     "at": "2026-10-25T17:00:44Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Preserve completed captures during parser reconsideration” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Keep external historical annotations out of trusted derivation…” → sent to independent review"
    },
    {
     "at": "2026-10-25T16:34:28Z",
@@ -352,11 +357,6 @@
     "at": "2026-10-25T15:51:29Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-25T15:46:19Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    }
   ]
  },
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T18:28:50Z",
-   "heartbeat_at": "2026-10-25T18:30:03Z",
+   "status_at": "2026-10-25T18:34:19Z",
+   "heartbeat_at": "2026-10-25T18:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -377,7 +377,7 @@
     "weather_events": 345,
     "markets": 3358,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T18:27:50Z",
+    "last_scan_at": "2026-10-25T18:33:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T18:27:50Z",
+    "updated_at": "2026-10-25T18:33:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T18:28:39Z",
+    "updated_at": "2026-10-25T18:34:41Z",
     "detail": "observations retained"
    },
    {
