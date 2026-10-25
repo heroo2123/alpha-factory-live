@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T21:10:02Z",
+ "generated_at": "2026-10-25T21:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 29,
+    "count": 30,
     "unit": "queued",
     "active": false,
     "detail": "31 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "63 built in 24h"
+    "active": false,
+    "detail": "62 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 85,
+    "count": 90,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_566f4007",
-    "task": "CODE-01 Retain and enforce the target of computed fee costs",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_550364f8",
-    "task": "Finish fresh PAPER ledger bootstrap after merged profile precheck",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 85,
+   "progress_pct": 90,
    "last_finished_at": "2026-10-25T04:25:27Z",
    "last_passed": 16824,
    "last_failed": 1,
@@ -117,14 +117,14 @@
   "tests_passing": 16824,
   "flow": {
    "merges_24h": 21,
-   "commits_24h": 21,
-   "built_24h": 63,
+   "commits_24h": 20,
+   "built_24h": 62,
    "build_failed_24h": 12,
    "reviews_passed_24h": 49,
    "reviews_changes_24h": 28,
    "commits_by_hour": [
     3,
-    2,
+    1,
     4,
     2,
     0,
@@ -134,8 +134,8 @@
     1,
     2,
     0,
-    4,
-    1,
+    5,
+    0,
     0,
     0,
     0,
@@ -153,8 +153,8 @@
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 29,
-    "building": 1,
+    "queued": 30,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 2,
     "merged": 544,
@@ -211,29 +211,29 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-25T21:10:02Z",
+    "last_check_at": "2026-10-25T21:14:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 7,
+    "active": 6,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 5
+     "P2": 4
     },
     "codes": [
-     "flow go2 lane not polled",
      "flow glm plan lane dead",
      "flow second review inconclusive",
      "flow code drift frozen copy",
      "flow review repair scope missing",
-     "flow acceptance followthrough required"
+     "flow acceptance followthrough required",
+     "flow registry overdue"
     ],
-    "last_check_at": "2026-10-25T21:00:02Z",
+    "last_check_at": "2026-10-25T21:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T21:08:30Z",
-   "heartbeat_at": "2026-10-25T21:10:03Z",
+   "status_at": "2026-10-25T21:14:05Z",
+   "heartbeat_at": "2026-10-25T21:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 339,
     "markets": 3297,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T21:06:08Z",
+    "last_scan_at": "2026-10-25T21:11:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T21:06:08Z",
+    "updated_at": "2026-10-25T21:11:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T21:09:34Z",
+    "updated_at": "2026-10-25T21:13:36Z",
     "detail": "observations retained"
    },
    {
