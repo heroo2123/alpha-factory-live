@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T11:10:02Z",
+ "generated_at": "2026-10-25T11:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 13,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "64 built in 24h"
+    "active": true,
+    "detail": "63 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_60b157ce",
+    "task": "Repair historical capture quarantine destination collision",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_b297d170",
+    "task": "Preserve receipt-time stream reconnect history",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,23 +118,23 @@
   "flow": {
    "merges_24h": 35,
    "commits_24h": 35,
-   "built_24h": 64,
-   "build_failed_24h": 12,
+   "built_24h": 63,
+   "build_failed_24h": 13,
    "reviews_passed_24h": 55,
-   "reviews_changes_24h": 27,
+   "reviews_changes_24h": 26,
    "commits_by_hour": [
     0,
-    1,
+    2,
     3,
-    3,
+    2,
     2,
     1,
     1,
     1,
     1,
-    2,
     3,
-    2,
+    3,
+    1,
     4,
     2,
     0,
@@ -144,14 +144,14 @@
     1,
     2,
     0,
-    4,
-    1,
+    5,
+    0,
     0
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 14,
-    "building": 0,
+    "queued": 13,
+    "building": 1,
     "in_review": 2,
     "awaiting_merge": 0,
     "merged": 543,
@@ -211,8 +211,8 @@
     "state": "p1",
     "active": 2,
     "alerts_24h": 14,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T11:10:02Z",
+    "recoveries_24h": 10,
+    "last_check_at": "2026-10-25T11:14:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
      "flow review oversized",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T11:00:04Z",
+    "last_check_at": "2026-10-25T11:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T11:14:11Z",
+    "kind": "warn",
+    "text": "GLM 5.3 build attempt ended: quota hold"
+   },
+   {
+    "at": "2026-10-25T11:14:11Z",
+    "kind": "review",
+    "text": "GLM 5.3 review ended: quota hold"
+   },
+   {
+    "at": "2026-10-25T11:14:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
    {
     "at": "2026-10-25T11:10:02Z",
     "kind": "heal",
@@ -311,11 +326,6 @@
     "text": "Guardian raised an alert: hermes router not active"
    },
    {
-    "at": "2026-10-25T09:58:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
     "at": "2026-10-25T09:25:34Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Implement real synthetic receipt production and reconciliation”: changes required"
@@ -349,16 +359,6 @@
     "at": "2026-10-25T09:06:23Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_c72f1bdc 5a5c50418ac7”: passed"
-   },
-   {
-    "at": "2026-10-25T09:05:16Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-10-25T09:03:16Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “FLEX candidate t_b7b1407d 1ec116794b56” → sent to independent review"
    }
   ]
  },
@@ -368,9 +368,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T11:08:40Z",
-   "heartbeat_at": "2026-10-25T11:10:02Z",
+   "state": "census service",
+   "status_at": "2026-10-25T11:15:00Z",
+   "heartbeat_at": "2026-10-25T11:15:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T11:08:15Z",
+    "updated_at": "2026-10-25T11:14:18Z",
     "detail": "observations retained"
    },
    {
