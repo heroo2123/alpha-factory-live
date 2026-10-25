@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T04:00:02Z",
+ "generated_at": "2026-10-25T04:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 21,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "23 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "61 built in 24h"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 78,
+    "count": 80,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -75,12 +75,12 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_d28c1ed5",
+    "task": "FLEX candidate t_1605c84d 5930bd53c9bb",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 78,
+   "progress_pct": 80,
    "last_finished_at": "2026-10-25T02:31:00Z",
    "last_passed": 16811,
    "last_failed": 0,
@@ -125,17 +125,17 @@
    "commits_by_hour": [
     0,
     1,
+    3,
     2,
+    0,
     2,
-    1,
-    1,
-    1,
+    0,
     0,
     1,
     3,
     3,
-    1,
     2,
+    1,
     1,
     1,
     1,
@@ -152,12 +152,12 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 21,
-    "building": 0,
+    "queued": 20,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 534,
-    "parked": 401
+    "parked": 402
    }
   },
   "architect": {
@@ -214,30 +214,30 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T04:00:03Z",
+    "last_check_at": "2026-10-25T04:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 7,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 0,
      "P2": 5
     },
     "codes": [
      "flow unmergeable reviewed work",
      "flow glm plan lane dead",
-     "flow brain capture missed",
      "flow code drift frozen copy",
      "flow maintenance review packet invalid",
-     "flow source card wrong status"
+     "flow source card wrong status",
+     "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-25T03:50:02Z",
+    "last_check_at": "2026-10-25T04:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 654,
+    "runs_total": 655,
     "last_run_at": "2026-10-24T23:55:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -369,10 +369,10 @@
    "service": "running",
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
-   "day": "2026-10-25",
-   "state": "census service",
-   "status_at": "2026-10-25T04:00:04Z",
-   "heartbeat_at": "2026-10-25T04:00:04Z",
+   "day": "2026-10-26",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T04:00:28Z",
+   "heartbeat_at": "2026-10-25T04:05:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -411,7 +411,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T03:58:56Z",
+    "updated_at": "2026-10-25T04:04:59Z",
     "detail": "observations retained"
    },
    {
