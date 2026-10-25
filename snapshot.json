@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T13:00:02Z",
+ "generated_at": "2026-10-25T13:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b297d170",
     "task": "Repair stream liveness and active configuration shutdown",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -125,8 +125,8 @@
    "commits_by_hour": [
     3,
     3,
-    1,
     2,
+    1,
     1,
     1,
     1,
@@ -155,7 +155,7 @@
     "in_review": 1,
     "awaiting_merge": 0,
     "merged": 543,
-    "parked": 434
+    "parked": 433
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 3,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T13:00:03Z",
+    "last_check_at": "2026-10-25T13:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,7 +230,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T12:50:03Z",
+    "last_check_at": "2026-10-25T13:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -358,7 +358,7 @@
    {
     "at": "2026-10-25T09:25:34Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Implement real synthetic receipt production and reconciliation”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    }
   ]
  },
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T12:57:34Z",
-   "heartbeat_at": "2026-10-25T13:00:03Z",
+   "status_at": "2026-10-25T13:03:01Z",
+   "heartbeat_at": "2026-10-25T13:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T12:58:51Z",
+    "updated_at": "2026-10-25T13:04:53Z",
     "detail": "observations retained"
    },
    {
