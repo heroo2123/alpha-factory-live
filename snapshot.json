@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T07:10:01Z",
+ "generated_at": "2026-10-25T07:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c72f1bdc",
     "task": "FLEX candidate t_b7b1407d 1ec116794b56",
-    "elapsed_min": 19
+    "elapsed_min": 24
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "OpenAI",
     "task_id": "t_c361ed54",
     "task": "FLEX candidate t_1264c228 1daf99012fff",
-    "elapsed_min": 14
+    "elapsed_min": 20
    },
    {
     "slot": "Reviewer 1",
@@ -128,17 +128,17 @@
     2,
     0,
     0,
-    1,
+    2,
     3,
-    3,
+    2,
     2,
     1,
     1,
     1,
     1,
-    2,
     3,
-    2,
+    3,
+    1,
     4,
     2,
     0,
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 9,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T07:10:02Z",
+    "last_check_at": "2026-10-25T07:15:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,18 +228,18 @@
     "codes": [
      "flow qa resource blocked",
      "flow glm plan lane dead",
-     "flow shadow observation unavailable",
+     "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T07:04:37Z",
+    "last_check_at": "2026-10-25T07:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 675,
-    "last_run_at": "2026-10-25T07:10:02Z",
+    "runs_total": 676,
+    "last_run_at": "2026-10-25T07:15:03Z",
     "last_ok": true,
-    "last_kind": "routine",
+    "last_kind": "full suite not green",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T07:15:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
+   },
    {
     "at": "2026-10-25T07:10:02Z",
     "kind": "heal",
@@ -352,11 +357,6 @@
     "text": "Codex (GPT-6 Astra) built “Quarantine capture before fallible validation in brain historical…” → sent to independent review"
    },
    {
-    "at": "2026-10-25T06:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow green release failed"
-   },
-   {
     "at": "2026-10-25T06:36:18Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “FLEX candidate t_617a2d1a 78f8896aff9d” → sent to independent review"
@@ -370,8 +370,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
    "state": "census service",
-   "status_at": "2026-10-25T07:10:03Z",
-   "heartbeat_at": "2026-10-25T07:10:02Z",
+   "status_at": "2026-10-25T07:15:03Z",
+   "heartbeat_at": "2026-10-25T07:15:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -410,7 +410,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T07:08:14Z",
+    "updated_at": "2026-10-25T07:14:17Z",
     "detail": "observations retained"
    },
    {
