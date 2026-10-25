@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T17:30:02Z",
+ "generated_at": "2026-10-25T17:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,14 +10,14 @@
     "count": 26,
     "unit": "queued",
     "active": false,
-    "detail": "28 ready to build"
+    "detail": "30 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "64 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_543818e1",
+    "task": "Complete persisted normalization clock invariants after R5 review",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -137,8 +137,8 @@
     2,
     0,
     2,
-    1,
-    4,
+    2,
+    3,
     0,
     0,
     0,
@@ -151,11 +151,11 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 26,
-    "building": 0,
+    "building": 1,
     "in_review": 2,
     "awaiting_merge": 0,
     "merged": 544,
-    "parked": 434
+    "parked": 433
    }
   },
   "architect": {
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 2,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-25T17:30:02Z",
+    "last_check_at": "2026-10-25T17:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T17:20:03Z",
+    "last_check_at": "2026-10-25T17:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,17 +251,17 @@
    {
     "at": "2026-10-25T17:29:47Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Repair actual archived refusal classifier and verify real saved-data…”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    },
    {
     "at": "2026-10-25T17:24:24Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Repair actual archived refusal classifier and verify real saved-data…” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
     "at": "2026-10-25T17:18:23Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Complete persisted normalization clock invariants after R5 review”: changes required"
    },
    {
     "at": "2026-10-25T17:12:02Z",
@@ -271,7 +271,7 @@
    {
     "at": "2026-10-25T17:09:15Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Complete persisted normalization clock invariants after R5 review” → sent to independent review"
    },
    {
     "at": "2026-10-25T17:08:02Z",
@@ -281,12 +281,12 @@
    {
     "at": "2026-10-25T17:00:44Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Repair actual archived refusal classifier and verify real saved-data…” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
     "at": "2026-10-25T16:34:28Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Sol) reviewed “Complete persisted normalization clock invariants after R5 review”: changes required"
    },
    {
     "at": "2026-10-25T16:32:02Z",
@@ -311,7 +311,7 @@
    {
     "at": "2026-10-25T16:24:36Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Complete persisted normalization clock invariants after R5 review” → sent to independent review"
    },
    {
     "at": "2026-10-25T16:24:02Z",
@@ -336,27 +336,27 @@
    {
     "at": "2026-10-25T15:51:29Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Sol) reviewed “Complete persisted normalization clock invariants after R5 review”: changes required"
    },
    {
     "at": "2026-10-25T15:46:19Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Complete persisted normalization clock invariants after R5 review” → sent to independent review"
    },
    {
     "at": "2026-10-25T15:05:30Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Sol) reviewed “Complete persisted normalization clock invariants after R5 review”: changes required"
    },
    {
     "at": "2026-10-25T14:59:16Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Complete persisted normalization clock invariants after R5 review” → sent to independent review"
    },
    {
     "at": "2026-10-25T14:22:41Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Sol) reviewed “Complete persisted normalization clock invariants after R5 review”: changes required"
    }
   ]
  },
@@ -367,8 +367,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T17:26:18Z",
-   "heartbeat_at": "2026-10-25T17:30:02Z",
+   "status_at": "2026-10-25T17:31:46Z",
+   "heartbeat_at": "2026-10-25T17:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -377,7 +377,7 @@
     "weather_events": 345,
     "markets": 3358,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T17:25:22Z",
+    "last_scan_at": "2026-10-25T17:31:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T17:25:22Z",
+    "updated_at": "2026-10-25T17:31:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T17:28:20Z",
+    "updated_at": "2026-10-25T17:34:22Z",
     "detail": "observations retained"
    },
    {
