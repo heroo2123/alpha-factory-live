@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T16:30:02Z",
+ "generated_at": "2026-10-25T16:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 24,
     "unit": "queued",
     "active": false,
-    "detail": "26 ready to build"
+    "detail": "27 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "64 built in 24h"
    },
    {
@@ -34,7 +34,7 @@
     "count": 0,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "27 merged in 24h"
+    "detail": "26 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_43d01767",
+    "task": "Parse preserved historical rules and recheck old format refusals",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 16824,
   "flow": {
-   "merges_24h": 27,
-   "commits_24h": 27,
+   "merges_24h": 26,
+   "commits_24h": 26,
    "built_24h": 64,
    "build_failed_24h": 13,
-   "reviews_passed_24h": 54,
-   "reviews_changes_24h": 26,
+   "reviews_passed_24h": 53,
+   "reviews_changes_24h": 27,
    "commits_by_hour": [
-    1,
+    0,
     1,
     1,
     1,
@@ -138,8 +138,8 @@
     2,
     0,
     2,
-    1,
-    4,
+    2,
+    3,
     0,
     0,
     0,
@@ -150,12 +150,12 @@
    ],
    "merge_holds": [],
    "stage_totals": {
-    "queued": 23,
-    "building": 0,
+    "queued": 24,
+    "building": 1,
     "in_review": 2,
     "awaiting_merge": 0,
     "merged": 544,
-    "parked": 433
+    "parked": 434
    }
   },
   "architect": {
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-25T16:30:02Z",
+    "active": 2,
+    "alerts_24h": 14,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-10-25T16:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T16:20:03Z",
+    "last_check_at": "2026-10-25T16:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -249,6 +249,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T16:34:28Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “Repair persisted WS rule and collateral lineage validation”: changes required"
+   },
+   {
+    "at": "2026-10-25T16:32:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
    {
     "at": "2026-10-25T16:27:02Z",
     "kind": "heal",
@@ -310,11 +320,6 @@
     "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
-    "at": "2026-10-25T15:40:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
-   },
-   {
     "at": "2026-10-25T15:05:30Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “Repair persisted WS rule and collateral lineage validation”: changes required"
@@ -353,11 +358,6 @@
     "at": "2026-10-25T12:10:16Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-25T12:00:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow qa resource blocked"
    }
   ]
  },
@@ -367,9 +367,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
-   "state": "census service",
-   "status_at": "2026-10-25T16:29:42Z",
-   "heartbeat_at": "2026-10-25T16:30:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T16:30:09Z",
+   "heartbeat_at": "2026-10-25T16:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -378,7 +378,7 @@
     "weather_events": 366,
     "markets": 3589,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T16:25:17Z",
+    "last_scan_at": "2026-10-25T16:31:29Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T16:25:17Z",
+    "updated_at": "2026-10-25T16:31:29Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T16:29:59Z",
+    "updated_at": "2026-10-25T16:34:00Z",
     "detail": "observations retained"
    },
    {
