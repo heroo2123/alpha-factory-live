@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T10:05:02Z",
+ "generated_at": "2026-10-25T10:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 11,
+    "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "0 built in 24h"
+    "detail": "64 built in 24h"
    },
    {
     "key": "review",
@@ -26,12 +26,12 @@
     "count": 2,
     "unit": "in review",
     "active": false,
-    "detail": "different model family from the builder"
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
     "detail": "35 merged in 24h"
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 35,
    "commits_24h": 35,
-   "built_24h": 0,
-   "build_failed_24h": 0,
-   "reviews_passed_24h": 0,
-   "reviews_changes_24h": 0,
+   "built_24h": 64,
+   "build_failed_24h": 12,
+   "reviews_passed_24h": 55,
+   "reviews_changes_24h": 27,
    "commits_by_hour": [
     0,
     0,
@@ -134,8 +134,8 @@
     1,
     1,
     2,
-    2,
     3,
+    2,
     4,
     2,
     0,
@@ -152,12 +152,12 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 11,
+    "queued": 12,
     "building": 0,
     "in_review": 2,
-    "awaiting_merge": 2,
+    "awaiting_merge": 1,
     "merged": 543,
-    "parked": 430
+    "parked": 431
    }
   },
   "architect": {
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 4,
-    "alerts_24h": 13,
+    "active": 2,
+    "alerts_24h": 14,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-25T10:05:02Z",
+    "last_check_at": "2026-10-25T10:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 694,
-    "last_run_at": "2026-10-25T10:00:03Z",
+    "runs_total": 695,
+    "last_run_at": "2026-10-25T10:10:02Z",
     "last_ok": true,
-    "last_kind": "flow code drift frozen copy",
+    "last_kind": "routine",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +252,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T10:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: routine"
+   },
+   {
+    "at": "2026-10-25T10:07:23Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Preserve receipt-time stream reconnect history” → sent to independent review"
+   },
+   {
+    "at": "2026-10-25T10:07:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “FLEX candidate t_a7699914 a56c92da16ae” → sent to independent review"
+   },
+   {
+    "at": "2026-10-25T10:06:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker receipt untrusted review"
+   },
    {
     "at": "2026-10-25T10:01:01Z",
     "kind": "warn",
@@ -288,79 +308,59 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: full suite not green"
    },
    {
-    "at": "2026-10-25T09:40:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
     "at": "2026-10-25T09:36:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
    },
    {
-    "at": "2026-10-25T08:43:21Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Expose trading results after fees and reserves” into the main build"
-   },
-   {
-    "at": "2026-10-25T08:31:23Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Reject crossed books before calculating simulated markouts” into the main build"
-   },
-   {
-    "at": "2026-10-25T08:31:02Z",
+    "at": "2026-10-25T09:25:34Z",
     "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
+    "text": "Codex (GPT-6 Astra) reviewed “Implement real synthetic receipt production and reconciliation”: changes required"
    },
    {
-    "at": "2026-10-25T08:22:19Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Validate depth before allowing paper reward quotes” into the main build"
+    "at": "2026-10-25T09:25:25Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_c361ed54 efbab6b64427”: passed"
    },
    {
-    "at": "2026-10-25T08:02:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
+    "at": "2026-10-25T09:24:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Implement real synthetic receipt production and reconciliation” → sent to independent review"
    },
    {
-    "at": "2026-10-25T08:00:21Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
+    "at": "2026-10-25T09:23:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “FLEX candidate t_1264c228 1daf99012fff” → sent to independent review"
    },
    {
-    "at": "2026-10-25T07:40:04Z",
-    "kind": "release",
-    "text": "New Shadow release c1907d4 went live (paper only)"
-   },
-   {
-    "at": "2026-10-25T07:35:02Z",
-    "kind": "release",
-    "text": "Release c1907d4 installed by the release manager"
-   },
-   {
-    "at": "2026-10-25T06:52:36Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Check exchange-book age before screening transforms” into the main build"
-   },
-   {
-    "at": "2026-10-25T06:42:53Z",
-    "kind": "merge",
-    "text": "Merged “FIFO subprocess cold-start timeout” into the main build"
-   },
-   {
-    "at": "2026-10-25T06:30:19Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
-   },
-   {
-    "at": "2026-10-25T04:55:23Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Validate IEM provenance before reporting WRH corroboration” into the main build"
-   },
-   {
-    "at": "2026-10-25T04:25:27Z",
+    "at": "2026-10-25T09:17:15Z",
     "kind": "warn",
-    "text": "Full test suite finished: 16824 passed, 1 failed"
+    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-25T09:12:14Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: no code change"
+   },
+   {
+    "at": "2026-10-25T09:06:23Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “FLEX candidate t_c72f1bdc 5a5c50418ac7”: passed"
+   },
+   {
+    "at": "2026-10-25T09:05:16Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-25T09:03:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “FLEX candidate t_b7b1407d 1ec116794b56” → sent to independent review"
+   },
+   {
+    "at": "2026-10-25T08:54:54Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “New main SHA 3aef8e1ed561 Alpha V11 FLEX code task t_ee607fea…”: changes required"
    }
   ]
  },
@@ -370,9 +370,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
-   "state": "census service",
-   "status_at": "2026-10-25T10:05:00Z",
-   "heartbeat_at": "2026-10-25T10:05:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T10:08:06Z",
+   "heartbeat_at": "2026-10-25T10:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -381,7 +381,7 @@
     "weather_events": 357,
     "markets": 3473,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T10:00:08Z",
+    "last_scan_at": "2026-10-25T10:06:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T10:00:08Z",
+    "updated_at": "2026-10-25T10:06:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T10:03:52Z",
+    "updated_at": "2026-10-25T10:09:54Z",
     "detail": "observations retained"
    },
    {
