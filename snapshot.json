@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T13:30:02Z",
+ "generated_at": "2026-10-25T13:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,10 +15,10 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "62 built in 24h"
+    "active": false,
+    "detail": "63 built in 24h"
    },
    {
     "key": "review",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_b297d170",
-    "task": "Repair stream liveness and active configuration shutdown",
-    "elapsed_min": 34
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -118,15 +118,15 @@
   "flow": {
    "merges_24h": 32,
    "commits_24h": 32,
-   "built_24h": 62,
+   "built_24h": 63,
    "build_failed_24h": 13,
-   "reviews_passed_24h": 56,
+   "reviews_passed_24h": 55,
    "reviews_changes_24h": 26,
    "commits_by_hour": [
     2,
+    3,
     2,
-    2,
-    1,
+    0,
     1,
     1,
     1,
@@ -141,8 +141,8 @@
     2,
     0,
     2,
-    1,
-    4,
+    2,
+    3,
     0,
     0,
     0,
@@ -151,7 +151,7 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 18,
-    "building": 1,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 0,
     "merged": 543,
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T13:30:04Z",
+    "last_check_at": "2026-10-25T13:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T13:20:03Z",
+    "last_check_at": "2026-10-25T13:30:04Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-25T13:33:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+   },
+   {
+    "at": "2026-10-25T13:32:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
+   {
     "at": "2026-10-25T12:57:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
@@ -267,7 +277,7 @@
    {
     "at": "2026-10-25T12:32:00Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Repair stream liveness and active configuration shutdown”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    },
    {
     "at": "2026-10-25T12:24:01Z",
@@ -277,7 +287,7 @@
    {
     "at": "2026-10-25T12:22:30Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Repair stream liveness and active configuration shutdown” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-10-25T12:18:02Z",
@@ -320,11 +330,6 @@
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: hermes router stale"
    },
    {
-    "at": "2026-10-25T11:39:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
     "at": "2026-10-25T11:29:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Repair historical capture quarantine destination collision” → sent to independent review"
@@ -332,7 +337,7 @@
    {
     "at": "2026-10-25T11:22:45Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Repair stream liveness and active configuration shutdown”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    },
    {
     "at": "2026-10-25T11:14:11Z",
@@ -347,17 +352,12 @@
    {
     "at": "2026-10-25T10:07:23Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Repair stream liveness and active configuration shutdown” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
     "at": "2026-10-25T10:07:17Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “FLEX candidate t_a7699914 a56c92da16ae” → sent to independent review"
-   },
-   {
-    "at": "2026-10-25T09:25:34Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    }
   ]
  },
@@ -367,9 +367,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
-   "state": "census service",
-   "status_at": "2026-10-25T13:29:43Z",
-   "heartbeat_at": "2026-10-25T13:30:04Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T13:30:15Z",
+   "heartbeat_at": "2026-10-25T13:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T13:29:01Z",
+    "updated_at": "2026-10-25T13:33:03Z",
     "detail": "observations retained"
    },
    {
