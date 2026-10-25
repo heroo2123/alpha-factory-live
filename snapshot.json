@@ -1,37 +1,37 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T07:25:02Z",
+ "generated_at": "2026-10-25T07:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 11,
+    "count": 9,
     "unit": "queued",
     "active": false,
-    "detail": "12 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "63 built in 24h"
+    "detail": "64 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 4,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
     "detail": "34 merged in 24h"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_8cc800e1",
-    "task": "New main SHA 3aef8e1ed561 Alpha V11 FLEX code task t_ee607fea deepseek_api",
-    "elapsed_min": 6
+    "task_id": "t_d77ab0b7",
+    "task": "Repair independent reviewer findings 6404ead9fc9d",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,22 +85,22 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_8f7747cb",
+    "task": "FLEX candidate t_c361ed54 efbab6b64427",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_8cc800e1",
+    "task": "New main SHA 3aef8e1ed561 Alpha V11 FLEX code task t_ee607fea deepseek_api",
+    "elapsed_min": 4
    }
   ],
   "qa": {
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 34,
    "commits_24h": 34,
-   "built_24h": 63,
+   "built_24h": 64,
    "build_failed_24h": 10,
-   "reviews_passed_24h": 57,
+   "reviews_passed_24h": 56,
    "reviews_changes_24h": 29,
    "commits_by_hour": [
     2,
@@ -153,10 +153,10 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 11,
-    "building": 2,
-    "in_review": 3,
-    "awaiting_merge": 4,
+    "queued": 9,
+    "building": 1,
+    "in_review": 4,
+    "awaiting_merge": 5,
     "merged": 538,
     "parked": 415
    }
@@ -212,10 +212,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 1,
     "alerts_24h": 9,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T07:25:02Z",
+    "last_check_at": "2026-10-25T07:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T07:29:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “FLEX candidate t_a7699914 a56c92da16ae” → sent to independent review"
+   },
+   {
+    "at": "2026-10-25T07:25:24Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “New main SHA 3aef8e1ed561 Alpha V11 FLEX code task t_ee607fea…” → sent to independent review"
+   },
    {
     "at": "2026-10-25T07:25:04Z",
     "kind": "review",
@@ -352,16 +362,6 @@
     "at": "2026-10-25T06:45:27Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_1264c228 1daf99012fff”: changes required"
-   },
-   {
-    "at": "2026-10-25T06:44:26Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Preserve real risk history across public stream reconnects”: changes required"
-   },
-   {
-    "at": "2026-10-25T06:44:17Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Make fee response and archival deadline lifecycle signal-safe” → sent to independent review"
    }
   ]
  },
@@ -371,18 +371,18 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
-   "state": "census service",
-   "status_at": "2026-10-25T07:25:00Z",
-   "heartbeat_at": "2026-10-25T07:25:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T07:29:20Z",
+   "heartbeat_at": "2026-10-25T07:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 351,
-    "markets": 3407,
+    "weather_events": 349,
+    "markets": 3385,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T07:21:39Z",
+    "last_scan_at": "2026-10-25T07:27:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T07:21:39Z",
+    "updated_at": "2026-10-25T07:27:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T07:24:20Z",
+    "updated_at": "2026-10-25T07:28:22Z",
     "detail": "observations retained"
    },
    {
