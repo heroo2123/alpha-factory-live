@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T12:15:01Z",
+ "generated_at": "2026-10-25T12:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "62 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_b297d170",
-    "task": "Preserve stream bridge and honor disabled socket configuration",
-    "elapsed_min": 21
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -133,8 +133,8 @@
     1,
     3,
     3,
-    1,
-    4,
+    2,
+    3,
     2,
     0,
     0,
@@ -155,7 +155,7 @@
     "in_review": 1,
     "awaiting_merge": 0,
     "merged": 543,
-    "parked": 433
+    "parked": 434
    }
   },
   "architect": {
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T12:15:02Z",
+    "last_check_at": "2026-10-25T12:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -249,6 +249,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T12:18:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-10-25T12:10:16Z",
     "kind": "plan",
@@ -330,11 +335,6 @@
     "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
-    "at": "2026-10-25T10:32:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
-   },
-   {
     "at": "2026-10-25T10:07:23Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Preserve stream bridge and honor disabled socket configuration” → sent to independent review"
@@ -368,17 +368,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T12:12:29Z",
-   "heartbeat_at": "2026-10-25T12:15:03Z",
+   "status_at": "2026-10-25T12:17:54Z",
+   "heartbeat_at": "2026-10-25T12:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 362,
-    "markets": 3531,
+    "weather_events": 363,
+    "markets": 3556,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T12:13:23Z",
+    "last_scan_at": "2026-10-25T12:19:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,14 +401,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T12:13:23Z",
+    "updated_at": "2026-10-25T12:19:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T12:14:37Z",
+    "updated_at": "2026-10-25T12:18:38Z",
     "detail": "observations retained"
    },
    {
@@ -506,7 +506,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-25T11:17:03Z",
+   "updated_at": "2026-10-25T12:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
