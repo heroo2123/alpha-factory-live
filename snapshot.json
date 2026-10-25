@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T04:15:02Z",
+ "generated_at": "2026-10-25T04:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "23 ready to build"
+    "detail": "22 ready to build"
    },
    {
     "key": "build",
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 84,
+    "count": 87,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_00f9a51a",
     "task": "CODE-01 Validate IEM provenance before reporting WRH corroboration",
-    "elapsed_min": 8
+    "elapsed_min": 13
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "DeepSeek",
     "task_id": "t_617a2d1a",
     "task": "Bind city METAR station source and forward harvest identity",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_d5b3f0df",
-    "task": "FLEX candidate t_d28c1ed5 dbf6d2f2d3d7",
-    "elapsed_min": 1
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 84,
+   "progress_pct": 87,
    "last_finished_at": "2026-10-25T02:31:00Z",
    "last_passed": 16811,
    "last_failed": 0,
@@ -141,8 +141,8 @@
     1,
     3,
     3,
-    1,
-    4,
+    2,
+    3,
     2,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T04:15:02Z",
+    "last_check_at": "2026-10-25T04:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 656,
-    "last_run_at": "2026-10-25T04:10:02Z",
+    "runs_total": 657,
+    "last_run_at": "2026-10-25T04:20:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow code drift frozen copy",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T04:20:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow code drift frozen copy"
+   },
    {
     "at": "2026-10-25T04:13:21Z",
     "kind": "build",
@@ -356,11 +361,6 @@
     "at": "2026-10-24T23:38:10Z",
     "kind": "warn",
     "text": "DeepSeek V4 Pro build attempt ended: quota hold"
-   },
-   {
-    "at": "2026-10-24T23:37:20Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_4d47bbfb 9ef6ccdb8efb”: passed"
    }
   ]
  },
@@ -371,17 +371,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
    "state": "census service",
-   "status_at": "2026-10-25T04:15:00Z",
-   "heartbeat_at": "2026-10-25T04:15:02Z",
+   "status_at": "2026-10-25T04:20:00Z",
+   "heartbeat_at": "2026-10-25T04:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 304,
-    "markets": 2895,
+    "weather_events": 305,
+    "markets": 2901,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T04:11:34Z",
+    "last_scan_at": "2026-10-25T04:17:42Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T04:11:34Z",
+    "updated_at": "2026-10-25T04:17:42Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T04:13:04Z",
+    "updated_at": "2026-10-25T04:19:09Z",
     "detail": "observations retained"
    },
    {
@@ -509,7 +509,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-25T03:17:02Z",
+   "updated_at": "2026-10-25T04:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
