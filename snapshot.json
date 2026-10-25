@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T15:50:02Z",
+ "generated_at": "2026-10-25T15:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,20 +10,20 @@
     "count": 20,
     "unit": "queued",
     "active": false,
-    "detail": "22 ready to build"
+    "detail": "24 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 2,
     "unit": "building",
-    "active": false,
-    "detail": "64 built in 24h"
+    "active": true,
+    "detail": "63 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,27 +65,27 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_60b157ce",
+    "task": "Serialize historical capture resume and preserve recovered evidence",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_543818e1",
+    "task": "Repair persisted WS rule and collateral lineage validation",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 27,
    "commits_24h": 27,
-   "built_24h": 64,
+   "built_24h": 63,
    "build_failed_24h": 13,
    "reviews_passed_24h": 54,
-   "reviews_changes_24h": 26,
+   "reviews_changes_24h": 27,
    "commits_by_hour": [
     2,
     1,
@@ -130,17 +130,17 @@
     2,
     1,
     3,
+    5,
+    2,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    0,
     4,
-    2,
     1,
-    0,
-    0,
-    0,
-    2,
-    1,
-    1,
-    3,
-    2,
     0,
     0,
     0,
@@ -151,11 +151,11 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 20,
-    "building": 0,
-    "in_review": 2,
+    "building": 2,
+    "in_review": 1,
     "awaiting_merge": 0,
     "merged": 543,
-    "parked": 433
+    "parked": 432
    }
   },
   "architect": {
@@ -212,7 +212,7 @@
     "active": 3,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T15:50:02Z",
+    "last_check_at": "2026-10-25T15:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -229,7 +229,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T15:40:02Z",
+    "last_check_at": "2026-10-25T15:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -250,6 +250,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-25T15:51:29Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “Repair persisted WS rule and collateral lineage validation”: changes required"
+   },
+   {
     "at": "2026-10-25T15:49:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
@@ -257,7 +262,7 @@
    {
     "at": "2026-10-25T15:46:19Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Repair persisted REST normalization lineage in receipt helper” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Repair persisted WS rule and collateral lineage validation” → sent to independent review"
    },
    {
     "at": "2026-10-25T15:41:02Z",
@@ -272,7 +277,7 @@
    {
     "at": "2026-10-25T15:05:30Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “Repair persisted REST normalization lineage in receipt helper”: changes required"
+    "text": "Codex (GPT-6 Sol) reviewed “Repair persisted WS rule and collateral lineage validation”: changes required"
    },
    {
     "at": "2026-10-25T15:02:01Z",
@@ -282,7 +287,7 @@
    {
     "at": "2026-10-25T14:59:16Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Repair persisted REST normalization lineage in receipt helper” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Repair persisted WS rule and collateral lineage validation” → sent to independent review"
    },
    {
     "at": "2026-10-25T14:59:01Z",
@@ -297,12 +302,12 @@
    {
     "at": "2026-10-25T14:22:41Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “Repair persisted REST normalization lineage in receipt helper”: changes required"
+    "text": "Codex (GPT-6 Sol) reviewed “Repair persisted WS rule and collateral lineage validation”: changes required"
    },
    {
     "at": "2026-10-25T14:17:39Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Repair persisted REST normalization lineage in receipt helper” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “Repair persisted WS rule and collateral lineage validation” → sent to independent review"
    },
    {
     "at": "2026-10-25T13:33:16Z",
@@ -342,7 +347,7 @@
    {
     "at": "2026-10-25T11:45:43Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Repair historical capture quarantine destination collision”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Serialize historical capture resume and preserve recovered evidence”: changes required"
    },
    {
     "at": "2026-10-25T11:45:02Z",
@@ -353,11 +358,6 @@
     "at": "2026-10-25T11:40:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: hermes router stale"
-   },
-   {
-    "at": "2026-10-25T11:29:12Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Repair historical capture quarantine destination collision” → sent to independent review"
    }
   ]
  },
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T15:46:19Z",
-   "heartbeat_at": "2026-10-25T15:50:02Z",
+   "status_at": "2026-10-25T15:51:46Z",
+   "heartbeat_at": "2026-10-25T15:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T15:49:46Z",
+    "updated_at": "2026-10-25T15:53:47Z",
     "detail": "observations retained"
    },
    {
