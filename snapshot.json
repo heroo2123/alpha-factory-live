@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T10:45:01Z",
+ "generated_at": "2026-10-25T10:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -135,8 +135,8 @@
     2,
     1,
     3,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     0,
@@ -212,7 +212,7 @@
     "active": 2,
     "alerts_24h": 14,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T10:45:02Z",
+    "last_check_at": "2026-10-25T10:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,10 +235,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 701,
-    "last_run_at": "2026-10-25T10:45:02Z",
+    "runs_total": 702,
+    "last_run_at": "2026-10-25T10:50:02Z",
     "last_ok": true,
-    "last_kind": "hermes router stale",
+    "last_kind": "flow code drift frozen copy",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T10:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow code drift frozen copy"
+   },
    {
     "at": "2026-10-25T10:45:02Z",
     "kind": "heal",
@@ -274,11 +279,6 @@
     "at": "2026-10-25T10:30:03Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
-   },
-   {
-    "at": "2026-10-25T10:25:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow unmergeable reviewed work"
    },
    {
     "at": "2026-10-25T10:10:03Z",
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T10:41:26Z",
-   "heartbeat_at": "2026-10-25T10:45:02Z",
+   "status_at": "2026-10-25T10:46:50Z",
+   "heartbeat_at": "2026-10-25T10:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -379,7 +379,7 @@
     "weather_events": 360,
     "markets": 3506,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T10:39:52Z",
+    "last_scan_at": "2026-10-25T10:45:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T10:39:52Z",
+    "updated_at": "2026-10-25T10:45:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T10:44:07Z",
+    "updated_at": "2026-10-25T10:48:08Z",
     "detail": "observations retained"
    },
    {
