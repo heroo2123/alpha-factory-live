@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T06:40:02Z",
+ "generated_at": "2026-10-25T06:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 23,
+    "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "27 ready to build"
+    "detail": "26 ready to build"
    },
    {
     "key": "build",
@@ -18,12 +18,12 @@
     "count": 2,
     "unit": "building",
     "active": true,
-    "detail": "61 built in 24h"
+    "detail": "62 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "33 merged in 24h"
+    "detail": "34 merged in 24h"
    },
    {
     "key": "qa",
@@ -66,41 +66,41 @@
     "slot": "Builder 1",
     "role": "build",
     "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_60b157ce",
-    "task": "Quarantine capture before fallible validation in brain historical backfill",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_606b7140",
+    "task": "CODE-01 Check exchange-book age before screening transforms",
     "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
     "role": "build",
     "state": "working",
-    "model": "Codex (GPT-6 Astra)",
+    "model": "Codex (GPT-6 Sol)",
     "family": "OpenAI",
-    "task_id": "t_e8f70e24",
-    "task": "Make fee response and archival deadline lifecycle signal-safe",
-    "elapsed_min": 11
+    "task_id": "t_c00c6981",
+    "task": "CODE-01 Validate depth before allowing paper reward quotes",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_c361ed54",
-    "task": "FLEX candidate t_1264c228 1daf99012fff",
-    "elapsed_min": 3
-   },
-   {
-    "slot": "Reviewer 2",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 2",
+    "role": "review",
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_60b157ce",
+    "task": "Quarantine capture before fallible validation in brain historical backfill",
+    "elapsed_min": 0
    }
   ],
   "qa": {
@@ -116,12 +116,12 @@
   },
   "tests_passing": 16824,
   "flow": {
-   "merges_24h": 33,
-   "commits_24h": 33,
-   "built_24h": 61,
+   "merges_24h": 34,
+   "commits_24h": 34,
+   "built_24h": 62,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 59,
-   "reviews_changes_24h": 28,
+   "reviews_passed_24h": 57,
+   "reviews_changes_24h": 29,
    "commits_by_hour": [
     2,
     1,
@@ -129,36 +129,35 @@
     1,
     0,
     1,
-    2,
-    2,
     3,
-    2,
-    0,
-    1,
+    3,
     1,
     2,
+    1,
+    1,
+    1,
     2,
+    1,
     3,
     3,
-    2,
-    2,
+    3,
+    1,
     0,
     0,
     0,
     2,
-    0
+    1
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 23,
+    "queued": 22,
     "building": 2,
-    "in_review": 2,
-    "awaiting_merge": 2,
-    "merged": 536,
-    "parked": 402
+    "in_review": 3,
+    "awaiting_merge": 1,
+    "merged": 537,
+    "parked": 403
    }
   },
   "architect": {
@@ -168,6 +167,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-25T06:42:53Z",
+    "title": "FIFO subprocess cold-start timeout",
+    "area": "Test repairs"
+   },
    {
     "at": "2026-10-25T04:55:23Z",
     "title": "CODE-01 Validate IEM provenance before reporting WRH corroboration",
@@ -202,11 +206,6 @@
     "at": "2026-10-24T19:44:15Z",
     "title": "Preserve periodic census generation across provider cooldown retries",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T18:43:23Z",
-    "title": "CODE-01 Quarantine conflicting duplicate book responses",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +214,7 @@
     "active": 1,
     "alerts_24h": 9,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T06:40:02Z",
+    "last_check_at": "2026-10-25T06:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +232,7 @@
      "flow maintenance review packet invalid",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-25T06:30:03Z",
+    "last_check_at": "2026-10-25T06:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +252,26 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T06:44:26Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “Preserve real risk history across public stream reconnects”: changes required"
+   },
+   {
+    "at": "2026-10-25T06:44:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Make fee response and archival deadline lifecycle signal-safe” → sent to independent review"
+   },
+   {
+    "at": "2026-10-25T06:42:53Z",
+    "kind": "merge",
+    "text": "Merged “FIFO subprocess cold-start timeout” into the main build"
+   },
+   {
+    "at": "2026-10-25T06:41:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Quarantine capture before fallible validation in brain historical…” → sent to independent review"
+   },
    {
     "at": "2026-10-25T06:40:02Z",
     "kind": "heal",
@@ -342,26 +361,6 @@
     "at": "2026-10-25T05:30:28Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-25T05:27:12Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-25T05:15:31Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “New main SHA 21b934258dda Alpha V11 FLEX code task t_164e4bca codex”: passed"
-   },
-   {
-    "at": "2026-10-25T05:14:11Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-25T05:12:55Z",
-    "kind": "warn",
-    "text": "DeepSeek V4 Pro reviewed “As-issued ECMWF IFS-ENS input adapter: per city-day 51 member highs…”: changes required"
    }
   ]
  },
@@ -371,9 +370,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
-   "state": "census service",
-   "status_at": "2026-10-25T06:39:35Z",
-   "heartbeat_at": "2026-10-25T06:40:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T06:40:04Z",
+   "heartbeat_at": "2026-10-25T06:45:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +381,7 @@
     "weather_events": 351,
     "markets": 3407,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T06:35:37Z",
+    "last_scan_at": "2026-10-25T06:41:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T06:35:37Z",
+    "updated_at": "2026-10-25T06:41:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T06:40:00Z",
+    "updated_at": "2026-10-25T06:44:02Z",
     "detail": "observations retained"
    },
    {
