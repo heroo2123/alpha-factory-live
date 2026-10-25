@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T10:35:02Z",
+ "generated_at": "2026-10-25T10:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -132,11 +132,11 @@
     0,
     1,
     1,
-    1,
+    2,
+    2,
     3,
     3,
     2,
-    3,
     2,
     0,
     0,
@@ -212,7 +212,7 @@
     "active": 2,
     "alerts_24h": 14,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T10:35:02Z",
+    "last_check_at": "2026-10-25T10:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -235,10 +235,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 699,
-    "last_run_at": "2026-10-25T10:35:02Z",
+    "runs_total": 700,
+    "last_run_at": "2026-10-25T10:40:02Z",
     "last_ok": true,
-    "last_kind": "full suite not green",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T10:40:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-25T10:35:02Z",
     "kind": "heal",
@@ -284,11 +289,6 @@
     "at": "2026-10-25T10:10:03Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: worker receipt untrusted review"
-   },
-   {
-    "at": "2026-10-25T10:10:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: routine"
    },
    {
     "at": "2026-10-25T10:07:23Z",
@@ -370,16 +370,16 @@
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
    "status_at": "2026-10-25T10:34:58Z",
-   "heartbeat_at": "2026-10-25T10:35:03Z",
+   "heartbeat_at": "2026-10-25T10:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 357,
-    "markets": 3473,
+    "weather_events": 360,
+    "markets": 3506,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T10:34:27Z",
+    "last_scan_at": "2026-10-25T10:39:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -395,21 +395,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-25T09:37:03Z",
+    "updated_at": "2026-10-25T10:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T10:34:27Z",
+    "updated_at": "2026-10-25T10:39:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T10:34:02Z",
+    "updated_at": "2026-10-25T10:38:04Z",
     "detail": "observations retained"
    },
    {
