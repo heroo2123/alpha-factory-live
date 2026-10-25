@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T05:20:02Z",
+ "generated_at": "2026-10-25T05:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 2,
+    "count": 1,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "34 merged in 24h"
+    "detail": "35 merged in 24h"
    },
    {
     "key": "qa",
@@ -49,7 +49,7 @@
     "name": "Release manager",
     "count": null,
     "unit": "",
-    "active": false,
+    "active": true,
     "detail": "current release 0fdbe42"
    },
    {
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_617a2d1a",
     "task": "Bind city METAR station source and forward harvest identity",
-    "elapsed_min": 5
+    "elapsed_min": 10
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_98048939",
     "task": "FLEX candidate t_c5e4e50f 684e9636c5fd",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
@@ -116,24 +116,24 @@
   },
   "tests_passing": 16824,
   "flow": {
-   "merges_24h": 34,
-   "commits_24h": 34,
+   "merges_24h": 35,
+   "commits_24h": 35,
    "built_24h": 61,
    "build_failed_24h": 9,
    "reviews_passed_24h": 59,
    "reviews_changes_24h": 30,
    "commits_by_hour": [
+    2,
     1,
     2,
-    2,
     0,
     2,
     0,
     0,
-    2,
     3,
     2,
     2,
+    2,
     1,
     1,
     1,
@@ -146,18 +146,17 @@
     0,
     0,
     0,
-    1
+    2
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 17,
     "building": 2,
     "in_review": 0,
-    "awaiting_merge": 2,
-    "merged": 535,
+    "awaiting_merge": 1,
+    "merged": 536,
     "parked": 405
    }
   },
@@ -215,25 +214,25 @@
     "active": 1,
     "alerts_24h": 8,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T05:20:02Z",
+    "last_check_at": "2026-10-25T05:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 7,
+    "active": 8,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
+     "P1": 1,
      "P2": 5
     },
     "codes": [
      "flow unmergeable reviewed work",
+     "flow qa red without repair",
      "flow glm plan lane dead",
      "flow code drift frozen copy",
      "flow maintenance review packet invalid",
-     "flow source card wrong status",
-     "flow queued scope needless pin fixture"
+     "flow source card wrong status"
     ],
-    "last_check_at": "2026-10-25T05:10:02Z",
+    "last_check_at": "2026-10-25T05:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -372,17 +371,17 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T05:19:09Z",
-   "heartbeat_at": "2026-10-25T05:20:03Z",
+   "status_at": "2026-10-25T05:24:35Z",
+   "heartbeat_at": "2026-10-25T05:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 364,
-    "markets": 3550,
+    "weather_events": 358,
+    "markets": 3484,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T05:15:56Z",
+    "last_scan_at": "2026-10-25T05:21:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T05:15:56Z",
+    "updated_at": "2026-10-25T05:21:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T05:19:31Z",
+    "updated_at": "2026-10-25T05:23:33Z",
     "detail": "observations retained"
    },
    {
