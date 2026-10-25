@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T08:20:02Z",
+ "generated_at": "2026-10-25T08:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 14,
     "unit": "queued",
     "active": false,
-    "detail": "14 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "32 merged in 24h"
+    "detail": "33 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_d77ab0b7",
     "task": "Repair independent reviewer findings 6404ead9fc9d",
-    "elapsed_min": 13
+    "elapsed_min": 18
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 16824,
   "flow": {
-   "merges_24h": 32,
-   "commits_24h": 32,
+   "merges_24h": 33,
+   "commits_24h": 33,
    "built_24h": 63,
    "build_failed_24h": 11,
    "reviews_passed_24h": 57,
@@ -127,8 +127,8 @@
     2,
     0,
     0,
-    2,
     3,
+    2,
     2,
     2,
     1,
@@ -143,22 +143,22 @@
     0,
     0,
     0,
-    1,
-    1,
     2,
-    0
+    0,
+    2,
+    1
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 14,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 7,
-    "merged": 538,
-    "parked": 421
+    "awaiting_merge": 5,
+    "merged": 539,
+    "parked": 422
    }
   },
   "architect": {
@@ -168,6 +168,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-25T08:22:19Z",
+    "title": "CODE-01 Validate depth before allowing paper reward quotes",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-25T06:52:36Z",
     "title": "CODE-01 Check exchange-book age before screening transforms",
@@ -202,11 +207,6 @@
     "at": "2026-10-24T20:44:11Z",
     "title": "CODE-01 Measure fill markouts when only the required horizon side exists",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T20:39:58Z",
-    "title": "Enforce health expiry after actual SQLite lock acquisition",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 10,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T08:20:02Z",
+    "last_check_at": "2026-10-25T08:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,10 +228,10 @@
     "codes": [
      "flow qa resource blocked",
      "flow glm plan lane dead",
-     "flow shadow observation unavailable",
+     "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T08:17:50Z",
+    "last_check_at": "2026-10-25T08:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,6 +251,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T08:22:19Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Validate depth before allowing paper reward quotes” into the main build"
+   },
    {
     "at": "2026-10-25T08:20:02Z",
     "kind": "heal",
@@ -355,11 +360,6 @@
     "at": "2026-10-25T07:35:02Z",
     "kind": "release",
     "text": "Release c1907d4 installed by the release manager"
-   },
-   {
-    "at": "2026-10-25T07:33:22Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “New main SHA 3aef8e1ed561 Alpha V11 FLEX code task t_ee607fea…”: passed"
    }
   ]
  },
@@ -370,17 +370,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T08:17:38Z",
-   "heartbeat_at": "2026-10-25T08:20:03Z",
+   "status_at": "2026-10-25T08:22:56Z",
+   "heartbeat_at": "2026-10-25T08:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 363,
-    "markets": 3539,
+    "weather_events": 357,
+    "markets": 3473,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T08:18:56Z",
+    "last_scan_at": "2026-10-25T08:24:41Z",
     "mode": "silent paper scan"
    }
   },
@@ -403,14 +403,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T08:18:56Z",
+    "updated_at": "2026-10-25T08:24:41Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T08:19:17Z",
+    "updated_at": "2026-10-25T08:23:18Z",
     "detail": "observations retained"
    },
    {
@@ -636,8 +636,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 102,
-     "open_tasks": 3
+     "merged_tasks": 103,
+     "open_tasks": 2
     },
     {
      "id": "CODE-02",
