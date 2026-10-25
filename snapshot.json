@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T14:50:02Z",
+ "generated_at": "2026-10-25T14:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_543818e1",
     "task": "Repair exact receipt transport and numeric validation",
-    "elapsed_min": 25
+    "elapsed_min": 30
    },
    {
     "slot": "Builder 2",
@@ -131,17 +131,17 @@
     2,
     1,
     3,
+    5,
+    2,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    0,
     4,
-    2,
     1,
-    0,
-    0,
-    0,
-    2,
-    1,
-    1,
-    3,
-    2,
     0,
     0,
     0,
@@ -212,7 +212,7 @@
     "active": 3,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-25T14:50:03Z",
+    "last_check_at": "2026-10-25T14:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -228,7 +228,7 @@
      "flow code drift frozen copy",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T14:40:03Z",
+    "last_check_at": "2026-10-25T14:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -248,6 +248,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T14:51:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-25T14:47:01Z",
     "kind": "heal",
@@ -282,11 +287,6 @@
     "at": "2026-10-25T13:50:03Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-25T13:46:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
    },
    {
     "at": "2026-10-25T13:33:16Z",
@@ -366,9 +366,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T14:48:04Z",
-   "heartbeat_at": "2026-10-25T14:50:03Z",
+   "state": "census service",
+   "status_at": "2026-10-25T14:55:01Z",
+   "heartbeat_at": "2026-10-25T14:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -377,7 +377,7 @@
     "weather_events": 372,
     "markets": 3655,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T14:45:50Z",
+    "last_scan_at": "2026-10-25T14:51:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,14 +400,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T14:45:50Z",
+    "updated_at": "2026-10-25T14:51:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T14:49:27Z",
+    "updated_at": "2026-10-25T14:53:28Z",
     "detail": "observations retained"
    },
    {
