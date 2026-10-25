@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T00:25:01Z",
+ "generated_at": "2026-10-25T00:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,22 +10,22 @@
     "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "24 ready to build"
+    "detail": "23 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "62 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -75,22 +75,22 @@
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_75670ba7",
-    "task": "FLEX candidate t_2f495c0d 4f944b1925c6",
-    "elapsed_min": 29
-   },
-   {
-    "slot": "Reviewer 1",
-    "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
     "task": "",
     "elapsed_min": null
+   },
+   {
+    "slot": "Reviewer 1",
+    "role": "review",
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_95338025",
+    "task": "FLEX candidate t_75670ba7 ae8e3eedbc20",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -154,8 +154,8 @@
    ],
    "stage_totals": {
     "queued": 21,
-    "building": 1,
-    "in_review": 0,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 2,
     "merged": 532,
     "parked": 401
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T00:25:01Z",
+    "last_check_at": "2026-10-25T00:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T00:26:15Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “FLEX candidate t_2f495c0d 4f944b1925c6” → sent to independent review"
+   },
    {
     "at": "2026-10-25T00:21:55Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-24T23:02:26Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_693200e0 b46679ae38a6”: passed"
-   },
-   {
-    "at": "2026-10-24T22:58:22Z",
-    "kind": "merge",
-    "text": "Merged “Ignore still-fresh old MODEL replay already covered by a completed…” into the main build"
    }
   ]
  },
@@ -371,18 +371,18 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T00:24:53Z",
-   "heartbeat_at": "2026-10-25T00:25:01Z",
+   "state": "census service",
+   "status_at": "2026-10-25T00:29:58Z",
+   "heartbeat_at": "2026-10-25T00:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 311,
-    "markets": 2986,
+    "weather_events": 309,
+    "markets": 2964,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T00:22:17Z",
+    "last_scan_at": "2026-10-25T00:28:09Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T00:22:17Z",
+    "updated_at": "2026-10-25T00:28:09Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T00:23:45Z",
+    "updated_at": "2026-10-25T00:29:47Z",
     "detail": "observations retained"
    },
    {
