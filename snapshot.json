@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T04:05:01Z",
+ "generated_at": "2026-10-25T04:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "23 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 2,
     "unit": "building",
     "active": true,
     "detail": "61 built in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 80,
+    "count": 81,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_00f9a51a",
+    "task": "CODE-01 Validate IEM provenance before reporting WRH corroboration",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -80,7 +80,7 @@
     "family": "DeepSeek",
     "task_id": "t_d28c1ed5",
     "task": "FLEX candidate t_1605c84d 5930bd53c9bb",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 1",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 80,
+   "progress_pct": 81,
    "last_finished_at": "2026-10-25T02:31:00Z",
    "last_passed": 16811,
    "last_failed": 0,
@@ -140,8 +140,8 @@
     1,
     1,
     2,
-    2,
     3,
+    2,
     4,
     2,
     0,
@@ -152,8 +152,8 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 20,
-    "building": 1,
+    "queued": 19,
+    "building": 2,
     "in_review": 0,
     "awaiting_merge": 1,
     "merged": 534,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T04:05:01Z",
+    "last_check_at": "2026-10-25T04:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,8 +237,8 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 655,
-    "last_run_at": "2026-10-24T23:55:02Z",
+    "runs_total": 656,
+    "last_run_at": "2026-10-25T04:10:02Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
     "running": false,
@@ -252,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T04:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-25T03:54:02Z",
     "kind": "heal",
@@ -356,11 +361,6 @@
     "at": "2026-10-24T23:32:20Z",
     "kind": "build",
     "text": "DeepSeek V4 Pro built “CODE-01 Make cost aggregation and EV arithmetic context-independent” → sent to independent review"
-   },
-   {
-    "at": "2026-10-24T23:29:27Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_e2e6cd65 0ce67d38a7c0”: passed"
    }
   ]
  },
@@ -370,9 +370,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T04:00:28Z",
-   "heartbeat_at": "2026-10-25T04:05:03Z",
+   "state": "census service",
+   "status_at": "2026-10-25T04:10:00Z",
+   "heartbeat_at": "2026-10-25T04:10:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -381,7 +381,7 @@
     "weather_events": 304,
     "markets": 2895,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T03:59:54Z",
+    "last_scan_at": "2026-10-25T04:05:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T03:59:54Z",
+    "updated_at": "2026-10-25T04:05:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T04:04:59Z",
+    "updated_at": "2026-10-25T04:09:01Z",
     "detail": "observations retained"
    },
    {
