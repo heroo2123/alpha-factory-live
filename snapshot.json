@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T00:40:02Z",
+ "generated_at": "2026-10-25T00:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 2,
     "unit": "awaiting merge",
     "active": true,
     "detail": "46 merged in 24h"
@@ -126,7 +126,7 @@
     5,
     4,
     3,
-    2,
+    1,
     1,
     2,
     2,
@@ -135,18 +135,18 @@
     1,
     0,
     1,
-    2,
-    2,
     3,
-    2,
-    0,
-    1,
+    3,
     1,
     2,
+    1,
+    1,
+    1,
     2,
+    1,
     3,
     3,
-    2
+    3
    ],
    "merge_holds": [
     "protected code: second review asked for changes",
@@ -156,8 +156,8 @@
     "queued": 21,
     "building": 0,
     "in_review": 0,
-    "awaiting_merge": 3,
-    "merged": 532,
+    "awaiting_merge": 2,
+    "merged": 533,
     "parked": 401
    }
   },
@@ -168,6 +168,11 @@
    "model": "Codex (GPT-6 Astra)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-25T00:43:18Z",
+    "title": "CODE-01 Revalidate ASOS series chronology before deriving features",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-24T22:58:22Z",
     "title": "Ignore still-fresh old MODEL replay already covered by a completed census",
@@ -202,11 +207,6 @@
     "at": "2026-10-24T17:43:22Z",
     "title": "CODE-01 Gate paper quotes on book freshness",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-24T16:34:23Z",
-    "title": "PAPER-02 Empty METAR receipt replay after completed census must not restart GEFS…",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T00:40:03Z",
+    "last_check_at": "2026-10-25T00:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
      "flow brain capture missed",
      "flow code drift frozen copy"
     ],
-    "last_check_at": "2026-10-25T00:30:03Z",
+    "last_check_at": "2026-10-25T00:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T00:43:18Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Revalidate ASOS series chronology before deriving features” into the main build"
+   },
    {
     "at": "2026-10-25T00:30:56Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-10-24T23:06:16Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-24T23:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow code drift frozen copy"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T00:36:06Z",
-   "heartbeat_at": "2026-10-25T00:40:03Z",
+   "status_at": "2026-10-25T00:41:36Z",
+   "heartbeat_at": "2026-10-25T00:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,15 +382,15 @@
     "weather_events": 309,
     "markets": 2964,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T00:35:00Z",
+    "last_scan_at": "2026-10-25T00:40:52Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 4235,
+   "total": 4301,
    "research_accept": 0,
    "reject": 0,
-   "gated": 4235,
+   "gated": 4301,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T00:35:00Z",
+    "updated_at": "2026-10-25T00:40:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T00:39:50Z",
+    "updated_at": "2026-10-25T00:43:51Z",
     "detail": "observations retained"
    },
    {
@@ -638,8 +638,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 99,
-     "open_tasks": 3
+     "merged_tasks": 100,
+     "open_tasks": 2
     },
     {
      "id": "CODE-02",
