@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T20:50:02Z",
+ "generated_at": "2026-10-25T20:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 69,
+    "count": 76,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 69,
+   "progress_pct": 76,
    "last_finished_at": "2026-10-25T04:25:27Z",
    "last_passed": 16824,
    "last_failed": 1,
@@ -125,17 +125,17 @@
    "commits_by_hour": [
     1,
     3,
+    5,
+    2,
+    0,
+    0,
+    0,
+    1,
+    1,
+    2,
+    0,
     4,
-    2,
     1,
-    0,
-    0,
-    0,
-    2,
-    1,
-    1,
-    3,
-    2,
     0,
     0,
     0,
@@ -215,24 +215,25 @@
     "active": 4,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-25T20:50:02Z",
+    "last_check_at": "2026-10-25T20:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 5,
+    "active": 6,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 4
+     "P2": 5
     },
     "codes": [
+     "flow go2 lane not polled",
      "flow glm plan lane dead",
      "flow second review inconclusive",
      "flow code drift frozen copy",
      "flow review repair scope missing",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-25T20:40:03Z",
+    "last_check_at": "2026-10-25T20:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -370,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T20:48:42Z",
-   "heartbeat_at": "2026-10-25T20:50:01Z",
+   "state": "census service",
+   "status_at": "2026-10-25T20:55:00Z",
+   "heartbeat_at": "2026-10-25T20:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -381,7 +382,7 @@
     "weather_events": 339,
     "markets": 3297,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T20:48:16Z",
+    "last_scan_at": "2026-10-25T20:54:00Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T20:48:16Z",
+    "updated_at": "2026-10-25T20:54:00Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T20:49:28Z",
+    "updated_at": "2026-10-25T20:53:29Z",
     "detail": "observations retained"
    },
    {
