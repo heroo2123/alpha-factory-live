@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T19:15:01Z",
+ "generated_at": "2026-10-25T19:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "65 built in 24h"
+    "detail": "66 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 4,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 24,
    "commits_24h": 24,
-   "built_24h": 65,
+   "built_24h": 66,
    "build_failed_24h": 13,
    "reviews_passed_24h": 52,
    "reviews_changes_24h": 26,
@@ -126,8 +126,8 @@
     1,
     3,
     3,
-    1,
-    4,
+    2,
+    3,
     2,
     0,
     0,
@@ -151,8 +151,8 @@
    "merge_holds": [],
    "stage_totals": {
     "queued": 28,
-    "building": 1,
-    "in_review": 3,
+    "building": 0,
+    "in_review": 4,
     "awaiting_merge": 0,
     "merged": 544,
     "parked": 433
@@ -209,10 +209,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T19:15:01Z",
+    "last_check_at": "2026-10-25T19:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T19:18:33Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “E1A inert experimental policy and estimate schemas” → sent to independent review"
+   },
    {
     "at": "2026-10-25T19:11:03Z",
     "kind": "build",
@@ -354,11 +359,6 @@
     "at": "2026-10-25T16:24:36Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
-   },
-   {
-    "at": "2026-10-25T16:20:13Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -368,9 +368,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
-   "state": "census service",
-   "status_at": "2026-10-25T19:14:35Z",
-   "heartbeat_at": "2026-10-25T19:15:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T19:15:08Z",
+   "heartbeat_at": "2026-10-25T19:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -379,7 +379,7 @@
     "weather_events": 342,
     "markets": 3325,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T19:12:58Z",
+    "last_scan_at": "2026-10-25T19:18:25Z",
     "mode": "silent paper scan"
    }
   },
@@ -402,14 +402,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T19:12:58Z",
+    "updated_at": "2026-10-25T19:18:25Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T19:14:55Z",
+    "updated_at": "2026-10-25T19:18:56Z",
     "detail": "observations retained"
    },
    {
@@ -507,7 +507,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-25T18:17:02Z",
+   "updated_at": "2026-10-25T19:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
