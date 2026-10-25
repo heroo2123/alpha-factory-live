@@ -1,31 +1,31 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T07:35:02Z",
+ "generated_at": "2026-10-25T07:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 10,
+    "count": 9,
     "unit": "queued",
     "active": false,
-    "detail": "9 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "62 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_c00c6981",
+    "task": "CODE-01 Validate depth before allowing paper reward quotes",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_97e585a5",
-    "task": "FLEX candidate t_af4aead8 2607331eba07",
-    "elapsed_min": 4
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,26 +120,26 @@
    "commits_24h": 33,
    "built_24h": 62,
    "build_failed_24h": 11,
-   "reviews_passed_24h": 58,
-   "reviews_changes_24h": 28,
+   "reviews_passed_24h": 59,
+   "reviews_changes_24h": 27,
    "commits_by_hour": [
     1,
-    0,
-    2,
-    0,
     1,
-    2,
-    2,
-    3,
-    2,
+    1,
     0,
     1,
+    2,
+    2,
+    3,
+    2,
+    0,
     1,
     1,
+    2,
+    2,
     3,
     3,
     2,
-    3,
     2,
     0,
     0,
@@ -153,12 +153,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 10,
-    "building": 0,
-    "in_review": 2,
+    "queued": 9,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 7,
     "merged": 538,
-    "parked": 415
+    "parked": 417
    }
   },
   "architect": {
@@ -212,10 +212,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 1,
     "alerts_24h": 10,
-    "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T07:35:02Z",
+    "recoveries_24h": 8,
+    "last_check_at": "2026-10-25T07:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,7 +237,7 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 676,
+    "runs_total": 677,
     "last_run_at": "2026-10-25T07:20:03Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
@@ -252,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T07:39:26Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_af4aead8 2607331eba07”: passed"
+   },
+   {
+    "at": "2026-10-25T07:38:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: agent4 qa pipeline subsystem failed"
+   },
    {
     "at": "2026-10-25T07:35:02Z",
     "kind": "release",
@@ -351,16 +361,6 @@
     "at": "2026-10-25T06:52:30Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “Quarantine capture before fallible validation in brain historical…”: passed"
-   },
-   {
-    "at": "2026-10-25T06:52:21Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “FLEX candidate t_5ecc1daf 7822bfbb1b68” → sent to independent review"
-   },
-   {
-    "at": "2026-10-25T06:51:33Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “CODE-01 Validate depth before allowing paper reward quotes”: passed"
    }
   ]
  },
@@ -378,10 +378,10 @@
    "days_with_market_data": 7,
    "days_with_paper_decisions": 1,
    "scanner": {
-    "weather_events": 349,
-    "markets": 3385,
+    "weather_events": 356,
+    "markets": 3462,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T07:32:58Z",
+    "last_scan_at": "2026-10-25T07:38:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -397,21 +397,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-25T06:37:03Z",
+    "updated_at": "2026-10-25T07:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T07:32:58Z",
+    "updated_at": "2026-10-25T07:38:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T07:34:24Z",
+    "updated_at": "2026-10-25T07:39:03Z",
     "detail": "observations retained"
    },
    {
