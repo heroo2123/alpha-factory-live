@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T07:45:01Z",
+ "generated_at": "2026-10-25T07:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 9,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "9 ready to build"
    },
    {
     "key": "build",
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 8,
     "unit": "awaiting merge",
     "active": true,
     "detail": "33 merged in 24h"
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_c00c6981",
-    "task": "CODE-01 Validate depth before allowing paper reward quotes",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -138,8 +138,8 @@
     2,
     1,
     3,
-    3,
-    3,
+    4,
+    2,
     1,
     0,
     0,
@@ -155,8 +155,8 @@
    "stage_totals": {
     "queued": 9,
     "building": 0,
-    "in_review": 2,
-    "awaiting_merge": 7,
+    "in_review": 1,
+    "awaiting_merge": 8,
     "merged": 538,
     "parked": 417
    }
@@ -212,10 +212,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 10,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-25T07:45:01Z",
+    "last_check_at": "2026-10-25T07:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -238,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 677,
-    "last_run_at": "2026-10-25T07:20:03Z",
+    "runs_total": 678,
+    "last_run_at": "2026-10-25T07:50:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow qa resource blocked",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -253,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T07:50:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow qa resource blocked"
+   },
+   {
+    "at": "2026-10-25T07:45:57Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “CODE-01 Validate depth before allowing paper reward quotes”: passed"
+   },
    {
     "at": "2026-10-25T07:42:15Z",
     "kind": "build",
@@ -352,16 +362,6 @@
     "at": "2026-10-25T06:57:59Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “New main SHA f833dc3dc7ca Alpha V11 FLEX code task t_fed5eb15 claude”: passed"
-   },
-   {
-    "at": "2026-10-25T06:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow qa resource blocked"
-   },
-   {
-    "at": "2026-10-25T06:54:59Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Preserve receipt-time stream reconnect history”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "census service",
-   "status_at": "2026-10-25T07:45:02Z",
-   "heartbeat_at": "2026-10-25T07:45:02Z",
+   "status_at": "2026-10-25T07:50:03Z",
+   "heartbeat_at": "2026-10-25T07:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 356,
     "markets": 3462,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T07:44:12Z",
+    "last_scan_at": "2026-10-25T07:49:50Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T07:44:12Z",
+    "updated_at": "2026-10-25T07:49:50Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T07:43:04Z",
+    "updated_at": "2026-10-25T07:49:07Z",
     "detail": "observations retained"
    },
    {
