@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T02:35:01Z",
+ "generated_at": "2026-10-25T02:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "count": 0,
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -104,17 +104,17 @@
    }
   ],
   "qa": {
-   "running": false,
-   "progress_pct": null,
-   "last_finished_at": "2026-10-24T22:56:45Z",
-   "last_passed": 16714,
+   "running": true,
+   "progress_pct": 0,
+   "last_finished_at": "2026-10-25T02:31:00Z",
+   "last_passed": 16811,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-24T22:56:45Z",
-   "last_minutes": 131
+   "last_green_at": "2026-10-25T02:31:00Z",
+   "last_minutes": 100
   },
-  "tests_passing": 16714,
+  "tests_passing": 16811,
   "flow": {
    "merges_24h": 39,
    "commits_24h": 39,
@@ -129,22 +129,22 @@
     2,
     2,
     1,
-    0,
-    2,
-    0,
     1,
-    2,
-    2,
-    3,
-    2,
+    1,
     0,
     1,
+    2,
+    2,
+    3,
+    2,
+    0,
     1,
     1,
+    2,
+    2,
     3,
     3,
     2,
-    3,
     2,
     0
    ],
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 6,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-25T02:35:01Z",
+    "last_check_at": "2026-10-25T02:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -252,6 +252,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T02:31:00Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 16811 passed, 0 failed"
+   },
    {
     "at": "2026-10-25T01:03:50Z",
     "kind": "review",
@@ -356,11 +361,6 @@
     "at": "2026-10-24T23:25:02Z",
     "kind": "heal",
     "text": "Operator AI (DeepSeek V4 Pro) audit run: flow brain harvest incomplete"
-   },
-   {
-    "at": "2026-10-24T23:22:18Z",
-    "kind": "build",
-    "text": "DeepSeek V4 Pro built “CODE-01 Reject nowcasts that omit a newer available official…” → sent to independent review"
    }
   ]
  },
@@ -371,8 +371,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T02:30:46Z",
-   "heartbeat_at": "2026-10-25T02:35:02Z",
+   "status_at": "2026-10-25T02:36:24Z",
+   "heartbeat_at": "2026-10-25T02:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -381,15 +381,15 @@
     "weather_events": 309,
     "markets": 2964,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T02:31:07Z",
+    "last_scan_at": "2026-10-25T02:36:48Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 5093,
+   "total": 5159,
    "research_accept": 0,
    "reject": 0,
-   "gated": 5093,
+   "gated": 5159,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -397,21 +397,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-25T01:37:03Z",
+    "updated_at": "2026-10-25T02:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T02:31:07Z",
+    "updated_at": "2026-10-25T02:36:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T02:34:29Z",
+    "updated_at": "2026-10-25T02:38:30Z",
     "detail": "observations retained"
    },
    {
