@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T05:05:02Z",
+ "generated_at": "2026-10-25T05:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 18,
     "unit": "queued",
     "active": false,
     "detail": "21 ready to build"
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "DeepSeek",
     "task_id": "t_19632085",
     "task": "New main SHA 21b934258dda Alpha V11 FLEX code task t_164e4bca codex",
-    "elapsed_min": 26
+    "elapsed_min": 31
    },
    {
     "slot": "Builder 2",
@@ -78,19 +78,19 @@
     "state": "working",
     "model": "DeepSeek V4 Pro",
     "family": "DeepSeek",
-    "task_id": "t_135490a8",
-    "task": "As-issued ECMWF IFS-ENS input adapter: per city-day 51 member highs from the collected…",
-    "elapsed_min": 11
+    "task_id": "t_e53282e5",
+    "task": "FLEX candidate t_ab6de61c 518ae5eeb144",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4 Pro",
+    "family": "DeepSeek",
+    "task_id": "t_135490a8",
+    "task": "As-issued ECMWF IFS-ENS input adapter: per city-day 51 member highs from the collected…",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -139,8 +139,8 @@
     1,
     1,
     2,
-    2,
     3,
+    2,
     4,
     2,
     0,
@@ -152,7 +152,7 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 19,
+    "queued": 18,
     "building": 2,
     "in_review": 1,
     "awaiting_merge": 1,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 8,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T05:05:02Z",
+    "last_check_at": "2026-10-25T05:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 662,
-    "last_run_at": "2026-10-25T05:00:02Z",
+    "runs_total": 663,
+    "last_run_at": "2026-10-25T05:10:02Z",
     "last_ok": true,
-    "last_kind": "flow maintenance review packet invalid",
+    "last_kind": "flow code drift frozen copy",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +252,21 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T05:10:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow code drift frozen copy"
+   },
+   {
+    "at": "2026-10-25T05:08:15Z",
+    "kind": "build",
+    "text": "DeepSeek V4 Pro built “As-issued ECMWF IFS-ENS input adapter: per city-day 51 member highs…” → sent to independent review"
+   },
+   {
+    "at": "2026-10-25T05:05:18Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-25T05:00:29Z",
     "kind": "warn",
@@ -303,11 +318,6 @@
     "text": "Guardian raised an alert: full suite not green"
    },
    {
-    "at": "2026-10-25T04:30:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow source card wrong status"
-   },
-   {
     "at": "2026-10-25T04:25:27Z",
     "kind": "warn",
     "text": "Full test suite finished: 16824 passed, 1 failed"
@@ -351,16 +361,6 @@
     "at": "2026-10-25T00:47:13Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-25T00:43:18Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Revalidate ASOS series chronology before deriving features” into the main build"
-   },
-   {
-    "at": "2026-10-25T00:30:56Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FLEX candidate t_75670ba7 ae8e3eedbc20”: passed"
    }
   ]
  },
@@ -371,8 +371,8 @@
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T05:02:37Z",
-   "heartbeat_at": "2026-10-25T05:05:01Z",
+   "status_at": "2026-10-25T05:08:07Z",
+   "heartbeat_at": "2026-10-25T05:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -411,7 +411,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T05:03:26Z",
+    "updated_at": "2026-10-25T05:09:28Z",
     "detail": "observations retained"
    },
    {
