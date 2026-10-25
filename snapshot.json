@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T10:40:02Z",
+ "generated_at": "2026-10-25T10:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -125,27 +125,27 @@
    "commits_by_hour": [
     0,
     1,
-    2,
-    2,
     3,
-    2,
-    0,
-    1,
+    3,
     1,
     2,
+    1,
+    1,
+    1,
     2,
+    1,
     3,
     3,
-    2,
-    2,
-    0,
-    0,
-    0,
-    2,
-    0,
-    2,
-    2,
     3,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    1,
+    3,
+    2,
     0
    ],
    "merge_holds": [],
@@ -212,7 +212,7 @@
     "active": 2,
     "alerts_24h": 14,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-25T10:40:02Z",
+    "last_check_at": "2026-10-25T10:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -230,15 +230,15 @@
      "flow scope split stuck",
      "flow review oversized"
     ],
-    "last_check_at": "2026-10-25T10:30:03Z",
+    "last_check_at": "2026-10-25T10:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 700,
-    "last_run_at": "2026-10-25T10:40:02Z",
+    "runs_total": 701,
+    "last_run_at": "2026-10-25T10:45:02Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "hermes router stale",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -250,6 +250,11 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T10:45:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: hermes router stale"
+   },
    {
     "at": "2026-10-25T10:40:02Z",
     "kind": "heal",
@@ -274,11 +279,6 @@
     "at": "2026-10-25T10:25:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow unmergeable reviewed work"
-   },
-   {
-    "at": "2026-10-25T10:15:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow qa resource blocked"
    },
    {
     "at": "2026-10-25T10:10:03Z",
@@ -369,8 +369,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T10:34:58Z",
-   "heartbeat_at": "2026-10-25T10:40:01Z",
+   "status_at": "2026-10-25T10:41:26Z",
+   "heartbeat_at": "2026-10-25T10:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -409,7 +409,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T10:38:04Z",
+    "updated_at": "2026-10-25T10:44:07Z",
     "detail": "observations retained"
    },
    {
