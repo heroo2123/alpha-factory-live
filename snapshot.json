@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T15:15:02Z",
+ "generated_at": "2026-10-25T15:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_543818e1",
     "task": "Repair persisted REST normalization lineage in receipt helper",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -130,8 +130,8 @@
     1,
     3,
     3,
-    1,
-    4,
+    2,
+    3,
     2,
     0,
     0,
@@ -212,7 +212,7 @@
     "active": 3,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-25T15:15:02Z",
+    "last_check_at": "2026-10-25T15:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -368,8 +368,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T15:13:27Z",
-   "heartbeat_at": "2026-10-25T15:15:01Z",
+   "status_at": "2026-10-25T15:18:56Z",
+   "heartbeat_at": "2026-10-25T15:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -408,7 +408,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T15:13:35Z",
+    "updated_at": "2026-10-25T15:19:37Z",
     "detail": "observations retained"
    },
    {
@@ -506,7 +506,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-25T14:17:03Z",
+   "updated_at": "2026-10-25T15:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
