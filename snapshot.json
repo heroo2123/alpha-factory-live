@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T01:35:02Z",
+ "generated_at": "2026-10-25T01:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 46,
+    "count": 49,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 46,
+   "progress_pct": 49,
    "last_finished_at": "2026-10-24T22:56:45Z",
    "last_passed": 16714,
    "last_failed": 0,
@@ -130,22 +130,22 @@
     2,
     2,
     1,
-    0,
-    2,
-    0,
     1,
-    2,
-    2,
-    3,
-    2,
+    1,
     0,
     1,
+    2,
+    2,
+    3,
+    2,
+    0,
     1,
     1,
+    2,
+    2,
     3,
     3,
     2,
-    3,
     2
    ],
    "merge_holds": [
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 7,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T01:35:02Z",
+    "last_check_at": "2026-10-25T01:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -370,9 +370,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-25",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T01:34:33Z",
-   "heartbeat_at": "2026-10-25T01:35:02Z",
+   "state": "census service",
+   "status_at": "2026-10-25T01:39:38Z",
+   "heartbeat_at": "2026-10-25T01:40:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -386,10 +386,10 @@
    }
   },
   "decisions": {
-   "total": 4433,
+   "total": 4499,
    "research_accept": 0,
    "reject": 0,
-   "gated": 4433,
+   "gated": 4499,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -397,7 +397,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-25T00:37:02Z",
+    "updated_at": "2026-10-25T01:37:03Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -411,7 +411,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T01:34:10Z",
+    "updated_at": "2026-10-25T01:38:11Z",
     "detail": "observations retained"
    },
    {
