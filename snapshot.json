@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T06:55:02Z",
+ "generated_at": "2026-10-25T07:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 2,
     "unit": "in review",
     "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "35 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_c72f1bdc",
     "task": "FLEX candidate t_b7b1407d 1ec116794b56",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -80,17 +80,17 @@
     "family": "OpenAI",
     "task_id": "t_c361ed54",
     "task": "FLEX candidate t_1264c228 1daf99012fff",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_56514e9a",
-    "task": "New main SHA f833dc3dc7ca Alpha V11 FLEX code task t_fed5eb15 claude",
-    "elapsed_min": 3
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -100,7 +100,7 @@
     "family": "DeepSeek",
     "task_id": "t_af4aead8",
     "task": "FLEX candidate t_a7699914 a56c92da16ae",
-    "elapsed_min": 0
+    "elapsed_min": 5
    }
   ],
   "qa": {
@@ -137,9 +137,9 @@
     1,
     1,
     2,
-    1,
+    2,
     3,
-    5,
+    4,
     2,
     0,
     0,
@@ -149,13 +149,14 @@
     2
    ],
    "merge_holds": [
-    "protected code: waiting for a second review"
+    "protected code: waiting for a second review",
+    "protected author provider model mismatch"
    ],
    "stage_totals": {
     "queued": 21,
     "building": 2,
-    "in_review": 3,
-    "awaiting_merge": 3,
+    "in_review": 2,
+    "awaiting_merge": 4,
     "merged": 538,
     "parked": 404
    }
@@ -214,7 +215,7 @@
     "active": 1,
     "alerts_24h": 9,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T06:55:02Z",
+    "last_check_at": "2026-10-25T07:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +238,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 673,
-    "last_run_at": "2026-10-25T06:55:02Z",
+    "runs_total": 674,
+    "last_run_at": "2026-10-25T07:00:03Z",
     "last_ok": true,
-    "last_kind": "flow qa resource blocked",
+    "last_kind": "independent review changes required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +253,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T07:00:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: independent review changes required"
+   },
+   {
+    "at": "2026-10-25T06:57:59Z",
+    "kind": "review",
+    "text": "DeepSeek V4 Pro reviewed “New main SHA f833dc3dc7ca Alpha V11 FLEX code task t_fed5eb15 claude”: passed"
+   },
    {
     "at": "2026-10-25T06:55:02Z",
     "kind": "heal",
@@ -351,16 +362,6 @@
     "at": "2026-10-25T06:31:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: full suite not green"
-   },
-   {
-    "at": "2026-10-25T06:30:36Z",
-    "kind": "review",
-    "text": "DeepSeek V4 Pro reviewed “FIFO subprocess cold-start timeout”: passed"
-   },
-   {
-    "at": "2026-10-25T06:30:19Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Astra)) planned 6 new tasks"
    }
   ]
  },
@@ -370,9 +371,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
-   "state": "census service",
-   "status_at": "2026-10-25T06:55:01Z",
-   "heartbeat_at": "2026-10-25T06:55:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-25T06:57:45Z",
+   "heartbeat_at": "2026-10-25T07:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -381,7 +382,7 @@
     "weather_events": 351,
     "markets": 3407,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T06:52:37Z",
+    "last_scan_at": "2026-10-25T06:58:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T06:52:37Z",
+    "updated_at": "2026-10-25T06:58:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T06:54:07Z",
+    "updated_at": "2026-10-25T06:58:09Z",
     "detail": "observations retained"
    },
    {
