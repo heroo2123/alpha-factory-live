@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-25T05:25:02Z",
+ "generated_at": "2026-10-25T05:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 18,
     "unit": "queued",
     "active": false,
     "detail": "20 ready to build"
@@ -15,7 +15,7 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
     "active": true,
     "detail": "61 built in 24h"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -70,22 +70,22 @@
     "family": "DeepSeek",
     "task_id": "t_617a2d1a",
     "task": "Bind city METAR station source and forward harvest identity",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4 Pro",
-    "family": "DeepSeek",
-    "task_id": "t_98048939",
-    "task": "FLEX candidate t_c5e4e50f 684e9636c5fd",
-    "elapsed_min": 6
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -119,8 +119,8 @@
    "merges_24h": 35,
    "commits_24h": 35,
    "built_24h": 61,
-   "build_failed_24h": 9,
-   "reviews_passed_24h": 59,
+   "build_failed_24h": 10,
+   "reviews_passed_24h": 58,
    "reviews_changes_24h": 30,
    "commits_by_hour": [
     2,
@@ -152,9 +152,9 @@
     "protected code: second review asked for changes"
    ],
    "stage_totals": {
-    "queued": 17,
-    "building": 2,
-    "in_review": 0,
+    "queued": 18,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 1,
     "merged": 536,
     "parked": 405
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 8,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-25T05:25:02Z",
+    "last_check_at": "2026-10-25T05:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,10 +237,10 @@
    },
    "operator": {
     "runs_24h": 60,
-    "runs_total": 664,
-    "last_run_at": "2026-10-25T05:20:02Z",
+    "runs_total": 665,
+    "last_run_at": "2026-10-25T05:30:02Z",
     "last_ok": true,
-    "last_kind": "flow source card wrong status",
+    "last_kind": "flow unmergeable reviewed work",
     "running": false,
     "model": "DeepSeek V4 Pro",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -252,6 +252,16 @@
    "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-25T05:30:02Z",
+    "kind": "heal",
+    "text": "Operator AI (DeepSeek V4 Pro) audit run: flow unmergeable reviewed work"
+   },
+   {
+    "at": "2026-10-25T05:27:12Z",
+    "kind": "warn",
+    "text": "DeepSeek V4 Pro build attempt ended: no code change"
+   },
    {
     "at": "2026-10-25T05:20:02Z",
     "kind": "heal",
@@ -318,11 +328,6 @@
     "text": "DeepSeek V4 Pro built “Bind city METAR station source and forward harvest identity” → sent to independent review"
    },
    {
-    "at": "2026-10-25T04:50:02Z",
-    "kind": "heal",
-    "text": "Operator AI (DeepSeek V4 Pro) audit run: full suite not green"
-   },
-   {
     "at": "2026-10-25T04:42:26Z",
     "kind": "review",
     "text": "DeepSeek V4 Pro reviewed “CODE-01 Validate IEM provenance before reporting WRH corroboration”: passed"
@@ -356,11 +361,6 @@
     "at": "2026-10-25T03:54:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-25T03:51:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    }
   ]
  },
@@ -370,9 +370,9 @@
    "release": "0fdbe42",
    "commissioned_at": "2026-10-24T11:52:53Z",
    "day": "2026-10-26",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-25T05:24:35Z",
-   "heartbeat_at": "2026-10-25T05:25:01Z",
+   "state": "census service",
+   "status_at": "2026-10-25T05:29:39Z",
+   "heartbeat_at": "2026-10-25T05:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -381,7 +381,7 @@
     "weather_events": 358,
     "markets": 3484,
     "opportunities": 0,
-    "last_scan_at": "2026-10-25T05:21:38Z",
+    "last_scan_at": "2026-10-25T05:27:12Z",
     "mode": "silent paper scan"
    }
   },
@@ -404,14 +404,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-25T05:21:38Z",
+    "updated_at": "2026-10-25T05:27:12Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-25T05:23:33Z",
+    "updated_at": "2026-10-25T05:29:35Z",
     "detail": "observations retained"
    },
    {
