@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T18:05:01Z",
+ "generated_at": "2026-10-26T18:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "26 built in 24h"
+    "detail": "25 built in 24h"
    },
    {
     "key": "review",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 26,
+   "built_24h": 25,
    "build_failed_24h": 1,
    "reviews_passed_24h": 14,
    "reviews_changes_24h": 18,
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T18:04:02Z",
+    "state": "healthy",
+    "active": 0,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-26T18:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-26T18:08:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
+   },
+   {
+    "at": "2026-10-26T18:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job failed flexible provider router"
+   },
+   {
     "at": "2026-10-26T18:03:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: no verified code delivery 2h"
@@ -291,19 +301,9 @@
     "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
-    "at": "2026-10-26T17:54:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled review"
-   },
-   {
     "at": "2026-10-26T17:52:29Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “CODE-01 Scope remaining-path invalidation to the exact official source”: passed"
-   },
-   {
-    "at": "2026-10-26T17:48:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled review"
    },
    {
     "at": "2026-10-26T16:30:47Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-26T18:02:57Z",
-   "heartbeat_at": "2026-10-26T18:05:02Z",
+   "status_at": "2026-10-26T18:08:34Z",
+   "heartbeat_at": "2026-10-26T18:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -384,7 +384,7 @@
     "weather_events": 339,
     "markets": 3299,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T18:02:52Z",
+    "last_scan_at": "2026-10-26T18:08:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T18:02:52Z",
+    "updated_at": "2026-10-26T18:08:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T18:04:42Z",
+    "updated_at": "2026-10-26T18:08:43Z",
     "detail": "observations retained"
    },
    {
