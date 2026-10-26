@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T11:00:02Z",
+ "generated_at": "2026-10-26T11:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "29 built in 24h"
+    "active": false,
+    "detail": "30 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_2c916309",
-    "task": "Version PWS scoring after healthy-book semantics change",
-    "elapsed_min": 26
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 29,
+   "built_24h": 30,
    "build_failed_24h": 2,
    "reviews_passed_24h": 11,
    "reviews_changes_24h": 21,
@@ -154,8 +154,8 @@
    ],
    "stage_totals": {
     "queued": 36,
-    "building": 1,
-    "in_review": 2,
+    "building": 0,
+    "in_review": 3,
     "awaiting_merge": 3,
     "merged": 545,
     "parked": 444
@@ -215,11 +215,11 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-26T11:00:02Z",
+    "last_check_at": "2026-10-26T11:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 8,
     "by_severity": {
      "P0": 0,
      "P1": 0,
@@ -233,7 +233,7 @@
      "flow review oversized",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-26T10:50:03Z",
+    "last_check_at": "2026-10-26T11:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-26T11:01:57Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Version PWS scoring after healthy-book semantics change” → sent to independent review"
+   },
    {
     "at": "2026-10-26T10:42:11Z",
     "kind": "warn",
@@ -359,11 +364,6 @@
     "at": "2026-10-26T03:53:32Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Bounded public fee lifecycle and immutable refusal archival” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T02:44:51Z",
-    "kind": "merge",
-    "text": "Merged “Integrate bounded V11_PAPER health frontier” into the main build"
    }
   ]
  },
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "census service",
-   "status_at": "2026-10-26T10:59:59Z",
-   "heartbeat_at": "2026-10-26T11:00:03Z",
+   "status_at": "2026-10-26T11:04:57Z",
+   "heartbeat_at": "2026-10-26T11:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 2,
    "scanner": {
-    "weather_events": 354,
-    "markets": 3447,
+    "weather_events": 357,
+    "markets": 3480,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T10:58:41Z",
+    "last_scan_at": "2026-10-26T11:04:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T10:58:41Z",
+    "updated_at": "2026-10-26T11:04:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T10:58:12Z",
+    "updated_at": "2026-10-26T11:04:14Z",
     "detail": "observations retained"
    },
    {
