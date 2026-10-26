@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T17:35:02Z",
+ "generated_at": "2026-10-26T17:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-26T17:35:02Z",
+    "state": "p1",
+    "active": 2,
+    "alerts_24h": 14,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-10-26T17:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-26T17:39:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
    {
     "at": "2026-10-26T17:30:03Z",
     "kind": "heal",
@@ -304,11 +309,6 @@
     "at": "2026-10-26T14:23:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-10-26T14:03:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
    },
    {
     "at": "2026-10-26T14:00:50Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-26T17:32:29Z",
-   "heartbeat_at": "2026-10-26T17:35:01Z",
+   "status_at": "2026-10-26T17:38:13Z",
+   "heartbeat_at": "2026-10-26T17:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -400,7 +400,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-26T16:37:02Z",
+    "updated_at": "2026-10-26T17:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T17:34:31Z",
+    "updated_at": "2026-10-26T17:38:33Z",
     "detail": "observations retained"
    },
    {
