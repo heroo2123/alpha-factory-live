@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T19:05:02Z",
+ "generated_at": "2026-10-26T19:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "22 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "24 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_917de54e",
-    "task": "CODE-01 Verify recovered collection provenance",
-    "elapsed_min": 9
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -153,8 +153,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 19,
-    "building": 1,
+    "queued": 21,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 9,
     "merged": 546,
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T19:05:02Z",
+    "last_check_at": "2026-10-26T19:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-26T19:06:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
+   {
     "at": "2026-10-26T19:03:12Z",
     "kind": "warn",
     "text": "MiniMax M3 reviewed “CODE-01 Isolate malformed optional physical-feature payloads”: changes required"
@@ -294,11 +299,6 @@
     "at": "2026-10-26T18:08:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-26T18:05:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed flexible provider router"
    },
    {
     "at": "2026-10-26T18:00:25Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "iteration gated",
-   "status_at": "2026-10-26T19:04:55Z",
-   "heartbeat_at": "2026-10-26T19:05:02Z",
+   "status_at": "2026-10-26T19:09:52Z",
+   "heartbeat_at": "2026-10-26T19:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -384,7 +384,7 @@
     "weather_events": 339,
     "markets": 3283,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T18:59:21Z",
+    "last_scan_at": "2026-10-26T19:05:17Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T18:59:21Z",
+    "updated_at": "2026-10-26T19:05:17Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T19:03:02Z",
+    "updated_at": "2026-10-26T19:09:06Z",
     "detail": "observations retained"
    },
    {
