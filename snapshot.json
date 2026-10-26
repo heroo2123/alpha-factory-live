@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T11:30:02Z",
+ "generated_at": "2026-10-26T11:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 28,
+    "count": 30,
     "unit": "queued",
     "active": false,
     "detail": "31 ready to build"
@@ -17,15 +17,15 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "29 built in 24h"
+    "active": true,
+    "detail": "30 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_f837bc70",
+    "task": "Repair preflight cash policy and target refusals",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_6b376a41",
+    "task": "FLEX candidate t_56514e9a d468b46f3bef",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 29,
+   "built_24h": 30,
    "build_failed_24h": 1,
    "reviews_passed_24h": 12,
    "reviews_changes_24h": 21,
@@ -153,9 +153,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 28,
+    "queued": 30,
     "building": 1,
-    "in_review": 1,
+    "in_review": 2,
     "awaiting_merge": 5,
     "merged": 545,
     "parked": 447
@@ -163,7 +163,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-26T08:50:13Z",
+   "last_run_at": "2026-10-26T11:30:14Z",
    "last_planned": 6,
    "model": "Codex (GPT-6 Sol)"
   },
@@ -215,29 +215,29 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T11:30:03Z",
+    "last_check_at": "2026-10-26T11:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 7,
     "by_severity": {
      "P0": 0,
-     "P1": 1,
+     "P1": 0,
      "P2": 5
     },
     "codes": [
-     "flow merge stall",
      "flow unmergeable reviewed work",
      "flow glm plan lane dead",
      "flow shadow census churn",
      "flow code drift frozen copy",
-     "flow review oversized"
+     "flow review oversized",
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-26T11:20:03Z",
+    "last_check_at": "2026-10-26T11:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 11,
+    "runs_24h": 10,
     "runs_total": 717,
     "last_run_at": "2026-10-26T09:50:05Z",
     "last_ok": true,
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-26T11:31:15Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Bind executed modules in read-only owner-adapter probe” → sent to independent review"
+   },
+   {
+    "at": "2026-10-26T11:30:14Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Sol)) planned 6 new tasks"
+   },
    {
     "at": "2026-10-26T11:24:02Z",
     "kind": "heal",
@@ -354,16 +364,6 @@
     "at": "2026-10-26T04:55:03Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: hermes router stale"
-   },
-   {
-    "at": "2026-10-26T04:54:08Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Repair preflight cash policy and target refusals” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T04:51:11Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_3d6a7844 392b710367cb”: changes required"
    }
   ]
  },
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-26T11:26:57Z",
-   "heartbeat_at": "2026-10-26T11:30:02Z",
+   "status_at": "2026-10-26T11:32:49Z",
+   "heartbeat_at": "2026-10-26T11:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 2,
    "scanner": {
-    "weather_events": 358,
-    "markets": 3494,
+    "weather_events": 356,
+    "markets": 3472,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T11:26:11Z",
+    "last_scan_at": "2026-10-26T11:31:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T11:26:11Z",
+    "updated_at": "2026-10-26T11:31:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T11:28:22Z",
+    "updated_at": "2026-10-26T11:34:25Z",
     "detail": "observations retained"
    },
    {
@@ -641,7 +641,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 105,
-     "open_tasks": 10
+     "open_tasks": 11
     },
     {
      "id": "CODE-02",
@@ -740,7 +740,7 @@
      "status": "pending",
      "detail": "not accepted yet",
      "merged_tasks": 31,
-     "open_tasks": 0
+     "open_tasks": 1
     },
     {
      "id": "PAPER-10",
