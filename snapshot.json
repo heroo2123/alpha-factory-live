@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T20:25:02Z",
+ "generated_at": "2026-10-26T20:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 18,
     "unit": "queued",
     "active": false,
     "detail": "22 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "24 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_d02ab27f",
-    "task": "CODE-01 Hold label review on malformed relevant payout receipts",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_a10cb666",
-    "task": "CODE-01 Scan every relevant payout disclosure before qualification",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -153,8 +153,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 17,
-    "building": 1,
+    "queued": 18,
+    "building": 0,
     "in_review": 2,
     "awaiting_merge": 10,
     "merged": 546,
@@ -215,7 +215,7 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T20:25:02Z",
+    "last_check_at": "2026-10-26T20:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "iteration gated",
-   "status_at": "2026-10-26T20:24:50Z",
-   "heartbeat_at": "2026-10-26T20:25:01Z",
+   "status_at": "2026-10-26T20:29:58Z",
+   "heartbeat_at": "2026-10-26T20:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -384,7 +384,7 @@
     "weather_events": 335,
     "markets": 3241,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T20:19:21Z",
+    "last_scan_at": "2026-10-26T20:25:09Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T20:19:21Z",
+    "updated_at": "2026-10-26T20:25:09Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T20:23:31Z",
+    "updated_at": "2026-10-26T20:29:33Z",
     "detail": "observations retained"
    },
    {
