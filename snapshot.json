@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T20:15:01Z",
+ "generated_at": "2026-10-26T20:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -120,7 +120,7 @@
    "commits_24h": 2,
    "built_24h": 24,
    "build_failed_24h": 1,
-   "reviews_passed_24h": 15,
+   "reviews_passed_24h": 13,
    "reviews_changes_24h": 15,
    "commits_by_hour": [
     0,
@@ -213,9 +213,9 @@
    "guardian": {
     "state": "p1",
     "active": 2,
-    "alerts_24h": 11,
-    "recoveries_24h": 13,
-    "last_check_at": "2026-10-26T20:15:02Z",
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-26T20:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,11 +237,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 6,
-    "runs_total": 719,
-    "last_run_at": "2026-10-26T18:00:06Z",
+    "runs_24h": 7,
+    "runs_total": 720,
+    "last_run_at": "2026-10-26T20:15:03Z",
     "last_ok": true,
-    "last_kind": "flow acceptance followthrough required",
+    "last_kind": "flow new source test inventory gap",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-26T20:19:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-26T20:15:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow new source test inventory gap"
+   },
    {
     "at": "2026-10-26T20:14:01Z",
     "kind": "heal",
@@ -279,11 +289,6 @@
     "at": "2026-10-26T20:09:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-26T20:02:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-26T20:02:01Z",
@@ -359,11 +364,6 @@
     "at": "2026-10-26T14:57:15Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “PAPER-09 Reject impossible PWS sensor ages at preconfirmation”: passed"
-   },
-   {
-    "at": "2026-10-26T14:26:43Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “PAPER-09 Reject impossible PWS sensor ages at preconfirmation” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "iteration gated",
-   "status_at": "2026-10-26T20:14:59Z",
-   "heartbeat_at": "2026-10-26T20:15:01Z",
+   "status_at": "2026-10-26T20:19:54Z",
+   "heartbeat_at": "2026-10-26T20:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -384,7 +384,7 @@
     "weather_events": 335,
     "markets": 3241,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T20:13:50Z",
+    "last_scan_at": "2026-10-26T20:19:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T20:13:50Z",
+    "updated_at": "2026-10-26T20:19:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T20:13:28Z",
+    "updated_at": "2026-10-26T20:19:30Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-26T19:17:02Z",
+   "updated_at": "2026-10-26T20:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
