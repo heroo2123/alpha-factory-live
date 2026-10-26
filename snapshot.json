@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T12:05:01Z",
+ "generated_at": "2026-10-26T12:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "30 built in 24h"
+    "detail": "31 built in 24h"
    },
    {
     "key": "review",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 30,
+   "built_24h": 31,
    "build_failed_24h": 1,
    "reviews_passed_24h": 13,
    "reviews_changes_24h": 20,
@@ -212,10 +212,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-26T12:05:01Z",
+    "active": 2,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-26T12:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-26T12:09:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
+   {
+    "at": "2026-10-26T12:06:42Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Repair preflight cash policy and target refusals” → sent to independent review"
+   },
    {
     "at": "2026-10-26T12:02:02Z",
     "kind": "warn",
@@ -308,11 +318,6 @@
    {
     "at": "2026-10-26T11:09:01Z",
     "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-10-26T11:09:01Z",
-    "kind": "warn",
     "text": "Guardian raised an alert: hermes job failed flexible provider router"
    },
    {
@@ -359,11 +364,6 @@
     "at": "2026-10-26T06:20:23Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Record evidence classes for combined maker context” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T05:50:44Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 16897 passed, 0 failed"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-26T12:02:22Z",
-   "heartbeat_at": "2026-10-26T12:05:01Z",
+   "status_at": "2026-10-26T12:08:02Z",
+   "heartbeat_at": "2026-10-26T12:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T12:04:35Z",
+    "updated_at": "2026-10-26T12:08:36Z",
     "detail": "observations retained"
    },
    {
