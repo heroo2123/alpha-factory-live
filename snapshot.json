@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T02:50:02Z",
+ "generated_at": "2026-10-26T02:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -124,12 +124,12 @@
    "reviews_changes_24h": 32,
    "commits_by_hour": [
     0,
+    1,
+    1,
+    2,
     0,
-    2,
+    4,
     1,
-    1,
-    3,
-    2,
     0,
     0,
     0,
@@ -214,25 +214,25 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T02:50:02Z",
+    "last_check_at": "2026-10-26T02:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 6
+     "P2": 4
     },
     "codes": [
      "flow unmergeable reviewed work",
-     "flow go2 lane not polled",
+     "flow qa resource blocked",
      "flow glm plan lane dead",
      "flow code drift frozen copy",
-     "flow review oversized",
-     "flow review repair scope missing"
+     "flow queued scope needless pin fixture",
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-26T02:40:02Z",
+    "last_check_at": "2026-10-26T02:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-26T02:51:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
    {
     "at": "2026-10-26T02:47:02Z",
     "kind": "heal",
@@ -292,11 +297,6 @@
     "at": "2026-10-26T02:28:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-26T02:26:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled review"
    },
    {
     "at": "2026-10-26T02:03:38Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "iteration gated",
-   "status_at": "2026-10-26T02:50:02Z",
-   "heartbeat_at": "2026-10-26T02:50:03Z",
+   "status_at": "2026-10-26T02:55:00Z",
+   "heartbeat_at": "2026-10-26T02:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T02:49:24Z",
+    "updated_at": "2026-10-26T02:53:25Z",
     "detail": "observations retained"
    },
    {
