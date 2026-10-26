@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T04:35:02Z",
+ "generated_at": "2026-10-26T04:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "58 built in 24h"
+    "detail": "57 built in 24h"
    },
    {
     "key": "review",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 25,
+    "count": 27,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 25,
+   "progress_pct": 27,
    "last_finished_at": "2026-10-25T21:16:50Z",
    "last_passed": 16893,
    "last_failed": 0,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 11,
    "commits_24h": 11,
-   "built_24h": 58,
+   "built_24h": 57,
    "build_failed_24h": 6,
    "reviews_passed_24h": 29,
    "reviews_changes_24h": 32,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 1,
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T04:35:02Z",
+    "last_check_at": "2026-10-26T04:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 57,
+    "runs_24h": 56,
     "runs_total": 715,
     "last_run_at": "2026-10-26T00:50:03Z",
     "last_ok": true,
@@ -253,6 +253,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-26T04:39:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
    {
     "at": "2026-10-26T04:02:01Z",
     "kind": "warn",
@@ -287,11 +292,6 @@
     "at": "2026-10-26T03:12:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: worker finished result unreconciled develop"
-   },
-   {
-    "at": "2026-10-26T03:08:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled review"
    },
    {
     "at": "2026-10-26T02:44:51Z",
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "census service",
-   "status_at": "2026-10-26T04:35:00Z",
-   "heartbeat_at": "2026-10-26T04:35:03Z",
+   "status_at": "2026-10-26T04:40:00Z",
+   "heartbeat_at": "2026-10-26T04:40:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 2,
    "scanner": {
-    "weather_events": 298,
-    "markets": 2824,
+    "weather_events": 327,
+    "markets": 3143,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T04:33:21Z",
+    "last_scan_at": "2026-10-26T04:38:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-26T03:37:02Z",
+    "updated_at": "2026-10-26T04:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T04:33:21Z",
+    "updated_at": "2026-10-26T04:38:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T04:33:56Z",
+    "updated_at": "2026-10-26T04:39:58Z",
     "detail": "observations retained"
    },
    {
