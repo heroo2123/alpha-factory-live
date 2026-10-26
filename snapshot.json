@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T05:10:02Z",
+ "generated_at": "2026-10-26T05:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "56 built in 24h"
+    "detail": "55 built in 24h"
    },
    {
     "key": "review",
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 62,
+    "count": 65,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 62,
+   "progress_pct": 65,
    "last_finished_at": "2026-10-25T21:16:50Z",
    "last_passed": 16893,
    "last_failed": 0,
@@ -118,16 +118,16 @@
   "flow": {
    "merges_24h": 10,
    "commits_24h": 10,
-   "built_24h": 56,
-   "build_failed_24h": 7,
+   "built_24h": 55,
+   "build_failed_24h": 6,
    "reviews_passed_24h": 27,
-   "reviews_changes_24h": 32,
+   "reviews_changes_24h": 31,
    "commits_by_hour": [
     1,
     2,
     0,
-    4,
-    1,
+    5,
+    0,
     0,
     0,
     0,
@@ -214,25 +214,25 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T05:09:02Z",
+    "last_check_at": "2026-10-26T05:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 5
+     "P2": 4
     },
     "codes": [
-     "flow review dependency priority lost",
      "flow unmergeable reviewed work",
      "flow glm plan lane dead",
      "flow code drift frozen copy",
      "flow review repair scope missing",
-     "flow queued scope needless pin fixture"
+     "flow queued scope needless pin fixture",
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-26T05:00:03Z",
+    "last_check_at": "2026-10-26T05:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-26T05:06:57Z",
-   "heartbeat_at": "2026-10-26T05:10:02Z",
+   "status_at": "2026-10-26T05:12:21Z",
+   "heartbeat_at": "2026-10-26T05:15:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -382,7 +382,7 @@
     "weather_events": 359,
     "markets": 3495,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T05:05:39Z",
+    "last_scan_at": "2026-10-26T05:11:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T05:05:39Z",
+    "updated_at": "2026-10-26T05:11:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T05:08:11Z",
+    "updated_at": "2026-10-26T05:14:13Z",
     "detail": "observations retained"
    },
    {
