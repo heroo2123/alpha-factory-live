@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T09:20:02Z",
+ "generated_at": "2026-10-26T09:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 33,
+    "count": 34,
     "unit": "queued",
     "active": false,
     "detail": "36 ready to build"
@@ -15,10 +15,10 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "32 built in 24h"
+    "active": false,
+    "detail": "30 built in 24h"
    },
    {
     "key": "review",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_8c9376fe",
-    "task": "CODE-01 Validate event-state provenance before assigning performance slices",
-    "elapsed_min": 22
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 32,
+   "built_24h": 30,
    "build_failed_24h": 2,
    "reviews_passed_24h": 10,
    "reviews_changes_24h": 21,
@@ -129,8 +129,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -153,8 +153,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 33,
-    "building": 1,
+    "queued": 34,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 545,
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T09:20:02Z",
+    "last_check_at": "2026-10-26T09:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
      "flow review oversized",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-26T09:10:03Z",
+    "last_check_at": "2026-10-26T09:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "census service",
-   "status_at": "2026-10-26T09:19:59Z",
-   "heartbeat_at": "2026-10-26T09:20:03Z",
+   "status_at": "2026-10-26T09:24:59Z",
+   "heartbeat_at": "2026-10-26T09:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -383,7 +383,7 @@
     "weather_events": 352,
     "markets": 3418,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T09:14:34Z",
+    "last_scan_at": "2026-10-26T09:20:17Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T09:14:34Z",
+    "updated_at": "2026-10-26T09:20:17Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T09:19:35Z",
+    "updated_at": "2026-10-26T09:23:36Z",
     "detail": "observations retained"
    },
    {
