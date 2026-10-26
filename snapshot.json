@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T17:45:01Z",
+ "generated_at": "2026-10-26T17:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,10 +212,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 3,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-26T17:45:02Z",
+    "last_check_at": "2026-10-26T17:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-26T17:48:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled review"
+   },
    {
     "at": "2026-10-26T17:39:02Z",
     "kind": "warn",
@@ -304,11 +309,6 @@
     "at": "2026-10-26T14:26:43Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “PAPER-09 Reject impossible PWS sensor ages at preconfirmation” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T14:23:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-26T14:00:50Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-26T17:43:53Z",
-   "heartbeat_at": "2026-10-26T17:45:02Z",
+   "status_at": "2026-10-26T17:49:33Z",
+   "heartbeat_at": "2026-10-26T17:50:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -384,7 +384,7 @@
     "weather_events": 339,
     "markets": 3299,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T17:40:23Z",
+    "last_scan_at": "2026-10-26T17:45:49Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T17:40:23Z",
+    "updated_at": "2026-10-26T17:45:49Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T17:44:35Z",
+    "updated_at": "2026-10-26T17:48:36Z",
     "detail": "observations retained"
    },
    {
