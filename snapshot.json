@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T10:05:01Z",
+ "generated_at": "2026-10-26T10:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "31 built in 24h"
+    "detail": "29 built in 24h"
    },
    {
     "key": "review",
@@ -90,12 +90,12 @@
     "family": "MiniMax",
     "task_id": "t_3ac600cc",
     "task": "a build task",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 31,
+   "built_24h": 29,
    "build_failed_24h": 2,
-   "reviews_passed_24h": 9,
+   "reviews_passed_24h": 10,
    "reviews_changes_24h": 20,
    "commits_by_hour": [
     0,
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-26T10:05:02Z",
+    "last_check_at": "2026-10-26T10:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -237,7 +237,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 23,
+    "runs_24h": 22,
     "runs_total": 717,
     "last_run_at": "2026-10-26T09:50:05Z",
     "last_ok": true,
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-26T10:06:10Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-26T09:50:05Z",
     "kind": "heal",
@@ -359,11 +364,6 @@
     "at": "2026-10-26T02:42:24Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Include archived public trades in maker telemetry” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T02:03:38Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Bounded public fee lifecycle and immutable refusal archival”: changes required"
    }
   ]
  },
@@ -373,9 +373,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
-   "state": "census service",
-   "status_at": "2026-10-26T10:05:01Z",
-   "heartbeat_at": "2026-10-26T10:05:01Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-26T10:09:30Z",
+   "heartbeat_at": "2026-10-26T10:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -384,7 +384,7 @@
     "weather_events": 351,
     "markets": 3414,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T10:04:03Z",
+    "last_scan_at": "2026-10-26T10:09:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T10:04:03Z",
+    "updated_at": "2026-10-26T10:09:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T10:03:50Z",
+    "updated_at": "2026-10-26T10:09:52Z",
     "detail": "observations retained"
    },
    {
