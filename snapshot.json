@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T00:35:01Z",
+ "generated_at": "2026-10-26T00:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 34,
+    "count": 36,
     "unit": "queued",
     "active": false,
     "detail": "32 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "55 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_3d6a7844",
-    "task": "Bounded public fee lifecycle and immutable refusal archival",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_4568bc1a",
-    "task": "Integrate bounded V11_PAPER health frontier",
-    "elapsed_min": 4
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -153,8 +153,8 @@
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 34,
-    "building": 1,
+    "queued": 36,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 2,
     "merged": 544,
@@ -211,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T00:35:01Z",
+    "state": "p1",
+    "active": 2,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-26T00:40:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -250,10 +250,14 @@
   "providers": [
    "Codex",
    "DeepSeek",
-   "GLM",
-   "MiniMax"
+   "GLM"
   ],
   "events": [
+   {
+    "at": "2026-10-26T00:39:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
    {
     "at": "2026-10-26T00:34:01Z",
     "kind": "heal",
@@ -293,11 +297,6 @@
     "at": "2026-10-25T23:34:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: worker finished result unreconciled review"
-   },
-   {
-    "at": "2026-10-25T23:24:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-25T23:15:58Z",
@@ -373,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-26",
    "state": "iteration gated",
-   "status_at": "2026-10-26T00:34:53Z",
-   "heartbeat_at": "2026-10-26T00:35:02Z",
+   "status_at": "2026-10-26T00:39:52Z",
+   "heartbeat_at": "2026-10-26T00:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -383,7 +382,7 @@
     "weather_events": 314,
     "markets": 3019,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T00:34:42Z",
+    "last_scan_at": "2026-10-26T00:39:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-25T23:37:03Z",
+    "updated_at": "2026-10-26T00:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T00:34:42Z",
+    "updated_at": "2026-10-26T00:39:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T00:34:42Z",
+    "updated_at": "2026-10-26T00:38:43Z",
     "detail": "observations retained"
    },
    {
