@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T08:25:01Z",
+ "generated_at": "2026-10-26T08:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_338be715",
     "task": "E2A physical weather dataset and pilot parser",
-    "elapsed_min": 11
+    "elapsed_min": 16
    },
    {
     "slot": "Builder 2",
@@ -215,7 +215,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-26T08:25:02Z",
+    "last_check_at": "2026-10-26T08:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -374,16 +374,16 @@
    "day": "2026-10-27",
    "state": "evaluating markets in paper mode",
    "status_at": "2026-10-26T08:24:57Z",
-   "heartbeat_at": "2026-10-26T08:25:01Z",
+   "heartbeat_at": "2026-10-26T08:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 2,
    "scanner": {
-    "weather_events": 354,
-    "markets": 3440,
+    "weather_events": 352,
+    "markets": 3418,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T08:20:16Z",
+    "last_scan_at": "2026-10-26T08:25:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T08:20:16Z",
+    "updated_at": "2026-10-26T08:25:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T08:23:16Z",
+    "updated_at": "2026-10-26T08:29:18Z",
     "detail": "observations retained"
    },
    {
@@ -501,7 +501,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 51 untouched city-days (11 cities, 5 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 52 untouched city-days (11 cities, 5 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 73,
    "waiting_city_days": 12,
