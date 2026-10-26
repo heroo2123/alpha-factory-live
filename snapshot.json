@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T04:50:02Z",
+ "generated_at": "2026-10-26T04:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 33,
+    "count": 34,
     "unit": "queued",
     "active": false,
     "detail": "36 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "57 built in 24h"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 38,
+    "count": 46,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_599add3f",
-    "task": "FLEX candidate t_9687a8dc f1fdd24c2795",
-    "elapsed_min": 4
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 38,
+   "progress_pct": 46,
    "last_finished_at": "2026-10-25T21:16:50Z",
    "last_passed": 16893,
    "last_failed": 0,
@@ -117,17 +117,17 @@
   "tests_passing": 16893,
   "flow": {
    "merges_24h": 11,
-   "commits_24h": 11,
+   "commits_24h": 10,
    "built_24h": 57,
    "build_failed_24h": 6,
    "reviews_passed_24h": 28,
-   "reviews_changes_24h": 32,
+   "reviews_changes_24h": 33,
    "commits_by_hour": [
-    2,
     1,
-    1,
-    3,
     2,
+    0,
+    4,
+    1,
     0,
     0,
     0,
@@ -152,12 +152,12 @@
     "disallowed path set"
    ],
    "stage_totals": {
-    "queued": 33,
-    "building": 1,
+    "queued": 34,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 1,
     "merged": 545,
-    "parked": 444
+    "parked": 445
    }
   },
   "architect": {
@@ -210,33 +210,33 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-26T04:49:01Z",
+    "last_check_at": "2026-10-26T04:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 10,
+    "active": 9,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 7
+     "P2": 5
     },
     "codes": [
      "flow unmergeable reviewed work",
-     "flow builders idle",
-     "flow go2 lane not polled",
      "flow glm plan lane dead",
      "flow code drift frozen copy",
-     "flow review oversized"
+     "flow review oversized",
+     "flow review repair scope missing",
+     "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-26T04:40:03Z",
+    "last_check_at": "2026-10-26T04:50:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 55,
+    "runs_24h": 54,
     "runs_total": 715,
     "last_run_at": "2026-10-26T00:50:03Z",
     "last_ok": true,
@@ -253,6 +253,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-26T04:54:08Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “FLEX candidate t_9687a8dc f1fdd24c2795” → sent to independent review"
+   },
+   {
+    "at": "2026-10-26T04:51:11Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_3d6a7844 392b710367cb”: changes required"
+   },
    {
     "at": "2026-10-26T04:48:02Z",
     "kind": "heal",
@@ -352,16 +362,6 @@
     "at": "2026-10-25T23:15:58Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_550364f8 e9f04dba0a8b”: changes required"
-   },
-   {
-    "at": "2026-10-25T23:15:52Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Make depth and markout arithmetic deterministic” → sent to independent review"
-   },
-   {
-    "at": "2026-10-25T22:42:40Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Complete evidence-bound economic preflight and inventory regression”: changes required"
    }
   ]
  },
@@ -371,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-26T04:47:25Z",
-   "heartbeat_at": "2026-10-26T04:50:02Z",
+   "state": "census service",
+   "status_at": "2026-10-26T04:55:02Z",
+   "heartbeat_at": "2026-10-26T04:55:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -382,7 +382,7 @@
     "weather_events": 327,
     "markets": 3143,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T04:49:06Z",
+    "last_scan_at": "2026-10-26T04:54:23Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T04:49:06Z",
+    "updated_at": "2026-10-26T04:54:23Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T04:48:01Z",
+    "updated_at": "2026-10-26T04:54:06Z",
     "detail": "observations retained"
    },
    {
