@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-26T23:55:02Z",
+ "generated_at": "2026-10-27T00:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -140,8 +140,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 3,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-26T23:55:02Z",
+    "last_check_at": "2026-10-27T00:00:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -373,25 +373,25 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-27",
    "state": "iteration gated",
-   "status_at": "2026-10-26T23:54:58Z",
-   "heartbeat_at": "2026-10-26T23:55:02Z",
+   "status_at": "2026-10-27T00:00:01Z",
+   "heartbeat_at": "2026-10-27T00:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
-   "days_with_market_data": 8,
-   "days_with_paper_decisions": 2,
+   "days_with_market_data": 9,
+   "days_with_paper_decisions": 3,
    "scanner": {
     "weather_events": 309,
     "markets": 2955,
     "opportunities": 0,
-    "last_scan_at": "2026-10-26T23:51:23Z",
+    "last_scan_at": "2026-10-26T23:57:02Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 9152,
+   "total": 16599,
    "research_accept": 0,
    "reject": 0,
-   "gated": 9152,
+   "gated": 16599,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-26T23:51:23Z",
+    "updated_at": "2026-10-26T23:57:02Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-26T23:54:43Z",
+    "updated_at": "2026-10-26T23:58:45Z",
     "detail": "observations retained"
    },
    {
