@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T14:45:01Z",
+ "generated_at": "2026-10-27T14:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "19 built in 24h"
+    "active": false,
+    "detail": "20 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4.1 Flash",
-    "family": "DeepSeek",
-    "task_id": "t_993c6830",
-    "task": "E2C artifact provenance and runtime parity REVIEW REPAIR",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 9,
    "commits_24h": 9,
-   "built_24h": 19,
+   "built_24h": 20,
    "build_failed_24h": 8,
    "reviews_passed_24h": 18,
-   "reviews_changes_24h": 12,
+   "reviews_changes_24h": 11,
    "commits_by_hour": [
     0,
     0,
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 13,
-    "building": 1,
-    "in_review": 0,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 12,
     "merged": 554,
     "parked": 457
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T14:45:02Z",
+    "last_check_at": "2026-10-27T14:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T14:47:52Z",
+    "kind": "build",
+    "text": "DeepSeek V4.1 Flash built “E2C artifact provenance and runtime parity REVIEW REPAIR” → sent to independent review"
+   },
    {
     "at": "2026-10-27T14:43:01Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T11:54:03Z",
     "kind": "warn",
     "text": "DeepSeek V4.1 Flash's build of “FLEX candidate t_af4aead8 2607331eba07” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-27T11:23:48Z",
-    "kind": "warn",
-    "text": "DeepSeek V4.1 Flash build attempt ended: host test resource wait"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T14:44:18Z",
-   "heartbeat_at": "2026-10-27T14:45:00Z",
+   "status_at": "2026-10-27T14:49:35Z",
+   "heartbeat_at": "2026-10-27T14:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T14:44:21Z",
+    "updated_at": "2026-10-27T14:48:22Z",
     "detail": "observations retained"
    },
    {
