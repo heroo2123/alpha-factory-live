@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T20:45:02Z",
+ "generated_at": "2026-10-27T20:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -120,7 +120,7 @@
    "commits_24h": 15,
    "built_24h": 15,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 14,
+   "reviews_passed_24h": 13,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
@@ -144,8 +144,8 @@
     1,
     1,
     2,
-    1,
-    1,
+    2,
+    0,
     1
    ],
    "merge_holds": [
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 2,
+    "active": 3,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-27T20:45:02Z",
+    "last_check_at": "2026-10-27T20:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-27T20:49:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job failed flexible provider router"
+   },
+   {
     "at": "2026-10-27T20:03:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
@@ -288,11 +293,6 @@
     "at": "2026-10-27T18:50:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
-    "at": "2026-10-27T18:48:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-27T18:46:05Z",
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "iteration gated",
-   "status_at": "2026-10-27T20:44:53Z",
-   "heartbeat_at": "2026-10-27T20:45:01Z",
+   "status_at": "2026-10-27T20:50:00Z",
+   "heartbeat_at": "2026-10-27T20:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 334,
     "markets": 3232,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T20:41:03Z",
+    "last_scan_at": "2026-10-27T20:46:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T20:41:03Z",
+    "updated_at": "2026-10-27T20:46:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T20:43:18Z",
+    "updated_at": "2026-10-27T20:49:19Z",
     "detail": "observations retained"
    },
    {
