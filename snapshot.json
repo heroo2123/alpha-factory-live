@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T13:00:01Z",
+ "generated_at": "2026-10-27T13:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "21 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "count": 9,
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_993c6830",
+    "task": "E2C artifact provenance and runtime parity REVIEW REPAIR",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": false,
-   "progress_pct": null,
+   "running": true,
+   "progress_pct": 9,
    "last_finished_at": "2026-10-27T10:55:41Z",
    "last_passed": 17989,
    "last_failed": 0,
@@ -153,11 +153,11 @@
    ],
    "stage_totals": {
     "queued": 13,
-    "building": 0,
-    "in_review": 0,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 14,
     "merged": 552,
-    "parked": 458
+    "parked": 457
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T13:00:01Z",
+    "last_check_at": "2026-10-27T13:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow queued scope needless pin fixture",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-27T12:50:01Z",
+    "last_check_at": "2026-10-27T13:00:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -373,17 +373,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T12:58:07Z",
-   "heartbeat_at": "2026-10-27T13:00:00Z",
+   "status_at": "2026-10-27T13:03:28Z",
+   "heartbeat_at": "2026-10-27T13:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 2,
    "scanner": {
-    "weather_events": 363,
-    "markets": 3547,
+    "weather_events": 368,
+    "markets": 3602,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T12:59:34Z",
+    "last_scan_at": "2026-10-27T13:04:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T12:59:34Z",
+    "updated_at": "2026-10-27T13:04:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T12:58:04Z",
+    "updated_at": "2026-10-27T13:04:05Z",
     "detail": "observations retained"
    },
    {
