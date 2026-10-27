@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T04:55:02Z",
+ "generated_at": "2026-10-27T05:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "18 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "16 built in 24h"
+    "active": true,
+    "detail": "17 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_37e88ecb",
+    "task": "CODE-01 Include archived public trades in maker telemetry",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_d026bd6b",
+    "task": "FLEX candidate t_eada53b1 cfa11473c382",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,12 +118,11 @@
   "flow": {
    "merges_24h": 1,
    "commits_24h": 1,
-   "built_24h": 16,
+   "built_24h": 17,
    "build_failed_24h": 1,
    "reviews_passed_24h": 15,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
-    0,
     0,
     0,
     0,
@@ -146,15 +145,16 @@
     0,
     0,
     0,
+    0,
     0
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 16,
-    "building": 0,
-    "in_review": 1,
+    "queued": 14,
+    "building": 1,
+    "in_review": 2,
     "awaiting_merge": 13,
     "merged": 546,
     "parked": 458
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 4,
+    "state": "p2",
+    "active": 1,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-27T04:55:02Z",
+    "last_check_at": "2026-10-27T04:59:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,7 +236,7 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 6,
+    "runs_24h": 5,
     "runs_total": 721,
     "last_run_at": "2026-10-27T04:20:05Z",
     "last_ok": true,
@@ -254,6 +254,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T04:58:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-10-27T04:57:17Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Make depth and markout arithmetic deterministic” → sent to independent review"
+   },
+   {
+    "at": "2026-10-27T04:56:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
    {
     "at": "2026-10-27T04:52:01Z",
     "kind": "warn",
@@ -288,16 +303,6 @@
     "at": "2026-10-27T04:20:03Z",
     "kind": "warn",
     "text": "Guardian raised an alert: worker finished result unreconciled develop"
-   },
-   {
-    "at": "2026-10-27T04:03:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-27T03:54:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-10-26T23:16:33Z",
@@ -358,11 +363,6 @@
     "at": "2026-10-26T19:03:12Z",
     "kind": "warn",
     "text": "MiniMax M3 reviewed “CODE-01 Isolate malformed optional physical-feature payloads”: changes required"
-   },
-   {
-    "at": "2026-10-26T18:55:26Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Isolate malformed optional physical-feature payloads” → sent to independent review"
    }
   ]
  },
@@ -372,9 +372,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "census service",
-   "status_at": "2026-10-27T04:55:00Z",
-   "heartbeat_at": "2026-10-27T04:55:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-27T04:56:30Z",
+   "heartbeat_at": "2026-10-27T05:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -383,7 +383,7 @@
     "weather_events": 325,
     "markets": 3112,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T04:51:00Z",
+    "last_scan_at": "2026-10-27T04:56:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T04:51:00Z",
+    "updated_at": "2026-10-27T04:56:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T04:54:27Z",
+    "updated_at": "2026-10-27T04:58:28Z",
     "detail": "observations retained"
    },
    {
