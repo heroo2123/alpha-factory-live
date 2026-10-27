@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T17:50:01Z",
+ "generated_at": "2026-10-27T17:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -106,21 +106,21 @@
   "qa": {
    "running": false,
    "progress_pct": null,
-   "last_finished_at": "2026-10-27T13:54:23Z",
-   "last_passed": 18241,
+   "last_finished_at": "2026-10-27T17:48:38Z",
+   "last_passed": 18274,
    "last_failed": 0,
    "last_skipped": 51,
    "last_green": true,
-   "last_green_at": "2026-10-27T13:54:23Z",
-   "last_minutes": 54
+   "last_green_at": "2026-10-27T17:48:38Z",
+   "last_minutes": 53
   },
-  "tests_passing": 18241,
+  "tests_passing": 18274,
   "flow": {
    "merges_24h": 13,
    "commits_24h": 13,
    "built_24h": 20,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 19,
+   "reviews_passed_24h": 18,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     1,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T17:50:01Z",
+    "last_check_at": "2026-10-27T17:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow acceptance followthrough required",
      "flow registry overdue"
     ],
-    "last_check_at": "2026-10-27T17:40:01Z",
+    "last_check_at": "2026-10-27T17:50:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,16 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-27T17:51:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-10-27T17:48:38Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 18274 passed, 0 failed"
+   },
    {
     "at": "2026-10-27T17:47:01Z",
     "kind": "warn",
@@ -315,11 +325,6 @@
     "text": "DeepSeek V4.1 Flash built “Bind executed modules in read-only owner-adapter probe” → sent to independent review"
    },
    {
-    "at": "2026-10-27T16:12:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
     "at": "2026-10-27T15:05:02Z",
     "kind": "heal",
     "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
@@ -358,11 +363,6 @@
     "at": "2026-10-27T13:54:23Z",
     "kind": "qa",
     "text": "Full test suite finished: 18241 passed, 0 failed"
-   },
-   {
-    "at": "2026-10-27T13:36:14Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Record evidence classes for combined maker context” into the main build"
    }
   ]
  },
@@ -372,9 +372,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T17:48:26Z",
-   "heartbeat_at": "2026-10-27T17:50:00Z",
+   "state": "census service",
+   "status_at": "2026-10-27T17:54:58Z",
+   "heartbeat_at": "2026-10-27T17:55:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 340,
     "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T17:46:28Z",
+    "last_scan_at": "2026-10-27T17:51:36Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T17:46:28Z",
+    "updated_at": "2026-10-27T17:51:36Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T17:48:50Z",
+    "updated_at": "2026-10-27T17:54:51Z",
     "detail": "observations retained"
    },
    {
