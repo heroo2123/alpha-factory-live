@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T09:20:02Z",
+ "generated_at": "2026-10-27T09:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,10 +23,10 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
-    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
+    "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_f837bc70",
     "task": "Complete preflight target-local refusal boundary",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -149,12 +149,12 @@
     2
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 16,
     "building": 1,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 15,
     "merged": 548,
     "parked": 453
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 11,
-    "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T09:20:02Z",
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-27T09:24:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-27T09:10:02Z",
+    "last_check_at": "2026-10-27T09:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T09:22:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job failed flexible provider router"
+   },
+   {
+    "at": "2026-10-27T09:21:03Z",
+    "kind": "review",
+    "text": "MiniMax M3 review ended: review retry budget spent unapproved"
+   },
    {
     "at": "2026-10-27T09:17:01Z",
     "kind": "heal",
@@ -293,11 +303,6 @@
     "at": "2026-10-27T08:57:12Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Prove complete historical identity-to-bucket binding” → sent to independent review"
-   },
-   {
-    "at": "2026-10-27T08:56:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-27T08:50:03Z",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T06:03:07Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “FLEX candidate t_37e88ecb 52797d110c8c”: passed"
-   },
-   {
-    "at": "2026-10-27T05:39:49Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "census service",
-   "status_at": "2026-10-27T09:20:02Z",
-   "heartbeat_at": "2026-10-27T09:20:01Z",
+   "status_at": "2026-10-27T09:25:01Z",
+   "heartbeat_at": "2026-10-27T09:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -383,7 +383,7 @@
     "weather_events": 353,
     "markets": 3420,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T09:15:45Z",
+    "last_scan_at": "2026-10-27T09:21:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T09:15:45Z",
+    "updated_at": "2026-10-27T09:21:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T09:19:27Z",
+    "updated_at": "2026-10-27T09:23:28Z",
     "detail": "observations retained"
    },
    {
