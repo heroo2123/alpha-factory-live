@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T15:50:01Z",
+ "generated_at": "2026-10-27T15:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -149,7 +149,7 @@
     1
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 13,
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 1,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-27T15:49:01Z",
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-27T15:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow queued scope needless pin fixture",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-27T15:40:02Z",
+    "last_check_at": "2026-10-27T15:50:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -256,6 +256,21 @@
   ],
   "events": [
    {
+    "at": "2026-10-27T15:53:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
+   {
+    "at": "2026-10-27T15:50:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-10-27T15:50:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
     "at": "2026-10-27T15:47:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -271,11 +286,6 @@
     "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
-    "at": "2026-10-27T15:14:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
     "at": "2026-10-27T15:05:02Z",
     "kind": "heal",
     "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
@@ -286,19 +296,9 @@
     "text": "MiniMax M3 reviewed “FLEX candidate t_993c6830 12ca1b57b796”: passed"
    },
    {
-    "at": "2026-10-27T14:59:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
     "at": "2026-10-27T14:57:12Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Validate event-state provenance before assigning performance…” into the main build"
-   },
-   {
-    "at": "2026-10-27T14:56:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-27T14:47:52Z",
@@ -373,9 +373,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T15:49:26Z",
-   "heartbeat_at": "2026-10-27T15:50:01Z",
+   "state": "census service",
+   "status_at": "2026-10-27T15:54:59Z",
+   "heartbeat_at": "2026-10-27T15:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -384,7 +384,7 @@
     "weather_events": 361,
     "markets": 3527,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T15:45:06Z",
+    "last_scan_at": "2026-10-27T15:52:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T15:45:06Z",
+    "updated_at": "2026-10-27T15:52:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T15:48:31Z",
+    "updated_at": "2026-10-27T15:54:32Z",
     "detail": "observations retained"
    },
    {
