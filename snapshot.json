@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T09:30:01Z",
+ "generated_at": "2026-10-27T09:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "21 built in 24h"
    },
    {
@@ -25,16 +25,16 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 15,
+    "count": 14,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "3 merged in 24h"
+    "detail": "4 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_c7c9fdbc",
+    "task": "CODE-01 Seal IEM coverage counts into its evidence digest",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_fdbb8ce4",
+    "task": "FLEX candidate t_f837bc70 37f6942846d8",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 17031,
   "flow": {
-   "merges_24h": 3,
-   "commits_24h": 3,
+   "merges_24h": 4,
+   "commits_24h": 4,
    "built_24h": 21,
    "build_failed_24h": 1,
    "reviews_passed_24h": 18,
@@ -146,17 +146,17 @@
     0,
     0,
     1,
-    1
+    2
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 16,
-    "building": 0,
+    "queued": 15,
+    "building": 1,
     "in_review": 1,
-    "awaiting_merge": 15,
-    "merged": 548,
+    "awaiting_merge": 14,
+    "merged": 549,
     "parked": 453
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-27T09:33:03Z",
+    "title": "E1A inert experimental policy and estimate schemas",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-27T08:30:09Z",
     "title": "E2B stable shared interval probability and log-mass kernel",
@@ -201,20 +206,15 @@
     "at": "2026-10-25T08:22:19Z",
     "title": "CODE-01 Validate depth before allowing paper reward quotes",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-25T06:52:36Z",
-    "title": "CODE-01 Check exchange-book age before screening transforms",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T09:30:01Z",
+    "last_check_at": "2026-10-27T09:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-27T09:20:02Z",
+    "last_check_at": "2026-10-27T09:30:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T09:33:03Z",
+    "kind": "merge",
+    "text": "Merged “E1A inert experimental policy and estimate schemas” into the main build"
+   },
    {
     "at": "2026-10-27T09:29:50Z",
     "kind": "build",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T06:20:02Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Sol)) planned 2 new tasks"
-   },
-   {
-    "at": "2026-10-27T06:15:06Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Isolate malformed optional physical-feature payloads” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "census service",
-   "status_at": "2026-10-27T09:29:59Z",
-   "heartbeat_at": "2026-10-27T09:30:02Z",
+   "status_at": "2026-10-27T09:35:00Z",
+   "heartbeat_at": "2026-10-27T09:35:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -383,7 +383,7 @@
     "weather_events": 353,
     "markets": 3420,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T09:26:22Z",
+    "last_scan_at": "2026-10-27T09:31:41Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T09:26:22Z",
+    "updated_at": "2026-10-27T09:31:41Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T09:29:29Z",
+    "updated_at": "2026-10-27T09:33:29Z",
     "detail": "observations retained"
    },
    {
