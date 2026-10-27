@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T05:35:01Z",
+ "generated_at": "2026-10-27T05:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 14,
     "unit": "queued",
     "active": false,
-    "detail": "18 ready to build"
+    "detail": "16 ready to build"
    },
    {
     "key": "build",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -162,7 +162,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-26T19:42:18Z",
+   "last_run_at": "2026-10-27T05:36:53Z",
    "last_planned": 2,
    "model": "Codex (GPT-6 Sol)"
   },
@@ -214,7 +214,7 @@
     "active": 2,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-27T05:35:02Z",
+    "last_check_at": "2026-10-27T05:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,11 +236,11 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 5,
-    "runs_total": 721,
-    "last_run_at": "2026-10-27T04:20:05Z",
+    "runs_24h": 6,
+    "runs_total": 722,
+    "last_run_at": "2026-10-27T05:39:49Z",
     "last_ok": true,
-    "last_kind": "flow frozen review scope drift",
+    "last_kind": "flow acceptance followthrough required",
     "running": false,
     "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
@@ -254,6 +254,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T05:39:49Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-27T05:38:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-10-27T05:36:53Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Sol)) planned 2 new tasks"
+   },
    {
     "at": "2026-10-27T05:22:02Z",
     "kind": "heal",
@@ -288,11 +303,6 @@
     "at": "2026-10-27T05:00:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
-    "at": "2026-10-27T04:58:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: auxiliary wait unverified"
    },
    {
     "at": "2026-10-27T04:57:17Z",
@@ -353,16 +363,6 @@
     "at": "2026-10-26T20:12:09Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Scan every relevant payout disclosure before qualification” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T19:48:16Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “CODE-01 Verify recovered collection provenance”: passed"
-   },
-   {
-    "at": "2026-10-26T19:42:18Z",
-    "kind": "plan",
-    "text": "Architect (Codex (GPT-6 Sol)) planned 2 new tasks"
    }
   ]
  },
@@ -372,18 +372,18 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T05:34:40Z",
-   "heartbeat_at": "2026-10-27T05:35:02Z",
+   "state": "census service",
+   "status_at": "2026-10-27T05:39:44Z",
+   "heartbeat_at": "2026-10-27T05:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 350,
-    "markets": 3387,
+    "weather_events": 353,
+    "markets": 3420,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T05:31:09Z",
+    "last_scan_at": "2026-10-27T05:36:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -399,21 +399,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-27T04:37:03Z",
+    "updated_at": "2026-10-27T05:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T05:31:09Z",
+    "updated_at": "2026-10-27T05:36:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T05:34:39Z",
+    "updated_at": "2026-10-27T05:38:40Z",
     "detail": "observations retained"
    },
    {
