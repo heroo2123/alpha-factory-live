@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T07:35:02Z",
+ "generated_at": "2026-10-27T07:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -149,7 +149,7 @@
     0
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 16,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-27T07:35:02Z",
+    "active": 2,
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-27T07:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-27T07:37:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
+   },
+   {
+    "at": "2026-10-27T07:37:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router not active"
+   },
+   {
     "at": "2026-10-27T07:34:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job failed flexible provider router"
@@ -283,16 +293,6 @@
     "at": "2026-10-27T06:31:06Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “FLEX candidate t_b8edc3e0 ebec2fdbef80”: passed"
-   },
-   {
-    "at": "2026-10-27T06:31:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-27T06:28:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
    },
    {
     "at": "2026-10-27T06:20:02Z",
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T07:31:28Z",
-   "heartbeat_at": "2026-10-27T07:35:00Z",
+   "status_at": "2026-10-27T07:36:43Z",
+   "heartbeat_at": "2026-10-27T07:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -399,7 +399,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-27T06:37:01Z",
+    "updated_at": "2026-10-27T07:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T07:33:10Z",
+    "updated_at": "2026-10-27T07:39:11Z",
     "detail": "observations retained"
    },
    {
