@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T11:20:02Z",
+ "generated_at": "2026-10-27T11:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "18 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 2,
+    "count": 1,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "22 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "DeepSeek V4.1 Flash",
-    "family": "DeepSeek",
-    "task_id": "t_97e585a5",
-    "task": "FLEX candidate t_af4aead8 2607331eba07",
-    "elapsed_min": 8
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -119,7 +119,7 @@
    "merges_24h": 5,
    "commits_24h": 5,
    "built_24h": 22,
-   "build_failed_24h": 2,
+   "build_failed_24h": 3,
    "reviews_passed_24h": 16,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
@@ -152,8 +152,8 @@
     "lock busy"
    ],
    "stage_totals": {
-    "queued": 13,
-    "building": 2,
+    "queued": 14,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 14,
     "merged": 550,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T11:20:02Z",
+    "last_check_at": "2026-10-27T11:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow acceptance followthrough required",
      "flow registry overdue"
     ],
-    "last_check_at": "2026-10-27T11:10:02Z",
+    "last_check_at": "2026-10-27T11:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T11:23:48Z",
+    "kind": "warn",
+    "text": "DeepSeek V4.1 Flash build attempt ended: host test resource wait"
+   },
    {
     "at": "2026-10-27T11:05:01Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T09:29:50Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Close model, fee-time and runner parity findings” → sent to independent review"
-   },
-   {
-    "at": "2026-10-27T09:21:03Z",
-    "kind": "review",
-    "text": "MiniMax M3 review ended: review retry budget spent unapproved"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T11:17:37Z",
-   "heartbeat_at": "2026-10-27T11:20:01Z",
+   "status_at": "2026-10-27T11:22:55Z",
+   "heartbeat_at": "2026-10-27T11:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 360,
     "markets": 3500,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T11:19:22Z",
+    "last_scan_at": "2026-10-27T11:24:39Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T11:19:22Z",
+    "updated_at": "2026-10-27T11:24:39Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T11:19:47Z",
+    "updated_at": "2026-10-27T11:23:47Z",
     "detail": "observations retained"
    },
    {
