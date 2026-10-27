@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T06:20:01Z",
+ "generated_at": "2026-10-27T06:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 13,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "19 built in 24h"
+    "active": true,
+    "detail": "18 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_6783eaf6",
+    "task": "E2B stable shared interval probability and log-mass kernel",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_11113cbe",
+    "task": "FLEX candidate t_b8edc3e0 ebec2fdbef80",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 1,
    "commits_24h": 1,
-   "built_24h": 19,
+   "built_24h": 18,
    "build_failed_24h": 0,
    "reviews_passed_24h": 17,
    "reviews_changes_24h": 7,
@@ -152,8 +152,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 14,
-    "building": 0,
+    "queued": 13,
+    "building": 1,
     "in_review": 2,
     "awaiting_merge": 14,
     "merged": 546,
@@ -162,7 +162,7 @@
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-27T05:36:53Z",
+   "last_run_at": "2026-10-27T06:20:02Z",
    "last_planned": 2,
    "model": "Codex (GPT-6 Sol)"
   },
@@ -214,7 +214,7 @@
     "active": 2,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-27T06:20:01Z",
+    "last_check_at": "2026-10-27T06:24:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow acceptance followthrough required",
      "flow registry overdue"
     ],
-    "last_check_at": "2026-10-27T06:10:01Z",
+    "last_check_at": "2026-10-27T06:20:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T06:20:02Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Sol)) planned 2 new tasks"
+   },
    {
     "at": "2026-10-27T06:18:02Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-26T20:39:57Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “CODE-01 Scan every relevant payout disclosure before qualification”: passed"
-   },
-   {
-    "at": "2026-10-26T20:39:47Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Hold label review on malformed relevant payout receipts” → sent to independent review"
    }
   ]
  },
@@ -373,17 +373,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "census service",
-   "status_at": "2026-10-27T06:19:59Z",
-   "heartbeat_at": "2026-10-27T06:20:00Z",
+   "status_at": "2026-10-27T06:24:59Z",
+   "heartbeat_at": "2026-10-27T06:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 353,
-    "markets": 3420,
+    "weather_events": 345,
+    "markets": 3332,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T06:15:34Z",
+    "last_scan_at": "2026-10-27T06:20:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T06:15:34Z",
+    "updated_at": "2026-10-27T06:20:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T06:18:49Z",
+    "updated_at": "2026-10-27T06:24:57Z",
     "detail": "observations retained"
    },
    {
