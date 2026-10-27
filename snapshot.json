@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T09:45:01Z",
+ "generated_at": "2026-10-27T09:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 17,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "21 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_c7c9fdbc",
-    "task": "CODE-01 Seal IEM coverage counts into its evidence digest",
-    "elapsed_min": 11
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -152,8 +152,8 @@
     "lock busy"
    ],
    "stage_totals": {
-    "queued": 15,
-    "building": 1,
+    "queued": 17,
+    "building": 0,
     "in_review": 1,
     "awaiting_merge": 14,
     "merged": 549,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T09:45:02Z",
+    "last_check_at": "2026-10-27T09:49:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -257,7 +257,7 @@
    {
     "at": "2026-10-27T09:41:51Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “FLEX candidate t_f837bc70 37f6942846d8”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Align preflight composition, provider and V2 health”: changes required"
    },
    {
     "at": "2026-10-27T09:33:03Z",
@@ -267,7 +267,7 @@
    {
     "at": "2026-10-27T09:29:50Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Align preflight composition, provider and V2 health” → sent to independent review"
    },
    {
     "at": "2026-10-27T09:25:02Z",
@@ -372,9 +372,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "census service",
-   "status_at": "2026-10-27T09:45:00Z",
-   "heartbeat_at": "2026-10-27T09:45:01Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-27T09:46:47Z",
+   "heartbeat_at": "2026-10-27T09:50:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -383,7 +383,7 @@
     "weather_events": 353,
     "markets": 3420,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T09:42:24Z",
+    "last_scan_at": "2026-10-27T09:47:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T09:42:24Z",
+    "updated_at": "2026-10-27T09:47:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T09:43:31Z",
+    "updated_at": "2026-10-27T09:49:32Z",
     "detail": "observations retained"
    },
    {
