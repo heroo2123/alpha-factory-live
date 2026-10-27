@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T16:30:01Z",
+ "generated_at": "2026-10-27T16:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,14 +18,14 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "20 built in 24h"
+    "detail": "19 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_56514e9a",
+    "task": "Bind executed modules in read-only owner-adapter probe",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 11,
    "commits_24h": 11,
-   "built_24h": 20,
+   "built_24h": 19,
    "build_failed_24h": 8,
    "reviews_passed_24h": 18,
    "reviews_changes_24h": 9,
@@ -139,10 +139,10 @@
     0,
     0,
     1,
-    1,
-    1,
-    1,
-    1,
+    2,
+    0,
+    2,
+    0,
     1,
     2,
     1,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T16:30:01Z",
+    "last_check_at": "2026-10-27T16:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,13 +232,13 @@
      "flow acceptance followthrough required",
      "flow registry overdue"
     ],
-    "last_check_at": "2026-10-27T16:20:02Z",
+    "last_check_at": "2026-10-27T16:30:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 12,
+    "runs_24h": 13,
     "runs_total": 730,
-    "last_run_at": "2026-10-27T15:05:02Z",
+    "last_run_at": "2026-10-27T16:30:03Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
     "running": false,
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T16:30:03Z",
+    "kind": "heal",
+    "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
+   },
    {
     "at": "2026-10-27T16:27:05Z",
     "kind": "build",
@@ -359,11 +364,6 @@
     "at": "2026-10-27T12:57:12Z",
     "kind": "warn",
     "text": "DeepSeek V4.1 Flash's build of “FLEX candidate t_af4aead8 2607331eba07” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-27T12:47:55Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “New main SHA 44ac24a4b145 Alpha V11 FLEX code task t_edbd4460 codex”: passed"
    }
   ]
  },
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T16:29:07Z",
-   "heartbeat_at": "2026-10-27T16:30:00Z",
+   "status_at": "2026-10-27T16:34:23Z",
+   "heartbeat_at": "2026-10-27T16:35:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
    "days_with_paper_decisions": 2,
    "scanner": {
-    "weather_events": 357,
-    "markets": 3483,
+    "weather_events": 340,
+    "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T16:28:20Z",
+    "last_scan_at": "2026-10-27T16:33:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T16:28:20Z",
+    "updated_at": "2026-10-27T16:33:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T16:28:37Z",
+    "updated_at": "2026-10-27T16:34:38Z",
     "detail": "observations retained"
    },
    {
