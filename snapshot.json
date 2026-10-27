@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T09:25:02Z",
+ "generated_at": "2026-10-27T09:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "21 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_f837bc70",
-    "task": "Complete preflight target-local refusal boundary",
-    "elapsed_min": 12
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -145,16 +145,16 @@
     0,
     0,
     0,
-    0,
-    2
+    1,
+    1
    ],
    "merge_holds": [
-    "protected code: waiting for a second review"
+    "lock busy"
    ],
    "stage_totals": {
     "queued": 16,
-    "building": 1,
-    "in_review": 0,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 15,
     "merged": 548,
     "parked": 453
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T09:24:02Z",
+    "state": "p1",
+    "active": 1,
+    "alerts_24h": 11,
+    "recoveries_24h": 13,
+    "last_check_at": "2026-10-27T09:30:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-27T09:29:50Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Complete preflight target-local refusal boundary” → sent to independent review"
+   },
+   {
+    "at": "2026-10-27T09:25:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
+   },
+   {
     "at": "2026-10-27T09:22:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job failed flexible provider router"
@@ -293,11 +303,6 @@
     "at": "2026-10-27T08:59:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
-    "at": "2026-10-27T08:58:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed flexible provider router"
    },
    {
     "at": "2026-10-27T08:57:12Z",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T06:15:06Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Isolate malformed optional physical-feature payloads” → sent to independent review"
-   },
-   {
-    "at": "2026-10-27T06:03:07Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “FLEX candidate t_37e88ecb 52797d110c8c”: passed"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "census service",
-   "status_at": "2026-10-27T09:25:01Z",
-   "heartbeat_at": "2026-10-27T09:25:01Z",
+   "status_at": "2026-10-27T09:29:59Z",
+   "heartbeat_at": "2026-10-27T09:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -383,7 +383,7 @@
     "weather_events": 353,
     "markets": 3420,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T09:21:06Z",
+    "last_scan_at": "2026-10-27T09:26:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T09:21:06Z",
+    "updated_at": "2026-10-27T09:26:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T09:23:28Z",
+    "updated_at": "2026-10-27T09:29:29Z",
     "detail": "observations retained"
    },
    {
@@ -501,7 +501,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 63 untouched city-days (11 cities, 6 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 64 untouched city-days (11 cities, 6 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 85,
    "waiting_city_days": 10,
