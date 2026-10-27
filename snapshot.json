@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T08:10:01Z",
+ "generated_at": "2026-10-27T08:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-27T08:10:02Z",
+    "state": "p2",
+    "active": 1,
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-27T08:14:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,13 +232,13 @@
      "flow glm plan lane dead",
      "flow code drift frozen copy"
     ],
-    "last_check_at": "2026-10-27T08:00:02Z",
+    "last_check_at": "2026-10-27T08:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 6,
-    "runs_total": 722,
-    "last_run_at": "2026-10-27T05:39:49Z",
+    "runs_24h": 7,
+    "runs_total": 723,
+    "last_run_at": "2026-10-27T08:12:23Z",
     "last_ok": true,
     "last_kind": "flow acceptance followthrough required",
     "running": false,
@@ -254,6 +254,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T08:12:23Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
+   },
+   {
+    "at": "2026-10-27T08:12:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: engineering regression selftest failed"
+   },
    {
     "at": "2026-10-27T08:03:02Z",
     "kind": "warn",
@@ -283,11 +293,6 @@
     "at": "2026-10-27T07:33:32Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “E2B stable shared interval probability and log-mass kernel” → sent to independent review"
-   },
-   {
-    "at": "2026-10-27T07:30:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
    },
    {
     "at": "2026-10-27T06:31:06Z",
@@ -358,11 +363,6 @@
     "at": "2026-10-26T21:48:18Z",
     "kind": "warn",
     "text": "MiniMax M3 reviewed “CODE-01 Seal IEM coverage counts into its evidence digest”: changes required"
-   },
-   {
-    "at": "2026-10-26T21:45:21Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “CODE-01 Seal IEM coverage counts into its evidence digest” → sent to independent review"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T08:09:34Z",
-   "heartbeat_at": "2026-10-27T08:10:01Z",
+   "status_at": "2026-10-27T08:14:48Z",
+   "heartbeat_at": "2026-10-27T08:15:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -383,7 +383,7 @@
     "weather_events": 359,
     "markets": 3486,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T08:06:49Z",
+    "last_scan_at": "2026-10-27T08:12:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T08:06:49Z",
+    "updated_at": "2026-10-27T08:12:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T08:09:15Z",
+    "updated_at": "2026-10-27T08:13:16Z",
     "detail": "observations retained"
    },
    {
@@ -506,7 +506,7 @@
    "labelled_city_days": 82,
    "waiting_city_days": 13,
    "labelled_days": 12,
-   "captured_days_waiting": 2,
+   "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
