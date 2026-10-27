@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T16:35:01Z",
+ "generated_at": "2026-10-27T16:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 12,
+    "count": 13,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_56514e9a",
-    "task": "Bind executed modules in read-only owner-adapter probe",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -121,7 +121,7 @@
    "built_24h": 19,
    "build_failed_24h": 8,
    "reviews_passed_24h": 18,
-   "reviews_changes_24h": 9,
+   "reviews_changes_24h": 10,
    "commits_by_hour": [
     0,
     1,
@@ -143,8 +143,8 @@
     0,
     2,
     0,
-    1,
     2,
+    1,
     1,
     1
    ],
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 12,
+    "queued": 13,
     "building": 0,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 11,
     "merged": 556,
-    "parked": 457
+    "parked": 458
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T16:35:01Z",
+    "last_check_at": "2026-10-27T16:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -251,10 +251,14 @@
    "DeepSeek",
    "GLM",
    "Kimi",
-   "MiniMax",
-   "OpenCode Go (2nd plan)"
+   "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-27T16:39:06Z",
+    "kind": "warn",
+    "text": "MiniMax M3 reviewed “Bind executed modules in read-only owner-adapter probe”: changes required"
+   },
    {
     "at": "2026-10-27T16:30:03Z",
     "kind": "heal",
@@ -359,11 +363,6 @@
     "at": "2026-10-27T12:57:15Z",
     "kind": "merge",
     "text": "Merged “E2C artifact provenance and runtime parity REVIEW REPAIR” into the main build"
-   },
-   {
-    "at": "2026-10-27T12:57:12Z",
-    "kind": "warn",
-    "text": "DeepSeek V4.1 Flash's build of “FLEX candidate t_af4aead8 2607331eba07” failed its tests; it will be retried"
    }
   ]
  },
@@ -374,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T16:34:23Z",
-   "heartbeat_at": "2026-10-27T16:35:00Z",
+   "status_at": "2026-10-27T16:39:44Z",
+   "heartbeat_at": "2026-10-27T16:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -384,7 +383,7 @@
     "weather_events": 340,
     "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T16:33:31Z",
+    "last_scan_at": "2026-10-27T16:38:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,21 +399,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-27T15:37:02Z",
+    "updated_at": "2026-10-27T16:37:01Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T16:33:31Z",
+    "updated_at": "2026-10-27T16:38:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T16:34:38Z",
+    "updated_at": "2026-10-27T16:38:39Z",
     "detail": "observations retained"
    },
    {
