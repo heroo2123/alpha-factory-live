@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T13:25:01Z",
+ "generated_at": "2026-10-27T13:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 49,
+    "count": 57,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_d21ff8ea",
-    "task": "a build task",
-    "elapsed_min": 7
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 49,
+   "progress_pct": 57,
    "last_finished_at": "2026-10-27T10:55:41Z",
    "last_passed": 17989,
    "last_failed": 0,
@@ -120,7 +120,7 @@
    "commits_24h": 7,
    "built_24h": 21,
    "build_failed_24h": 7,
-   "reviews_passed_24h": 17,
+   "reviews_passed_24h": 18,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
     0,
@@ -141,8 +141,8 @@
     0,
     0,
     0,
-    0,
-    2,
+    1,
+    1,
     1,
     1,
     1,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 13,
     "building": 0,
-    "in_review": 1,
+    "in_review": 0,
     "awaiting_merge": 14,
     "merged": 552,
     "parked": 458
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T13:25:01Z",
+    "last_check_at": "2026-10-27T13:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T13:27:04Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-27T13:15:03Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T10:44:54Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Close model, fee-time and runner parity findings”: changes required"
-   },
-   {
-    "at": "2026-10-27T10:44:51Z",
-    "kind": "warn",
-    "text": "DeepSeek V4.1 Flash's build of “New main SHA 3aef8e1ed561 Alpha V11 FLEX code task t_ee607fea…” failed its tests; it will be retried"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T13:24:42Z",
-   "heartbeat_at": "2026-10-27T13:25:00Z",
+   "status_at": "2026-10-27T13:29:58Z",
+   "heartbeat_at": "2026-10-27T13:30:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 368,
     "markets": 3602,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T13:20:42Z",
+    "last_scan_at": "2026-10-27T13:25:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T13:20:42Z",
+    "updated_at": "2026-10-27T13:25:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T13:24:08Z",
+    "updated_at": "2026-10-27T13:28:09Z",
     "detail": "observations retained"
    },
    {
