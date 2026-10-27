@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T06:15:01Z",
+ "generated_at": "2026-10-27T06:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "18 built in 24h"
+    "detail": "19 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 1,
    "commits_24h": 1,
-   "built_24h": 18,
+   "built_24h": 19,
    "build_failed_24h": 0,
    "reviews_passed_24h": 17,
    "reviews_changes_24h": 7,
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 14,
-    "building": 1,
-    "in_review": 1,
+    "building": 0,
+    "in_review": 2,
     "awaiting_merge": 14,
     "merged": 546,
     "parked": 459
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 2,
-    "alerts_24h": 15,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-10-27T06:15:01Z",
+    "alerts_24h": 14,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-10-27T06:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T06:18:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
+   {
+    "at": "2026-10-27T06:15:06Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “CODE-01 Isolate malformed optional physical-feature payloads” → sent to independent review"
+   },
    {
     "at": "2026-10-27T06:14:01Z",
     "kind": "warn",
@@ -298,11 +308,6 @@
     "at": "2026-10-27T05:19:28Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Include archived public trades in maker telemetry” → sent to independent review"
-   },
-   {
-    "at": "2026-10-27T05:17:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-27T05:06:15Z",
@@ -358,11 +363,6 @@
     "at": "2026-10-26T20:39:47Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Hold label review on malformed relevant payout receipts” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T20:15:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow new source test inventory gap"
    }
   ]
  },
@@ -372,9 +372,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T06:14:31Z",
-   "heartbeat_at": "2026-10-27T06:14:59Z",
+   "state": "census service",
+   "status_at": "2026-10-27T06:19:59Z",
+   "heartbeat_at": "2026-10-27T06:20:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -383,7 +383,7 @@
     "weather_events": 353,
     "markets": 3420,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T06:10:18Z",
+    "last_scan_at": "2026-10-27T06:15:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T06:10:18Z",
+    "updated_at": "2026-10-27T06:15:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T06:14:49Z",
+    "updated_at": "2026-10-27T06:18:49Z",
     "detail": "observations retained"
    },
    {
@@ -478,20 +478,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8641,
-     "city_days": 77
+     "brier": 0.8547,
+     "city_days": 80
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8262,
-     "city_days": 77
+     "brier": 0.8226,
+     "city_days": 80
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6599,
-     "city_days": 77
+     "brier": 0.6628,
+     "city_days": 80
     },
     {
      "key": "equal",
@@ -503,15 +503,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 57 untouched city-days (11 cities, 6 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 78,
-   "waiting_city_days": 17,
+   "labelled_city_days": 81,
+   "waiting_city_days": 14,
    "labelled_days": 12,
    "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-27T05:17:02Z",
+   "updated_at": "2026-10-27T06:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
