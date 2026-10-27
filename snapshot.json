@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T16:15:01Z",
+ "generated_at": "2026-10-27T16:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "19 built in 24h"
    },
    {
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 12,
+    "count": 11,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "10 merged in 24h"
+    "detail": "11 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_56514e9a",
+    "task": "Bind executed modules in read-only owner-adapter probe",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 18241,
   "flow": {
-   "merges_24h": 10,
-   "commits_24h": 10,
+   "merges_24h": 11,
+   "commits_24h": 11,
    "built_24h": 19,
    "build_failed_24h": 8,
    "reviews_passed_24h": 18,
@@ -144,19 +144,19 @@
     1,
     1,
     1,
-    1,
     2,
-    0
+    1,
+    1
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
-    "building": 0,
+    "queued": 12,
+    "building": 1,
     "in_review": 0,
-    "awaiting_merge": 12,
-    "merged": 555,
+    "awaiting_merge": 11,
+    "merged": 556,
     "parked": 457
    }
   },
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T16:15:01Z",
+    "last_check_at": "2026-10-27T16:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T16:13:10Z",
-   "heartbeat_at": "2026-10-27T16:15:01Z",
+   "status_at": "2026-10-27T16:18:29Z",
+   "heartbeat_at": "2026-10-27T16:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -384,7 +384,7 @@
     "weather_events": 361,
     "markets": 3527,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T16:12:58Z",
+    "last_scan_at": "2026-10-27T16:18:07Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T16:12:58Z",
+    "updated_at": "2026-10-27T16:18:07Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T16:14:35Z",
+    "updated_at": "2026-10-27T16:18:35Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-27T15:17:02Z",
+   "updated_at": "2026-10-27T16:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
