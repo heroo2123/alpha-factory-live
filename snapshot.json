@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T14:40:01Z",
+ "generated_at": "2026-10-27T14:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "19 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_993c6830",
+    "task": "E2C artifact provenance and runtime parity REVIEW REPAIR",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -140,8 +140,8 @@
     0,
     0,
     0,
-    1,
     2,
+    1,
     0,
     2,
     0,
@@ -149,15 +149,15 @@
     1
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 13,
-    "building": 0,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 12,
     "merged": 554,
-    "parked": 458
+    "parked": 457
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T14:40:01Z",
+    "state": "healthy",
+    "active": 0,
+    "alerts_24h": 11,
+    "recoveries_24h": 13,
+    "last_check_at": "2026-10-27T14:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow queued scope needless pin fixture",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-27T14:30:02Z",
+    "last_check_at": "2026-10-27T14:40:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T14:43:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code queue idle with capacity"
+   },
    {
     "at": "2026-10-27T14:27:01Z",
     "kind": "warn",
@@ -335,11 +340,6 @@
     "text": "MiniMax M3 reviewed “New main SHA 44ac24a4b145 Alpha V11 FLEX code task t_edbd4460 codex”: passed"
    },
    {
-    "at": "2026-10-27T12:44:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
     "at": "2026-10-27T12:27:05Z",
     "kind": "build",
     "text": "DeepSeek V4.1 Flash built “New main SHA 44ac24a4b145 Alpha V11 FLEX code task t_edbd4460 codex” → sent to independent review"
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T14:39:01Z",
-   "heartbeat_at": "2026-10-27T14:40:00Z",
+   "status_at": "2026-10-27T14:44:18Z",
+   "heartbeat_at": "2026-10-27T14:45:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 367,
     "markets": 3593,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T14:39:39Z",
+    "last_scan_at": "2026-10-27T14:44:56Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T14:39:39Z",
+    "updated_at": "2026-10-27T14:44:56Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T14:38:20Z",
+    "updated_at": "2026-10-27T14:44:21Z",
     "detail": "observations retained"
    },
    {
