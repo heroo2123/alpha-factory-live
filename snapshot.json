@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T17:00:01Z",
+ "generated_at": "2026-10-27T17:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "19 built in 24h"
    },
    {
@@ -31,15 +31,15 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 11,
+    "count": 10,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "11 merged in 24h"
+    "detail": "12 merged in 24h"
    },
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 10,
+    "count": 19,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "DeepSeek V4.1 Flash",
+    "family": "DeepSeek",
+    "task_id": "t_56514e9a",
+    "task": "Bind executed modules in read-only owner-adapter probe",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 10,
+   "progress_pct": 19,
    "last_finished_at": "2026-10-27T13:54:23Z",
    "last_passed": 18241,
    "last_failed": 0,
@@ -116,8 +116,8 @@
   },
   "tests_passing": 18241,
   "flow": {
-   "merges_24h": 11,
-   "commits_24h": 11,
+   "merges_24h": 12,
+   "commits_24h": 12,
    "built_24h": 19,
    "build_failed_24h": 8,
    "reviews_passed_24h": 18,
@@ -146,17 +146,17 @@
     1,
     2,
     0,
-    1
+    2
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
-    "building": 0,
+    "queued": 12,
+    "building": 1,
     "in_review": 0,
-    "awaiting_merge": 11,
-    "merged": 556,
+    "awaiting_merge": 10,
+    "merged": 557,
     "parked": 458
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-27T17:03:14Z",
+    "title": "PAPER-09 Reject impossible PWS sensor ages at preconfirmation",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-27T14:57:12Z",
     "title": "CODE-01 Validate event-state provenance before assigning performance slices",
@@ -201,38 +206,33 @@
     "at": "2026-10-27T08:30:09Z",
     "title": "E2B stable shared interval probability and log-mass kernel",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-26T18:00:25Z",
-    "title": "E2A bounded repair: T-group placeholders and isolated gap context",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T17:00:02Z",
+    "last_check_at": "2026-10-27T17:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 6,
+    "active": 7,
     "by_severity": {
      "P0": 0,
      "P1": 0,
-     "P2": 3
+     "P2": 4
     },
     "codes": [
      "flow unmergeable reviewed work",
+     "flow builders idle",
      "flow glm plan lane dead",
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture",
-     "flow acceptance followthrough required",
-     "flow registry overdue"
+     "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-27T16:50:02Z",
+    "last_check_at": "2026-10-27T17:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-27T17:03:14Z",
+    "kind": "merge",
+    "text": "Merged “PAPER-09 Reject impossible PWS sensor ages at preconfirmation” into the main build"
+   },
    {
     "at": "2026-10-27T16:53:01Z",
     "kind": "warn",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T13:09:03Z",
     "kind": "warn",
     "text": "DeepSeek V4.1 Flash's build of “E2C artifact provenance and runtime parity REVIEW REPAIR” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-27T12:57:15Z",
-    "kind": "merge",
-    "text": "Merged “E2C artifact provenance and runtime parity REVIEW REPAIR” into the main build"
    }
   ]
  },
@@ -372,9 +372,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T16:55:36Z",
-   "heartbeat_at": "2026-10-27T17:00:00Z",
+   "state": "census service",
+   "status_at": "2026-10-27T17:05:01Z",
+   "heartbeat_at": "2026-10-27T17:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 340,
     "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T16:59:20Z",
+    "last_scan_at": "2026-10-27T17:04:36Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T16:59:20Z",
+    "updated_at": "2026-10-27T17:04:36Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T16:58:42Z",
+    "updated_at": "2026-10-27T17:04:43Z",
     "detail": "observations retained"
    },
    {
@@ -738,8 +738,8 @@
      "name": "Personal-station lead signal path",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 31,
-     "open_tasks": 1
+     "merged_tasks": 32,
+     "open_tasks": 0
     },
     {
      "id": "PAPER-10",
