@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T12:30:02Z",
+ "generated_at": "2026-10-27T12:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -143,10 +143,10 @@
     0,
     0,
     1,
-    1,
-    1,
-    1,
-    1
+    2,
+    0,
+    2,
+    0
    ],
    "merge_holds": [
     "lock busy"
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 1,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T12:29:01Z",
+    "alerts_24h": 11,
+    "recoveries_24h": 13,
+    "last_check_at": "2026-10-27T12:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow acceptance followthrough required",
      "flow registry overdue"
     ],
-    "last_check_at": "2026-10-27T12:20:02Z",
+    "last_check_at": "2026-10-27T12:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T12:30:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-10-27T12:27:05Z",
     "kind": "build",
@@ -298,11 +303,6 @@
     "at": "2026-10-27T11:54:03Z",
     "kind": "warn",
     "text": "DeepSeek V4.1 Flash's build of “FLEX candidate t_af4aead8 2607331eba07” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-27T11:41:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-27T11:23:48Z",
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T12:28:02Z",
-   "heartbeat_at": "2026-10-27T12:30:02Z",
+   "status_at": "2026-10-27T12:33:18Z",
+   "heartbeat_at": "2026-10-27T12:35:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 359,
     "markets": 3503,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T12:28:12Z",
+    "last_scan_at": "2026-10-27T12:33:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T12:28:12Z",
+    "updated_at": "2026-10-27T12:33:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T12:29:58Z",
+    "updated_at": "2026-10-27T12:33:59Z",
     "detail": "observations retained"
    },
    {
