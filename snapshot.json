@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T17:20:02Z",
+ "generated_at": "2026-10-27T17:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "15 ready to build"
    },
    {
     "key": "build",
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 10,
+    "count": 11,
     "unit": "awaiting merge",
     "active": true,
     "detail": "12 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 50,
+    "count": 61,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 50,
+   "progress_pct": 61,
    "last_finished_at": "2026-10-27T13:54:23Z",
    "last_passed": 18241,
    "last_failed": 0,
@@ -120,7 +120,7 @@
    "commits_24h": 12,
    "built_24h": 20,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 18,
+   "reviews_passed_24h": 19,
    "reviews_changes_24h": 10,
    "commits_by_hour": [
     1,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 12,
     "building": 0,
-    "in_review": 1,
-    "awaiting_merge": 10,
+    "in_review": 0,
+    "awaiting_merge": 11,
     "merged": 557,
     "parked": 458
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-27T17:20:02Z",
+    "last_check_at": "2026-10-27T17:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow acceptance followthrough required",
      "flow registry overdue"
     ],
-    "last_check_at": "2026-10-27T17:10:02Z",
+    "last_check_at": "2026-10-27T17:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-27T17:21:12Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “FLEX candidate t_56514e9a c71f1a783bff”: passed"
+   },
    {
     "at": "2026-10-27T17:12:08Z",
     "kind": "build",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T13:27:04Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-27T13:15:03Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T17:16:33Z",
-   "heartbeat_at": "2026-10-27T17:20:02Z",
+   "status_at": "2026-10-27T17:21:54Z",
+   "heartbeat_at": "2026-10-27T17:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 340,
     "markets": 3296,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T17:15:12Z",
+    "last_scan_at": "2026-10-27T17:20:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T17:15:12Z",
+    "updated_at": "2026-10-27T17:20:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T17:18:45Z",
+    "updated_at": "2026-10-27T17:24:46Z",
     "detail": "observations retained"
    },
    {
