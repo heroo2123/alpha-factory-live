@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T05:05:01Z",
+ "generated_at": "2026-10-27T05:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 13,
+    "count": 14,
     "unit": "awaiting merge",
     "active": true,
     "detail": "1 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_37e88ecb",
     "task": "CODE-01 Include archived public trades in maker telemetry",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -119,8 +119,8 @@
    "merges_24h": 1,
    "commits_24h": 1,
    "built_24h": 17,
-   "build_failed_24h": 1,
-   "reviews_passed_24h": 15,
+   "build_failed_24h": 0,
+   "reviews_passed_24h": 16,
    "reviews_changes_24h": 7,
    "commits_by_hour": [
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 14,
     "building": 1,
-    "in_review": 2,
-    "awaiting_merge": 13,
+    "in_review": 1,
+    "awaiting_merge": 14,
     "merged": 546,
     "parked": 458
    }
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-27T05:05:02Z",
+    "last_check_at": "2026-10-27T05:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T05:06:15Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “FLEX candidate t_eada53b1 cfa11473c382”: passed"
+   },
    {
     "at": "2026-10-27T05:00:02Z",
     "kind": "heal",
@@ -358,11 +363,6 @@
     "at": "2026-10-26T19:18:09Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “CODE-01 Verify recovered collection provenance” → sent to independent review"
-   },
-   {
-    "at": "2026-10-26T19:03:12Z",
-    "kind": "warn",
-    "text": "MiniMax M3 reviewed “CODE-01 Isolate malformed optional physical-feature payloads”: changes required"
    }
   ]
  },
@@ -373,17 +373,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-27T05:02:04Z",
-   "heartbeat_at": "2026-10-27T05:05:01Z",
+   "status_at": "2026-10-27T05:07:33Z",
+   "heartbeat_at": "2026-10-27T05:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 333,
-    "markets": 3200,
+    "weather_events": 357,
+    "markets": 3464,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T05:02:35Z",
+    "last_scan_at": "2026-10-27T05:08:29Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T05:02:35Z",
+    "updated_at": "2026-10-27T05:08:29Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T05:04:30Z",
+    "updated_at": "2026-10-27T05:08:32Z",
     "detail": "observations retained"
    },
    {
