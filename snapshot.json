@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-27T10:05:01Z",
+ "generated_at": "2026-10-27T10:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
-    "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
+    "active": false,
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 14,
+    "count": 15,
     "unit": "awaiting merge",
     "active": true,
     "detail": "4 merged in 24h"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 7,
+    "count": 18,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -85,27 +85,27 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_a24bbf2f",
-    "task": "FLEX candidate t_c7c9fdbc 12d2afc060f9",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_c38cc1d2",
-    "task": "a build task",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    }
   ],
   "qa": {
    "running": true,
-   "progress_pct": 7,
+   "progress_pct": 18,
    "last_finished_at": "2026-10-26T23:16:33Z",
    "last_passed": 17031,
    "last_failed": 0,
@@ -120,7 +120,7 @@
    "commits_24h": 4,
    "built_24h": 22,
    "build_failed_24h": 1,
-   "reviews_passed_24h": 18,
+   "reviews_passed_24h": 19,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     0,
@@ -149,13 +149,13 @@
     1
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 16,
     "building": 0,
-    "in_review": 2,
-    "awaiting_merge": 14,
+    "in_review": 1,
+    "awaiting_merge": 15,
     "merged": 549,
     "parked": 454
    }
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 11,
-    "recoveries_24h": 13,
-    "last_check_at": "2026-10-27T10:05:01Z",
+    "state": "p1",
+    "active": 2,
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-27T10:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-27T10:09:10Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
+   },
+   {
+    "at": "2026-10-27T10:09:08Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “FLEX candidate t_c7c9fdbc 12d2afc060f9”: passed"
+   },
+   {
+    "at": "2026-10-27T10:07:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job failed flexible provider router"
+   },
    {
     "at": "2026-10-27T10:02:01Z",
     "kind": "heal",
@@ -298,11 +313,6 @@
     "at": "2026-10-27T09:25:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-27T09:22:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed flexible provider router"
    },
    {
     "at": "2026-10-27T09:21:03Z",
@@ -353,16 +363,6 @@
     "at": "2026-10-27T08:18:03Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) build attempt ended: no code change"
-   },
-   {
-    "at": "2026-10-27T08:12:23Z",
-    "kind": "heal",
-    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: flow acceptance followthrough required"
-   },
-   {
-    "at": "2026-10-27T07:33:32Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E2B stable shared interval probability and log-mass kernel” → sent to independent review"
    }
   ]
  },
@@ -372,9 +372,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-28",
-   "state": "census service",
-   "status_at": "2026-10-27T10:05:00Z",
-   "heartbeat_at": "2026-10-27T10:05:01Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-27T10:07:07Z",
+   "heartbeat_at": "2026-10-27T10:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 3,
@@ -383,7 +383,7 @@
     "weather_events": 353,
     "markets": 3420,
     "opportunities": 0,
-    "last_scan_at": "2026-10-27T10:03:37Z",
+    "last_scan_at": "2026-10-27T10:09:04Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +406,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-27T10:03:37Z",
+    "updated_at": "2026-10-27T10:09:04Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-27T10:03:34Z",
+    "updated_at": "2026-10-27T10:09:35Z",
     "detail": "observations retained"
    },
    {
