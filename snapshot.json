@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T09:15:02Z",
+ "generated_at": "2026-10-28T09:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "11 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_cbb8568a",
-    "task": "E2D complete comparison custody and native incumbent support",
-    "elapsed_min": 14
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -127,12 +127,12 @@
     1,
     1,
     1,
-    1,
-    2,
-    0,
     2,
     1,
+    1,
+    1,
     2,
+    1,
     1,
     0,
     0,
@@ -149,12 +149,11 @@
     4
    ],
    "merge_holds": [
-    "source task not integration hold",
-    "protected code: waiting for a second review"
+    "lock busy"
    ],
    "stage_totals": {
-    "queued": 14,
-    "building": 1,
+    "queued": 15,
+    "building": 0,
     "in_review": 0,
     "awaiting_merge": 6,
     "merged": 565,
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-28T09:15:02Z",
+    "last_check_at": "2026-10-28T09:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -375,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T09:12:02Z",
-   "heartbeat_at": "2026-10-28T09:15:00Z",
+   "status_at": "2026-10-28T09:17:19Z",
+   "heartbeat_at": "2026-10-28T09:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -385,7 +384,7 @@
     "weather_events": null,
     "markets": null,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T09:10:19Z",
+    "last_scan_at": "2026-10-28T09:15:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T09:10:19Z",
+    "updated_at": "2026-10-28T09:15:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T09:13:13Z",
+    "updated_at": "2026-10-28T09:19:14Z",
     "detail": "gated"
    },
    {
@@ -513,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-28T08:17:01Z",
+   "updated_at": "2026-10-28T09:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
