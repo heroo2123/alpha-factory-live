@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T09:35:01Z",
+ "generated_at": "2026-10-28T09:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "12 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "E2D snapshot validated inputs through final publication",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_aa118091",
+    "task": "Receipt book freshness through atomic publication",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -121,16 +121,16 @@
    "built_24h": 12,
    "build_failed_24h": 8,
    "reviews_passed_24h": 10,
-   "reviews_changes_24h": 8,
+   "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
     2,
     0,
-    1,
     2,
     1,
     1,
     1,
+    1,
     2,
     1,
     1,
@@ -145,8 +145,8 @@
     0,
     0,
     0,
-    0,
-    4
+    1,
+    3
    ],
    "merge_holds": [
     "source task not integration hold",
@@ -154,8 +154,8 @@
    ],
    "stage_totals": {
     "queued": 14,
-    "building": 0,
-    "in_review": 2,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 6,
     "merged": 565,
     "parked": 458
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-28T09:35:01Z",
+    "last_check_at": "2026-10-28T09:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -257,6 +257,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-28T09:35:43Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “E2D snapshot validated inputs through final publication”: changes required"
+   },
+   {
     "at": "2026-10-28T09:30:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Receipt book freshness through atomic publication” → sent to independent review"
@@ -269,7 +274,7 @@
    {
     "at": "2026-10-28T09:24:13Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E2D complete comparison custody and native incumbent support” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “E2D snapshot validated inputs through final publication” → sent to independent review"
    },
    {
     "at": "2026-10-28T09:23:01Z",
@@ -314,7 +319,7 @@
    {
     "at": "2026-10-28T08:35:52Z",
     "kind": "build",
-    "text": "MiniMax M3 built “E2D complete comparison custody and native incumbent support” → sent to independent review"
+    "text": "MiniMax M3 built “E2D snapshot validated inputs through final publication” → sent to independent review"
    },
    {
     "at": "2026-10-28T08:32:53Z",
@@ -360,11 +365,6 @@
     "at": "2026-10-28T06:48:49Z",
     "kind": "heal",
     "text": "Operator AI (Kimi K3) audit run: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-27T19:55:02Z",
-    "kind": "heal",
-    "text": "Operator AI (GLM 5.3) audit run: code queue idle with capacity"
    }
   ]
  },
@@ -375,17 +375,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T09:32:09Z",
-   "heartbeat_at": "2026-10-28T09:35:00Z",
+   "status_at": "2026-10-28T09:37:28Z",
+   "heartbeat_at": "2026-10-28T09:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": null,
-    "markets": null,
+    "weather_events": 351,
+    "markets": 3404,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T09:25:20Z",
+    "last_scan_at": "2026-10-28T09:35:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -401,21 +401,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-28T08:37:02Z",
+    "updated_at": "2026-10-28T09:37:01Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T09:25:20Z",
+    "updated_at": "2026-10-28T09:35:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T09:33:16Z",
+    "updated_at": "2026-10-28T09:39:17Z",
     "detail": "observations retained"
    },
    {
