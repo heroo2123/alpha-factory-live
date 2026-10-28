@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T09:00:02Z",
+ "generated_at": "2026-10-28T09:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 13,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "11 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "E2D complete comparison custody and native incumbent support",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_5117df9e",
+    "task": "E1B verified fees and complete experimental valuation",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -130,8 +130,8 @@
     1,
     2,
     0,
-    1,
     2,
+    1,
     2,
     1,
     0,
@@ -149,15 +149,16 @@
     3
    ],
    "merge_holds": [
+    "source task not integration hold",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 14,
-    "building": 0,
+    "queued": 13,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 6,
     "merged": 564,
-    "parked": 458
+    "parked": 459
    }
   },
   "architect": {
@@ -210,11 +211,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-28T09:00:02Z",
+    "last_check_at": "2026-10-28T09:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +233,7 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-28T08:50:01Z",
+    "last_check_at": "2026-10-28T09:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -288,7 +289,7 @@
    {
     "at": "2026-10-28T08:32:53Z",
     "kind": "review",
-    "text": "MiniMax M3 reviewed “FLEX candidate t_8cc800e1 08ed39ef469c”: passed"
+    "text": "MiniMax M3 reviewed “Receipt book freshness through atomic publication”: passed"
    },
    {
     "at": "2026-10-28T08:20:03Z",
@@ -298,7 +299,7 @@
    {
     "at": "2026-10-28T08:14:50Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “New main SHA 3aef8e1ed561 Alpha V11 FLEX code task t_ee607fea…” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Receipt book freshness through atomic publication” → sent to independent review"
    },
    {
     "at": "2026-10-28T08:03:14Z",
@@ -374,8 +375,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T08:56:13Z",
-   "heartbeat_at": "2026-10-28T09:00:01Z",
+   "status_at": "2026-10-28T09:01:31Z",
+   "heartbeat_at": "2026-10-28T09:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +385,7 @@
     "weather_events": null,
     "markets": null,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T08:55:19Z",
+    "last_scan_at": "2026-10-28T09:00:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T08:55:19Z",
+    "updated_at": "2026-10-28T09:00:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T08:59:12Z",
+    "updated_at": "2026-10-28T09:03:12Z",
     "detail": "gated"
    },
    {
