@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T09:20:01Z",
+ "generated_at": "2026-10-28T09:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "11 built in 24h"
+    "active": true,
+    "detail": "12 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_aa118091",
+    "task": "Receipt book freshness through atomic publication",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "E2D complete comparison custody and native incumbent support",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 17,
    "commits_24h": 17,
-   "built_24h": 11,
+   "built_24h": 12,
    "build_failed_24h": 8,
    "reviews_passed_24h": 10,
    "reviews_changes_24h": 8,
@@ -149,12 +149,13 @@
     4
    ],
    "merge_holds": [
-    "lock busy"
+    "source task not integration hold",
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 15,
-    "building": 0,
-    "in_review": 0,
+    "queued": 14,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 6,
     "merged": 565,
     "parked": 458
@@ -214,7 +215,7 @@
     "active": 0,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-28T09:20:02Z",
+    "last_check_at": "2026-10-28T09:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +233,7 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-28T09:10:02Z",
+    "last_check_at": "2026-10-28T09:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +256,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T09:24:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “E2D complete comparison custody and native incumbent support” → sent to independent review"
+   },
+   {
+    "at": "2026-10-28T09:23:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
    {
     "at": "2026-10-28T09:10:09Z",
     "kind": "merge",
@@ -326,11 +337,6 @@
     "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
-    "at": "2026-10-28T07:53:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
     "at": "2026-10-28T07:25:02Z",
     "kind": "heal",
     "text": "Operator AI (Codex (GPT-6 Sol)) audit run: hermes router stale"
@@ -359,11 +365,6 @@
     "at": "2026-10-27T19:52:05Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Hold label review on malformed relevant payout receipts” into the main build"
-   },
-   {
-    "at": "2026-10-27T18:46:05Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Scan every relevant payout disclosure before qualification” into the main build"
    }
   ]
  },
@@ -373,9 +374,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T09:17:19Z",
-   "heartbeat_at": "2026-10-28T09:20:01Z",
+   "state": "census service",
+   "status_at": "2026-10-28T09:25:00Z",
+   "heartbeat_at": "2026-10-28T09:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +385,7 @@
     "weather_events": null,
     "markets": null,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T09:15:19Z",
+    "last_scan_at": "2026-10-28T09:20:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T09:15:19Z",
+    "updated_at": "2026-10-28T09:20:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T09:19:14Z",
+    "updated_at": "2026-10-28T09:23:14Z",
     "detail": "gated"
    },
    {
