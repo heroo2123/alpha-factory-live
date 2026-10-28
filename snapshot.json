@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T18:00:01Z",
+ "generated_at": "2026-10-28T18:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -119,7 +119,7 @@
    "merges_24h": 13,
    "commits_24h": 13,
    "built_24h": 21,
-   "build_failed_24h": 3,
+   "build_failed_24h": 4,
    "reviews_passed_24h": 11,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
+    "state": "p1",
+    "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T18:00:02Z",
+    "last_check_at": "2026-10-28T18:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-28T17:50:02Z",
+    "last_check_at": "2026-10-28T18:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T18:03:12Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra)'s build of “D1A disconnected publication fence primitive” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-28T17:57:01Z",
     "kind": "heal",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T14:02:21Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-28T13:54:14Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E2C enforce both approved R3 prediction seal deadlines”: changes required"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T17:57:26Z",
-   "heartbeat_at": "2026-10-28T18:00:01Z",
+   "status_at": "2026-10-28T18:02:44Z",
+   "heartbeat_at": "2026-10-28T18:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 339,
     "markets": 3289,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T17:58:12Z",
+    "last_scan_at": "2026-10-28T18:04:17Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T17:58:12Z",
+    "updated_at": "2026-10-28T18:04:17Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T17:58:38Z",
+    "updated_at": "2026-10-28T18:04:39Z",
     "detail": "observations retained"
    },
    {
