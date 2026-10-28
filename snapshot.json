@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T18:15:01Z",
+ "generated_at": "2026-10-28T18:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "18 ready to build"
@@ -34,7 +34,7 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "13 merged in 24h"
+    "detail": "12 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_fdbb8ce4",
     "task": "Close model, fee-time and runner parity findings",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 18274,
   "flow": {
-   "merges_24h": 13,
-   "commits_24h": 13,
+   "merges_24h": 12,
+   "commits_24h": 12,
    "built_24h": 21,
    "build_failed_24h": 4,
    "reviews_passed_24h": 11,
    "reviews_changes_24h": 12,
    "commits_by_hour": [
-    2,
+    1,
     1,
     0,
     0,
@@ -138,10 +138,10 @@
     0,
     0,
     4,
-    0,
-    2,
-    0,
     1,
+    1,
+    1,
+    0,
     1,
     0,
     1,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 15,
+    "queued": 16,
     "building": 1,
     "in_review": 0,
     "awaiting_merge": 3,
     "merged": 568,
-    "parked": 441
+    "parked": 440
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T18:15:01Z",
+    "last_check_at": "2026-10-28T18:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-28T18:16:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
+   },
+   {
     "at": "2026-10-28T18:11:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job failed flexible provider router"
@@ -263,7 +268,7 @@
    {
     "at": "2026-10-28T18:03:12Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra)'s build of “D1A disconnected publication fence primitive” failed its tests; it will be retried"
+    "text": "Codex (GPT-6 Astra)'s build of “D1A retain tested fence and add required inventory marker” failed its tests; it will be retried"
    },
    {
     "at": "2026-10-28T17:57:01Z",
@@ -294,11 +299,6 @@
     "at": "2026-10-28T17:36:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “E3A repair advancing-clock admission and stable revalidation” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T17:36:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-28T17:13:00Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T18:13:18Z",
-   "heartbeat_at": "2026-10-28T18:15:01Z",
+   "status_at": "2026-10-28T18:18:33Z",
+   "heartbeat_at": "2026-10-28T18:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 339,
     "markets": 3289,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T18:09:51Z",
+    "last_scan_at": "2026-10-28T18:15:27Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T18:09:51Z",
+    "updated_at": "2026-10-28T18:15:27Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T18:14:41Z",
+    "updated_at": "2026-10-28T18:18:41Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-28T17:17:01Z",
+   "updated_at": "2026-10-28T18:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
