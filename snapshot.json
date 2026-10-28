@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T12:25:01Z",
+ "generated_at": "2026-10-28T12:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "16 built in 24h"
+    "detail": "15 built in 24h"
    },
    {
     "key": "review",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 17,
    "commits_24h": 17,
-   "built_24h": 16,
+   "built_24h": 15,
    "build_failed_24h": 5,
    "reviews_passed_24h": 10,
    "reviews_changes_24h": 9,
@@ -144,15 +144,15 @@
     0,
     0,
     4,
-    1,
-    1,
+    2,
+    0,
     1
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 15,
+    "queued": 16,
     "building": 0,
     "in_review": 0,
     "awaiting_merge": 4,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T12:25:01Z",
+    "last_check_at": "2026-10-28T12:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -328,12 +328,12 @@
    {
     "at": "2026-10-28T10:45:15Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “E2D reviewed source clock custody and S4 continuation consumer”: changes required"
    },
    {
     "at": "2026-10-28T10:35:06Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “E2D reviewed source clock custody and S4 continuation consumer” → sent to independent review"
    },
    {
     "at": "2026-10-28T10:29:42Z",
@@ -358,7 +358,7 @@
    {
     "at": "2026-10-28T09:57:14Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “E2D reviewed source clock custody and S4 continuation consumer”: changes required"
    },
    {
     "at": "2026-10-28T09:48:18Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T12:22:34Z",
-   "heartbeat_at": "2026-10-28T12:25:01Z",
+   "status_at": "2026-10-28T12:27:50Z",
+   "heartbeat_at": "2026-10-28T12:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 357,
     "markets": 3487,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T12:22:50Z",
+    "last_scan_at": "2026-10-28T12:28:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T12:22:50Z",
+    "updated_at": "2026-10-28T12:28:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T12:23:44Z",
+    "updated_at": "2026-10-28T12:29:45Z",
     "detail": "observations retained"
    },
    {
