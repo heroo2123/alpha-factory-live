@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T15:35:01Z",
+ "generated_at": "2026-10-28T15:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 15,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "19 built in 24h"
    },
    {
@@ -25,8 +25,8 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
-    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
+    "active": true,
+    "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "E2D deliver full validated comparison and restore checkpoint",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_541e6a1e",
+    "task": "Restore complete fee baseline and fix exact startup/depth defects",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -139,8 +139,8 @@
     0,
     0,
     0,
-    0,
-    4,
+    1,
+    3,
     2,
     0,
     1,
@@ -152,8 +152,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 15,
-    "building": 0,
+    "queued": 14,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 4,
     "merged": 567,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 3,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-28T15:35:01Z",
+    "last_check_at": "2026-10-28T15:40:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,31 @@
   ],
   "events": [
    {
+    "at": "2026-10-28T15:38:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-10-28T15:38:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled review"
+   },
+   {
+    "at": "2026-10-28T15:37:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: engineering regression selftest failed"
+   },
+   {
+    "at": "2026-10-28T15:36:24Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
+   },
+   {
+    "at": "2026-10-28T15:36:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled review"
+   },
+   {
     "at": "2026-10-28T15:33:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: disk headroom low"
@@ -266,29 +291,9 @@
     "text": "Guardian raised an alert: engineering regression selftest failed"
    },
    {
-    "at": "2026-10-28T15:27:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-10-28T15:20:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-10-28T15:19:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
     "at": "2026-10-28T15:12:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Restore complete fee baseline and fix exact startup/depth defects” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T15:00:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: disk headroom low"
    },
    {
     "at": "2026-10-28T14:54:12Z",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T12:08:51Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Restore complete fee baseline and fix exact startup/depth defects”: changes required"
-   },
-   {
-    "at": "2026-10-28T12:00:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Restore complete fee baseline and fix exact startup/depth defects” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T15:33:27Z",
-   "heartbeat_at": "2026-10-28T15:35:01Z",
+   "status_at": "2026-10-28T15:38:45Z",
+   "heartbeat_at": "2026-10-28T15:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 360,
     "markets": 3520,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T15:34:19Z",
+    "last_scan_at": "2026-10-28T15:39:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,21 +400,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-28T14:37:01Z",
+    "updated_at": "2026-10-28T15:37:01Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T15:34:19Z",
+    "updated_at": "2026-10-28T15:39:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T15:34:15Z",
+    "updated_at": "2026-10-28T15:38:16Z",
     "detail": "observations retained"
    },
    {
