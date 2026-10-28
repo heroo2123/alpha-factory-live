@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T17:20:01Z",
+ "generated_at": "2026-10-28T17:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -120,7 +120,7 @@
    "commits_24h": 14,
    "built_24h": 20,
    "build_failed_24h": 3,
-   "reviews_passed_24h": 12,
+   "reviews_passed_24h": 11,
    "reviews_changes_24h": 11,
    "commits_by_hour": [
     2,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-28T17:20:01Z",
+    "state": "p1",
+    "active": 2,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-10-28T17:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-28T17:10:02Z",
+    "last_check_at": "2026-10-28T17:20:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T17:23:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
    {
     "at": "2026-10-28T17:13:00Z",
     "kind": "merge",
@@ -304,11 +309,6 @@
     "at": "2026-10-28T16:21:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “R31 retained IEM decision and race findings after first cycle” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T16:20:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-10-28T16:08:51Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T17:17:50Z",
-   "heartbeat_at": "2026-10-28T17:20:00Z",
+   "status_at": "2026-10-28T17:23:06Z",
+   "heartbeat_at": "2026-10-28T17:25:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 339,
     "markets": 3289,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T17:19:18Z",
+    "last_scan_at": "2026-10-28T17:24:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T17:19:18Z",
+    "updated_at": "2026-10-28T17:24:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T17:18:32Z",
+    "updated_at": "2026-10-28T17:24:33Z",
     "detail": "observations retained"
    },
    {
