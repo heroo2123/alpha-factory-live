@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T11:20:01Z",
+ "generated_at": "2026-10-28T11:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "14 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_4b425a33",
+    "task": "E2A reviewed R3 schedule interface on accepted weather parser",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_e4c4b357",
+    "task": "D3 private atomic receipt-batch storage groundwork",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -119,7 +119,7 @@
    "merges_24h": 17,
    "commits_24h": 17,
    "built_24h": 14,
-   "build_failed_24h": 7,
+   "build_failed_24h": 6,
    "reviews_passed_24h": 10,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
@@ -152,7 +152,7 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 16,
+    "queued": 15,
     "building": 0,
     "in_review": 1,
     "awaiting_merge": 4,
@@ -210,29 +210,29 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-28T11:20:01Z",
+    "state": "healthy",
+    "active": 0,
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-28T11:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 10,
     "by_severity": {
      "P0": 0,
-     "P1": 0,
-     "P2": 5
+     "P1": 1,
+     "P2": 6
     },
     "codes": [
+     "flow frozen review scope drift",
      "flow unmergeable reviewed work",
      "flow qa resource blocked",
      "flow qa not running",
-     "flow glm plan lane dead",
-     "flow code drift frozen copy",
-     "flow queued scope needless pin fixture"
+     "flow go2 lane not polled",
+     "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-10-28T11:10:01Z",
+    "last_check_at": "2026-10-28T11:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T11:23:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-10-28T11:23:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
    {
     "at": "2026-10-28T11:15:31Z",
     "kind": "build",
@@ -336,19 +346,9 @@
     "text": "Codex (GPT-6 Astra) built “Receipt book freshness through atomic publication” → sent to independent review"
    },
    {
-    "at": "2026-10-28T09:26:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
     "at": "2026-10-28T09:24:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T09:23:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-28T09:10:09Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T11:16:35Z",
-   "heartbeat_at": "2026-10-28T11:20:02Z",
+   "status_at": "2026-10-28T11:21:54Z",
+   "heartbeat_at": "2026-10-28T11:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 352,
     "markets": 3418,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T11:18:54Z",
+    "last_scan_at": "2026-10-28T11:23:56Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T11:18:54Z",
+    "updated_at": "2026-10-28T11:23:56Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T11:19:33Z",
+    "updated_at": "2026-10-28T11:23:34Z",
     "detail": "observations retained"
    },
    {
