@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T10:25:02Z",
+ "generated_at": "2026-10-28T10:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "13 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -34,7 +34,7 @@
     "count": 5,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "17 merged in 24h"
+    "detail": "18 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_cbb8568a",
-    "task": "E2D complete immutable-input boundary root-cause pass",
-    "elapsed_min": 6
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,11 +116,11 @@
   },
   "tests_passing": 18274,
   "flow": {
-   "merges_24h": 17,
-   "commits_24h": 17,
+   "merges_24h": 18,
+   "commits_24h": 18,
    "built_24h": 13,
    "build_failed_24h": 8,
-   "reviews_passed_24h": 9,
+   "reviews_passed_24h": 10,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     1,
@@ -146,17 +146,17 @@
     0,
     0,
     4,
-    1
+    2
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 14,
-    "building": 1,
-    "in_review": 1,
+    "queued": 16,
+    "building": 0,
+    "in_review": 0,
     "awaiting_merge": 5,
-    "merged": 566,
+    "merged": 567,
     "parked": 448
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-28T10:29:42Z",
+    "title": "CODE-01 Gate unclassified official reports as unknown risk",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-28T10:19:04Z",
     "title": "Receipt book freshness through atomic publication",
@@ -201,11 +206,6 @@
     "at": "2026-10-27T17:03:14Z",
     "title": "PAPER-09 Reject impossible PWS sensor ages at preconfirmation",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-27T14:57:12Z",
-    "title": "CODE-01 Validate event-state provenance before assigning performance slices",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-28T10:25:02Z",
+    "last_check_at": "2026-10-28T10:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T10:29:42Z",
+    "kind": "merge",
+    "text": "Merged “CODE-01 Gate unclassified official reports as unknown risk” into the main build"
+   },
+   {
+    "at": "2026-10-28T10:25:59Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “CODE-01 Gate unclassified official reports as unknown risk”: passed"
+   },
    {
     "at": "2026-10-28T10:19:04Z",
     "kind": "merge",
@@ -354,16 +364,6 @@
     "at": "2026-10-28T08:20:03Z",
     "kind": "plan",
     "text": "Architect (Codex (GPT-6 Sol)) planned 2 new tasks"
-   },
-   {
-    "at": "2026-10-28T08:14:50Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Receipt book freshness through atomic publication” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T08:03:14Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E1B verified fees and complete experimental valuation”: changes required"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T10:23:20Z",
-   "heartbeat_at": "2026-10-28T10:25:02Z",
+   "status_at": "2026-10-28T10:28:35Z",
+   "heartbeat_at": "2026-10-28T10:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 351,
     "markets": 3404,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T10:22:45Z",
+    "last_scan_at": "2026-10-28T10:27:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T10:22:45Z",
+    "updated_at": "2026-10-28T10:27:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T10:23:24Z",
+    "updated_at": "2026-10-28T10:29:25Z",
     "detail": "observations retained"
    },
    {
@@ -502,7 +502,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 73 untouched city-days (11 cities, 7 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 74 untouched city-days (11 cities, 7 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 95,
    "waiting_city_days": 10,
@@ -640,8 +640,8 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 111,
-     "open_tasks": 2
+     "merged_tasks": 112,
+     "open_tasks": 1
     },
     {
      "id": "CODE-02",
