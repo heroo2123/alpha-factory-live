@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T22:05:02Z",
+ "generated_at": "2026-10-28T22:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -17,15 +17,15 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "30 built in 24h"
+    "active": true,
+    "detail": "31 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_fdbb8ce4",
+    "task": "Preflight verify remaining capital and prospective risk capacity",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_b7690472",
+    "task": "E3A native timestamp precision without expiry renewal",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 11,
    "commits_24h": 11,
-   "built_24h": 30,
+   "built_24h": 31,
    "build_failed_24h": 5,
    "reviews_passed_24h": 16,
    "reviews_changes_24h": 16,
@@ -133,13 +133,13 @@
     0,
     0,
     0,
-    3,
-    1,
+    4,
+    0,
     2,
     0,
     1,
-    0,
     1,
+    0,
     1,
     0,
     1,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 12,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 569,
     "parked": 443
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T22:05:02Z",
+    "last_check_at": "2026-10-28T22:10:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T22:05:38Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “E3A native timestamp precision without expiry renewal” → sent to independent review"
+   },
    {
     "at": "2026-10-28T21:47:30Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T19:18:15Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “D1A charge boot-ID IO to final expiry check”: passed"
-   },
-   {
-    "at": "2026-10-28T19:12:16Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E2D finish cold-process restore purity”: changes required"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-28T22:04:59Z",
-   "heartbeat_at": "2026-10-28T22:05:02Z",
+   "status_at": "2026-10-28T22:09:55Z",
+   "heartbeat_at": "2026-10-28T22:10:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 325,
     "markets": 3137,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T22:04:26Z",
+    "last_scan_at": "2026-10-28T22:09:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T22:04:26Z",
+    "updated_at": "2026-10-28T22:09:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T22:03:18Z",
+    "updated_at": "2026-10-28T22:09:19Z",
     "detail": "observations retained"
    },
    {
