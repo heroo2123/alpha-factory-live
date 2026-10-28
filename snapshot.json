@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T09:10:02Z",
+ "generated_at": "2026-10-28T09:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 7,
+    "count": 6,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "16 merged in 24h"
+    "detail": "17 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_cbb8568a",
     "task": "E2D complete comparison custody and native incumbent support",
-    "elapsed_min": 9
+    "elapsed_min": 14
    },
    {
     "slot": "Builder 2",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 18274,
   "flow": {
-   "merges_24h": 16,
-   "commits_24h": 16,
+   "merges_24h": 17,
+   "commits_24h": 17,
    "built_24h": 11,
    "build_failed_24h": 8,
    "reviews_passed_24h": 10,
@@ -146,19 +146,19 @@
     0,
     0,
     0,
-    3
+    4
    ],
    "merge_holds": [
     "source task not integration hold",
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 14,
     "building": 1,
     "in_review": 0,
-    "awaiting_merge": 7,
-    "merged": 564,
-    "parked": 459
+    "awaiting_merge": 6,
+    "merged": 565,
+    "parked": 458
    }
   },
   "architect": {
@@ -168,6 +168,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-10-28T09:10:09Z",
+    "title": "E1B verified fees and complete experimental valuation",
+    "area": "Core build"
+   },
    {
     "at": "2026-10-27T19:52:05Z",
     "title": "CODE-01 Hold label review on malformed relevant payout receipts",
@@ -202,11 +207,6 @@
     "at": "2026-10-27T14:18:09Z",
     "title": "Version PWS scoring after healthy-book semantics change",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-27T13:36:14Z",
-    "title": "CODE-01 Record evidence classes for combined maker context",
-    "area": "Core build"
    }
   ],
   "self_healing": {
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-28T09:10:02Z",
+    "last_check_at": "2026-10-28T09:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,7 +233,7 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-28T09:00:02Z",
+    "last_check_at": "2026-10-28T09:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -256,6 +256,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T09:10:09Z",
+    "kind": "merge",
+    "text": "Merged “E1B verified fees and complete experimental valuation” into the main build"
+   },
    {
     "at": "2026-10-28T09:09:16Z",
     "kind": "review",
@@ -360,11 +365,6 @@
     "at": "2026-10-27T18:46:05Z",
     "kind": "merge",
     "text": "Merged “CODE-01 Scan every relevant payout disclosure before qualification” into the main build"
-   },
-   {
-    "at": "2026-10-27T18:16:08Z",
-    "kind": "merge",
-    "text": "Merged “CODE-01 Verify recovered collection provenance” into the main build"
    }
   ]
  },
@@ -375,8 +375,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T09:06:48Z",
-   "heartbeat_at": "2026-10-28T09:10:02Z",
+   "status_at": "2026-10-28T09:12:02Z",
+   "heartbeat_at": "2026-10-28T09:15:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -385,7 +385,7 @@
     "weather_events": null,
     "markets": null,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T09:05:19Z",
+    "last_scan_at": "2026-10-28T09:10:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T09:05:19Z",
+    "updated_at": "2026-10-28T09:10:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T09:09:13Z",
+    "updated_at": "2026-10-28T09:13:13Z",
     "detail": "gated"
    },
    {
