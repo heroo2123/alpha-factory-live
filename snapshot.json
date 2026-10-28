@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T08:45:01Z",
+ "generated_at": "2026-10-28T08:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "11 built in 24h"
    },
    {
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 8,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "14 merged in 24h"
+    "detail": "15 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_5117df9e",
-    "task": "E1B verified fees and complete experimental valuation",
-    "elapsed_min": 0
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,12 +116,12 @@
   },
   "tests_passing": 18274,
   "flow": {
-   "merges_24h": 14,
-   "commits_24h": 14,
+   "merges_24h": 15,
+   "commits_24h": 15,
    "built_24h": 11,
    "build_failed_24h": 8,
    "reviews_passed_24h": 10,
-   "reviews_changes_24h": 9,
+   "reviews_changes_24h": 8,
    "commits_by_hour": [
     1,
     0,
@@ -132,9 +132,9 @@
     1,
     1,
     2,
+    2,
+    0,
     1,
-    1,
-    1,
     0,
     0,
     0,
@@ -146,17 +146,17 @@
     0,
     0,
     0,
-    1
+    2
    ],
    "merge_holds": [
-    "lock busy"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
-    "building": 1,
+    "queued": 14,
+    "building": 0,
     "in_review": 0,
-    "awaiting_merge": 8,
-    "merged": 562,
+    "awaiting_merge": 7,
+    "merged": 563,
     "parked": 458
    }
   },
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-28T08:45:01Z",
+    "last_check_at": "2026-10-28T08:50:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -278,7 +278,7 @@
    {
     "at": "2026-10-28T08:35:52Z",
     "kind": "build",
-    "text": "MiniMax M3 built “E2D complete comparison custody and native incumbent support” → sent to independent review"
+    "text": "MiniMax M3 built “a task” → sent to independent review"
    },
    {
     "at": "2026-10-28T08:32:53Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T08:43:36Z",
-   "heartbeat_at": "2026-10-28T08:45:00Z",
+   "status_at": "2026-10-28T08:48:51Z",
+   "heartbeat_at": "2026-10-28T08:50:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": null,
     "markets": null,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T08:40:19Z",
+    "last_scan_at": "2026-10-28T08:45:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T08:40:19Z",
+    "updated_at": "2026-10-28T08:45:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T08:43:10Z",
+    "updated_at": "2026-10-28T08:49:11Z",
     "detail": "gated"
    },
    {
