@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T11:45:01Z",
+ "generated_at": "2026-10-28T11:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "17 ready to build"
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 5,
     "unit": "awaiting merge",
     "active": true,
     "detail": "16 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_541e6a1e",
     "task": "Repair bounded public fee lifecycle and refusal retention",
-    "elapsed_min": 0
+    "elapsed_min": 5
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_4b425a33",
-    "task": "E2A reviewed R3 schedule interface on accepted weather parser",
-    "elapsed_min": 0
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 16,
    "built_24h": 15,
    "build_failed_24h": 6,
-   "reviews_passed_24h": 10,
+   "reviews_passed_24h": 11,
    "reviews_changes_24h": 9,
    "commits_by_hour": [
     0,
@@ -129,8 +129,8 @@
     1,
     1,
     2,
-    1,
-    1,
+    2,
+    0,
     1,
     0,
     0,
@@ -152,10 +152,10 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 16,
+    "queued": 15,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 4,
+    "in_review": 0,
+    "awaiting_merge": 5,
     "merged": 567,
     "parked": 443
    }
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-28T11:45:01Z",
+    "alerts_24h": 10,
+    "recoveries_24h": 14,
+    "last_check_at": "2026-10-28T11:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,21 @@
   ],
   "events": [
    {
+    "at": "2026-10-28T11:48:16Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “E2A reviewed R3 schedule interface on accepted weather parser”: passed"
+   },
+   {
+    "at": "2026-10-28T11:47:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-10-28T11:47:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
     "at": "2026-10-28T11:44:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -289,16 +304,6 @@
     "at": "2026-10-28T11:15:31Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “D3 bound payload normalization and publication lock duration” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T11:08:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-28T11:04:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed flexible provider router"
    },
    {
     "at": "2026-10-28T10:45:15Z",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T09:24:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T09:10:09Z",
-    "kind": "merge",
-    "text": "Merged “E1B verified fees and complete experimental valuation” into the main build"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T11:43:01Z",
-   "heartbeat_at": "2026-10-28T11:45:00Z",
+   "status_at": "2026-10-28T11:48:20Z",
+   "heartbeat_at": "2026-10-28T11:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 353,
     "markets": 3429,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T11:39:41Z",
+    "last_scan_at": "2026-10-28T11:45:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T11:39:41Z",
+    "updated_at": "2026-10-28T11:45:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T11:43:37Z",
+    "updated_at": "2026-10-28T11:49:38Z",
     "detail": "observations retained"
    },
    {
