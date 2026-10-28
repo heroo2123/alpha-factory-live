@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T21:25:02Z",
+ "generated_at": "2026-10-28T21:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 13,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "17 ready to build"
    },
    {
     "key": "build",
@@ -135,8 +135,8 @@
     0,
     0,
     4,
-    1,
-    1,
+    2,
+    0,
     1,
     0,
     1,
@@ -149,16 +149,15 @@
     0
    ],
    "merge_holds": [
-    "protected code: waiting for a second review",
-    "targeted tests failed recently backoff"
+    "lock busy"
    ],
    "stage_totals": {
-    "queued": 14,
+    "queued": 13,
     "building": 0,
     "in_review": 0,
     "awaiting_merge": 5,
     "merged": 568,
-    "parked": 443
+    "parked": 442
    }
   },
   "architect": {
@@ -215,7 +214,7 @@
     "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-28T21:25:02Z",
+    "last_check_at": "2026-10-28T21:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -264,7 +263,7 @@
    {
     "at": "2026-10-28T21:21:13Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E3A conserve earliest constituent source expiry”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    },
    {
     "at": "2026-10-28T21:21:08Z",
@@ -274,7 +273,7 @@
    {
     "at": "2026-10-28T21:14:54Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E3A conserve earliest constituent source expiry” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
     "at": "2026-10-28T20:57:15Z",
@@ -304,7 +303,7 @@
    {
     "at": "2026-10-28T20:30:16Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E3A conserve earliest constituent source expiry”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    },
    {
     "at": "2026-10-28T20:30:14Z",
@@ -324,7 +323,7 @@
    {
     "at": "2026-10-28T20:23:13Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E3A conserve earliest constituent source expiry” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
     "at": "2026-10-28T20:23:01Z",
@@ -375,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-28T21:24:56Z",
-   "heartbeat_at": "2026-10-28T21:25:01Z",
+   "status_at": "2026-10-28T21:29:52Z",
+   "heartbeat_at": "2026-10-28T21:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 333,
-    "markets": 3225,
+    "weather_events": 331,
+    "markets": 3203,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T21:20:42Z",
+    "last_scan_at": "2026-10-28T21:26:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T21:20:42Z",
+    "updated_at": "2026-10-28T21:26:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T21:23:11Z",
+    "updated_at": "2026-10-28T21:29:12Z",
     "detail": "observations retained"
    },
    {
