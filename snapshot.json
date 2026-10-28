@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T21:45:02Z",
+ "generated_at": "2026-10-28T21:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "11 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b7690472",
     "task": "E3A native timestamp precision without expiry renewal",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_fdbb8ce4",
-    "task": "Preflight account for consumed daily loss capacity",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 11,
    "built_24h": 30,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 15,
+   "reviews_passed_24h": 16,
    "reviews_changes_24h": 16,
    "commits_by_hour": [
     0,
@@ -149,14 +149,13 @@
     1
    ],
    "merge_holds": [
-    "protected code: waiting for a second review",
-    "targeted tests failed"
+    "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 12,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 3,
+    "in_review": 0,
+    "awaiting_merge": 4,
     "merged": 569,
     "parked": 443
    }
@@ -215,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T21:45:02Z",
+    "last_check_at": "2026-10-28T21:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T21:47:30Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “Preflight account for consumed daily loss capacity”: passed"
+   },
    {
     "at": "2026-10-28T21:42:14Z",
     "kind": "build",
@@ -360,11 +364,6 @@
     "at": "2026-10-28T19:12:16Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “E2D finish cold-process restore purity”: changes required"
-   },
-   {
-    "at": "2026-10-28T19:12:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “D1A charge boot-ID IO to final expiry check” → sent to independent review"
    }
   ]
  },
@@ -375,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-28T21:44:53Z",
-   "heartbeat_at": "2026-10-28T21:45:00Z",
+   "status_at": "2026-10-28T21:49:59Z",
+   "heartbeat_at": "2026-10-28T21:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 329,
-    "markets": 3181,
+    "weather_events": 326,
+    "markets": 3148,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T21:42:51Z",
+    "last_scan_at": "2026-10-28T21:48:13Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T21:42:51Z",
+    "updated_at": "2026-10-28T21:48:13Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T21:43:15Z",
+    "updated_at": "2026-10-28T21:49:16Z",
     "detail": "observations retained"
    },
    {
