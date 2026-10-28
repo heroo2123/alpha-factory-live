@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T10:10:02Z",
+ "generated_at": "2026-10-28T10:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "12 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_fbdb6a25",
-    "task": "CODE-01 Gate unclassified official reports as unknown risk",
-    "elapsed_min": 9
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -149,8 +149,8 @@
     0
    ],
    "merge_holds": [
-    "protected code: second review asked for changes",
-    "protected code: waiting for a second review"
+    "protected code: waiting for a second review",
+    "protected code: second review asked for changes"
    ],
    "stage_totals": {
     "queued": 15,
@@ -158,7 +158,7 @@
     "in_review": 0,
     "awaiting_merge": 6,
     "merged": 565,
-    "parked": 453
+    "parked": 452
    }
   },
   "architect": {
@@ -215,7 +215,7 @@
     "active": 0,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-28T10:10:02Z",
+    "last_check_at": "2026-10-28T10:15:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -233,11 +233,11 @@
      "flow code drift frozen copy",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-28T10:00:02Z",
+    "last_check_at": "2026-10-28T10:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 10,
+    "runs_24h": 9,
     "runs_total": 734,
     "last_run_at": "2026-10-28T07:25:02Z",
     "last_ok": true,
@@ -259,7 +259,7 @@
    {
     "at": "2026-10-28T09:57:14Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E2D snapshot validated inputs through final publication”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “E2D complete immutable-input boundary root-cause pass”: changes required"
    },
    {
     "at": "2026-10-28T09:48:18Z",
@@ -269,12 +269,12 @@
    {
     "at": "2026-10-28T09:48:14Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E2D snapshot validated inputs through final publication” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “E2D complete immutable-input boundary root-cause pass” → sent to independent review"
    },
    {
     "at": "2026-10-28T09:35:43Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E2D snapshot validated inputs through final publication”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “E2D complete immutable-input boundary root-cause pass”: changes required"
    },
    {
     "at": "2026-10-28T09:30:16Z",
@@ -289,7 +289,7 @@
    {
     "at": "2026-10-28T09:24:13Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E2D snapshot validated inputs through final publication” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “E2D complete immutable-input boundary root-cause pass” → sent to independent review"
    },
    {
     "at": "2026-10-28T09:23:01Z",
@@ -334,7 +334,7 @@
    {
     "at": "2026-10-28T08:35:52Z",
     "kind": "build",
-    "text": "MiniMax M3 built “E2D snapshot validated inputs through final publication” → sent to independent review"
+    "text": "MiniMax M3 built “E2D complete immutable-input boundary root-cause pass” → sent to independent review"
    },
    {
     "at": "2026-10-28T08:32:53Z",
@@ -375,8 +375,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T10:07:28Z",
-   "heartbeat_at": "2026-10-28T10:10:03Z",
+   "status_at": "2026-10-28T10:12:47Z",
+   "heartbeat_at": "2026-10-28T10:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -385,7 +385,7 @@
     "weather_events": 351,
     "markets": 3404,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T10:07:09Z",
+    "last_scan_at": "2026-10-28T10:12:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -408,14 +408,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T10:07:09Z",
+    "updated_at": "2026-10-28T10:12:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T10:09:22Z",
+    "updated_at": "2026-10-28T10:13:22Z",
     "detail": "observations retained"
    },
    {
