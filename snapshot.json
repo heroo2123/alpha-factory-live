@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T20:55:02Z",
+ "generated_at": "2026-10-28T21:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "10 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b7690472",
     "task": "E3A conserve earliest constituent source expiry",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_cbb8568a",
-    "task": "E2D finish cold-process restore purity",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 10,
    "built_24h": 27,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 13,
+   "reviews_passed_24h": 14,
    "reviews_changes_24h": 15,
    "commits_by_hour": [
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 14,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 3,
+    "in_review": 0,
+    "awaiting_merge": 4,
     "merged": 568,
     "parked": 442
    }
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-28T20:55:02Z",
+    "last_check_at": "2026-10-28T21:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T20:57:15Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “E2D finish cold-process restore purity”: passed"
+   },
    {
     "at": "2026-10-28T20:53:23Z",
     "kind": "build",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T17:36:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “E3A conserve earliest constituent source expiry” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T17:13:00Z",
-    "kind": "merge",
-    "text": "Merged “E2C enforce both approved R3 prediction seal deadlines” into the main build"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-28T20:54:56Z",
-   "heartbeat_at": "2026-10-28T20:55:00Z",
+   "status_at": "2026-10-28T20:59:52Z",
+   "heartbeat_at": "2026-10-28T21:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 333,
     "markets": 3225,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T20:53:43Z",
+    "last_scan_at": "2026-10-28T20:59:03Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T20:53:43Z",
+    "updated_at": "2026-10-28T20:59:03Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T20:53:06Z",
+    "updated_at": "2026-10-28T20:59:07Z",
     "detail": "observations retained"
    },
    {
