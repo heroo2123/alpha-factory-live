@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T17:35:01Z",
+ "generated_at": "2026-10-28T17:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "18 ready to build"
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "20 built in 24h"
+    "active": true,
+    "detail": "21 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_4bdb6371",
+    "task": "D1A disconnected publication fence primitive",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_b7690472",
+    "task": "E3A scoped experimental admission and first-release exclusion",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 14,
    "commits_24h": 14,
-   "built_24h": 20,
+   "built_24h": 21,
    "build_failed_24h": 3,
    "reviews_passed_24h": 11,
    "reviews_changes_24h": 11,
@@ -137,8 +137,8 @@
     0,
     0,
     0,
-    0,
-    4,
+    1,
+    3,
     2,
     0,
     1,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 16,
-    "building": 0,
-    "in_review": 0,
+    "queued": 14,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 568,
     "parked": 440
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 4,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-10-28T17:35:02Z",
+    "state": "p2",
+    "active": 1,
+    "alerts_24h": 11,
+    "recoveries_24h": 13,
+    "last_check_at": "2026-10-28T17:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,31 @@
   ],
   "events": [
    {
+    "at": "2026-10-28T17:39:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
+   },
+   {
+    "at": "2026-10-28T17:39:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-10-28T17:39:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
+   {
+    "at": "2026-10-28T17:36:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “E3A scoped experimental admission and first-release exclusion” → sent to independent review"
+   },
+   {
+    "at": "2026-10-28T17:36:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
+   {
     "at": "2026-10-28T17:34:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job failed flexible provider router"
@@ -276,29 +301,9 @@
     "text": "MiniMax M3 reviewed “E2C enforce both approved R3 prediction seal deadlines”: passed"
    },
    {
-    "at": "2026-10-28T16:55:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
-    "at": "2026-10-28T16:55:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
     "at": "2026-10-28T16:53:45Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “E2C enforce both approved R3 prediction seal deadlines” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T16:50:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-10-28T16:48:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-28T16:27:16Z",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T13:46:12Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
-   },
-   {
-    "at": "2026-10-28T13:39:15Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T17:33:40Z",
-   "heartbeat_at": "2026-10-28T17:35:01Z",
+   "status_at": "2026-10-28T17:38:59Z",
+   "heartbeat_at": "2026-10-28T17:40:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 339,
     "markets": 3289,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T17:30:24Z",
+    "last_scan_at": "2026-10-28T17:36:08Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,21 +400,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-28T16:37:02Z",
+    "updated_at": "2026-10-28T17:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T17:30:24Z",
+    "updated_at": "2026-10-28T17:36:08Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T17:34:34Z",
+    "updated_at": "2026-10-28T17:38:35Z",
     "detail": "observations retained"
    },
    {
