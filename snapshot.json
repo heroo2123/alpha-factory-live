@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T14:45:01Z",
+ "generated_at": "2026-10-28T14:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 16,
+    "count": 15,
     "unit": "queued",
     "active": false,
     "detail": "19 ready to build"
@@ -15,10 +15,10 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "19 built in 24h"
+    "active": true,
+    "detail": "18 built in 24h"
    },
    {
     "key": "review",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "E2D finish reviewed restore contract with exact document access",
+    "elapsed_min": 73
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 15,
    "commits_24h": 15,
-   "built_24h": 19,
+   "built_24h": 18,
    "build_failed_24h": 2,
    "reviews_passed_24h": 10,
    "reviews_changes_24h": 11,
@@ -126,8 +126,8 @@
     1,
     1,
     2,
-    1,
-    1,
+    2,
+    0,
     1,
     0,
     0,
@@ -152,8 +152,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 16,
-    "building": 0,
+    "queued": 15,
+    "building": 1,
     "in_review": 0,
     "awaiting_merge": 4,
     "merged": 567,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 1,
-    "alerts_24h": 13,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-28T14:44:01Z",
+    "state": "healthy",
+    "active": 0,
+    "alerts_24h": 11,
+    "recoveries_24h": 13,
+    "last_check_at": "2026-10-28T14:50:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-28T14:48:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-10-28T14:45:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
     "at": "2026-10-28T14:44:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -279,16 +289,6 @@
     "at": "2026-10-28T14:21:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: disk headroom low"
-   },
-   {
-    "at": "2026-10-28T14:14:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
-    "at": "2026-10-28T14:12:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-28T14:02:21Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T14:43:19Z",
-   "heartbeat_at": "2026-10-28T14:45:01Z",
+   "status_at": "2026-10-28T14:48:34Z",
+   "heartbeat_at": "2026-10-28T14:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T14:44:08Z",
+    "updated_at": "2026-10-28T14:48:08Z",
     "detail": "observations retained"
    },
    {
