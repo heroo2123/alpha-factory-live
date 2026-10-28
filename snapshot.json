@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T08:35:01Z",
+ "generated_at": "2026-10-28T08:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,26 +15,26 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "11 built in 24h"
+    "detail": "12 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 8,
+    "count": 7,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "14 merged in 24h"
+    "detail": "15 merged in 24h"
    },
    {
     "key": "qa",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_e5d54a30",
+    "task": "FLEX candidate t_cbb8568a 431fa51200ba",
+    "elapsed_min": 0
    },
    {
     "slot": "Reviewer 2",
@@ -116,9 +116,9 @@
   },
   "tests_passing": 18274,
   "flow": {
-   "merges_24h": 14,
-   "commits_24h": 14,
-   "built_24h": 11,
+   "merges_24h": 15,
+   "commits_24h": 15,
+   "built_24h": 12,
    "build_failed_24h": 8,
    "reviews_passed_24h": 9,
    "reviews_changes_24h": 9,
@@ -127,11 +127,11 @@
     0,
     2,
     0,
-    1,
     2,
     1,
     1,
     1,
+    1,
     2,
     1,
     1,
@@ -146,18 +146,18 @@
     0,
     0,
     0,
-    0
+    1
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
     "queued": 14,
-    "building": 1,
-    "in_review": 0,
-    "awaiting_merge": 8,
-    "merged": 561,
-    "parked": 460
+    "building": 0,
+    "in_review": 1,
+    "awaiting_merge": 7,
+    "merged": 562,
+    "parked": 459
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 2,
+    "state": "healthy",
+    "active": 0,
     "alerts_24h": 18,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-28T08:35:01Z",
+    "last_check_at": "2026-10-28T08:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T08:37:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job failed flexible provider router"
+   },
+   {
+    "at": "2026-10-28T08:35:52Z",
+    "kind": "build",
+    "text": "MiniMax M3 built “E2D complete comparison custody and native incumbent support” → sent to independent review"
+   },
    {
     "at": "2026-10-28T08:32:53Z",
     "kind": "review",
@@ -316,11 +326,6 @@
     "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
-    "at": "2026-10-28T07:06:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
     "at": "2026-10-28T06:48:49Z",
     "kind": "heal",
     "text": "Operator AI (Kimi K3) audit run: code queue idle with capacity"
@@ -359,11 +364,6 @@
     "at": "2026-10-27T17:21:12Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “FLEX candidate t_56514e9a c71f1a783bff”: passed"
-   },
-   {
-    "at": "2026-10-27T17:12:08Z",
-    "kind": "build",
-    "text": "DeepSeek V4.1 Flash built “Bind executed modules in read-only owner-adapter probe” → sent to independent review"
    }
   ]
  },
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T08:33:04Z",
-   "heartbeat_at": "2026-10-28T08:35:01Z",
+   "status_at": "2026-10-28T08:38:19Z",
+   "heartbeat_at": "2026-10-28T08:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 351,
-    "markets": 3404,
+    "weather_events": null,
+    "markets": null,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T08:29:37Z",
+    "last_scan_at": "2026-10-28T08:35:59Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,22 +400,22 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-28T07:37:02Z",
+    "updated_at": "2026-10-28T08:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T08:29:37Z",
+    "updated_at": "2026-10-28T08:35:59Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T08:33:09Z",
-    "detail": "observations retained"
+    "updated_at": "2026-10-28T08:39:10Z",
+    "detail": "gated"
    },
    {
     "name": "ECMWF IFS / AIFS",
