@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T08:20:02Z",
+ "generated_at": "2026-10-28T08:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,17 +15,17 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "11 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_cbb8568a",
+    "task": "E2D preregistered Brain comparison and S0-S5 stage guards",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_aa118091",
+    "task": "FLEX candidate t_8cc800e1 08ed39ef469c",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -153,17 +153,17 @@
    ],
    "stage_totals": {
     "queued": 14,
-    "building": 0,
-    "in_review": 2,
+    "building": 1,
+    "in_review": 1,
     "awaiting_merge": 7,
     "merged": 561,
-    "parked": 459
+    "parked": 460
    }
   },
   "architect": {
    "running": false,
-   "last_run_at": "2026-10-27T11:00:05Z",
-   "last_planned": 3,
+   "last_run_at": "2026-10-28T08:20:03Z",
+   "last_planned": 2,
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
@@ -214,25 +214,25 @@
     "active": 1,
     "alerts_24h": 18,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-28T08:20:02Z",
+    "last_check_at": "2026-10-28T08:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 8,
+    "active": 9,
     "by_severity": {
      "P0": 0,
      "P1": 0,
      "P2": 5
     },
     "codes": [
+     "flow second review waiting for capacity",
      "flow unmergeable reviewed work",
      "flow qa resource blocked",
      "flow qa not running",
      "flow glm plan lane dead",
-     "flow code drift frozen copy",
-     "flow queued scope needless pin fixture"
+     "flow code drift frozen copy"
     ],
-    "last_check_at": "2026-10-28T08:10:02Z",
+    "last_check_at": "2026-10-28T08:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -251,9 +251,15 @@
    "DeepSeek",
    "GLM",
    "Kimi",
-   "MiniMax"
+   "MiniMax",
+   "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T08:20:03Z",
+    "kind": "plan",
+    "text": "Architect (Codex (GPT-6 Sol)) planned 2 new tasks"
+   },
    {
     "at": "2026-10-28T08:14:50Z",
     "kind": "build",
@@ -358,11 +364,6 @@
     "at": "2026-10-27T17:03:14Z",
     "kind": "merge",
     "text": "Merged “PAPER-09 Reject impossible PWS sensor ages at preconfirmation” into the main build"
-   },
-   {
-    "at": "2026-10-27T16:39:06Z",
-    "kind": "warn",
-    "text": "MiniMax M3 reviewed “Bind executed modules in read-only owner-adapter probe”: changes required"
    }
   ]
  },
@@ -373,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T08:17:11Z",
-   "heartbeat_at": "2026-10-28T08:20:02Z",
+   "status_at": "2026-10-28T08:22:29Z",
+   "heartbeat_at": "2026-10-28T08:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 353,
-    "markets": 3426,
+    "weather_events": 351,
+    "markets": 3404,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T08:18:49Z",
+    "last_scan_at": "2026-10-28T08:24:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -406,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T08:18:49Z",
+    "updated_at": "2026-10-28T08:24:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T08:19:07Z",
+    "updated_at": "2026-10-28T08:23:07Z",
     "detail": "observations retained"
    },
    {
