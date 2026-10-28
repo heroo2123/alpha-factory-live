@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T07:25:01Z",
+ "generated_at": "2026-10-28T07:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 14,
     "unit": "queued",
     "active": false,
     "detail": "15 ready to build"
@@ -23,7 +23,7 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -121,10 +121,10 @@
    "built_24h": 11,
    "build_failed_24h": 9,
    "reviews_passed_24h": 9,
-   "reviews_changes_24h": 8,
+   "reviews_changes_24h": 9,
    "commits_by_hour": [
-    0,
-    2,
+    1,
+    1,
     1,
     1,
     1,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 14,
     "building": 0,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 7,
     "merged": 561,
-    "parked": 458
+    "parked": 459
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 19,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-28T07:25:01Z",
+    "last_check_at": "2026-10-28T07:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -236,13 +236,13 @@
     "interval": "every 10 minutes"
    },
    "operator": {
-    "runs_24h": 11,
-    "runs_total": 733,
-    "last_run_at": "2026-10-28T06:48:49Z",
-    "last_ok": false,
-    "last_kind": "code queue idle with capacity",
+    "runs_24h": 12,
+    "runs_total": 734,
+    "last_run_at": "2026-10-28T07:25:02Z",
+    "last_ok": true,
+    "last_kind": "hermes router stale",
     "running": false,
-    "model": "Kimi K3",
+    "model": "Codex (GPT-6 Sol)",
     "interval": "checks every 5 minutes, routine audit every 3 hours"
    }
   },
@@ -254,6 +254,11 @@
    "MiniMax"
   ],
   "events": [
+   {
+    "at": "2026-10-28T07:25:02Z",
+    "kind": "heal",
+    "text": "Operator AI (Codex (GPT-6 Sol)) audit run: hermes router stale"
+   },
    {
     "at": "2026-10-28T07:24:31Z",
     "kind": "build",
@@ -358,11 +363,6 @@
     "at": "2026-10-27T16:27:05Z",
     "kind": "build",
     "text": "DeepSeek V4.1 Flash built “Bind executed modules in read-only owner-adapter probe” → sent to independent review"
-   },
-   {
-    "at": "2026-10-27T15:05:02Z",
-    "kind": "heal",
-    "text": "Operator AI (Kimi K3) audit run: flow acceptance followthrough required"
    }
   ]
  },
@@ -373,8 +373,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-28T07:22:25Z",
-   "heartbeat_at": "2026-10-28T07:25:00Z",
+   "status_at": "2026-10-28T07:27:42Z",
+   "heartbeat_at": "2026-10-28T07:30:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -413,7 +413,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T07:24:57Z",
+    "updated_at": "2026-10-28T07:28:58Z",
     "detail": "observations retained"
    },
    {
