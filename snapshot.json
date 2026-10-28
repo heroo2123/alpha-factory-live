@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T23:00:02Z",
+ "generated_at": "2026-10-28T23:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,8 +17,8 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": true,
-    "detail": "32 built in 24h"
+    "active": false,
+    "detail": "33 built in 24h"
    },
    {
     "key": "review",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_b7690472",
-    "task": "E3A conserve original rule receipt and every consulted lease deadline",
-    "elapsed_min": 26
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 12,
    "commits_24h": 12,
-   "built_24h": 32,
+   "built_24h": 33,
    "build_failed_24h": 5,
    "reviews_passed_24h": 17,
    "reviews_changes_24h": 17,
@@ -214,7 +214,7 @@
     "active": 0,
     "alerts_24h": 11,
     "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T23:00:02Z",
+    "last_check_at": "2026-10-28T23:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow brain harvest incomplete",
      "flow queued scope needless pin fixture"
     ],
-    "last_check_at": "2026-10-28T22:50:02Z",
+    "last_check_at": "2026-10-28T23:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T23:02:42Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “E3A finish health and guardian completion-time fences” → sent to independent review"
+   },
    {
     "at": "2026-10-28T22:31:32Z",
     "kind": "merge",
@@ -283,12 +288,12 @@
    {
     "at": "2026-10-28T22:12:15Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “E3A conserve original rule receipt and every consulted lease deadline”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “E3A finish health and guardian completion-time fences”: passed"
    },
    {
     "at": "2026-10-28T22:05:38Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E3A conserve original rule receipt and every consulted lease deadline” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “E3A finish health and guardian completion-time fences” → sent to independent review"
    },
    {
     "at": "2026-10-28T21:47:30Z",
@@ -318,7 +323,7 @@
    {
     "at": "2026-10-28T21:21:13Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E3A conserve original rule receipt and every consulted lease deadline”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “E3A finish health and guardian completion-time fences”: changes required"
    },
    {
     "at": "2026-10-28T21:21:08Z",
@@ -328,7 +333,7 @@
    {
     "at": "2026-10-28T21:14:54Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E3A conserve original rule receipt and every consulted lease deadline” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “E3A finish health and guardian completion-time fences” → sent to independent review"
    },
    {
     "at": "2026-10-28T20:57:15Z",
@@ -358,12 +363,7 @@
    {
     "at": "2026-10-28T20:30:16Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “E3A conserve original rule receipt and every consulted lease deadline”: changes required"
-   },
-   {
-    "at": "2026-10-28T20:30:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Preflight reject missing rule ownership for realized scenario risk” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) reviewed “E3A finish health and guardian completion-time fences”: changes required"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-28T23:00:02Z",
-   "heartbeat_at": "2026-10-28T23:00:02Z",
+   "status_at": "2026-10-28T23:04:54Z",
+   "heartbeat_at": "2026-10-28T23:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 319,
     "markets": 3071,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T22:57:13Z",
+    "last_scan_at": "2026-10-28T23:02:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T22:57:13Z",
+    "updated_at": "2026-10-28T23:02:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T22:59:27Z",
+    "updated_at": "2026-10-28T23:03:27Z",
     "detail": "observations retained"
    },
    {
