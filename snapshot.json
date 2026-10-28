@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T14:35:02Z",
+ "generated_at": "2026-10-28T14:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_cbb8568a",
     "task": "E2D finish reviewed restore contract with exact document access",
-    "elapsed_min": 58
+    "elapsed_min": 63
    },
    {
     "slot": "Builder 2",
@@ -140,8 +140,8 @@
     0,
     0,
     0,
-    0,
-    4,
+    1,
+    3,
     2,
     0,
     1,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "healthy",
-    "active": 0,
-    "alerts_24h": 11,
-    "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T14:35:02Z",
+    "state": "p2",
+    "active": 1,
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-28T14:40:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T14:38:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
    {
     "at": "2026-10-28T14:25:01Z",
     "kind": "heal",
@@ -309,11 +314,6 @@
     "at": "2026-10-28T13:36:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-28T13:34:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-10-28T13:31:09Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "census service",
-   "status_at": "2026-10-28T14:35:01Z",
-   "heartbeat_at": "2026-10-28T14:35:00Z",
+   "status_at": "2026-10-28T14:40:00Z",
+   "heartbeat_at": "2026-10-28T14:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 366,
     "markets": 3586,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T14:34:00Z",
+    "last_scan_at": "2026-10-28T14:39:18Z",
     "mode": "silent paper scan"
    }
   },
@@ -400,21 +400,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-28T13:37:01Z",
+    "updated_at": "2026-10-28T14:37:01Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T14:34:00Z",
+    "updated_at": "2026-10-28T14:39:18Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T14:34:06Z",
+    "updated_at": "2026-10-28T14:38:07Z",
     "detail": "observations retained"
    },
    {
