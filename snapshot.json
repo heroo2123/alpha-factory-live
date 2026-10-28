@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T19:15:01Z",
+ "generated_at": "2026-10-28T19:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 0,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "11 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_b7690472",
     "task": "E3A repair advancing-clock admission and stable revalidation",
-    "elapsed_min": 2
+    "elapsed_min": 7
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_4bdb6371",
-    "task": "D1A retain tested fence and add required inventory marker",
-    "elapsed_min": 2
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 11,
    "built_24h": 24,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 11,
+   "reviews_passed_24h": 12,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
     1,
@@ -137,10 +137,10 @@
     0,
     0,
     4,
-    0,
-    2,
-    0,
     1,
+    1,
+    1,
+    0,
     1,
     0,
     1,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 16,
     "building": 1,
-    "in_review": 1,
-    "awaiting_merge": 3,
+    "in_review": 0,
+    "awaiting_merge": 4,
     "merged": 568,
     "parked": 441
    }
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p2",
     "active": 1,
-    "alerts_24h": 11,
-    "recoveries_24h": 13,
-    "last_check_at": "2026-10-28T19:14:02Z",
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-28T19:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T19:18:15Z",
+    "kind": "review",
+    "text": "MiniMax M3 reviewed “D1A retain tested fence and add required inventory marker”: passed"
+   },
+   {
+    "at": "2026-10-28T19:15:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-28T19:12:16Z",
     "kind": "warn",
@@ -308,11 +318,6 @@
    {
     "at": "2026-10-28T17:39:01Z",
     "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes job failed flexible provider router"
-   },
-   {
-    "at": "2026-10-28T17:39:01Z",
-    "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
@@ -359,11 +364,6 @@
     "at": "2026-10-28T15:57:14Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “E2D repair native restore purity and complete budget ordering” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T15:45:15Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Restore fee safety: anonymous read-only transport and evidence”: passed"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-28T19:14:58Z",
-   "heartbeat_at": "2026-10-28T19:15:01Z",
+   "status_at": "2026-10-28T19:19:55Z",
+   "heartbeat_at": "2026-10-28T19:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 337,
     "markets": 3267,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T19:10:27Z",
+    "last_scan_at": "2026-10-28T19:16:01Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T19:10:27Z",
+    "updated_at": "2026-10-28T19:16:01Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T19:14:50Z",
+    "updated_at": "2026-10-28T19:18:51Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-28T18:17:02Z",
+   "updated_at": "2026-10-28T19:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
