@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-28T13:10:02Z",
+ "generated_at": "2026-10-28T13:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "17 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_993c6830",
-    "task": "E2C finite approved R3 artifact clock and freeze validation",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "healthy",
     "active": 0,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-10-28T13:09:01Z",
+    "alerts_24h": 11,
+    "recoveries_24h": 13,
+    "last_check_at": "2026-10-28T13:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow brain harvest gated"
     ],
-    "last_check_at": "2026-10-28T13:00:02Z",
+    "last_check_at": "2026-10-28T13:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-28T13:12:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-10-28T13:10:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
    {
     "at": "2026-10-28T13:08:01Z",
     "kind": "heal",
@@ -301,11 +311,6 @@
     "text": "Codex (GPT-6 Astra) build attempt ended: worker exception hold"
    },
    {
-    "at": "2026-10-28T12:17:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker receipt untrusted develop"
-   },
-   {
     "at": "2026-10-28T12:08:51Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Restore complete fee baseline and fix exact startup/depth defects”: changes required"
@@ -319,11 +324,6 @@
     "at": "2026-10-28T11:48:16Z",
     "kind": "review",
     "text": "MiniMax M3 reviewed “E2A reviewed R3 schedule interface on accepted weather parser”: passed"
-   },
-   {
-    "at": "2026-10-28T11:47:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-10-28T11:40:02Z",
@@ -375,7 +375,7 @@
    "day": "2026-10-29",
    "state": "evaluating markets in paper mode",
    "status_at": "2026-10-28T13:09:51Z",
-   "heartbeat_at": "2026-10-28T13:10:02Z",
+   "heartbeat_at": "2026-10-28T13:15:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
@@ -384,7 +384,7 @@
     "weather_events": 366,
     "markets": 3586,
     "opportunities": 0,
-    "last_scan_at": "2026-10-28T13:06:25Z",
+    "last_scan_at": "2026-10-28T13:11:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-28T13:06:25Z",
+    "updated_at": "2026-10-28T13:11:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-28T13:09:51Z",
+    "updated_at": "2026-10-28T13:13:52Z",
     "detail": "observations retained"
    },
    {
