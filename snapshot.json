@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T16:05:01Z",
+ "generated_at": "2026-10-29T16:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -121,7 +121,7 @@
    "built_24h": 31,
    "build_failed_24h": 5,
    "reviews_passed_24h": 12,
-   "reviews_changes_24h": 17,
+   "reviews_changes_24h": 16,
    "commits_by_hour": [
     0,
     1,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 4,
-    "alerts_24h": 15,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-10-29T16:05:01Z",
+    "active": 5,
+    "alerts_24h": 16,
+    "recoveries_24h": 8,
+    "last_check_at": "2026-10-29T16:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-29T16:08:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
+   {
     "at": "2026-10-29T15:51:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
@@ -294,11 +299,6 @@
     "at": "2026-10-29T14:51:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Complete existing stream bridge from tested repaired snapshot” → sent to independent review"
-   },
-   {
-    "at": "2026-10-29T14:37:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled review"
    },
    {
     "at": "2026-10-29T14:35:47Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-29T16:03:11Z",
-   "heartbeat_at": "2026-10-29T16:05:01Z",
+   "status_at": "2026-10-29T16:08:26Z",
+   "heartbeat_at": "2026-10-29T16:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 359,
     "markets": 3512,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T16:00:05Z",
+    "last_scan_at": "2026-10-29T16:06:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T16:00:05Z",
+    "updated_at": "2026-10-29T16:06:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T16:04:15Z",
+    "updated_at": "2026-10-29T16:08:15Z",
     "detail": "observations retained"
    },
    {
