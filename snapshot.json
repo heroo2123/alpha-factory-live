@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T23:50:01Z",
+ "generated_at": "2026-10-29T23:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": false,
-    "detail": "26 built in 24h"
+    "detail": "25 built in 24h"
    },
    {
     "key": "review",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 4,
    "commits_24h": 4,
-   "built_24h": 26,
+   "built_24h": 25,
    "build_failed_24h": 5,
    "reviews_passed_24h": 10,
    "reviews_changes_24h": 15,
@@ -145,8 +145,8 @@
     0,
     0,
     1,
-    0,
-    1
+    1,
+    0
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
@@ -214,15 +214,15 @@
     "active": 4,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-29T23:50:01Z",
+    "last_check_at": "2026-10-29T23:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 10,
+    "active": 12,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 7
+     "P2": 9
     },
     "codes": [
      "flow frozen review scope drift",
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-29T23:40:02Z",
+    "last_check_at": "2026-10-29T23:50:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T23:52:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-10-29T23:52:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
    {
     "at": "2026-10-29T23:42:01Z",
     "kind": "warn",
@@ -296,11 +306,6 @@
     "text": "Codex (GPT-6 Sol) built “Original markout bounded-preflight completion with all native and…” → sent to independent review"
    },
    {
-    "at": "2026-10-29T22:59:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
-   },
-   {
     "at": "2026-10-29T22:50:39Z",
     "kind": "merge",
     "text": "Merged “Adopt tested D3 callable replay correction” into the main build"
@@ -314,11 +319,6 @@
     "at": "2026-10-29T22:41:28Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-29T22:33:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-29T22:31:20Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-29T23:49:53Z",
-   "heartbeat_at": "2026-10-29T23:50:02Z",
+   "status_at": "2026-10-29T23:54:54Z",
+   "heartbeat_at": "2026-10-29T23:55:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T23:49:31Z",
+    "updated_at": "2026-10-29T23:53:32Z",
     "detail": "observations retained"
    },
    {
