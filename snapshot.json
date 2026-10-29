@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T00:15:02Z",
+ "generated_at": "2026-10-29T00:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 1,
     "unit": "building",
     "active": true,
-    "detail": "35 built in 24h"
+    "detail": "36 built in 24h"
    },
    {
     "key": "review",
@@ -69,8 +69,8 @@
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
     "task_id": "t_2c1af6b7",
-    "task": "E2E complete real collector using pinned host APIs",
-    "elapsed_min": 20
+    "task": "E2E finish full collector from durable journal checkpoint",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 12,
    "commits_24h": 12,
-   "built_24h": 35,
+   "built_24h": 36,
    "build_failed_24h": 5,
    "reviews_passed_24h": 17,
    "reviews_changes_24h": 18,
@@ -132,10 +132,10 @@
     0,
     0,
     4,
-    0,
-    2,
-    0,
     1,
+    1,
+    1,
+    0,
     1,
     0,
     1,
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-29T00:15:02Z",
+    "last_check_at": "2026-10-29T00:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,9 +256,19 @@
   ],
   "events": [
    {
+    "at": "2026-10-29T00:17:31Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “E2E finish full collector from durable journal checkpoint” → sent to independent review"
+   },
+   {
+    "at": "2026-10-29T00:17:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
+   {
     "at": "2026-10-28T23:54:04Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E2E complete real collector using pinned host APIs” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “E2E finish full collector from durable journal checkpoint” → sent to independent review"
    },
    {
     "at": "2026-10-28T23:48:14Z",
@@ -294,11 +304,6 @@
     "at": "2026-10-28T23:20:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: worker pid lost develop"
-   },
-   {
-    "at": "2026-10-28T23:11:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-10-28T23:02:42Z",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T21:21:08Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “D1A charge boot-ID IO to final expiry check” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T21:14:54Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “E3A close cross-helper health expiry at admission completion” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-29T00:14:56Z",
-   "heartbeat_at": "2026-10-29T00:15:02Z",
+   "status_at": "2026-10-29T00:19:58Z",
+   "heartbeat_at": "2026-10-29T00:20:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 307,
     "markets": 2939,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T00:10:19Z",
+    "last_scan_at": "2026-10-29T00:15:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T00:10:19Z",
+    "updated_at": "2026-10-29T00:15:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T00:13:38Z",
+    "updated_at": "2026-10-29T00:19:39Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-28T23:17:01Z",
+   "updated_at": "2026-10-29T00:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
