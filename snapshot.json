@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T04:30:02Z",
+ "generated_at": "2026-10-29T04:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,13 +17,13 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "38 built in 24h"
+    "active": false,
+    "detail": "39 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_cbb8568a",
-    "task": "Repair exact Brain policy fixtures and historical seal recovery",
-    "elapsed_min": 32
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 12,
    "commits_24h": 12,
-   "built_24h": 38,
+   "built_24h": 39,
    "build_failed_24h": 7,
    "reviews_passed_24h": 18,
    "reviews_changes_24h": 21,
@@ -139,8 +139,8 @@
     0,
     0,
     0,
-    0,
-    2,
+    1,
+    1,
     0,
     0,
     0,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 12,
     "building": 0,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 570,
     "parked": 442
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-29T04:30:02Z",
+    "last_check_at": "2026-10-29T04:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow queued scope needless pin fixture",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-29T04:20:02Z",
+    "last_check_at": "2026-10-29T04:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T04:34:38Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Repair exact Brain policy fixtures and historical seal recovery” → sent to independent review"
+   },
    {
     "at": "2026-10-29T04:18:01Z",
     "kind": "warn",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T22:31:32Z",
     "kind": "merge",
     "text": "Merged “Repair exact Brain policy fixtures and historical seal recovery” into the main build"
-   },
-   {
-    "at": "2026-10-28T22:30:14Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Preflight reject missing rule ownership for realized scenario risk”: changes required"
    }
   ]
  },
@@ -373,18 +373,18 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
-   "state": "census service",
-   "status_at": "2026-10-29T04:30:00Z",
-   "heartbeat_at": "2026-10-29T04:30:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-29T04:33:19Z",
+   "heartbeat_at": "2026-10-29T04:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 4,
    "scanner": {
-    "weather_events": 299,
-    "markets": 2832,
+    "weather_events": 297,
+    "markets": 2810,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T04:28:54Z",
+    "last_scan_at": "2026-10-29T04:34:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T04:28:54Z",
+    "updated_at": "2026-10-29T04:34:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T04:28:19Z",
+    "updated_at": "2026-10-29T04:34:20Z",
     "detail": "observations retained"
    },
    {
