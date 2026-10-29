@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T21:30:01Z",
+ "generated_at": "2026-10-29T21:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "5 merged in 24h"
+    "detail": "4 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_e4c4b357",
     "task": "Adopt tested D3 callable replay correction",
-    "elapsed_min": 24
+    "elapsed_min": 29
    },
    {
     "slot": "Builder 2",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 18274,
   "flow": {
-   "merges_24h": 5,
-   "commits_24h": 5,
+   "merges_24h": 4,
+   "commits_24h": 4,
    "built_24h": 27,
    "build_failed_24h": 5,
    "reviews_passed_24h": 8,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
-    2,
+    1,
     0,
     0,
     0,
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 3,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-29T21:30:02Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-29T21:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-29T21:20:01Z",
+    "last_check_at": "2026-10-29T21:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T21:34:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: disk headroom low"
+   },
    {
     "at": "2026-10-29T21:13:38Z",
     "kind": "warn",
@@ -304,11 +309,6 @@
     "at": "2026-10-29T20:47:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-10-29T20:41:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    },
    {
     "at": "2026-10-29T20:40:47Z",
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-29T21:29:53Z",
-   "heartbeat_at": "2026-10-29T21:30:01Z",
+   "status_at": "2026-10-29T21:35:01Z",
+   "heartbeat_at": "2026-10-29T21:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 4,
    "scanner": {
-    "weather_events": 331,
-    "markets": 3209,
+    "weather_events": 329,
+    "markets": 3187,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T21:24:16Z",
+    "last_scan_at": "2026-10-29T21:30:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T21:24:16Z",
+    "updated_at": "2026-10-29T21:30:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T21:29:09Z",
+    "updated_at": "2026-10-29T21:33:09Z",
     "detail": "observations retained"
    },
    {
