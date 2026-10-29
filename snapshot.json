@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T21:05:01Z",
+ "generated_at": "2026-10-29T21:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 21,
     "unit": "queued",
     "active": false,
     "detail": "12 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "29 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_e4c4b357",
+    "task": "Adopt tested D3 callable replay correction",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_671ceede",
-    "task": "Adopt current Brain cross-thread custody fence repair",
-    "elapsed_min": 2
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -152,8 +152,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 22,
-    "building": 0,
+    "queued": 21,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 572,
@@ -214,7 +214,7 @@
     "active": 3,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-29T21:05:02Z",
+    "last_check_at": "2026-10-29T21:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T21:07:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
    {
     "at": "2026-10-29T21:04:29Z",
     "kind": "merge",
@@ -304,11 +309,6 @@
     "at": "2026-10-29T20:31:46Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) review ended: codex review prompt bytes hold"
-   },
-   {
-    "at": "2026-10-29T20:27:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
     "at": "2026-10-29T20:05:41Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-29T21:05:01Z",
-   "heartbeat_at": "2026-10-29T21:05:01Z",
+   "status_at": "2026-10-29T21:09:57Z",
+   "heartbeat_at": "2026-10-29T21:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 333,
     "markets": 3231,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T21:00:49Z",
+    "last_scan_at": "2026-10-29T21:08:55Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T21:00:49Z",
+    "updated_at": "2026-10-29T21:08:55Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T21:03:04Z",
+    "updated_at": "2026-10-29T21:09:05Z",
     "detail": "observations retained"
    },
    {
