@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T19:10:01Z",
+ "generated_at": "2026-10-29T19:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "30 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_e4c4b357",
-    "task": "Adopt tested D3 snapshot-before-encoding correction",
-    "elapsed_min": 22
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -121,12 +121,12 @@
    "built_24h": 30,
    "build_failed_24h": 5,
    "reviews_passed_24h": 11,
-   "reviews_changes_24h": 18,
+   "reviews_changes_24h": 17,
    "commits_by_hour": [
     0,
     0,
-    1,
-    1,
+    2,
+    0,
     0,
     0,
     0,
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 20,
-    "building": 1,
-    "in_review": 0,
+    "building": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 572,
     "parked": 445
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-29T19:10:02Z",
+    "last_check_at": "2026-10-29T19:15:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-29T19:00:02Z",
+    "last_check_at": "2026-10-29T19:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T19:14:38Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Adopt tested D3 snapshot-before-encoding correction” → sent to independent review"
+   },
    {
     "at": "2026-10-29T18:51:21Z",
     "kind": "warn",
@@ -359,11 +364,6 @@
     "at": "2026-10-29T14:51:16Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Adopt tested complete stream publication-fence repair” → sent to independent review"
-   },
-   {
-    "at": "2026-10-29T14:35:47Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Adopt tested complete Brain reentrant authority-fence correction”: changes required"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-29T19:06:22Z",
-   "heartbeat_at": "2026-10-29T19:10:01Z",
+   "status_at": "2026-10-29T19:11:44Z",
+   "heartbeat_at": "2026-10-29T19:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 336,
     "markets": 3259,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T19:05:01Z",
+    "last_scan_at": "2026-10-29T19:10:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T19:05:01Z",
+    "updated_at": "2026-10-29T19:10:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T19:08:44Z",
+    "updated_at": "2026-10-29T19:14:45Z",
     "detail": "observations retained"
    },
    {
