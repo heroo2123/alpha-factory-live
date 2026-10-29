@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T05:15:02Z",
+ "generated_at": "2026-10-29T05:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "40 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_cbb8568a",
-    "task": "Repair exact Brain policy fixtures and historical seal recovery",
-    "elapsed_min": 26
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -119,7 +119,7 @@
    "merges_24h": 12,
    "commits_24h": 12,
    "built_24h": 40,
-   "build_failed_24h": 7,
+   "build_failed_24h": 8,
    "reviews_passed_24h": 19,
    "reviews_changes_24h": 22,
    "commits_by_hour": [
@@ -127,10 +127,10 @@
     0,
     0,
     4,
-    0,
-    2,
-    0,
     1,
+    1,
+    1,
+    0,
     1,
     0,
     1,
@@ -153,11 +153,11 @@
    ],
    "stage_totals": {
     "queued": 12,
-    "building": 1,
+    "building": 0,
     "in_review": 0,
     "awaiting_merge": 3,
     "merged": 570,
-    "parked": 442
+    "parked": 443
    }
   },
   "architect": {
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-29T05:15:02Z",
+    "last_check_at": "2026-10-29T05:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T05:19:17Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
+   },
    {
     "at": "2026-10-29T04:57:16Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T23:54:04Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T23:48:14Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Stage A repair post-read grant and price expiry”: changes required"
    }
   ]
  },
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-29T05:13:10Z",
-   "heartbeat_at": "2026-10-29T05:15:02Z",
+   "status_at": "2026-10-29T05:18:26Z",
+   "heartbeat_at": "2026-10-29T05:20:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 4,
    "scanner": {
-    "weather_events": 358,
-    "markets": 3481,
+    "weather_events": 356,
+    "markets": 3459,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T05:11:59Z",
+    "last_scan_at": "2026-10-29T05:17:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T05:11:59Z",
+    "updated_at": "2026-10-29T05:17:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T05:14:26Z",
+    "updated_at": "2026-10-29T05:18:27Z",
     "detail": "observations retained"
    },
    {
@@ -479,20 +479,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8679,
-     "city_days": 94
+     "brier": 0.8642,
+     "city_days": 97
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8256,
-     "city_days": 94
+     "brier": 0.8238,
+     "city_days": 97
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6647,
-     "city_days": 94
+     "brier": 0.6636,
+     "city_days": 97
     },
     {
      "key": "equal",
@@ -504,15 +504,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 74 untouched city-days (11 cities, 7 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 95,
-   "waiting_city_days": 20,
-   "labelled_days": 13,
-   "captured_days_waiting": 3,
+   "labelled_city_days": 98,
+   "waiting_city_days": 17,
+   "labelled_days": 14,
+   "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-29T04:17:01Z",
+   "updated_at": "2026-10-29T05:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
