@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T05:55:01Z",
+ "generated_at": "2026-10-29T06:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_cbb8568a",
     "task": "Repair exact Brain policy fixtures and historical seal recovery",
-    "elapsed_min": 66
+    "elapsed_min": 71
    },
    {
     "slot": "Builder 2",
@@ -214,7 +214,7 @@
     "active": 1,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-10-29T05:55:01Z",
+    "last_check_at": "2026-10-29T06:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T05:57:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: agent held develop"
+   },
+   {
+    "at": "2026-10-29T05:57:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
    {
     "at": "2026-10-29T05:50:02Z",
     "kind": "warn",
@@ -301,11 +311,6 @@
     "text": "Guardian confirmed recovery: agent held develop"
    },
    {
-    "at": "2026-10-29T03:43:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: agent held develop"
-   },
-   {
     "at": "2026-10-29T03:11:50Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
@@ -319,11 +324,6 @@
     "at": "2026-10-29T01:21:16Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “Stage A repair post-read grant and price expiry”: passed"
-   },
-   {
-    "at": "2026-10-29T01:18:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-29T01:15:15Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-29T05:49:58Z",
-   "heartbeat_at": "2026-10-29T05:55:01Z",
+   "status_at": "2026-10-29T05:57:18Z",
+   "heartbeat_at": "2026-10-29T06:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T05:54:33Z",
+    "updated_at": "2026-10-29T05:58:34Z",
     "detail": "observations retained"
    },
    {
