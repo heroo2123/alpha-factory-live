@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T01:15:01Z",
+ "generated_at": "2026-10-29T01:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -17,16 +17,16 @@
     "name": "Builders",
     "count": 1,
     "unit": "building",
-    "active": false,
-    "detail": "37 built in 24h"
+    "active": true,
+    "detail": "38 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
-    "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
+    "active": true,
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "MiniMax M3",
+    "family": "MiniMax",
+    "task_id": "t_50f28448",
+    "task": "DESIGN legacy native incumbent proof and S0 commitment boundary",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_b7690472",
+    "task": "E3A close cross-helper health expiry at admission completion",
+    "elapsed_min": 4
    },
    {
     "slot": "Reviewer 2",
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 12,
    "commits_24h": 12,
-   "built_24h": 37,
+   "built_24h": 38,
    "build_failed_24h": 5,
    "reviews_passed_24h": 17,
-   "reviews_changes_24h": 20,
+   "reviews_changes_24h": 21,
    "commits_by_hour": [
     0,
     0,
@@ -131,10 +131,10 @@
     0,
     0,
     4,
-    0,
-    2,
-    0,
     1,
+    1,
+    1,
+    0,
     1,
     0,
     1,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 12,
     "building": 1,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 570,
     "parked": 442
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p1",
-    "active": 2,
-    "alerts_24h": 11,
-    "recoveries_24h": 13,
-    "last_check_at": "2026-10-29T01:14:01Z",
+    "state": "p2",
+    "active": 1,
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-10-29T01:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,26 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T01:18:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
+   {
+    "at": "2026-10-29T01:15:15Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
+   },
+   {
+    "at": "2026-10-29T01:15:13Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “E3A close cross-helper health expiry at admission completion” → sent to independent review"
+   },
+   {
+    "at": "2026-10-29T01:15:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-10-29T01:03:13Z",
     "kind": "review",
@@ -301,11 +321,6 @@
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
-    "at": "2026-10-29T00:17:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
     "at": "2026-10-28T23:54:04Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
@@ -314,11 +329,6 @@
     "at": "2026-10-28T23:48:14Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “E3A close cross-helper health expiry at admission completion”: changes required"
-   },
-   {
-    "at": "2026-10-28T23:44:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-28T23:42:13Z",
@@ -354,16 +364,6 @@
     "at": "2026-10-28T22:05:38Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “E3A close cross-helper health expiry at admission completion” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T21:47:30Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Preflight reject missing rule ownership for realized scenario risk”: passed"
-   },
-   {
-    "at": "2026-10-28T21:42:14Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Preflight reject missing rule ownership for realized scenario risk” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-29T01:14:55Z",
-   "heartbeat_at": "2026-10-29T01:15:00Z",
+   "status_at": "2026-10-29T01:19:56Z",
+   "heartbeat_at": "2026-10-29T01:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 305,
     "markets": 2917,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T01:13:35Z",
+    "last_scan_at": "2026-10-29T01:18:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T01:13:35Z",
+    "updated_at": "2026-10-29T01:18:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T01:13:47Z",
+    "updated_at": "2026-10-29T01:19:48Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-29T00:17:02Z",
+   "updated_at": "2026-10-29T01:17:01Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
