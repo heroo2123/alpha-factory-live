@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T21:50:01Z",
+ "generated_at": "2026-10-29T21:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -156,7 +156,7 @@
     "building": 0,
     "in_review": 1,
     "awaiting_merge": 3,
-    "merged": 572,
+    "merged": 571,
     "parked": 446
    }
   },
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-29T21:50:01Z",
+    "alerts_24h": 16,
+    "recoveries_24h": 8,
+    "last_check_at": "2026-10-29T21:54:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-29T21:40:02Z",
+    "last_check_at": "2026-10-29T21:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T21:51:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-10-29T21:51:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
    {
     "at": "2026-10-29T21:44:01Z",
     "kind": "heal",
@@ -296,19 +306,9 @@
     "text": "Merged “StageB2 adopt existing admission core after reviewed support merge” into the main build"
    },
    {
-    "at": "2026-10-29T21:04:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
     "at": "2026-10-29T21:02:26Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Adopt current Brain cross-thread custody fence repair” → sent to independent review"
-   },
-   {
-    "at": "2026-10-29T21:01:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-29T20:55:33Z",
@@ -374,17 +374,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-29T21:50:00Z",
-   "heartbeat_at": "2026-10-29T21:50:00Z",
+   "status_at": "2026-10-29T21:54:57Z",
+   "heartbeat_at": "2026-10-29T21:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
    "days_with_paper_decisions": 4,
    "scanner": {
-    "weather_events": 329,
-    "markets": 3187,
+    "weather_events": 325,
+    "markets": 3143,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T21:45:40Z",
+    "last_scan_at": "2026-10-29T21:50:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T21:45:40Z",
+    "updated_at": "2026-10-29T21:50:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T21:49:12Z",
+    "updated_at": "2026-10-29T21:53:13Z",
     "detail": "observations retained"
    },
    {
@@ -640,7 +640,7 @@
      "name": "Implementation complete",
      "status": "pending",
      "detail": "not accepted yet",
-     "merged_tasks": 112,
+     "merged_tasks": 111,
      "open_tasks": 0
     },
     {
