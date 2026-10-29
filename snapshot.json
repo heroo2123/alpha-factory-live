@@ -1,16 +1,16 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T15:45:01Z",
+ "generated_at": "2026-10-29T15:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 14,
+    "count": 13,
     "unit": "queued",
     "active": false,
-    "detail": "16 ready to build"
+    "detail": "13 ready to build"
    },
    {
     "key": "build",
@@ -18,14 +18,14 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "31 built in 24h"
+    "detail": "32 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -85,17 +85,17 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_671ceede",
+    "task": "Adopt tested Brain terminal/prefix/custody repair",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,9 +118,9 @@
   "flow": {
    "merges_24h": 5,
    "commits_24h": 5,
-   "built_24h": 31,
+   "built_24h": 32,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 13,
+   "reviews_passed_24h": 12,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
     1,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 14,
+    "queued": 13,
     "building": 0,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 571,
-    "parked": 444
+    "parked": 445
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 4,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-29T15:45:01Z",
+    "last_check_at": "2026-10-29T15:49:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T15:48:32Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Adopt tested Brain terminal/prefix/custody repair” → sent to independent review"
+   },
+   {
+    "at": "2026-10-29T15:48:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
    {
     "at": "2026-10-29T15:41:01Z",
     "kind": "warn",
@@ -299,11 +309,6 @@
     "at": "2026-10-29T13:49:28Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Adopt tested Brain terminal/prefix/custody repair” → sent to independent review"
-   },
-   {
-    "at": "2026-10-29T13:49:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-29T13:15:49Z",
@@ -359,11 +364,6 @@
     "at": "2026-10-29T10:27:36Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Preflight reject missing rule ownership for realized scenario risk” → sent to independent review"
-   },
-   {
-    "at": "2026-10-29T06:21:17Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Adopt tested Brain terminal/prefix/custody repair” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-29T15:42:03Z",
-   "heartbeat_at": "2026-10-29T15:45:01Z",
+   "status_at": "2026-10-29T15:47:18Z",
+   "heartbeat_at": "2026-10-29T15:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 359,
     "markets": 3512,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T15:36:20Z",
+    "last_scan_at": "2026-10-29T15:45:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T15:36:20Z",
+    "updated_at": "2026-10-29T15:45:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T15:44:11Z",
+    "updated_at": "2026-10-29T15:48:12Z",
     "detail": "observations retained"
    },
    {
