@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T19:40:01Z",
+ "generated_at": "2026-10-29T19:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,13 +17,13 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "30 built in 24h"
+    "active": false,
+    "detail": "31 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_b7690472",
-    "task": "StageB2 adopt existing admission core after reviewed support merge",
-    "elapsed_min": 22
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 4,
    "commits_24h": 4,
-   "built_24h": 30,
+   "built_24h": 31,
    "build_failed_24h": 4,
    "reviews_passed_24h": 10,
    "reviews_changes_24h": 17,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 20,
     "building": 0,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 572,
     "parked": 446
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-29T19:40:01Z",
+    "last_check_at": "2026-10-29T19:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-29T19:30:01Z",
+    "last_check_at": "2026-10-29T19:40:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T19:42:33Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “StageB2 adopt existing admission core after reviewed support merge” → sent to independent review"
+   },
    {
     "at": "2026-10-29T19:24:37Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-29T15:48:32Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Adopt tested complete Brain reentrant authority-fence correction” → sent to independent review"
-   },
-   {
-    "at": "2026-10-29T15:07:11Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Adopt tested complete stream publication-fence repair”: changes required"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-29T19:39:57Z",
-   "heartbeat_at": "2026-10-29T19:40:01Z",
+   "status_at": "2026-10-29T19:44:53Z",
+   "heartbeat_at": "2026-10-29T19:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T19:38:49Z",
+    "updated_at": "2026-10-29T19:44:50Z",
     "detail": "observations retained"
    },
    {
