@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T20:15:01Z",
+ "generated_at": "2026-10-29T20:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 15,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-10-29T20:15:01Z",
+    "alerts_24h": 16,
+    "recoveries_24h": 8,
+    "last_check_at": "2026-10-29T20:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T20:19:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
    {
     "at": "2026-10-29T20:05:41Z",
     "kind": "warn",
@@ -326,11 +331,6 @@
     "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
    },
    {
-    "at": "2026-10-29T17:50:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
-   },
-   {
     "at": "2026-10-29T17:49:29Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Adopt tested D3 snapshot-before-encoding correction”: changes required"
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-29T20:14:53Z",
-   "heartbeat_at": "2026-10-29T20:15:01Z",
+   "status_at": "2026-10-29T20:20:00Z",
+   "heartbeat_at": "2026-10-29T20:20:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T20:14:55Z",
+    "updated_at": "2026-10-29T20:18:55Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-29T19:17:02Z",
+   "updated_at": "2026-10-29T20:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
