@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T03:10:02Z",
+ "generated_at": "2026-10-29T03:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "38 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_cbb8568a",
-    "task": "Initial auditable Brain policy and historical FINAL ordering",
-    "elapsed_min": 69
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -119,7 +119,7 @@
    "merges_24h": 12,
    "commits_24h": 12,
    "built_24h": 38,
-   "build_failed_24h": 6,
+   "build_failed_24h": 7,
    "reviews_passed_24h": 18,
    "reviews_changes_24h": 21,
    "commits_by_hour": [
@@ -136,13 +136,13 @@
     1,
     0,
     1,
-    0,
     1,
     0,
     0,
     0,
-    1,
-    1,
+    0,
+    2,
+    0,
     0,
     0,
     0,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-29T03:10:02Z",
+    "last_check_at": "2026-10-29T03:15:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow queued scope needless pin fixture",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-29T03:00:02Z",
+    "last_check_at": "2026-10-29T03:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T03:11:50Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
+   },
    {
     "at": "2026-10-29T01:53:21Z",
     "kind": "warn",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T22:30:14Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Preflight reject missing rule ownership for realized scenario risk”: changes required"
-   },
-   {
-    "at": "2026-10-28T22:21:13Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Preflight reject missing rule ownership for realized scenario risk” → sent to independent review"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-29T03:10:00Z",
-   "heartbeat_at": "2026-10-29T03:10:01Z",
+   "status_at": "2026-10-29T03:14:52Z",
+   "heartbeat_at": "2026-10-29T03:15:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 304,
     "markets": 2906,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T03:08:09Z",
+    "last_scan_at": "2026-10-29T03:13:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T03:08:09Z",
+    "updated_at": "2026-10-29T03:13:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T03:08:06Z",
+    "updated_at": "2026-10-29T03:14:07Z",
     "detail": "observations retained"
    },
    {
