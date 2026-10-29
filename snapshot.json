@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T14:50:01Z",
+ "generated_at": "2026-10-29T14:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
     "detail": "16 ready to build"
@@ -18,12 +18,12 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "31 built in 24h"
+    "detail": "32 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 1,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -118,13 +118,13 @@
   "flow": {
    "merges_24h": 5,
    "commits_24h": 5,
-   "built_24h": 31,
-   "build_failed_24h": 6,
+   "built_24h": 32,
+   "build_failed_24h": 5,
    "reviews_passed_24h": 13,
    "reviews_changes_24h": 16,
    "commits_by_hour": [
-    0,
     1,
+    0,
     1,
     0,
     0,
@@ -152,9 +152,9 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
+    "queued": 12,
     "building": 0,
-    "in_review": 0,
+    "in_review": 1,
     "awaiting_merge": 3,
     "merged": 571,
     "parked": 444
@@ -214,7 +214,7 @@
     "active": 3,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-29T14:50:02Z",
+    "last_check_at": "2026-10-29T14:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow review repair scope missing",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-29T14:40:02Z",
+    "last_check_at": "2026-10-29T14:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T14:51:16Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Complete existing stream bridge from tested repaired snapshot” → sent to independent review"
+   },
    {
     "at": "2026-10-29T14:37:01Z",
     "kind": "heal",
@@ -359,11 +364,6 @@
     "at": "2026-10-29T05:19:17Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
-   },
-   {
-    "at": "2026-10-29T04:57:16Z",
-    "kind": "review",
-    "text": "MiniMax M3 reviewed “Repair original heartbeat wall deadline”: passed"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "census service",
-   "status_at": "2026-10-29T14:50:01Z",
-   "heartbeat_at": "2026-10-29T14:50:01Z",
+   "status_at": "2026-10-29T14:54:59Z",
+   "heartbeat_at": "2026-10-29T14:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 365,
     "markets": 3578,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T14:46:12Z",
+    "last_scan_at": "2026-10-29T14:54:51Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T14:46:12Z",
+    "updated_at": "2026-10-29T14:54:51Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T14:48:01Z",
+    "updated_at": "2026-10-29T14:54:03Z",
     "detail": "observations retained"
    },
    {
