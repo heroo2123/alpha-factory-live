@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T08:45:01Z",
+ "generated_at": "2026-10-29T08:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "11 merged in 24h"
+    "detail": "10 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,7 +116,7 @@
   },
   "tests_passing": 18274,
   "flow": {
-   "merges_24h": 11,
+   "merges_24h": 10,
    "commits_24h": 10,
    "built_24h": 38,
    "build_failed_24h": 7,
@@ -214,7 +214,7 @@
     "active": 2,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-29T08:45:01Z",
+    "last_check_at": "2026-10-29T08:50:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-29T08:42:35Z",
-   "heartbeat_at": "2026-10-29T08:45:01Z",
+   "status_at": "2026-10-29T08:47:50Z",
+   "heartbeat_at": "2026-10-29T08:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 351,
     "markets": 3404,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T08:42:16Z",
+    "last_scan_at": "2026-10-29T08:47:32Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T08:42:16Z",
+    "updated_at": "2026-10-29T08:47:32Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T08:45:01Z",
+    "updated_at": "2026-10-29T08:49:01Z",
     "detail": "observations retained"
    },
    {
