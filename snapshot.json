@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T15:50:01Z",
+ "generated_at": "2026-10-29T15:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 13,
+    "count": 12,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
     "active": false,
     "detail": "32 built in 24h"
@@ -90,7 +90,7 @@
     "family": "OpenAI",
     "task_id": "t_671ceede",
     "task": "Adopt tested Brain terminal/prefix/custody repair",
-    "elapsed_min": 1
+    "elapsed_min": 6
    },
    {
     "slot": "Reviewer 2",
@@ -117,13 +117,13 @@
   "tests_passing": 18274,
   "flow": {
    "merges_24h": 5,
-   "commits_24h": 5,
+   "commits_24h": 4,
    "built_24h": 32,
    "build_failed_24h": 5,
    "reviews_passed_24h": 12,
    "reviews_changes_24h": 17,
    "commits_by_hour": [
-    1,
+    0,
     1,
     0,
     0,
@@ -152,8 +152,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 13,
-    "building": 0,
+    "queued": 12,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 571,
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 16,
-    "recoveries_24h": 8,
-    "last_check_at": "2026-10-29T15:49:02Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-29T15:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow review repair scope missing",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-29T15:40:02Z",
+    "last_check_at": "2026-10-29T15:50:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,21 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T15:51:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-10-29T15:51:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
+   {
+    "at": "2026-10-29T15:50:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
    {
     "at": "2026-10-29T15:48:32Z",
     "kind": "build",
@@ -289,21 +304,6 @@
     "at": "2026-10-29T14:35:47Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Adopt tested Brain terminal/prefix/custody repair”: changes required"
-   },
-   {
-    "at": "2026-10-29T14:14:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled review"
-   },
-   {
-    "at": "2026-10-29T13:54:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-10-29T13:52:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-29T13:49:28Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-29T15:47:18Z",
-   "heartbeat_at": "2026-10-29T15:50:02Z",
+   "status_at": "2026-10-29T15:52:36Z",
+   "heartbeat_at": "2026-10-29T15:55:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 359,
     "markets": 3512,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T15:45:06Z",
+    "last_scan_at": "2026-10-29T15:51:08Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T15:45:06Z",
+    "updated_at": "2026-10-29T15:51:08Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T15:48:12Z",
+    "updated_at": "2026-10-29T15:54:13Z",
     "detail": "observations retained"
    },
    {
