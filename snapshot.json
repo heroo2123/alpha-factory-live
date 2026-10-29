@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T23:25:01Z",
+ "generated_at": "2026-10-29T23:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "26 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_40cec15f",
-    "task": "Original markout bounded-preflight completion with all native and API tests",
-    "elapsed_min": 24
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-29T23:25:01Z",
+    "last_check_at": "2026-10-29T23:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T23:29:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-10-29T23:15:45Z",
     "kind": "review",
@@ -321,11 +326,6 @@
     "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
-    "at": "2026-10-29T21:55:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
     "at": "2026-10-29T21:42:47Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Adopt tested D3 callable replay correction” → sent to independent review"
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-29T23:24:54Z",
-   "heartbeat_at": "2026-10-29T23:25:00Z",
+   "status_at": "2026-10-29T23:29:56Z",
+   "heartbeat_at": "2026-10-29T23:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T23:23:27Z",
+    "updated_at": "2026-10-29T23:29:28Z",
     "detail": "observations retained"
    },
    {
