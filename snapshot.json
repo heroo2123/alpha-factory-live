@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-29T01:50:01Z",
+ "generated_at": "2026-10-29T01:55:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "38 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "MiniMax M3",
-    "family": "MiniMax",
-    "task_id": "t_50f28448",
-    "task": "a build task",
-    "elapsed_min": 34
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -119,7 +119,7 @@
    "merges_24h": 12,
    "commits_24h": 12,
    "built_24h": 38,
-   "build_failed_24h": 5,
+   "build_failed_24h": 6,
    "reviews_passed_24h": 18,
    "reviews_changes_24h": 21,
    "commits_by_hour": [
@@ -129,15 +129,15 @@
     0,
     0,
     0,
-    2,
-    2,
+    3,
+    1,
     2,
     0,
     1,
     0,
     1,
-    0,
     1,
+    0,
     1,
     0,
     0,
@@ -210,11 +210,11 @@
   ],
   "self_healing": {
    "guardian": {
-    "state": "p2",
-    "active": 1,
+    "state": "p1",
+    "active": 2,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-10-29T01:50:02Z",
+    "last_check_at": "2026-10-29T01:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow queued scope needless pin fixture",
      "flow acceptance followthrough required"
     ],
-    "last_check_at": "2026-10-29T01:40:02Z",
+    "last_check_at": "2026-10-29T01:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-29T01:53:21Z",
+    "kind": "warn",
+    "text": "MiniMax M3's build of “a task” failed its tests; it will be retried"
+   },
    {
     "at": "2026-10-29T01:21:16Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-28T22:21:13Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Preflight reject missing rule ownership for realized scenario risk” → sent to independent review"
-   },
-   {
-    "at": "2026-10-28T22:12:15Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Stage A exact reviewed admission support split”: passed"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-29",
    "state": "iteration gated",
-   "status_at": "2026-10-29T01:49:56Z",
-   "heartbeat_at": "2026-10-29T01:50:01Z",
+   "status_at": "2026-10-29T01:54:58Z",
+   "heartbeat_at": "2026-10-29T01:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 5,
@@ -384,7 +384,7 @@
     "weather_events": 305,
     "markets": 2917,
     "opportunities": 0,
-    "last_scan_at": "2026-10-29T01:46:58Z",
+    "last_scan_at": "2026-10-29T01:52:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-29T01:46:58Z",
+    "updated_at": "2026-10-29T01:52:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-29T01:49:53Z",
+    "updated_at": "2026-10-29T01:53:54Z",
     "detail": "observations retained"
    },
    {
