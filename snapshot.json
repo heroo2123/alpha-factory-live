@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T05:40:01Z",
+ "generated_at": "2026-10-30T05:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,9 +23,9 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 1,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_cb694c55",
     "task": "E3B actual experimental Brain admission and disconnected D5 execution snapshot",
-    "elapsed_min": 12
+    "elapsed_min": 17
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_38e81411",
-    "task": "a build task",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 7,
    "built_24h": 24,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 13,
+   "reviews_passed_24h": 14,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
     0,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 16,
     "building": 1,
-    "in_review": 2,
+    "in_review": 1,
     "awaiting_merge": 4,
     "merged": 575,
     "parked": 451
@@ -214,7 +214,7 @@
     "active": 4,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-30T05:40:01Z",
+    "last_check_at": "2026-10-30T05:45:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T05:30:02Z",
+    "last_check_at": "2026-10-30T05:40:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T05:44:09Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-30T05:37:47Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-30T00:43:01Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Same-owner ROOT repair; authoring release proof verified”: changes required"
-   },
-   {
-    "at": "2026-10-30T00:37:01Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Original markout bounded-preflight completion with all native and…”: passed"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T05:37:44Z",
-   "heartbeat_at": "2026-10-30T05:40:02Z",
+   "status_at": "2026-10-30T05:42:58Z",
+   "heartbeat_at": "2026-10-30T05:45:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 351,
     "markets": 3410,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T05:32:36Z",
+    "last_scan_at": "2026-10-30T05:42:50Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T05:32:36Z",
+    "updated_at": "2026-10-30T05:42:50Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T05:38:28Z",
+    "updated_at": "2026-10-30T05:44:29Z",
     "detail": "observations retained"
    },
    {
