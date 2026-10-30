@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T22:25:02Z",
+ "generated_at": "2026-10-30T22:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "19 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "Original Brain native shared-pool and parity accounting boundary",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -120,7 +120,7 @@
    "commits_24h": 6,
    "built_24h": 19,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 15,
+   "reviews_passed_24h": 14,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     1,
@@ -152,7 +152,7 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 19,
+    "queued": 20,
     "building": 0,
     "in_review": 1,
     "awaiting_merge": 3,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
+    "active": 4,
     "alerts_24h": 19,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-30T22:25:02Z",
+    "last_check_at": "2026-10-30T22:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "iteration gated",
-   "status_at": "2026-10-30T22:24:56Z",
-   "heartbeat_at": "2026-10-30T22:25:02Z",
+   "status_at": "2026-10-30T22:29:58Z",
+   "heartbeat_at": "2026-10-30T22:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 336,
     "markets": 3207,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T22:22:50Z",
+    "last_scan_at": "2026-10-30T22:27:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T22:22:50Z",
+    "updated_at": "2026-10-30T22:27:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T22:23:37Z",
+    "updated_at": "2026-10-30T22:29:38Z",
     "detail": "observations retained"
    },
    {
