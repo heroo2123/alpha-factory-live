@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T09:25:01Z",
+ "generated_at": "2026-10-30T09:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 5,
-    "alerts_24h": 18,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-10-30T09:24:01Z",
+    "alerts_24h": 17,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-10-30T09:30:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-30T09:25:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
+   {
     "at": "2026-10-30T09:23:38Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
@@ -284,11 +289,6 @@
     "at": "2026-10-30T07:54:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-10-30T07:50:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    },
    {
     "at": "2026-10-30T07:13:26Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "census service",
-   "status_at": "2026-10-30T09:25:00Z",
-   "heartbeat_at": "2026-10-30T09:25:01Z",
+   "status_at": "2026-10-30T09:30:01Z",
+   "heartbeat_at": "2026-10-30T09:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T09:23:05Z",
+    "updated_at": "2026-10-30T09:29:06Z",
     "detail": "observations retained"
    },
    {
@@ -502,7 +502,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 92 untouched city-days (11 cities, 9 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 94 untouched city-days (11 cities, 9 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 115,
    "waiting_city_days": 10,
