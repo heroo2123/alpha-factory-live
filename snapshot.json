@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T14:00:01Z",
+ "generated_at": "2026-10-30T14:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 5,
-    "alerts_24h": 17,
-    "recoveries_24h": 7,
-    "last_check_at": "2026-10-30T14:00:01Z",
+    "alerts_24h": 18,
+    "recoveries_24h": 6,
+    "last_check_at": "2026-10-30T14:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T13:50:02Z",
+    "last_check_at": "2026-10-30T14:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T14:03:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
    {
     "at": "2026-10-30T13:55:01Z",
     "kind": "warn",
@@ -304,11 +309,6 @@
     "at": "2026-10-30T12:06:42Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing Brain S2 fix real archive size and uncertain publication…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-30T11:54:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
    },
    {
     "at": "2026-10-30T11:54:02Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T13:57:01Z",
-   "heartbeat_at": "2026-10-30T14:00:02Z",
+   "status_at": "2026-10-30T14:02:25Z",
+   "heartbeat_at": "2026-10-30T14:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 364,
     "markets": 3574,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T13:58:22Z",
+    "last_scan_at": "2026-10-30T14:03:50Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T13:58:22Z",
+    "updated_at": "2026-10-30T14:03:50Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T13:59:53Z",
+    "updated_at": "2026-10-30T14:03:54Z",
     "detail": "observations retained"
    },
    {
