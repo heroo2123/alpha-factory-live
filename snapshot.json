@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T19:20:02Z",
+ "generated_at": "2026-10-30T19:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,14 +10,14 @@
     "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "19 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_2c1af6b7",
+    "task": "Original S2 exact single-P3 main-docstring restoration",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -153,7 +153,7 @@
    ],
    "stage_totals": {
     "queued": 18,
-    "building": 0,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 577,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
-    "alerts_24h": 18,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-10-30T19:20:02Z",
+    "active": 4,
+    "alerts_24h": 17,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-10-30T19:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow builders idle",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-10-30T19:10:02Z",
+    "last_check_at": "2026-10-30T19:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-30T19:23:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code queue idle with capacity"
+   },
+   {
     "at": "2026-10-30T18:35:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
@@ -261,12 +266,12 @@
    {
     "at": "2026-10-30T18:22:02Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Original S2 exact single-P3 main-docstring restoration”: changes required"
    },
    {
     "at": "2026-10-30T18:13:27Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “Original S2 exact single-P3 main-docstring restoration” → sent to independent review"
    },
    {
     "at": "2026-10-30T17:56:01Z",
@@ -281,7 +286,7 @@
    {
     "at": "2026-10-30T17:42:02Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Original S2 exact single-P3 main-docstring restoration” → sent to independent review"
    },
    {
     "at": "2026-10-30T16:48:01Z",
@@ -294,39 +299,34 @@
     "text": "Guardian raised an alert: disk headroom low"
    },
    {
-    "at": "2026-10-30T16:20:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
     "at": "2026-10-30T15:39:23Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “Original S2 exact single-P3 main-docstring restoration”: passed"
    },
    {
     "at": "2026-10-30T15:29:15Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Original S2 exact single-P3 main-docstring restoration” → sent to independent review"
    },
    {
     "at": "2026-10-30T13:49:37Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “Original S2 exact single-P3 main-docstring restoration”: passed"
    },
    {
     "at": "2026-10-30T13:41:47Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Original S2 exact single-P3 main-docstring restoration” → sent to independent review"
    },
    {
     "at": "2026-10-30T13:08:32Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Original S2 exact single-P3 main-docstring restoration”: changes required"
    },
    {
     "at": "2026-10-30T12:59:14Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Original S2 exact single-P3 main-docstring restoration” → sent to independent review"
    },
    {
     "at": "2026-10-30T12:23:46Z",
@@ -336,7 +336,7 @@
    {
     "at": "2026-10-30T12:06:42Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “Original S2 exact single-P3 main-docstring restoration” → sent to independent review"
    },
    {
     "at": "2026-10-30T10:46:13Z",
@@ -361,7 +361,7 @@
    {
     "at": "2026-10-30T07:13:26Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol)'s build of “a task” failed its tests; it will be retried"
+    "text": "Codex (GPT-6 Sol)'s build of “Original S2 exact single-P3 main-docstring restoration” failed its tests; it will be retried"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "iteration gated",
-   "status_at": "2026-10-30T19:19:56Z",
-   "heartbeat_at": "2026-10-30T19:20:02Z",
+   "status_at": "2026-10-30T19:24:54Z",
+   "heartbeat_at": "2026-10-30T19:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 347,
     "markets": 3332,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T19:15:45Z",
+    "last_scan_at": "2026-10-30T19:20:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T19:15:45Z",
+    "updated_at": "2026-10-30T19:20:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T19:19:01Z",
+    "updated_at": "2026-10-30T19:23:02Z",
     "detail": "observations retained"
    },
    {
