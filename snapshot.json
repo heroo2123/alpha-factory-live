@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T01:50:01Z",
+ "generated_at": "2026-10-30T01:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
    },
    {
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_ded62943",
-    "task": "Same-owner exact collector timer repair adoption after253 CLI checks",
-    "elapsed_min": 5
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -119,7 +119,7 @@
    "merges_24h": 6,
    "commits_24h": 6,
    "built_24h": 25,
-   "build_failed_24h": 5,
+   "build_failed_24h": 4,
    "reviews_passed_24h": 11,
    "reviews_changes_24h": 14,
    "commits_by_hour": [
@@ -143,10 +143,10 @@
     0,
     0,
     1,
-    0,
-    2,
-    0,
-    1
+    1,
+    1,
+    1,
+    0
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 3,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-10-30T01:50:02Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-30T01:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T01:40:02Z",
+    "last_check_at": "2026-10-30T01:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T01:53:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-10-30T01:53:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
    {
     "at": "2026-10-30T01:40:26Z",
     "kind": "build",
@@ -316,16 +326,6 @@
     "text": "Guardian confirmed recovery: agent held review"
    },
    {
-    "at": "2026-10-30T00:33:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: disk headroom low"
-   },
-   {
-    "at": "2026-10-30T00:31:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: agent held review"
-   },
-   {
     "at": "2026-10-30T00:18:17Z",
     "kind": "merge",
     "text": "Merged “Adopt tested Brain concurrent-refusal fixture correction” into the main build"
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-30T01:50:00Z",
-   "heartbeat_at": "2026-10-30T01:50:01Z",
+   "status_at": "2026-10-30T01:55:01Z",
+   "heartbeat_at": "2026-10-30T01:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T01:49:50Z",
+    "updated_at": "2026-10-30T01:53:51Z",
     "detail": "observations retained"
    },
    {
