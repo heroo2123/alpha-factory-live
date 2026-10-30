@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T15:55:02Z",
+ "generated_at": "2026-10-30T16:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 18,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "10 ready to build"
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
     "detail": "8 merged in 24h"
@@ -127,8 +127,8 @@
     0,
     1,
     0,
-    0,
     1,
+    0,
     1,
     1,
     1,
@@ -152,10 +152,10 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 18,
+    "queued": 19,
     "building": 0,
     "in_review": 1,
-    "awaiting_merge": 4,
+    "awaiting_merge": 3,
     "merged": 577,
     "parked": 452
    }
@@ -214,7 +214,7 @@
     "active": 5,
     "alerts_24h": 17,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-30T15:54:01Z",
+    "last_check_at": "2026-10-30T16:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-30T15:55:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-10-30T15:55:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
+   {
     "at": "2026-10-30T15:53:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
@@ -263,12 +273,12 @@
    {
     "at": "2026-10-30T15:39:23Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Existing Brain S2 final success boundary and bounded SQLite…”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “Same-owner S2 indexed bounded acquisition repair; contract/free…”: passed"
    },
    {
     "at": "2026-10-30T15:29:15Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Existing Brain S2 final success boundary and bounded SQLite…” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Same-owner S2 indexed bounded acquisition repair; contract/free…” → sent to independent review"
    },
    {
     "at": "2026-10-30T14:12:01Z",
@@ -283,37 +293,27 @@
    {
     "at": "2026-10-30T13:55:01Z",
     "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
-   },
-   {
-    "at": "2026-10-30T13:55:01Z",
-    "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-10-30T13:49:37Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Existing Brain S2 final success boundary and bounded SQLite…”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “Same-owner S2 indexed bounded acquisition repair; contract/free…”: passed"
    },
    {
     "at": "2026-10-30T13:41:47Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Existing Brain S2 final success boundary and bounded SQLite…” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Same-owner S2 indexed bounded acquisition repair; contract/free…” → sent to independent review"
    },
    {
     "at": "2026-10-30T13:08:32Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Existing Brain S2 final success boundary and bounded SQLite…”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Same-owner S2 indexed bounded acquisition repair; contract/free…”: changes required"
    },
    {
     "at": "2026-10-30T12:59:14Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Existing Brain S2 final success boundary and bounded SQLite…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-30T12:48:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
+    "text": "Codex (GPT-6 Astra) built “Same-owner S2 indexed bounded acquisition repair; contract/free…” → sent to independent review"
    },
    {
     "at": "2026-10-30T12:23:46Z",
@@ -323,7 +323,7 @@
    {
     "at": "2026-10-30T12:06:42Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Existing Brain S2 final success boundary and bounded SQLite…” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “Same-owner S2 indexed bounded acquisition repair; contract/free…” → sent to independent review"
    },
    {
     "at": "2026-10-30T10:46:13Z",
@@ -348,7 +348,7 @@
    {
     "at": "2026-10-30T07:13:26Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol)'s build of “Existing Brain S2 final success boundary and bounded SQLite…” failed its tests; it will be retried"
+    "text": "Codex (GPT-6 Sol)'s build of “Same-owner S2 indexed bounded acquisition repair; contract/free…” failed its tests; it will be retried"
    },
    {
     "at": "2026-10-30T06:23:00Z",
@@ -373,9 +373,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T15:52:18Z",
-   "heartbeat_at": "2026-10-30T15:55:01Z",
+   "state": "census service",
+   "status_at": "2026-10-30T15:59:59Z",
+   "heartbeat_at": "2026-10-30T16:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 371,
     "markets": 3583,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T15:52:45Z",
+    "last_scan_at": "2026-10-30T15:58:04Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T15:52:45Z",
+    "updated_at": "2026-10-30T15:58:04Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T15:54:20Z",
+    "updated_at": "2026-10-30T15:58:21Z",
     "detail": "observations retained"
    },
    {
