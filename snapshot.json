@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T12:05:01Z",
+ "generated_at": "2026-10-30T12:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,22 +10,22 @@
     "count": 16,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "23 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_2c1af6b7",
-    "task": "Existing Brain collector S2 with reviewed namespace and cert-pin compatibility",
-    "elapsed_min": 22
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_2c1af6b7",
+    "task": "Existing Brain collector S2 with reviewed namespace and cert-pin compatibility",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 16,
-    "building": 1,
-    "in_review": 1,
+    "building": 0,
+    "in_review": 2,
     "awaiting_merge": 3,
     "merged": 577,
     "parked": 452
@@ -214,7 +214,7 @@
     "active": 3,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-30T12:05:01Z",
+    "last_check_at": "2026-10-30T12:10:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T12:06:42Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Existing Brain collector S2 with reviewed namespace and cert-pin…” → sent to independent review"
+   },
    {
     "at": "2026-10-30T11:54:02Z",
     "kind": "warn",
@@ -359,11 +364,6 @@
     "at": "2026-10-30T02:13:05Z",
     "kind": "merge",
     "text": "Merged “Same-owner exact collector timer repair adoption after253 CLI checks” into the main build"
-   },
-   {
-    "at": "2026-10-30T02:11:32Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T12:02:31Z",
-   "heartbeat_at": "2026-10-30T12:05:01Z",
+   "status_at": "2026-10-30T12:07:47Z",
+   "heartbeat_at": "2026-10-30T12:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 354,
     "markets": 3450,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T11:59:15Z",
+    "last_scan_at": "2026-10-30T12:09:36Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T11:59:15Z",
+    "updated_at": "2026-10-30T12:09:36Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T12:03:32Z",
+    "updated_at": "2026-10-30T12:09:33Z",
     "detail": "observations retained"
    },
    {
