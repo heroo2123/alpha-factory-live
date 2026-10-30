@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T06:30:02Z",
+ "generated_at": "2026-10-30T06:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-30T06:29:01Z",
+    "last_check_at": "2026-10-30T06:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T06:20:01Z",
+    "last_check_at": "2026-10-30T06:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T06:31:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-10-30T06:23:00Z",
     "kind": "warn",
@@ -316,11 +321,6 @@
     "text": "Codex (GPT-6 Sol) built “Adopt exact repaired fee Stage A and regenerate own inventory” → sent to independent review"
    },
    {
-    "at": "2026-10-30T05:19:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
     "at": "2026-10-30T05:17:53Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra)'s build of “Same-owner ROOT repair; authoring release proof verified” failed its tests; it will be retried"
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T06:28:45Z",
-   "heartbeat_at": "2026-10-30T06:30:02Z",
+   "status_at": "2026-10-30T06:34:03Z",
+   "heartbeat_at": "2026-10-30T06:35:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 343,
     "markets": 3322,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T06:25:13Z",
+    "last_scan_at": "2026-10-30T06:31:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T06:25:13Z",
+    "updated_at": "2026-10-30T06:31:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T06:28:35Z",
+    "updated_at": "2026-10-30T06:34:36Z",
     "detail": "observations retained"
    },
    {
