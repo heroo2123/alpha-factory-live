@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T13:10:01Z",
+ "generated_at": "2026-10-30T13:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "23 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_2c1af6b7",
+    "task": "Existing Brain S2 fix real archive size and uncertain publication reporting",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -135,8 +135,8 @@
     1,
     1,
     1,
-    0,
     1,
+    0,
     0,
     0,
     1,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 17,
-    "building": 0,
+    "queued": 18,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 577,
-    "parked": 453
+    "parked": 452
    }
   },
   "architect": {
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
+    "active": 4,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-30T13:10:02Z",
+    "last_check_at": "2026-10-30T13:15:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T13:00:02Z",
+    "last_check_at": "2026-10-30T13:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -258,12 +258,12 @@
    {
     "at": "2026-10-30T13:08:32Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Existing Brain S2 preserve late-publication refusal across…”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Existing Brain S2 fix real archive size and uncertain publication…”: changes required"
    },
    {
     "at": "2026-10-30T12:59:14Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Existing Brain S2 preserve late-publication refusal across…” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Existing Brain S2 fix real archive size and uncertain publication…” → sent to independent review"
    },
    {
     "at": "2026-10-30T12:48:01Z",
@@ -283,7 +283,7 @@
    {
     "at": "2026-10-30T12:06:42Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Existing Brain S2 preserve late-publication refusal across…” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “Existing Brain S2 fix real archive size and uncertain publication…” → sent to independent review"
    },
    {
     "at": "2026-10-30T11:54:02Z",
@@ -328,7 +328,7 @@
    {
     "at": "2026-10-30T07:13:26Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol)'s build of “Existing Brain S2 preserve late-publication refusal across…” failed its tests; it will be retried"
+    "text": "Codex (GPT-6 Sol)'s build of “Existing Brain S2 fix real archive size and uncertain publication…” failed its tests; it will be retried"
    },
    {
     "at": "2026-10-30T06:23:00Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "census service",
-   "status_at": "2026-10-30T13:10:01Z",
-   "heartbeat_at": "2026-10-30T13:10:00Z",
+   "status_at": "2026-10-30T13:15:00Z",
+   "heartbeat_at": "2026-10-30T13:15:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T13:09:44Z",
+    "updated_at": "2026-10-30T13:13:44Z",
     "detail": "observations retained"
    },
    {
