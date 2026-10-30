@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T05:35:02Z",
+ "generated_at": "2026-10-30T05:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "7 merged in 24h"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_cb694c55",
     "task": "E3B actual experimental Brain admission and disconnected D5 execution snapshot",
-    "elapsed_min": 7
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -88,9 +88,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_0d144af3",
+    "task_id": "t_38e81411",
     "task": "a build task",
-    "elapsed_min": 3
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -120,14 +120,13 @@
    "commits_24h": 7,
    "built_24h": 24,
    "build_failed_24h": 4,
-   "reviews_passed_24h": 12,
+   "reviews_passed_24h": 13,
    "reviews_changes_24h": 13,
    "commits_by_hour": [
     0,
     0,
     0,
     0,
-    0,
     1,
     0,
     0,
@@ -137,6 +136,7 @@
     0,
     0,
     1,
+    0,
     0,
     1,
     0,
@@ -155,7 +155,7 @@
     "queued": 16,
     "building": 1,
     "in_review": 2,
-    "awaiting_merge": 3,
+    "awaiting_merge": 4,
     "merged": 575,
     "parked": 451
    }
@@ -214,7 +214,7 @@
     "active": 4,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-30T05:35:02Z",
+    "last_check_at": "2026-10-30T05:40:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T05:37:47Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
+   },
    {
     "at": "2026-10-30T05:31:16Z",
     "kind": "review",
@@ -359,11 +364,6 @@
     "at": "2026-10-30T00:37:01Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “Original markout bounded-preflight completion with all native and…”: passed"
-   },
-   {
-    "at": "2026-10-30T00:18:17Z",
-    "kind": "merge",
-    "text": "Merged “Adopt tested Brain concurrent-refusal fixture correction” into the main build"
    }
   ]
  },
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T05:32:29Z",
-   "heartbeat_at": "2026-10-30T05:35:02Z",
+   "status_at": "2026-10-30T05:37:44Z",
+   "heartbeat_at": "2026-10-30T05:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -400,7 +400,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-30T04:37:01Z",
+    "updated_at": "2026-10-30T05:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T05:34:27Z",
+    "updated_at": "2026-10-30T05:38:28Z",
     "detail": "observations retained"
    },
    {
