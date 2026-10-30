@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T20:50:01Z",
+ "generated_at": "2026-10-30T20:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
    },
    {
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_2c1af6b7",
+    "task": "Original S2 single-P1 bound reader implementation repair",
+    "elapsed_min": 12
    },
    {
     "slot": "Reviewer 2",
@@ -124,10 +124,10 @@
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     1,
-    0,
-    2,
-    0,
     1,
+    1,
+    1,
+    0,
     1,
     0,
     0,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
+    "active": 4,
     "alerts_24h": 20,
     "recoveries_24h": 4,
-    "last_check_at": "2026-10-30T20:50:01Z",
+    "last_check_at": "2026-10-30T20:55:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T20:40:02Z",
+    "last_check_at": "2026-10-30T20:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "iteration gated",
-   "status_at": "2026-10-30T20:49:56Z",
-   "heartbeat_at": "2026-10-30T20:50:01Z",
+   "status_at": "2026-10-30T20:54:54Z",
+   "heartbeat_at": "2026-10-30T20:55:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 344,
     "markets": 3295,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T20:46:07Z",
+    "last_scan_at": "2026-10-30T20:51:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T20:46:07Z",
+    "updated_at": "2026-10-30T20:51:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T20:49:19Z",
+    "updated_at": "2026-10-30T20:53:20Z",
     "detail": "observations retained"
    },
    {
