@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T00:30:01Z",
+ "generated_at": "2026-10-30T00:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_40cec15f",
+    "task": "Original markout bounded-preflight completion with all native and API tests",
+    "elapsed_min": 59
    },
    {
     "slot": "Reviewer 2",
@@ -211,18 +211,18 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 4,
+    "active": 2,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-10-30T00:30:01Z",
+    "last_check_at": "2026-10-30T00:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 9,
+    "active": 10,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 6
+     "P2": 7
     },
     "codes": [
      "flow frozen review scope drift",
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T00:20:02Z",
+    "last_check_at": "2026-10-30T00:30:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,16 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T00:33:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: disk headroom low"
+   },
+   {
+    "at": "2026-10-30T00:31:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: agent held review"
+   },
    {
     "at": "2026-10-30T00:18:17Z",
     "kind": "merge",
@@ -291,19 +301,9 @@
     "text": "Guardian raised an alert: worker receipt untrusted review"
    },
    {
-    "at": "2026-10-29T23:34:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
     "at": "2026-10-29T23:31:55Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Original markout bounded-preflight completion with all native and…” → sent to independent review"
-   },
-   {
-    "at": "2026-10-29T23:29:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-29T23:15:45Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-30T00:29:55Z",
-   "heartbeat_at": "2026-10-30T00:30:01Z",
+   "status_at": "2026-10-30T00:34:57Z",
+   "heartbeat_at": "2026-10-30T00:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 307,
     "markets": 2945,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T00:22:50Z",
+    "last_scan_at": "2026-10-30T00:30:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T00:22:50Z",
+    "updated_at": "2026-10-30T00:30:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T00:29:38Z",
+    "updated_at": "2026-10-30T00:33:38Z",
     "detail": "observations retained"
    },
    {
