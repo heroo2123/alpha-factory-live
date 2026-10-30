@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T05:25:01Z",
+ "generated_at": "2026-10-30T05:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "24 built in 24h"
    },
    {
@@ -25,7 +25,7 @@
     "name": "Independent review",
     "count": 2,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cb694c55",
+    "task": "E3B actual experimental Brain admission and disconnected D5 execution snapshot",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_541e6a1e",
-    "task": "Adopt exact repaired fee Stage A and regenerate own inventory",
-    "elapsed_min": 3
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -153,11 +153,11 @@
    ],
    "stage_totals": {
     "queued": 16,
-    "building": 0,
+    "building": 1,
     "in_review": 2,
     "awaiting_merge": 3,
     "merged": 575,
-    "parked": 452
+    "parked": 451
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 4,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-10-30T05:25:01Z",
+    "last_check_at": "2026-10-30T05:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T05:21:59Z",
-   "heartbeat_at": "2026-10-30T05:25:01Z",
+   "status_at": "2026-10-30T05:27:16Z",
+   "heartbeat_at": "2026-10-30T05:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 352,
     "markets": 3421,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T05:17:40Z",
+    "last_scan_at": "2026-10-30T05:25:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T05:17:40Z",
+    "updated_at": "2026-10-30T05:25:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T05:24:25Z",
+    "updated_at": "2026-10-30T05:28:26Z",
     "detail": "observations retained"
    },
    {
@@ -502,7 +502,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 84 untouched city-days (11 cities, 8 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 87 untouched city-days (11 cities, 9 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 108,
    "waiting_city_days": 17,
@@ -537,7 +537,7 @@
     },
     {
      "item": "Not worse than the market on new untouched days",
-     "have": 8,
+     "have": 9,
      "need": 10,
      "done": false,
      "detail": "waiting for a frozen candidate"
@@ -1092,7 +1092,7 @@
    {
     "step": "Forecast brain passes a preregistered historical test and is not worse than the market on new days",
     "state": "active",
-    "detail": "0 of 3 candidate models used · 8 of 10 untouched days"
+    "detail": "0 of 3 candidate models used · 9 of 10 untouched days"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
