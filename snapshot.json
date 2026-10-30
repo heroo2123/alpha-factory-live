@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T08:35:02Z",
+ "generated_at": "2026-10-30T08:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 17,
+    "count": 16,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "24 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cb694c55",
+    "task": "E3B prerequisite A: execution policy and protected certification",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -124,7 +124,6 @@
    "reviews_changes_24h": 14,
    "commits_by_hour": [
     0,
-    0,
     1,
     0,
     0,
@@ -134,6 +133,7 @@
     0,
     0,
     1,
+    0,
     0,
     1,
     0,
@@ -152,8 +152,8 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 17,
-    "building": 0,
+    "queued": 16,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 576,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
-    "alerts_24h": 18,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-10-30T08:35:02Z",
+    "active": 4,
+    "alerts_24h": 17,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-10-30T08:40:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-30T08:38:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code queue idle with capacity"
+   },
+   {
     "at": "2026-10-30T07:54:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router not active"
@@ -284,11 +289,6 @@
     "at": "2026-10-30T07:13:26Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol)'s build of “a task” failed its tests; it will be retried"
-   },
-   {
-    "at": "2026-10-30T06:31:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-10-30T06:23:00Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T08:33:18Z",
-   "heartbeat_at": "2026-10-30T08:35:01Z",
+   "status_at": "2026-10-30T08:38:32Z",
+   "heartbeat_at": "2026-10-30T08:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -400,7 +400,7 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-30T07:37:01Z",
+    "updated_at": "2026-10-30T08:37:01Z",
     "detail": "multi-city capture complete"
    },
    {
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T08:34:56Z",
+    "updated_at": "2026-10-30T08:38:56Z",
     "detail": "observations retained"
    },
    {
