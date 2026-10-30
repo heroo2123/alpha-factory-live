@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T07:15:02Z",
+ "generated_at": "2026-10-30T07:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 16,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 16,
-    "recoveries_24h": 8,
-    "last_check_at": "2026-10-30T07:14:01Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-10-30T07:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -256,6 +256,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-30T07:15:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
+   {
     "at": "2026-10-30T07:13:26Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol)'s build of “a task” failed its tests; it will be retried"
@@ -294,11 +299,6 @@
     "at": "2026-10-30T05:54:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-10-30T05:50:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    },
    {
     "at": "2026-10-30T05:47:49Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-30T07:12:04Z",
-   "heartbeat_at": "2026-10-30T07:15:01Z",
+   "status_at": "2026-10-30T07:17:21Z",
+   "heartbeat_at": "2026-10-30T07:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -384,7 +384,7 @@
     "weather_events": 348,
     "markets": 3377,
     "opportunities": 0,
-    "last_scan_at": "2026-10-30T07:11:32Z",
+    "last_scan_at": "2026-10-30T07:16:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -407,14 +407,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-30T07:11:32Z",
+    "updated_at": "2026-10-30T07:16:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T07:14:43Z",
+    "updated_at": "2026-10-30T07:18:43Z",
     "detail": "observations retained"
    },
    {
@@ -512,7 +512,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-30T06:17:02Z",
+   "updated_at": "2026-10-30T07:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
