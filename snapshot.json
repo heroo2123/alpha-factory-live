@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T03:40:02Z",
+ "generated_at": "2026-10-30T03:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-10-30T03:40:02Z",
+    "last_check_at": "2026-10-30T03:45:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-30T03:30:02Z",
+    "last_check_at": "2026-10-30T03:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -255,6 +255,11 @@
    "OpenCode Go (2nd plan)"
   ],
   "events": [
+   {
+    "at": "2026-10-30T03:42:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-10-30T02:51:02Z",
     "kind": "heal",
@@ -304,11 +309,6 @@
     "at": "2026-10-30T01:38:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-30T01:35:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
    },
    {
     "at": "2026-10-30T01:22:38Z",
@@ -374,8 +374,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-30",
    "state": "iteration gated",
-   "status_at": "2026-10-30T03:39:53Z",
-   "heartbeat_at": "2026-10-30T03:40:01Z",
+   "status_at": "2026-10-30T03:44:55Z",
+   "heartbeat_at": "2026-10-30T03:45:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -414,7 +414,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-30T03:38:08Z",
+    "updated_at": "2026-10-30T03:44:09Z",
     "detail": "observations retained"
    },
    {
