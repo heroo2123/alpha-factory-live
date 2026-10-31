@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T17:25:02Z",
+ "generated_at": "2026-10-31T17:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 72,
-    "unit": "% done",
-    "active": true,
-    "detail": "full regression running"
+    "count": null,
+    "unit": "",
+    "active": false,
+    "detail": "idle between runs"
    },
    {
     "key": "release",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -104,15 +104,15 @@
    }
   ],
   "qa": {
-   "running": true,
-   "progress_pct": 72,
-   "last_finished_at": "2026-10-31T14:27:24Z",
+   "running": false,
+   "progress_pct": null,
+   "last_finished_at": "2026-10-31T17:26:40Z",
    "last_passed": 0,
    "last_failed": 0,
    "last_skipped": 0,
    "last_green": false,
    "last_green_at": "2026-10-27T17:48:38Z",
-   "last_minutes": 17
+   "last_minutes": 95
   },
   "tests_passing": 0,
   "flow": {
@@ -131,8 +131,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
-    "alerts_24h": 18,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-10-31T17:25:02Z",
+    "active": 4,
+    "alerts_24h": 17,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-10-31T17:30:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-31T17:28:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: disk headroom low"
+   },
+   {
+    "at": "2026-10-31T17:26:40Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 0 passed, 0 failed"
+   },
+   {
     "at": "2026-10-31T17:04:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
@@ -277,11 +287,6 @@
     "at": "2026-10-31T16:03:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-10-31T15:54:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    },
    {
     "at": "2026-10-31T15:51:28Z",
@@ -357,11 +362,6 @@
     "at": "2026-10-31T01:22:16Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
-   },
-   {
-    "at": "2026-10-31T01:07:38Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "census service",
-   "status_at": "2026-10-31T17:25:00Z",
-   "heartbeat_at": "2026-10-31T17:25:02Z",
+   "status_at": "2026-10-31T17:30:01Z",
+   "heartbeat_at": "2026-10-31T17:30:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 352,
     "markets": 3377,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T17:20:36Z",
+    "last_scan_at": "2026-10-31T17:26:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T17:20:36Z",
+    "updated_at": "2026-10-31T17:26:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T17:24:47Z",
+    "updated_at": "2026-10-31T17:28:48Z",
     "detail": "observations retained"
    },
    {
