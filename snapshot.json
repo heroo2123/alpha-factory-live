@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T06:25:02Z",
+ "generated_at": "2026-10-31T06:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "13 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "Original Brain exact late-commit and R2 parity repair",
+    "elapsed_min": 1
    },
    {
     "slot": "Builder 2",
@@ -142,8 +142,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 4,
+    "active": 3,
     "alerts_24h": 19,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-31T06:25:02Z",
+    "last_check_at": "2026-10-31T06:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -371,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
-   "state": "census service",
-   "status_at": "2026-10-31T06:25:00Z",
-   "heartbeat_at": "2026-10-31T06:25:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-10-31T06:27:24Z",
+   "heartbeat_at": "2026-10-31T06:30:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 356,
     "markets": 3408,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T06:24:22Z",
+    "last_scan_at": "2026-10-31T06:29:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T06:24:22Z",
+    "updated_at": "2026-10-31T06:29:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T06:24:56Z",
+    "updated_at": "2026-10-31T06:28:57Z",
     "detail": "observations retained"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 96 untouched city-days (11 cities, 10 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 98 untouched city-days (11 cities, 10 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 119,
    "waiting_city_days": 16,
