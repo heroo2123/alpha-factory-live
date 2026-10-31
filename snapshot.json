@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T09:45:01Z",
+ "generated_at": "2026-10-31T09:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,7 +10,7 @@
     "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "11 ready to build"
+    "detail": "10 ready to build"
    },
    {
     "key": "build",
@@ -123,8 +123,8 @@
    "reviews_passed_24h": 6,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 4,
     "alerts_24h": 18,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-31T09:45:02Z",
+    "last_check_at": "2026-10-31T09:50:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-31T09:48:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: agent held develop"
+   },
+   {
     "at": "2026-10-31T09:17:04Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
@@ -292,11 +297,6 @@
     "at": "2026-10-31T07:39:43Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Original Native complete recovery coverage efficiently” → sent to independent review"
-   },
-   {
-    "at": "2026-10-31T06:30:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
     "at": "2026-10-31T05:52:42Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-31T09:43:29Z",
-   "heartbeat_at": "2026-10-31T09:45:01Z",
+   "status_at": "2026-10-31T09:48:48Z",
+   "heartbeat_at": "2026-10-31T09:50:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 362,
     "markets": 3474,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T09:42:24Z",
+    "last_scan_at": "2026-10-31T09:47:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T09:42:24Z",
+    "updated_at": "2026-10-31T09:47:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T09:43:31Z",
+    "updated_at": "2026-10-31T09:49:32Z",
     "detail": "observations retained"
    },
    {
