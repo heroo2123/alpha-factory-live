@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T04:40:02Z",
+ "generated_at": "2026-10-31T04:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_cbb8568a",
     "task": "Original Brain atomic collector pin adoption",
-    "elapsed_min": 57
+    "elapsed_min": 62
    },
    {
     "slot": "Builder 2",
@@ -214,7 +214,7 @@
     "active": 3,
     "alerts_24h": 18,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-31T04:40:02Z",
+    "last_check_at": "2026-10-31T04:45:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-31T04:30:02Z",
+    "last_check_at": "2026-10-31T04:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "census service",
-   "status_at": "2026-10-31T04:40:00Z",
-   "heartbeat_at": "2026-10-31T04:40:02Z",
+   "status_at": "2026-10-31T04:44:59Z",
+   "heartbeat_at": "2026-10-31T04:45:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 310,
     "markets": 2902,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T04:36:23Z",
+    "last_scan_at": "2026-10-31T04:41:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T04:36:23Z",
+    "updated_at": "2026-10-31T04:41:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T04:38:41Z",
+    "updated_at": "2026-10-31T04:44:41Z",
     "detail": "observations retained"
    },
    {
