@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T18:00:02Z",
+ "generated_at": "2026-10-31T18:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 4,
     "alerts_24h": 17,
     "recoveries_24h": 7,
-    "last_check_at": "2026-10-31T18:00:02Z",
+    "last_check_at": "2026-10-31T18:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-31T17:50:02Z",
+    "last_check_at": "2026-10-31T18:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,16 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-10-31T18:03:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-10-31T18:03:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
    {
     "at": "2026-10-31T17:28:01Z",
     "kind": "heal",
@@ -277,16 +287,6 @@
     "at": "2026-10-31T16:11:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: disk headroom low"
-   },
-   {
-    "at": "2026-10-31T16:03:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
-   },
-   {
-    "at": "2026-10-31T16:03:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-10-31T15:51:28Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-31T17:56:02Z",
-   "heartbeat_at": "2026-10-31T18:00:02Z",
+   "status_at": "2026-10-31T18:01:18Z",
+   "heartbeat_at": "2026-10-31T18:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T17:58:52Z",
+    "updated_at": "2026-10-31T18:04:53Z",
     "detail": "observations retained"
    },
    {
