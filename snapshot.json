@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T19:00:02Z",
+ "generated_at": "2026-10-31T19:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 17,
-    "recoveries_24h": 7,
-    "last_check_at": "2026-10-31T19:00:02Z",
+    "alerts_24h": 18,
+    "recoveries_24h": 6,
+    "last_check_at": "2026-10-31T19:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-10-31T18:50:02Z",
+    "last_check_at": "2026-10-31T19:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-10-31T19:04:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
    {
     "at": "2026-10-31T18:03:02Z",
     "kind": "warn",
@@ -282,11 +287,6 @@
     "at": "2026-10-31T16:59:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-10-31T16:11:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: disk headroom low"
    },
    {
     "at": "2026-10-31T15:51:28Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-31T18:56:34Z",
-   "heartbeat_at": "2026-10-31T19:00:01Z",
+   "status_at": "2026-10-31T19:01:53Z",
+   "heartbeat_at": "2026-10-31T19:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 350,
     "markets": 3355,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T18:56:21Z",
+    "last_scan_at": "2026-10-31T19:02:08Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T18:56:21Z",
+    "updated_at": "2026-10-31T19:02:08Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T18:59:01Z",
+    "updated_at": "2026-10-31T19:03:02Z",
     "detail": "observations retained"
    },
    {
