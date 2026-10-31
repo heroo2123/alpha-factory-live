@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T10:15:01Z",
+ "generated_at": "2026-10-31T10:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,14 +10,14 @@
     "count": 18,
     "unit": "queued",
     "active": false,
-    "detail": "10 ready to build"
+    "detail": "11 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "13 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_cbb8568a",
+    "task": "Original Native complete recovery coverage efficiently",
+    "elapsed_min": 3
    },
    {
     "slot": "Builder 2",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 4,
-    "alerts_24h": 18,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-10-31T10:15:01Z",
+    "active": 3,
+    "alerts_24h": 17,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-10-31T10:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-10-31T10:18:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: agent held develop"
+   },
+   {
     "at": "2026-10-31T10:00:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router not active"
@@ -282,11 +287,6 @@
     "at": "2026-10-31T08:10:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-31T08:05:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
    },
    {
     "at": "2026-10-31T07:52:29Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "census service",
-   "status_at": "2026-10-31T10:15:00Z",
-   "heartbeat_at": "2026-10-31T10:15:02Z",
+   "status_at": "2026-10-31T10:20:00Z",
+   "heartbeat_at": "2026-10-31T10:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 362,
     "markets": 3474,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T10:13:52Z",
+    "last_scan_at": "2026-10-31T10:19:07Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T10:13:52Z",
+    "updated_at": "2026-10-31T10:19:07Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T10:13:36Z",
+    "updated_at": "2026-10-31T10:19:37Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +510,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-31T09:17:01Z",
+   "updated_at": "2026-10-31T10:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
