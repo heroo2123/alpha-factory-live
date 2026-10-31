@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T22:05:02Z",
+ "generated_at": "2026-10-31T22:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 71,
+    "count": 79,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 71,
+   "progress_pct": 79,
    "last_finished_at": "2026-10-31T17:26:40Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 4,
+    "active": 5,
     "alerts_24h": 19,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-31T22:04:01Z",
+    "last_check_at": "2026-10-31T22:09:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-10-31T22:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-10-31T22:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
+   {
     "at": "2026-10-31T21:05:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
@@ -270,16 +280,6 @@
    },
    {
     "at": "2026-10-31T20:04:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-10-31T19:04:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-31T18:03:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "iteration gated",
-   "status_at": "2026-10-31T22:04:59Z",
-   "heartbeat_at": "2026-10-31T22:05:02Z",
+   "status_at": "2026-10-31T22:09:55Z",
+   "heartbeat_at": "2026-10-31T22:10:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 338,
     "markets": 3225,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T22:03:15Z",
+    "last_scan_at": "2026-10-31T22:08:44Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T22:03:15Z",
+    "updated_at": "2026-10-31T22:08:44Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T22:03:30Z",
+    "updated_at": "2026-10-31T22:09:31Z",
     "detail": "observations retained"
    },
    {
