@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T09:15:02Z",
+ "generated_at": "2026-10-31T09:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "14 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_cbb8568a",
-    "task": "Original Brain admission ordering and timestamp precision",
-    "elapsed_min": 66
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -119,7 +119,7 @@
    "merges_24h": 2,
    "commits_24h": 2,
    "built_24h": 14,
-   "build_failed_24h": 3,
+   "build_failed_24h": 4,
    "reviews_passed_24h": 6,
    "reviews_changes_24h": 4,
    "commits_by_hour": [
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
+    "active": 4,
     "alerts_24h": 18,
     "recoveries_24h": 6,
-    "last_check_at": "2026-10-31T09:15:02Z",
+    "last_check_at": "2026-10-31T09:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-10-31T09:17:04Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
+   },
    {
     "at": "2026-10-31T08:32:02Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-10-30T20:43:01Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) review ended: disk headroom hold"
-   },
-   {
-    "at": "2026-10-30T20:42:35Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Original collector452 adopt reviewed helper” → sent to independent review"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-01",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-10-31T09:11:40Z",
-   "heartbeat_at": "2026-10-31T09:15:03Z",
+   "status_at": "2026-10-31T09:16:59Z",
+   "heartbeat_at": "2026-10-31T09:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 362,
     "markets": 3474,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T09:11:09Z",
+    "last_scan_at": "2026-10-31T09:16:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T09:11:09Z",
+    "updated_at": "2026-10-31T09:16:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T09:13:25Z",
+    "updated_at": "2026-10-31T09:19:26Z",
     "detail": "observations retained"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8469,
-     "city_days": 122
+     "brier": 0.8556,
+     "city_days": 124
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8167,
-     "city_days": 122
+     "brier": 0.8206,
+     "city_days": 124
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6495,
-     "city_days": 122
+     "brier": 0.6464,
+     "city_days": 124
     },
     {
      "key": "equal",
@@ -502,15 +502,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 102 untouched city-days (11 cities, 10 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 123,
-   "waiting_city_days": 12,
+   "labelled_city_days": 125,
+   "waiting_city_days": 10,
    "labelled_days": 16,
    "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-10-31T08:17:02Z",
+   "updated_at": "2026-10-31T09:17:01Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
