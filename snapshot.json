@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T00:35:02Z",
+ "generated_at": "2026-10-31T00:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2c1af6b7",
     "task": "Original collector452 adopt reviewed helper",
-    "elapsed_min": 3
+    "elapsed_min": 8
    },
    {
     "slot": "Builder 2",
@@ -120,7 +120,7 @@
    "commits_24h": 4,
    "built_24h": 15,
    "build_failed_24h": 5,
-   "reviews_passed_24h": 11,
+   "reviews_passed_24h": 10,
    "reviews_changes_24h": 6,
    "commits_by_hour": [
     1,
@@ -214,7 +214,7 @@
     "active": 5,
     "alerts_24h": 19,
     "recoveries_24h": 5,
-    "last_check_at": "2026-10-31T00:35:02Z",
+    "last_check_at": "2026-10-31T00:40:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-10-31T00:37:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: agent held develop"
+   },
    {
     "at": "2026-10-31T00:06:26Z",
     "kind": "warn",
@@ -297,11 +302,6 @@
     "at": "2026-10-30T21:25:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
-    "at": "2026-10-30T21:11:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
    },
    {
     "at": "2026-10-30T20:58:35Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-10-31",
    "state": "iteration gated",
-   "status_at": "2026-10-31T00:34:54Z",
-   "heartbeat_at": "2026-10-31T00:35:00Z",
+   "status_at": "2026-10-31T00:39:55Z",
+   "heartbeat_at": "2026-10-31T00:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 7,
@@ -382,7 +382,7 @@
     "weather_events": 318,
     "markets": 3009,
     "opportunities": 0,
-    "last_scan_at": "2026-10-31T00:32:07Z",
+    "last_scan_at": "2026-10-31T00:37:26Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-10-30T23:37:02Z",
+    "updated_at": "2026-10-31T00:37:01Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-10-31T00:32:07Z",
+    "updated_at": "2026-10-31T00:37:26Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-10-31T00:34:03Z",
+    "updated_at": "2026-10-31T00:38:04Z",
     "detail": "observations retained"
    },
    {
