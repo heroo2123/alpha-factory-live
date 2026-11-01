@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T10:25:01Z",
+ "generated_at": "2026-11-01T10:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "count": 9,
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -104,17 +104,17 @@
    }
   ],
   "qa": {
-   "running": false,
-   "progress_pct": null,
-   "last_finished_at": "2026-10-31T22:38:43Z",
-   "last_passed": 21090,
-   "last_failed": 7,
-   "last_skipped": 51,
+   "running": true,
+   "progress_pct": 9,
+   "last_finished_at": "2026-11-01T10:20:23Z",
+   "last_passed": 0,
+   "last_failed": 0,
+   "last_skipped": 0,
    "last_green": false,
    "last_green_at": "2026-10-27T17:48:38Z",
-   "last_minutes": 127
+   "last_minutes": 115
   },
-  "tests_passing": 21090,
+  "tests_passing": 0,
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
-    "alerts_24h": 14,
+    "active": 4,
+    "alerts_24h": 15,
     "recoveries_24h": 10,
-    "last_check_at": "2026-11-01T10:25:01Z",
+    "last_check_at": "2026-11-01T10:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-01T10:29:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
     "at": "2026-11-01T10:23:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
@@ -269,6 +274,11 @@
     "text": "Guardian raised an alert: no verified code delivery 2h"
    },
    {
+    "at": "2026-11-01T10:20:23Z",
+    "kind": "qa",
+    "text": "Full test suite finished: 0 passed, 0 failed"
+   },
+   {
     "at": "2026-11-01T10:20:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
@@ -282,11 +292,6 @@
     "at": "2026-11-01T10:07:22Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-11-01T10:07:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-01T09:45:37Z",
@@ -354,11 +359,6 @@
     "text": "Merged “Original Native restore sharing - author drain proven” into the main build"
    },
    {
-    "at": "2026-10-31T14:27:24Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 0 passed, 0 failed"
-   },
-   {
     "at": "2026-10-31T13:30:39Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-01T10:22:30Z",
-   "heartbeat_at": "2026-11-01T10:25:01Z",
+   "status_at": "2026-11-01T10:27:48Z",
+   "heartbeat_at": "2026-11-01T10:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T10:23:24Z",
+    "updated_at": "2026-11-01T10:29:25Z",
     "detail": "observations retained"
    },
    {
