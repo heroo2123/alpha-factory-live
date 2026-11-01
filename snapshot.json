@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T11:00:01Z",
+ "generated_at": "2026-11-01T11:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-11-01T10:59:01Z",
+    "alerts_24h": 14,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-11-01T11:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow review repair scope missing",
      "flow source classifier router disagree"
     ],
-    "last_check_at": "2026-11-01T10:50:02Z",
+    "last_check_at": "2026-11-01T11:00:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,16 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-01T11:04:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-01T11:00:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
    {
     "at": "2026-11-01T10:58:21Z",
     "kind": "review",
@@ -282,16 +292,6 @@
     "at": "2026-11-01T10:47:48Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Adopt completed stream bridge after actual Native merge” → sent to independent review"
-   },
-   {
-    "at": "2026-11-01T10:46:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: disk headroom low"
-   },
-   {
-    "at": "2026-11-01T10:42:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-01T10:20:23Z",
@@ -371,18 +371,18 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-01T10:56:42Z",
-   "heartbeat_at": "2026-11-01T11:00:01Z",
+   "state": "census service",
+   "status_at": "2026-11-01T11:05:00Z",
+   "heartbeat_at": "2026-11-01T11:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 7,
    "scanner": {
-    "weather_events": 363,
-    "markets": 3508,
+    "weather_events": 367,
+    "markets": 3552,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T10:57:07Z",
+    "last_scan_at": "2026-11-01T11:02:34Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T10:57:07Z",
+    "updated_at": "2026-11-01T11:02:34Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T10:59:30Z",
+    "updated_at": "2026-11-01T11:03:30Z",
     "detail": "observations retained"
    },
    {
