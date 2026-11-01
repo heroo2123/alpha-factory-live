@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T16:20:01Z",
+ "generated_at": "2026-11-01T16:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,20 +10,20 @@
     "count": 19,
     "unit": "queued",
     "active": false,
-    "detail": "15 ready to build"
+    "detail": "14 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
     "active": true,
-    "detail": "9 built in 24h"
+    "detail": "10 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 1,
+    "count": 2,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_f1bbfbbc",
-    "task": "Same fee B: bound revalidation clock stall",
-    "elapsed_min": 9
+    "task_id": "t_5117df9e",
+    "task": "Same quote PhaseB: coherent final head and expiry",
+    "elapsed_min": 4
    },
    {
     "slot": "Builder 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 9,
+   "built_24h": 10,
    "build_failed_24h": 4,
    "reviews_passed_24h": 3,
    "reviews_changes_24h": 6,
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 19,
-    "building": 1,
-    "in_review": 1,
+    "building": 0,
+    "in_review": 2,
     "awaiting_merge": 4,
     "merged": 579,
     "parked": 459
@@ -214,25 +214,25 @@
     "active": 4,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-11-01T16:20:02Z",
+    "last_check_at": "2026-11-01T16:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 11,
+    "active": 10,
     "by_severity": {
      "P0": 0,
      "P1": 2,
-     "P2": 7
+     "P2": 6
     },
     "codes": [
      "flow frozen review scope drift",
      "flow unmergeable reviewed work",
      "flow qa red without repair",
-     "flow builders idle",
      "flow glm plan lane dead",
-     "flow release contract pin stale"
+     "flow release contract pin stale",
+     "flow source card not routable"
     ],
-    "last_check_at": "2026-11-01T16:10:02Z",
+    "last_check_at": "2026-11-01T16:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-01T16:20:23Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Same fee B: bound revalidation clock stall” → sent to independent review"
+   },
    {
     "at": "2026-11-01T16:13:25Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-11-01T10:47:48Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Adopt completed stream bridge after actual Native merge” → sent to independent review"
-   },
-   {
-    "at": "2026-11-01T10:20:23Z",
-    "kind": "qa",
-    "text": "Full test suite finished: 0 passed, 0 failed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "census service",
-   "status_at": "2026-11-01T16:20:01Z",
-   "heartbeat_at": "2026-11-01T16:20:02Z",
+   "status_at": "2026-11-01T16:24:59Z",
+   "heartbeat_at": "2026-11-01T16:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -382,7 +382,7 @@
     "weather_events": 370,
     "markets": 3598,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T16:15:53Z",
+    "last_scan_at": "2026-11-01T16:21:20Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T16:15:53Z",
+    "updated_at": "2026-11-01T16:21:20Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T16:18:21Z",
+    "updated_at": "2026-11-01T16:24:22Z",
     "detail": "observations retained"
    },
    {
