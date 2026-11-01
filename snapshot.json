@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T08:20:02Z",
+ "generated_at": "2026-11-01T08:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "3 built in 24h"
    },
    {
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "1 merged in 24h"
+    "detail": "2 merged in 24h"
    },
    {
     "key": "qa",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_da208c6b",
+    "task": "Original A7 owner: two exact launcher cleanup findings",
+    "elapsed_min": 12
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 21090,
   "flow": {
-   "merges_24h": 1,
-   "commits_24h": 1,
+   "merges_24h": 2,
+   "commits_24h": 2,
    "built_24h": 3,
    "build_failed_24h": 4,
    "reviews_passed_24h": 2,
@@ -146,16 +146,16 @@
     0,
     0,
     0,
-    0
+    1
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 20,
-    "building": 0,
+    "queued": 19,
+    "building": 1,
     "in_review": 0,
-    "awaiting_merge": 4,
+    "awaiting_merge": 3,
     "merged": 577,
     "parked": 455
    }
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-11-01T08:20:03Z",
+    "title": "Existing R7 owner: repair risk diagnostic numeric contract",
+    "area": "Test repairs"
+   },
    {
     "at": "2026-10-31T15:51:28Z",
     "title": "Original Native restore sharing - author drain proven",
@@ -201,20 +206,15 @@
     "at": "2026-10-29T22:50:39Z",
     "title": "Adopt tested D3 callable replay correction",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-29T21:04:29Z",
-    "title": "StageB2 adopt existing admission core after reviewed support merge",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 4,
-    "alerts_24h": 20,
-    "recoveries_24h": 4,
-    "last_check_at": "2026-11-01T08:20:02Z",
+    "active": 3,
+    "alerts_24h": 18,
+    "recoveries_24h": 6,
+    "last_check_at": "2026-11-01T08:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release contract pin stale",
      "flow review repair scope missing"
     ],
-    "last_check_at": "2026-11-01T08:10:02Z",
+    "last_check_at": "2026-11-01T08:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,21 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-01T08:22:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-01T08:22:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-11-01T08:20:03Z",
+    "kind": "merge",
+    "text": "Merged “Existing R7 owner: repair risk diagnostic numeric contract” into the main build"
+   },
    {
     "at": "2026-11-01T08:18:01Z",
     "kind": "warn",
@@ -297,16 +312,6 @@
     "at": "2026-11-01T07:24:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-01T07:22:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-01T07:18:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
     "at": "2026-10-31T22:38:43Z",
@@ -357,11 +362,6 @@
     "at": "2026-10-31T09:17:04Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
-   },
-   {
-    "at": "2026-10-31T07:52:29Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-01T08:17:49Z",
-   "heartbeat_at": "2026-11-01T08:20:02Z",
+   "status_at": "2026-11-01T08:23:04Z",
+   "heartbeat_at": "2026-11-01T08:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 7,
    "scanner": {
-    "weather_events": 362,
-    "markets": 3491,
+    "weather_events": 360,
+    "markets": 3469,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T08:18:58Z",
+    "last_scan_at": "2026-11-01T08:24:19Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T08:18:58Z",
+    "updated_at": "2026-11-01T08:24:19Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T08:19:05Z",
+    "updated_at": "2026-11-01T08:23:05Z",
     "detail": "observations retained"
    },
    {
