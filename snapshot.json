@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T12:25:01Z",
+ "generated_at": "2026-11-01T12:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 20,
+    "count": 19,
     "unit": "queued",
     "active": false,
     "detail": "11 ready to build"
@@ -39,7 +39,7 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": 88,
+    "count": 89,
     "unit": "% done",
     "active": true,
     "detail": "full regression running"
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_5117df9e",
     "task": "Same valuation owner: later-book execution quote PhaseB",
-    "elapsed_min": 16
+    "elapsed_min": 21
    },
    {
     "slot": "Builder 2",
@@ -105,7 +105,7 @@
   ],
   "qa": {
    "running": true,
-   "progress_pct": 88,
+   "progress_pct": 89,
    "last_finished_at": "2026-11-01T10:20:23Z",
    "last_passed": 0,
    "last_failed": 0,
@@ -152,12 +152,12 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 20,
+    "queued": 19,
     "building": 0,
     "in_review": 1,
     "awaiting_merge": 3,
     "merged": 578,
-    "parked": 456
+    "parked": 455
    }
   },
   "architect": {
@@ -214,7 +214,7 @@
     "active": 3,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-11-01T12:25:01Z",
+    "last_check_at": "2026-11-01T12:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,9 +254,14 @@
   ],
   "events": [
    {
+    "at": "2026-11-01T12:26:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled review"
+   },
+   {
     "at": "2026-11-01T12:24:20Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Original fee B: exact rule and book observations alongside Brain”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    },
    {
     "at": "2026-11-01T12:21:01Z",
@@ -284,14 +289,9 @@
     "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
-    "at": "2026-11-01T11:54:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
     "at": "2026-11-01T11:40:23Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Original fee B: exact rule and book observations alongside Brain” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-01T11:18:33Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-01T12:22:05Z",
-   "heartbeat_at": "2026-11-01T12:25:01Z",
+   "status_at": "2026-11-01T12:27:24Z",
+   "heartbeat_at": "2026-11-01T12:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -382,7 +382,7 @@
     "weather_events": 366,
     "markets": 3540,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T12:24:41Z",
+    "last_scan_at": "2026-11-01T12:29:52Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T12:24:41Z",
+    "updated_at": "2026-11-01T12:29:52Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T12:23:43Z",
+    "updated_at": "2026-11-01T12:29:44Z",
     "detail": "observations retained"
    },
    {
