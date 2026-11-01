@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T22:30:01Z",
+ "generated_at": "2026-11-01T22:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,15 +17,15 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "12 built in 24h"
+    "active": false,
+    "detail": "13 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 2,
+    "count": 3,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_2c1af6b7",
-    "task": "Same Brain: repair saved-report authority and expired-session recovery",
-    "elapsed_min": 65
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_2c1af6b7",
+    "task": "Same Brain: repair saved-report authority and expired-session recovery",
+    "elapsed_min": 1
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 3,
    "commits_24h": 3,
-   "built_24h": 12,
+   "built_24h": 13,
    "build_failed_24h": 6,
    "reviews_passed_24h": 5,
    "reviews_changes_24h": 6,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 19,
     "building": 0,
-    "in_review": 2,
+    "in_review": 3,
     "awaiting_merge": 3,
     "merged": 579,
     "parked": 459
@@ -214,7 +214,7 @@
     "active": 5,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-11-01T22:30:02Z",
+    "last_check_at": "2026-11-01T22:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release contract pin stale",
      "flow brain harvest incomplete"
     ],
-    "last_check_at": "2026-11-01T22:20:01Z",
+    "last_check_at": "2026-11-01T22:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-01T22:33:51Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Same Brain: repair saved-report authority and expired-session recovery” → sent to independent review"
+   },
    {
     "at": "2026-11-01T22:11:02Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-11-01T13:08:42Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) build attempt ended: host test resource wait"
-   },
-   {
-    "at": "2026-11-01T13:01:06Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "iteration gated",
-   "status_at": "2026-11-01T22:30:00Z",
-   "heartbeat_at": "2026-11-01T22:30:01Z",
+   "status_at": "2026-11-01T22:34:52Z",
+   "heartbeat_at": "2026-11-01T22:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 7,
    "scanner": {
-    "weather_events": 335,
-    "markets": 3215,
+    "weather_events": 333,
+    "markets": 3193,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T22:27:19Z",
+    "last_scan_at": "2026-11-01T22:32:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T22:27:19Z",
+    "updated_at": "2026-11-01T22:32:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T22:29:20Z",
+    "updated_at": "2026-11-01T22:33:20Z",
     "detail": "observations retained"
    },
    {
