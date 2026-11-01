@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T07:20:02Z",
+ "generated_at": "2026-11-01T07:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_da208c6b",
     "task": "A7 complete-child memory accounting under retained parent pressure",
-    "elapsed_min": 4
+    "elapsed_min": 9
    },
    {
     "slot": "Builder 2",
@@ -156,7 +156,7 @@
     "building": 1,
     "in_review": 0,
     "awaiting_merge": 3,
-    "merged": 578,
+    "merged": 577,
     "parked": 455
    }
   },
@@ -212,27 +212,27 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 21,
-    "recoveries_24h": 3,
-    "last_check_at": "2026-11-01T07:20:02Z",
+    "alerts_24h": 20,
+    "recoveries_24h": 4,
+    "last_check_at": "2026-11-01T07:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 11,
+    "active": 9,
     "by_severity": {
      "P0": 0,
-     "P1": 2,
-     "P2": 7
+     "P1": 1,
+     "P2": 6
     },
     "codes": [
      "flow frozen review scope drift",
      "flow unmergeable reviewed work",
-     "flow qa red without repair",
      "flow qa not running",
-     "flow builders idle",
-     "flow glm plan lane dead"
+     "flow glm plan lane dead",
+     "flow release contract pin stale",
+     "flow review repair scope missing"
     ],
-    "last_check_at": "2026-11-01T07:10:01Z",
+    "last_check_at": "2026-11-01T07:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-01T07:24:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-01T07:22:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
+   {
     "at": "2026-11-01T07:18:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
@@ -272,16 +282,6 @@
     "at": "2026-11-01T06:06:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-11-01T05:56:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-01T05:44:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-10-31T22:38:43Z",
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-01T07:16:49Z",
-   "heartbeat_at": "2026-11-01T07:20:02Z",
+   "status_at": "2026-11-01T07:22:04Z",
+   "heartbeat_at": "2026-11-01T07:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 7,
    "scanner": {
-    "weather_events": 354,
-    "markets": 3403,
+    "weather_events": 352,
+    "markets": 3381,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T07:16:10Z",
+    "last_scan_at": "2026-11-01T07:21:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T07:16:10Z",
+    "updated_at": "2026-11-01T07:21:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T07:18:55Z",
+    "updated_at": "2026-11-01T07:24:56Z",
     "detail": "observations retained"
    },
    {
