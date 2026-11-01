@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T08:25:02Z",
+ "generated_at": "2026-11-01T08:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,18 +15,18 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
     "active": true,
-    "detail": "3 built in 24h"
+    "detail": "4 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 0,
+    "count": 2,
     "unit": "in review",
-    "active": false,
-    "detail": "different model family from the builder; 5 parked, waiting for a new reviewer"
+    "active": true,
+    "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
@@ -39,10 +39,10 @@
    {
     "key": "qa",
     "name": "Full QA",
-    "count": null,
-    "unit": "",
-    "active": false,
-    "detail": "idle between runs"
+    "count": 8,
+    "unit": "% done",
+    "active": true,
+    "detail": "full regression running"
    },
    {
     "key": "release",
@@ -68,9 +68,9 @@
     "state": "working",
     "model": "Codex (GPT-6 Astra)",
     "family": "OpenAI",
-    "task_id": "t_da208c6b",
-    "task": "Original A7 owner: two exact launcher cleanup findings",
-    "elapsed_min": 12
+    "task_id": "t_2c1af6b7",
+    "task": "Original collector: guarded producer to dataset/shared pool",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_da208c6b",
+    "task": "Original A7 owner: two exact launcher cleanup findings",
+    "elapsed_min": 3
    },
    {
     "slot": "Reviewer 2",
@@ -104,8 +104,8 @@
    }
   ],
   "qa": {
-   "running": false,
-   "progress_pct": null,
+   "running": true,
+   "progress_pct": 8,
    "last_finished_at": "2026-10-31T22:38:43Z",
    "last_passed": 21090,
    "last_failed": 7,
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 3,
+   "built_24h": 4,
    "build_failed_24h": 4,
    "reviews_passed_24h": 2,
    "reviews_changes_24h": 1,
@@ -153,10 +153,10 @@
    ],
    "stage_totals": {
     "queued": 19,
-    "building": 1,
-    "in_review": 0,
+    "building": 0,
+    "in_review": 2,
     "awaiting_merge": 3,
-    "merged": 577,
+    "merged": 578,
     "parked": 455
    }
   },
@@ -175,6 +175,11 @@
    {
     "at": "2026-10-31T15:51:28Z",
     "title": "Original Native restore sharing - author drain proven",
+    "area": "Core build"
+   },
+   {
+    "at": "2026-10-31T02:52:49Z",
+    "title": "Original collector: guarded producer to dataset/shared pool",
     "area": "Core build"
    },
    {
@@ -201,20 +206,15 @@
     "at": "2026-10-30T00:18:17Z",
     "title": "Adopt tested Brain concurrent-refusal fixture correction",
     "area": "Core build"
-   },
-   {
-    "at": "2026-10-29T22:50:39Z",
-    "title": "Adopt tested D3 callable replay correction",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
-    "alerts_24h": 18,
-    "recoveries_24h": 6,
-    "last_check_at": "2026-11-01T08:25:02Z",
+    "active": 2,
+    "alerts_24h": 17,
+    "recoveries_24h": 7,
+    "last_check_at": "2026-11-01T08:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,16 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-01T08:27:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: full suite not green"
+   },
+   {
+    "at": "2026-11-01T08:25:52Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Original A7 owner: two exact launcher cleanup findings” → sent to independent review"
+   },
    {
     "at": "2026-11-01T08:22:01Z",
     "kind": "heal",
@@ -309,11 +319,6 @@
     "text": "Codex (GPT-6 Astra) build attempt ended: worker exception hold"
    },
    {
-    "at": "2026-11-01T07:24:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: auxiliary wait unverified"
-   },
-   {
     "at": "2026-10-31T22:38:43Z",
     "kind": "warn",
     "text": "Full test suite finished: 21090 passed, 7 failed"
@@ -357,11 +362,6 @@
     "at": "2026-10-31T11:20:11Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) build attempt ended: host test timeout hold"
-   },
-   {
-    "at": "2026-10-31T09:17:04Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) build attempt ended: host test timeout hold"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-01T08:23:04Z",
-   "heartbeat_at": "2026-11-01T08:25:02Z",
+   "status_at": "2026-11-01T08:28:21Z",
+   "heartbeat_at": "2026-11-01T08:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -382,7 +382,7 @@
     "weather_events": 360,
     "markets": 3469,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T08:24:19Z",
+    "last_scan_at": "2026-11-01T08:29:37Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T08:24:19Z",
+    "updated_at": "2026-11-01T08:29:37Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T08:23:05Z",
+    "updated_at": "2026-11-01T08:29:06Z",
     "detail": "observations retained"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 111 untouched city-days (11 cities, 11 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 113 untouched city-days (11 cities, 11 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 134,
    "waiting_city_days": 11,
