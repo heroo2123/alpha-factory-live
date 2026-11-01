@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T09:20:01Z",
+ "generated_at": "2026-11-01T09:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,9 +15,9 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 0,
+    "count": 1,
     "unit": "building",
-    "active": false,
+    "active": true,
     "detail": "4 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_da208c6b",
+    "task": "Same A7 owner: cancellation identity and stopped-child cleanup",
+    "elapsed_min": 2
    },
    {
     "slot": "Builder 2",
@@ -153,10 +153,10 @@
    ],
    "stage_totals": {
     "queued": 20,
-    "building": 0,
+    "building": 1,
     "in_review": 1,
     "awaiting_merge": 3,
-    "merged": 578,
+    "merged": 577,
     "parked": 455
    }
   },
@@ -175,11 +175,6 @@
    {
     "at": "2026-10-31T15:51:28Z",
     "title": "Original Native restore sharing - author drain proven",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-10-31T02:52:49Z",
-    "title": "Original collector: guarded producer to dataset/shared pool",
     "area": "Core build"
    },
    {
@@ -206,15 +201,20 @@
     "at": "2026-10-30T00:18:17Z",
     "title": "Adopt tested Brain concurrent-refusal fixture correction",
     "area": "Core build"
+   },
+   {
+    "at": "2026-10-29T22:50:39Z",
+    "title": "Adopt tested D3 callable replay correction",
+    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 3,
-    "alerts_24h": 15,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-11-01T09:20:02Z",
+    "active": 2,
+    "alerts_24h": 14,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-11-01T09:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow review repair scope missing",
      "flow source classifier router disagree"
     ],
-    "last_check_at": "2026-11-01T09:10:02Z",
+    "last_check_at": "2026-11-01T09:20:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-01T09:22:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
+   },
    {
     "at": "2026-11-01T09:19:20Z",
     "kind": "warn",
@@ -286,17 +291,12 @@
    {
     "at": "2026-11-01T08:31:59Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
-   },
-   {
-    "at": "2026-11-01T08:27:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: full suite not green"
+    "text": "Codex (GPT-6 Astra) reviewed “Same A7 owner: cancellation identity and stopped-child cleanup”: changes required"
    },
    {
     "at": "2026-11-01T08:25:52Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Same A7 owner: cancellation identity and stopped-child cleanup” → sent to independent review"
    },
    {
     "at": "2026-11-01T08:20:03Z",
@@ -316,12 +316,12 @@
    {
     "at": "2026-11-01T08:02:54Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Same A7 owner: cancellation identity and stopped-child cleanup”: changes required"
    },
    {
     "at": "2026-11-01T07:50:57Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “Same A7 owner: cancellation identity and stopped-child cleanup” → sent to independent review"
    },
    {
     "at": "2026-11-01T07:40:55Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-01T09:17:21Z",
-   "heartbeat_at": "2026-11-01T09:20:00Z",
+   "status_at": "2026-11-01T09:22:37Z",
+   "heartbeat_at": "2026-11-01T09:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
@@ -382,7 +382,7 @@
     "weather_events": 359,
     "markets": 3464,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T09:17:16Z",
+    "last_scan_at": "2026-11-01T09:24:31Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T09:17:16Z",
+    "updated_at": "2026-11-01T09:24:31Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T09:19:14Z",
+    "updated_at": "2026-11-01T09:23:15Z",
     "detail": "observations retained"
    },
    {
