@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-02T15:05:02Z",
+ "generated_at": "2026-11-02T15:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,8 +17,8 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": false,
-    "detail": "9 built in 24h"
+    "active": true,
+    "detail": "8 built in 24h"
    },
    {
     "key": "review",
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "idle",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Sol)",
+    "family": "OpenAI",
+    "task_id": "t_2c1af6b7",
+    "task": "Same Native A: adopt measured fixture repair for full checks",
+    "elapsed_min": 0
    },
    {
     "slot": "Builder 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 1,
    "commits_24h": 1,
-   "built_24h": 9,
+   "built_24h": 8,
    "build_failed_24h": 5,
    "reviews_passed_24h": 3,
    "reviews_changes_24h": 5,
@@ -189,7 +189,7 @@
    },
    {
     "at": "2026-10-31T02:52:49Z",
-    "title": "Same Native A: measured post-selection fixture cost repair",
+    "title": "Same Native A: adopt measured fixture repair for full checks",
     "area": "Core build"
    },
    {
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
+    "active": 5,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-02T15:05:02Z",
+    "last_check_at": "2026-11-02T15:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -341,22 +341,22 @@
    {
     "at": "2026-11-01T22:40:32Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Same Native A: measured post-selection fixture cost repair”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “Same Native A: adopt measured fixture repair for full checks”: changes required"
    },
    {
     "at": "2026-11-01T22:33:51Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Same Native A: measured post-selection fixture cost repair” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “Same Native A: adopt measured fixture repair for full checks” → sent to independent review"
    },
    {
     "at": "2026-11-01T21:05:23Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Same Native A: measured post-selection fixture cost repair”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “Same Native A: adopt measured fixture repair for full checks”: passed"
    },
    {
     "at": "2026-11-01T20:55:31Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Native A: measured post-selection fixture cost repair” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “Same Native A: adopt measured fixture repair for full checks” → sent to independent review"
    },
    {
     "at": "2026-11-01T18:23:30Z",
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-03",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-02T15:01:48Z",
-   "heartbeat_at": "2026-11-02T15:05:02Z",
+   "status_at": "2026-11-02T15:07:04Z",
+   "heartbeat_at": "2026-11-02T15:10:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
    "days_with_paper_decisions": 8,
    "scanner": {
-    "weather_events": 367,
-    "markets": 3582,
+    "weather_events": 368,
+    "markets": 3587,
     "opportunities": 0,
-    "last_scan_at": "2026-11-02T15:01:35Z",
+    "last_scan_at": "2026-11-02T15:06:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-02T15:01:35Z",
+    "updated_at": "2026-11-02T15:06:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-02T15:04:07Z",
+    "updated_at": "2026-11-02T15:08:07Z",
     "detail": "observations retained"
    },
    {
