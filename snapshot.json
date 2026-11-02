@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-02T01:25:02Z",
+ "generated_at": "2026-11-02T01:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-11-02T01:25:02Z",
+    "active": 7,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-11-02T01:30:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,21 @@
   ],
   "events": [
    {
+    "at": "2026-11-02T01:29:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-11-02T01:27:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-02T01:26:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
     "at": "2026-11-02T01:15:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
@@ -269,24 +284,9 @@
     "text": "Guardian confirmed recovery: auxiliary wait unverified"
    },
    {
-    "at": "2026-11-02T01:08:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
     "at": "2026-11-02T01:04:08Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) review ended: review author or reviewer family…"
-   },
-   {
-    "at": "2026-11-02T00:57:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-02T00:57:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-02T00:52:23Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "iteration gated",
-   "status_at": "2026-11-02T01:24:56Z",
-   "heartbeat_at": "2026-11-02T01:25:01Z",
+   "status_at": "2026-11-02T01:29:57Z",
+   "heartbeat_at": "2026-11-02T01:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -382,7 +382,7 @@
     "weather_events": 314,
     "markets": 2989,
     "opportunities": 0,
-    "last_scan_at": "2026-11-02T01:19:50Z",
+    "last_scan_at": "2026-11-02T01:27:35Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-02T01:19:50Z",
+    "updated_at": "2026-11-02T01:27:35Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-02T01:23:47Z",
+    "updated_at": "2026-11-02T01:29:48Z",
     "detail": "observations retained"
    },
    {
