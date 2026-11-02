@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-02T09:45:01Z",
+ "generated_at": "2026-11-02T09:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "14 built in 24h"
+    "detail": "13 built in 24h"
    },
    {
     "key": "review",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,8 +118,8 @@
   "flow": {
    "merges_24h": 2,
    "commits_24h": 2,
-   "built_24h": 14,
-   "build_failed_24h": 4,
+   "built_24h": 13,
+   "build_failed_24h": 6,
    "reviews_passed_24h": 4,
    "reviews_changes_24h": 8,
    "commits_by_hour": [
@@ -156,7 +156,7 @@
     "building": 0,
     "in_review": 2,
     "awaiting_merge": 3,
-    "merged": 578,
+    "merged": 577,
     "parked": 460
    }
   },
@@ -188,11 +188,6 @@
     "area": "Core build"
    },
    {
-    "at": "2026-10-31T02:52:49Z",
-    "title": "Same Brain: complete V3 against corrected producer",
-    "area": "Core build"
-   },
-   {
     "at": "2026-10-30T10:46:13Z",
     "title": "E3B PhaseA atomic collector certification-pin adoption",
     "area": "Core build"
@@ -206,15 +201,20 @@
     "at": "2026-10-30T02:13:05Z",
     "title": "Same-owner exact collector timer repair adoption after253 CLI checks",
     "area": "Core build"
+   },
+   {
+    "at": "2026-10-30T00:54:07Z",
+    "title": "Original markout bounded-preflight completion with all native and API tests",
+    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
+    "active": 6,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-11-02T09:45:01Z",
+    "last_check_at": "2026-11-02T09:49:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,16 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-02T09:48:55Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: tested partial preserved research…"
+   },
+   {
+    "at": "2026-11-02T09:48:28Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Astra) build attempt ended: tested partial preserved research…"
+   },
    {
     "at": "2026-11-02T09:38:01Z",
     "kind": "warn",
@@ -326,22 +336,22 @@
    {
     "at": "2026-11-01T22:40:32Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Same Brain: complete V3 against corrected producer”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    },
    {
     "at": "2026-11-01T22:33:51Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Same Brain: complete V3 against corrected producer” → sent to independent review"
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-01T21:05:23Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Same Brain: complete V3 against corrected producer”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    },
    {
     "at": "2026-11-01T20:55:31Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Brain: complete V3 against corrected producer” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-01T18:23:30Z",
@@ -351,17 +361,7 @@
    {
     "at": "2026-11-01T17:53:07Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Astra) built “Same Brain: complete V3 against corrected producer” → sent to independent review"
-   },
-   {
-    "at": "2026-11-01T16:44:40Z",
-    "kind": "merge",
-    "text": "Merged “Same fee B: bound revalidation clock stall” into the main build"
-   },
-   {
-    "at": "2026-11-01T16:43:50Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra)'s build of “a task” failed its tests; it will be retried"
+    "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-03",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-02T09:43:24Z",
-   "heartbeat_at": "2026-11-02T09:45:00Z",
+   "status_at": "2026-11-02T09:48:41Z",
+   "heartbeat_at": "2026-11-02T09:50:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -382,7 +382,7 @@
     "weather_events": 351,
     "markets": 3389,
     "opportunities": 0,
-    "last_scan_at": "2026-11-02T09:43:23Z",
+    "last_scan_at": "2026-11-02T09:48:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-02T09:43:23Z",
+    "updated_at": "2026-11-02T09:48:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-02T09:43:08Z",
+    "updated_at": "2026-11-02T09:49:09Z",
     "detail": "observations retained"
    },
    {
