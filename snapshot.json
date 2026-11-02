@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T23:55:01Z",
+ "generated_at": "2026-11-02T00:00:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 19,
+    "count": 20,
     "unit": "queued",
     "active": false,
     "detail": "12 ready to build"
@@ -152,7 +152,7 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 19,
+    "queued": 20,
     "building": 0,
     "in_review": 2,
     "awaiting_merge": 3,
@@ -211,18 +211,18 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
+    "active": 7,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-11-01T23:55:01Z",
+    "last_check_at": "2026-11-02T00:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 12,
+    "active": 11,
     "by_severity": {
      "P0": 0,
      "P1": 2,
-     "P2": 8
+     "P2": 7
     },
     "codes": [
      "flow frozen review scope drift",
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-01T23:50:02Z",
+    "last_check_at": "2026-11-02T00:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-01T23:59:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
    {
     "at": "2026-11-01T23:50:16Z",
     "kind": "warn",
@@ -287,11 +292,6 @@
     "at": "2026-11-01T23:29:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-01T23:26:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-01T22:40:32Z",
@@ -372,25 +372,25 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "iteration gated",
-   "status_at": "2026-11-01T23:54:57Z",
-   "heartbeat_at": "2026-11-01T23:55:00Z",
+   "status_at": "2026-11-01T23:59:59Z",
+   "heartbeat_at": "2026-11-02T00:00:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
-   "days_with_market_data": 8,
-   "days_with_paper_decisions": 7,
+   "days_with_market_data": 9,
+   "days_with_paper_decisions": 8,
    "scanner": {
-    "weather_events": 319,
-    "markets": 3039,
+    "weather_events": 317,
+    "markets": 3017,
     "opportunities": 0,
-    "last_scan_at": "2026-11-01T23:49:59Z",
+    "last_scan_at": "2026-11-01T23:55:04Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 62453,
+   "total": 71671,
    "research_accept": 0,
    "reject": 0,
-   "gated": 62453,
+   "gated": 71671,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-01T23:49:59Z",
+    "updated_at": "2026-11-01T23:55:04Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-01T23:53:33Z",
+    "updated_at": "2026-11-01T23:59:34Z",
     "detail": "observations retained"
    },
    {
