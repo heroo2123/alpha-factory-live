@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-02T13:00:01Z",
+ "generated_at": "2026-11-02T13:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "10 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_2c1af6b7",
-    "task": "Same Brain A: exact adoption and guarded legacy reporting",
-    "elapsed_min": 4
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -121,7 +121,7 @@
    "built_24h": 10,
    "build_failed_24h": 6,
    "reviews_passed_24h": 3,
-   "reviews_changes_24h": 6,
+   "reviews_changes_24h": 5,
    "commits_by_hour": [
     0,
     0,
@@ -214,25 +214,25 @@
     "active": 5,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-11-02T13:00:02Z",
+    "last_check_at": "2026-11-02T13:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 13,
+    "active": 12,
     "by_severity": {
      "P0": 0,
      "P1": 2,
-     "P2": 9
+     "P2": 8
     },
     "codes": [
      "flow frozen review scope drift",
      "flow unmergeable reviewed work",
      "flow qa red without repair",
      "flow qa not running",
-     "flow builders idle",
-     "flow glm plan lane dead"
+     "flow glm plan lane dead",
+     "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-02T12:50:01Z",
+    "last_check_at": "2026-11-02T13:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -373,16 +373,16 @@
    "day": "2026-11-03",
    "state": "evaluating markets in paper mode",
    "status_at": "2026-11-02T13:00:00Z",
-   "heartbeat_at": "2026-11-02T13:00:01Z",
+   "heartbeat_at": "2026-11-02T13:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
    "days_with_paper_decisions": 8,
    "scanner": {
-    "weather_events": 361,
-    "markets": 3502,
+    "weather_events": 366,
+    "markets": 3557,
     "opportunities": 0,
-    "last_scan_at": "2026-11-02T12:56:57Z",
+    "last_scan_at": "2026-11-02T13:02:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-02T12:56:57Z",
+    "updated_at": "2026-11-02T13:02:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-02T12:59:41Z",
+    "updated_at": "2026-11-02T13:03:42Z",
     "detail": "observations retained"
    },
    {
