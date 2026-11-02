@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-02T12:45:01Z",
+ "generated_at": "2026-11-02T12:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "11 built in 24h"
+    "detail": "10 built in 24h"
    },
    {
     "key": "review",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 1,
    "commits_24h": 1,
-   "built_24h": 11,
+   "built_24h": 10,
    "build_failed_24h": 6,
    "reviews_passed_24h": 3,
    "reviews_changes_24h": 6,
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-11-02T12:45:02Z",
+    "last_check_at": "2026-11-02T12:50:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-03",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-02T12:44:04Z",
-   "heartbeat_at": "2026-11-02T12:45:01Z",
+   "status_at": "2026-11-02T12:49:24Z",
+   "heartbeat_at": "2026-11-02T12:50:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -382,7 +382,7 @@
     "weather_events": 361,
     "markets": 3502,
     "opportunities": 0,
-    "last_scan_at": "2026-11-02T12:40:55Z",
+    "last_scan_at": "2026-11-02T12:46:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-02T12:40:55Z",
+    "updated_at": "2026-11-02T12:46:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-02T12:43:39Z",
+    "updated_at": "2026-11-02T12:49:40Z",
     "detail": "observations retained"
    },
    {
