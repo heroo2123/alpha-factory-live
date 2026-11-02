@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-11-02T16:00:02Z",
+ "generated_at": "2026-11-02T16:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 22,
+    "count": 23,
     "unit": "queued",
     "active": false,
     "detail": "13 ready to build"
@@ -18,7 +18,7 @@
     "count": 0,
     "unit": "building",
     "active": false,
-    "detail": "8 built in 24h"
+    "detail": "9 built in 24h"
    },
    {
     "key": "review",
@@ -118,10 +118,10 @@
   "flow": {
    "merges_24h": 1,
    "commits_24h": 1,
-   "built_24h": 8,
+   "built_24h": 9,
    "build_failed_24h": 5,
    "reviews_passed_24h": 2,
-   "reviews_changes_24h": 5,
+   "reviews_changes_24h": 6,
    "commits_by_hour": [
     1,
     0,
@@ -152,7 +152,7 @@
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 22,
+    "queued": 23,
     "building": 0,
     "in_review": 2,
     "awaiting_merge": 3,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
+    "active": 7,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-02T16:00:02Z",
+    "last_check_at": "2026-11-02T16:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-02T15:50:02Z",
+    "last_check_at": "2026-11-02T16:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,21 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-02T16:04:03Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “Same Native A: adopt measured fixture repair for full checks”: changes required"
+   },
+   {
+    "at": "2026-11-02T16:04:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-02T16:01:02Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Same Native A: adopt measured fixture repair for full checks” → sent to independent review"
+   },
    {
     "at": "2026-11-02T15:41:01Z",
     "kind": "warn",
@@ -277,11 +292,6 @@
     "at": "2026-11-02T14:49:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-11-02T14:36:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
     "at": "2026-11-02T14:00:38Z",
@@ -352,16 +362,6 @@
     "at": "2026-11-01T21:05:23Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) reviewed “Same Native A: adopt measured fixture repair for full checks”: passed"
-   },
-   {
-    "at": "2026-11-01T20:55:31Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Native A: adopt measured fixture repair for full checks” → sent to independent review"
-   },
-   {
-    "at": "2026-11-01T18:23:30Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Astra) build attempt ended: worker exception hold"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-03",
    "state": "census service",
-   "status_at": "2026-11-02T16:00:00Z",
-   "heartbeat_at": "2026-11-02T16:00:02Z",
+   "status_at": "2026-11-02T16:05:00Z",
+   "heartbeat_at": "2026-11-02T16:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -382,7 +382,7 @@
     "weather_events": 364,
     "markets": 3537,
     "opportunities": 0,
-    "last_scan_at": "2026-11-02T15:55:17Z",
+    "last_scan_at": "2026-11-02T16:00:54Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-02T15:55:17Z",
+    "updated_at": "2026-11-02T16:00:54Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-02T15:58:16Z",
+    "updated_at": "2026-11-02T16:04:17Z",
     "detail": "observations retained"
    },
    {
