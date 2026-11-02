@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-02T02:45:02Z",
+ "generated_at": "2026-11-02T02:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -17,7 +17,7 @@
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
+    "active": false,
     "detail": "16 built in 24h"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_5117df9e",
-    "task": "Same quote PhaseB: four-file implementation checkpoint",
-    "elapsed_min": 35
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-11-02T02:44:01Z",
+    "active": 6,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-11-02T02:49:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-02T02:48:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-11-02T02:45:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
     "at": "2026-11-02T02:41:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -279,19 +289,9 @@
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
-    "at": "2026-11-02T02:08:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
     "at": "2026-11-02T02:02:03Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “Same fee C: preflight clock and original entry regressions” → sent to independent review"
-   },
-   {
-    "at": "2026-11-02T01:51:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-02T01:04:08Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-02",
    "state": "iteration gated",
-   "status_at": "2026-11-02T02:44:53Z",
-   "heartbeat_at": "2026-11-02T02:45:01Z",
+   "status_at": "2026-11-02T02:49:54Z",
+   "heartbeat_at": "2026-11-02T02:50:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -382,7 +382,7 @@
     "weather_events": 314,
     "markets": 2989,
     "opportunities": 0,
-    "last_scan_at": "2026-11-02T02:40:35Z",
+    "last_scan_at": "2026-11-02T02:45:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-02T02:40:35Z",
+    "updated_at": "2026-11-02T02:45:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-02T02:43:59Z",
+    "updated_at": "2026-11-02T02:50:00Z",
     "detail": "observations retained"
    },
    {
