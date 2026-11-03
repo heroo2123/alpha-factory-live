@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-03T05:30:01Z",
+ "generated_at": "2026-11-03T05:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 5,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-11-03T05:30:01Z",
+    "last_check_at": "2026-11-03T05:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-03T05:20:01Z",
+    "last_check_at": "2026-11-03T05:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-03T05:34:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
    {
     "at": "2026-11-03T05:21:02Z",
     "kind": "review",
@@ -282,11 +287,6 @@
     "at": "2026-11-03T04:25:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-03T04:24:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
    },
    {
     "at": "2026-11-03T04:24:01Z",
@@ -371,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-04",
-   "state": "census service",
-   "status_at": "2026-11-03T05:29:59Z",
-   "heartbeat_at": "2026-11-03T05:30:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-11-03T05:30:25Z",
+   "heartbeat_at": "2026-11-03T05:35:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 10,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-03T05:28:33Z",
+    "updated_at": "2026-11-03T05:34:34Z",
     "detail": "observations retained"
    },
    {
