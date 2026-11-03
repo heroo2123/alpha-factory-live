@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-03T05:15:01Z",
+ "generated_at": "2026-11-03T05:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,22 +10,22 @@
     "count": 22,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
     "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "3 built in 24h"
+    "active": false,
+    "detail": "4 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 3,
+    "count": 4,
     "unit": "in review",
-    "active": false,
+    "active": true,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_2c1af6b7",
-    "task": "Same Brain Native A: consolidated custody and genuine-selection restoration",
-    "elapsed_min": 39
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
-    "model": "",
-    "family": "",
-    "task_id": "",
-    "task": "",
-    "elapsed_min": null
+    "state": "working",
+    "model": "Codex (GPT-6 Astra)",
+    "family": "OpenAI",
+    "task_id": "t_2c1af6b7",
+    "task": "Same Brain Native A: consolidated custody and genuine-selection restoration",
+    "elapsed_min": 2
    },
    {
     "slot": "Reviewer 2",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 1,
    "commits_24h": 1,
-   "built_24h": 3,
+   "built_24h": 4,
    "build_failed_24h": 4,
    "reviews_passed_24h": 1,
    "reviews_changes_24h": 2,
@@ -154,7 +154,7 @@
    "stage_totals": {
     "queued": 22,
     "building": 0,
-    "in_review": 3,
+    "in_review": 4,
     "awaiting_merge": 3,
     "merged": 578,
     "parked": 460
@@ -214,7 +214,7 @@
     "active": 4,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-11-03T05:15:02Z",
+    "last_check_at": "2026-11-03T05:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-03T05:17:40Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Same Brain Native A: consolidated custody and genuine-selection…” → sent to independent review"
+   },
    {
     "at": "2026-11-03T04:59:01Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-11-02T02:02:03Z",
     "kind": "build",
     "text": "Codex (GPT-6 Astra) built “a task” → sent to independent review"
-   },
-   {
-    "at": "2026-11-02T01:04:08Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) review ended: review author or reviewer family…"
    }
   ]
  },
@@ -371,18 +371,18 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-04",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-03T05:14:53Z",
-   "heartbeat_at": "2026-11-03T05:15:00Z",
+   "state": "census service",
+   "status_at": "2026-11-03T05:19:59Z",
+   "heartbeat_at": "2026-11-03T05:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 10,
    "days_with_paper_decisions": 9,
    "scanner": {
-    "weather_events": 304,
-    "markets": 2873,
+    "weather_events": 305,
+    "markets": 2879,
     "opportunities": 0,
-    "last_scan_at": "2026-11-03T05:12:33Z",
+    "last_scan_at": "2026-11-03T05:18:18Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-03T05:12:33Z",
+    "updated_at": "2026-11-03T05:18:18Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-03T05:14:31Z",
+    "updated_at": "2026-11-03T05:18:31Z",
     "detail": "observations retained"
    },
    {
@@ -510,7 +510,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-03T04:17:02Z",
+   "updated_at": "2026-11-03T05:17:01Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
