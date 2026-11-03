@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-03T06:25:02Z",
+ "generated_at": "2026-11-03T06:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -213,8 +213,8 @@
     "state": "p1",
     "active": 6,
     "alerts_24h": 15,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-11-03T06:24:02Z",
+    "recoveries_24h": 9,
+    "last_check_at": "2026-11-03T06:30:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-03T06:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
+   {
     "at": "2026-11-03T06:24:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router not active"
@@ -277,11 +282,6 @@
     "at": "2026-11-03T06:11:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-11-03T06:06:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-03T05:21:02Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-04",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-03T06:22:52Z",
-   "heartbeat_at": "2026-11-03T06:25:02Z",
+   "status_at": "2026-11-03T06:28:06Z",
+   "heartbeat_at": "2026-11-03T06:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 10,
@@ -382,7 +382,7 @@
     "weather_events": 357,
     "markets": 3451,
     "opportunities": 0,
-    "last_scan_at": "2026-11-03T06:21:20Z",
+    "last_scan_at": "2026-11-03T06:26:57Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-03T06:21:20Z",
+    "updated_at": "2026-11-03T06:26:57Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-03T06:24:42Z",
+    "updated_at": "2026-11-03T06:28:43Z",
     "detail": "observations retained"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 124 untouched city-days (11 cities, 12 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 127 untouched city-days (11 cities, 13 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 148,
    "waiting_city_days": 17,
@@ -535,7 +535,7 @@
     },
     {
      "item": "Not worse than the market on new untouched days",
-     "have": 12,
+     "have": 13,
      "need": 10,
      "done": false,
      "detail": "waiting for a frozen candidate"
@@ -1090,7 +1090,7 @@
    {
     "step": "Forecast brain passes a preregistered historical test and is not worse than the market on new days",
     "state": "active",
-    "detail": "0 of 3 candidate models used · 12 of 10 untouched days"
+    "detail": "0 of 3 candidate models used · 13 of 10 untouched days"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
