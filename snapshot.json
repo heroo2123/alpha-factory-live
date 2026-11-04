@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-04T19:05:01Z",
+ "generated_at": "2026-11-04T19:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2c1af6b7",
     "task": "Existing Native B: qualified-data Brain and runtime bundles",
-    "elapsed_min": 88
+    "elapsed_min": 93
    },
    {
     "slot": "Builder 2",
@@ -214,7 +214,7 @@
     "active": 5,
     "alerts_24h": 17,
     "recoveries_24h": 7,
-    "last_check_at": "2026-11-04T19:05:01Z",
+    "last_check_at": "2026-11-04T19:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-05",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-04T19:02:04Z",
-   "heartbeat_at": "2026-11-04T19:05:02Z",
+   "status_at": "2026-11-04T19:07:32Z",
+   "heartbeat_at": "2026-11-04T19:10:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 11,
@@ -382,7 +382,7 @@
     "weather_events": 342,
     "markets": 3285,
     "opportunities": 0,
-    "last_scan_at": "2026-11-04T19:01:35Z",
+    "last_scan_at": "2026-11-04T19:08:05Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-04T19:01:35Z",
+    "updated_at": "2026-11-04T19:08:05Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-04T19:04:48Z",
+    "updated_at": "2026-11-04T19:08:50Z",
     "detail": "observations retained"
    },
    {
