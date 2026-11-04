@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-04T22:00:02Z",
+ "generated_at": "2026-11-04T22:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,17 +212,17 @@
    "guardian": {
     "state": "p1",
     "active": 7,
-    "alerts_24h": 16,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-11-04T21:59:01Z",
+    "alerts_24h": 14,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-11-04T22:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 13,
+    "active": 14,
     "by_severity": {
      "P0": 0,
      "P1": 2,
-     "P2": 9
+     "P2": 10
     },
     "codes": [
      "flow frozen review scope drift",
@@ -232,7 +232,7 @@
      "flow builders idle",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-04T21:50:02Z",
+    "last_check_at": "2026-11-04T22:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,26 @@
   ],
   "events": [
    {
+    "at": "2026-11-04T22:02:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-11-04T22:02:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-11-04T22:02:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
+   {
+    "at": "2026-11-04T22:00:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code queue idle with capacity"
+   },
+   {
     "at": "2026-11-04T21:59:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -262,26 +282,6 @@
     "at": "2026-11-04T21:53:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-04T21:40:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-04T21:29:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
-    "at": "2026-11-04T21:26:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-11-04T21:26:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
     "at": "2026-11-04T20:20:21Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-05",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-04T21:55:46Z",
-   "heartbeat_at": "2026-11-04T22:00:01Z",
+   "status_at": "2026-11-04T22:01:18Z",
+   "heartbeat_at": "2026-11-04T22:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 11,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-04T21:59:14Z",
+    "updated_at": "2026-11-04T22:03:16Z",
     "detail": "observations retained"
    },
    {
