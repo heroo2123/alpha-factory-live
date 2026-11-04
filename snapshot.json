@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-04T13:00:02Z",
+ "generated_at": "2026-11-04T13:05:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -213,26 +213,26 @@
     "state": "p1",
     "active": 6,
     "alerts_24h": 15,
-    "recoveries_24h": 9,
-    "last_check_at": "2026-11-04T12:59:01Z",
+    "recoveries_24h": 8,
+    "last_check_at": "2026-11-04T13:05:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 13,
+    "active": 14,
     "by_severity": {
      "P0": 0,
      "P1": 2,
-     "P2": 9
+     "P2": 10
     },
     "codes": [
      "flow frozen review scope drift",
      "flow unmergeable reviewed work",
      "flow qa red without repair",
      "flow qa not running",
-     "flow glm plan lane dead",
-     "flow release contract pin stale"
+     "flow builders idle",
+     "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-04T12:50:02Z",
+    "last_check_at": "2026-11-04T13:00:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-04T13:01:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: agent held develop"
+   },
+   {
     "at": "2026-11-04T12:47:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: auxiliary wait unverified"
@@ -267,16 +272,6 @@
     "at": "2026-11-04T12:29:12Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) build attempt ended: host test execution hold"
-   },
-   {
-    "at": "2026-11-04T11:58:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
-   },
-   {
-    "at": "2026-11-04T11:58:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
    },
    {
     "at": "2026-11-04T11:58:02Z",
@@ -362,6 +357,11 @@
     "at": "2026-11-02T17:34:37Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing Native B: qualified-data Brain and runtime bundles” → sent to independent review"
+   },
+   {
+    "at": "2026-11-02T16:04:03Z",
+    "kind": "warn",
+    "text": "Codex (GPT-6 Sol) reviewed “Existing Native B: qualified-data Brain and runtime bundles”: changes required"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-05",
    "state": "census service",
-   "status_at": "2026-11-04T12:59:59Z",
-   "heartbeat_at": "2026-11-04T13:00:02Z",
+   "status_at": "2026-11-04T13:05:00Z",
+   "heartbeat_at": "2026-11-04T13:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 11,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-04T13:00:01Z",
+    "updated_at": "2026-11-04T13:04:03Z",
     "detail": "observations retained"
    },
    {
