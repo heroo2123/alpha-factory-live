@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-05T23:25:01Z",
+ "generated_at": "2026-11-05T23:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -134,8 +134,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -156,8 +156,8 @@
     "building": 0,
     "in_review": 3,
     "awaiting_merge": 3,
-    "merged": 583,
-    "parked": 468
+    "merged": 581,
+    "parked": 467
    }
   },
   "architect": {
@@ -168,18 +168,8 @@
   },
   "recent_merges": [
    {
-    "at": "2026-11-05T21:24:50Z",
-    "title": "Same Fee C2: adopt final URI-reconciled complete6",
-    "area": "Core build"
-   },
-   {
     "at": "2026-11-05T20:21:58Z",
     "title": "Same producer: bind approved C2 public-capture review scope",
-    "area": "Core build"
-   },
-   {
-    "at": "2026-11-05T11:30:00Z",
-    "title": "Same Fee C1: adopt complete current271 repair; independent reviews required",
     "area": "Core build"
    },
    {
@@ -206,15 +196,25 @@
     "at": "2026-11-01T11:18:33Z",
     "title": "Adopt completed stream bridge after actual Native merge",
     "area": "Core build"
+   },
+   {
+    "at": "2026-11-01T08:20:03Z",
+    "title": "Existing R7 owner: repair risk diagnostic numeric contract",
+    "area": "Test repairs"
+   },
+   {
+    "at": "2026-10-31T15:51:28Z",
+    "title": "Original Native restore sharing - author drain proven",
+    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
-    "alerts_24h": 14,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-11-05T23:24:01Z",
+    "active": 6,
+    "alerts_24h": 15,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-11-05T23:29:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,21 @@
   ],
   "events": [
    {
+    "at": "2026-11-05T23:29:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
+    "at": "2026-11-05T23:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-05T23:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
+   {
     "at": "2026-11-05T23:24:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
@@ -269,44 +284,24 @@
     "text": "Guardian confirmed recovery: auxiliary wait unverified"
    },
    {
-    "at": "2026-11-05T23:05:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-11-05T23:05:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-05T23:00:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
     "at": "2026-11-05T22:21:02Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing fitted C268 Brain reuse — adopt complete8 frozen candidate” → sent to independent review"
    },
    {
-    "at": "2026-11-05T21:24:50Z",
-    "kind": "merge",
-    "text": "Merged “Same Fee C2: adopt final URI-reconciled complete6” into the main build"
-   },
-   {
     "at": "2026-11-05T21:15:27Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Same Fee C2: adopt final URI-reconciled complete6”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    },
    {
     "at": "2026-11-05T21:10:17Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Fee C2: adopt final URI-reconciled complete6” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-05T20:32:33Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol)'s build of “Same Fee C2: adopt final URI-reconciled complete6” failed its tests; it will be retried"
+    "text": "Codex (GPT-6 Sol)'s build of “a task” failed its tests; it will be retried"
    },
    {
     "at": "2026-11-05T20:21:58Z",
@@ -316,17 +311,17 @@
    {
     "at": "2026-11-05T19:09:08Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “Same Fee C2: adopt final URI-reconciled complete6”: passed"
+    "text": "Codex (GPT-6 Sol) reviewed “a task”: passed"
    },
    {
     "at": "2026-11-05T18:59:41Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Fee C2: adopt final URI-reconciled complete6” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-05T16:53:15Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “Same Fee C2: adopt final URI-reconciled complete6”: changes required"
+    "text": "Codex (GPT-6 Sol) reviewed “a task”: changes required"
    },
    {
     "at": "2026-11-05T16:42:42Z",
@@ -336,32 +331,37 @@
    {
     "at": "2026-11-05T16:28:22Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Fee C2: adopt final URI-reconciled complete6” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-05T15:47:11Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Sol)'s build of “Same Fee C2: adopt final URI-reconciled complete6” failed its tests; it will be retried"
+    "text": "Codex (GPT-6 Sol)'s build of “a task” failed its tests; it will be retried"
    },
    {
     "at": "2026-11-05T14:09:29Z",
     "kind": "warn",
-    "text": "Codex (GPT-6 Astra) reviewed “Same Fee C2: adopt final URI-reconciled complete6”: changes required"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: changes required"
    },
    {
     "at": "2026-11-05T13:44:34Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Fee C2: adopt final URI-reconciled complete6” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-05T12:53:34Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Same Fee C2: adopt final URI-reconciled complete6”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    },
    {
     "at": "2026-11-05T12:00:35Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Same Fee C2: adopt final URI-reconciled complete6” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
+   },
+   {
+    "at": "2026-11-05T11:18:00Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-06",
    "state": "iteration gated",
-   "status_at": "2026-11-05T23:24:53Z",
-   "heartbeat_at": "2026-11-05T23:25:01Z",
+   "status_at": "2026-11-05T23:29:57Z",
+   "heartbeat_at": "2026-11-05T23:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 12,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-05T23:23:38Z",
+    "updated_at": "2026-11-05T23:29:41Z",
     "detail": "observations retained"
    },
    {
