@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-05T17:20:01Z",
+ "generated_at": "2026-11-05T17:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
-    "alerts_24h": 14,
-    "recoveries_24h": 10,
-    "last_check_at": "2026-11-05T17:19:01Z",
+    "active": 6,
+    "alerts_24h": 13,
+    "recoveries_24h": 11,
+    "last_check_at": "2026-11-05T17:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow builders idle",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-05T17:10:02Z",
+    "last_check_at": "2026-11-05T17:20:01Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,26 @@
   ],
   "events": [
    {
+    "at": "2026-11-05T17:24:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-11-05T17:22:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-05T17:20:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
+    "at": "2026-11-05T17:20:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code queue idle with capacity"
+   },
+   {
     "at": "2026-11-05T17:15:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
@@ -262,16 +282,6 @@
     "at": "2026-11-05T17:06:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-05T17:04:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-05T17:01:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
    },
    {
     "at": "2026-11-05T16:53:15Z",
@@ -284,19 +294,9 @@
     "text": "Codex (GPT-6 Astra) review ended: review run failed requeued for other…"
    },
    {
-    "at": "2026-11-05T16:30:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: worker finished result unreconciled develop"
-   },
-   {
     "at": "2026-11-05T16:28:22Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Same Fee C2: bound full observation read chain after selection” → sent to independent review"
-   },
-   {
-    "at": "2026-11-05T16:28:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: worker finished result unreconciled develop"
    },
    {
     "at": "2026-11-05T15:47:11Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-06",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-05T17:17:00Z",
-   "heartbeat_at": "2026-11-05T17:20:02Z",
+   "status_at": "2026-11-05T17:22:26Z",
+   "heartbeat_at": "2026-11-05T17:25:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 12,
@@ -382,7 +382,7 @@
     "weather_events": 343,
     "markets": 3297,
     "opportunities": 0,
-    "last_scan_at": "2026-11-05T17:15:24Z",
+    "last_scan_at": "2026-11-05T17:21:53Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-05T17:15:24Z",
+    "updated_at": "2026-11-05T17:21:53Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-05T17:19:42Z",
+    "updated_at": "2026-11-05T17:23:44Z",
     "detail": "observations retained"
    },
    {
