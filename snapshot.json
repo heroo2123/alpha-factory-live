@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-05T14:40:01Z",
+ "generated_at": "2026-11-05T14:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
+    "active": 7,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-11-05T14:40:01Z",
+    "last_check_at": "2026-11-05T14:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow builders idle",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-05T14:30:02Z",
+    "last_check_at": "2026-11-05T14:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-05T14:44:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
    {
     "at": "2026-11-05T14:25:02Z",
     "kind": "heal",
@@ -277,11 +282,6 @@
     "at": "2026-11-05T14:09:29Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Astra) reviewed “Same Fee C2: bound actual SQLite initialization in original budget”: changes required"
-   },
-   {
-    "at": "2026-11-05T14:09:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-05T14:09:01Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-06",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-05T14:35:47Z",
-   "heartbeat_at": "2026-11-05T14:40:02Z",
+   "status_at": "2026-11-05T14:41:13Z",
+   "heartbeat_at": "2026-11-05T14:45:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 12,
@@ -382,7 +382,7 @@
     "weather_events": 371,
     "markets": 3627,
     "opportunities": 0,
-    "last_scan_at": "2026-11-05T14:38:31Z",
+    "last_scan_at": "2026-11-05T14:44:43Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-05T14:38:31Z",
+    "updated_at": "2026-11-05T14:44:43Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-05T14:39:24Z",
+    "updated_at": "2026-11-05T14:43:26Z",
     "detail": "observations retained"
    },
    {
