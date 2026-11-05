@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-05T19:05:01Z",
+ "generated_at": "2026-11-05T19:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -23,15 +23,15 @@
    {
     "key": "review",
     "name": "Independent review",
-    "count": 4,
+    "count": 3,
     "unit": "in review",
-    "active": true,
+    "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
    },
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 3,
+    "count": 4,
     "unit": "awaiting merge",
     "active": true,
     "detail": "1 merged in 24h"
@@ -85,12 +85,12 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_e8f70e24",
-    "task": "Same Fee C2: adopt complete observation-read budget repair",
-    "elapsed_min": 1
+    "state": "waiting",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Reviewer 2",
@@ -120,7 +120,7 @@
    "commits_24h": 1,
    "built_24h": 7,
    "build_failed_24h": 1,
-   "reviews_passed_24h": 4,
+   "reviews_passed_24h": 5,
    "reviews_changes_24h": 2,
    "commits_by_hour": [
     0,
@@ -154,8 +154,8 @@
    "stage_totals": {
     "queued": 25,
     "building": 0,
-    "in_review": 4,
-    "awaiting_merge": 3,
+    "in_review": 3,
+    "awaiting_merge": 4,
     "merged": 581,
     "parked": 463
    }
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
+    "active": 6,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-05T19:05:01Z",
+    "last_check_at": "2026-11-05T19:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-05T19:09:08Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “Same Fee C2: adopt complete observation-read budget repair”: passed"
+   },
    {
     "at": "2026-11-05T18:59:41Z",
     "kind": "build",
@@ -357,11 +362,6 @@
     "at": "2026-11-05T02:56:33Z",
     "kind": "review",
     "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
-   },
-   {
-    "at": "2026-11-05T02:33:08Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Astra) review ended: review held inconclusive evidence"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-06",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-05T19:01:31Z",
-   "heartbeat_at": "2026-11-05T19:05:01Z",
+   "status_at": "2026-11-05T19:07:05Z",
+   "heartbeat_at": "2026-11-05T19:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 12,
@@ -382,7 +382,7 @@
     "weather_events": 341,
     "markets": 3275,
     "opportunities": 0,
-    "last_scan_at": "2026-11-05T18:59:31Z",
+    "last_scan_at": "2026-11-05T19:06:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-05T18:59:31Z",
+    "updated_at": "2026-11-05T19:06:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-05T19:03:18Z",
+    "updated_at": "2026-11-05T19:09:26Z",
     "detail": "observations retained"
    },
    {
