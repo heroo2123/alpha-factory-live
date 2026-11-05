@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-05T07:00:02Z",
+ "generated_at": "2026-11-05T07:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
+    "active": 7,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-05T07:00:03Z",
+    "last_check_at": "2026-11-05T07:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow builders idle",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-05T06:50:02Z",
+    "last_check_at": "2026-11-05T07:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-05T07:04:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
    {
     "at": "2026-11-05T06:59:02Z",
     "kind": "heal",
@@ -277,11 +282,6 @@
     "at": "2026-11-05T06:32:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-05T06:20:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-05T05:28:08Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-06",
    "state": "census service",
-   "status_at": "2026-11-05T07:00:02Z",
-   "heartbeat_at": "2026-11-05T07:00:02Z",
+   "status_at": "2026-11-05T07:05:00Z",
+   "heartbeat_at": "2026-11-05T07:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 12,
@@ -382,7 +382,7 @@
     "weather_events": 358,
     "markets": 3463,
     "opportunities": 0,
-    "last_scan_at": "2026-11-05T06:53:50Z",
+    "last_scan_at": "2026-11-05T07:00:17Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-05T06:53:50Z",
+    "updated_at": "2026-11-05T07:00:17Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-05T06:59:47Z",
+    "updated_at": "2026-11-05T07:03:50Z",
     "detail": "observations retained"
    },
    {
