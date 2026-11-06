@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-06T08:20:02Z",
+ "generated_at": "2026-11-06T08:25:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -135,8 +135,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-11-06T08:19:01Z",
+    "last_check_at": "2026-11-06T08:25:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow builders idle",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-06T08:10:02Z",
+    "last_check_at": "2026-11-06T08:20:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-06T08:20:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: auxiliary wait unverified"
+   },
    {
     "at": "2026-11-06T08:14:02Z",
     "kind": "heal",
@@ -277,11 +282,6 @@
     "at": "2026-11-06T08:11:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-06T08:08:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-11-06T04:09:52Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-07",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-06T08:18:53Z",
-   "heartbeat_at": "2026-11-06T08:20:02Z",
+   "status_at": "2026-11-06T08:24:18Z",
+   "heartbeat_at": "2026-11-06T08:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-06T08:19:20Z",
+    "updated_at": "2026-11-06T08:23:28Z",
     "detail": "observations retained"
    },
    {
