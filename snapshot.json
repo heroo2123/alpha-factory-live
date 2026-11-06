@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-06T05:55:02Z",
+ "generated_at": "2026-11-06T06:00:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -156,7 +156,7 @@
     "building": 0,
     "in_review": 3,
     "awaiting_merge": 4,
-    "merged": 581,
+    "merged": 580,
     "parked": 468
    }
   },
@@ -214,7 +214,7 @@
     "active": 6,
     "alerts_24h": 16,
     "recoveries_24h": 8,
-    "last_check_at": "2026-11-06T05:55:02Z",
+    "last_check_at": "2026-11-06T06:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -286,12 +286,12 @@
    {
     "at": "2026-11-06T04:09:52Z",
     "kind": "review",
-    "text": "Codex (GPT-6 Astra) reviewed “Existing C268 complete corrected10: guarded normal adoption”: passed"
+    "text": "Codex (GPT-6 Astra) reviewed “a task”: passed"
    },
    {
     "at": "2026-11-06T04:00:38Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Existing C268 complete corrected10: guarded normal adoption” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-06T02:10:23Z",
@@ -301,12 +301,12 @@
    {
     "at": "2026-11-06T01:53:27Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Existing C268 complete corrected10: guarded normal adoption” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-05T22:21:02Z",
     "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Existing C268 complete corrected10: guarded normal adoption” → sent to independent review"
+    "text": "Codex (GPT-6 Sol) built “a task” → sent to independent review"
    },
    {
     "at": "2026-11-05T21:15:27Z",
@@ -371,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-07",
-   "state": "census service",
-   "status_at": "2026-11-06T05:54:59Z",
-   "heartbeat_at": "2026-11-06T05:55:01Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-11-06T05:56:20Z",
+   "heartbeat_at": "2026-11-06T06:00:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
@@ -382,7 +382,7 @@
     "weather_events": 330,
     "markets": 3141,
     "opportunities": 0,
-    "last_scan_at": "2026-11-06T05:51:54Z",
+    "last_scan_at": "2026-11-06T05:58:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-06T05:51:54Z",
+    "updated_at": "2026-11-06T05:58:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-06T05:53:13Z",
+    "updated_at": "2026-11-06T05:59:16Z",
     "detail": "observations retained"
    },
    {
