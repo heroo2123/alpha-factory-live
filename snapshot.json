@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-06T08:25:02Z",
+ "generated_at": "2026-11-06T08:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -125,8 +125,8 @@
    "commits_by_hour": [
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 14,
     "recoveries_24h": 10,
-    "last_check_at": "2026-11-06T08:25:02Z",
+    "last_check_at": "2026-11-06T08:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-06T08:26:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
     "at": "2026-11-06T08:20:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
@@ -277,11 +282,6 @@
     "at": "2026-11-06T08:13:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-11-06T08:11:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: auxiliary wait unverified"
    },
    {
     "at": "2026-11-06T04:09:52Z",
@@ -371,18 +371,18 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-07",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-06T08:24:18Z",
-   "heartbeat_at": "2026-11-06T08:25:02Z",
+   "state": "census service",
+   "status_at": "2026-11-06T08:30:01Z",
+   "heartbeat_at": "2026-11-06T08:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
    "days_with_paper_decisions": 12,
    "scanner": {
-    "weather_events": 361,
-    "markets": 3482,
+    "weather_events": 359,
+    "markets": 3460,
     "opportunities": 0,
-    "last_scan_at": "2026-11-06T08:18:15Z",
+    "last_scan_at": "2026-11-06T08:25:09Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-06T08:18:15Z",
+    "updated_at": "2026-11-06T08:25:09Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-06T08:23:28Z",
+    "updated_at": "2026-11-06T08:29:37Z",
     "detail": "observations retained"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 160 untouched city-days (11 cities, 16 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 161 untouched city-days (11 cities, 16 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 182,
    "waiting_city_days": 13,
