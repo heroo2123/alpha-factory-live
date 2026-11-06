@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-06T11:25:01Z",
+ "generated_at": "2026-11-06T11:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "2 merged in 24h"
+    "detail": "1 merged in 24h"
    },
    {
     "key": "qa",
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_2c1af6b7",
     "task": "Existing launch Brain: corrected complete10 normal adoption",
-    "elapsed_min": 10
+    "elapsed_min": 15
    },
    {
     "slot": "Builder 2",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 21218,
   "flow": {
-   "merges_24h": 2,
-   "commits_24h": 2,
+   "merges_24h": 1,
+   "commits_24h": 1,
    "built_24h": 8,
    "build_failed_24h": 2,
    "reviews_passed_24h": 4,
    "reviews_changes_24h": 2,
    "commits_by_hour": [
-    1,
+    0,
     0,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 5,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-06T11:25:01Z",
+    "last_check_at": "2026-11-06T11:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-06T11:26:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
+   {
     "at": "2026-11-06T11:17:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
@@ -277,11 +282,6 @@
     "at": "2026-11-06T10:28:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: disk critical"
-   },
-   {
-    "at": "2026-11-06T10:14:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-06T04:09:52Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-07",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-06T11:21:20Z",
-   "heartbeat_at": "2026-11-06T11:25:02Z",
+   "status_at": "2026-11-06T11:26:50Z",
+   "heartbeat_at": "2026-11-06T11:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-06T11:23:58Z",
+    "updated_at": "2026-11-06T11:28:02Z",
     "detail": "observations retained"
    },
    {
