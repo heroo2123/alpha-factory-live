@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-06T21:05:01Z",
+ "generated_at": "2026-11-06T21:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 6,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-11-06T21:05:01Z",
+    "alerts_24h": 12,
+    "recoveries_24h": 12,
+    "last_check_at": "2026-11-06T21:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-06T21:06:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
     "at": "2026-11-06T21:03:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: auxiliary wait unverified"
@@ -277,11 +282,6 @@
     "at": "2026-11-06T20:41:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-06T20:33:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-06T12:41:03Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-07",
    "state": "iteration gated",
-   "status_at": "2026-11-06T21:04:52Z",
-   "heartbeat_at": "2026-11-06T21:05:00Z",
+   "status_at": "2026-11-06T21:09:56Z",
+   "heartbeat_at": "2026-11-06T21:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-06T21:05:02Z",
+    "updated_at": "2026-11-06T21:09:10Z",
     "detail": "observations retained"
    },
    {
