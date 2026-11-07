@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-07T09:55:01Z",
+ "generated_at": "2026-11-07T10:00:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
-    "alerts_24h": 20,
-    "recoveries_24h": 4,
-    "last_check_at": "2026-11-07T09:55:01Z",
+    "active": 6,
+    "alerts_24h": 19,
+    "recoveries_24h": 5,
+    "last_check_at": "2026-11-07T10:00:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-07T09:58:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
     "at": "2026-11-07T09:54:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
@@ -277,11 +282,6 @@
     "at": "2026-11-07T09:24:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-07T09:23:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
    },
    {
     "at": "2026-11-06T12:41:03Z",
@@ -371,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-08",
-   "state": "census service",
-   "status_at": "2026-11-07T09:54:59Z",
-   "heartbeat_at": "2026-11-07T09:55:00Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-11-07T09:57:45Z",
+   "heartbeat_at": "2026-11-07T10:00:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 14,
@@ -382,7 +382,7 @@
     "weather_events": 355,
     "markets": 3421,
     "opportunities": 0,
-    "last_scan_at": "2026-11-07T09:48:20Z",
+    "last_scan_at": "2026-11-07T09:55:06Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-07T09:48:20Z",
+    "updated_at": "2026-11-07T09:55:06Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-07T09:54:55Z",
+    "updated_at": "2026-11-07T09:58:59Z",
     "detail": "observations retained"
    },
    {
