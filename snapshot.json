@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-07T20:25:02Z",
+ "generated_at": "2026-11-07T20:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -70,7 +70,7 @@
     "family": "OpenAI",
     "task_id": "t_63143149",
     "task": "Existing STREAM repair: sequence-bounded historical reader",
-    "elapsed_min": 15
+    "elapsed_min": 20
    },
    {
     "slot": "Builder 2",
@@ -142,8 +142,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     1,
     0
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 13,
-    "recoveries_24h": 11,
-    "last_check_at": "2026-11-07T20:24:01Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-11-07T20:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,21 @@
   ],
   "events": [
    {
+    "at": "2026-11-07T20:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-11-07T20:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-11-07T20:25:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
+   {
     "at": "2026-11-07T20:12:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
@@ -267,11 +282,6 @@
     "at": "2026-11-07T20:05:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-11-07T20:02:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
    },
    {
     "at": "2026-11-07T19:50:11Z",
@@ -292,16 +302,6 @@
     "at": "2026-11-07T19:17:05Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing corrected STREAM join: exact final10 normal publication” → sent to independent review"
-   },
-   {
-    "at": "2026-11-07T18:53:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: disk headroom low"
-   },
-   {
-    "at": "2026-11-07T18:51:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    },
    {
     "at": "2026-11-07T18:48:33Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-08",
    "state": "iteration gated",
-   "status_at": "2026-11-07T20:24:56Z",
-   "heartbeat_at": "2026-11-07T20:25:02Z",
+   "status_at": "2026-11-07T20:30:00Z",
+   "heartbeat_at": "2026-11-07T20:30:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 14,
@@ -382,7 +382,7 @@
     "weather_events": 340,
     "markets": 3255,
     "opportunities": 0,
-    "last_scan_at": "2026-11-07T20:19:24Z",
+    "last_scan_at": "2026-11-07T20:26:58Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-07T20:19:24Z",
+    "updated_at": "2026-11-07T20:26:58Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-07T20:24:57Z",
+    "updated_at": "2026-11-07T20:28:59Z",
     "detail": "observations retained"
    },
    {
