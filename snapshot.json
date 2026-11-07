@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-07T23:25:01Z",
+ "generated_at": "2026-11-07T23:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -10,20 +10,20 @@
     "count": 21,
     "unit": "queued",
     "active": false,
-    "detail": "13 ready to build"
+    "detail": "12 ready to build"
    },
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "9 built in 24h"
+    "active": false,
+    "detail": "10 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 5,
+    "count": 6,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Sol)",
-    "family": "OpenAI",
-    "task_id": "t_63143149",
-    "task": "Existing complete STREAM consumer: exact9 after producer merge",
-    "elapsed_min": 28
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 4,
    "commits_24h": 4,
-   "built_24h": 9,
+   "built_24h": 10,
    "build_failed_24h": 3,
    "reviews_passed_24h": 4,
    "reviews_changes_24h": 5,
@@ -139,8 +139,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     1,
     0,
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 21,
-    "building": 1,
-    "in_review": 5,
+    "building": 0,
+    "in_review": 6,
     "awaiting_merge": 3,
     "merged": 583,
     "parked": 472
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 4,
-    "alerts_24h": 16,
-    "recoveries_24h": 8,
-    "last_check_at": "2026-11-07T23:25:02Z",
+    "alerts_24h": 15,
+    "recoveries_24h": 9,
+    "last_check_at": "2026-11-07T23:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-07T23:27:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-07T23:25:45Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Existing complete STREAM consumer: exact9 after producer merge” → sent to independent review"
+   },
+   {
     "at": "2026-11-07T23:24:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
@@ -282,11 +292,6 @@
     "at": "2026-11-07T22:51:50Z",
     "kind": "merge",
     "text": "Merged “Existing producer: exact3 after bounded JSON shape correction” into the main build"
-   },
-   {
-    "at": "2026-11-07T22:47:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: auxiliary wait unverified"
    },
    {
     "at": "2026-11-07T22:40:54Z",
@@ -357,11 +362,6 @@
     "at": "2026-11-07T18:48:33Z",
     "kind": "merge",
     "text": "Merged “Same A7: enforce existing host caller admission and prove current…” into the main build"
-   },
-   {
-    "at": "2026-11-07T18:18:47Z",
-    "kind": "warn",
-    "text": "Codex (GPT-6 Sol) reviewed “Existing corrected STREAM join: exact final10 normal publication”: changes required"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-08",
    "state": "iteration gated",
-   "status_at": "2026-11-07T23:24:52Z",
-   "heartbeat_at": "2026-11-07T23:25:01Z",
+   "status_at": "2026-11-07T23:29:56Z",
+   "heartbeat_at": "2026-11-07T23:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 14,
    "days_with_paper_decisions": 13,
    "scanner": {
-    "weather_events": 324,
-    "markets": 3085,
+    "weather_events": 322,
+    "markets": 3063,
     "opportunities": 0,
-    "last_scan_at": "2026-11-07T23:21:55Z",
+    "last_scan_at": "2026-11-07T23:29:16Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-07T23:21:55Z",
+    "updated_at": "2026-11-07T23:29:16Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-07T23:23:32Z",
+    "updated_at": "2026-11-07T23:29:35Z",
     "detail": "observations retained"
    },
    {
