@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T07:15:02Z",
+ "generated_at": "2026-11-08T07:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-08T07:15:02Z",
+    "last_check_at": "2026-11-08T07:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-08T07:12:18Z",
-   "heartbeat_at": "2026-11-08T07:15:01Z",
+   "status_at": "2026-11-08T07:17:41Z",
+   "heartbeat_at": "2026-11-08T07:20:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T07:15:01Z",
+    "updated_at": "2026-11-08T07:19:03Z",
     "detail": "observations retained"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8768,
-     "city_days": 197
+     "brier": 0.874,
+     "city_days": 201
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8199,
-     "city_days": 197
+     "brier": 0.8196,
+     "city_days": 201
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6538,
-     "city_days": 197
+     "brier": 0.6547,
+     "city_days": 201
     },
     {
      "key": "equal",
@@ -502,15 +502,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 177 untouched city-days (11 cities, 18 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 198,
-   "waiting_city_days": 17,
+   "labelled_city_days": 202,
+   "waiting_city_days": 13,
    "labelled_days": 24,
    "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-08T06:17:02Z",
+   "updated_at": "2026-11-08T07:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
