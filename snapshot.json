@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T00:40:02Z",
+ "generated_at": "2026-11-08T00:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "5 merged in 24h"
+    "detail": "6 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 21218,
   "flow": {
-   "merges_24h": 5,
-   "commits_24h": 5,
+   "merges_24h": 6,
+   "commits_24h": 6,
    "built_24h": 11,
    "build_failed_24h": 3,
    "reviews_passed_24h": 6,
@@ -145,7 +145,7 @@
     1,
     0,
     0,
-    1,
+    2,
     1
    ],
    "merge_holds": [
@@ -155,7 +155,7 @@
     "queued": 21,
     "building": 0,
     "in_review": 6,
-    "awaiting_merge": 4,
+    "awaiting_merge": 3,
     "merged": 585,
     "parked": 472
    }
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-11-08T00:42:41Z",
+    "title": "Existing QuoteB: exact6 normal adoption and707 checks",
+    "area": "Core build"
+   },
    {
     "at": "2026-11-07T23:42:57Z",
     "title": "Existing complete STREAM consumer: exact9 after producer merge",
@@ -201,20 +206,15 @@
     "at": "2026-11-03T12:11:47Z",
     "title": "Complete candidate-bound public critical dependencies in protected review packets",
     "area": "Core build"
-   },
-   {
-    "at": "2026-11-03T10:46:56Z",
-    "title": "Bounded complete Codex stdin review eligibility for actual Native candidate",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 5,
+    "active": 6,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-08T00:40:02Z",
+    "last_check_at": "2026-11-08T00:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release contract pin stale",
      "flow ecmwf collector stale"
     ],
-    "last_check_at": "2026-11-08T00:30:02Z",
+    "last_check_at": "2026-11-08T00:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-08T00:42:41Z",
+    "kind": "merge",
+    "text": "Merged “Existing QuoteB: exact6 normal adoption and707 checks” into the main build"
+   },
    {
     "at": "2026-11-08T00:32:39Z",
     "kind": "review",
@@ -357,11 +362,6 @@
     "at": "2026-11-07T20:38:31Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing complete STREAM consumer: exact9 after producer merge” → sent to independent review"
-   },
-   {
-    "at": "2026-11-07T19:50:11Z",
-    "kind": "review",
-    "text": "Codex (GPT-6 Sol) reviewed “Existing calendar successor: exact2 normal publication”: passed"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-08",
    "state": "iteration gated",
-   "status_at": "2026-11-08T00:39:58Z",
-   "heartbeat_at": "2026-11-08T00:40:02Z",
+   "status_at": "2026-11-08T00:45:01Z",
+   "heartbeat_at": "2026-11-08T00:45:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
@@ -382,7 +382,7 @@
     "weather_events": 312,
     "markets": 2953,
     "opportunities": 0,
-    "last_scan_at": "2026-11-08T00:35:08Z",
+    "last_scan_at": "2026-11-08T00:42:21Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-08T00:35:08Z",
+    "updated_at": "2026-11-08T00:42:21Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T00:38:23Z",
+    "updated_at": "2026-11-08T00:44:26Z",
     "detail": "observations retained"
    },
    {
