@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T05:35:02Z",
+ "generated_at": "2026-11-08T05:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -137,12 +137,12 @@
     0,
     0,
     1,
-    0,
     1,
     0,
+    0,
     1,
-    1,
-    1,
+    2,
+    0,
     0,
     0,
     0,
@@ -214,7 +214,7 @@
     "active": 6,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-11-08T05:35:02Z",
+    "last_check_at": "2026-11-08T05:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-08T05:33:13Z",
-   "heartbeat_at": "2026-11-08T05:35:03Z",
+   "status_at": "2026-11-08T05:38:34Z",
+   "heartbeat_at": "2026-11-08T05:40:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
    "days_with_paper_decisions": 14,
    "scanner": {
-    "weather_events": 306,
-    "markets": 2882,
+    "weather_events": 311,
+    "markets": 2937,
     "opportunities": 0,
-    "last_scan_at": "2026-11-08T05:29:50Z",
+    "last_scan_at": "2026-11-08T05:36:48Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-11-08T04:37:02Z",
+    "updated_at": "2026-11-08T05:37:02Z",
     "detail": "multi-city capture complete"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-08T05:29:50Z",
+    "updated_at": "2026-11-08T05:36:48Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T05:33:23Z",
+    "updated_at": "2026-11-08T05:39:31Z",
     "detail": "observations retained"
    },
    {
