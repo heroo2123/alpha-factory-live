@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T20:25:01Z",
+ "generated_at": "2026-11-08T20:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -15,15 +15,15 @@
    {
     "key": "build",
     "name": "Builders",
-    "count": 1,
+    "count": 0,
     "unit": "building",
-    "active": true,
-    "detail": "7 built in 24h"
+    "active": false,
+    "detail": "8 built in 24h"
    },
    {
     "key": "review",
     "name": "Independent review",
-    "count": 6,
+    "count": 7,
     "unit": "in review",
     "active": false,
     "detail": "different model family from the builder; 4 parked, waiting for a new reviewer"
@@ -65,12 +65,12 @@
    {
     "slot": "Builder 1",
     "role": "build",
-    "state": "working",
-    "model": "Codex (GPT-6 Astra)",
-    "family": "OpenAI",
-    "task_id": "t_80a509cc",
-    "task": "Existing bootstrap: bounded FIFO correction exact6 adoption",
-    "elapsed_min": 25
+    "state": "idle",
+    "model": "",
+    "family": "",
+    "task_id": "",
+    "task": "",
+    "elapsed_min": null
    },
    {
     "slot": "Builder 2",
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "waiting",
+    "state": "idle",
     "model": "",
     "family": "",
     "task_id": "",
@@ -118,7 +118,7 @@
   "flow": {
    "merges_24h": 4,
    "commits_24h": 4,
-   "built_24h": 7,
+   "built_24h": 8,
    "build_failed_24h": 1,
    "reviews_passed_24h": 4,
    "reviews_changes_24h": 3,
@@ -153,8 +153,8 @@
    ],
    "stage_totals": {
     "queued": 22,
-    "building": 1,
-    "in_review": 6,
+    "building": 0,
+    "in_review": 7,
     "awaiting_merge": 3,
     "merged": 585,
     "parked": 475
@@ -214,7 +214,7 @@
     "active": 5,
     "alerts_24h": 21,
     "recoveries_24h": 3,
-    "last_check_at": "2026-11-08T20:25:01Z",
+    "last_check_at": "2026-11-08T20:30:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-08T20:29:18Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Astra) built “Existing bootstrap: bounded FIFO correction exact6 adoption” → sent to independent review"
+   },
    {
     "at": "2026-11-08T19:57:38Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-11-07T21:20:18Z",
     "kind": "warn",
     "text": "Codex (GPT-6 Sol) reviewed “Existing producer: exact3 after bounded JSON shape correction”: changes required"
-   },
-   {
-    "at": "2026-11-07T21:14:22Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Existing producer: exact3 after bounded JSON shape correction” → sent to independent review"
    }
   ]
  },
@@ -371,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
-   "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-08T20:24:39Z",
-   "heartbeat_at": "2026-11-08T20:25:00Z",
+   "state": "census service",
+   "status_at": "2026-11-08T20:29:49Z",
+   "heartbeat_at": "2026-11-08T20:30:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
@@ -382,7 +382,7 @@
     "weather_events": 343,
     "markets": 3288,
     "opportunities": 0,
-    "last_scan_at": "2026-11-08T20:20:12Z",
+    "last_scan_at": "2026-11-08T20:27:14Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-08T20:20:12Z",
+    "updated_at": "2026-11-08T20:27:14Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T20:24:09Z",
+    "updated_at": "2026-11-08T20:28:11Z",
     "detail": "observations retained"
    },
    {
