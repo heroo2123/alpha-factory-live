@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T06:25:01Z",
+ "generated_at": "2026-11-08T06:30:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -132,8 +132,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     1,
     0,
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
-    "alerts_24h": 12,
-    "recoveries_24h": 12,
-    "last_check_at": "2026-11-08T06:25:02Z",
+    "active": 7,
+    "alerts_24h": 14,
+    "recoveries_24h": 10,
+    "last_check_at": "2026-11-08T06:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,32 +254,32 @@
   ],
   "events": [
    {
+    "at": "2026-11-08T06:29:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-11-08T06:29:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
+    "at": "2026-11-08T06:29:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
+   {
+    "at": "2026-11-08T06:26:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
     "at": "2026-11-08T06:21:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
    },
    {
     "at": "2026-11-08T06:20:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
-   },
-   {
-    "at": "2026-11-08T06:18:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-08T06:14:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-11-08T06:10:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-08T06:08:01Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: hermes router stale"
    },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-08T06:22:42Z",
-   "heartbeat_at": "2026-11-08T06:25:01Z",
+   "status_at": "2026-11-08T06:28:08Z",
+   "heartbeat_at": "2026-11-08T06:30:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T06:24:37Z",
+    "updated_at": "2026-11-08T06:28:38Z",
     "detail": "observations retained"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 174 untouched city-days (11 cities, 17 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 177 untouched city-days (11 cities, 18 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 198,
    "waiting_city_days": 17,
@@ -535,7 +535,7 @@
     },
     {
      "item": "Not worse than the market on new untouched days",
-     "have": 17,
+     "have": 18,
      "need": 10,
      "done": false,
      "detail": "waiting for a frozen candidate"
@@ -1090,7 +1090,7 @@
    {
     "step": "Forecast brain passes a preregistered historical test and is not worse than the market on new days",
     "state": "active",
-    "detail": "0 of 3 candidate models used · 17 of 10 untouched days"
+    "detail": "0 of 3 candidate models used · 18 of 10 untouched days"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
