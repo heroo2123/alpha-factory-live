@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T13:00:02Z",
+ "generated_at": "2026-11-08T13:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -214,25 +214,25 @@
     "active": 6,
     "alerts_24h": 13,
     "recoveries_24h": 11,
-    "last_check_at": "2026-11-08T12:59:01Z",
+    "last_check_at": "2026-11-08T13:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 13,
+    "active": 14,
     "by_severity": {
      "P0": 0,
      "P1": 1,
-     "P2": 10
+     "P2": 11
     },
     "codes": [
      "flow frozen review scope drift",
      "flow unmergeable reviewed work",
      "flow qa not running",
      "flow builders idle",
-     "flow glm plan lane dead",
-     "flow release contract pin stale"
+     "flow go2 lane not polled",
+     "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-08T12:50:02Z",
+    "last_check_at": "2026-11-08T13:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-08T13:03:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: hermes router stale"
+   },
+   {
+    "at": "2026-11-08T13:00:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
     "at": "2026-11-08T12:32:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -272,16 +282,6 @@
     "at": "2026-11-08T12:31:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-11-08T12:28:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-08T12:27:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: hermes router stale"
    },
    {
     "at": "2026-11-08T00:42:41Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-08T12:57:15Z",
-   "heartbeat_at": "2026-11-08T13:00:02Z",
+   "status_at": "2026-11-08T13:02:39Z",
+   "heartbeat_at": "2026-11-08T13:05:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T12:59:54Z",
+    "updated_at": "2026-11-08T13:03:57Z",
     "detail": "observations retained"
    },
    {
