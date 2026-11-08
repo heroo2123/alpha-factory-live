@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T06:15:02Z",
+ "generated_at": "2026-11-08T06:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
+    "active": 6,
     "alerts_24h": 12,
     "recoveries_24h": 12,
-    "last_check_at": "2026-11-08T06:15:02Z",
+    "last_check_at": "2026-11-08T06:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-08T06:18:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
     "at": "2026-11-08T06:14:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -277,11 +282,6 @@
     "at": "2026-11-08T06:05:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
-   },
-   {
-    "at": "2026-11-08T06:01:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
    },
    {
     "at": "2026-11-08T00:42:41Z",
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-08T06:11:56Z",
-   "heartbeat_at": "2026-11-08T06:15:02Z",
+   "status_at": "2026-11-08T06:17:21Z",
+   "heartbeat_at": "2026-11-08T06:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
    "days_with_paper_decisions": 14,
    "scanner": {
-    "weather_events": 367,
-    "markets": 3553,
+    "weather_events": 366,
+    "markets": 3542,
     "opportunities": 0,
-    "last_scan_at": "2026-11-08T06:10:44Z",
+    "last_scan_at": "2026-11-08T06:17:41Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-08T06:10:44Z",
+    "updated_at": "2026-11-08T06:17:41Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T06:14:27Z",
+    "updated_at": "2026-11-08T06:18:31Z",
     "detail": "observations retained"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8808,
-     "city_days": 194
+     "brier": 0.8768,
+     "city_days": 197
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8213,
-     "city_days": 194
+     "brier": 0.8199,
+     "city_days": 197
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6531,
-     "city_days": 194
+     "brier": 0.6538,
+     "city_days": 197
     },
     {
      "key": "equal",
@@ -502,15 +502,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 174 untouched city-days (11 cities, 17 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 195,
-   "waiting_city_days": 20,
-   "labelled_days": 23,
-   "captured_days_waiting": 3,
+   "labelled_city_days": 198,
+   "waiting_city_days": 17,
+   "labelled_days": 24,
+   "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-08T05:17:02Z",
+   "updated_at": "2026-11-08T06:17:02Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
