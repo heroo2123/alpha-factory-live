@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-08T11:05:01Z",
+ "generated_at": "2026-11-08T11:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
+    "active": 6,
     "alerts_24h": 15,
     "recoveries_24h": 9,
-    "last_check_at": "2026-11-08T11:04:01Z",
+    "last_check_at": "2026-11-08T11:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,21 @@
   ],
   "events": [
    {
+    "at": "2026-11-08T11:09:01Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: auxiliary wait unverified"
+   },
+   {
+    "at": "2026-11-08T11:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
+    "at": "2026-11-08T11:05:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: code queue idle with capacity"
+   },
+   {
     "at": "2026-11-08T10:59:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: auxiliary wait unverified"
@@ -265,21 +280,6 @@
    },
    {
     "at": "2026-11-08T10:55:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-08T10:52:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: auxiliary wait unverified"
-   },
-   {
-    "at": "2026-11-08T10:43:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-11-08T10:40:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: auxiliary wait unverified"
    },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
    "state": "census service",
-   "status_at": "2026-11-08T11:04:59Z",
-   "heartbeat_at": "2026-11-08T11:05:02Z",
+   "status_at": "2026-11-08T11:10:01Z",
+   "heartbeat_at": "2026-11-08T11:10:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 15,
    "days_with_paper_decisions": 14,
    "scanner": {
-    "weather_events": 370,
-    "markets": 3586,
+    "weather_events": 375,
+    "markets": 3641,
     "opportunities": 0,
-    "last_scan_at": "2026-11-08T11:00:59Z",
+    "last_scan_at": "2026-11-08T11:07:50Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-08T11:00:59Z",
+    "updated_at": "2026-11-08T11:07:50Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-08T11:04:53Z",
+    "updated_at": "2026-11-08T11:08:55Z",
     "detail": "observations retained"
    },
    {
