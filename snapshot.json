@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "generated_at": "2026-11-09T03:00:02Z",
+ "generated_at": "2026-11-09T03:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
    {
     "key": "plan",
     "name": "Planner / Architect",
-    "count": 24,
+    "count": 22,
     "unit": "queued",
     "active": false,
     "detail": "10 ready to build"
@@ -31,10 +31,10 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 4,
+    "count": 3,
     "unit": "awaiting merge",
-    "active": false,
-    "detail": "0 merged in 24h"
+    "active": true,
+    "detail": "1 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 21218,
   "flow": {
-   "merges_24h": 0,
-   "commits_24h": 0,
+   "merges_24h": 1,
+   "commits_24h": 1,
    "built_24h": 4,
    "build_failed_24h": 1,
    "reviews_passed_24h": 2,
@@ -146,18 +146,18 @@
     0,
     0,
     0,
-    0
+    1
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
    ],
    "stage_totals": {
-    "queued": 24,
+    "queued": 22,
     "building": 0,
     "in_review": 6,
-    "awaiting_merge": 4,
-    "merged": 585,
-    "parked": 473
+    "awaiting_merge": 3,
+    "merged": 586,
+    "parked": 475
    }
   },
   "architect": {
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-11-09T03:01:55Z",
+    "title": "Existing bootstrap: copy reviewed-contract metadata/crash correction",
+    "area": "Core build"
+   },
    {
     "at": "2026-11-08T00:42:41Z",
     "title": "Existing QuoteB: exact6 normal adoption and707 checks",
@@ -201,20 +206,15 @@
     "at": "2026-11-05T20:21:58Z",
     "title": "Same producer: bind approved C2 public-capture review scope",
     "area": "Core build"
-   },
-   {
-    "at": "2026-11-03T12:11:47Z",
-    "title": "Complete candidate-bound public critical dependencies in protected review packets",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 6,
-    "alerts_24h": 19,
-    "recoveries_24h": 5,
-    "last_check_at": "2026-11-09T03:00:02Z",
+    "active": 5,
+    "alerts_24h": 18,
+    "recoveries_24h": 6,
+    "last_check_at": "2026-11-09T03:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow release contract pin stale",
      "flow ecmwf collector stale"
     ],
-    "last_check_at": "2026-11-09T02:50:02Z",
+    "last_check_at": "2026-11-09T03:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,16 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-09T03:03:02Z",
+    "kind": "heal",
+    "text": "Guardian confirmed recovery: no verified code delivery 2h"
+   },
+   {
+    "at": "2026-11-09T03:01:55Z",
+    "kind": "merge",
+    "text": "Merged “Existing bootstrap: copy reviewed-contract metadata/crash correction” into the main build"
+   },
    {
     "at": "2026-11-09T02:57:01Z",
     "kind": "warn",
@@ -287,11 +297,6 @@
     "at": "2026-11-09T02:35:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-11-09T02:12:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: code queue idle with capacity"
    },
    {
     "at": "2026-11-09T01:53:54Z",
@@ -357,11 +362,6 @@
     "at": "2026-11-07T23:25:45Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing complete STREAM consumer: exact9 after producer merge” → sent to independent review"
-   },
-   {
-    "at": "2026-11-07T22:51:50Z",
-    "kind": "merge",
-    "text": "Merged “Existing producer: exact3 after bounded JSON shape correction” into the main build"
    }
   ]
  },
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-09",
    "state": "iteration gated",
-   "status_at": "2026-11-09T02:59:54Z",
-   "heartbeat_at": "2026-11-09T03:00:02Z",
+   "status_at": "2026-11-09T03:04:57Z",
+   "heartbeat_at": "2026-11-09T03:05:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 16,
    "days_with_paper_decisions": 15,
    "scanner": {
-    "weather_events": 313,
-    "markets": 2964,
+    "weather_events": 311,
+    "markets": 2942,
     "opportunities": 0,
-    "last_scan_at": "2026-11-09T02:57:57Z",
+    "last_scan_at": "2026-11-09T03:04:33Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-09T02:57:57Z",
+    "updated_at": "2026-11-09T03:04:33Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-09T02:59:36Z",
+    "updated_at": "2026-11-09T03:03:38Z",
     "detail": "observations retained"
    },
    {
