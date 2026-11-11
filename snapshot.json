@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-11T15:00:01Z",
+ "generated_at": "2026-11-11T15:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 6,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-11T15:00:02Z",
+    "last_check_at": "2026-11-11T15:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-11T14:50:02Z",
+    "last_check_at": "2026-11-11T15:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-11T15:01:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: disk headroom low"
+   },
    {
     "at": "2026-11-11T14:56:02Z",
     "kind": "warn",
@@ -277,11 +282,6 @@
     "at": "2026-11-11T13:08:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-11-11T12:55:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-09T03:01:55Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-12",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-11T14:56:52Z",
-   "heartbeat_at": "2026-11-11T15:00:02Z",
+   "status_at": "2026-11-11T15:02:33Z",
+   "heartbeat_at": "2026-11-11T15:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 18,
@@ -382,7 +382,7 @@
     "weather_events": 351,
     "markets": 3402,
     "opportunities": 0,
-    "last_scan_at": "2026-11-11T14:53:57Z",
+    "last_scan_at": "2026-11-11T15:00:30Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-11T14:53:57Z",
+    "updated_at": "2026-11-11T15:00:30Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-11T15:00:00Z",
+    "updated_at": "2026-11-11T15:04:02Z",
     "detail": "observations retained"
    },
    {
