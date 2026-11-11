@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-11T15:30:02Z",
+ "generated_at": "2026-11-11T15:35:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 6,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-11T15:30:02Z",
+    "last_check_at": "2026-11-11T15:35:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-11T15:20:02Z",
+    "last_check_at": "2026-11-11T15:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -371,26 +371,26 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-12",
-   "state": "census service",
-   "status_at": "2026-11-11T15:29:51Z",
-   "heartbeat_at": "2026-11-11T15:30:03Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-11-11T15:30:26Z",
+   "heartbeat_at": "2026-11-11T15:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
-   "days_with_market_data": 18,
-   "days_with_paper_decisions": 17,
+   "days_with_market_data": 16,
+   "days_with_paper_decisions": 15,
    "scanner": {
-    "weather_events": 351,
-    "markets": 3402,
+    "weather_events": 345,
+    "markets": 3336,
     "opportunities": 0,
-    "last_scan_at": "2026-11-11T15:26:28Z",
+    "last_scan_at": "2026-11-11T15:32:56Z",
     "mode": "silent paper scan"
    }
   },
   "decisions": {
-   "total": 151053,
+   "total": 134454,
    "research_accept": 0,
    "reject": 0,
-   "gated": 151053,
+   "gated": 134454,
    "note": "paper only: no order is ever sent"
   },
   "weather": [
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-11T15:26:28Z",
+    "updated_at": "2026-11-11T15:32:56Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-11T15:28:15Z",
+    "updated_at": "2026-11-11T15:34:18Z",
     "detail": "observations retained"
    },
    {
