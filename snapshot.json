@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-12T15:30:01Z",
+ "generated_at": "2026-11-12T15:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 6,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-12T15:30:02Z",
+    "last_check_at": "2026-11-12T15:35:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-12T15:20:02Z",
+    "last_check_at": "2026-11-12T15:30:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-12T15:32:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
    {
     "at": "2026-11-12T15:25:02Z",
     "kind": "warn",
@@ -277,11 +282,6 @@
     "at": "2026-11-12T13:31:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-12T13:13:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    },
    {
     "at": "2026-11-09T03:01:55Z",
@@ -371,18 +371,18 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-13",
-   "state": "census service",
-   "status_at": "2026-11-12T15:29:51Z",
-   "heartbeat_at": "2026-11-12T15:30:01Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-11-12T15:30:25Z",
+   "heartbeat_at": "2026-11-12T15:35:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 4,
    "days_with_paper_decisions": 3,
    "scanner": {
-    "weather_events": 333,
-    "markets": 3218,
+    "weather_events": 327,
+    "markets": 3152,
     "opportunities": 0,
-    "last_scan_at": "2026-11-12T15:23:59Z",
+    "last_scan_at": "2026-11-12T15:30:24Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-12T15:23:59Z",
+    "updated_at": "2026-11-12T15:30:24Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-12T15:28:29Z",
+    "updated_at": "2026-11-12T15:34:33Z",
     "detail": "observations retained"
    },
    {
