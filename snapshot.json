@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-14T06:25:01Z",
+ "generated_at": "2026-11-14T06:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 6,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-14T06:25:02Z",
+    "last_check_at": "2026-11-14T06:30:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-15",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-14T06:22:59Z",
-   "heartbeat_at": "2026-11-14T06:25:01Z",
+   "status_at": "2026-11-14T06:28:25Z",
+   "heartbeat_at": "2026-11-14T06:30:04Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 308,
     "markets": 2938,
     "opportunities": 0,
-    "last_scan_at": "2026-11-14T06:23:23Z",
+    "last_scan_at": "2026-11-14T06:29:22Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-14T06:23:23Z",
+    "updated_at": "2026-11-14T06:29:22Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-14T06:24:55Z",
+    "updated_at": "2026-11-14T06:29:02Z",
     "detail": "observations retained"
    },
    {
@@ -500,7 +500,7 @@
     }
    ],
    "metric": "Brier score: lower is better",
-   "verdict": "Brain does not beat the market yet: on 234 untouched city-days (11 cities, 23 days) the best model (challenger) has…",
+   "verdict": "Brain does not beat the market yet: on 237 untouched city-days (11 cities, 24 days) the best model (challenger) has…",
    "verdict_tone": "bad",
    "labelled_city_days": 258,
    "waiting_city_days": 17,
@@ -535,7 +535,7 @@
     },
     {
      "item": "Not worse than the market on new untouched days",
-     "have": 23,
+     "have": 24,
      "need": 10,
      "done": false,
      "detail": "waiting for a frozen candidate"
@@ -1090,7 +1090,7 @@
    {
     "step": "Forecast brain passes a preregistered historical test and is not worse than the market on new days",
     "state": "active",
-    "detail": "0 of 3 candidate models used · 23 of 10 untouched days"
+    "detail": "0 of 3 candidate models used · 24 of 10 untouched days"
    },
    {
     "step": "Pre-funding checklist and real rollback drill",
