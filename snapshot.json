@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-14T09:35:01Z",
+ "generated_at": "2026-11-14T09:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 6,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-14T09:35:02Z",
+    "last_check_at": "2026-11-14T09:40:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-14T09:39:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: disk critical"
+   },
+   {
     "at": "2026-11-14T09:21:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
@@ -275,11 +280,6 @@
    },
    {
     "at": "2026-11-14T09:09:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: disk critical"
-   },
-   {
-    "at": "2026-11-14T08:38:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: disk critical"
    },
@@ -371,9 +371,9 @@
    "release": "c1907d4",
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-15",
-   "state": "census service",
-   "status_at": "2026-11-14T09:34:58Z",
-   "heartbeat_at": "2026-11-14T09:35:02Z",
+   "state": "evaluating markets in paper mode",
+   "status_at": "2026-11-14T09:35:11Z",
+   "heartbeat_at": "2026-11-14T09:40:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 6,
@@ -382,7 +382,7 @@
     "weather_events": 304,
     "markets": 2894,
     "opportunities": 0,
-    "last_scan_at": "2026-11-14T09:29:25Z",
+    "last_scan_at": "2026-11-14T09:35:45Z",
     "mode": "silent paper scan"
    }
   },
@@ -398,21 +398,21 @@
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
     "health": "live",
-    "updated_at": "2026-11-14T08:37:01Z",
+    "updated_at": "2026-11-14T09:37:02Z",
     "detail": "multi-city capture disk_headroom_gated"
    },
    {
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-14T09:29:25Z",
+    "updated_at": "2026-11-14T09:35:45Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-14T09:33:06Z",
+    "updated_at": "2026-11-14T09:39:10Z",
     "detail": "gated"
    },
    {
