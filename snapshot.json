@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-16T07:15:02Z",
+ "generated_at": "2026-11-16T07:20:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-16T07:15:02Z",
+    "last_check_at": "2026-11-16T07:20:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-17",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-16T07:14:19Z",
-   "heartbeat_at": "2026-11-16T07:15:02Z",
+   "status_at": "2026-11-16T07:19:42Z",
+   "heartbeat_at": "2026-11-16T07:20:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 8,
    "days_with_paper_decisions": 7,
    "scanner": {
-    "weather_events": 306,
-    "markets": 2932,
+    "weather_events": 312,
+    "markets": 2998,
     "opportunities": 0,
-    "last_scan_at": "2026-11-16T07:13:08Z",
+    "last_scan_at": "2026-11-16T07:18:46Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-16T07:13:08Z",
+    "updated_at": "2026-11-16T07:18:46Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-16T07:14:09Z",
+    "updated_at": "2026-11-16T07:18:15Z",
     "detail": "observations retained"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8767,
-     "city_days": 277
+     "brier": 0.8796,
+     "city_days": 280
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8196,
-     "city_days": 277
+     "brier": 0.8218,
+     "city_days": 280
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6376,
-     "city_days": 277
+     "brier": 0.6417,
+     "city_days": 280
     },
     {
      "key": "equal",
@@ -502,15 +502,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 257 untouched city-days (11 cities, 26 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 278,
-   "waiting_city_days": 17,
+   "labelled_city_days": 281,
+   "waiting_city_days": 14,
    "labelled_days": 32,
    "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-16T06:17:02Z",
+   "updated_at": "2026-11-16T07:17:03Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
