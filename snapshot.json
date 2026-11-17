@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-17T04:05:01Z",
+ "generated_at": "2026-11-17T04:10:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 22,
     "recoveries_24h": 2,
-    "last_check_at": "2026-11-17T04:05:02Z",
+    "last_check_at": "2026-11-17T04:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-17",
    "state": "iteration gated",
-   "status_at": "2026-11-17T04:04:58Z",
-   "heartbeat_at": "2026-11-17T04:05:02Z",
+   "status_at": "2026-11-17T04:10:02Z",
+   "heartbeat_at": "2026-11-17T04:10:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 9,
@@ -382,7 +382,7 @@
     "weather_events": 255,
     "markets": 2371,
     "opportunities": 0,
-    "last_scan_at": "2026-11-17T04:03:35Z",
+    "last_scan_at": "2026-11-17T04:09:15Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-17T04:03:35Z",
+    "updated_at": "2026-11-17T04:09:15Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-17T04:03:56Z",
+    "updated_at": "2026-11-17T04:09:59Z",
     "detail": "observations retained"
    },
    {
@@ -595,40 +595,40 @@
    }
   ],
   "readiness": {
-   "accepted": 42,
+   "accepted": 5,
    "total": 48,
    "groups": [
     {
      "name": "CODE",
      "label": "Code",
      "total": 3,
-     "accepted": 2,
+     "accepted": 0,
      "owner": 0,
-     "pending": 1
+     "pending": 3
     },
     {
      "name": "PAPER",
      "label": "Paper trading",
      "total": 11,
-     "accepted": 7,
-     "owner": 1,
-     "pending": 3
+     "accepted": 0,
+     "owner": 0,
+     "pending": 11
     },
     {
      "name": "LEARNING",
      "label": "Learning",
      "total": 14,
-     "accepted": 13,
+     "accepted": 0,
      "owner": 1,
-     "pending": 0
+     "pending": 13
     },
     {
      "name": "LIVE",
      "label": "Live safety",
      "total": 20,
-     "accepted": 14,
+     "accepted": 0,
      "owner": 4,
-     "pending": 2
+     "pending": 16
     }
    ],
    "cells": [
@@ -645,8 +645,8 @@
      "id": "CODE-02",
      "group": "CODE",
      "name": "Full test suite green",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 2,
      "open_tasks": 4
     },
@@ -654,8 +654,8 @@
      "id": "CODE-03",
      "group": "CODE",
      "name": "No open high-severity issue",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 8,
      "open_tasks": 0
     },
@@ -663,8 +663,8 @@
      "id": "PAPER-01",
      "group": "PAPER",
      "name": "Isolated deployment",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 0,
      "open_tasks": 0
     },
@@ -681,8 +681,8 @@
      "id": "PAPER-03",
      "group": "PAPER",
      "name": "Evidence persistence healthy",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "re-check inconclusive",
      "merged_tasks": 2,
      "open_tasks": 0
     },
@@ -690,8 +690,8 @@
      "id": "PAPER-04",
      "group": "PAPER",
      "name": "Causal replay works",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "re-check inconclusive",
      "merged_tasks": 4,
      "open_tasks": 0
     },
@@ -699,8 +699,8 @@
      "id": "PAPER-05",
      "group": "PAPER",
      "name": "Station certification enforced",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "re-check inconclusive",
      "merged_tasks": 1,
      "open_tasks": 0
     },
@@ -708,8 +708,8 @@
      "id": "PAPER-06",
      "group": "PAPER",
      "name": "Rule-drift quarantine",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "re-check inconclusive",
      "merged_tasks": 0,
      "open_tasks": 0
     },
@@ -717,8 +717,8 @@
      "id": "PAPER-07",
      "group": "PAPER",
      "name": "Collector recovery",
-     "status": "owner",
-     "detail": "accepted by the owner",
+     "status": "pending",
+     "detail": "re-check inconclusive",
      "merged_tasks": 6,
      "open_tasks": 0
     },
@@ -744,8 +744,8 @@
      "id": "PAPER-10",
      "group": "PAPER",
      "name": "No real financial authority",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 0,
      "open_tasks": 0
     },
@@ -753,8 +753,8 @@
      "id": "PAPER-11",
      "group": "PAPER",
      "name": "Comparison with previous version",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 5,
      "open_tasks": 0
     },
@@ -762,8 +762,8 @@
      "id": "LEARNING-01",
      "group": "LEARNING",
      "name": "Versioned champion model",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 0,
      "open_tasks": 0
     },
@@ -771,8 +771,8 @@
      "id": "LEARNING-02",
      "group": "LEARNING",
      "name": "Decisions record model IDs",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -789,8 +789,8 @@
      "id": "LEARNING-04",
      "group": "LEARNING",
      "name": "Dataset provenance",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 5,
      "open_tasks": 0
     },
@@ -798,8 +798,8 @@
      "id": "LEARNING-05",
      "group": "LEARNING",
      "name": "No-lookahead / leakage tests",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 7,
      "open_tasks": 0
     },
@@ -807,8 +807,8 @@
      "id": "LEARNING-06",
      "group": "LEARNING",
      "name": "Champion-challenger registry",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 4,
      "open_tasks": 0
     },
@@ -816,8 +816,8 @@
      "id": "LEARNING-07",
      "group": "LEARNING",
      "name": "Reproducible training",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 4,
      "open_tasks": 0
     },
@@ -825,8 +825,8 @@
      "id": "LEARNING-08",
      "group": "LEARNING",
      "name": "Challenger evaluation pipeline",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 5,
      "open_tasks": 0
     },
@@ -834,8 +834,8 @@
      "id": "LEARNING-09",
      "group": "LEARNING",
      "name": "Atomic, reversible promotion",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 2,
      "open_tasks": 0
     },
@@ -843,8 +843,8 @@
      "id": "LEARNING-10",
      "group": "LEARNING",
      "name": "Rollback verified",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 4,
      "open_tasks": 0
     },
@@ -852,8 +852,8 @@
      "id": "LEARNING-11",
      "group": "LEARNING",
      "name": "Learner cannot change risk",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -861,8 +861,8 @@
      "id": "LEARNING-12",
      "group": "LEARNING",
      "name": "Safe demotion and fallback",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 1,
      "open_tasks": 0
     },
@@ -870,8 +870,8 @@
      "id": "LEARNING-13",
      "group": "LEARNING",
      "name": "Training failures stay safe",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 2,
      "open_tasks": 0
     },
@@ -879,8 +879,8 @@
      "id": "LEARNING-14",
      "group": "LEARNING",
      "name": "No forced promotion",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -915,8 +915,8 @@
      "id": "LIVE-04",
      "group": "LIVE",
      "name": "Exact order book",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 1,
      "open_tasks": 0
     },
@@ -924,8 +924,8 @@
      "id": "LIVE-05",
      "group": "LIVE",
      "name": "Reconciliation",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -942,8 +942,8 @@
      "id": "LIVE-07",
      "group": "LIVE",
      "name": "Fees",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -951,8 +951,8 @@
      "id": "LIVE-08",
      "group": "LIVE",
      "name": "Settlement and redemption",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 1,
      "open_tasks": 0
     },
@@ -960,8 +960,8 @@
      "id": "LIVE-09",
      "group": "LIVE",
      "name": "Protected risk configuration",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 5,
      "open_tasks": 0
     },
@@ -969,8 +969,8 @@
      "id": "LIVE-10",
      "group": "LIVE",
      "name": "Station certification gate",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 7,
      "open_tasks": 0
     },
@@ -978,8 +978,8 @@
      "id": "LIVE-11",
      "group": "LIVE",
      "name": "Personal-station data provenance",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 7,
      "open_tasks": 0
     },
@@ -987,8 +987,8 @@
      "id": "LIVE-12",
      "group": "LIVE",
      "name": "Rule re-validation",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -996,8 +996,8 @@
      "id": "LIVE-13",
      "group": "LIVE",
      "name": "Correlation hard limits",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 4,
      "open_tasks": 0
     },
@@ -1005,8 +1005,8 @@
      "id": "LIVE-14",
      "group": "LIVE",
      "name": "Host clock health",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 6,
      "open_tasks": 0
     },
@@ -1023,8 +1023,8 @@
      "id": "LIVE-16",
      "group": "LIVE",
      "name": "Guardian failure stays safe",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -1032,8 +1032,8 @@
      "id": "LIVE-17",
      "group": "LIVE",
      "name": "Degraded data fails closed",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 4,
      "open_tasks": 0
     },
@@ -1050,8 +1050,8 @@
      "id": "LIVE-19",
      "group": "LIVE",
      "name": "Unfunded preflight",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 3,
      "open_tasks": 0
     },
@@ -1059,8 +1059,8 @@
      "id": "LIVE-20",
      "group": "LIVE",
      "name": "Executor containment",
-     "status": "accepted",
-     "detail": "accepted by an independent reviewer",
+     "status": "pending",
+     "detail": "not accepted yet",
      "merged_tasks": 2,
      "open_tasks": 0
     }
@@ -1070,22 +1070,22 @@
    {
     "step": "Code finished and fully tested",
     "state": "active",
-    "detail": "2 of 3 criteria accepted"
+    "detail": "0 of 3 criteria accepted"
    },
    {
     "step": "Paper trading evidence",
     "state": "active",
-    "detail": "8 of 11 criteria accepted"
+    "detail": "0 of 11 criteria accepted"
    },
    {
     "step": "Safe self-learning controls",
-    "state": "done",
-    "detail": "14 of 14 criteria accepted"
+    "state": "active",
+    "detail": "1 of 14 criteria accepted"
    },
    {
     "step": "Live-execution safety",
     "state": "active",
-    "detail": "18 of 20 criteria accepted"
+    "detail": "4 of 20 criteria accepted"
    },
    {
     "step": "Forecast brain passes a preregistered historical test and is not worse than the market on new days",
