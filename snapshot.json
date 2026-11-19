@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-19T15:10:02Z",
+ "generated_at": "2026-11-19T15:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -33,8 +33,8 @@
     "name": "Integrator",
     "count": 3,
     "unit": "awaiting merge",
-    "active": false,
-    "detail": "0 merged in 24h"
+    "active": true,
+    "detail": "1 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,8 +116,8 @@
   },
   "tests_passing": 21218,
   "flow": {
-   "merges_24h": 0,
-   "commits_24h": 0,
+   "merges_24h": 1,
+   "commits_24h": 1,
    "built_24h": 0,
    "build_failed_24h": 0,
    "reviews_passed_24h": 0,
@@ -146,7 +146,7 @@
     0,
     0,
     0,
-    0
+    1
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
@@ -156,7 +156,7 @@
     "building": 0,
     "in_review": 9,
     "awaiting_merge": 3,
-    "merged": 586,
+    "merged": 587,
     "parked": 485
    }
   },
@@ -167,6 +167,11 @@
    "model": "Codex (GPT-6 Sol)"
   },
   "recent_merges": [
+   {
+    "at": "2026-11-19T15:13:33Z",
+    "title": "Assemble actual PAPER runtime and startup recovery",
+    "area": "Core build"
+   },
    {
     "at": "2026-11-09T03:01:55Z",
     "title": "Existing bootstrap: copy reviewed-contract metadata/crash correction",
@@ -201,20 +206,15 @@
     "at": "2026-11-07T17:12:14Z",
     "title": "Existing launch Brain: corrected complete10 normal adoption",
     "area": "Core build"
-   },
-   {
-    "at": "2026-11-05T20:21:58Z",
-    "title": "Same producer: bind approved C2 public-capture review scope",
-    "area": "Core build"
    }
   ],
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 7,
+    "active": 6,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-19T15:10:02Z",
+    "last_check_at": "2026-11-19T15:15:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-19T15:00:03Z",
+    "last_check_at": "2026-11-19T15:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-19T15:13:33Z",
+    "kind": "merge",
+    "text": "Merged “Assemble actual PAPER runtime and startup recovery” into the main build"
+   },
    {
     "at": "2026-11-19T13:46:01Z",
     "kind": "warn",
@@ -357,11 +362,6 @@
     "at": "2026-11-07T23:32:40Z",
     "kind": "review",
     "text": "Codex (GPT-6 Sol) reviewed “Existing complete STREAM consumer: exact9 after producer merge”: passed"
-   },
-   {
-    "at": "2026-11-07T23:25:45Z",
-    "kind": "build",
-    "text": "Codex (GPT-6 Sol) built “Existing complete STREAM consumer: exact9 after producer merge” → sent to independent review"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-20",
    "state": "evaluating markets in paper mode",
-   "status_at": "2026-11-19T15:08:54Z",
-   "heartbeat_at": "2026-11-19T15:10:02Z",
+   "status_at": "2026-11-19T15:14:29Z",
+   "heartbeat_at": "2026-11-19T15:15:00Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 11,
@@ -382,7 +382,7 @@
     "weather_events": 309,
     "markets": 2973,
     "opportunities": 0,
-    "last_scan_at": "2026-11-19T15:04:09Z",
+    "last_scan_at": "2026-11-19T15:10:04Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-19T15:04:09Z",
+    "updated_at": "2026-11-19T15:10:04Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-19T15:09:37Z",
+    "updated_at": "2026-11-19T15:13:39Z",
     "detail": "observations retained"
    },
    {
