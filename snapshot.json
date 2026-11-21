@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-21T09:15:46Z",
+ "generated_at": "2026-11-21T09:20:26Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -85,7 +85,7 @@
    {
     "slot": "Reviewer 1",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -95,7 +95,7 @@
    {
     "slot": "Reviewer 2",
     "role": "review",
-    "state": "idle",
+    "state": "waiting",
     "model": "",
     "family": "",
     "task_id": "",
@@ -211,10 +211,10 @@
   "self_healing": {
    "guardian": {
     "state": "p1",
-    "active": 9,
-    "alerts_24h": 20,
+    "active": 10,
+    "alerts_24h": 17,
     "recoveries_24h": 2,
-    "last_check_at": "2026-11-21T09:15:44Z",
+    "last_check_at": "2026-11-21T09:19:18Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -253,21 +253,6 @@
    "Kimi"
   ],
   "events": [
-   {
-    "at": "2026-11-21T07:57:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-11-21T07:57:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
-   },
-   {
-    "at": "2026-11-21T07:57:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
    {
     "at": "2026-11-20T07:51:36Z",
     "kind": "merge",
@@ -362,6 +347,21 @@
     "at": "2026-11-07T23:25:45Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing complete STREAM consumer: exact9 after producer merge” → sent to independent review"
+   },
+   {
+    "at": "2026-11-07T22:51:50Z",
+    "kind": "merge",
+    "text": "Merged “Existing producer: exact3 after bounded JSON shape correction” into the main build"
+   },
+   {
+    "at": "2026-11-07T22:40:54Z",
+    "kind": "review",
+    "text": "Codex (GPT-6 Sol) reviewed “Existing producer: exact3 after bounded JSON shape correction”: passed"
+   },
+   {
+    "at": "2026-11-07T22:37:41Z",
+    "kind": "build",
+    "text": "Codex (GPT-6 Sol) built “Existing producer: exact3 after bounded JSON shape correction” → sent to independent review"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-22",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-11-21T09:15:45Z",
-   "heartbeat_at": "2026-11-21T09:15:57Z",
+   "status_at": "2026-11-21T09:21:03Z",
+   "heartbeat_at": "2026-11-21T09:21:07Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-21T09:14:35Z",
+    "updated_at": "2026-11-21T09:19:27Z",
     "detail": "observations retained"
    },
    {
