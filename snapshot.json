@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-21T12:00:01Z",
+ "generated_at": "2026-11-21T12:05:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 6,
-    "alerts_24h": 7,
+    "alerts_24h": 9,
     "recoveries_24h": 7,
-    "last_check_at": "2026-11-21T12:00:02Z",
+    "last_check_at": "2026-11-21T12:05:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow glm plan lane dead",
      "flow release contract pin stale"
     ],
-    "last_check_at": "2026-11-21T11:50:02Z",
+    "last_check_at": "2026-11-21T12:00:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-21T12:03:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-11-21T12:03:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
     "at": "2026-11-21T11:39:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
@@ -262,16 +272,6 @@
     "at": "2026-11-21T11:04:02Z",
     "kind": "heal",
     "text": "Guardian confirmed recovery: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-11-21T10:27:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: agent4 qa evidence stale"
-   },
-   {
-    "at": "2026-11-21T10:27:02Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: agent4 qa pipeline subsystem failed"
    },
    {
     "at": "2026-11-21T10:27:02Z",
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-22",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-11-21T11:59:50Z",
-   "heartbeat_at": "2026-11-21T12:00:02Z",
+   "status_at": "2026-11-21T12:04:50Z",
+   "heartbeat_at": "2026-11-21T12:05:01Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
@@ -382,7 +382,7 @@
     "weather_events": 311,
     "markets": 2994,
     "opportunities": 0,
-    "last_scan_at": "2026-11-21T11:56:25Z",
+    "last_scan_at": "2026-11-21T12:02:28Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-21T11:56:25Z",
+    "updated_at": "2026-11-21T12:02:28Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-21T11:58:28Z",
+    "updated_at": "2026-11-21T12:04:30Z",
     "detail": "observations retained"
    },
    {
