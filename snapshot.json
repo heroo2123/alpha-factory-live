@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-21T10:15:38Z",
+ "generated_at": "2026-11-21T10:25:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 9,
-    "alerts_24h": 11,
-    "recoveries_24h": 3,
-    "last_check_at": "2026-11-21T10:13:07Z",
+    "alerts_24h": 10,
+    "recoveries_24h": 0,
+    "last_check_at": "2026-11-21T10:25:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,14 +254,19 @@
   ],
   "events": [
    {
-    "at": "2026-11-21T10:13:07Z",
+    "at": "2026-11-21T10:24:01Z",
     "kind": "warn",
-    "text": "Guardian raised an alert: engineering regression selftest failed"
+    "text": "Guardian raised an alert: agent4 qa evidence stale"
    },
    {
-    "at": "2026-11-21T10:05:15Z",
+    "at": "2026-11-21T10:24:01Z",
     "kind": "warn",
-    "text": "Guardian raised an alert: hermes job failed code evidence to kanban"
+    "text": "Guardian raised an alert: hermes router stale"
+   },
+   {
+    "at": "2026-11-21T10:23:06Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job failed evidence qualification registry"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -357,11 +362,6 @@
     "at": "2026-11-07T23:25:45Z",
     "kind": "build",
     "text": "Codex (GPT-6 Sol) built “Existing complete STREAM consumer: exact9 after producer merge” → sent to independent review"
-   },
-   {
-    "at": "2026-11-07T22:51:50Z",
-    "kind": "merge",
-    "text": "Merged “Existing producer: exact3 after bounded JSON shape correction” into the main build"
    }
   ]
  },
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-22",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-11-21T10:15:39Z",
-   "heartbeat_at": "2026-11-21T10:15:40Z",
+   "status_at": "2026-11-21T10:24:54Z",
+   "heartbeat_at": "2026-11-21T10:25:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-21T10:13:42Z",
+    "updated_at": "2026-11-21T10:23:23Z",
     "detail": "observations retained"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8957,
-     "city_days": 331
+     "brier": 0.8945,
+     "city_days": 334
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8287,
-     "city_days": 331
+     "brier": 0.8278,
+     "city_days": 334
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6341,
-     "city_days": 331
+     "brier": 0.6375,
+     "city_days": 334
     },
     {
      "key": "equal",
@@ -502,15 +502,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 312 untouched city-days (11 cities, 31 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 332,
-   "waiting_city_days": 13,
+   "labelled_city_days": 335,
+   "waiting_city_days": 10,
    "labelled_days": 37,
    "captured_days_waiting": 3,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-21T08:17:03Z",
+   "updated_at": "2026-11-21T10:18:15Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
