@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-22T06:15:02Z",
+ "generated_at": "2026-11-22T06:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-22T06:15:02Z",
+    "last_check_at": "2026-11-22T06:19:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-22T06:17:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: no verified code delivery 2h"
+   },
+   {
     "at": "2026-11-22T06:07:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: full suite not green"
@@ -277,11 +282,6 @@
     "at": "2026-11-22T04:21:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-11-22T04:19:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: engineering regression selftest failed"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -372,17 +372,17 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-23",
    "state": "waiting for today's protected review before paper decisions start",
-   "status_at": "2026-11-22T06:15:02Z",
-   "heartbeat_at": "2026-11-22T06:15:01Z",
+   "status_at": "2026-11-22T06:20:02Z",
+   "heartbeat_at": "2026-11-22T06:20:03Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 13,
    "days_with_paper_decisions": 12,
    "scanner": {
-    "weather_events": 312,
-    "markets": 2999,
+    "weather_events": 309,
+    "markets": 2966,
     "opportunities": 0,
-    "last_scan_at": "2026-11-22T06:12:47Z",
+    "last_scan_at": "2026-11-22T06:18:38Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-22T06:12:47Z",
+    "updated_at": "2026-11-22T06:18:38Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-22T06:14:06Z",
+    "updated_at": "2026-11-22T06:18:08Z",
     "detail": "gated"
    },
    {
@@ -504,8 +504,8 @@
    "verdict_tone": "bad",
    "labelled_city_days": 335,
    "waiting_city_days": 10,
-   "labelled_days": 37,
-   "captured_days_waiting": 3,
+   "labelled_days": 38,
+   "captured_days_waiting": 2,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
