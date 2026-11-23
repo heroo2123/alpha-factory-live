@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-23T22:30:03Z",
+ "generated_at": "2026-11-23T22:35:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 13,
+    "count": 14,
     "unit": "awaiting merge",
     "active": true,
     "detail": "6 merged in 24h"
@@ -125,7 +125,6 @@
    "commits_by_hour": [
     1,
     1,
-    0,
     1,
     0,
     0,
@@ -144,6 +143,7 @@
     0,
     0,
     1,
+    0,
     1,
     1,
     0
@@ -155,7 +155,7 @@
     "queued": 20,
     "building": 0,
     "in_review": 9,
-    "awaiting_merge": 13,
+    "awaiting_merge": 14,
     "merged": 589,
     "parked": 490
    }
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-23T22:30:03Z",
+    "last_check_at": "2026-11-23T22:34:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow go2 lane broken",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-23T22:20:03Z",
+    "last_check_at": "2026-11-23T22:30:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-23T22:33:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
    {
     "at": "2026-11-23T22:20:03Z",
     "kind": "warn",
@@ -277,11 +282,6 @@
     "at": "2026-11-23T21:56:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-23T20:35:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-23T22:29:30Z",
+    "updated_at": "2026-11-23T22:33:32Z",
     "detail": "gated"
    },
    {
