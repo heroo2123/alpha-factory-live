@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-23T19:40:01Z",
+ "generated_at": "2026-11-23T19:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -31,7 +31,7 @@
    {
     "key": "merge",
     "name": "Integrator",
-    "count": 9,
+    "count": 10,
     "unit": "awaiting merge",
     "active": true,
     "detail": "5 merged in 24h"
@@ -155,7 +155,7 @@
     "queued": 20,
     "building": 0,
     "in_review": 9,
-    "awaiting_merge": 9,
+    "awaiting_merge": 10,
     "merged": 589,
     "parked": 490
    }
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-23T19:40:01Z",
+    "last_check_at": "2026-11-23T19:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow go2 lane broken",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-23T19:30:02Z",
+    "last_check_at": "2026-11-23T19:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-23T19:38:04Z",
+    "updated_at": "2026-11-23T19:44:06Z",
     "detail": "gated"
    },
    {
