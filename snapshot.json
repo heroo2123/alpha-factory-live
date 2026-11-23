@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-23T14:45:01Z",
+ "generated_at": "2026-11-23T14:50:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 7,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "7 merged in 24h"
+    "detail": "6 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 21218,
   "flow": {
-   "merges_24h": 7,
-   "commits_24h": 7,
+   "merges_24h": 6,
+   "commits_24h": 6,
    "built_24h": 0,
    "build_failed_24h": 0,
    "reviews_passed_24h": 0,
    "reviews_changes_24h": 0,
    "commits_by_hour": [
-    1,
+    0,
     0,
     0,
     1,
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-23T14:45:02Z",
+    "last_check_at": "2026-11-23T14:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -372,8 +372,8 @@
    "commissioned_at": "2026-10-25T07:35:02Z",
    "day": "2026-11-24",
    "state": "waiting prepared day",
-   "status_at": "2026-11-23T14:44:35Z",
-   "heartbeat_at": "2026-11-23T14:45:01Z",
+   "status_at": "2026-11-23T14:49:35Z",
+   "heartbeat_at": "2026-11-23T14:50:02Z",
    "real_orders_sent": false,
    "trading_executor_locked": true,
    "days_with_market_data": 11,
@@ -382,7 +382,7 @@
     "weather_events": 312,
     "markets": 3002,
     "opportunities": 0,
-    "last_scan_at": "2026-11-23T14:39:58Z",
+    "last_scan_at": "2026-11-23T14:46:11Z",
     "mode": "silent paper scan"
    }
   },
@@ -405,14 +405,14 @@
     "name": "Polymarket weather markets",
     "role": "prices and rules (read-only scan)",
     "health": "live",
-    "updated_at": "2026-11-23T14:39:58Z",
+    "updated_at": "2026-11-23T14:46:11Z",
     "detail": "scanned every few minutes"
    },
    {
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-23T14:44:52Z",
+    "updated_at": "2026-11-23T14:48:53Z",
     "detail": "gated"
    },
    {
