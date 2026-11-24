@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-24T06:35:01Z",
+ "generated_at": "2026-11-24T06:40:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -143,8 +143,8 @@
     1,
     0,
     1,
-    0,
     1,
+    0,
     0,
     1
    ],
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-24T06:34:01Z",
+    "last_check_at": "2026-11-24T06:40:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-24T06:38:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
+   {
+    "at": "2026-11-24T06:36:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
+   {
     "at": "2026-11-24T06:22:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: full suite not green"
@@ -271,17 +281,7 @@
    {
     "at": "2026-11-24T05:57:02Z",
     "kind": "warn",
-    "text": "Guardian raised an alert: unfunded shadow down"
-   },
-   {
-    "at": "2026-11-24T05:57:02Z",
-    "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-24T05:53:01Z",
-    "kind": "heal",
-    "text": "Guardian confirmed recovery: no verified code delivery 2h"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-24T06:33:55Z",
+    "updated_at": "2026-11-24T06:39:59Z",
     "detail": "gated"
    },
    {
