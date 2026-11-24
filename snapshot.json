@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-24T20:40:02Z",
+ "generated_at": "2026-11-24T20:45:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -144,8 +144,8 @@
     0,
     1,
     1,
-    0,
     1,
+    0,
     1
    ],
    "merge_holds": [
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-24T20:40:02Z",
+    "last_check_at": "2026-11-24T20:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow go2 lane broken",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-24T20:30:03Z",
+    "last_check_at": "2026-11-24T20:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-24T20:42:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
    {
     "at": "2026-11-24T20:39:01Z",
     "kind": "warn",
@@ -277,11 +282,6 @@
     "at": "2026-11-24T20:02:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-24T18:41:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-24T20:38:20Z",
+    "updated_at": "2026-11-24T20:44:22Z",
     "detail": "gated"
    },
    {
