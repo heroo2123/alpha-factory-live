@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-24T02:05:02Z",
+ "generated_at": "2026-11-24T02:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 7,
-    "alerts_24h": 22,
-    "recoveries_24h": 2,
-    "last_check_at": "2026-11-24T02:05:02Z",
+    "alerts_24h": 23,
+    "recoveries_24h": 1,
+    "last_check_at": "2026-11-24T02:10:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-24T02:06:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: disk headroom low"
+   },
+   {
     "at": "2026-11-24T01:56:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: unfunded shadow down"
@@ -272,11 +277,6 @@
     "at": "2026-11-24T00:34:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-11-24T00:21:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
    },
    {
     "at": "2026-11-24T00:21:01Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-24T02:03:25Z",
+    "updated_at": "2026-11-24T02:09:28Z",
     "detail": "gated"
    },
    {
