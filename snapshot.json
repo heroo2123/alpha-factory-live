@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-24T00:10:02Z",
+ "generated_at": "2026-11-24T00:15:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -145,8 +145,8 @@
     1,
     1,
     0,
-    0,
-    1
+    1,
+    0
    ],
    "merge_holds": [
     "protected code: waiting for a second review"
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 22,
     "recoveries_24h": 2,
-    "last_check_at": "2026-11-24T00:09:01Z",
+    "last_check_at": "2026-11-24T00:15:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow go2 lane broken",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-24T00:00:02Z",
+    "last_check_at": "2026-11-24T00:10:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-24T00:08:24Z",
+    "updated_at": "2026-11-24T00:14:27Z",
     "detail": "gated"
    },
    {
