@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-24T18:35:01Z",
+ "generated_at": "2026-11-24T18:40:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -131,8 +131,8 @@
     1,
     0,
     1,
-    0,
     1,
+    0,
     0,
     1,
     0,
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 22,
     "recoveries_24h": 2,
-    "last_check_at": "2026-11-24T18:35:01Z",
+    "last_check_at": "2026-11-24T18:39:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-24T18:38:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
+   {
     "at": "2026-11-24T18:24:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: full suite not green"
@@ -277,11 +282,6 @@
     "at": "2026-11-24T18:02:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: code queue idle with capacity"
-   },
-   {
-    "at": "2026-11-24T16:41:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-24T18:33:15Z",
+    "updated_at": "2026-11-24T18:39:19Z",
     "detail": "gated"
    },
    {
