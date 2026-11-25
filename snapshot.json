@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-25T10:10:02Z",
+ "generated_at": "2026-11-25T10:15:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 18,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "13 merged in 24h"
+    "detail": "12 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,14 +116,14 @@
   },
   "tests_passing": 21218,
   "flow": {
-   "merges_24h": 13,
-   "commits_24h": 13,
+   "merges_24h": 12,
+   "commits_24h": 12,
    "built_24h": 0,
    "build_failed_24h": 0,
    "reviews_passed_24h": 0,
    "reviews_changes_24h": 0,
    "commits_by_hour": [
-    1,
+    0,
     0,
     0,
     1,
@@ -135,13 +135,13 @@
     0,
     1,
     2,
-    0,
-    1,
     1,
     0,
     1,
     0,
-    2,
+    1,
+    1,
+    1,
     0,
     0,
     0,
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 8,
-    "alerts_24h": 23,
-    "recoveries_24h": 1,
-    "last_check_at": "2026-11-25T10:09:01Z",
+    "alerts_24h": 24,
+    "recoveries_24h": 0,
+    "last_check_at": "2026-11-25T10:14:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow go2 lane broken",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-25T10:00:03Z",
+    "last_check_at": "2026-11-25T10:10:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,11 @@
   ],
   "events": [
    {
+    "at": "2026-11-25T10:10:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: disk headroom low"
+   },
+   {
     "at": "2026-11-25T10:04:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: unfunded shadow down"
@@ -272,11 +277,6 @@
     "at": "2026-11-25T08:40:03Z",
     "kind": "warn",
     "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-11-25T08:27:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
    },
    {
     "at": "2026-11-25T08:27:02Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-25T10:08:25Z",
+    "updated_at": "2026-11-25T10:14:28Z",
     "detail": "gated"
    },
    {
