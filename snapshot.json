@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-25T16:05:01Z",
+ "generated_at": "2026-11-25T16:10:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -128,8 +128,8 @@
     1,
     0,
     1,
-    1,
-    1,
+    2,
+    0,
     1,
     1,
     0,
@@ -214,7 +214,7 @@
     "active": 8,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-25T16:04:01Z",
+    "last_check_at": "2026-11-25T16:10:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-25T16:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: unfunded shadow down"
+   },
+   {
+    "at": "2026-11-25T16:05:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: code queue idle with capacity"
+   },
+   {
     "at": "2026-11-25T14:46:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
@@ -271,17 +281,7 @@
    {
     "at": "2026-11-25T14:29:01Z",
     "kind": "warn",
-    "text": "Guardian raised an alert: full suite not green"
-   },
-   {
-    "at": "2026-11-25T14:29:01Z",
-    "kind": "warn",
     "text": "Guardian raised an alert: hermes router not active"
-   },
-   {
-    "at": "2026-11-25T14:11:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: disk headroom low"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-25T16:03:13Z",
+    "updated_at": "2026-11-25T16:09:16Z",
     "detail": "gated"
    },
    {
