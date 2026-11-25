@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-25T16:40:02Z",
+ "generated_at": "2026-11-25T16:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -124,8 +124,8 @@
    "reviews_changes_24h": 0,
    "commits_by_hour": [
     1,
-    0,
     1,
+    0,
     1,
     1,
     1,
@@ -214,7 +214,7 @@
     "active": 8,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-25T16:40:02Z",
+    "last_check_at": "2026-11-25T16:45:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow go2 lane broken",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-25T16:30:02Z",
+    "last_check_at": "2026-11-25T16:40:03Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-25T16:43:01Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: engineering regression selftest failed"
+   },
    {
     "at": "2026-11-25T16:30:02Z",
     "kind": "warn",
@@ -277,11 +282,6 @@
     "at": "2026-11-25T14:46:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes job disabled flexible provider router"
-   },
-   {
-    "at": "2026-11-25T14:42:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-25T16:39:30Z",
+    "updated_at": "2026-11-25T16:43:31Z",
     "detail": "gated"
    },
    {
