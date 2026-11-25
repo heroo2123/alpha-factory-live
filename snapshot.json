@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-25T20:15:02Z",
+ "generated_at": "2026-11-25T20:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -34,7 +34,7 @@
     "count": 18,
     "unit": "awaiting merge",
     "active": true,
-    "detail": "8 merged in 24h"
+    "detail": "7 merged in 24h"
    },
    {
     "key": "qa",
@@ -116,15 +116,15 @@
   },
   "tests_passing": 21218,
   "flow": {
-   "merges_24h": 8,
-   "commits_24h": 8,
+   "merges_24h": 7,
+   "commits_24h": 7,
    "built_24h": 0,
    "build_failed_24h": 0,
    "reviews_passed_24h": 0,
    "reviews_changes_24h": 0,
    "commits_by_hour": [
     1,
-    2,
+    1,
     1,
     0,
     1,
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-25T20:15:02Z",
+    "last_check_at": "2026-11-25T20:20:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-25T20:13:20Z",
+    "updated_at": "2026-11-25T20:19:22Z",
     "detail": "gated"
    },
    {
@@ -510,7 +510,7 @@
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-25T19:17:03Z",
+   "updated_at": "2026-11-25T20:17:04Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
