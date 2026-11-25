@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-25T07:45:01Z",
+ "generated_at": "2026-11-25T07:50:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -128,10 +128,10 @@
     1,
     0,
     0,
-    0,
     1,
     0,
     1,
+    0,
     1,
     1,
     0,
@@ -214,7 +214,7 @@
     "active": 8,
     "alerts_24h": 23,
     "recoveries_24h": 1,
-    "last_check_at": "2026-11-25T07:45:01Z",
+    "last_check_at": "2026-11-25T07:50:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -397,9 +397,9 @@
    {
     "name": "NOAA GEFS ensemble",
     "role": "forecast input for the brain",
-    "health": "stale",
-    "updated_at": "2026-11-21T12:37:54Z",
-    "detail": "multi-city capture complete"
+    "health": "live",
+    "updated_at": "2026-11-25T07:47:08Z",
+    "detail": "multi-city capture gated"
    },
    {
     "name": "Polymarket weather markets",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-25T07:44:44Z",
+    "updated_at": "2026-11-25T07:48:47Z",
     "detail": "gated"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8945,
-     "city_days": 334
+     "brier": 0.8873,
+     "city_days": 354
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8278,
-     "city_days": 334
+     "brier": 0.8237,
+     "city_days": 354
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6375,
-     "city_days": 334
+     "brier": 0.6349,
+     "city_days": 354
     },
     {
      "key": "equal",
@@ -502,15 +502,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 314 untouched city-days (11 cities, 31 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 335,
-   "waiting_city_days": 10,
+   "labelled_city_days": 355,
+   "waiting_city_days": 0,
    "labelled_days": 40,
    "captured_days_waiting": 0,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-21T12:17:04Z",
+   "updated_at": "2026-11-25T07:46:39Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
