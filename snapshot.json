@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-25T12:25:01Z",
+ "generated_at": "2026-11-25T12:30:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -134,8 +134,8 @@
     1,
     1,
     1,
-    0,
     1,
+    0,
     0,
     1,
     1,
@@ -214,7 +214,7 @@
     "active": 8,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-25T12:25:01Z",
+    "last_check_at": "2026-11-25T12:30:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-25T12:28:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-11-25T12:28:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
     "at": "2026-11-25T12:04:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: unfunded shadow down"
@@ -272,16 +282,6 @@
     "at": "2026-11-25T10:42:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-11-25T10:41:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-11-25T10:28:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-25T12:23:27Z",
+    "updated_at": "2026-11-25T12:29:30Z",
     "detail": "gated"
    },
    {
