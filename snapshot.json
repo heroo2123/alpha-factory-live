@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-26T16:50:01Z",
+ "generated_at": "2026-11-26T16:55:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -212,9 +212,9 @@
    "guardian": {
     "state": "p1",
     "active": 7,
-    "alerts_24h": 23,
-    "recoveries_24h": 1,
-    "last_check_at": "2026-11-26T16:49:02Z",
+    "alerts_24h": 24,
+    "recoveries_24h": 0,
+    "last_check_at": "2026-11-26T16:55:01Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -232,7 +232,7 @@
      "flow go2 lane not polled",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-26T16:40:02Z",
+    "last_check_at": "2026-11-26T16:50:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -253,6 +253,11 @@
    "Kimi"
   ],
   "events": [
+   {
+    "at": "2026-11-26T16:54:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
+   },
    {
     "at": "2026-11-26T16:48:01Z",
     "kind": "warn",
@@ -277,11 +282,6 @@
     "at": "2026-11-26T16:13:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: unfunded shadow down"
-   },
-   {
-    "at": "2026-11-26T14:54:01Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes job disabled flexible provider router"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-26T16:48:13Z",
+    "updated_at": "2026-11-26T16:54:13Z",
     "detail": "gated"
    },
    {
