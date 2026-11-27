@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-27T09:15:01Z",
+ "generated_at": "2026-11-27T09:20:02Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,7 +214,7 @@
     "active": 7,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-27T09:14:01Z",
+    "last_check_at": "2026-11-27T09:20:03Z",
     "interval": "every minute"
    },
    "flow_auditor": {
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-27T09:14:25Z",
+    "updated_at": "2026-11-27T09:18:26Z",
     "detail": "gated"
    },
    {
@@ -477,20 +477,20 @@
     {
      "key": "brain",
      "name": "Brain (current model)",
-     "brier": 0.8839,
-     "city_days": 360
+     "brier": 0.8853,
+     "city_days": 362
     },
     {
      "key": "challenger",
      "name": "Challenger (research)",
-     "brier": 0.8221,
-     "city_days": 360
+     "brier": 0.8226,
+     "city_days": 362
     },
     {
      "key": "market",
      "name": "Market price",
-     "brier": 0.6342,
-     "city_days": 360
+     "brier": 0.6341,
+     "city_days": 362
     },
     {
      "key": "equal",
@@ -502,15 +502,15 @@
    "metric": "Brier score: lower is better",
    "verdict": "Brain does not beat the market yet: on 340 untouched city-days (11 cities, 34 days) the best model (challenger) has…",
    "verdict_tone": "bad",
-   "labelled_city_days": 361,
-   "waiting_city_days": 14,
+   "labelled_city_days": 363,
+   "waiting_city_days": 12,
    "labelled_days": 40,
    "captured_days_waiting": 0,
    "stations": 11,
    "calibrated": false,
    "automatic_promotion": false,
    "challenger_trained": true,
-   "updated_at": "2026-11-27T08:17:03Z",
+   "updated_at": "2026-11-27T09:17:04Z",
    "funding_bar": [
     {
      "item": "Passes a preregistered historical test (frozen model)",
