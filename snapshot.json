@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated_at": "2026-11-27T12:40:02Z",
+ "generated_at": "2026-11-27T12:45:01Z",
  "about": "Live, read-only view of an AI-run software factory building an unfunded weather prediction-market bot. Paper only: no money.",
  "factory": {
   "stations": [
@@ -214,15 +214,15 @@
     "active": 7,
     "alerts_24h": 24,
     "recoveries_24h": 0,
-    "last_check_at": "2026-11-27T12:40:02Z",
+    "last_check_at": "2026-11-27T12:45:02Z",
     "interval": "every minute"
    },
    "flow_auditor": {
-    "active": 18,
+    "active": 19,
     "by_severity": {
      "P0": 0,
      "P1": 3,
-     "P2": 11
+     "P2": 12
     },
     "codes": [
      "flow frozen review scope drift",
@@ -232,7 +232,7 @@
      "flow go2 lane not polled",
      "flow glm plan lane dead"
     ],
-    "last_check_at": "2026-11-27T12:30:02Z",
+    "last_check_at": "2026-11-27T12:40:02Z",
     "interval": "every 10 minutes"
    },
    "operator": {
@@ -254,6 +254,16 @@
   ],
   "events": [
    {
+    "at": "2026-11-27T12:41:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: full suite not green"
+   },
+   {
+    "at": "2026-11-27T12:41:02Z",
+    "kind": "warn",
+    "text": "Guardian raised an alert: hermes router not active"
+   },
+   {
     "at": "2026-11-27T12:28:01Z",
     "kind": "warn",
     "text": "Guardian raised an alert: hermes router stale"
@@ -272,16 +282,6 @@
     "at": "2026-11-27T10:51:02Z",
     "kind": "warn",
     "text": "Guardian raised an alert: engineering regression selftest failed"
-   },
-   {
-    "at": "2026-11-27T10:47:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: no verified code delivery 2h"
-   },
-   {
-    "at": "2026-11-27T10:40:02Z",
-    "kind": "warn",
-    "text": "Guardian raised an alert: hermes router not active"
    },
    {
     "at": "2026-11-20T07:51:36Z",
@@ -412,7 +412,7 @@
     "name": "Xweather PWS",
     "role": "personal weather stations (lead signal)",
     "health": "live",
-    "updated_at": "2026-11-27T12:38:53Z",
+    "updated_at": "2026-11-27T12:44:54Z",
     "detail": "gated"
    },
    {
